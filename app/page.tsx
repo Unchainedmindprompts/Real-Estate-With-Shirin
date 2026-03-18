@@ -66,7 +66,7 @@ const jsonLdAgent = {
     'Idaho real estate market',
     'Active family relocation to Northern Idaho',
   ],
-  slogan: 'Your Northern Idaho Real Estate Expert',
+  slogan: 'Your Northern Idaho Real Estate Advisor',
 }
 
 const jsonLdPerson = {
@@ -143,7 +143,7 @@ export default function HomePage() {
               color: '#FAFAF8',
             }}
           >
-            Your Northern Idaho<br />Real Estate Expert
+            Your Northern Idaho<br />Real Estate Advisor
           </h1>
           <p
             className="mb-10 max-w-2xl mx-auto"
