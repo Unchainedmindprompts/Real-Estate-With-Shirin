@@ -266,10 +266,10 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
             {[
-              { image: '/images/local-brewery.jpg', title: 'Community', desc: "A real town feel — local restaurants, breweries, and neighbors who show up" },
-              { image: '/images/lakefront-dock.jpg', title: 'Lake Life', desc: "Coeur d'Alene Lake — one of the most beautiful lakes in North America" },
-              { image: '/images/skiing.jpg', title: 'Skiing', desc: 'Schweitzer Mountain and Silver Mountain, both within an hour' },
-              { image: '/images/golf.jpg', title: 'Golf', desc: 'Championship courses with stunning mountain and lake views' },
+              { image: '/images/community.jpeg', title: 'Community', desc: "A real town feel — local restaurants, breweries, and neighbors who show up" },
+              { image: '/images/lake-life.jpeg', title: 'Lake Life', desc: "Coeur d'Alene Lake — one of the most beautiful lakes in North America" },
+              { image: '/images/skiing-action.jpeg', title: 'Skiing', desc: 'Schweitzer Mountain and Silver Mountain, both within an hour' },
+              { image: '/images/golf.jpeg', title: 'Golf', desc: 'Championship courses with stunning mountain and lake views' },
             ].map((tile) => (
               <div key={tile.title} className="relative overflow-hidden rounded-none group" style={{ height: '300px' }}>
                 <Image
