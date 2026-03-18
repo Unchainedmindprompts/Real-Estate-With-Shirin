@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const areas = [
   { label: 'Post Falls', href: '/areas/post-falls-idaho' },
@@ -14,6 +15,9 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [areasOpen, setAreasOpen] = useState(false)
+  const pathname = usePathname()
+  const isHome = pathname === '/'
+  const solid = !isHome || scrolled
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10)
@@ -25,8 +29,8 @@ export default function Navigation() {
     <header
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        backgroundColor: scrolled ? '#FAFAF8' : 'transparent',
-        boxShadow: scrolled ? '0 1px 12px rgba(28,26,23,0.08)' : 'none',
+        backgroundColor: solid ? '#FAFAF8' : 'transparent',
+        boxShadow: solid ? '0 1px 12px rgba(28,26,23,0.08)' : 'none',
       }}
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 lg:h-20">
@@ -36,7 +40,7 @@ export default function Navigation() {
           className="text-xl lg:text-2xl font-semibold leading-none"
           style={{
             fontFamily: "'Cormorant Garamond', Georgia, serif",
-            color: scrolled ? '#1C1A17' : '#FAFAF8',
+            color: solid ? '#1C1A17' : '#FAFAF8',
             fontWeight: 600,
           }}
         >
@@ -50,12 +54,12 @@ export default function Navigation() {
             className="text-sm uppercase tracking-wider font-medium transition-colors"
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
-              color: scrolled ? '#5C5650' : '#F5EFE6',
+              color: solid ? '#5C5650' : '#F5EFE6',
               letterSpacing: '0.08em',
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = '#C4842A')}
             onMouseLeave={(e) =>
-              (e.currentTarget.style.color = scrolled ? '#5C5650' : '#F5EFE6')
+              (e.currentTarget.style.color = solid ? '#5C5650' : '#F5EFE6')
             }
           >
             Buy
@@ -65,12 +69,12 @@ export default function Navigation() {
             className="text-sm uppercase tracking-wider font-medium transition-colors"
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
-              color: scrolled ? '#5C5650' : '#F5EFE6',
+              color: solid ? '#5C5650' : '#F5EFE6',
               letterSpacing: '0.08em',
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = '#C4842A')}
             onMouseLeave={(e) =>
-              (e.currentTarget.style.color = scrolled ? '#5C5650' : '#F5EFE6')
+              (e.currentTarget.style.color = solid ? '#5C5650' : '#F5EFE6')
             }
           >
             Sell
@@ -86,7 +90,7 @@ export default function Navigation() {
               className="text-sm uppercase tracking-wider font-medium transition-colors flex items-center gap-1"
               style={{
                 fontFamily: "'DM Sans', system-ui, sans-serif",
-                color: scrolled ? '#5C5650' : '#F5EFE6',
+                color: solid ? '#5C5650' : '#F5EFE6',
                 letterSpacing: '0.08em',
                 background: 'none',
                 border: 'none',
@@ -143,12 +147,12 @@ export default function Navigation() {
             className="text-sm uppercase tracking-wider font-medium transition-colors"
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
-              color: scrolled ? '#5C5650' : '#F5EFE6',
+              color: solid ? '#5C5650' : '#F5EFE6',
               letterSpacing: '0.08em',
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = '#C4842A')}
             onMouseLeave={(e) =>
-              (e.currentTarget.style.color = scrolled ? '#5C5650' : '#F5EFE6')
+              (e.currentTarget.style.color = solid ? '#5C5650' : '#F5EFE6')
             }
           >
             About
@@ -158,12 +162,12 @@ export default function Navigation() {
             className="text-sm uppercase tracking-wider font-medium transition-colors"
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
-              color: scrolled ? '#5C5650' : '#F5EFE6',
+              color: solid ? '#5C5650' : '#F5EFE6',
               letterSpacing: '0.08em',
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = '#C4842A')}
             onMouseLeave={(e) =>
-              (e.currentTarget.style.color = scrolled ? '#5C5650' : '#F5EFE6')
+              (e.currentTarget.style.color = solid ? '#5C5650' : '#F5EFE6')
             }
           >
             Articles
@@ -194,7 +198,7 @@ export default function Navigation() {
           className="lg:hidden p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
-          style={{ color: scrolled ? '#1C1A17' : '#FAFAF8' }}
+          style={{ color: solid ? '#1C1A17' : '#FAFAF8' }}
         >
           <svg
             width="24"
