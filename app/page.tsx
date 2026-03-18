@@ -266,10 +266,10 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
             {[
-              { image: '/images/mountain-biking.jpg', title: 'Mountain Biking', desc: 'World-class trails at Schweitzer and throughout the Selkirk range' },
+              { image: '/images/local-brewery.jpg', title: 'Community', desc: "A real town feel — local restaurants, breweries, and neighbors who show up" },
               { image: '/images/lakefront-dock.jpg', title: 'Lake Life', desc: "Coeur d'Alene Lake — one of the most beautiful lakes in North America" },
               { image: '/images/skiing.jpg', title: 'Skiing', desc: 'Schweitzer Mountain and Silver Mountain, both within an hour' },
-              { image: '/images/local-brewery.jpg', title: 'Community', desc: "A real town feel — local restaurants, breweries, and neighbors who show up" },
+              { image: '/images/golf.jpg', title: 'Golf', desc: 'Championship courses with stunning mountain and lake views' },
             ].map((tile) => (
               <div key={tile.title} className="relative overflow-hidden rounded-none group" style={{ height: '300px' }}>
                 <Image
