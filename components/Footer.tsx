@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -33,6 +34,15 @@ export default function Footer() {
             <p className="text-sm leading-relaxed" style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
               Licensed REALTOR® serving Post Falls, Coeur d&apos;Alene, and Northern Idaho
             </p>
+            <div className="mt-5">
+              <Image
+                src="/images/exp-realty-logo.jpg"
+                alt="eXp Realty"
+                width={100}
+                height={36}
+                className="object-contain opacity-80"
+              />
+            </div>
           </div>
 
           {/* Links grid */}
