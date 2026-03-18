@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg-primary: #FAFAF8;
+  --color-bg-secondary: #F5EFE6;
+  --color-bg-dark: #1C1A17;
+  --color-text-primary: #1C1A17;
+  --color-text-secondary: #5C5650;
+  --color-text-light: #F5EFE6;
+  --color-accent-honey: #C4842A;
+  --color-accent-cognac: #8B4F2A;
+  --color-accent-slate: #6B7A8D;
+  --color-border: #E8DDD0;
+  --color-mid-grey: #9A9590;
+}
+
+:root {
+  --color-bg-primary: #FAFAF8;
+  --color-bg-secondary: #F5EFE6;
+  --color-bg-dark: #1C1A17;
+  --color-text-primary: #1C1A17;
+  --color-text-secondary: #5C5650;
+  --color-text-light: #F5EFE6;
+  --color-accent-honey: #C4842A;
+  --color-accent-cognac: #8B4F2A;
+  --color-accent-slate: #6B7A8D;
+  --color-border: #E8DDD0;
+  --color-mid-grey: #9A9590;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FAFAF8;
+  color: #1C1A17;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #1C1A17;
+}
+
+/* Eyebrow label */
+.eyebrow {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #C4842A;
+}
+
+/* Section padding */
+.section-padding {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}

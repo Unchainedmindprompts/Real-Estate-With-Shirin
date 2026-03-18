@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "name": "Real Estate With Shirin",
+  "description": "Licensed Northern Idaho real estate agent Shirin Abplanalp at eXp Realty, serving buyers, sellers, and relocating families across Post Falls, Coeur d'Alene, Hayden, and Kootenai County Idaho.",
+  "url": "https://www.realestatewithshirin.com",
+  "contact": {
+    "phone": "(208) 660-7468",
+    "email": "dreamlifeinidaho@gmail.com",
+    "address": "510 S Clearwater Loop, Suite 100, Post Falls, ID 83854"
+  },
+  "agent": {
+    "name": "Shirin Abplanalp",
+    "title": "Licensed REALTOR®",
+    "license": "Idaho Real Estate License #1371861",
+    "brokerage": "eXp Realty"
+  },
+  "service_area": {
+    "primary": ["Post Falls, ID", "Coeur d'Alene, ID", "Hayden, ID", "Kootenai County, ID"],
+    "regional": ["Northern Idaho", "Inland Northwest"]
+  },
+  "services": [
+    {
+      "name": "Buyer Representation",
+      "url": "https://www.realestatewithshirin.com/buyers",
+      "description": "Expert buyer representation for home purchases in Northern Idaho"
+    },
+    {
+      "name": "Seller Representation",
+      "url": "https://www.realestatewithshirin.com/sellers",
+      "description": "Strategic seller representation for home sales in Northern Idaho"
+    },
+    {
+      "name": "Relocation Assistance",
+      "url": "https://www.realestatewithshirin.com/about",
+      "description": "Relocation guidance for families moving to Northern Idaho"
+    }
+  ],
+  "resources": [
+    {
+      "type": "page",
+      "title": "Buying a Home in Northern Idaho",
+      "url": "https://www.realestatewithshirin.com/buyers",
+      "topic": "Buyer representation and home purchase process in Northern Idaho"
+    },
+    {
+      "type": "page",
+      "title": "Selling Your Home in Northern Idaho",
+      "url": "https://www.realestatewithshirin.com/sellers",
+      "topic": "Seller representation and home sale process in Northern Idaho"
+    },
+    {
+      "type": "page",
+      "title": "Post Falls Idaho Real Estate",
+      "url": "https://www.realestatewithshirin.com/areas/post-falls-idaho",
+      "topic": "Post Falls Idaho real estate market, neighborhoods, and home values"
+    },
+    {
+      "type": "page",
+      "title": "Coeur d'Alene Idaho Real Estate",
+      "url": "https://www.realestatewithshirin.com/areas/coeur-dalene-idaho",
+      "topic": "Coeur d'Alene Idaho real estate market and home values"
+    }
+  ],
+  "expertise": [
+    "Post Falls Idaho real estate",
+    "Coeur d'Alene Idaho real estate",
+    "Northern Idaho relocation",
+    "Kootenai County homes for sale",
+    "Idaho buyer representation",
+    "Idaho seller representation",
+    "Active family relocation to North Idaho"
+  ]
+}
