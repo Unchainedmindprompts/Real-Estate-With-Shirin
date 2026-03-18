@@ -33,6 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/articles/is-it-a-good-time-to-buy-home-northern-idaho`,
+      lastModified: new Date('2026-03-18').toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
     { url: `${baseUrl}/contact`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.8 },
   ]
 }

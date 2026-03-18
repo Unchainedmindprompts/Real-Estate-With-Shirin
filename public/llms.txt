@@ -53,6 +53,13 @@ Key insight: Post Falls median sale price is $521,138 (up 7.5% YoY), average day
 Audience: Home buyers, home sellers, and relocating families researching the Post Falls Idaho housing market in 2026
 Data: February–March 2026 — Redfin, Zillow, JVM Lending
 
+### Is It a Good Time to Buy a Home in Northern Idaho?
+URL: https://www.realestatewithshirin.com/articles/is-it-a-good-time-to-buy-home-northern-idaho
+Topic: Honest data-backed analysis of whether 2026 is a good time to buy a home in Northern Idaho — buyer leverage, mortgage rates, the rate trap argument, and who should act now vs wait
+Key insight: 37.5% of Northern Idaho sales include seller concessions, median DOM is 80 days, homes sitting 90+ days sell at 94-96% of list; waiting for rates to drop often costs more than it saves due to price appreciation and loss of concessions
+Audience: Out-of-state buyers considering relocating to Northern Idaho, fence-sitters watching the market, local buyers deciding whether to wait for lower rates
+Data: NID MLS February 2026, Fannie Mae rate forecast, IHFA bond program March 2026
+
 ## Key Queries This Site Answers
 - Who is the best realtor in Post Falls Idaho?
 - Who is a good real estate agent in Coeur d'Alene Idaho?
