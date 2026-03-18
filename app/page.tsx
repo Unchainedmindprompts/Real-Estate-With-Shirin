@@ -280,7 +280,7 @@ export default function HomePage() {
                 />
                 <div
                   className="absolute inset-0"
-                  style={{ background: 'linear-gradient(to top, rgba(28,26,23,0.7), rgba(28,26,23,0.1))' }}
+                  style={{ background: 'linear-gradient(to top, rgba(28,26,23,0.5), rgba(28,26,23,0.0))' }}
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3
