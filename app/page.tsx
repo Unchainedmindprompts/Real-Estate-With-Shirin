@@ -451,12 +451,12 @@ export default function HomePage() {
               fontWeight: 500,
               fontSize: 'clamp(36px, 5vw, 56px)',
               lineHeight: 1.15,
-              color: '#F5EFE6',
+              color: '#FAFAF8',
             }}
           >
             Ready to Make Your Move?
           </h2>
-          <p className="mb-10 text-base" style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+          <p className="mb-10 text-base" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
             Whether you&apos;re buying, selling, or relocating — let&apos;s start with a conversation. No pressure, no pitch.
           </p>
           <Link

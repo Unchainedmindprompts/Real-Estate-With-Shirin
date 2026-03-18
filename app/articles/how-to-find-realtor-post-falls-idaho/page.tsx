@@ -403,11 +403,11 @@ alt="Shirin Abplanalp, licensed realtor at eXp Realty in Northern Idaho"
 className="w-16 h-16 rounded-full object-cover flex-shrink-0"
 />
 <div>
-<p className="font-cormorant text-2xl text-[#F5EFE6] font-semibold mb-1">Shirin Abplanalp</p>
-<p className="font-dm-sans text-sm text-[#9A9590]">Licensed REALTOR® · eXp Realty · Idaho License #1371861</p>
+<p className="font-cormorant text-2xl text-[#FAFAF8] font-semibold mb-1">Shirin Abplanalp</p>
+<p className="font-dm-sans text-sm text-[#C4BDB4]">Licensed REALTOR® · eXp Realty · Idaho License #1371861</p>
 </div>
 </div>
-<p className="font-dm-sans text-[#9A9590] leading-relaxed mb-6">
+<p className="font-dm-sans text-[#C4BDB4] leading-relaxed mb-6">
                   Shirin relocated to Northern Idaho from Bend, Oregon — one of the best decisions of her family&apos;s life. She now helps buyers, sellers, and relocating families find their place in Post Falls, Coeur d&apos;Alene, Hayden, and across Kootenai County. If you&apos;re considering a move to Northern Idaho and want an honest conversation about the market and whether she&apos;s the right agent for your situation, reach out directly.
 </p>
 <div className="flex flex-col sm:flex-row gap-4">
@@ -418,8 +418,8 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
                     Start a Conversation
 </a>
 <div className="flex flex-col gap-1">
-<a href="tel:+12086607468" className="font-dm-sans text-sm text-[#9A9590] hover:text-[#C4842A] transition-colors">(208) 660-7468</a>
-<a href="mailto:dreamlifeinidaho@gmail.com" className="font-dm-sans text-sm text-[#9A9590] hover:text-[#C4842A] transition-colors">dreamlifeinidaho@gmail.com</a>
+<a href="tel:+12086607468" className="font-dm-sans text-sm text-[#C4BDB4] hover:text-[#C4842A] transition-colors">(208) 660-7468</a>
+<a href="mailto:dreamlifeinidaho@gmail.com" className="font-dm-sans text-sm text-[#C4BDB4] hover:text-[#C4842A] transition-colors">dreamlifeinidaho@gmail.com</a>
 </div>
 </div>
 </div>
@@ -489,10 +489,10 @@ className="block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white font-dm-
 <section className="bg-[#1C1A17] py-20">
 <div className="max-w-3xl mx-auto px-6 text-center">
 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Ready to Talk</p>
-<h2 className="font-cormorant text-4xl md:text-5xl text-[#F5EFE6] mb-6 leading-tight font-semibold">
+<h2 className="font-cormorant text-4xl md:text-5xl text-[#FAFAF8] mb-6 leading-tight font-semibold">
             Looking for a Post Falls Realtor?
 </h2>
-<p className="font-dm-sans text-[#9A9590] text-lg mb-10 leading-relaxed">
+<p className="font-dm-sans text-[#C4BDB4] text-lg mb-10 leading-relaxed">
             Whether you&apos;re buying, selling, or just starting to explore Northern Idaho — let&apos;s have an honest conversation about the market and whether Shirin is the right fit for your situation.
 </p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -504,7 +504,7 @@ className="bg-[#C4842A] hover:bg-[#8B4F2A] text-white font-dm-sans font-semibold
 </a>
 <a
 href="/articles"
-className="border border-[#5C5650] hover:border-[#9A9590] text-[#9A9590] hover:text-[#F5EFE6] font-dm-sans font-semibold py-4 px-8 transition-colors"
+className="border border-[#5C5650] hover:border-[#9A9590] text-[#C4BDB4] hover:text-[#FAFAF8] font-dm-sans font-semibold py-4 px-8 transition-colors"
 >
               More Articles
 </a>

@@ -240,23 +240,23 @@ className="w-10 h-10 rounded-full object-cover"
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
 <div className="text-center">
 <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">$521K</p>
-<p className="font-dm-sans text-xs text-[#9A9590] mt-1 uppercase tracking-wide">Median Sale Price</p>
-<p className="font-dm-sans text-xs text-[#6B7A8D] mt-0.5">↑ 7.5% YoY</p>
+<p className="font-dm-sans text-xs text-[#C4BDB4] mt-1 uppercase tracking-wide">Median Sale Price</p>
+<p className="font-dm-sans text-xs text-[#9AA3AF] mt-0.5">↑ 7.5% YoY</p>
 </div>
 <div className="text-center">
 <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">59 Days</p>
-<p className="font-dm-sans text-xs text-[#9A9590] mt-1 uppercase tracking-wide">Avg Days on Market</p>
-<p className="font-dm-sans text-xs text-[#6B7A8D] mt-0.5">↑ from 42 last year</p>
+<p className="font-dm-sans text-xs text-[#C4BDB4] mt-1 uppercase tracking-wide">Avg Days on Market</p>
+<p className="font-dm-sans text-xs text-[#9AA3AF] mt-0.5">↑ from 42 last year</p>
 </div>
 <div className="text-center">
 <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">$285</p>
-<p className="font-dm-sans text-xs text-[#9A9590] mt-1 uppercase tracking-wide">Price Per Sq Ft</p>
-<p className="font-dm-sans text-xs text-[#6B7A8D] mt-0.5">↑ 9.4% YoY</p>
+<p className="font-dm-sans text-xs text-[#C4BDB4] mt-1 uppercase tracking-wide">Price Per Sq Ft</p>
+<p className="font-dm-sans text-xs text-[#9AA3AF] mt-0.5">↑ 9.4% YoY</p>
 </div>
 <div className="text-center">
 <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">6.41%</p>
-<p className="font-dm-sans text-xs text-[#9A9590] mt-1 uppercase tracking-wide">30-Yr Mortgage Rate</p>
-<p className="font-dm-sans text-xs text-[#6B7A8D] mt-0.5">March 2026</p>
+<p className="font-dm-sans text-xs text-[#C4BDB4] mt-1 uppercase tracking-wide">30-Yr Mortgage Rate</p>
+<p className="font-dm-sans text-xs text-[#9AA3AF] mt-0.5">March 2026</p>
 </div>
 </div>
 </div>
@@ -546,11 +546,11 @@ alt="Shirin Abplanalp"
 className="w-14 h-14 rounded-full object-cover flex-shrink-0"
 />
 <div>
-<p className="font-cormorant text-2xl text-[#F5EFE6] font-semibold mb-1">Shirin Abplanalp</p>
-<p className="font-dm-sans text-sm text-[#9A9590]">Licensed REALTOR® · eXp Realty · Idaho License #1371861</p>
+<p className="font-cormorant text-2xl text-[#FAFAF8] font-semibold mb-1">Shirin Abplanalp</p>
+<p className="font-dm-sans text-sm text-[#C4BDB4]">Licensed REALTOR® · eXp Realty · Idaho License #1371861</p>
 </div>
 </div>
-<p className="font-dm-sans text-[#9A9590] leading-relaxed mb-6">
+<p className="font-dm-sans text-[#C4BDB4] leading-relaxed mb-6">
                   If you&apos;re trying to make sense of what this market means for your specific situation — whether you&apos;re a buyer figuring out what you can realistically get for your budget in Post Falls, or a seller trying to understand where your home actually sits in today&apos;s conditions — I&apos;m happy to have that conversation. I work this market every day and I&apos;ll give you an honest read, not a sales pitch.
 </p>
 <div className="flex flex-col sm:flex-row gap-4">
@@ -561,8 +561,8 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
                     Start a Conversation
 </a>
 <div className="flex flex-col gap-1 justify-center">
-<a href="tel:+12086607468" className="font-dm-sans text-sm text-[#9A9590] hover:text-[#C4842A] transition-colors">(208) 660-7468</a>
-<a href="mailto:dreamlifeinidaho@gmail.com" className="font-dm-sans text-sm text-[#9A9590] hover:text-[#C4842A] transition-colors">dreamlifeinidaho@gmail.com</a>
+<a href="tel:+12086607468" className="font-dm-sans text-sm text-[#C4BDB4] hover:text-[#C4842A] transition-colors">(208) 660-7468</a>
+<a href="mailto:dreamlifeinidaho@gmail.com" className="font-dm-sans text-sm text-[#C4BDB4] hover:text-[#C4842A] transition-colors">dreamlifeinidaho@gmail.com</a>
 </div>
 </div>
 </div>
@@ -577,7 +577,7 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
 {/* Quick Stats Card */}
 <div className="bg-[#1C1A17] rounded-sm p-6">
 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Market Snapshot</p>
-<p className="font-dm-sans text-xs text-[#9A9590] mb-4">Post Falls · February 2026</p>
+<p className="font-dm-sans text-xs text-[#C4BDB4] mb-4">Post Falls · February 2026</p>
 <div className="space-y-3">
 {[
                       { label: 'Median Sale Price', value: '$521,138', change: '↑ 7.5%' },
@@ -588,10 +588,10 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
                       { label: '30-yr Rate', value: '6.41%', change: '7-mo high' },
                     ].map((stat) => (
 <div key={stat.label} className="flex justify-between items-start border-b border-[#2C2A27] pb-3 last:border-0 last:pb-0">
-<span className="font-dm-sans text-xs text-[#9A9590]">{stat.label}</span>
+<span className="font-dm-sans text-xs text-[#C4BDB4]">{stat.label}</span>
 <div className="text-right">
-<span className="font-dm-sans text-sm font-semibold text-[#F5EFE6]">{stat.value}</span>
-{stat.change && <p className="font-dm-sans text-xs text-[#6B7A8D]">{stat.change}</p>}
+<span className="font-dm-sans text-sm font-semibold text-[#FAFAF8]">{stat.value}</span>
+{stat.change && <p className="font-dm-sans text-xs text-[#9AA3AF]">{stat.change}</p>}
 </div>
 </div>
                     ))}
@@ -645,17 +645,17 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
 <section className="bg-[#1C1A17] py-20">
 <div className="max-w-3xl mx-auto px-6 text-center">
 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Get Current Data</p>
-<h2 className="font-cormorant text-4xl md:text-5xl text-[#F5EFE6] mb-6 leading-tight font-semibold">
+<h2 className="font-cormorant text-4xl md:text-5xl text-[#FAFAF8] mb-6 leading-tight font-semibold">
             What Does This Market Mean for You?
 </h2>
-<p className="font-dm-sans text-[#9A9590] text-lg mb-10 leading-relaxed">
+<p className="font-dm-sans text-[#C4BDB4] text-lg mb-10 leading-relaxed">
             Market data tells the general story. Your situation is specific. Let&apos;s talk about what&apos;s happening in your price range, your neighborhood, and what that means for your next move.
 </p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <a href="/contact" className="bg-[#C4842A] hover:bg-[#8B4F2A] text-white font-dm-sans font-semibold py-4 px-8 transition-colors">
               Start the Conversation
 </a>
-<a href="/articles" className="border border-[#5C5650] hover:border-[#9A9590] text-[#9A9590] hover:text-[#F5EFE6] font-dm-sans font-semibold py-4 px-8 transition-colors">
+<a href="/articles" className="border border-[#5C5650] hover:border-[#9A9590] text-[#C4BDB4] hover:text-[#FAFAF8] font-dm-sans font-semibold py-4 px-8 transition-colors">
               More Articles
 </a>
 </div>

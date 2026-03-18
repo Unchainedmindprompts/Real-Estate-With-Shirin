@@ -23,7 +23,7 @@ export default function Footer() {
                   className="text-xl font-semibold leading-tight"
                   style={{
                     fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    color: '#F5EFE6',
+                    color: '#FAFAF8',
                     fontWeight: 600,
                   }}
                 >
@@ -31,7 +31,7 @@ export default function Footer() {
                 </p>
               </div>
             </div>
-            <p className="text-sm leading-relaxed" style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+            <p className="text-sm leading-relaxed" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
               Licensed REALTOR® serving Post Falls, Coeur d&apos;Alene, and Northern Idaho
             </p>
             <div className="mt-5">
@@ -63,9 +63,9 @@ export default function Footer() {
                     <Link
                       href={link.href}
                       className="text-sm transition-colors"
-                      style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}
+                      style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}
                       onMouseEnter={(e) => (e.currentTarget.style.color = '#C4842A')}
-                      onMouseLeave={(e) => (e.currentTarget.style.color = '#9A9590')}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = '#C4BDB4')}
                     >
                       {link.label}
                     </Link>
@@ -87,9 +87,9 @@ export default function Footer() {
                     <Link
                       href={link.href}
                       className="text-sm transition-colors"
-                      style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}
+                      style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}
                       onMouseEnter={(e) => (e.currentTarget.style.color = '#C4842A')}
-                      onMouseLeave={(e) => (e.currentTarget.style.color = '#9A9590')}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = '#C4BDB4')}
                     >
                       {link.label}
                     </Link>
@@ -110,9 +110,9 @@ export default function Footer() {
                     <Link
                       href={link.href}
                       className="text-sm transition-colors"
-                      style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}
+                      style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}
                       onMouseEnter={(e) => (e.currentTarget.style.color = '#C4842A')}
-                      onMouseLeave={(e) => (e.currentTarget.style.color = '#9A9590')}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = '#C4BDB4')}
                     >
                       {link.label}
                     </Link>
@@ -128,9 +128,9 @@ export default function Footer() {
                   <a
                     href="tel:+12086607468"
                     className="text-sm transition-colors"
-                    style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}
+                    style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}
                     onMouseEnter={(e) => (e.currentTarget.style.color = '#C4842A')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = '#9A9590')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = '#C4BDB4')}
                   >
                     (208) 660-7468
                   </a>
@@ -139,14 +139,14 @@ export default function Footer() {
                   <a
                     href="mailto:dreamlifeinidaho@gmail.com"
                     className="text-sm transition-colors"
-                    style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}
+                    style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}
                     onMouseEnter={(e) => (e.currentTarget.style.color = '#C4842A')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = '#9A9590')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = '#C4BDB4')}
                   >
                     dreamlifeinidaho@gmail.com
                   </a>
                 </li>
-                <li className="text-sm" style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                <li className="text-sm" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                   510 S Clearwater Loop<br />
                   Suite 100<br />
                   Post Falls, ID 83854
@@ -158,10 +158,10 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 flex flex-col lg:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-center lg:text-left" style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+          <p className="text-xs text-center lg:text-left" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
             © 2026 Real Estate With Shirin · Shirin Abplanalp · Licensed REALTOR® · eXp Realty · Idaho License #1371861
           </p>
-          <p className="text-xs" style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+          <p className="text-xs" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
             Helping Northern Idaho buyers and sellers find their perfect home.
           </p>
         </div>
