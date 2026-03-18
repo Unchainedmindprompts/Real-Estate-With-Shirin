@@ -53,8 +53,8 @@ export default function AboutPage() {
       >
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/bluff-panorama.jpg"
-            alt="Northern Idaho panorama"
+            src="/images/IMG_1620.jpeg"
+            alt="Lake Coeur d'Alene seaplane dock"
             fill
             priority
             className="object-cover"
