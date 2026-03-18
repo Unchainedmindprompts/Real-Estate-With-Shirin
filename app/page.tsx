@@ -324,7 +324,7 @@ export default function HomePage() {
       <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="order-2 lg:order-1 relative" style={{ height: '500px', minHeight: '400px' }}>
+            <div className="order-2 lg:order-1 relative" style={{ height: '600px', minHeight: '400px' }}>
               <Image
                 src="/images/shirin-abplanalp.jpg"
                 alt="Shirin Abplanalp, Northern Idaho Realtor"
