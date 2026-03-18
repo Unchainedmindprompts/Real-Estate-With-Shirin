@@ -126,7 +126,7 @@ export default function HomePage() {
           />
           <div
             className="absolute inset-0"
-            style={{ background: 'linear-gradient(to bottom, rgba(28,26,23,0.3), rgba(28,26,23,0.55))' }}
+            style={{ background: 'linear-gradient(to bottom, rgba(28,26,23,0.1), rgba(28,26,23,0.35))' }}
           />
         </div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6 lg:px-8 py-32">
