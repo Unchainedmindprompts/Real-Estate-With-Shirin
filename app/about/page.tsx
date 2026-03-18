@@ -93,7 +93,7 @@ export default function AboutPage() {
                 src="/images/shirin-abplanalp.jpg"
                 alt="Shirin Abplanalp, Licensed REALTOR® in Northern Idaho"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
             <div>

@@ -329,7 +329,7 @@ export default function HomePage() {
                 src="/images/shirin-abplanalp.jpg"
                 alt="Shirin Abplanalp, Northern Idaho Realtor"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
             <div className="order-1 lg:order-2">
