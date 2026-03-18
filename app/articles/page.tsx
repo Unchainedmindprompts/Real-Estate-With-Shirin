@@ -38,45 +38,68 @@ export default function ArticlesPage() {
         </div>
       </section>
 
-      {/* Coming Soon */}
+      {/* Articles Grid */}
       <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <div
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <Link
+            href="/articles/how-to-find-realtor-post-falls-idaho"
+            className="block group rounded-sm transition-colors duration-200 hover:border-[#C4842A]"
             style={{
               border: '1px solid #E8DDD0',
-              borderRadius: '4px',
-              padding: '64px 48px',
               backgroundColor: '#F5EFE6',
+              padding: '40px 40px',
             }}
           >
-            <div style={{ width: '48px', height: '3px', backgroundColor: '#C4842A', margin: '0 auto 32px' }} />
+            <div className="flex items-center gap-3 mb-4">
+              <span
+                style={{
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontSize: '11px',
+                  fontWeight: 600,
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                  color: '#C4842A',
+                }}
+              >
+                Buyer Resources
+              </span>
+              <span style={{ color: '#9A9590', fontSize: '12px' }}>·</span>
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590' }}>
+                8 min read
+              </span>
+            </div>
             <h2
-              className="mb-6"
+              className="mb-3"
               style={{
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 500,
-                fontSize: '32px',
+                fontWeight: 600,
+                fontSize: 'clamp(22px, 3vw, 28px)',
+                lineHeight: 1.25,
                 color: '#1C1A17',
               }}
             >
-              Articles Coming Soon
+              How to Find the Right Realtor in Post Falls, Idaho — And What to Look for Before You Hire Anyone
             </h2>
-            <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", marginBottom: '32px', maxWidth: '500px', margin: '0 auto 32px' }}>
-              In the meantime, reach out directly — Shirin is happy to answer your questions about the market, specific neighborhoods, or what it&apos;s actually like to live here.
+            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#5C5650', lineHeight: 1.7, marginBottom: '24px' }}>
+              What to look for in a Post Falls realtor, the questions worth asking before you hire anyone, and why local knowledge matters more than you think.
             </p>
-            <Link
-              href="/contact"
-              className="inline-block text-white text-xs uppercase font-semibold tracking-wider rounded-sm"
-              style={{
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-                backgroundColor: '#C4842A',
-                padding: '14px 32px',
-                letterSpacing: '0.08em',
-              }}
-            >
-              Start a Conversation
-            </Link>
-          </div>
+            <div className="flex items-center justify-between">
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', color: '#9A9590' }}>
+                March 18, 2026
+              </span>
+              <span
+                style={{
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontSize: '13px',
+                  fontWeight: 600,
+                  color: '#C4842A',
+                  letterSpacing: '0.04em',
+                }}
+              >
+                Read Article →
+              </span>
+            </div>
+          </Link>
         </div>
       </section>
     </>
