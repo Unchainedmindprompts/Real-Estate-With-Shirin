@@ -21,6 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/articles/post-falls-idaho-housing-market-2026`,
+      lastModified: new Date('2026-03-18').toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
     { url: `${baseUrl}/contact`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.8 },
   ]
 }
