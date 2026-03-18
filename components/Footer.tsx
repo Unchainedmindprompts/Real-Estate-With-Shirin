@@ -36,10 +36,10 @@ export default function Footer() {
             </p>
             <div className="mt-5">
               <Image
-                src="/images/exp-realty-logo.jpg"
+                src="/images/exp-realty-white.png"
                 alt="eXp Realty"
-                width={100}
-                height={36}
+                width={110}
+                height={40}
                 className="object-contain opacity-80"
               />
             </div>
