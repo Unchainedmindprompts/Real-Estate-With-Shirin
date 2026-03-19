@@ -40,7 +40,7 @@ const jsonLdFaq = {
       name: 'What is the housing market like in Sandpoint Idaho in 2026?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Coming soon.',
+        text: "As of early 2026, the average home value in Sandpoint is approximately $617,000 — up about 1.8% year-over-year — with homes averaging around 62–85 days on market depending on price tier and location. Sandpoint is a lower-volume market by design: roughly 15–25 homes close per month, and monthly medians can swing significantly based on the mix of sales. The median list price is currently around $773,000, reflecting a meaningful gap between what sellers are asking and what is transacting — homes are averaging about 89–96% of asking price at close. Price per square foot runs around $499 in the active resale segment, among the highest in Northern Idaho. Inventory sits at around 148–155 homes for sale, with new listings running 23–25 per month. This is a market that moves slower and prices higher than Kootenai County — it rewards patient, well-prepared buyers.",
       },
     },
     {
@@ -48,7 +48,7 @@ const jsonLdFaq = {
       name: 'What are the best neighborhoods in Sandpoint Idaho?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Coming soon.',
+        text: "Sandpoint neighborhoods each carry a distinct character. Downtown Sandpoint and the area around City Beach offer walkable access to restaurants, the waterfront, and the Cedar Street Bridge — this is where you get the full Sandpoint small-town resort feel. South Sandpoint is one of the most desirable residential pockets — quiet streets, mature trees, close to the lake and schools. Ravenwood and Syringa Heights sit just west of downtown with easy access and a laid-back neighborhood character. Dover Bay, across the river, is a planned waterfront community with marina access and a more resort-oriented lifestyle. Ponderosa Park on the north side is newer development that attracts young families. Sand Creek is a tight-knit community near the fairgrounds with good-sized yards and a strong neighborhood feel. For buyers who want acreage and seclusion without losing proximity to town, Forest Knolls and the Sagle area to the south are worth a look.",
       },
     },
     {
@@ -56,7 +56,7 @@ const jsonLdFaq = {
       name: 'How much do homes cost in Sandpoint Idaho?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Coming soon.',
+        text: "As of early 2026, the average home value in Sandpoint is approximately $617,000, with a median list price around $773,000 and an average sale price in the active market running closer to $764,000. Entry-level homes — smaller in-town properties or condos — can start in the $420,000–$500,000 range, but that end of the market is limited in supply. The $550,000–$750,000 range covers most standard single-family resale. Above $750,000 you're in the premium tier — larger lots, lake proximity, mountain views, or custom builds. Lakefront and waterfront-access properties operate in their own category, often well above $1 million. Sandpoint consistently carries higher price-per-square-foot values than the Kootenai County markets, reflecting its resort character and the premium buyers place on the Lake Pend Oreille lifestyle.",
       },
     },
     {
@@ -64,7 +64,7 @@ const jsonLdFaq = {
       name: "How does Sandpoint compare to Coeur d'Alene for home buyers?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Coming soon.',
+        text: "Sandpoint and Coeur d'Alene are both Northern Idaho lake towns, but they serve different buyers. CDA has a larger, more liquid market — more listings, more monthly closings, more new construction, and a more established suburban infrastructure. Sandpoint is smaller, quieter, and carries a stronger small-town resort identity built around Lake Pend Oreille, Schweitzer Mountain Resort, and a genuine arts and outdoor culture. On price, Sandpoint's average sale price (~$617,000–$764,000 active market) runs comparable to or above CDA's median of ~$601,000, but with significantly fewer options at any given time and longer days on market. The tradeoff is real: CDA gives you more inventory, faster transactions, and better access to Spokane. Sandpoint gives you a more remote, lifestyle-first environment — 45 minutes north of CDA on Highway 95 — that draws buyers who are specifically choosing to slow down.",
       },
     },
   ],
@@ -73,19 +73,19 @@ const jsonLdFaq = {
 const faqs = [
   {
     q: 'What is the housing market like in Sandpoint Idaho in 2026?',
-    a: 'Coming soon.',
+    a: "As of early 2026, the average home value in Sandpoint is approximately $617,000 — up about 1.8% year-over-year — with homes averaging around 62–85 days on market depending on price tier and location. Sandpoint is a lower-volume market by design: roughly 15–25 homes close per month, and monthly medians can swing significantly based on the mix of sales. The median list price is currently around $773,000, reflecting a meaningful gap between what sellers are asking and what is transacting — homes are averaging about 89–96% of asking price at close. Price per square foot runs around $499 in the active resale segment, among the highest in Northern Idaho. Inventory sits at around 148–155 homes for sale, with new listings running 23–25 per month. This is a market that moves slower and prices higher than Kootenai County — it rewards patient, well-prepared buyers.",
   },
   {
     q: 'What are the best neighborhoods in Sandpoint Idaho?',
-    a: 'Coming soon.',
+    a: "Sandpoint neighborhoods each carry a distinct character. Downtown Sandpoint and the area around City Beach offer walkable access to restaurants, the waterfront, and the Cedar Street Bridge — this is where you get the full Sandpoint small-town resort feel. South Sandpoint is one of the most desirable residential pockets — quiet streets, mature trees, close to the lake and schools. Ravenwood and Syringa Heights sit just west of downtown with easy access and a laid-back neighborhood character. Dover Bay, across the river, is a planned waterfront community with marina access and a more resort-oriented lifestyle. Ponderosa Park on the north side is newer development that attracts young families. Sand Creek is a tight-knit community near the fairgrounds with good-sized yards and a strong neighborhood feel. For buyers who want acreage and seclusion without losing proximity to town, Forest Knolls and the Sagle area to the south are worth a look.",
   },
   {
     q: 'How much do homes cost in Sandpoint Idaho?',
-    a: 'Coming soon.',
+    a: "As of early 2026, the average home value in Sandpoint is approximately $617,000, with a median list price around $773,000 and an average sale price in the active market running closer to $764,000. Entry-level homes — smaller in-town properties or condos — can start in the $420,000–$500,000 range, but that end of the market is limited in supply. The $550,000–$750,000 range covers most standard single-family resale. Above $750,000 you're in the premium tier — larger lots, lake proximity, mountain views, or custom builds. Lakefront and waterfront-access properties operate in their own category, often well above $1 million. Sandpoint consistently carries higher price-per-square-foot values than the Kootenai County markets, reflecting its resort character and the premium buyers place on the Lake Pend Oreille lifestyle.",
   },
   {
     q: "How does Sandpoint compare to Coeur d'Alene for home buyers?",
-    a: 'Coming soon.',
+    a: "Sandpoint and Coeur d'Alene are both Northern Idaho lake towns, but they serve different buyers. CDA has a larger, more liquid market — more listings, more monthly closings, more new construction, and a more established suburban infrastructure. Sandpoint is smaller, quieter, and carries a stronger small-town resort identity built around Lake Pend Oreille, Schweitzer Mountain Resort, and a genuine arts and outdoor culture. On price, Sandpoint's average sale price (~$617,000–$764,000 active market) runs comparable to or above CDA's median of ~$601,000, but with significantly fewer options at any given time and longer days on market. The tradeoff is real: CDA gives you more inventory, faster transactions, and better access to Spokane. Sandpoint gives you a more remote, lifestyle-first environment — 45 minutes north of CDA on Highway 95 — that draws buyers who are specifically choosing to slow down.",
   },
 ]
 
@@ -144,10 +144,10 @@ export default function SandpointPage() {
             Sandpoint at a Glance
           </h2>
           <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", marginBottom: '16px' }}>
-            Coming soon.
+            As of early 2026, the average home value in Sandpoint is approximately $617,000 — up about 1.8% year-over-year — with homes averaging around 62–85 days on market depending on price tier and location. Sandpoint is a lower-volume market by design: roughly 15–25 homes close per month, and monthly medians can swing significantly based on the mix of sales. The median list price is currently around $773,000, reflecting a meaningful gap between what sellers are asking and what is transacting — homes are averaging about 89–96% of asking price at close.
           </p>
           <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", marginBottom: '16px' }}>
-            Coming soon.
+            Price per square foot runs around $499 in the active resale segment, among the highest in Northern Idaho. Inventory sits at around 148–155 homes for sale, with new listings running 23–25 per month. This is a market that moves slower and prices higher than Kootenai County — it rewards patient, well-prepared buyers.
           </p>
         </div>
       </section>
@@ -172,10 +172,10 @@ export default function SandpointPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: 'Lake Pend Oreille', body: 'Coming soon.' },
-              { title: 'Downtown Sandpoint', body: 'Coming soon.' },
-              { title: 'Outdoor Recreation', body: 'Coming soon.' },
-              { title: 'Arts & Community', body: 'Coming soon.' },
+              { title: 'Lake Pend Oreille', body: 'One of the deepest lakes in North America and the defining feature of Sandpoint\'s identity. Proximity to the water shapes both lifestyle and value here — from lakeside neighborhoods in South Sandpoint to Dover Bay\'s planned marina community across the river.' },
+              { title: 'Downtown Sandpoint', body: 'Downtown and City Beach offer walkable access to restaurants, the waterfront, and the Cedar Street Bridge. South Sandpoint adds quiet streets and mature trees close to the lake and schools. This is the full small-town resort feel — genuine, not manufactured.' },
+              { title: 'Outdoor Recreation', body: 'Schweitzer Mountain Resort sits 11 miles from downtown with over 2,900 acres of skiable terrain. Summer brings sailing, paddling, and fishing on Lake Pend Oreille, plus hiking and biking in the Selkirk Mountains. The outdoor access here is year-round and world-class.' },
+              { title: 'Arts & Community', body: 'Sandpoint hosts a nationally recognized music festival, an active local arts scene, and a downtown built around independent businesses. It draws buyers who are choosing a slower, more intentional lifestyle — and the community reflects that.' },
             ].map((card) => (
               <div
                 key={card.title}
