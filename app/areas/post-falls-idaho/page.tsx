@@ -99,7 +99,7 @@ export default function PostFallsPage() {
       <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/IMG_1620.jpeg"
+            src="/images/northern-idaho-hero.webp"
             alt="Lake Coeur d'Alene seaplane dock"
             fill
             priority
