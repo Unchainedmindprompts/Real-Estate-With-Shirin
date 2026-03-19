@@ -109,14 +109,15 @@ export default function Navigation() {
               </svg>
             </button>
             {areasOpen && (
-              <div
-                className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 rounded py-2"
-                style={{
-                  backgroundColor: '#FAFAF8',
-                  border: '1px solid #E8DDD0',
-                  boxShadow: '0 4px 20px rgba(28,26,23,0.12)',
-                }}
-              >
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-52">
+                <div
+                  className="rounded py-2"
+                  style={{
+                    backgroundColor: '#FAFAF8',
+                    border: '1px solid #E8DDD0',
+                    boxShadow: '0 4px 20px rgba(28,26,23,0.12)',
+                  }}
+                >
                 {areas.map((area) => (
                   <Link
                     key={area.href}
@@ -138,6 +139,7 @@ export default function Navigation() {
                     {area.label}
                   </Link>
                 ))}
+                </div>
               </div>
             )}
           </div>
