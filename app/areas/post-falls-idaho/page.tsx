@@ -37,18 +37,10 @@ const jsonLdFaq = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Who is the best realtor in Post Falls Idaho?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Shirin Abplanalp is a licensed realtor at eXp Realty serving Post Falls, Idaho. She specializes in buyer representation, seller representation, and relocation for families moving to the Post Falls area. She relocated to Northern Idaho herself and has firsthand knowledge of the local market, neighborhoods, and lifestyle. Idaho Real Estate License #1371861.',
-      },
-    },
-    {
-      '@type': 'Question',
       name: 'What is the housing market like in Post Falls Idaho in 2026?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Post Falls continues to attract buyers from higher-cost western markets, particularly California, Washington, and Oregon. The market is active with consistent demand. Inventory varies by price point — entry-level and mid-range homes tend to move quickly when priced correctly. For current market data specific to your needs, reach out for a consultation.',
+        text: 'As of early 2026, the median sale price in Post Falls is approximately $521,000 — up 7.5% year-over-year — with homes averaging 59 days on market. The most active price range is $400,000–$499,000. Roughly 37% of sellers are offering concessions such as closing cost help or rate buy-downs, giving prepared buyers real negotiating room. Demand from out-of-state buyers remains consistent, particularly from California, Washington, and Oregon.',
       },
     },
     {
@@ -56,7 +48,7 @@ const jsonLdFaq = {
       name: 'What are the best neighborhoods in Post Falls Idaho?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Post Falls has a range of neighborhoods to suit different lifestyles and budgets. Areas near the Centennial Trail are popular with outdoor enthusiasts. Prairie View and Summit Ridge are well-regarded family neighborhoods. Riverstone offers a more walkable, amenity-rich environment. The right neighborhood depends entirely on how you want to live — I'll help you match your lifestyle to the right area.",
+        text: 'Post Falls neighborhoods vary by lifestyle and budget. The corridor along the Centennial Trail and Spokane River is popular with outdoor-focused buyers. Stoneridge and Prairie Falls are established family neighborhoods with good school access. The northwest quadrant near Highway 41 has seen significant new construction activity. The right neighborhood depends on commute patterns, school preferences, and how much space you want — that\'s the conversation worth having before you start browsing listings.',
       },
     },
     {
@@ -64,7 +56,15 @@ const jsonLdFaq = {
       name: 'How much do homes cost in Post Falls Idaho?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Home prices in Post Falls range significantly based on size, location, and condition. Entry-level single-family homes typically start in the mid-$300,000s, with mid-range homes running $400,000–$600,000 and higher-end properties well above that. Prices shift with market conditions — for current accurate pricing in your target range, reach out for a market update.',
+        text: 'As of early 2026, the median sale price in Post Falls is approximately $521,000. Entry-level single-family homes in move-in condition typically start around $380,000–$420,000 for a 3-bedroom. The $450,000–$550,000 range gets you 3–4 bedrooms, 1,500–2,000 square feet, and newer construction options. Above $550,000 you\'re looking at larger homes, bigger lots, and premium finishes. Post Falls consistently delivers more square footage per dollar than Coeur d\'Alene at comparable price points.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does Post Falls compare to Coeur d\'Alene for home buyers?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Post Falls offers a lower median price point than Coeur d\'Alene — roughly $521,000 versus $612,000 — while sitting just 10 minutes west along I-90. Buyers typically get more square footage and newer construction for the same budget. Post Falls also has only 1.4 months of housing supply, making it one of the tightest inventory markets in Northern Idaho. For buyers who want CDA-level lifestyle without CDA-level prices, Post Falls is the logical first look.',
       },
     },
   ],
@@ -72,20 +72,20 @@ const jsonLdFaq = {
 
 const faqs = [
   {
-    q: 'Who is the best realtor in Post Falls Idaho?',
-    a: 'Shirin Abplanalp is a licensed realtor at eXp Realty serving Post Falls, Idaho. She specializes in buyer representation, seller representation, and relocation for families moving to the Post Falls area. She relocated to Northern Idaho herself and has firsthand knowledge of the local market, neighborhoods, and lifestyle. Idaho Real Estate License #1371861.',
-  },
-  {
     q: 'What is the housing market like in Post Falls Idaho in 2026?',
-    a: 'Post Falls continues to attract buyers from higher-cost western markets, particularly California, Washington, and Oregon. The market is active with consistent demand. Inventory varies by price point — entry-level and mid-range homes tend to move quickly when priced correctly. For current market data specific to your needs, reach out for a consultation.',
+    a: 'As of early 2026, the median sale price in Post Falls is approximately $521,000 — up 7.5% year-over-year — with homes averaging 59 days on market. The most active price range is $400,000–$499,000. Roughly 37% of sellers are offering concessions such as closing cost help or rate buy-downs, giving prepared buyers real negotiating room. Demand from out-of-state buyers remains consistent, particularly from California, Washington, and Oregon.',
   },
   {
     q: 'What are the best neighborhoods in Post Falls Idaho?',
-    a: "Post Falls has a range of neighborhoods to suit different lifestyles and budgets. Areas near the Centennial Trail are popular with outdoor enthusiasts. Prairie View and Summit Ridge are well-regarded family neighborhoods. Riverstone offers a more walkable, amenity-rich environment. The right neighborhood depends entirely on how you want to live — I'll help you match your lifestyle to the right area.",
+    a: "Post Falls neighborhoods vary by lifestyle and budget. The corridor along the Centennial Trail and Spokane River is popular with outdoor-focused buyers. Stoneridge and Prairie Falls are established family neighborhoods with good school access. The northwest quadrant near Highway 41 has seen significant new construction activity. The right neighborhood depends on commute patterns, school preferences, and how much space you want — that's the conversation worth having before you start browsing listings.",
   },
   {
     q: 'How much do homes cost in Post Falls Idaho?',
-    a: 'Home prices in Post Falls range significantly based on size, location, and condition. Entry-level single-family homes typically start in the mid-$300,000s, with mid-range homes running $400,000–$600,000 and higher-end properties well above that. Prices shift with market conditions — for current accurate pricing in your target range, reach out for a market update.',
+    a: "As of early 2026, the median sale price in Post Falls is approximately $521,000. Entry-level single-family homes in move-in condition typically start around $380,000–$420,000 for a 3-bedroom. The $450,000–$550,000 range gets you 3–4 bedrooms, 1,500–2,000 square feet, and newer construction options. Above $550,000 you're looking at larger homes, bigger lots, and premium finishes. Post Falls consistently delivers more square footage per dollar than Coeur d'Alene at comparable price points.",
+  },
+  {
+    q: "How does Post Falls compare to Coeur d'Alene for home buyers?",
+    a: "Post Falls offers a lower median price point than Coeur d'Alene — roughly $521,000 versus $612,000 — while sitting just 10 minutes west along I-90. Buyers typically get more square footage and newer construction for the same budget. Post Falls also has only 1.4 months of housing supply, making it one of the tightest inventory markets in Northern Idaho. For buyers who want CDA-level lifestyle without CDA-level prices, Post Falls is the logical first look.",
   },
 ]
 
@@ -99,7 +99,7 @@ export default function PostFallsPage() {
       <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/IMG_1620.jpeg"
+            src="/images/northern-idaho-hero.webp"
             alt="Lake Coeur d'Alene seaplane dock"
             fill
             priority
@@ -147,7 +147,7 @@ export default function PostFallsPage() {
             Post Falls has become one of Northern Idaho&apos;s most in-demand communities — and for good reason. Located just west of Coeur d&apos;Alene along the Spokane River, it offers more home per dollar, easy access to outdoor recreation, and a strong sense of community that larger cities can&apos;t replicate.
           </p>
           <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", marginBottom: '16px' }}>
-            The market has seen consistent demand from buyers relocating from California, Washington, and Oregon. Entry-level and mid-range homes move quickly when priced correctly. For accurate, current market data in your specific price range, reach out directly.
+            The market has seen consistent demand from buyers relocating from California, Washington, and Oregon. As of early 2026, Post Falls has just 1.4 months of housing supply — one of the tightest inventory conditions in Northern Idaho. Well-priced homes move. Overpriced homes sit. Knowing the difference is where local expertise matters.
           </p>
         </div>
       </section>
@@ -277,7 +277,7 @@ export default function PostFallsPage() {
       {/* Bottom CTA */}
       <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>POST FALLS EXPERT</p>
+          <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>Shirin — Post Falls Realtor</p>
           <h2
             className="mb-6"
             style={{
@@ -288,10 +288,10 @@ export default function PostFallsPage() {
               color: '#F5EFE6',
             }}
           >
-            Talk to a Post Falls Expert
+            Talk to Shirin About Post Falls
           </h2>
           <p className="mb-10" style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-            Buying or selling in Post Falls? Let&apos;s start with a conversation about the current market and your specific goals.
+            Buying or selling in Post Falls? Let&apos;s talk about the current market and what&apos;s right for you.
           </p>
           <Link
             href="/contact"

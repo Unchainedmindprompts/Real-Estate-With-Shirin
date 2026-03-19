@@ -13,7 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/areas/post-falls-idaho`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/areas/coeur-dalene-idaho`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/areas/hayden-idaho`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/areas/kootenai-county`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/articles`, lastModified: currentDate, changeFrequency: 'weekly', priority: 0.7 },
     {
       url: `${baseUrl}/articles/how-to-find-realtor-post-falls-idaho`,

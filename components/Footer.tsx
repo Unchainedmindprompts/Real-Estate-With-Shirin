@@ -20,11 +20,12 @@ export default function Footer() {
               </div>
               <div>
                 <p
-                  className="text-xl font-semibold leading-tight"
+                  className="leading-tight"
                   style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
+                    fontFamily: "'Great Vibes', cursive",
+                    fontSize: 'clamp(24px, 2.5vw, 32px)',
+                    fontWeight: 400,
                     color: '#FAFAF8',
-                    fontWeight: 600,
                   }}
                 >
                   Real Estate With Shirin
@@ -81,7 +82,6 @@ export default function Footer() {
                   { label: 'Post Falls', href: '/areas/post-falls-idaho' },
                   { label: "Coeur d'Alene", href: '/areas/coeur-dalene-idaho' },
                   { label: 'Hayden', href: '/areas/hayden-idaho' },
-                  { label: 'Kootenai County', href: '/areas/kootenai-county' },
                 ].map((link) => (
                   <li key={link.href}>
                     <Link
@@ -124,6 +124,9 @@ export default function Footer() {
             <div>
               <p className="text-xs uppercase font-semibold tracking-widest mb-4" style={{ color: '#C4842A', fontFamily: "'DM Sans', system-ui, sans-serif", letterSpacing: '0.15em' }}>Contact</p>
               <ul className="space-y-2">
+                <li>
+                  <p className="text-sm font-semibold" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>Shirin Abplanalp</p>
+                </li>
                 <li>
                   <a
                     href="tel:+12086607468"

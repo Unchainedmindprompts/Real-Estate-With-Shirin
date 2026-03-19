@@ -8,7 +8,8 @@ const areas = [
   { label: 'Post Falls', href: '/areas/post-falls-idaho' },
   { label: "Coeur d'Alene", href: '/areas/coeur-dalene-idaho' },
   { label: 'Hayden', href: '/areas/hayden-idaho' },
-  { label: 'Kootenai County', href: '/areas/kootenai-county' },
+  { label: 'Rathdrum', href: '/areas/rathdrum-idaho' },
+  { label: 'Sandpoint', href: '/areas/sandpoint-idaho' },
 ]
 
 export default function Navigation() {
@@ -37,11 +38,12 @@ export default function Navigation() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-xl lg:text-2xl font-semibold leading-none"
+          className="leading-none"
           style={{
-            fontFamily: "'Cormorant Garamond', Georgia, serif",
+            fontFamily: "'Great Vibes', cursive",
+            fontSize: 'clamp(30px, 3.2vw, 42px)',
+            fontWeight: 400,
             color: solid ? '#1C1A17' : '#FAFAF8',
-            fontWeight: 600,
           }}
         >
           Real Estate With Shirin
@@ -109,14 +111,15 @@ export default function Navigation() {
               </svg>
             </button>
             {areasOpen && (
-              <div
-                className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 rounded py-2"
-                style={{
-                  backgroundColor: '#FAFAF8',
-                  border: '1px solid #E8DDD0',
-                  boxShadow: '0 4px 20px rgba(28,26,23,0.12)',
-                }}
-              >
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-52">
+                <div
+                  className="rounded py-2"
+                  style={{
+                    backgroundColor: '#FAFAF8',
+                    border: '1px solid #E8DDD0',
+                    boxShadow: '0 4px 20px rgba(28,26,23,0.12)',
+                  }}
+                >
                 {areas.map((area) => (
                   <Link
                     key={area.href}
@@ -138,6 +141,7 @@ export default function Navigation() {
                     {area.label}
                   </Link>
                 ))}
+                </div>
               </div>
             )}
           </div>

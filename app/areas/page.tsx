@@ -30,12 +30,6 @@ const areas = [
     href: '/areas/hayden-idaho',
     image: '/images/skiing.jpg',
   },
-  {
-    name: 'Kootenai County',
-    desc: 'The full picture of Northern Idaho living — from rural acreage to established neighborhoods.',
-    href: '/areas/kootenai-county',
-    image: '/images/local-brewery.jpg',
-  },
 ]
 
 export default function AreasPage() {
@@ -45,7 +39,7 @@ export default function AreasPage() {
       <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/IMG_1620.jpeg"
+            src="/images/northern-idaho-hero.webp"
             alt="Lake Coeur d'Alene seaplane dock"
             fill
             priority

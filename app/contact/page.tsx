@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
@@ -37,12 +38,19 @@ export default function ContactPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* Hero */}
-      <section
-        className="flex items-center justify-center"
-        style={{ minHeight: '40vh', backgroundColor: '#F5EFE6', paddingTop: '80px' }}
-      >
-        <div className="text-center px-6 lg:px-8 py-16 max-w-3xl mx-auto">
-          <p className="eyebrow mb-4">GET IN TOUCH</p>
+      <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/northern-idaho-hero.webp"
+            alt="Northern Idaho landscape"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(28,26,23,0.35), rgba(28,26,23,0.6))' }} />
+        </div>
+        <div className="relative z-10 text-center px-6 lg:px-8 py-20 max-w-3xl mx-auto">
+          <p className="eyebrow mb-4" style={{ color: '#C4842A' }}>GET IN TOUCH</p>
           <h1
             className="mb-6"
             style={{
@@ -50,12 +58,12 @@ export default function ContactPage() {
               fontWeight: 600,
               fontSize: 'clamp(36px, 6vw, 56px)',
               lineHeight: 1.1,
-              color: '#1C1A17',
+              color: '#FAFAF8',
             }}
           >
             Let&apos;s Start the Conversation
           </h1>
-          <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '18px', lineHeight: 1.7, color: '#5C5650' }}>
+          <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '18px', lineHeight: 1.7, color: '#E8DDD0' }}>
             Whether you&apos;re buying, selling, or just starting to explore Northern Idaho — reach out. No pressure, no pitch. Just an honest conversation.
           </p>
         </div>
