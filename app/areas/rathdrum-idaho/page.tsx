@@ -40,7 +40,7 @@ const jsonLdFaq = {
       name: 'What is the housing market like in Rathdrum Idaho in 2026?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Coming soon.',
+        text: "As of early 2026, the median sale price in Rathdrum is approximately $515,000 — up 4.3% year-over-year — with homes averaging around 42 days on market. Hot homes go pending in as few as 10 days. Pending sales surged 82.9% year-over-year in February, the largest buyer demand increase of any city in Northern Idaho, making it one of the most closely watched markets in the region right now. Price per square foot is $316–$327, holding steady as one of the higher per-foot values in the area. Inventory is contracting, and months of supply data puts Rathdrum in undersupplied territory heading into the spring buying season. Demand is being driven by buyers priced out of Coeur d'Alene and Hayden who still want the Northern Idaho lifestyle at a more approachable entry point.",
       },
     },
     {
@@ -48,7 +48,7 @@ const jsonLdFaq = {
       name: 'What are the best neighborhoods in Rathdrum Idaho?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Coming soon.',
+        text: "Rathdrum has a range of distinct neighborhoods suited to different buyers. Twin Lakes Village is a standout — a waterfront golf community built around two lakes with a private clubhouse, dock access, and a mix of condos and single-family homes. The Foothills area offers newer construction and elevated views. Brookshire is a centrally located, family-oriented neighborhood with more affordable price points and active new development. Downtown Rathdrum has a historic small-town character that's growing — local shops, community events, and the kind of walkable main street feel that's increasingly rare. Orchard Prairie runs slightly higher in value with larger parcels and a rural-residential feel. The right neighborhood depends on whether you want a community with amenities, room to spread out, or an entry-level foothold in the market.",
       },
     },
     {
@@ -56,7 +56,7 @@ const jsonLdFaq = {
       name: 'How much do homes cost in Rathdrum Idaho?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Coming soon.',
+        text: 'As of early 2026, the median sale price in Rathdrum is approximately $515,000, with an average home value around $565,000. Entry-level homes in move-in condition typically start in the $420,000–$470,000 range for a standard 3-bedroom. The $490,000–$600,000 range covers most resale inventory — 3–4 bedrooms, established neighborhoods, good lot sizes. Above $600,000 you\'re looking at newer construction, lakefront access, or premium finishes in communities like Twin Lakes Village. Rathdrum\'s price per square foot runs $316–$327, which is competitive with the rest of Northern Idaho given the space and small-town character you\'re getting.',
       },
     },
     {
@@ -64,7 +64,7 @@ const jsonLdFaq = {
       name: 'How does Rathdrum compare to Post Falls for home buyers?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Coming soon.',
+        text: "Rathdrum and Post Falls are two of the most affordable entry points in Northern Idaho, and they're only about 15 minutes apart. Post Falls has a lower median sale price — around $521,000 — and significantly more new construction activity, more apartment and rental inventory, and a more suburban feel with commercial corridors along Prairie and Highway 41. Rathdrum's median is similar at around $515,000, but the character is decidedly more small-town: tighter community feel, less density, higher median household income (~$86,000 vs. ~$73,000 in Post Falls), and a buyer pool that's increasingly active — pending sales in Rathdrum jumped 82.9% year-over-year in February. For buyers choosing between the two, it often comes down to one question: do you want the bigger suburban infrastructure of Post Falls, or the quieter, more rooted feel of Rathdrum?",
       },
     },
   ],
@@ -73,19 +73,19 @@ const jsonLdFaq = {
 const faqs = [
   {
     q: 'What is the housing market like in Rathdrum Idaho in 2026?',
-    a: 'Coming soon.',
+    a: "As of early 2026, the median sale price in Rathdrum is approximately $515,000 — up 4.3% year-over-year — with homes averaging around 42 days on market. Hot homes go pending in as few as 10 days. Pending sales surged 82.9% year-over-year in February, the largest buyer demand increase of any city in Northern Idaho, making it one of the most closely watched markets in the region right now. Price per square foot is $316–$327, holding steady as one of the higher per-foot values in the area. Inventory is contracting, and months of supply data puts Rathdrum in undersupplied territory heading into the spring buying season. Demand is being driven by buyers priced out of Coeur d\u2019Alene and Hayden who still want the Northern Idaho lifestyle at a more approachable entry point.",
   },
   {
     q: 'What are the best neighborhoods in Rathdrum Idaho?',
-    a: 'Coming soon.',
+    a: "Rathdrum has a range of distinct neighborhoods suited to different buyers. Twin Lakes Village is a standout — a waterfront golf community built around two lakes with a private clubhouse, dock access, and a mix of condos and single-family homes. The Foothills area offers newer construction and elevated views. Brookshire is a centrally located, family-oriented neighborhood with more affordable price points and active new development. Downtown Rathdrum has a historic small-town character that\u2019s growing — local shops, community events, and the kind of walkable main street feel that\u2019s increasingly rare. Orchard Prairie runs slightly higher in value with larger parcels and a rural-residential feel. The right neighborhood depends on whether you want a community with amenities, room to spread out, or an entry-level foothold in the market.",
   },
   {
     q: 'How much do homes cost in Rathdrum Idaho?',
-    a: 'Coming soon.',
+    a: "As of early 2026, the median sale price in Rathdrum is approximately $515,000, with an average home value around $565,000. Entry-level homes in move-in condition typically start in the $420,000\u2013$470,000 range for a standard 3-bedroom. The $490,000\u2013$600,000 range covers most resale inventory — 3\u20134 bedrooms, established neighborhoods, good lot sizes. Above $600,000 you\u2019re looking at newer construction, lakefront access, or premium finishes in communities like Twin Lakes Village. Rathdrum\u2019s price per square foot runs $316\u2013$327, which is competitive with the rest of Northern Idaho given the space and small-town character you\u2019re getting.",
   },
   {
     q: 'How does Rathdrum compare to Post Falls for home buyers?',
-    a: 'Coming soon.',
+    a: "Rathdrum and Post Falls are two of the most affordable entry points in Northern Idaho, and they\u2019re only about 15 minutes apart. Post Falls has a lower median sale price — around $521,000 — and significantly more new construction activity, more apartment and rental inventory, and a more suburban feel with commercial corridors along Prairie and Highway 41. Rathdrum\u2019s median is similar at around $515,000, but the character is decidedly more small-town: tighter community feel, less density, higher median household income (~$86,000 vs. ~$73,000 in Post Falls), and a buyer pool that\u2019s increasingly active — pending sales in Rathdrum jumped 82.9% year-over-year in February. For buyers choosing between the two, it often comes down to one question: do you want the bigger suburban infrastructure of Post Falls, or the quieter, more rooted feel of Rathdrum?",
   },
 ]
 
