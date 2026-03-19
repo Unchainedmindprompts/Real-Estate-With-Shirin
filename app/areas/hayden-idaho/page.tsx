@@ -26,18 +26,10 @@ const jsonLdFaq = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What is Hayden Idaho like to live in?',
+      name: 'What is the housing market like in Hayden Idaho in 2026?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Hayden is a quiet, established residential community just north of Coeur d'Alene. It has a distinctly family-friendly character — larger lots, good schools, lower density, and a pace of life that feels unhurried without being isolated. Residents get easy access to all of Coeur d'Alene's amenities while enjoying more space and privacy at home.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much do homes cost in Hayden Idaho?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Hayden is one of Northern Idaho\u2019s higher-priced markets, with a median list price around $599,900 and an average home value of approximately $627,000 as of early 2026. Entry-level resale homes typically start in the $450,000\u2013$500,000 range for a standard 3-bedroom. New construction and larger properties push well above $700,000, and the luxury segment ($750,000+) is active with a strong resale market averaging close to $787,000. Hayden commands a premium over Post Falls due to its residential character, larger lots, and proximity to Hayden Lake.",
+        text: 'As of early 2026, the median sale price in Hayden is approximately $553,000 — with a price per square foot of $311, up 13.5% year-over-year, one of the strongest appreciation rates in Northern Idaho. Homes are averaging around 49–57 days on market, with hot homes going pending in as few as 7 days. Hayden has 2.1 months of housing supply and inventory has contracted 26.6% year-over-year. Showings per listing are up 70.8% — the highest increase of any city in the region — signaling that buyer activity is accelerating into the spring season. The resale market is active, with previously owned homes averaging close to $787,000 in average sale price. New construction deliveries were light in February due to completion timing, not a demand problem.',
       },
     },
     {
@@ -45,15 +37,23 @@ const jsonLdFaq = {
       name: 'Is Hayden Idaho a good place to raise a family?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Hayden is consistently cited as one of the best family communities in Northern Idaho. The Lakeland School District serves Hayden and is well-regarded. Neighborhoods are quiet with larger lots, low traffic, and a safe, community-oriented feel. Proximity to Coeur d'Alene Lake and recreational amenities makes it ideal for active families.",
+        text: "Hayden is consistently regarded as one of the most family-oriented communities in Northern Idaho. The Lakeland School District serves the area and is well-regarded regionally. Neighborhoods are quiet with larger lots, low traffic density, and a community feel that is genuinely different from more commercial corridors. Proximity to Hayden Lake, Coeur d'Alene Lake, and the surrounding recreation makes it a natural fit for active families. The pace of life is unhurried without being isolated — Coeur d'Alene's amenities are minutes away, but the neighborhood itself stays residential.",
       },
     },
     {
       '@type': 'Question',
-      name: 'Who is a good realtor in Hayden Idaho?',
+      name: 'How much do homes cost in Hayden Idaho?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Shirin Abplanalp is a licensed realtor at eXp Realty serving Hayden and the broader Kootenai County area. She specializes in buyer representation, seller representation, and relocation for families moving to the region. Idaho Real Estate License #1371861.",
+        text: "As of early 2026, the median list price in Hayden is approximately $599,900, with an average home value around $617,000–$627,000. Entry-level resale homes in move-in condition typically start in the $450,000–$500,000 range for a standard 3-bedroom. The $550,000–$700,000 range gets you 3–4 bedrooms, larger lots, and established neighborhoods. New construction and premium properties push well above $700,000, and the resale market for upper-tier homes is averaging close to $787,000. Hayden's price per square foot is $311 — up 13.5% year-over-year — reflecting both genuine appreciation and strong sustained demand.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: "How does Hayden compare to Coeur d'Alene for home buyers?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Hayden and Coeur d'Alene are adjacent markets that serve different buyer priorities. Hayden's median runs slightly lower than CDA's $601,000 — and delivers larger lots, a quieter residential character, and a strong school district in exchange for less walkability and lake-direct access. CDA has 2.6 months of supply versus Hayden's 2.1 months, so both markets are undersupplied but Hayden is tighter on a relative basis. Buyers who prioritize space, privacy, and school quality tend to land in Hayden. Buyers who want walkable access to Sherman Avenue, the waterfront, and CDA's downtown energy tend to pay the CDA premium. Both are about 10–15 minutes apart and share the same regional lifestyle.",
       },
     },
   ],
@@ -61,20 +61,20 @@ const jsonLdFaq = {
 
 const faqs = [
   {
-    q: 'What is Hayden Idaho like to live in?',
-    a: "Hayden is a quiet, established residential community just north of Coeur d'Alene. It has a distinctly family-friendly character — larger lots, good schools, lower density, and a pace of life that feels unhurried without being isolated. Residents get easy access to all of Coeur d'Alene's amenities while enjoying more space and privacy at home.",
-  },
-  {
-    q: 'How much do homes cost in Hayden Idaho?',
-    a: "Hayden is one of Northern Idaho\u2019s higher-priced markets, with a median list price around $599,900 and an average home value of approximately $627,000 as of early 2026. Entry-level resale homes typically start in the $450,000\u2013$500,000 range for a standard 3-bedroom. New construction and larger properties push well above $700,000, and the luxury segment ($750,000+) is active with a strong resale market averaging close to $787,000. Hayden commands a premium over Post Falls due to its residential character, larger lots, and proximity to Hayden Lake.",
+    q: 'What is the housing market like in Hayden Idaho in 2026?',
+    a: 'As of early 2026, the median sale price in Hayden is approximately $553,000 — with a price per square foot of $311, up 13.5% year-over-year, one of the strongest appreciation rates in Northern Idaho. Homes are averaging around 49–57 days on market, with hot homes going pending in as few as 7 days. Hayden has 2.1 months of housing supply and inventory has contracted 26.6% year-over-year. Showings per listing are up 70.8% — the highest increase of any city in the region — signaling that buyer activity is accelerating into the spring season. The resale market is active, with previously owned homes averaging close to $787,000 in average sale price. New construction deliveries were light in February due to completion timing, not a demand problem.',
   },
   {
     q: 'Is Hayden Idaho a good place to raise a family?',
-    a: "Hayden is consistently cited as one of the best family communities in Northern Idaho. The Lakeland School District serves Hayden and is well-regarded. Neighborhoods are quiet with larger lots, low traffic, and a safe, community-oriented feel. Proximity to Coeur d'Alene Lake and recreational amenities makes it ideal for active families.",
+    a: "Hayden is consistently regarded as one of the most family-oriented communities in Northern Idaho. The Lakeland School District serves the area and is well-regarded regionally. Neighborhoods are quiet with larger lots, low traffic density, and a community feel that is genuinely different from more commercial corridors. Proximity to Hayden Lake, Coeur d'Alene Lake, and the surrounding recreation makes it a natural fit for active families. The pace of life is unhurried without being isolated — Coeur d'Alene's amenities are minutes away, but the neighborhood itself stays residential.",
   },
   {
-    q: 'Who is a good realtor in Hayden Idaho?',
-    a: 'Shirin Abplanalp is a licensed realtor at eXp Realty serving Hayden and the broader Kootenai County area. She specializes in buyer representation, seller representation, and relocation for families moving to the region. Idaho Real Estate License #1371861.',
+    q: 'How much do homes cost in Hayden Idaho?',
+    a: "As of early 2026, the median list price in Hayden is approximately $599,900, with an average home value around $617,000–$627,000. Entry-level resale homes in move-in condition typically start in the $450,000–$500,000 range for a standard 3-bedroom. The $550,000–$700,000 range gets you 3–4 bedrooms, larger lots, and established neighborhoods. New construction and premium properties push well above $700,000, and the resale market for upper-tier homes is averaging close to $787,000. Hayden's price per square foot is $311 — up 13.5% year-over-year — reflecting both genuine appreciation and strong sustained demand.",
+  },
+  {
+    q: "How does Hayden compare to Coeur d'Alene for home buyers?",
+    a: "Hayden and Coeur d'Alene are adjacent markets that serve different buyer priorities. Hayden's median runs slightly lower than CDA's $601,000 — and delivers larger lots, a quieter residential character, and a strong school district in exchange for less walkability and lake-direct access. CDA has 2.6 months of supply versus Hayden's 2.1 months, so both markets are undersupplied but Hayden is tighter on a relative basis. Buyers who prioritize space, privacy, and school quality tend to land in Hayden. Buyers who want walkable access to Sherman Avenue, the waterfront, and CDA's downtown energy tend to pay the CDA premium. Both are about 10–15 minutes apart and share the same regional lifestyle.",
   },
 ]
 
