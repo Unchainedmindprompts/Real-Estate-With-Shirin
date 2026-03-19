@@ -41,7 +41,7 @@ export default function Navigation() {
           className="leading-none"
           style={{
             fontFamily: "'Great Vibes', cursive",
-            fontSize: 'clamp(30px, 3.2vw, 42px)',
+            fontSize: 'clamp(36px, 4vw, 54px)',
             fontWeight: 400,
             color: solid ? '#1C1A17' : '#FAFAF8',
           }}
