@@ -172,10 +172,10 @@ export default function RathdrumPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: 'Affordability', body: 'Coming soon.' },
-              { title: 'Space & Privacy', body: 'Coming soon.' },
-              { title: 'Location', body: 'Coming soon.' },
-              { title: 'Growth', body: 'Coming soon.' },
+              { title: 'Affordability', body: 'With a median sale price around $515,000, Rathdrum offers one of the lowest entry points in Northern Idaho. Buyers get more home — and more land — for the same budget compared to Coeur d\'Alene or Hayden.' },
+              { title: 'Space & Privacy', body: 'Rathdrum lots tend to run larger than what you\'ll find closer to the lake. Bigger yards, more elbow room between neighbors, and a quieter residential feel that\'s harder to come by as the corridor fills in.' },
+              { title: 'Location', body: 'Ten miles north of Post Falls, 20 miles from Coeur d\'Alene, and under an hour to Spokane. Close enough to commute, far enough to decompress. Highway 41 and US-53 make the connection easy.' },
+              { title: 'Growth', body: 'Pending sales in Rathdrum jumped 82.9% year-over-year in February 2026 — the highest demand increase in Northern Idaho. Buyers are finding it now, before prices fully catch up to the rest of the corridor.' },
             ].map((card) => (
               <div
                 key={card.title}
