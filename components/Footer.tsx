@@ -20,11 +20,12 @@ export default function Footer() {
               </div>
               <div>
                 <p
-                  className="text-xl font-semibold leading-tight"
+                  className="leading-tight"
                   style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
+                    fontFamily: "'Great Vibes', cursive",
+                    fontSize: 'clamp(24px, 2.5vw, 32px)',
+                    fontWeight: 400,
                     color: '#FAFAF8',
-                    fontWeight: 600,
                   }}
                 >
                   Real Estate With Shirin
