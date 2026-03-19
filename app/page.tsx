@@ -114,7 +114,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section
         className="relative flex items-center justify-center"
-        style={{ minHeight: '85vh' }}
+        style={{ minHeight: '100svh' }}
       >
         <div className="absolute inset-0 z-0">
           <Image
