@@ -599,7 +599,7 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
 </div>
 {/* Agent Card */}
 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
-<p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Local Expert</p>
+<p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Local Advisor</p>
 <img src="/images/shirin-abplanalp.jpg" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" />
 <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
 <p className="font-dm-sans text-xs text-[#9A9590] mb-4">Licensed REALTOR® · eXp Realty · #1371861</p>

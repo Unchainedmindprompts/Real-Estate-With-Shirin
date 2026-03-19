@@ -167,9 +167,9 @@ export default function HaydenPage() {
       {/* Bottom CTA */}
       <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>HAYDEN EXPERT</p>
+          <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>HAYDEN ADVISOR</p>
           <h2 className="mb-6" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 500, fontSize: 'clamp(32px, 5vw, 48px)', lineHeight: 1.15, color: '#F5EFE6' }}>
-            Talk to a Hayden Expert
+            Talk to a Hayden Advisor
           </h2>
           <p className="mb-10" style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
             Buying or selling in Hayden? Let&apos;s start with a conversation about what this community offers and whether it&apos;s the right fit.

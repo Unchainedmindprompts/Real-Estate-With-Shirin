@@ -175,7 +175,7 @@ export default function KootenaiCountyPage() {
       {/* Bottom CTA */}
       <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>COUNTY EXPERT</p>
+          <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>COUNTY ADVISOR</p>
           <h2 className="mb-6" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 500, fontSize: 'clamp(32px, 5vw, 48px)', lineHeight: 1.15, color: '#F5EFE6' }}>
             Find Your Place in Kootenai County
           </h2>
