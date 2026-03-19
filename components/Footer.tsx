@@ -125,6 +125,9 @@ export default function Footer() {
               <p className="text-xs uppercase font-semibold tracking-widest mb-4" style={{ color: '#C4842A', fontFamily: "'DM Sans', system-ui, sans-serif", letterSpacing: '0.15em' }}>Contact</p>
               <ul className="space-y-2">
                 <li>
+                  <p className="text-sm font-semibold" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>Shirin Abplanalp</p>
+                </li>
+                <li>
                   <a
                     href="tel:+12086607468"
                     className="text-sm transition-colors"
