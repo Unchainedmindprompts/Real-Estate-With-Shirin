@@ -235,12 +235,12 @@ export default function CdaPage() {
       {/* Bottom CTA */}
       <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>CDA ADVISOR</p>
+          <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>Shirin — Coeur d&apos;Alene Realtor</p>
           <h2 className="mb-6" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 500, fontSize: 'clamp(32px, 5vw, 48px)', lineHeight: 1.15, color: '#F5EFE6' }}>
-            Talk to a Coeur d&apos;Alene Advisor
+            Talk to Shirin About Coeur d&apos;Alene
           </h2>
           <p className="mb-10" style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-            Buying or selling in Coeur d&apos;Alene? Let&apos;s talk about the market and what&apos;s right for you.
+            Buying or selling in Coeur d&apos;Alene? Let&apos;s talk about the current market and what&apos;s right for you.
           </p>
           <Link
             href="/contact"

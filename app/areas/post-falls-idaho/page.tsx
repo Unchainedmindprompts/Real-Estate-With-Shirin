@@ -277,7 +277,7 @@ export default function PostFallsPage() {
       {/* Bottom CTA */}
       <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>POST FALLS ADVISOR</p>
+          <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>Shirin — Post Falls Realtor</p>
           <h2
             className="mb-6"
             style={{
@@ -288,10 +288,10 @@ export default function PostFallsPage() {
               color: '#F5EFE6',
             }}
           >
-            Talk to a Post Falls Advisor
+            Talk to Shirin About Post Falls
           </h2>
           <p className="mb-10" style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-            Buying or selling in Post Falls? Let&apos;s start with a conversation about the current market and your specific goals.
+            Buying or selling in Post Falls? Let&apos;s talk about the current market and what&apos;s right for you.
           </p>
           <Link
             href="/contact"
