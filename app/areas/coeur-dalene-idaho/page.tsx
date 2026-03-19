@@ -37,26 +37,18 @@ const jsonLdFaq = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: "Who is a good real estate agent in Coeur d'Alene Idaho?",
+      name: "What is the housing market like in Coeur d'Alene Idaho in 2026?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Shirin Abplanalp is a licensed realtor at eXp Realty serving Coeur d'Alene and the surrounding Northern Idaho area. She relocated to Northern Idaho herself and brings firsthand knowledge of the market, lifestyle, and what buyers and sellers in Coeur d'Alene need from a trusted agent. Idaho Real Estate License #1371861.",
+        text: "As of early 2026, the median sale price in Coeur d'Alene is approximately $601,000 — up 4.6% year-over-year — with average homes selling in around 49 days. Hot homes move in as few as 12 days. The market has seen showings per listing increase 46.2% year-over-year, a sign of strengthening demand even as inventory sits at 2.6 months of supply. Nearly 70% of homes are closing under list price, with a sale-to-list ratio of around 97–98%, meaning there is negotiating room for buyers who come in prepared. Demand continues to be driven by out-of-state buyers relocating from California, Washington, and Oregon.",
       },
     },
     {
       '@type': 'Question',
-      name: "What is the Coeur d'Alene Idaho real estate market like in 2026?",
+      name: "What are the best neighborhoods in Coeur d'Alene Idaho?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Coeur d'Alene remains one of the most desirable real estate markets in the Inland Northwest. Demand has been sustained by buyers from California, Washington, and Oregon seeking lakefront access, natural beauty, and a lower cost of living relative to their home markets. Inventory at the premium price points can be limited. For current market specifics, reach out directly.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is Coeur d\'Alene or Post Falls better to live in?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Both are excellent — the answer depends entirely on your lifestyle and budget. Coeur d'Alene offers lake access, a walkable downtown, and a more established amenity base. Post Falls tends to offer more home per dollar with comparable outdoor access and a slightly smaller-town feel. I work in both markets and can help you weigh the tradeoffs based on how you want to live.",
+        text: "Coeur d'Alene neighborhoods vary considerably by lifestyle and price point. Downtown CDA and Fort Grounds offer walkable access to Sherman Avenue, the lake, and local restaurants — these are some of the most established and stable pockets in the city. Sanders Beach on the eastern shore is a waterfront lifestyle neighborhood with premium pricing to match. Midtown CDA is more affordable and has an eclectic, arts-forward character that attracts younger buyers. Riverstone, along the Spokane River, is a master-planned community popular with young professionals and families. Dalton Gardens to the north offers larger lots and a more rural feel while staying close to CDA amenities. Blackwell Hill, south of downtown, commands some of the best lake and mountain views in the area. The right neighborhood depends on how you want to live day-to-day — that conversation is worth having before you start pulling listings.",
       },
     },
     {
@@ -64,7 +56,15 @@ const jsonLdFaq = {
       name: "How much do homes cost in Coeur d'Alene Idaho?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Home prices in Coeur d'Alene vary widely by location and proximity to the lake. Mid-range single-family homes typically run $500,000–$800,000, with lakefront and premium properties well above that. Entry-level options exist in neighborhoods further from downtown. For current pricing in your target range, reach out for a market update.",
+        text: "As of early 2026, the median sale price in Coeur d'Alene is approximately $601,000. Entry-level single-family homes in move-in condition typically start around $450,000–$500,000 for a 3-bedroom. The $550,000–$700,000 range gets you 3–4 bedrooms with updated finishes and more desirable locations. Above $700,000 you're looking at larger homes, premium neighborhoods, lake-proximate lots, and luxury finishes — the new construction median in the CDA urban area is currently over $770,000. Price per square foot is around $288, and Coeur d'Alene consistently runs $80,000–$100,000 higher than Post Falls at comparable size and condition.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does Coeur d\'Alene compare to Post Falls for home buyers?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Coeur d'Alene carries a higher median price than Post Falls — roughly $601,000 versus $521,000 — but delivers lake access, a walkable downtown, and Sherman Avenue in exchange. Buyers get CDA's lifestyle premium but generally less square footage per dollar. CDA also has 2.6 months of housing supply compared to Post Falls's 1.4 months, which means more listings to choose from and slightly more negotiating leverage. For buyers who want the full CDA experience — the lake, the restaurants, the walkability — it's worth the premium. For buyers who want maximum value and newer construction, Post Falls is 10 minutes west on I-90 and delivers more home for the same budget.",
       },
     },
   ],
@@ -72,20 +72,20 @@ const jsonLdFaq = {
 
 const faqs = [
   {
-    q: "Who is a good real estate agent in Coeur d'Alene Idaho?",
-    a: "Shirin Abplanalp is a licensed realtor at eXp Realty serving Coeur d'Alene and the surrounding Northern Idaho area. She relocated to Northern Idaho herself and brings firsthand knowledge of the market, lifestyle, and what buyers and sellers in Coeur d'Alene need from a trusted agent. Idaho Real Estate License #1371861.",
+    q: "What is the housing market like in Coeur d'Alene Idaho in 2026?",
+    a: "As of early 2026, the median sale price in Coeur d'Alene is approximately $601,000 — up 4.6% year-over-year — with average homes selling in around 49 days. Hot homes move in as few as 12 days. The market has seen showings per listing increase 46.2% year-over-year, a sign of strengthening demand even as inventory sits at 2.6 months of supply. Nearly 70% of homes are closing under list price, with a sale-to-list ratio of around 97–98%, meaning there is negotiating room for buyers who come in prepared. Demand continues to be driven by out-of-state buyers relocating from California, Washington, and Oregon.",
   },
   {
-    q: "What is the Coeur d'Alene Idaho real estate market like in 2026?",
-    a: "Coeur d'Alene remains one of the most desirable real estate markets in the Inland Northwest. Demand has been sustained by buyers from California, Washington, and Oregon seeking lakefront access, natural beauty, and a lower cost of living relative to their home markets. Inventory at the premium price points can be limited. For current market specifics, reach out directly.",
-  },
-  {
-    q: "Is Coeur d'Alene or Post Falls better to live in?",
-    a: "Both are excellent — the answer depends entirely on your lifestyle and budget. Coeur d'Alene offers lake access, a walkable downtown, and a more established amenity base. Post Falls tends to offer more home per dollar with comparable outdoor access and a slightly smaller-town feel. I work in both markets and can help you weigh the tradeoffs based on how you want to live.",
+    q: "What are the best neighborhoods in Coeur d'Alene Idaho?",
+    a: "Coeur d'Alene neighborhoods vary considerably by lifestyle and price point. Downtown CDA and Fort Grounds offer walkable access to Sherman Avenue, the lake, and local restaurants — these are some of the most established and stable pockets in the city. Sanders Beach on the eastern shore is a waterfront lifestyle neighborhood with premium pricing to match. Midtown CDA is more affordable and has an eclectic, arts-forward character that attracts younger buyers. Riverstone, along the Spokane River, is a master-planned community popular with young professionals and families. Dalton Gardens to the north offers larger lots and a more rural feel while staying close to CDA amenities. Blackwell Hill, south of downtown, commands some of the best lake and mountain views in the area. The right neighborhood depends on how you want to live day-to-day — that conversation is worth having before you start pulling listings.",
   },
   {
     q: "How much do homes cost in Coeur d'Alene Idaho?",
-    a: "Home prices in Coeur d'Alene vary widely by location and proximity to the lake. Mid-range single-family homes typically run $500,000–$800,000, with lakefront and premium properties well above that. Entry-level options exist in neighborhoods further from downtown. For current pricing in your target range, reach out for a market update.",
+    a: "As of early 2026, the median sale price in Coeur d'Alene is approximately $601,000. Entry-level single-family homes in move-in condition typically start around $450,000–$500,000 for a 3-bedroom. The $550,000–$700,000 range gets you 3–4 bedrooms with updated finishes and more desirable locations. Above $700,000 you're looking at larger homes, premium neighborhoods, lake-proximate lots, and luxury finishes — the new construction median in the CDA urban area is currently over $770,000. Price per square foot is around $288, and Coeur d'Alene consistently runs $80,000–$100,000 higher than Post Falls at comparable size and condition.",
+  },
+  {
+    q: "How does Coeur d'Alene compare to Post Falls for home buyers?",
+    a: "Coeur d'Alene carries a higher median price than Post Falls — roughly $601,000 versus $521,000 — but delivers lake access, a walkable downtown, and Sherman Avenue in exchange. Buyers get CDA's lifestyle premium but generally less square footage per dollar. CDA also has 2.6 months of housing supply compared to Post Falls's 1.4 months, which means more listings to choose from and slightly more negotiating leverage. For buyers who want the full CDA experience — the lake, the restaurants, the walkability — it's worth the premium. For buyers who want maximum value and newer construction, Post Falls is 10 minutes west on I-90 and delivers more home for the same budget.",
   },
 ]
 
