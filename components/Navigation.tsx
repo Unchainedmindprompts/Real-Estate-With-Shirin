@@ -9,6 +9,8 @@ const areas = [
   { label: "Coeur d'Alene", href: '/areas/coeur-dalene-idaho' },
   { label: 'Hayden', href: '/areas/hayden-idaho' },
   { label: 'Kootenai County', href: '/areas/kootenai-county' },
+  { label: 'Rathdrum', href: '/areas/rathdrum-idaho' },
+  { label: 'Sandpoint', href: '/areas/sandpoint-idaho' },
 ]
 
 export default function Navigation() {
