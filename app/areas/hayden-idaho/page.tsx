@@ -37,7 +37,7 @@ const jsonLdFaq = {
       name: 'How much do homes cost in Hayden Idaho?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Home prices in Hayden typically range from the mid-$300,000s for entry-level properties to $600,000+ for larger, more established homes. Acreage properties and custom builds can run higher. Hayden generally offers good value compared to central Coeur d'Alene for buyers seeking space and a residential setting.",
+        text: "Hayden is one of Northern Idaho\u2019s higher-priced markets, with a median list price around $599,900 and an average home value of approximately $627,000 as of early 2026. Entry-level resale homes typically start in the $450,000\u2013$500,000 range for a standard 3-bedroom. New construction and larger properties push well above $700,000, and the luxury segment ($750,000+) is active with a strong resale market averaging close to $787,000. Hayden commands a premium over Post Falls due to its residential character, larger lots, and proximity to Hayden Lake.",
       },
     },
     {
@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     q: 'How much do homes cost in Hayden Idaho?',
-    a: "Home prices in Hayden typically range from the mid-$300,000s for entry-level properties to $600,000+ for larger, more established homes. Acreage properties and custom builds can run higher. Hayden generally offers good value compared to central Coeur d'Alene for buyers seeking space and a residential setting.",
+    a: "Hayden is one of Northern Idaho\u2019s higher-priced markets, with a median list price around $599,900 and an average home value of approximately $627,000 as of early 2026. Entry-level resale homes typically start in the $450,000\u2013$500,000 range for a standard 3-bedroom. New construction and larger properties push well above $700,000, and the luxury segment ($750,000+) is active with a strong resale market averaging close to $787,000. Hayden commands a premium over Post Falls due to its residential character, larger lots, and proximity to Hayden Lake.",
   },
   {
     q: 'Is Hayden Idaho a good place to raise a family?',
