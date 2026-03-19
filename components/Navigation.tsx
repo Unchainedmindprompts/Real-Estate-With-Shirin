@@ -38,11 +38,12 @@ export default function Navigation() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-xl lg:text-2xl font-semibold leading-none"
+          className="leading-none"
           style={{
-            fontFamily: "'Cormorant Garamond', Georgia, serif",
+            fontFamily: "'Great Vibes', cursive",
+            fontSize: 'clamp(24px, 2.5vw, 32px)',
+            fontWeight: 400,
             color: solid ? '#1C1A17' : '#FAFAF8',
-            fontWeight: 600,
           }}
         >
           Real Estate With Shirin
