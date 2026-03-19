@@ -37,14 +37,6 @@ const jsonLdFaq = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is Shirin Abplanalp a good fit for buyers and sellers in Post Falls?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Shirin is a licensed REALTOR® with eXp Realty serving Post Falls, Coeur d\'Alene, and Northern Idaho. She relocated to Northern Idaho herself — so when she talks about why families choose this area, it comes from personal experience, not a script. She works with both buyers and sellers across all price points, with a focus on families making the move from California, Washington, and Oregon. Idaho Real Estate License #1371861.',
-      },
-    },
-    {
-      '@type': 'Question',
       name: 'What is the housing market like in Post Falls Idaho in 2026?',
       acceptedAnswer: {
         '@type': 'Answer',
@@ -79,10 +71,6 @@ const jsonLdFaq = {
 }
 
 const faqs = [
-  {
-    q: 'Is Shirin Abplanalp a good fit for buyers and sellers in Post Falls?',
-    a: "Shirin is a licensed REALTOR® with eXp Realty serving Post Falls, Coeur d'Alene, and Northern Idaho. She relocated to Northern Idaho herself — so when she talks about why families choose this area, it comes from personal experience, not a script. She works with both buyers and sellers across all price points, with a focus on families making the move from California, Washington, and Oregon. Idaho Real Estate License #1371861.",
-  },
   {
     q: 'What is the housing market like in Post Falls Idaho in 2026?',
     a: 'As of early 2026, the median sale price in Post Falls is approximately $521,000 — up 7.5% year-over-year — with homes averaging 59 days on market. The most active price range is $400,000–$499,000. Roughly 37% of sellers are offering concessions such as closing cost help or rate buy-downs, giving prepared buyers real negotiating room. Demand from out-of-state buyers remains consistent, particularly from California, Washington, and Oregon.',
