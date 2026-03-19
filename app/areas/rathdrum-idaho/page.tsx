@@ -144,10 +144,10 @@ export default function RathdrumPage() {
             Rathdrum at a Glance
           </h2>
           <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", marginBottom: '16px' }}>
-            Coming soon.
+            Rathdrum sits just 10 miles north of Post Falls and roughly 20 miles from Coeur d&apos;Alene — close enough to access everything Northern Idaho offers, far enough to feel like you&apos;ve actually gotten away. It&apos;s a small town in the best sense: a genuine downtown, tight community roots, and more space per dollar than anywhere else in the corridor.
           </p>
           <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", marginBottom: '16px' }}>
-            Coming soon.
+            As of early 2026, the median sale price is approximately $515,000 — up 4.3% year-over-year — with homes averaging 42 days on market. Pending sales surged 82.9% year-over-year in February, the largest demand increase of any city in Northern Idaho. Inventory is contracting heading into spring, and buyer demand is being driven heavily by people priced out of Coeur d&apos;Alene and Hayden who still want the Northern Idaho lifestyle at a more approachable entry point.
           </p>
         </div>
       </section>
