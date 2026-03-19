@@ -81,7 +81,6 @@ export default function Footer() {
                   { label: 'Post Falls', href: '/areas/post-falls-idaho' },
                   { label: "Coeur d'Alene", href: '/areas/coeur-dalene-idaho' },
                   { label: 'Hayden', href: '/areas/hayden-idaho' },
-                  { label: 'Kootenai County', href: '/areas/kootenai-county' },
                 ].map((link) => (
                   <li key={link.href}>
                     <Link

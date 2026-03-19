@@ -402,7 +402,6 @@ export default function HomePage() {
               { name: 'Post Falls', desc: "Northern Idaho's fastest-growing community", href: '/areas/post-falls-idaho' },
               { name: "Coeur d'Alene", desc: 'Lakefront living and vibrant downtown', href: '/areas/coeur-dalene-idaho' },
               { name: 'Hayden', desc: 'Family-friendly neighborhoods and great schools', href: '/areas/hayden-idaho' },
-              { name: 'Kootenai County', desc: 'The full picture of North Idaho living', href: '/areas/kootenai-county' },
             ].map((area) => (
               <Link
                 key={area.name}

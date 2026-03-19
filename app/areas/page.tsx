@@ -30,12 +30,6 @@ const areas = [
     href: '/areas/hayden-idaho',
     image: '/images/skiing.jpg',
   },
-  {
-    name: 'Kootenai County',
-    desc: 'The full picture of Northern Idaho living — from rural acreage to established neighborhoods.',
-    href: '/areas/kootenai-county',
-    image: '/images/local-brewery.jpg',
-  },
 ]
 
 export default function AreasPage() {
