@@ -479,56 +479,46 @@ style={{ backgroundColor: item.color + '20', color: item.color }}
 <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 Frequently Asked Questions
 </h2>
-<div itemScope itemType="https://schema.org/FAQPage" className="space-y-4 mb-12">
-<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div className="space-y-4 mb-12">
+<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     Is the Northern Idaho housing market a buyer&apos;s or seller&apos;s market in 2026?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed" itemProp="text">
+<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
                       Northern Idaho is effectively a balanced market in 2026, leaning slightly in favor of buyers compared to recent years. Median days on market for resale homes is 80 days, 37.5% of sales include seller concessions, and there were 244 price reductions in February 2026 alone. Buyers have meaningfully more leverage than they did in 2021-2022, though well-priced homes in desirable areas still move quickly.
 </p>
 </div>
-</div>
-<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     Will home prices drop in Northern Idaho in 2026?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed" itemProp="text">
+<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
                       A significant price drop is not expected. Northern Idaho is forecast to see 2-5% appreciation through 2026. There are zero active short sales and only one bank-owned property in the NID MLS as of February 2026 — no distress signals that would indicate a market correction. The median sale price of $527,277 is down 4.2% from February 2025, but that reflects market normalization rather than distress.
 </p>
 </div>
-</div>
-<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     Should I wait for mortgage rates to drop before buying in North Idaho?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed" itemProp="text">
+<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
                       Waiting for rates to drop is a gamble that often costs more than it saves. When rates fall from 6.41% to 5.9%, the monthly payment on a $521K home drops roughly $130/month — but lower rates bring more buyers into the market, seller concessions disappear, and home prices typically tick up. The buyer who waited may pay $10,000-$15,000 more for the same home and lose the negotiating leverage available today. Fannie Mae forecasts rates ending 2026 around 6.3%, trending toward 5.9%.
 </p>
 </div>
-</div>
-<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     What is the average days on market for homes in Post Falls and Coeur d&apos;Alene?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed" itemProp="text">
+<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
                       The median days on market for resale homes across the Northern Idaho MLS is 80 days as of February 2026. Homes sitting 61-90 days are typically selling at 96.3% of list price, and homes at 91-120 days at 94.87% — meaning a $500,000 home sitting 90 days carries $15,000-$20,000 in realistic buyer negotiating room. Hot homes priced correctly still go pending quickly, so days on market varies significantly by price point and neighborhood.
 </p>
 </div>
-</div>
-<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     Are sellers negotiating in Northern Idaho right now?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed" itemProp="text">
+<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
                       Yes — meaningfully so. In February 2026, 37.5% of all Northern Idaho MLS sales included seller concessions such as closing cost credits, mortgage rate buy-downs, or repair credits. There were 244 price reductions in February alone. This is a significant shift from 2021-2022 when sellers routinely received multiple offers above asking with no concessions. Buyers who understand this leverage and work with an agent who knows how to negotiate it are in a genuinely strong position.
 </p>
-</div>
 </div>
 </div>
 {/* Closing Author CTA */}

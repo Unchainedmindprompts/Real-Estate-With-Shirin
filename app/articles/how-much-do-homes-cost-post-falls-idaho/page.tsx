@@ -501,56 +501,46 @@ backgroundColor: market.highlight ? '#C4842A' : '#6B7A8D',
 <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 Frequently Asked Questions
 </h2>
-<div itemScope itemType="https://schema.org/FAQPage" className="space-y-4 mb-12">
-<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div className="space-y-4 mb-12">
+<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     What is the average home price in Post Falls Idaho in 2026?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed" itemProp="text">
+<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
                       The median sale price in Post Falls Idaho is $521,138 as of February 2026, up 7.5% year-over-year. The average price per square foot is $285. Entry-level single-family homes start in the mid-$300,000s, mid-range homes run $400,000–$600,000, and higher-end properties go well above that.
 </p>
 </div>
-</div>
-<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     What can I get for $500,000 in Post Falls Idaho?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed" itemProp="text">
+<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
                       At $500,000 in Post Falls Idaho, buyers can choose between a brand new 3-bedroom, 2.5-bath home around 1,400 square feet or an existing 3-bedroom, 2-bath home closer to 1,500–1,900 square feet with a larger lot. Five-bedroom options exist in this range as well. It is one of the most active price points in the market.
 </p>
 </div>
-</div>
-<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     Are there homes under $400,000 in Post Falls Idaho?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed" itemProp="text">
+<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
                       Yes, but inventory is limited. The $300,000–$400,000 range typically includes older homes built in the 1980s through early 2000s, usually 3-bedroom, 2-bath properties between 1,100 and 1,700 square feet. These are the most competitive listings in the market — well-priced homes in this range move quickly. There are typically 18 to 28 active listings at any given time in the sub-$350K range.
 </p>
 </div>
-</div>
-<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     How does Post Falls compare to Coeur d&apos;Alene for home prices?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed" itemProp="text">
+<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
                       Post Falls is more affordable than Coeur d&apos;Alene. The Post Falls median sale price is $521,138 compared to the broader Kootenai County median of $558,000, which is heavily influenced by Coeur d&apos;Alene pricing. For the same budget, buyers typically get more square footage or a newer home in Post Falls. The two cities are about 10 minutes apart and share the same outdoor lifestyle, making Post Falls an attractive value alternative.
 </p>
 </div>
-</div>
-<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     Is Post Falls Idaho affordable compared to California?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed" itemProp="text">
+<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
                       Significantly so. The Post Falls median of $521,138 compares to medians of $975,000 in Los Angeles County, $1,200,000 in Orange County, and $830,370 statewide in California. A $521,000 budget in Los Angeles buys a condo or small starter home. In Post Falls, it buys a 3-4 bedroom single-family home with a yard. Idaho also has no state income tax, which saves a household earning $100,000 roughly $6,000–$9,000 per year compared to Oregon and significantly more compared to California&apos;s top rate of 13.3%.
 </p>
-</div>
 </div>
 </div>
 {/* Closing CTA */}
