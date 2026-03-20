@@ -299,57 +299,46 @@ className="w-10 h-10 rounded-full object-cover"
 <p className="mb-8">
                 Before you commit to working with anyone, ask these questions directly:
 </p>
-{/* FAQ with microdata */}
-<div itemScope itemType="https://schema.org/FAQPage">
-<div className="mb-8 p-6 bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div>
+<div className="mb-8 p-6 bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     How long have you lived in the Post Falls area?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p itemProp="text">
+<p>
                       Someone who moved here recently can still be a competent agent. But there&apos;s a difference between someone who knows the market from transaction data and someone who&apos;s lived it across multiple seasons and market cycles.
 </p>
 </div>
-</div>
-<div className="mb-8 p-6 bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div className="mb-8 p-6 bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     What price range and property type do you work in most?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p itemProp="text">
+<p>
                       An agent who primarily handles luxury lakefront properties in Coeur d&apos;Alene may not be the best fit for a mid-range family home purchase in Post Falls. Match the agent to your actual situation.
 </p>
 </div>
-</div>
-<div className="mb-8 p-6 bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div className="mb-8 p-6 bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     How do you handle multiple offers?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p itemProp="text">
+<p>
                       In a competitive market, this question reveals a lot about an agent&apos;s strategy and communication style. You want someone with a clear, honest answer — not a vague promise.
 </p>
 </div>
-</div>
-<div className="mb-8 p-6 bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div className="mb-8 p-6 bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     What&apos;s your honest read on the current market?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p itemProp="text">
+<p>
                       The answer to this question tells you more than almost anything else. An agent who gives you a nuanced, specific read on current conditions — inventory levels, days on market, where prices are moving — is a different caliber than one who just says &quot;it&apos;s a great time to buy.&quot;
 </p>
 </div>
-</div>
-<div className="mb-10 p-6 bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div className="mb-10 p-6 bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     Can I talk to a recent client?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p itemProp="text">
+<p>
                       Any agent worth hiring will say yes immediately.
 </p>
-</div>
 </div>
 </div>
 <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">

@@ -23,6 +23,7 @@ export default function ArticlesPage() {
             fill
             priority
             className="object-cover"
+            style={{ filter: 'blur(2px)', transform: 'scale(1.02)' }}
           />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(28,26,23,0.35), rgba(28,26,23,0.6))' }} />
         </div>

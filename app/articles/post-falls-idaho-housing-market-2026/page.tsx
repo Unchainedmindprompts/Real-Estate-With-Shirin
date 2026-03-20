@@ -484,56 +484,46 @@ style={{ width: `${item.indicator}%`, backgroundColor: item.color }}
 <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 Frequently Asked Questions
 </h2>
-<div itemScope itemType="https://schema.org/FAQPage" className="space-y-4 mb-12">
-<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div className="space-y-4 mb-12">
+<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     What is the median home price in Post Falls Idaho in 2026?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed" itemProp="text">
+<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
                       The median sale price in Post Falls Idaho is $521,138 as of February 2026, up 7.5% year-over-year. The median list price is $583,300, and the average price per square foot is $285 — up 9.4% from the same period last year. Sources: Redfin, Zillow.
 </p>
 </div>
-</div>
-<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     Is Post Falls Idaho a buyer&apos;s or seller&apos;s market in 2026?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed" itemProp="text">
+<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
                       Post Falls is effectively a balanced market in 2026. Active inventory across Kootenai County is down 9.31% year-over-year, but new listings are up 50%, giving buyers more options. Most homes are selling under list price, and days on market have increased from 42 to 59 days on average — both signals of a more balanced environment than the seller-dominated peak years of 2021–2022.
 </p>
 </div>
-</div>
-<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     How long does it take to sell a home in Post Falls Idaho?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed" itemProp="text">
+<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
                       The average days on market in Post Falls is currently 59 days, up from 42 days last year. However, well-priced homes in good condition are still going pending in approximately 9 days. The gap between those two numbers reflects the divide between correctly priced homes and overpriced listings that are sitting.
 </p>
 </div>
-</div>
-<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     Are home prices dropping in Post Falls Idaho?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed" itemProp="text">
+<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
                       No — home prices in Post Falls are still appreciating, up 7.5% year-over-year as of February 2026. What has changed is that the pace of appreciation has moderated significantly from the peak years, and homes are increasingly selling at or below list price rather than well above it. The market has normalized, but values have not declined.
 </p>
 </div>
-</div>
-<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]" itemScope itemType="https://schema.org/Question">
-<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3" itemProp="name">
+<div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+<h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
                     Is 2026 a good time to buy a home in Post Falls Idaho?
 </h3>
-<div itemScope itemType="https://schema.org/Answer">
-<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed" itemProp="text">
+<p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
                       For most buyers, yes — 2026 represents one of the better entry windows in several years. There&apos;s more inventory, less competition, and more room to negotiate than at any point since before the pandemic. Mortgage rates at approximately 6.41% are higher than buyers would like, but waiting for a significant rate drop carries the risk that prices and competition both increase when rates eventually fall. The right answer depends on your specific situation, timeline, and finances.
 </p>
-</div>
 </div>
 </div>
 {/* Closing / Author CTA */}

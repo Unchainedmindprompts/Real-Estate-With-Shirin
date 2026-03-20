@@ -58,6 +58,7 @@ export default function AboutPage() {
             fill
             priority
             className="object-cover"
+            style={{ filter: 'blur(2px)', transform: 'scale(1.02)' }}
           />
           <div
             className="absolute inset-0"
