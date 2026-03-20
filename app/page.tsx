@@ -118,7 +118,7 @@ export default function HomePage() {
       >
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/northern-idaho-hero.webp"
+            src="/images/hero-home.jpeg"
             alt="Northern Idaho landscape"
             fill
             priority

@@ -53,7 +53,7 @@ export default function AboutPage() {
       >
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/northern-idaho-hero.webp"
+            src="/images/hero-home.jpeg"
             alt="Lake Coeur d'Alene seaplane dock"
             fill
             priority
