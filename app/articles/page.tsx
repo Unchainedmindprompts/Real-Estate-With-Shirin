@@ -18,7 +18,7 @@ export default function ArticlesPage() {
       <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/northern-idaho-hero.webp"
+            src="/images/hero-home.jpeg"
             alt="Northern Idaho landscape"
             fill
             priority
