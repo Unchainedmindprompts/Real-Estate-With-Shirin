@@ -403,6 +403,8 @@ export default function HomePage() {
               { name: 'Post Falls', desc: "Northern Idaho's fastest-growing community", href: '/areas/post-falls-idaho' },
               { name: "Coeur d'Alene", desc: 'Lakefront living and vibrant downtown', href: '/areas/coeur-dalene-idaho' },
               { name: 'Hayden', desc: 'Family-friendly neighborhoods and great schools', href: '/areas/hayden-idaho' },
+              { name: 'Rathdrum', desc: 'Small-town charm with room to grow', href: '/areas/rathdrum-idaho' },
+              { name: 'Sandpoint', desc: 'Scenic mountain town on Lake Pend Oreille', href: '/areas/sandpoint-idaho' },
             ].map((area) => (
               <Link
                 key={area.name}
