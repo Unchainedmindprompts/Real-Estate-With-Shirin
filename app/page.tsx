@@ -188,6 +188,7 @@ export default function HomePage() {
             >
               11 Years in Real Estate &nbsp;·&nbsp; 100+ Transactions &nbsp;·&nbsp; 5× Top Producer
             </p>
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
                 className="inline-block text-center text-white text-xs uppercase font-semibold rounded-sm transition-colors"
