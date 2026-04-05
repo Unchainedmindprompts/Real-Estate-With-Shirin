@@ -38,11 +38,12 @@ export default function Navigation() {
         {/* Logo */}
         <Link
           href="/"
-          className="leading-none"
+          className="leading-none uppercase tracking-widest"
           style={{
-            fontFamily: "'Great Vibes', cursive",
-            fontSize: 'clamp(22px, 4vw, 54px)',
-            fontWeight: 400,
+            fontFamily: "'DM Sans', system-ui, sans-serif",
+            fontSize: 'clamp(11px, 1.2vw, 15px)',
+            fontWeight: 500,
+            letterSpacing: '0.22em',
             color: solid ? '#1C1A17' : '#FAFAF8',
           }}
         >
