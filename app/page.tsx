@@ -157,14 +157,14 @@ export default function HomePage() {
               className="mb-6"
               style={{
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 600,
+                fontWeight: 300,
                 fontSize: 'clamp(38px, 5vw, 60px)',
                 lineHeight: 1.1,
                 color: '#1C1A17',
               }}
             >
               I Made This Move.<br />
-              <em style={{ fontStyle: 'italic', color: '#C4842A' }}>Now I Help Others Make Theirs.</em>
+              <em style={{ fontStyle: 'italic', fontWeight: 300, color: '#C4842A' }}>Now I Help Others Make Theirs.</em>
             </h1>
             <p
               className="mb-10"
