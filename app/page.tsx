@@ -211,7 +211,7 @@ export default function HomePage() {
         {/* Right: photo card — inset with padding, rounded corners, full image */}
         <div
           className="w-full lg:w-[57%] flex items-center justify-center lg:justify-end"
-          style={{ padding: '24px 40px 24px 16px' }}
+          style={{ padding: '100px 40px 40px 16px' }}
         >
           <div
             style={{
