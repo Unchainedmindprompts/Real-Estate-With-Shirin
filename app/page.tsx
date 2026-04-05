@@ -135,12 +135,12 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebsite) }} />
 
       {/* ── Hero — split screen ── */}
-      <section className="flex flex-col lg:flex-row" style={{ minHeight: '100svh' }}>
+      <section className="flex flex-col lg:flex-row">
 
         {/* Left: cream panel with text */}
         <div
           className="flex items-center w-full lg:w-[45%] px-8 sm:px-14 lg:px-16 xl:px-20"
-          style={{ backgroundColor: '#F5F0E6', paddingTop: '120px', paddingBottom: '64px' }}
+          style={{ backgroundColor: '#F5F0E6', paddingTop: '96px', paddingBottom: '64px' }}
         >
           <div className="max-w-md w-full">
             <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>
@@ -202,7 +202,7 @@ export default function HomePage() {
         </div>
 
         {/* Right: photo panel */}
-        <div className="relative w-full lg:w-[55%]" style={{ minHeight: '60vw', maxHeight: '100svh' }}>
+        <div className="relative w-full lg:w-[55%]" style={{ minHeight: '420px', height: '85svh', maxHeight: '780px' }}>
           <Image
             src="/images/shirin-abplanalp.jpg"
             alt="Shirin Abplanalp, licensed Northern Idaho REALTOR®"

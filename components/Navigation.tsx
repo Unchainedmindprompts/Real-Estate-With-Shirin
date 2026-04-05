@@ -18,7 +18,7 @@ export default function Navigation() {
   const [areasOpen, setAreasOpen] = useState(false)
   const pathname = usePathname()
   const isHome = pathname === '/'
-  const solid = !isHome || scrolled
+  const solid = true
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10)
