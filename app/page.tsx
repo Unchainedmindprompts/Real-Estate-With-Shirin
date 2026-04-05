@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import HeroButtons from '@/components/HeroButtons'
 
 export const metadata: Metadata = {
   title: 'Northern Idaho Real Estate Agent | Shirin Abplanalp · eXp Realty',
@@ -23,6 +22,7 @@ const jsonLdAgent = {
   '@context': 'https://schema.org',
   '@type': ['RealEstateAgent', 'LocalBusiness'],
   name: 'Shirin Abplanalp — Real Estate With Shirin',
+  description: "Shirin Abplanalp is a licensed REALTOR® at eXp Realty with 11 years of experience and 100+ transactions closed. Serving buyers, sellers, and relocating families across Northern Idaho including Post Falls, Coeur d'Alene, Hayden, Rathdrum, and Sandpoint.",
   url: 'https://www.realestatewithshirin.com',
   telephone: '(208) 660-7468',
   email: 'dreamlifeinidaho@gmail.com',
@@ -39,8 +39,16 @@ const jsonLdAgent = {
     { '@type': 'City', name: 'Post Falls', containedInPlace: { '@type': 'State', name: 'Idaho' } },
     { '@type': 'City', name: "Coeur d'Alene", containedInPlace: { '@type': 'State', name: 'Idaho' } },
     { '@type': 'City', name: 'Hayden', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'City', name: 'Rathdrum', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'City', name: 'Sandpoint', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'City', name: 'Athol', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'City', name: 'Bayview', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'City', name: 'Harrison', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'City', name: 'Wallace', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'City', name: 'Kellogg', containedInPlace: { '@type': 'State', name: 'Idaho' } },
     { '@type': 'AdministrativeArea', name: 'Kootenai County' },
-    { '@type': 'AdministrativeArea', name: 'North Idaho' },
+    { '@type': 'AdministrativeArea', name: 'Bonner County' },
+    { '@type': 'AdministrativeArea', name: 'Shoshone County' },
     { '@type': 'AdministrativeArea', name: 'Northern Idaho' },
     { '@type': 'AdministrativeArea', name: 'Inland Northwest' },
   ],
@@ -48,12 +56,20 @@ const jsonLdAgent = {
     '@type': 'Person',
     name: 'Shirin Abplanalp',
     jobTitle: 'Licensed REALTOR®',
-    hasCredential: {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'Real Estate License',
-      recognizedBy: { '@type': 'Organization', name: 'Idaho Real Estate Commission' },
-      identifier: '1371861',
-    },
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Real Estate License',
+        recognizedBy: { '@type': 'Organization', name: 'Idaho Real Estate Commission' },
+        identifier: '1371861',
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Award',
+        name: '5× Top Producer',
+        recognizedBy: { '@type': 'Organization', name: 'Bend Premier Real Estate' },
+      },
+    ],
   },
   memberOf: { '@type': 'Organization', name: 'eXp Realty', url: 'https://www.exprealty.com' },
   knowsAbout: [
@@ -61,8 +77,9 @@ const jsonLdAgent = {
     "Coeur d'Alene real estate",
     'Northern Idaho relocation',
     'Kootenai County homes',
-    'North Idaho buyer representation',
-    'North Idaho seller representation',
+    'Buyer representation',
+    'Seller representation',
+    'Relocation',
     'Idaho real estate market',
     'Active family relocation to Northern Idaho',
   ],
@@ -78,17 +95,28 @@ const jsonLdPerson = {
   email: 'dreamlifeinidaho@gmail.com',
   url: 'https://www.realestatewithshirin.com/about',
   worksFor: { '@type': 'Organization', name: 'eXp Realty', url: 'https://www.exprealty.com' },
-  hasCredential: {
-    '@type': 'EducationalOccupationalCredential',
-    credentialCategory: 'Real Estate License',
-    identifier: '1371861',
-    recognizedBy: { '@type': 'Organization', name: 'Idaho Real Estate Commission' },
-  },
+  hasCredential: [
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'Real Estate License',
+      identifier: '1371861',
+      recognizedBy: { '@type': 'Organization', name: 'Idaho Real Estate Commission' },
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'Award',
+      name: '5× Top Producer',
+      recognizedBy: { '@type': 'Organization', name: 'Bend Premier Real Estate' },
+    },
+  ],
   knowsAbout: [
     'Post Falls Idaho real estate',
     "Coeur d'Alene Idaho real estate",
     'Northern Idaho relocation',
     'Kootenai County homes for sale',
+    'Buyer representation',
+    'Seller representation',
+    'Relocation',
     'North Idaho lifestyle',
   ],
   address: { '@type': 'PostalAddress', addressLocality: 'Post Falls', addressRegion: 'ID', addressCountry: 'US' },
@@ -100,9 +128,33 @@ const jsonLdWebsite = {
   name: 'Real Estate With Shirin',
   url: 'https://www.realestatewithshirin.com',
   description:
-    'Northern Idaho real estate with Shirin Abplanalp, licensed REALTOR® at eXp Realty serving Post Falls, Coeur d\'Alene, Hayden, and Kootenai County.',
+    "Northern Idaho real estate with Shirin Abplanalp, licensed REALTOR® at eXp Realty serving Post Falls, Coeur d'Alene, Hayden, and Kootenai County.",
   publisher: { '@type': 'Person', name: 'Shirin Abplanalp' },
 }
+
+const testimonials = [
+  {
+    name: 'Koval Dan',
+    location: 'Buyer — Mountain View, Bend OR · Zillow',
+    quote:
+      "Shirin was able to help me locate the perfect house. As a first time buyer I really didn't know much about the whole process but Shirin was there to help with any concerns. She is very pro active in searching for a home for her clients. She seems to enjoy what she does. Well done, Shirin.",
+    stars: 5,
+  },
+  {
+    name: 'Verified Buyer',
+    location: 'Bend, OR · Zillow',
+    quote:
+      "Shirin went above and beyond for us and blew us away. Her responsiveness is lightning fast and she took the time to call several counties to look into state zoning and property laws — we had no idea a realtor even did that. What we appreciated most was how genuine Shirin was. It was so apparent she cared about what was best for us. We can't recommend Shirin enough.",
+    stars: 5,
+  },
+  {
+    name: 'Jacque Martini Roberts',
+    location: 'Facebook Recommendation',
+    quote:
+      "Shirin is an amazing real estate broker. She always goes above and beyond and she definitely knows her stuff. On a scale from 1–10, Shirin is a 10!",
+    stars: 5,
+  },
+]
 
 export default function HomePage() {
   return (
@@ -111,58 +163,119 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPerson) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebsite) }} />
 
-      {/* Hero Section */}
+      {/* ── Hero — split screen ── */}
+      {/*
+        Full cream background. Left: text content. Right: photo as a
+        contained rounded card with padding — matching the Chelsey reference.
+      */}
       <section
-        className="relative flex items-center justify-center"
-        style={{ minHeight: '100svh' }}
+        className="flex flex-col lg:flex-row"
+        style={{ minHeight: '100svh', backgroundColor: '#F5F0E6' }}
       >
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero-home.jpeg"
-            alt="Northern Idaho landscape"
-            fill
-            priority
-            className="object-cover"
-            style={{ filter: 'blur(2px)', transform: 'scale(1.02)' }}
-          />
+
+        {/* Left: text, vertically centered */}
+        <div
+          className="flex items-center w-full lg:w-[43%] px-8 sm:px-14 lg:px-16 xl:px-20"
+          style={{ paddingTop: '96px', paddingBottom: '64px' }}
+        >
+          <div className="w-full">
+            <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>
+              POST FALLS · COEUR D&apos;ALENE · NORTH IDAHO
+            </p>
+            <h1
+              className="mb-6"
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontWeight: 300,
+                fontSize: 'clamp(46px, 5.5vw, 74px)',
+                lineHeight: 1.1,
+                color: '#1C1A17',
+              }}
+            >
+              I Made This Move.<br />
+              <em style={{ fontStyle: 'italic', fontWeight: 300, color: '#C4842A' }}>Now I Help Others Make Theirs.</em>
+            </h1>
+            <p
+              className="mb-2"
+              style={{
+                fontFamily: "'DM Sans', system-ui, sans-serif",
+                fontSize: '17px',
+                lineHeight: 1.7,
+                color: '#5C5650',
+              }}
+            >
+              Licensed REALTOR® · eXp Realty · Northern Idaho
+            </p>
+            <p
+              className="mb-10"
+              style={{
+                fontFamily: "'DM Sans', system-ui, sans-serif",
+                fontSize: '13px',
+                letterSpacing: '0.06em',
+                color: '#C4852A',
+              }}
+            >
+              11 Years in Real Estate &nbsp;·&nbsp; 100+ Transactions &nbsp;·&nbsp; 5× Top Producer
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/contact"
+                className="inline-block text-center text-white text-xs uppercase font-semibold rounded-sm transition-colors"
+                style={{
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  backgroundColor: '#C4842A',
+                  padding: '15px 36px',
+                  letterSpacing: '0.1em',
+                }}
+              >
+                Let&apos;s Talk
+              </Link>
+              <Link
+                href="/about"
+                className="inline-block text-center text-xs uppercase font-semibold rounded-sm transition-colors"
+                style={{
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  color: '#1C1A17',
+                  border: '1.5px solid #1C1A17',
+                  padding: '15px 36px',
+                  letterSpacing: '0.1em',
+                }}
+              >
+                My Story
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Right: photo card — inset with padding, rounded corners, full image */}
+        <div
+          className="w-full lg:w-[57%] flex items-center justify-center lg:justify-end"
+          style={{ padding: '100px 40px 40px 16px' }}
+        >
           <div
-            className="absolute inset-0"
-            style={{ background: 'linear-gradient(to bottom, rgba(28,26,23,0.1), rgba(28,26,23,0.35))' }}
-          />
-        </div>
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-6 lg:px-8 py-32">
-          <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>
-            NORTHERN IDAHO REALTOR · EXP REALTY
-          </p>
-          <h1
-            className="mb-6"
             style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 600,
-              fontSize: 'clamp(42px, 7vw, 64px)',
-              lineHeight: 1.1,
-              color: '#FAFAF8',
+              maxWidth: '480px',
+              width: '100%',
+              borderRadius: '12px',
+              overflow: 'hidden',
             }}
           >
-            Your Northern Idaho<br />Real Estate Advisor
-          </h1>
-          <p
-            className="mb-10 max-w-2xl mx-auto"
-            style={{
-              fontFamily: "'DM Sans', system-ui, sans-serif",
-              fontSize: '18px',
-              lineHeight: 1.7,
-              color: '#F5EFE6',
-            }}
-          >
-            Shirin Abplanalp helps buyers, sellers, and relocating families find their perfect home
-            in Post Falls, Coeur d&apos;Alene, and across Kootenai County.
-          </p>
-          <HeroButtons />
+            {/* width/height 0 + sizes + w-full h-auto = natural proportions, no crop */}
+            <Image
+              src="/images/shirin-abplanalp.jpg"
+              alt="Shirin Abplanalp, licensed Northern Idaho REALTOR®"
+              width={0}
+              height={0}
+              sizes="(max-width: 1024px) 100vw, 57vw"
+              priority
+              className="w-full h-auto block"
+            />
+          </div>
         </div>
+
       </section>
 
-      {/* Who I Help Section */}
+      {/* ── 1. How I Can Help ── */}
       <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -185,18 +298,18 @@ export default function HomePage() {
               {
                 title: 'Buyers',
                 body: 'Finding the right home in the right neighborhood. Local market knowledge that goes beyond the listing.',
-                href: '/buyers',
+                href: '/buy',
                 linkText: 'Buyer Services',
               },
               {
                 title: 'Sellers',
                 body: 'Strategic pricing, professional presentation, and a network that moves homes.',
-                href: '/sellers',
+                href: '/sell',
                 linkText: 'Seller Services',
               },
               {
                 title: 'Relocating Families',
-                body: "I made this move myself. I know what it takes to get here and love it from day one.",
+                body: 'I made this move myself. I know what it takes to get here and love it from day one.',
                 href: '/about',
                 linkText: 'My Story',
               },
@@ -213,7 +326,15 @@ export default function HomePage() {
                 }}
               >
                 <div
-                  style={{ height: '4px', backgroundColor: '#C4842A', marginBottom: '24px', marginLeft: '-32px', marginRight: '-32px', marginTop: '-32px', borderRadius: '4px 4px 0 0' }}
+                  style={{
+                    height: '4px',
+                    backgroundColor: '#C4842A',
+                    marginBottom: '24px',
+                    marginLeft: '-32px',
+                    marginRight: '-32px',
+                    marginTop: '-32px',
+                    borderRadius: '4px 4px 0 0',
+                  }}
                 />
                 <h3
                   className="mb-4"
@@ -243,8 +364,104 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why Northern Idaho Section */}
+      {/* ── 2. Agent Intro ── */}
       <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+            {/* Photo */}
+            <div
+              className="order-2 lg:order-1 relative"
+              style={{ height: '600px', minHeight: '400px' }}
+            >
+              <Image
+                src="/images/realtor-headshot-outdoor.jpeg"
+                alt="Shirin Abplanalp, Licensed REALTOR® in Northern Idaho"
+                fill
+                className="object-cover object-top"
+                style={{ borderRadius: '2px' }}
+              />
+              {/* Warm-toned inset frame */}
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  boxShadow: 'inset 0 0 0 4px rgba(196,132,42,0.18)',
+                  borderRadius: '2px',
+                }}
+              />
+            </div>
+
+            {/* Copy */}
+            <div className="order-1 lg:order-2">
+              <p className="eyebrow mb-4" style={{ color: '#C4842A' }}>YOUR AGENT</p>
+              <h2
+                className="mb-6"
+                style={{
+                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  fontWeight: 500,
+                  fontSize: 'clamp(28px, 4vw, 42px)',
+                  lineHeight: 1.2,
+                  color: '#1C1A17',
+                }}
+              >
+                Shirin Abplanalp
+              </h2>
+
+              <div className="space-y-4 mb-8" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '16px', lineHeight: 1.7 }}>
+                <p>
+                  Shirin Abplanalp made the move that a lot of people dream about. After years in Bend, Oregon — a place that was once an outdoor paradise before it became too crowded and too expensive — she started looking for something real. A place where you could still afford a home with a yard. Where the lake was actually accessible. Where the trails weren&apos;t overrun by 9 a.m.
+                </p>
+                <p>
+                  Northern Idaho checked every box. The lakes, the mountains, the seasons, the community — and a quality of life that reminded her of what the Pacific Northwest used to be before everyone found out about it. She made the move, put down roots, and hasn&apos;t looked back.
+                </p>
+                <p>
+                  Now, as a licensed REALTOR® at eXp Realty, Shirin helps families make the same move with confidence. She doesn&apos;t just hand you a list of listings — she helps you understand where you&apos;ll actually want to live, and why.
+                </p>
+              </div>
+
+              {/* Credential pills */}
+              <div className="flex flex-wrap gap-3 mb-8">
+                {['Licensed REALTOR®', 'eXp Realty', 'Idaho License #1371861'].map((cred) => (
+                  <span
+                    key={cred}
+                    style={{
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
+                      fontSize: '12px',
+                      fontWeight: 600,
+                      color: '#5C5650',
+                      border: '1px solid #D4C4B0',
+                      borderRadius: '2px',
+                      padding: '5px 12px',
+                      letterSpacing: '0.03em',
+                      backgroundColor: '#FAFAF8',
+                    }}
+                  >
+                    {cred}
+                  </span>
+                ))}
+              </div>
+
+              <Link
+                href="/about"
+                className="inline-block text-xs uppercase font-semibold tracking-wider rounded-sm transition-colors"
+                style={{
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  backgroundColor: '#C4842A',
+                  color: '#ffffff',
+                  padding: '14px 32px',
+                  letterSpacing: '0.08em',
+                }}
+              >
+                My Full Story →
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── 3. The 60-Minute Rule ── */}
+      <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-4">
             <p className="eyebrow mb-4">THE REGION</p>
@@ -321,66 +538,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* About Shirin Teaser */}
-      <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="order-2 lg:order-1 relative" style={{ height: '600px', minHeight: '400px' }}>
-              <Image
-                src="/images/shirin-abplanalp.jpg"
-                alt="Shirin Abplanalp, Northern Idaho Realtor"
-                fill
-                className="object-cover object-top"
-              />
-            </div>
-            <div className="order-1 lg:order-2">
-              <p className="eyebrow mb-4">YOUR AGENT</p>
-              <h2
-                className="mb-6"
-                style={{
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontWeight: 500,
-                  fontSize: 'clamp(28px, 4vw, 40px)',
-                  lineHeight: 1.2,
-                  color: '#1C1A17',
-                }}
-              >
-                I Made This Move.<br />Now I Help Others Make Theirs.
-              </h2>
-              <p className="mb-8 text-base" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                Shirin relocated from Bend, Oregon to Northern Idaho — drawn by the lakes, the mountains, and a quality of life that&apos;s genuinely hard to find. She knows the questions you&apos;re asking because she asked them herself. Now, as a licensed REALTOR® at eXp Realty, she helps families make the same move with confidence.
-              </p>
-
-              <div className="flex flex-wrap gap-6 mb-8">
-                {['Licensed REALTOR®', 'eXp Realty', 'Idaho License #1371861'].map((cred) => (
-                  <div key={cred} className="flex items-center gap-2">
-                    <div style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#C4842A', flexShrink: 0 }} />
-                    <span style={{ fontSize: '14px', color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 500 }}>
-                      {cred}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <Link
-                href="/about"
-                className="inline-block text-xs uppercase font-semibold tracking-wider rounded-sm transition-colors"
-                style={{
-                  fontFamily: "'DM Sans', system-ui, sans-serif",
-                  backgroundColor: '#C4842A',
-                  color: '#ffffff',
-                  padding: '14px 32px',
-                  letterSpacing: '0.08em',
-                }}
-              >
-                My Full Story →
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Areas Section */}
+      {/* ── 4. Service Areas ── */}
       <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -398,7 +556,7 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {[
               { name: 'Post Falls', desc: "Northern Idaho's fastest-growing community", href: '/areas/post-falls-idaho' },
               { name: "Coeur d'Alene", desc: 'Lakefront living and vibrant downtown', href: '/areas/coeur-dalene-idaho' },
@@ -414,17 +572,17 @@ export default function HomePage() {
                   backgroundColor: '#FAFAF8',
                   border: '1px solid #E8DDD0',
                   borderRadius: '4px',
-                  padding: '32px',
+                  padding: '28px 24px',
                   boxShadow: '0 2px 12px rgba(28,26,23,0.06)',
                   textDecoration: 'none',
                 }}
               >
                 <h3
-                  className="mb-3"
+                  className="mb-2"
                   style={{
                     fontFamily: "'Cormorant Garamond', Georgia, serif",
                     fontWeight: 600,
-                    fontSize: '24px',
+                    fontSize: '22px',
                     color: '#1C1A17',
                   }}
                 >
@@ -433,7 +591,10 @@ export default function HomePage() {
                 <p className="mb-4 text-sm" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                   {area.desc}
                 </p>
-                <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: '#C4842A', fontFamily: "'DM Sans', system-ui, sans-serif", letterSpacing: '0.08em' }}>
+                <span
+                  className="text-xs font-semibold uppercase tracking-wider"
+                  style={{ color: '#C4842A', fontFamily: "'DM Sans', system-ui, sans-serif", letterSpacing: '0.08em' }}
+                >
                   Learn More →
                 </span>
               </Link>
@@ -442,8 +603,73 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Bottom CTA */}
+      {/* ── 5. Testimonials ── */}
       <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="eyebrow mb-4" style={{ color: '#C4842A' }}>REVIEWS</p>
+            <h2
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontWeight: 500,
+                fontSize: 'clamp(32px, 5vw, 48px)',
+                lineHeight: 1.2,
+                color: '#FAFAF8',
+              }}
+            >
+              What Clients Say
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {testimonials.map((t) => (
+              <div
+                key={t.name}
+                style={{
+                  backgroundColor: '#2A2722',
+                  border: '1px solid #3A3530',
+                  borderRadius: '4px',
+                  padding: '32px',
+                }}
+              >
+                {/* Stars */}
+                <div className="flex gap-1 mb-5" aria-label={`${t.stars} out of 5 stars`}>
+                  {Array.from({ length: t.stars }).map((_, i) => (
+                    <svg key={i} width="16" height="16" viewBox="0 0 16 16" fill="#C4842A" aria-hidden="true">
+                      <path d="M8 1l1.85 3.75L14 5.35l-3 2.92.71 4.13L8 10.3l-3.71 2.1.71-4.13-3-2.92 4.15-.6z" />
+                    </svg>
+                  ))}
+                </div>
+
+                <p
+                  className="mb-6"
+                  style={{
+                    fontFamily: "'Cormorant Garamond', Georgia, serif",
+                    fontSize: '19px',
+                    lineHeight: 1.55,
+                    color: '#F5EFE6',
+                    fontStyle: 'italic',
+                  }}
+                >
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+
+                <div>
+                  <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 600, fontSize: '14px', color: '#FAFAF8' }}>
+                    {t.name}
+                  </p>
+                  <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590', marginTop: '2px' }}>
+                    {t.location}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 6. CTA ── */}
+      <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
           <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>READY TO MOVE FORWARD</p>
           <h2
@@ -453,12 +679,12 @@ export default function HomePage() {
               fontWeight: 500,
               fontSize: 'clamp(36px, 5vw, 56px)',
               lineHeight: 1.15,
-              color: '#FAFAF8',
+              color: '#1C1A17',
             }}
           >
             Ready to Make Your Move?
           </h2>
-          <p className="mb-10 text-base" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+          <p className="mb-10 text-base" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
             Whether you&apos;re buying, selling, or relocating — let&apos;s start with a conversation. No pressure, no pitch.
           </p>
           <Link
@@ -467,8 +693,8 @@ export default function HomePage() {
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
               backgroundColor: '#C4842A',
-              padding: '14px 32px',
-              letterSpacing: '0.08em',
+              padding: '14px 36px',
+              letterSpacing: '0.1em',
             }}
           >
             Start the Conversation
