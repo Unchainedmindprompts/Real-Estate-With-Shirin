@@ -105,24 +105,24 @@ const jsonLdWebsite = {
 
 const testimonials = [
   {
-    name: 'Jenna & Marcus T.',
-    location: 'Relocated from Portland, OR',
+    name: 'Koval Dan',
+    location: 'Buyer — Mountain View, Bend OR · Zillow',
     quote:
-      "Shirin made our relocation from Portland feel manageable. She knew every neighborhood, answered every question, and helped us find exactly the right fit in Post Falls. We couldn't have done it without her.",
+      "Shirin was able to help me locate the perfect house. As a first time buyer I really didn't know much about the whole process but Shirin was there to help with any concerns. She is very pro active in searching for a home for her clients. She seems to enjoy what she does. Well done, Shirin.",
     stars: 5,
   },
   {
-    name: 'Derek H.',
-    location: 'Buyer — Post Falls',
+    name: 'Verified Buyer',
+    location: 'Bend, OR · Zillow',
     quote:
-      "I was skeptical about buying remotely but Shirin walked me through everything. Her local knowledge is the real thing — she's lived it, not just read about it. Closed in 30 days, no surprises.",
+      "Shirin went above and beyond for us and blew us away. Her responsiveness is lightning fast and she took the time to call several counties to look into state zoning and property laws — we had no idea a realtor even did that. What we appreciated most was how genuine Shirin was. It was so apparent she cared about what was best for us. We can't recommend Shirin enough.",
     stars: 5,
   },
   {
-    name: 'Sara & Tom K.',
-    location: 'Relocated from California',
+    name: 'Jacque Martini Roberts',
+    location: 'Facebook Recommendation',
     quote:
-      "We interviewed three agents. Shirin was the only one who asked where we wanted to hike before she asked our budget. That told us everything. She found us a home we absolutely love.",
+      "Shirin is an amazing real estate broker. She always goes above and beyond and she definitely knows her stuff. On a scale from 1–10, Shirin is a 10!",
     stars: 5,
   },
 ]
