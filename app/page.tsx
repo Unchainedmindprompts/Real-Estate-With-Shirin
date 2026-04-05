@@ -167,7 +167,7 @@ export default function HomePage() {
               <em style={{ fontStyle: 'italic', fontWeight: 300, color: '#C4842A' }}>Now I Help Others Make Theirs.</em>
             </h1>
             <p
-              className="mb-10"
+              className="mb-2"
               style={{
                 fontFamily: "'DM Sans', system-ui, sans-serif",
                 fontSize: '17px',
@@ -177,8 +177,17 @@ export default function HomePage() {
             >
               Licensed REALTOR® · eXp Realty · Northern Idaho
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
+            <p
+              className="mb-10"
+              style={{
+                fontFamily: "'DM Sans', system-ui, sans-serif",
+                fontSize: '13px',
+                letterSpacing: '0.06em',
+                color: '#C4852A',
+              }}
+            >
+              11 Years in Real Estate &nbsp;·&nbsp; 100+ Transactions &nbsp;·&nbsp; 5× Top Producer
+            </p>
               <Link
                 href="/contact"
                 className="inline-block text-center text-white text-xs uppercase font-semibold rounded-sm transition-colors"
