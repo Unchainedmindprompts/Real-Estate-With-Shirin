@@ -149,7 +149,7 @@ export default function HomePage() {
           className="flex items-center w-full lg:w-[43%] px-8 sm:px-14 lg:px-16 xl:px-20"
           style={{ paddingTop: '96px', paddingBottom: '64px' }}
         >
-          <div className="max-w-md w-full">
+          <div className="w-full">
             <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>
               POST FALLS · COEUR D&apos;ALENE · NORTH IDAHO
             </p>
@@ -158,7 +158,7 @@ export default function HomePage() {
               style={{
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
                 fontWeight: 300,
-                fontSize: 'clamp(38px, 5vw, 60px)',
+                fontSize: 'clamp(46px, 5.5vw, 74px)',
                 lineHeight: 1.1,
                 color: '#1C1A17',
               }}
