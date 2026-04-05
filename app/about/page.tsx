@@ -60,12 +60,12 @@ export default function AboutPage() {
       <section className="relative flex items-end" style={{ minHeight: '55vh' }}>
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/realtor-headshot-outdoor.jpeg"
-            alt="Shirin Abplanalp, licensed Northern Idaho REALTOR®"
+            src="/images/hero-home.jpeg"
+            alt="Northern Idaho landscape"
             fill
             priority
             className="object-cover"
-            style={{ objectPosition: 'center 20%' }}
+            style={{ objectPosition: 'center center' }}
           />
           <div
             className="absolute inset-0"
