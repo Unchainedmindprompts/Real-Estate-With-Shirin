@@ -135,12 +135,19 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebsite) }} />
 
       {/* ── Hero — split screen ── */}
-      <section className="flex flex-col lg:flex-row">
+      {/*
+        Full cream background. Left: text content. Right: photo as a
+        contained rounded card with padding — matching the Chelsey reference.
+      */}
+      <section
+        className="flex flex-col lg:flex-row"
+        style={{ minHeight: '100svh', backgroundColor: '#F5F0E6' }}
+      >
 
-        {/* Left: cream panel with text */}
+        {/* Left: text, vertically centered */}
         <div
-          className="flex items-center w-full lg:w-[45%] px-8 sm:px-14 lg:px-16 xl:px-20"
-          style={{ backgroundColor: '#F5F0E6', paddingTop: '96px', paddingBottom: '64px' }}
+          className="flex items-center w-full lg:w-[43%] px-8 sm:px-14 lg:px-16 xl:px-20"
+          style={{ paddingTop: '96px', paddingBottom: '64px' }}
         >
           <div className="max-w-md w-full">
             <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>
@@ -201,16 +208,29 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Right: photo panel */}
-        <div className="relative w-full lg:w-[55%]" style={{ minHeight: '420px', height: '85svh', maxHeight: '780px' }}>
-          <Image
-            src="/images/shirin-abplanalp.jpg"
-            alt="Shirin Abplanalp, licensed Northern Idaho REALTOR®"
-            fill
-            priority
-            className="object-cover"
-            style={{ objectPosition: 'center top' }}
-          />
+        {/* Right: photo card — inset with padding, rounded corners */}
+        <div
+          className="w-full lg:w-[57%] flex items-center justify-center lg:justify-end"
+          style={{ padding: '24px 40px 24px 16px' }}
+        >
+          <div
+            className="relative w-full"
+            style={{
+              maxWidth: '660px',
+              aspectRatio: '4 / 5',
+              borderRadius: '12px',
+              overflow: 'hidden',
+            }}
+          >
+            <Image
+              src="/images/shirin-abplanalp.jpg"
+              alt="Shirin Abplanalp, licensed Northern Idaho REALTOR®"
+              fill
+              priority
+              className="object-cover"
+              style={{ objectPosition: 'center top' }}
+            />
+          </div>
         </div>
 
       </section>
