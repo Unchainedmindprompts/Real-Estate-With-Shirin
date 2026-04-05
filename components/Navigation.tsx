@@ -41,7 +41,7 @@ export default function Navigation() {
           className="leading-none uppercase tracking-widest"
           style={{
             fontFamily: "'DM Sans', system-ui, sans-serif",
-            fontSize: 'clamp(11px, 1.2vw, 15px)',
+            fontSize: 'clamp(13px, 1.6vw, 20px)',
             fontWeight: 500,
             letterSpacing: '0.22em',
             color: solid ? '#1C1A17' : '#FAFAF8',
