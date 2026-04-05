@@ -215,7 +215,7 @@ export default function HomePage() {
         >
           <div
             style={{
-              maxWidth: '660px',
+              maxWidth: '480px',
               width: '100%',
               borderRadius: '12px',
               overflow: 'hidden',
