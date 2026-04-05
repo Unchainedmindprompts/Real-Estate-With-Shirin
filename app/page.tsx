@@ -208,27 +208,28 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Right: photo card — inset with padding, rounded corners */}
+        {/* Right: photo card — inset with padding, rounded corners, full image */}
         <div
           className="w-full lg:w-[57%] flex items-center justify-center lg:justify-end"
           style={{ padding: '24px 40px 24px 16px' }}
         >
           <div
-            className="relative w-full"
             style={{
               maxWidth: '660px',
-              aspectRatio: '4 / 5',
+              width: '100%',
               borderRadius: '12px',
               overflow: 'hidden',
             }}
           >
+            {/* width/height 0 + sizes + w-full h-auto = natural proportions, no crop */}
             <Image
               src="/images/shirin-abplanalp.jpg"
               alt="Shirin Abplanalp, licensed Northern Idaho REALTOR®"
-              fill
+              width={0}
+              height={0}
+              sizes="(max-width: 1024px) 100vw, 57vw"
               priority
-              className="object-cover"
-              style={{ objectPosition: 'center top' }}
+              className="w-full h-auto block"
             />
           </div>
         </div>
