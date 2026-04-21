@@ -21,6 +21,7 @@ headline: 'Post Falls Idaho Housing Market 2026 — What Buyers and Sellers Need
 description: 'Median home prices, days on market, inventory levels, and 2026 forecast for the Post Falls Idaho real estate market. Data as of March 2026.',
 author: {
 '@type': 'Person',
+'@id': 'https://www.realestatewithshirin.com/#agent',
 name: 'Shirin Abplanalp',
 jobTitle: 'Licensed REALTOR®',
 url: 'https://www.realestatewithshirin.com/about',
@@ -35,9 +36,7 @@ name: 'Idaho Real Estate Commission',
     },
   },
 publisher: {
-'@type': 'RealEstateAgent',
-name: 'Real Estate With Shirin',
-url: 'https://www.realestatewithshirin.com',
+'@id': 'https://www.realestatewithshirin.com/#business',
   },
 datePublished: '2026-03-18',
 dateModified: '2026-03-18',
@@ -150,40 +149,17 @@ item: 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-ma
 const localBusinessSchema = {
 '@context': 'https://schema.org',
 '@type': ['RealEstateAgent', 'LocalBusiness'],
+'@id': 'https://www.realestatewithshirin.com/#business',
 name: 'Shirin Abplanalp — Real Estate With Shirin',
 url: 'https://www.realestatewithshirin.com',
 telephone: '(208) 660-7468',
 email: 'dreamlifeinidaho@gmail.com',
-address: {
-'@type': 'PostalAddress',
-streetAddress: '510 S Clearwater Loop, Suite 100',
-addressLocality: 'Post Falls',
-addressRegion: 'ID',
-postalCode: '83854',
-addressCountry: 'US',
-  },
-areaServed: [
-    { '@type': 'City', name: 'Post Falls', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: "Coeur d'Alene", containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'AdministrativeArea', name: 'Kootenai County' },
-    { '@type': 'AdministrativeArea', name: 'Northern Idaho' },
-  ],
-employee: {
-'@type': 'Person',
-name: 'Shirin Abplanalp',
-jobTitle: 'Licensed REALTOR®',
-hasCredential: {
-'@type': 'EducationalOccupationalCredential',
-credentialCategory: 'Real Estate License',
-identifier: '1371861',
-recognizedBy: {
-'@type': 'Organization',
-name: 'Idaho Real Estate Commission',
-      },
-    },
+founder: {
+'@id': 'https://www.realestatewithshirin.com/#agent',
   },
 memberOf: {
 '@type': 'Organization',
+'@id': 'https://www.exprealty.com/#organization',
 name: 'eXp Realty',
 url: 'https://www.exprealty.com',
   },
