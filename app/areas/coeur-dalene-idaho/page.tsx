@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 const jsonLdAgent = {
   '@context': 'https://schema.org',
   '@type': 'RealEstateAgent',
+  '@id': 'https://www.realestatewithshirin.com/#business',
   name: "Shirin Abplanalp — Coeur d'Alene Idaho Real Estate",
   url: 'https://www.realestatewithshirin.com/areas/coeur-dalene-idaho',
   areaServed: {
@@ -34,6 +35,7 @@ const jsonLdAgent = {
 const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
+  '@id': 'https://www.realestatewithshirin.com/areas/coeur-dalene-idaho/#faq',
   mainEntity: [
     {
       '@type': 'Question',

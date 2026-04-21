@@ -79,6 +79,7 @@ citation: [
 const faqSchema = {
 '@context': 'https://schema.org',
 '@type': 'FAQPage',
+'@id': 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-market-2026/#faq',
 mainEntity: [
     {
 '@type': 'Question',

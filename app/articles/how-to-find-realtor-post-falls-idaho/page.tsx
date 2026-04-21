@@ -86,6 +86,7 @@ url: 'https://www.exprealty.com',
 const faqSchema = {
 '@context': 'https://schema.org',
 '@type': 'FAQPage',
+'@id': 'https://www.realestatewithshirin.com/articles/how-to-find-realtor-post-falls-idaho/#faq',
 mainEntity: [
     {
 '@type': 'Question',

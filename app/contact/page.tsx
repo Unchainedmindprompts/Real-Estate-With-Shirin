@@ -18,6 +18,7 @@ const jsonLd = {
   url: 'https://www.realestatewithshirin.com/contact',
   mainEntity: {
     '@type': 'RealEstateAgent',
+    '@id': 'https://www.realestatewithshirin.com/#business',
     name: 'Shirin Abplanalp',
     telephone: '(208) 660-7468',
     email: 'dreamlifeinidaho@gmail.com',

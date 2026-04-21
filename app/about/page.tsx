@@ -16,6 +16,7 @@ const jsonLdProfile = {
   '@type': 'ProfilePage',
   mainEntity: {
     '@type': 'Person',
+    '@id': 'https://www.realestatewithshirin.com/#agent',
     name: 'Shirin Abplanalp',
     jobTitle: 'Licensed REALTOR®',
     description:
@@ -24,7 +25,7 @@ const jsonLdProfile = {
     email: 'dreamlifeinidaho@gmail.com',
     url: 'https://www.realestatewithshirin.com/about',
     image: 'https://www.realestatewithshirin.com/images/realtor-headshot-outdoor.jpeg',
-    worksFor: { '@type': 'Organization', name: 'eXp Realty', url: 'https://www.exprealty.com' },
+    worksFor: { '@type': 'Organization', '@id': 'https://www.exprealty.com/#organization', name: 'eXp Realty', url: 'https://www.exprealty.com' },
     hasCredential: {
       '@type': 'EducationalOccupationalCredential',
       credentialCategory: 'Real Estate License',
