@@ -173,13 +173,19 @@ export default function AboutPage() {
                 }}
               >
                 <p>
-                  Bend, Oregon was everything it was supposed to be — until it wasn&apos;t. The crowds came, the prices followed, and the quality of life that made it special started slipping away. Shirin had watched it happen in slow motion, and she knew exactly what to look for in the next place.
+                  Bend used to be the answer. Then it became the problem.
                 </p>
                 <p>
-                  Northern Idaho checked every box. The lakes were real. The mountains were accessible. The community still had a pulse. And the price of entry was still within reach of families who actually wanted to live there — not just invest there.
+                  Shirin watched it happen the way most people do — gradually, then all at once. The trails got crowded. The prices got serious. The thing that made it worth staying started feeling like a reason to leave.
                 </p>
                 <p>
-                  She made the move, put down roots, and found exactly what she was looking for. Now she does the same thing for her clients — helping buyers find the place that fits how they actually want to live, not just the square footage that fits their budget.
+                  She wasn&apos;t looking for somewhere cheaper. She was looking for somewhere that still had what Bend used to have — actual lake access, real mountains, a community that hadn&apos;t been discovered yet by everyone trying to escape the last place that got discovered.
+                </p>
+                <p>
+                  Northern Idaho was that place. She made the move, put down roots, and hasn&apos;t looked back.
+                </p>
+                <p>
+                  Now she helps families do the same thing — not just find a house, but find the place. The one that fits how they actually want to live, not just what they can afford.
                 </p>
               </div>
 
