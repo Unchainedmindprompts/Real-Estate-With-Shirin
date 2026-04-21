@@ -245,7 +245,7 @@ export default function AboutPage() {
               {
                 num: '01',
                 title: 'Preparation',
-                body: "Shirin does more homework before a showing than most agents do before closing. Her clients walk in knowing the neighborhood, the comps, the contingencies, and the questions to ask.",
+                body: "Most buyers walk into a showing hoping the agent knows what they don&apos;t. Shirin&apos;s clients walk in already knowing — the neighborhood, the comps, the contingencies, and the questions worth asking.",
               },
               {
                 num: '02',
