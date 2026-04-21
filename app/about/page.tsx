@@ -245,7 +245,7 @@ export default function AboutPage() {
               {
                 num: '01',
                 title: 'Preparation',
-                body: "Most buyers walk into a showing hoping the agent knows what they don&apos;t. Shirin&apos;s clients walk in already knowing — the neighborhood, the comps, the contingencies, and the questions worth asking.",
+                body: "Most buyers walk into a showing hoping the agent knows what they don't. Shirin's clients walk in already knowing — the neighborhood, the comps, the contingencies, and the questions worth asking.",
               },
               {
                 num: '02',
