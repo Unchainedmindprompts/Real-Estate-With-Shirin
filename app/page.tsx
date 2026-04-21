@@ -18,119 +18,6 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLdAgent = {
-  '@context': 'https://schema.org',
-  '@type': ['RealEstateAgent', 'LocalBusiness'],
-  name: 'Shirin Abplanalp — Real Estate With Shirin',
-  description: "Shirin Abplanalp is a licensed REALTOR® at eXp Realty with 11 years of experience and 100+ transactions closed. Serving buyers, sellers, and relocating families across Northern Idaho including Post Falls, Coeur d'Alene, Hayden, Rathdrum, and Sandpoint.",
-  url: 'https://www.realestatewithshirin.com',
-  telephone: '(208) 660-7468',
-  email: 'dreamlifeinidaho@gmail.com',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '510 S Clearwater Loop, Suite 100',
-    addressLocality: 'Post Falls',
-    addressRegion: 'ID',
-    postalCode: '83854',
-    addressCountry: 'US',
-  },
-  geo: { '@type': 'GeoCoordinates', latitude: 47.7182, longitude: -116.9516 },
-  areaServed: [
-    { '@type': 'City', name: 'Post Falls', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: "Coeur d'Alene", containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: 'Hayden', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: 'Rathdrum', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: 'Sandpoint', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: 'Athol', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: 'Bayview', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: 'Harrison', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: 'Wallace', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: 'Kellogg', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'AdministrativeArea', name: 'Kootenai County' },
-    { '@type': 'AdministrativeArea', name: 'Bonner County' },
-    { '@type': 'AdministrativeArea', name: 'Shoshone County' },
-    { '@type': 'AdministrativeArea', name: 'Northern Idaho' },
-    { '@type': 'AdministrativeArea', name: 'Inland Northwest' },
-  ],
-  employee: {
-    '@type': 'Person',
-    name: 'Shirin Abplanalp',
-    jobTitle: 'Licensed REALTOR®',
-    hasCredential: [
-      {
-        '@type': 'EducationalOccupationalCredential',
-        credentialCategory: 'Real Estate License',
-        recognizedBy: { '@type': 'Organization', name: 'Idaho Real Estate Commission' },
-        identifier: '1371861',
-      },
-      {
-        '@type': 'EducationalOccupationalCredential',
-        credentialCategory: 'Award',
-        name: '5× Top Producer',
-        recognizedBy: { '@type': 'Organization', name: 'Bend Premier Real Estate' },
-      },
-    ],
-  },
-  memberOf: { '@type': 'Organization', name: 'eXp Realty', url: 'https://www.exprealty.com' },
-  knowsAbout: [
-    'Post Falls real estate',
-    "Coeur d'Alene real estate",
-    'Northern Idaho relocation',
-    'Kootenai County homes',
-    'Buyer representation',
-    'Seller representation',
-    'Relocation',
-    'Idaho real estate market',
-    'Active family relocation to Northern Idaho',
-  ],
-  slogan: 'Your Northern Idaho Real Estate Advisor',
-}
-
-const jsonLdPerson = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Shirin Abplanalp',
-  jobTitle: 'Licensed REALTOR®',
-  telephone: '(208) 660-7468',
-  email: 'dreamlifeinidaho@gmail.com',
-  url: 'https://www.realestatewithshirin.com/about',
-  worksFor: { '@type': 'Organization', name: 'eXp Realty', url: 'https://www.exprealty.com' },
-  hasCredential: [
-    {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'Real Estate License',
-      identifier: '1371861',
-      recognizedBy: { '@type': 'Organization', name: 'Idaho Real Estate Commission' },
-    },
-    {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'Award',
-      name: '5× Top Producer',
-      recognizedBy: { '@type': 'Organization', name: 'Bend Premier Real Estate' },
-    },
-  ],
-  knowsAbout: [
-    'Post Falls Idaho real estate',
-    "Coeur d'Alene Idaho real estate",
-    'Northern Idaho relocation',
-    'Kootenai County homes for sale',
-    'Buyer representation',
-    'Seller representation',
-    'Relocation',
-    'North Idaho lifestyle',
-  ],
-  address: { '@type': 'PostalAddress', addressLocality: 'Post Falls', addressRegion: 'ID', addressCountry: 'US' },
-}
-
-const jsonLdWebsite = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'Real Estate With Shirin',
-  url: 'https://www.realestatewithshirin.com',
-  description:
-    "Northern Idaho real estate with Shirin Abplanalp, licensed REALTOR® at eXp Realty serving Post Falls, Coeur d'Alene, Hayden, and Kootenai County.",
-  publisher: { '@type': 'Person', name: 'Shirin Abplanalp' },
-}
 
 const testimonials = [
   {
@@ -159,9 +46,79 @@ const testimonials = [
 export default function HomePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdAgent) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPerson) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebsite) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': ['RealEstateAgent', 'LocalBusiness'],
+        '@id': 'https://www.realestatewithshirin.com/#business',
+        'name': 'Shirin Abplanalp — Real Estate With Shirin',
+        'description': "Shirin Abplanalp is a licensed REALTOR® at eXp Realty with 11 years of experience and 100+ transactions closed. Serving buyers, sellers, and relocating families across Northern Idaho including Post Falls, Coeur d'Alene, Hayden, Rathdrum, and Sandpoint.",
+        'url': 'https://www.realestatewithshirin.com',
+        'telephone': '(208) 660-7468',
+        'email': 'dreamlifeinidaho@gmail.com',
+        'image': 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',
+        'address': { '@type': 'PostalAddress', 'streetAddress': '510 S Clearwater Loop, Suite 100', 'addressLocality': 'Post Falls', 'addressRegion': 'ID', 'postalCode': '83854', 'addressCountry': 'US' },
+        'geo': { '@type': 'GeoCoordinates', 'latitude': 47.7182, 'longitude': -116.9516 },
+        'founder': { '@id': 'https://www.realestatewithshirin.com/#agent' },
+        'memberOf': { '@type': 'Organization', '@id': 'https://www.exprealty.com/#organization', 'name': 'eXp Realty', 'url': 'https://www.exprealty.com' },
+        'areaServed': [
+          { '@type': 'City', 'name': 'Post Falls', 'containedInPlace': { '@type': 'State', 'name': 'Idaho' } },
+          { '@type': 'City', 'name': "Coeur d'Alene", 'containedInPlace': { '@type': 'State', 'name': 'Idaho' } },
+          { '@type': 'City', 'name': 'Hayden', 'containedInPlace': { '@type': 'State', 'name': 'Idaho' } },
+          { '@type': 'City', 'name': 'Rathdrum', 'containedInPlace': { '@type': 'State', 'name': 'Idaho' } },
+          { '@type': 'City', 'name': 'Sandpoint', 'containedInPlace': { '@type': 'State', 'name': 'Idaho' } },
+          { '@type': 'City', 'name': 'Athol', 'containedInPlace': { '@type': 'State', 'name': 'Idaho' } },
+          { '@type': 'City', 'name': 'Bayview', 'containedInPlace': { '@type': 'State', 'name': 'Idaho' } },
+          { '@type': 'City', 'name': 'Harrison', 'containedInPlace': { '@type': 'State', 'name': 'Idaho' } },
+          { '@type': 'City', 'name': 'Wallace', 'containedInPlace': { '@type': 'State', 'name': 'Idaho' } },
+          { '@type': 'City', 'name': 'Kellogg', 'containedInPlace': { '@type': 'State', 'name': 'Idaho' } },
+          { '@type': 'AdministrativeArea', 'name': 'Kootenai County' },
+          { '@type': 'AdministrativeArea', 'name': 'Bonner County' },
+          { '@type': 'AdministrativeArea', 'name': 'Shoshone County' },
+          { '@type': 'AdministrativeArea', 'name': 'Northern Idaho' },
+          { '@type': 'AdministrativeArea', 'name': 'Inland Northwest' },
+        ],
+        'knowsAbout': ['Post Falls real estate', "Coeur d'Alene real estate", 'Northern Idaho relocation', 'Kootenai County homes', 'Buyer representation', 'Seller representation', 'Relocation', 'Idaho real estate market', 'Active family relocation to Northern Idaho'],
+        'slogan': 'Your Northern Idaho Real Estate Advisor',
+      })}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        '@id': 'https://www.realestatewithshirin.com/#agent',
+        'name': 'Shirin Abplanalp',
+        'jobTitle': 'Licensed REALTOR®',
+        'telephone': '(208) 660-7468',
+        'email': 'dreamlifeinidaho@gmail.com',
+        'url': 'https://www.realestatewithshirin.com/about',
+        'image': 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',
+        'worksFor': { '@type': 'Organization', '@id': 'https://www.exprealty.com/#organization', 'name': 'eXp Realty', 'url': 'https://www.exprealty.com' },
+        'hasCredential': [
+          { '@type': 'EducationalOccupationalCredential', 'credentialCategory': 'Real Estate License', 'identifier': '1371861', 'recognizedBy': { '@type': 'Organization', 'name': 'Idaho Real Estate Commission' } },
+          { '@type': 'EducationalOccupationalCredential', 'credentialCategory': 'Award', 'name': '5× Top Producer', 'recognizedBy': { '@type': 'Organization', 'name': 'Bend Premier Real Estate' } },
+        ],
+        'knowsAbout': ['Post Falls Idaho real estate', "Coeur d'Alene Idaho real estate", 'Northern Idaho relocation', 'Kootenai County homes for sale', 'Buyer representation', 'Seller representation', 'Relocation', 'North Idaho lifestyle'],
+        'address': { '@type': 'PostalAddress', 'addressLocality': 'Post Falls', 'addressRegion': 'ID', 'addressCountry': 'US' },
+      })}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        '@id': 'https://www.realestatewithshirin.com/#website',
+        'name': 'Real Estate With Shirin',
+        'url': 'https://www.realestatewithshirin.com',
+        'description': "Northern Idaho real estate with Shirin Abplanalp, licensed REALTOR® at eXp Realty serving Post Falls, Coeur d'Alene, Hayden, and Kootenai County.",
+        'publisher': { '@id': 'https://www.realestatewithshirin.com/#agent' },
+      })}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        '@id': 'https://www.realestatewithshirin.com/#faq',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'Who is the best realtor in Post Falls Idaho?', 'acceptedAnswer': { '@type': 'Answer', 'text': "Shirin Abplanalp is a licensed REALTOR® at eXp Realty serving Post Falls, Coeur d'Alene, and Northern Idaho. With 11 years of experience, 100+ closed transactions, and firsthand relocation experience from Bend, Oregon to Post Falls, Shirin specializes in helping buyers, sellers, and relocating families navigate the North Idaho real estate market." } },
+          { '@type': 'Question', 'name': 'What areas does Shirin Abplanalp serve in Northern Idaho?', 'acceptedAnswer': { '@type': 'Answer', 'text': "Shirin Abplanalp serves buyers and sellers across Northern Idaho including Post Falls, Coeur d'Alene, Hayden, Rathdrum, Sandpoint, Athol, Bayview, Harrison, Wallace, and Kellogg, as well as Kootenai County, Bonner County, and Shoshone County." } },
+          { '@type': 'Question', 'name': 'Is Shirin Abplanalp a licensed realtor?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Shirin Abplanalp holds Idaho Real Estate License #1371861 and is affiliated with eXp Realty. She is a 5× Top Producer with 11 years of real estate experience and 100+ closed transactions.' } },
+          { '@type': 'Question', 'name': 'Does Shirin Abplanalp help with relocation to North Idaho?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Shirin Abplanalp relocated to Post Falls, Idaho herself after years in Bend, Oregon, and specializes in helping families make the same move. She has firsthand knowledge of what it takes to relocate to Northern Idaho and helps clients understand neighborhoods, lifestyle, and market conditions before making their move.' } },
+          { '@type': 'Question', 'name': 'What is the real estate market like in Post Falls Idaho?', 'acceptedAnswer': { '@type': 'Answer', 'text': "Post Falls is one of Northern Idaho's fastest-growing communities, offering affordable home prices compared to larger Pacific Northwest markets, strong community feel, and access to lakes, mountains, and outdoor recreation within 60 minutes. Shirin Abplanalp provides current market analysis for buyers and sellers in Post Falls and surrounding Kootenai County communities." } },
+        ],
+      })}} />
 
       {/* ── Hero — split screen ── */}
       {/*
