@@ -47,7 +47,6 @@ const articleSchema = {
   publisher: {
     '@type': 'Organization',
     '@id': 'https://www.realestatewithshirin.com/#business',
-    name: 'Real Estate With Shirin',
     logo: {
       '@type': 'ImageObject',
       url: 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',
