@@ -260,6 +260,125 @@ export default function BestPlacesNorthIdahoCaliforniaPage() {
           </div>
         </div>
       </section>
+
+      {/* Article + Sidebar */}
+      <section className="bg-[#FAFAF8] py-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="lg:grid lg:grid-cols-3 lg:gap-12">
+
+            {/* Article Body */}
+            <article className="lg:col-span-2 font-dm-sans text-[#5C5650] text-[17px] leading-[1.75]">
+
+              <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-2 mb-5 font-semibold">
+                Why Californians Are Moving to North Idaho
+              </h2>
+              <p className="mb-6">
+                The migration from California to Idaho has been one of the steadiest patterns of the last five years, and it has not slowed in 2026. The reasons people give when they sit down to talk about the move are consistent: taxes, home prices, cost of living, safety, politics, and a desire for a quieter life closer to the outdoors.
+              </p>
+              <p className="mb-8">
+                What surprises most Californians when they arrive is not any single one of those things. It is the combination. You are not just saving on income tax. You are also paying less for your house, less for gas, less at the grocery store, less for your car registration, and in most cases less for your insurance. Small differences stacked together produce a lifestyle most Californians had given up on affording.
+              </p>
+
+              <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
+                Is North Idaho a Good Place to Live?
+              </h2>
+              <p className="mb-6">
+                Yes. North Idaho consistently ranks among the top regions in the country for families, retirees, and remote workers relocating from higher-cost states. The region offers genuine four-season weather, some of the cleanest air in the Pacific Northwest, strong public schools, low crime rates compared to most California metros, and a cost of living roughly 20 to 30 percent below California averages.
+              </p>
+              <p className="mb-8">
+                The trade-offs are real and worth naming honestly. Winters are real winters. You will need to own a snow shovel and know how to drive on ice. Summers can be hot and, in some years, smoky from regional wildfires. The pace is slower than Los Angeles, San Francisco, or San Diego. Dining, shopping, and entertainment options are good but not endless. If you are moving here expecting a transplanted version of your coastal California life, you will be disappointed. If you are moving here because you want a different kind of life, you will probably love it.
+              </p>
+
+              <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
+                The Four Best Places to Live in North Idaho
+              </h2>
+
+              <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-8 mb-4 font-semibold">
+                Coeur d&apos;Alene — The Flagship Town
+              </h3>
+              <p className="mb-6">
+                Coeur d&apos;Alene is the largest and most recognizable town in North Idaho, sitting right on the north shore of its namesake lake. It is the region&apos;s cultural and commercial anchor, home to a walkable downtown, a long-established resort, strong restaurants, and genuine lakefront living. The median home price in Coeur d&apos;Alene ran around $575,000 to $600,000 through early 2026, which makes it the priciest of the four towns covered here.
+              </p>
+              <p className="mb-8">
+                Coeur d&apos;Alene is the right fit for buyers who want the most polished version of North Idaho living: lake access, downtown amenities, and a recognizable address. It is popular with retirees, second-home buyers, and professionals who can work remotely. The trade-off is price. You pay a premium for the brand, the lake, and the walkability.
+              </p>
+
+              <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-8 mb-4 font-semibold">
+                Post Falls — The Value Play
+              </h3>
+              <p className="mb-6">
+                Post Falls sits just west of Coeur d&apos;Alene, about ten minutes away by highway, and has quietly become the strongest growth market in the region. The median home price was around $500,000 to $510,000 in early 2026, with year-over-year growth approaching 10 percent. That means you get meaningfully more house for your money than in Coeur d&apos;Alene, without giving up proximity to the lake, the airport, or Spokane, which is twenty minutes west.
+              </p>
+              <p className="mb-6">
+                Post Falls is the right fit for families wanting a newer home at a more reasonable price, commuters who work in Spokane, and first-time buyers who want to be in Kootenai County but cannot stretch to Coeur d&apos;Alene prices. The character of the town is more suburban and residential than Coeur d&apos;Alene — less walkable downtown, more new construction, more space. For most Californians moving up from a small condo or a starter home, Post Falls is where the math works best.
+              </p>
+              <p className="mb-8">
+                This is where I live and work. I moved here from Bend, Oregon a few years ago, and I have watched this market develop from the inside. The growth in Post Falls is not speculative. It is driven by families who ran the numbers and realized they could own more home, more land, and more life here than almost anywhere in the west.
+              </p>
+
+              <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-8 mb-4 font-semibold">
+                Hayden — The Quiet Upgrade
+              </h3>
+              <p className="mb-6">
+                Hayden sits just north of Coeur d&apos;Alene and offers something in between the two larger towns. The median home price was around $525,000 to $580,000 in early 2026. Hayden has its own lake (Hayden Lake), a mix of older established neighborhoods and newer subdivisions, and a noticeably quieter feel than either Coeur d&apos;Alene or Post Falls.
+              </p>
+              <p className="mb-8">
+                Hayden is the right fit for buyers who want proximity to Coeur d&apos;Alene without paying Coeur d&apos;Alene prices, lake access without the tourist crowds, and a slightly more rural feel without giving up modern amenities. It tends to attract families who plan to stay for decades, retirees who want a peaceful home base, and buyers drawn to the newer construction on the north side of town.
+              </p>
+
+              <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-8 mb-4 font-semibold">
+                Sandpoint — The Destination Town
+              </h3>
+              <p className="mb-6">
+                Sandpoint is about an hour north of Coeur d&apos;Alene, up in Bonner County, and it is a different kind of place entirely. It is a genuine mountain town, sitting between Lake Pend Oreille and the Selkirk Mountains, home to Schweitzer Mountain Resort. Home prices vary widely depending on proximity to the lake and the mountain, but the overall market runs higher than Kootenai County.
+              </p>
+              <p className="mb-8">
+                Sandpoint is the right fit for retirees, second-home buyers, remote workers who do not need frequent airport access, and people who actively want a smaller, more seasonal town. It is also a different commit than the Kootenai County towns. You are further from Spokane, further from major medical centers, and further from the conveniences that come with a larger population. For the right buyer, that is exactly the appeal.
+              </p>
+
+              <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
+                Moving from California to Idaho: What to Expect
+              </h2>
+              <p className="mb-6">
+                The move is bigger than most Californians anticipate. Not because it is difficult logistically, but because the day-to-day rhythm of life is genuinely different. Here is what to expect on the practical side.
+              </p>
+              <p className="mb-6">
+                <strong className="text-[#1C1A17]">Taxes.</strong> Idaho has a flat 5.8 percent state income tax. That is lower than California&apos;s progressive system, which tops out at 13.3 percent, but it is not zero. Anyone telling you Idaho has no state income tax is thinking of Washington, Nevada, or Texas. The bigger financial story is the combination: lower income tax, dramatically lower home prices, lower property taxes in dollar terms (even though the rates are similar, the home values are so much lower that the actual bill drops meaningfully), lower sales tax, and lower fees across the board for things like vehicle registration.
+              </p>
+              <p className="mb-6">
+                <strong className="text-[#1C1A17]">Home prices.</strong> This is where the savings show up most. A family selling a 1,400-square-foot home in San Diego for $900,000 can buy a 2,800-square-foot home on a half-acre in Post Falls for $600,000 and pocket the difference. That math is what drives most of the moves I see.
+              </p>
+              <p className="mb-6">
+                <strong className="text-[#1C1A17]">Cost of living.</strong> Groceries, utilities, gas, dining, and most day-to-day costs run below California averages. Not by a huge margin on any one thing, but consistently across everything.
+              </p>
+              <p className="mb-6">
+                <strong className="text-[#1C1A17]">Climate.</strong> Real winters. Real summers. Four genuine seasons. If you have never lived in a place that snows, plan for that. Snow tires are not optional. Neither is learning how to drive in winter.
+              </p>
+              <p className="mb-8">
+                <strong className="text-[#1C1A17]">Logistics.</strong> You will need a new driver&apos;s license within 90 days of becoming a resident, and you will need to register your vehicles. The process is straightforward but worth planning for. Idaho does not have a vehicle safety inspection requirement, which is a pleasant change for many California transplants.
+              </p>
+
+              <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
+                Working with a Local Realtor Who Made the Move Herself
+              </h2>
+              <p className="mb-6">
+                I relocated to North Idaho from Bend, Oregon, and I now help families from California, Washington, Oregon, and across the country find their landing spot in Kootenai County. The reason I focus on relocating buyers is simple: I know what the move actually feels like from the inside. I know which neighborhoods fit which kinds of families. I know which towns are growing and which are leveling off. I know what Californians typically underestimate about winter and what they typically overestimate about the adjustment.
+              </p>
+              <p className="mb-8">
+                If you are seriously considering the move, the best place to start is a real conversation. No pressure, no pitch. I will give you an honest read on neighborhoods, prices, schools, and what to expect. If the move is right for you, we will find you the right place. If it is not the right time, I will tell you that too.
+              </p>
+
+            </article>
+
+            {/* Sidebar — content to be added in next step */}
+            <aside className="lg:col-span-1 mt-12 lg:mt-0">
+              <div className="sticky top-28 space-y-6">
+              </div>
+            </aside>
+
+          </div>
+        </div>
+      </section>
     </>
   )
 }
