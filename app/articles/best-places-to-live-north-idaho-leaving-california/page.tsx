@@ -490,6 +490,29 @@ export default function BestPlacesNorthIdahoCaliforniaPage() {
           </div>
         </div>
       </section>
+
+      <div className="border-t border-[#E8DDD0]" />
+
+      {/* Bottom CTA */}
+      <section className="bg-[#1C1A17] py-20">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Northern Idaho Relocation</p>
+          <h2 className="font-cormorant text-4xl md:text-5xl text-[#FAFAF8] mb-6 leading-tight font-semibold">
+            Thinking About the Move from California?
+          </h2>
+          <p className="font-dm-sans text-[#C4BDB4] text-lg mb-10 leading-relaxed">
+            Whether you are six months out or six weeks out, the earlier we start the conversation, the more prepared you will be when it is time. No pressure. Just an honest read on what the move actually looks like.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" className="bg-[#C4842A] hover:bg-[#8B4F2A] text-white font-dm-sans font-semibold py-4 px-8 transition-colors">
+              Get in Touch
+            </a>
+            <a href="/articles/post-falls-idaho-housing-market-2026" className="border border-[#5C5650] hover:border-[#9A9590] text-[#C4BDB4] hover:text-[#FAFAF8] font-dm-sans font-semibold py-4 px-8 transition-colors">
+              View Post Falls Market
+            </a>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
