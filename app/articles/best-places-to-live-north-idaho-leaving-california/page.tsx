@@ -90,7 +90,7 @@ const faqSchema = {
       name: 'What are the best places to live in North Idaho for people leaving California?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'PLACEHOLDER',
+        text: "The four best places to live in North Idaho for Californians relocating in 2026 are Coeur d'Alene, Post Falls, Hayden, and Sandpoint. Each offers a lower cost of living than California, four-season outdoor recreation, and a community-oriented pace, but they differ in price point, size, and lifestyle. Coeur d'Alene is the flagship lakeside town, Post Falls offers the strongest value and growth, Hayden provides a quieter upgrade near the lake, and Sandpoint is the mountain-town destination.",
       },
     },
     {
@@ -98,7 +98,7 @@ const faqSchema = {
       name: 'Does Idaho have state income tax?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'PLACEHOLDER',
+        text: "Yes. Idaho has a flat 5.8% state income tax as of 2026. That is meaningfully lower than California's progressive system, which tops out at 13.3%, but it is not zero. The bigger financial win for most Californians moving to Idaho is the combination: lower income tax, lower home prices, lower property taxes in dollar terms, and lower sales tax, vehicle fees, and cost of living overall.",
       },
     },
     {
@@ -106,7 +106,7 @@ const faqSchema = {
       name: 'Is North Idaho cheaper than California?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'PLACEHOLDER',
+        text: "Yes. North Idaho's cost of living runs roughly 20 to 30 percent below California averages, with the biggest gap in housing. The median home price in Kootenai County was $549,000 at the end of 2025, compared to California's statewide median of over $800,000.",
       },
     },
     {
@@ -114,7 +114,7 @@ const faqSchema = {
       name: 'Is North Idaho safer than California?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'PLACEHOLDER',
+        text: 'Yes. Crime rates in Kootenai County and the surrounding area run well below most California metros, and the sense of community-level safety is one of the things new residents mention most often after moving here.',
       },
     },
     {
@@ -122,7 +122,7 @@ const faqSchema = {
       name: 'How much money do you need to move from California to Idaho?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'PLACEHOLDER',
+        text: 'There is no single number, but most families moving here comfortably need enough cash to cover a down payment on a home in the $500,000 to $700,000 range, moving costs, and a financial cushion for the transition period. Many Californians arrive with significant equity from their California home sale, which often makes the move financially straightforward.',
       },
     },
   ],
@@ -368,11 +368,122 @@ export default function BestPlacesNorthIdahoCaliforniaPage() {
                 If you are seriously considering the move, the best place to start is a real conversation. No pressure, no pitch. I will give you an honest read on neighborhoods, prices, schools, and what to expect. If the move is right for you, we will find you the right place. If it is not the right time, I will tell you that too.
               </p>
 
+              <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-4 mb-12">
+                <div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+                  <h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
+                    What are the best places to live in North Idaho for people leaving California?
+                  </h3>
+                  <p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
+                    The four best places to live in North Idaho for Californians relocating in 2026 are Coeur d&apos;Alene, Post Falls, Hayden, and Sandpoint. Each offers a lower cost of living than California, four-season outdoor recreation, and a community-oriented pace, but they differ in price point, size, and lifestyle. Coeur d&apos;Alene is the flagship lakeside town, Post Falls offers the strongest value and growth, Hayden provides a quieter upgrade near the lake, and Sandpoint is the mountain-town destination.
+                  </p>
+                </div>
+                <div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+                  <h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
+                    Does Idaho have state income tax?
+                  </h3>
+                  <p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
+                    Yes. Idaho has a flat 5.8% state income tax as of 2026. That is meaningfully lower than California&apos;s progressive system, which tops out at 13.3%, but it is not zero. The bigger financial win for most Californians moving to Idaho is the combination: lower income tax, lower home prices, lower property taxes in dollar terms, and lower sales tax, vehicle fees, and cost of living overall.
+                  </p>
+                </div>
+                <div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+                  <h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
+                    Is North Idaho cheaper than California?
+                  </h3>
+                  <p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
+                    Yes. North Idaho&apos;s cost of living runs roughly 20 to 30 percent below California averages, with the biggest gap in housing. The median home price in Kootenai County was $549,000 at the end of 2025, compared to California&apos;s statewide median of over $800,000.
+                  </p>
+                </div>
+                <div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+                  <h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
+                    Is North Idaho safer than California?
+                  </h3>
+                  <p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
+                    Yes. Crime rates in Kootenai County and the surrounding area run well below most California metros, and the sense of community-level safety is one of the things new residents mention most often after moving here.
+                  </p>
+                </div>
+                <div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">
+                  <h3 className="font-dm-sans font-semibold text-[#1C1A17] text-base mb-3">
+                    How much money do you need to move from California to Idaho?
+                  </h3>
+                  <p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
+                    There is no single number, but most families moving here comfortably need enough cash to cover a down payment on a home in the $500,000 to $700,000 range, moving costs, and a financial cushion for the transition period. Many Californians arrive with significant equity from their California home sale, which often makes the move financially straightforward.
+                  </p>
+                </div>
+              </div>
+
             </article>
 
-            {/* Sidebar — content to be added in next step */}
+            {/* Sidebar */}
             <aside className="lg:col-span-1 mt-12 lg:mt-0">
               <div className="sticky top-28 space-y-6">
+
+                {/* Market Snapshot */}
+                <div className="bg-[#1C1A17] rounded-sm p-6">
+                  <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Market Snapshot</p>
+                  <p className="font-dm-sans text-xs text-[#C4BDB4] mb-4">Kootenai County · End of 2025</p>
+                  <div className="space-y-3">
+                    {[
+                      { label: 'Median Home Price', value: '$549,000', change: '' },
+                      { label: 'YoY Growth', value: '+4.3%', change: '' },
+                      { label: 'Post Falls Growth', value: '+9.9%', change: 'Strongest in region' },
+                      { label: 'Avg Days on Market', value: '93 days', change: '' },
+                    ].map((stat) => (
+                      <div key={stat.label} className="flex justify-between items-start border-b border-[#2C2A27] pb-3 last:border-0 last:pb-0">
+                        <span className="font-dm-sans text-xs text-[#C4BDB4]">{stat.label}</span>
+                        <div className="text-right">
+                          <span className="font-dm-sans text-sm font-semibold text-[#FAFAF8]">{stat.value}</span>
+                          {stat.change && <p className="font-dm-sans text-xs text-[#9AA3AF]">{stat.change}</p>}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="font-dm-sans text-xs text-[#9AA3AF] mt-4">Source: Coeur d&apos;Alene Regional Realtors, 2025 year-end</p>
+                </div>
+
+                {/* Agent Card */}
+                <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
+                  <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Relocation Advisor</p>
+                  <img src="/images/shirin-abplanalp.jpg" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" />
+                  <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
+                  <p className="font-dm-sans text-xs text-[#9A9590] mb-3">Licensed REALTOR® · eXp Realty · #1371861</p>
+                  <p className="font-dm-sans text-xs text-[#5C5650] leading-relaxed mb-4">Shirin relocated from Bend, Oregon to Northern Idaho and now helps buyers, sellers, and relocating families navigate the Kootenai County market.</p>
+                  <a href="/about" className="block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white font-dm-sans font-semibold text-sm py-3 px-4 transition-colors">
+                    About Shirin
+                  </a>
+                </div>
+
+                {/* Related Articles */}
+                <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
+                  <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Related Articles</p>
+                  <div className="space-y-4">
+                    <a href="/articles/post-falls-idaho-housing-market-2026" className="block group">
+                      <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Post Falls Housing Market 2026</p>
+                      <p className="font-dm-sans text-xs text-[#9A9590] mt-1">Prices, inventory, and what to expect</p>
+                    </a>
+                    <div className="border-t border-[#E8DDD0] pt-4">
+                      <a href="/articles/how-much-do-homes-cost-post-falls-idaho" className="block group">
+                        <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">How Much Do Homes Cost in Post Falls?</p>
+                        <p className="font-dm-sans text-xs text-[#9A9590] mt-1">Price breakdown by budget, 2026</p>
+                      </a>
+                    </div>
+                    <div className="border-t border-[#E8DDD0] pt-4">
+                      <a href="/articles/how-to-find-realtor-post-falls-idaho" className="block group">
+                        <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">How to Find a Realtor in Post Falls</p>
+                        <p className="font-dm-sans text-xs text-[#9A9590] mt-1">What to look for before you hire anyone</p>
+                      </a>
+                    </div>
+                    <div className="border-t border-[#E8DDD0] pt-4">
+                      <a href="/articles/is-it-a-good-time-to-buy-home-northern-idaho" className="block group">
+                        <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Is It a Good Time to Buy in Northern Idaho?</p>
+                        <p className="font-dm-sans text-xs text-[#9A9590] mt-1">Honest 2026 answer</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </aside>
 
