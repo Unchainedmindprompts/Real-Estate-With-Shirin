@@ -24,6 +24,7 @@ const articleSchema = {
   description: 'AI-powered search is reshaping how buyers find real estate agents. Why video has become the trust signal that gets realtors surfaced in AI discovery.',
   author: {
     '@type': 'Person',
+    '@id': 'https://www.realestatewithshirin.com/#agent',
     name: 'Shirin Abplanalp',
     jobTitle: 'Licensed REALTOR®',
     url: 'https://www.realestatewithshirin.com/about',
@@ -38,9 +39,7 @@ const articleSchema = {
     },
   },
   publisher: {
-    '@type': 'RealEstateAgent',
-    name: 'Real Estate With Shirin',
-    url: 'https://www.realestatewithshirin.com',
+    '@id': 'https://www.realestatewithshirin.com/#business',
   },
   datePublished: '2026-03-23',
   dateModified: '2026-03-23',
@@ -71,6 +70,7 @@ const articleSchema = {
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
+  '@id': 'https://www.realestatewithshirin.com/blog/video-authority-layer-ai-discovery-2026/#faq',
   mainEntity: [
     {
       '@type': 'Question',
@@ -135,6 +135,7 @@ const breadcrumbSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': ['RealEstateAgent', 'LocalBusiness'],
+  '@id': 'https://www.realestatewithshirin.com/#business',
   name: 'Shirin Abplanalp — Real Estate With Shirin',
   url: 'https://www.realestatewithshirin.com',
   telephone: '(208) 660-7468',
@@ -153,22 +154,10 @@ const localBusinessSchema = {
     { '@type': 'AdministrativeArea', name: 'Kootenai County' },
     { '@type': 'AdministrativeArea', name: 'Northern Idaho' },
   ],
-  employee: {
-    '@type': 'Person',
-    name: 'Shirin Abplanalp',
-    jobTitle: 'Licensed REALTOR®',
-    hasCredential: {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'Real Estate License',
-      identifier: '1371861',
-      recognizedBy: {
-        '@type': 'Organization',
-        name: 'Idaho Real Estate Commission',
-      },
-    },
-  },
+  founder: { '@id': 'https://www.realestatewithshirin.com/#agent' },
   memberOf: {
     '@type': 'Organization',
+    '@id': 'https://www.exprealty.com/#organization',
     name: 'eXp Realty',
     url: 'https://www.exprealty.com',
   },

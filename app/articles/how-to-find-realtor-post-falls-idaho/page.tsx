@@ -21,6 +21,7 @@ headline: 'How to Find the Right Realtor in Post Falls, Idaho — And What to Lo
 description: 'What to look for in a Post Falls Idaho realtor, the questions to ask before you hire anyone, and why local knowledge and relocation experience matter more than transaction volume.',
 author: {
 '@type': 'Person',
+'@id': 'https://www.realestatewithshirin.com/#agent',
 name: 'Shirin Abplanalp',
 jobTitle: 'Licensed REALTOR®',
 url: 'https://www.realestatewithshirin.com/about',
@@ -35,13 +36,7 @@ name: 'Idaho Real Estate Commission',
     },
   },
 publisher: {
-'@type': 'RealEstateAgent',
-name: 'Real Estate With Shirin',
-url: 'https://www.realestatewithshirin.com',
-logo: {
-'@type': 'ImageObject',
-url: 'https://www.realestatewithshirin.com/images/exp-realty-logo-white.png',
-    },
+'@id': 'https://www.realestatewithshirin.com/#business',
   },
 datePublished: '2026-03-18',
 dateModified: '2026-03-18',
@@ -91,6 +86,7 @@ url: 'https://www.exprealty.com',
 const faqSchema = {
 '@context': 'https://schema.org',
 '@type': 'FAQPage',
+'@id': 'https://www.realestatewithshirin.com/articles/how-to-find-realtor-post-falls-idaho/#faq',
 mainEntity: [
     {
 '@type': 'Question',
@@ -161,46 +157,15 @@ item: 'https://www.realestatewithshirin.com/articles/how-to-find-realtor-post-fa
 const localBusinessSchema = {
 '@context': 'https://schema.org',
 '@type': ['RealEstateAgent', 'LocalBusiness'],
+'@id': 'https://www.realestatewithshirin.com/#business',
 name: 'Shirin Abplanalp — Real Estate With Shirin',
 url: 'https://www.realestatewithshirin.com',
 telephone: '(208) 660-7468',
 email: 'dreamlifeinidaho@gmail.com',
-address: {
-'@type': 'PostalAddress',
-streetAddress: '510 S Clearwater Loop, Suite 100',
-addressLocality: 'Post Falls',
-addressRegion: 'ID',
-postalCode: '83854',
-addressCountry: 'US',
-  },
-geo: {
-'@type': 'GeoCoordinates',
-latitude: 47.7182,
-longitude: -116.9516,
-  },
-areaServed: [
-    { '@type': 'City', name: 'Post Falls', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: "Coeur d'Alene", containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: 'Hayden', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'AdministrativeArea', name: 'Kootenai County' },
-    { '@type': 'AdministrativeArea', name: 'Northern Idaho' },
-  ],
-employee: {
-'@type': 'Person',
-name: 'Shirin Abplanalp',
-jobTitle: 'Licensed REALTOR®',
-hasCredential: {
-'@type': 'EducationalOccupationalCredential',
-credentialCategory: 'Real Estate License',
-identifier: '1371861',
-recognizedBy: {
-'@type': 'Organization',
-name: 'Idaho Real Estate Commission',
-      },
-    },
-  },
+founder: { '@id': 'https://www.realestatewithshirin.com/#agent' },
 memberOf: {
 '@type': 'Organization',
+'@id': 'https://www.exprealty.com/#organization',
 name: 'eXp Realty',
 url: 'https://www.exprealty.com',
   },
