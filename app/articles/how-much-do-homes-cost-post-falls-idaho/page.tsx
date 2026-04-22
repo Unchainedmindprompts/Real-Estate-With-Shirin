@@ -129,7 +129,7 @@ text: 'Post Falls is more affordable than Coeur d\'Alene. The Post Falls median 
 name: 'Is Post Falls Idaho affordable compared to California?',
 acceptedAnswer: {
 '@type': 'Answer',
-text: 'Significantly so. The Post Falls median sale price of $521,138 compares to medians of $975,000 in Los Angeles County, $1,200,000 in Orange County, and $830,370 statewide in California. A $521,000 budget in Los Angeles buys a condo or small starter home. In Post Falls, it buys a 3-4 bedroom single-family home with a yard. Idaho also has no state income tax, which saves a household earning $100,000 roughly $6,000-$9,000 per year compared to Oregon and significantly more compared to California\'s top rate of 13.3%.',
+text: 'Significantly so. The Post Falls median sale price of $521,138 compares to medians of $975,000 in Los Angeles County, $1,200,000 in Orange County, and $830,370 statewide in California. A $521,000 budget in Los Angeles buys a condo or small starter home. In Post Falls, it buys a 3-4 bedroom single-family home with a yard. Idaho also has a flat 5.3% state income tax — well below Oregon\'s progressive system (top rate 9.9%) and California\'s (top rate 13.3%), adding meaningful annual savings on top of the housing cost difference.',
       },
     },
   ],
@@ -258,7 +258,7 @@ className="w-10 h-10 rounded-full object-cover"
 <p className="font-dm-sans text-xs text-[#6B7A8D] mt-0.5">$350K–$450K</p>
 </div>
 <div className="text-center">
-<p className="font-cormorant text-3xl text-[#C4842A] font-semibold">0%</p>
+<p className="font-cormorant text-3xl text-[#C4842A] font-semibold">5.3%</p>
 <p className="font-dm-sans text-xs text-[#9A9590] mt-1 uppercase tracking-wide">Idaho State Income Tax</p>
 <p className="font-dm-sans text-xs text-[#6B7A8D] mt-0.5">vs 13.3% CA / 9.9% OR</p>
 </div>
@@ -346,7 +346,7 @@ style={{ width: `${tier.width}%`, backgroundColor: tier.color }}
                 At this price point, you&apos;re getting into newer construction with better finishes, larger floor plans, and 3-car garages start appearing regularly. Homes in this range typically run 2,000 to 3,000 square feet with 4 to 5 bedrooms and 2 to 3 baths. Real examples: a 4-bedroom, 3-bath, 1,996-square-foot home at $550,000; a 5-bedroom, 3-bath, 2,194-square-foot home at $575,000; a 5-bedroom, 3-bath, 2,908-square-foot home at $570,000.
 </p>
 <p className="mb-10">
-                For buyers coming from California markets where $600,000 barely gets you into the conversation, this range tends to feel genuinely surprising. You&apos;re getting a real house — new or near-new, multiple bedrooms, a proper yard, and a garage — in a community with no state income tax.
+                For buyers coming from California markets where $600,000 barely gets you into the conversation, this range tends to feel genuinely surprising. You&apos;re getting a real house — new or near-new, multiple bedrooms, a proper yard, and a garage — in a community with a flat 5.3% state income tax, well below what most buyers were paying in California or Oregon.
 </p>
 {/* H2: $650K+ */}
 <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
@@ -376,10 +376,10 @@ style={{ width: `${tier.width}%`, backgroundColor: tier.color }}
                 The median sale price in Post Falls is $521,138. In Los Angeles County, that median is $975,000 — nearly double. In Orange County, California, it&apos;s approximately $1,200,000. Statewide across California, the median is $830,370. What $521,000 buys in Los Angeles is a condo or a small starter home with no yard. In Post Falls, it buys a 3- to 4-bedroom single-family home with a garage and outdoor space, in a community where your neighbors are genuinely outdoors-obsessed and the nearest ski resort is an hour away.
 </p>
 <p className="mb-6">
-                The Seattle comparison is similar — median home prices in Seattle run approximately $850,000, meaning the Post Falls median gets you a small home with limited outdoor space in a high-cost metro, versus a comfortable family home in Northern Idaho. Portland sits closer at $507,333, roughly equivalent on price — but Oregon has a state income tax with a top rate of 9.9%. Idaho has none.
+                The Seattle comparison is similar — median home prices in Seattle run approximately $850,000, meaning the Post Falls median gets you a small home with limited outdoor space in a high-cost metro, versus a comfortable family home in Northern Idaho. Portland sits closer at $507,333, roughly equivalent on price — but Oregon has a progressive income tax with a top rate of 9.9%. Idaho has a flat 5.3%, meaningfully lower.
 </p>
 <p className="mb-8">
-                That tax difference matters more than people initially realize. For a household earning $100,000, moving from Oregon to Idaho saves roughly $6,000 to $9,000 per year in state income tax alone. At a 6.41% mortgage rate on a $521,000 home, that annual tax savings offsets a meaningful portion of your monthly payment. Sacramento is the closest California comparison on price at $483,502 — similar numbers, but California&apos;s 13.3% top income tax rate and higher cost of living across the board make the actual lifestyle comparison much more lopsided in Post Falls&apos; favor.
+                That tax difference matters more than people initially realize. Idaho&apos;s flat 5.3% rate compares to Oregon&apos;s progressive system where a $100,000 household pays an effective rate of roughly 7–8%, and to California&apos;s system where higher earners can hit double digits. The combined savings — lower income tax, lower home prices, lower property tax bills in dollar terms — compound quickly. Sacramento is the closest California comparison on price at $483,502 — similar numbers, but California&apos;s 13.3% top income tax rate and higher cost of living across the board make the actual lifestyle comparison much more lopsided in Post Falls&apos; favor.
 </p>
 {/* Chart 2: Market Comparison */}
 <div className="my-8 p-6 bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm">
@@ -418,9 +418,9 @@ backgroundColor: market.highlight ? '#C4842A' : '#6B7A8D',
 </h3>
 <div className="grid grid-cols-3 gap-4 mb-6">
 <div className="text-center p-4 bg-[#2C2A27] rounded-sm">
-<p className="font-cormorant text-3xl text-[#C4842A] font-semibold">0%</p>
+<p className="font-cormorant text-3xl text-[#C4842A] font-semibold">5.3%</p>
 <p className="font-dm-sans text-xs text-[#9A9590] mt-1">Idaho</p>
-<p className="font-dm-sans text-xs text-[#6B7A8D]">State Income Tax</p>
+<p className="font-dm-sans text-xs text-[#6B7A8D]">Flat Rate</p>
 </div>
 <div className="text-center p-4 bg-[#2C2A27] rounded-sm">
 <p className="font-cormorant text-3xl text-[#9A9590] font-semibold">9.9%</p>
@@ -435,8 +435,7 @@ backgroundColor: market.highlight ? '#C4842A' : '#6B7A8D',
 </div>
 <div className="border-t border-[#2C2A27] pt-4">
 <p className="font-dm-sans text-sm text-[#9A9590] leading-relaxed">
-                    For a household earning <span className="text-[#F5EFE6] font-semibold">$100,000/year</span>, moving from Oregon to Idaho saves roughly{' '}
-<span className="text-[#C4842A] font-semibold">$6,000–$9,000 per year</span> in state income tax alone — which meaningfully offsets your monthly mortgage payment.
+                    Idaho&apos;s <span className="text-[#F5EFE6] font-semibold">flat 5.3% rate</span> is meaningfully lower than Oregon&apos;s progressive system (effective rate around 7–8% at $100K income) and well below California&apos;s top rate of 13.3% — adding real annual savings on top of the housing cost difference.
 </p>
 </div>
 </div>
@@ -453,7 +452,7 @@ backgroundColor: market.highlight ? '#C4842A' : '#6B7A8D',
 'Garage included',
 'Yard with outdoor space',
 'New construction available',
-'0% state income tax',
+'5.3% flat state income tax',
 'Ski resort 60 min away',
                     ].map((item) => (
 <li key={item} className="flex items-start gap-2">
@@ -527,7 +526,7 @@ backgroundColor: market.highlight ? '#C4842A' : '#6B7A8D',
                     Is Post Falls Idaho affordable compared to California?
 </h3>
 <p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
-                      Significantly so. The Post Falls median of $521,138 compares to medians of $975,000 in Los Angeles County, $1,200,000 in Orange County, and $830,370 statewide in California. A $521,000 budget in Los Angeles buys a condo or small starter home. In Post Falls, it buys a 3-4 bedroom single-family home with a yard. Idaho also has no state income tax, which saves a household earning $100,000 roughly $6,000–$9,000 per year compared to Oregon and significantly more compared to California&apos;s top rate of 13.3%.
+                      Significantly so. The Post Falls median of $521,138 compares to medians of $975,000 in Los Angeles County, $1,200,000 in Orange County, and $830,370 statewide in California. A $521,000 budget in Los Angeles buys a condo or small starter home. In Post Falls, it buys a 3-4 bedroom single-family home with a yard. Idaho also has a flat 5.3% state income tax — well below Oregon&apos;s progressive system (top rate 9.9%) and California&apos;s top rate of 13.3%, adding meaningful annual savings on top of the housing cost difference.
 </p>
 </div>
 </div>
