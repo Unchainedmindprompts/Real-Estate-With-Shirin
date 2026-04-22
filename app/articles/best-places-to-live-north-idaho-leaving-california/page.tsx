@@ -191,6 +191,75 @@ export default function BestPlacesNorthIdahoCaliforniaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+
+      {/* Hero */}
+      <section className="bg-[#F5EFE6] pt-36 pb-16">
+        <div className="max-w-5xl mx-auto px-6">
+          {/* Breadcrumbs */}
+          <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">
+            <a href="/" className="hover:text-[#C4842A] transition-colors">Home</a>
+            <span className="mx-2">·</span>
+            <a href="/articles" className="hover:text-[#C4842A] transition-colors">Articles</a>
+            <span className="mx-2">·</span>
+            <span className="text-[#5C5650]">Best Places to Live in North Idaho for People Leaving California</span>
+          </nav>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#C4842A] font-dm-sans">Relocation Guide</span>
+            <span className="text-[#9A9590] text-xs font-dm-sans">·</span>
+            <span className="text-xs text-[#9A9590] font-dm-sans">9 min read</span>
+            <span className="text-[#9A9590] text-xs font-dm-sans">·</span>
+            <span className="text-xs text-[#9A9590] font-dm-sans">April 2026</span>
+          </div>
+          {/* H1 */}
+          <h1 className="font-cormorant text-5xl md:text-6xl text-[#1C1A17] leading-tight mb-6 font-semibold">
+            Best Places to Live in North Idaho for People Leaving California
+          </h1>
+          <p className="font-dm-sans text-lg text-[#5C5650] max-w-3xl mb-8 leading-relaxed">
+            For Californians relocating to North Idaho in 2026, the four best places to land are Coeur d&apos;Alene, Post Falls, Hayden, and Sandpoint. Each offers a lower cost of living than California, four-season outdoor recreation, and a community-oriented pace of life, but they differ in price, size, and character. This guide walks through what to expect from each town, what Californians actually save when they move here, and what to know before you start your search.
+          </p>
+          <div className="flex items-center gap-4">
+            <img
+              src="/images/shirin-abplanalp.jpg"
+              alt="Shirin Abplanalp, licensed realtor at eXp Realty"
+              className="w-10 h-10 rounded-full object-cover"
+            />
+            <div>
+              <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
+              <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · eXp Realty · April 22, 2026</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="border-t border-[#E8DDD0]" />
+
+      {/* Key Stats Bar */}
+      <section className="bg-[#1C1A17] py-8">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">$549K</p>
+              <p className="font-dm-sans text-xs text-[#C4BDB4] mt-1 uppercase tracking-wide">Kootenai County Median</p>
+              <p className="font-dm-sans text-xs text-[#9AA3AF] mt-0.5">End of 2025</p>
+            </div>
+            <div className="text-center">
+              <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">5.8%</p>
+              <p className="font-dm-sans text-xs text-[#C4BDB4] mt-1 uppercase tracking-wide">Idaho Income Tax</p>
+              <p className="font-dm-sans text-xs text-[#9AA3AF] mt-0.5">vs CA top rate of 13.3%</p>
+            </div>
+            <div className="text-center">
+              <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">20–30%</p>
+              <p className="font-dm-sans text-xs text-[#C4BDB4] mt-1 uppercase tracking-wide">Lower Cost of Living</p>
+              <p className="font-dm-sans text-xs text-[#9AA3AF] mt-0.5">Compared to California</p>
+            </div>
+            <div className="text-center">
+              <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">+9.9%</p>
+              <p className="font-dm-sans text-xs text-[#C4BDB4] mt-1 uppercase tracking-wide">Post Falls YoY Growth</p>
+              <p className="font-dm-sans text-xs text-[#9AA3AF] mt-0.5">Strongest in region</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
