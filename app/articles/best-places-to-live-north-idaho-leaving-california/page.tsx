@@ -22,6 +22,12 @@ const articleSchema = {
   '@type': 'Article',
   headline: 'Best Places to Live in North Idaho for People Leaving California (2026 Relocation Guide)',
   description: 'A relocation guide for Californians moving to North Idaho in 2026. Compare Coeur d\'Alene, Post Falls, Hayden, and Sandpoint for cost, lifestyle, and community.',
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.realestatewithshirin.com/images/hero-home.jpeg',
+    width: 1200,
+    height: 800,
+  },
   author: {
     '@type': 'Person',
     '@id': 'https://www.realestatewithshirin.com/#agent',
@@ -39,7 +45,15 @@ const articleSchema = {
     },
   },
   publisher: {
+    '@type': 'Organization',
     '@id': 'https://www.realestatewithshirin.com/#business',
+    name: 'Real Estate With Shirin',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',
+      width: 600,
+      height: 600,
+    },
   },
   datePublished: '2026-04-22',
   dateModified: '2026-04-22',

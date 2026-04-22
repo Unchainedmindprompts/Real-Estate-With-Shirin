@@ -19,6 +19,12 @@ const articleSchema = {
 '@type': 'Article',
 headline: "How Much Do Homes Cost in Post Falls, Idaho? (2026 Buyer's Guide)",
 description: 'What does a home cost in Post Falls Idaho in 2026? Price breakdown by budget from $300K to $650K+ plus comparison to California, Washington, and Oregon markets.',
+image: {
+  '@type': 'ImageObject',
+  url: 'https://www.realestatewithshirin.com/images/hero-home.jpeg',
+  width: 1200,
+  height: 800,
+},
 author: {
 '@type': 'Person',
 '@id': 'https://www.realestatewithshirin.com/#agent',
@@ -36,7 +42,15 @@ name: 'Idaho Real Estate Commission',
     },
   },
 publisher: {
+'@type': 'Organization',
 '@id': 'https://www.realestatewithshirin.com/#business',
+name: 'Real Estate With Shirin',
+logo: {
+  '@type': 'ImageObject',
+  url: 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',
+  width: 600,
+  height: 600,
+},
   },
 datePublished: '2026-03-18',
 dateModified: '2026-03-18',

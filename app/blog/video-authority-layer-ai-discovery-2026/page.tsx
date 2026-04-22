@@ -22,6 +22,12 @@ const articleSchema = {
   '@type': 'Article',
   headline: 'The Video Authority Layer: How AI Discovery Is Changing Real Estate in 2026',
   description: 'AI-powered search is reshaping how buyers find real estate agents. Why video has become the trust signal that gets realtors surfaced in AI discovery.',
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.realestatewithshirin.com/images/hero-home.jpeg',
+    width: 1200,
+    height: 800,
+  },
   author: {
     '@type': 'Person',
     '@id': 'https://www.realestatewithshirin.com/#agent',
@@ -39,7 +45,15 @@ const articleSchema = {
     },
   },
   publisher: {
+    '@type': 'Organization',
     '@id': 'https://www.realestatewithshirin.com/#business',
+    name: 'Real Estate With Shirin',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',
+      width: 600,
+      height: 600,
+    },
   },
   datePublished: '2026-03-23',
   dateModified: '2026-03-23',
