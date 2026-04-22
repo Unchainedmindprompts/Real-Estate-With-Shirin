@@ -249,6 +249,7 @@ export default function ArticlesPage() {
           </Link>
 
           {/* Relocation Guide — Best Places to Live in North Idaho for Californians */}
+          {/* April 2026 */}
           <Link
             href="/articles/best-places-to-live-north-idaho-leaving-california"
             className="block group rounded-sm transition-colors duration-200 hover:border-[#C4842A]"
