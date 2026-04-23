@@ -24,9 +24,9 @@ const articleSchema = {
   description: 'A relocation guide for Californians moving to North Idaho in 2026. Compare Coeur d\'Alene, Post Falls, Hayden, and Sandpoint for cost, lifestyle, and community.',
   image: {
     '@type': 'ImageObject',
-    url: 'https://www.realestatewithshirin.com/images/hero-home.jpeg',
-    width: 1200,
-    height: 800,
+    url: 'https://www.realestatewithshirin.com/images/north-idaho-family-home.png',
+    width: 1672,
+    height: 941,
   },
   author: {
     '@type': 'Person',

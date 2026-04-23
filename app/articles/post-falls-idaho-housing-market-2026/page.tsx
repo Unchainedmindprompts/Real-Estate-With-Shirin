@@ -21,9 +21,9 @@ headline: 'Post Falls Idaho Housing Market 2026 — What Buyers and Sellers Need
 description: 'Median home prices, days on market, inventory levels, and 2026 forecast for the Post Falls Idaho real estate market. Data as of March 2026.',
 image: {
   '@type': 'ImageObject',
-  url: 'https://www.realestatewithshirin.com/images/hero-home.jpeg',
-  width: 1200,
-  height: 800,
+  url: 'https://www.realestatewithshirin.com/images/north-idaho-neighborhood.png',
+  width: 1672,
+  height: 941,
 },
 author: {
 '@type': 'Person',

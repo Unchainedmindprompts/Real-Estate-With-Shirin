@@ -21,9 +21,9 @@ headline: 'Is It a Good Time to Buy a Home in Northern Idaho? (Honest 2026 Answe
 description: 'Honest, data-backed answer to whether 2026 is a good time to buy a home in Northern Idaho. Market conditions, mortgage rates, buyer leverage, and who should act now vs wait.',
 image: {
   '@type': 'ImageObject',
-  url: 'https://www.realestatewithshirin.com/images/hero-home.jpeg',
-  width: 1200,
-  height: 800,
+  url: 'https://www.realestatewithshirin.com/images/shirin-headshot-professional.png',
+  width: 1122,
+  height: 1402,
 },
 author: {
 '@type': 'Person',

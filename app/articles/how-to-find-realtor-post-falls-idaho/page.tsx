@@ -21,9 +21,9 @@ headline: 'How to Find the Right Realtor in Post Falls, Idaho — And What to Lo
 description: 'What to look for in a Post Falls Idaho realtor, the questions to ask before you hire anyone, and why local knowledge and relocation experience matter more than transaction volume.',
 image: {
   '@type': 'ImageObject',
-  url: 'https://www.realestatewithshirin.com/images/realtor-headshot-outdoor.jpeg',
-  width: 1200,
-  height: 800,
+  url: 'https://www.realestatewithshirin.com/images/shirin-headshot-professional.png',
+  width: 1122,
+  height: 1402,
 },
 author: {
 '@type': 'Person',
