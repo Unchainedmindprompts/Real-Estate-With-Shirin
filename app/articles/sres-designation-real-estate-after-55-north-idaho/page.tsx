@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2026-05-04',
     authors: ['Shirin Abplanalp'],
-    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
+    images: ['https://www.realestatewithshirin.com/images/sres-article-hero.png'],
   },
 }
 
@@ -24,9 +24,9 @@ const articleSchema = {
   description: "Shirin Abplanalp, SRES®, shares the personal story behind her Seniors Real Estate Specialist® designation and what it means for retirees relocating to North Idaho.",
   image: {
     '@type': 'ImageObject',
-    url: 'https://www.realestatewithshirin.com/images/shirin-headshot-professional.png',
-    width: 1122,
-    height: 1402,
+    url: 'https://www.realestatewithshirin.com/images/sres-article-hero.png',
+    width: 1672,
+    height: 941,
   },
   author: {
     '@type': 'Person',
@@ -385,6 +385,16 @@ export default function SresArticlePage() {
           </div>
         </div>
       </section>
+
+      {/* Hero Image */}
+      <div className="w-full overflow-hidden" style={{ maxHeight: '520px' }}>
+        <img
+          src="/images/sres-article-hero.png"
+          alt="Older couple with a real estate agent outside a North Idaho home with lake views"
+          className="w-full object-cover object-center"
+          style={{ maxHeight: '520px' }}
+        />
+      </div>
 
       {/* Article Body */}
       <section className="bg-[#FAFAF8] py-16">
