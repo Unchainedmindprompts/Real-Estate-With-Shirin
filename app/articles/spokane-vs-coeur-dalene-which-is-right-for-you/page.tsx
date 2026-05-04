@@ -95,7 +95,7 @@ const faqSchema = {
       name: "Is Coeur d'Alene more expensive than Spokane?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Yes. The Spokane County median home price is approximately $406,000 versus $575,000 in Kootenai County. The gap is real, but what you get for that premium is often a newer home, a larger lot, and proximity to Lake Coeur d'Alene and the Northern Rockies — a lifestyle upgrade that many buyers from higher-cost markets consider well worth it. Post Falls specifically offers strong value within Kootenai County, with quality new construction available in the $475,000–$550,000 range.",
+        text: "Yes. The Spokane County median home price is approximately $406,000 versus $575,000 in Kootenai County. The gap is real, but what you get for that premium is often a newer home, a larger lot, and proximity to Lake Coeur d'Alene and the Northern Rockies — a lifestyle upgrade that many buyers from higher-cost markets consider well worth it. Post Falls specifically offers strong value within Kootenai County, with quality new construction available in the $475,000–$600,000 range.",
       },
     },
     {
@@ -333,7 +333,7 @@ export default function SpokaneVsCdaPage() {
                 Yes, Spokane is more affordable on paper. The gap is real, and you should know it going in. But here&apos;s what the headline median doesn&apos;t tell you: what you get in Coeur d&apos;Alene and Post Falls at $575,000 is often a newer home on a larger lot, with mountain or lake views, in a neighborhood that feels nothing like a mid-size American city. What you get in Spokane at $406,000 is frequently an older home on a small urban lot with Spokane traffic and Spokane crime stats as neighbors.
               </p>
               <p className="mb-10">
-                In Post Falls specifically, $475,000–$550,000 still gets you quality newer construction in a family-friendly neighborhood — five minutes from the Spokane River, with Coeur d&apos;Alene Lake twenty minutes in one direction and Spokane International Airport thirty minutes in the other. That&apos;s a hard value proposition to argue with.
+                In Post Falls specifically, $475,000–$600,000 still gets you quality newer construction in a family-friendly neighborhood — five minutes from the Spokane River, with Coeur d&apos;Alene Lake twenty minutes in one direction and Spokane International Airport thirty minutes in the other. That&apos;s a hard value proposition to argue with.
               </p>
 
               {/* Section: Taxes */}
@@ -353,7 +353,7 @@ export default function SpokaneVsCdaPage() {
                   {[
                     { label: 'Sales Tax', idaho: '6.0%', wa: '8.9% (Spokane)', note: 'No Idaho sales tax on groceries' },
                     { label: 'State Income Tax', idaho: '5.3% flat', wa: '$0 (for now)', note: 'WA 9.9% on $1M+ income begins Jan 2028' },
-                    { label: 'Property Tax Rate', idaho: 'Lower in $ terms', wa: 'Higher in $ terms', note: 'Lower home values = lower actual bill in Idaho' },
+                    { label: 'Property Tax Rate', idaho: 'Lower in $ terms', wa: 'Higher in $ terms', note: "ID Homeowner's Exemption removes up to $125K from taxable value — saves $1,000–$1,500+/yr. WA has no equivalent." },
                     { label: 'Vehicle Registration', idaho: 'Lower', wa: 'Higher', note: 'Based on vehicle value in WA' },
                   ].map((row) => (
                     <div key={row.label} className="px-6 py-4 grid grid-cols-3 gap-4 items-start">
@@ -373,6 +373,10 @@ export default function SpokaneVsCdaPage() {
                   ))}
                 </div>
               </div>
+
+              <p className="mb-6">
+                <strong className="text-[#1C1A17]">On property taxes specifically:</strong> Idaho&apos;s rates are consistently lower than Washington&apos;s, which matters a lot when you&apos;re carrying a $500,000+ mortgage. Idaho also gives every primary homeowner a Homeowner&apos;s Exemption that removes up to $125,000 from your home&apos;s taxable assessed value — typically saving $1,000–$1,500+ per year in property taxes. Washington has no equivalent program, and local jurisdictions there can and do raise levies without the structural cap Idaho provides.
+              </p>
 
               <p className="mb-6">
                 Washington has historically had no income tax — but that just changed. In March 2026, Governor Bob Ferguson signed SB 6346 into law: a 9.9% income tax on household income over $1 million, effective January 1, 2028. It&apos;s already driving calls to North Idaho agents. A local broker in Coeur d&apos;Alene publicly noted receiving five calls in a single week from Western Washington buyers looking to establish Idaho residency ahead of the new law.
@@ -510,7 +514,7 @@ export default function SpokaneVsCdaPage() {
                 {[
                   {
                     q: "Is Coeur d'Alene more expensive than Spokane?",
-                    a: "Yes. The Spokane County median home price is approximately $406,000 versus $575,000 in Kootenai County. The gap is real, but Post Falls specifically offers strong value within Kootenai County — quality new construction in the $475,000–$550,000 range — with proximity to the lake, the mountains, and Spokane's infrastructure.",
+                    a: "Yes. The Spokane County median home price is approximately $406,000 versus $575,000 in Kootenai County. The gap is real, but Post Falls specifically offers strong value within Kootenai County — quality new construction in the $475,000–$600,000 range — with proximity to the lake, the mountains, and Spokane's infrastructure.",
                   },
                   {
                     q: 'What are the tax differences between Idaho and Washington?',
