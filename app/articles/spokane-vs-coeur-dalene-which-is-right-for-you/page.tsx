@@ -71,17 +71,30 @@ const articleSchema = {
   articleSection: 'Relocation Guide',
   wordCount: 1800,
   about: [
-    { '@type': 'Thing', name: 'Spokane vs Coeur d\'Alene Comparison' },
-    { '@type': 'Thing', name: 'Inland Northwest Relocation' },
-    { '@type': 'Thing', name: 'Idaho vs Washington Real Estate' },
+    { '@type': 'City', name: "Coeur d'Alene", containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'City', name: 'Spokane', containedInPlace: { '@type': 'State', name: 'Washington' } },
+    { '@type': 'Thing', name: 'Inland Northwest Relocation 2026' },
+    { '@type': 'Thing', name: 'Idaho vs Washington Tax Comparison' },
+    { '@type': 'Thing', name: "Idaho Homeowner's Exemption" },
   ],
   mentions: [
     { '@type': 'City', name: 'Spokane', containedInPlace: { '@type': 'State', name: 'Washington' } },
     { '@type': 'City', name: "Coeur d'Alene", containedInPlace: { '@type': 'State', name: 'Idaho' } },
     { '@type': 'City', name: 'Post Falls', containedInPlace: { '@type': 'State', name: 'Idaho' } },
     { '@type': 'City', name: 'Hayden', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'AdministrativeArea', name: 'Kootenai County' },
-    { '@type': 'AdministrativeArea', name: 'Spokane County' },
+    { '@type': 'City', name: 'Sandpoint', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'AdministrativeArea', name: 'Spokane County', containedInPlace: { '@type': 'State', name: 'Washington' } },
+    { '@type': 'LakeBodyOfWater', name: "Lake Coeur d'Alene", containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'LakeBodyOfWater', name: 'Hayden Lake', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'LakeBodyOfWater', name: 'Lake Pend Oreille', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'RiverBodyOfWater', name: 'Spokane River' },
+    { '@type': 'Airport', name: 'Spokane International Airport', iataCode: 'GEG' },
+    { '@type': 'Legislation', name: 'Washington SB 6346', legislationDate: '2026-03', jurisdiction: { '@type': 'State', name: 'Washington' } },
+  ],
+  citation: [
+    { '@type': 'WebPage', name: 'Spokane Association of Realtors Market Data', url: 'https://www.spokanerealtors.com' },
+    { '@type': 'WebPage', name: "Coeur d'Alene Regional Realtors 2025 Year-End Market Report", url: 'https://www.cdarealtors.com' },
   ],
 }
 
@@ -131,6 +144,49 @@ const faqSchema = {
       },
     },
   ],
+}
+
+const priceDatasetSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: 'Inland Northwest Median Home Price Comparison — 2025',
+  description: 'Year-end 2025 median sale prices: Spokane County (WA) $406,000 · Post Falls (ID) $521,000 · Kootenai County (ID) $575,000 · Seattle metro (WA) $850,000.',
+  creator: { '@id': 'https://www.realestatewithshirin.com/#agent' },
+  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  url: 'https://www.realestatewithshirin.com/articles/spokane-vs-coeur-dalene-which-is-right-for-you',
+  temporalCoverage: '2025',
+  variableMeasured: 'Median residential sale price (USD)',
+  measurementTechnique: 'MLS reported sales data',
+  spatialCoverage: [
+    { '@type': 'AdministrativeArea', name: 'Spokane County', containedInPlace: { '@type': 'State', name: 'Washington' } },
+    { '@type': 'City', name: 'Post Falls', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'City', name: 'Seattle', containedInPlace: { '@type': 'State', name: 'Washington' } },
+  ],
+  citation: [
+    { '@type': 'WebPage', name: 'Spokane Association of Realtors Market Data', url: 'https://www.spokanerealtors.com' },
+    { '@type': 'WebPage', name: "Coeur d'Alene Regional Realtors 2025 Year-End Market Report", url: 'https://www.cdarealtors.com' },
+  ],
+}
+
+const postFallsPlaceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'City',
+  '@id': 'https://www.realestatewithshirin.com/articles/spokane-vs-coeur-dalene-which-is-right-for-you/#post-falls',
+  name: 'Post Falls',
+  description: "Fast-growing family-friendly city in Kootenai County, Idaho, 8 miles west of Coeur d'Alene on the Spokane River. Population approximately 49,000, growing 3.42% annually. Known for newer residential development, lake and river access, and 30-minute proximity to Spokane International Airport.",
+  containedInPlace: {
+    '@type': 'AdministrativeArea',
+    name: 'Kootenai County',
+    containedInPlace: { '@type': 'State', name: 'Idaho', containedInPlace: { '@type': 'Country', name: 'United States' } },
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 47.7193,
+    longitude: -116.9671,
+  },
+  hasMap: 'https://maps.google.com/?q=Post+Falls,+Idaho',
+  realEstateAgent: { '@id': 'https://www.realestatewithshirin.com/#agent' },
 }
 
 const breadcrumbSchema = {
@@ -193,6 +249,8 @@ export default function SpokaneVsCdaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(priceDatasetSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(postFallsPlaceSchema) }} />
 
       {/* Hero */}
       <section className="bg-[#F5EFE6] pt-36 pb-16">
