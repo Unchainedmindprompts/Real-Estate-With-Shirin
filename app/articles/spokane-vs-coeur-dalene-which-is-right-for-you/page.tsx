@@ -610,7 +610,7 @@ export default function SpokaneVsCdaPage() {
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-14 mb-6 font-semibold">
                 Common Questions
               </h2>
-              <div className="space-y-6" itemScope itemType="https://schema.org/FAQPage">
+              <div className="space-y-6">
                 {[
                   {
                     q: "Is Coeur d'Alene more expensive than Spokane?",
@@ -635,14 +635,11 @@ export default function SpokaneVsCdaPage() {
                 ].map((faq, i) => (
                   <div
                     key={i}
-                    itemScope
-                    itemProp="mainEntity"
-                    itemType="https://schema.org/Question"
                     className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]"
                   >
-                    <h3 itemProp="name" className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-3">{faq.q}</h3>
-                    <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                      <p itemProp="text" className="font-dm-sans text-[15px] text-[#5C5650] leading-relaxed">{faq.a}</p>
+                    <h3 className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-3">{faq.q}</h3>
+                    <div>
+                      <p className="font-dm-sans text-[15px] text-[#5C5650] leading-relaxed">{faq.a}</p>
                     </div>
                   </div>
                 ))}
