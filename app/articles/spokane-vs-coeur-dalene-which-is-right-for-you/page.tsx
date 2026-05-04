@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2026-05-03',
     authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/spokane-vs-coeur-dalene-hero.png'],
   },
 }
 
@@ -23,7 +24,7 @@ const articleSchema = {
   description: "An honest comparison of Spokane and Coeur d'Alene for buyers considering the Inland Northwest — home prices, taxes, lifestyle, and geography.",
   image: {
     '@type': 'ImageObject',
-    url: 'https://www.realestatewithshirin.com/images/north-idaho-neighborhood.png',
+    url: 'https://www.realestatewithshirin.com/images/spokane-vs-coeur-dalene-hero.png',
     width: 1672,
     height: 941,
   },
@@ -77,24 +78,57 @@ const articleSchema = {
     { '@type': 'Thing', name: 'Idaho vs Washington Tax Comparison' },
     { '@type': 'Thing', name: "Idaho Homeowner's Exemption" },
   ],
+  spatialCoverage: {
+    '@type': 'Place',
+    name: "Spokane-Coeur d'Alene Metro Area",
+    geo: {
+      '@type': 'GeoShape',
+      box: '47.4 -117.6 47.8 -116.6',
+    },
+  },
+  contentLocation: [
+    { '@type': 'City', name: "Coeur d'Alene", addressRegion: 'ID', addressCountry: 'US' },
+    { '@type': 'City', name: 'Post Falls', addressRegion: 'ID', addressCountry: 'US' },
+    { '@type': 'City', name: 'Spokane', addressRegion: 'WA', addressCountry: 'US' },
+  ],
   mentions: [
-    { '@type': 'City', name: 'Spokane', containedInPlace: { '@type': 'State', name: 'Washington' } },
-    { '@type': 'City', name: "Coeur d'Alene", containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: 'Post Falls', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: 'Hayden', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: 'Sandpoint', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'AdministrativeArea', name: 'Spokane County', containedInPlace: { '@type': 'State', name: 'Washington' } },
-    { '@type': 'LakeBodyOfWater', name: "Lake Coeur d'Alene", containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'City', name: 'Spokane', addressRegion: 'WA', url: 'https://en.wikipedia.org/wiki/Spokane,_Washington' },
+    { '@type': 'City', name: "Coeur d'Alene", addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho' },
+    { '@type': 'City', name: 'Post Falls', addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho' },
+    { '@type': 'City', name: 'Hayden', addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Hayden,_Idaho' },
+    { '@type': 'City', name: 'Sandpoint', addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Sandpoint,_Idaho' },
+    { '@type': 'City', name: 'Bend', addressRegion: 'OR', url: 'https://en.wikipedia.org/wiki/Bend,_Oregon' },
+    { '@type': 'AdministrativeArea', name: 'Kootenai County', addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Kootenai_County,_Idaho' },
+    { '@type': 'AdministrativeArea', name: 'Spokane County', addressRegion: 'WA', url: 'https://en.wikipedia.org/wiki/Spokane_County,_Washington' },
+    { '@type': 'LakeBodyOfWater', name: "Lake Coeur d'Alene", url: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene_Lake' },
     { '@type': 'LakeBodyOfWater', name: 'Hayden Lake', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'LakeBodyOfWater', name: 'Lake Pend Oreille', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'RiverBodyOfWater', name: 'Spokane River' },
-    { '@type': 'Airport', name: 'Spokane International Airport', iataCode: 'GEG' },
+    { '@type': 'LakeBodyOfWater', name: 'Lake Pend Oreille', url: 'https://en.wikipedia.org/wiki/Lake_Pend_Oreille' },
+    { '@type': 'LakeBodyOfWater', name: 'Priest Lake', url: 'https://en.wikipedia.org/wiki/Priest_Lake' },
+    { '@type': 'RiverBodyOfWater', name: 'Spokane River', url: 'https://en.wikipedia.org/wiki/Spokane_River' },
+    { '@type': 'RiverBodyOfWater', name: 'St. Joe River', url: 'https://en.wikipedia.org/wiki/St._Joe_River' },
+    { '@type': 'GovernmentOrganization', name: 'State of Idaho', url: 'https://www.idaho.gov' },
+    { '@type': 'GovernmentOrganization', name: 'State of Washington', url: 'https://www.wa.gov' },
+    { '@type': 'Airport', name: 'Spokane International Airport', iataCode: 'GEG', url: 'https://www.spokaneairports.net' },
+    { '@type': 'Hospital', name: 'Providence Sacred Heart Medical Center', url: 'https://www.providence.org/locations/wa/sacred-heart-medical-center' },
+    { '@type': 'Organization', name: 'MultiCare Health System', url: 'https://www.multicare.org' },
     { '@type': 'Legislation', name: 'Washington SB 6346', legislationDate: '2026-03', jurisdiction: { '@type': 'State', name: 'Washington' } },
   ],
   citation: [
-    { '@type': 'WebPage', name: 'Spokane Association of Realtors Market Data', url: 'https://www.spokanerealtors.com' },
-    { '@type': 'WebPage', name: "Coeur d'Alene Regional Realtors 2025 Year-End Market Report", url: 'https://www.cdarealtors.com' },
+    {
+      '@type': 'CreativeWork',
+      name: 'Spokane Association of Realtors 2025 Year-End Data',
+      publisher: { '@type': 'Organization', name: 'Spokane Association of Realtors' },
+    },
+    {
+      '@type': 'CreativeWork',
+      name: "Coeur d'Alene Regional Realtors 2025 Year-End Data",
+      publisher: { '@type': 'Organization', name: "Coeur d'Alene Regional Realtors" },
+    },
+    {
+      '@type': 'Legislation',
+      name: 'Washington SB 6346 (Income Tax)',
+      legislationDate: '2026-03',
+    },
   ],
 }
 
@@ -289,7 +323,15 @@ export default function SpokaneVsCdaPage() {
         </div>
       </section>
 
-      <div className="border-t border-[#E8DDD0]" />
+      {/* Hero Image */}
+      <div className="w-full overflow-hidden" style={{ maxHeight: '520px' }}>
+        <img
+          src="/images/spokane-vs-coeur-dalene-hero.png"
+          alt="Split view comparing Spokane, Washington with North Idaho's lake country along Interstate 90"
+          className="w-full object-cover object-center"
+          style={{ maxHeight: '520px' }}
+        />
+      </div>
 
       {/* Stats Bar */}
       <section className="bg-[#1C1A17] py-8">
