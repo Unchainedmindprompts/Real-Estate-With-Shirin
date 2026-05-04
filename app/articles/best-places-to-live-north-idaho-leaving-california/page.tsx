@@ -22,6 +22,12 @@ const articleSchema = {
   '@type': 'Article',
   headline: 'Best Places to Live in North Idaho for People Leaving California (2026 Relocation Guide)',
   description: 'A relocation guide for Californians moving to North Idaho in 2026. Compare Coeur d\'Alene, Post Falls, Hayden, and Sandpoint for cost, lifestyle, and community.',
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.realestatewithshirin.com/images/north-idaho-family-home.png',
+    width: 1672,
+    height: 941,
+  },
   author: {
     '@type': 'Person',
     '@id': 'https://www.realestatewithshirin.com/#agent',
@@ -39,7 +45,14 @@ const articleSchema = {
     },
   },
   publisher: {
+    '@type': 'Organization',
     '@id': 'https://www.realestatewithshirin.com/#business',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',
+      width: 600,
+      height: 600,
+    },
   },
   datePublished: '2026-04-22',
   dateModified: '2026-04-22',
@@ -98,7 +111,7 @@ const faqSchema = {
       name: 'Does Idaho have state income tax?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Yes. Idaho has a flat 5.8% state income tax as of 2026. That is meaningfully lower than California's progressive system, which tops out at 13.3%, but it is not zero. The bigger financial win for most Californians moving to Idaho is the combination: lower income tax, lower home prices, lower property taxes in dollar terms, and lower sales tax, vehicle fees, and cost of living overall.",
+        text: "Yes. Idaho has a flat 5.3% state income tax as of 2026. That is meaningfully lower than California's progressive system, which tops out at 13.3%, but it is not zero. The bigger financial win for most Californians moving to Idaho is the combination: lower income tax, lower home prices, lower property taxes in dollar terms, and lower sales tax, vehicle fees, and cost of living overall.",
       },
     },
     {
@@ -243,7 +256,7 @@ export default function BestPlacesNorthIdahoCaliforniaPage() {
               <p className="font-dm-sans text-xs text-[#9AA3AF] mt-0.5">End of 2025</p>
             </div>
             <div className="text-center">
-              <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">5.8%</p>
+              <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">5.3%</p>
               <p className="font-dm-sans text-xs text-[#C4BDB4] mt-1 uppercase tracking-wide">Idaho Income Tax</p>
               <p className="font-dm-sans text-xs text-[#9AA3AF] mt-0.5">vs CA top rate of 13.3%</p>
             </div>
@@ -343,7 +356,7 @@ export default function BestPlacesNorthIdahoCaliforniaPage() {
                 The move is bigger than most Californians anticipate. Not because it is difficult logistically, but because the day-to-day rhythm of life is genuinely different. Here is what to expect on the practical side.
               </p>
               <p className="mb-6">
-                <strong className="text-[#1C1A17]">Taxes.</strong> Idaho has a flat 5.8 percent state income tax. That is lower than California&apos;s progressive system, which tops out at 13.3 percent, but it is not zero. Anyone telling you Idaho has no state income tax is thinking of Washington, Nevada, or Texas. The bigger financial story is the combination: lower income tax, dramatically lower home prices, lower property taxes in dollar terms (even though the rates are similar, the home values are so much lower that the actual bill drops meaningfully), lower sales tax, and lower fees across the board for things like vehicle registration.
+                <strong className="text-[#1C1A17]">Taxes.</strong> Idaho has a flat 5.3 percent state income tax. That is lower than California&apos;s progressive system, which tops out at 13.3 percent, but it is not zero. Anyone telling you Idaho has no state income tax is thinking of Washington, Nevada, or Texas. The bigger financial story is the combination: lower income tax, dramatically lower home prices, lower property taxes in dollar terms (even though the rates are similar, the home values are so much lower that the actual bill drops meaningfully), lower sales tax, and lower fees across the board for things like vehicle registration.
               </p>
               <p className="mb-6">
                 <strong className="text-[#1C1A17]">Home prices.</strong> This is where the savings show up most. A family selling a 1,400-square-foot home in San Diego for $900,000 can buy a 2,800-square-foot home on a half-acre in Post Falls for $600,000 and pocket the difference. That math is what drives most of the moves I see.
@@ -385,7 +398,7 @@ export default function BestPlacesNorthIdahoCaliforniaPage() {
                     Does Idaho have state income tax?
                   </h3>
                   <p className="font-dm-sans text-[17px] text-[#5C5650] leading-relaxed">
-                    Yes. Idaho has a flat 5.8% state income tax as of 2026. That is meaningfully lower than California&apos;s progressive system, which tops out at 13.3%, but it is not zero. The bigger financial win for most Californians moving to Idaho is the combination: lower income tax, lower home prices, lower property taxes in dollar terms, and lower sales tax, vehicle fees, and cost of living overall.
+                    Yes. Idaho has a flat 5.3% state income tax as of 2026. That is meaningfully lower than California&apos;s progressive system, which tops out at 13.3%, but it is not zero. The bigger financial win for most Californians moving to Idaho is the combination: lower income tax, lower home prices, lower property taxes in dollar terms, and lower sales tax, vehicle fees, and cost of living overall.
                   </p>
                 </div>
                 <div className="border border-[#E8DDD0] rounded-sm p-6 bg-[#F5EFE6]">

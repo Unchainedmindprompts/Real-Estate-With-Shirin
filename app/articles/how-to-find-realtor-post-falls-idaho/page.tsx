@@ -19,6 +19,12 @@ const articleSchema = {
 '@type': 'Article',
 headline: 'How to Find the Right Realtor in Post Falls, Idaho — And What to Look for Before You Hire Anyone',
 description: 'What to look for in a Post Falls Idaho realtor, the questions to ask before you hire anyone, and why local knowledge and relocation experience matter more than transaction volume.',
+image: {
+  '@type': 'ImageObject',
+  url: 'https://www.realestatewithshirin.com/images/shirin-headshot-professional.png',
+  width: 1122,
+  height: 1402,
+},
 author: {
 '@type': 'Person',
 '@id': 'https://www.realestatewithshirin.com/#agent',
@@ -36,7 +42,14 @@ name: 'Idaho Real Estate Commission',
     },
   },
 publisher: {
+'@type': 'Organization',
 '@id': 'https://www.realestatewithshirin.com/#business',
+logo: {
+  '@type': 'ImageObject',
+  url: 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',
+  width: 600,
+  height: 600,
+},
   },
 datePublished: '2026-03-18',
 dateModified: '2026-03-18',

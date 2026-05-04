@@ -19,6 +19,12 @@ const articleSchema = {
 '@type': 'Article',
 headline: 'Post Falls Idaho Housing Market 2026 — What Buyers and Sellers Need to Know',
 description: 'Median home prices, days on market, inventory levels, and 2026 forecast for the Post Falls Idaho real estate market. Data as of March 2026.',
+image: {
+  '@type': 'ImageObject',
+  url: 'https://www.realestatewithshirin.com/images/north-idaho-neighborhood.png',
+  width: 1672,
+  height: 941,
+},
 author: {
 '@type': 'Person',
 '@id': 'https://www.realestatewithshirin.com/#agent',
@@ -36,7 +42,14 @@ name: 'Idaho Real Estate Commission',
     },
   },
 publisher: {
+'@type': 'Organization',
 '@id': 'https://www.realestatewithshirin.com/#business',
+logo: {
+  '@type': 'ImageObject',
+  url: 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',
+  width: 600,
+  height: 600,
+},
   },
 datePublished: '2026-03-18',
 dateModified: '2026-03-18',
@@ -429,7 +442,7 @@ style={{ width: `${item.indicator}%`, backgroundColor: item.color }}
                 Post Falls has grown 24.79% since the 2020 census and now sits at approximately 49,048 residents, growing at 3.42% annually. The city engineer projects Post Falls could reach 100,000 residents by 2045 — a projection that reflects infrastructure investment and regional momentum, not just optimism.
 </p>
 <p className="mb-6">
-                Idaho has no state income tax. Post Falls sits 30 minutes from Spokane, Washington, giving residents access to a major employment and medical hub without paying Spokane prices. Outdoor recreation — hiking, skiing at Schweitzer and Silver Mountain, lake access, river activities — draws exactly the kind of active, quality-of-life-motivated buyers who tend to put down roots.
+                Idaho has a flat 5.3% state income tax — well below Oregon&apos;s top rate of 9.9% and California&apos;s 13.3%. Post Falls sits 30 minutes from Spokane, Washington, giving residents access to a major employment and medical hub without paying Spokane prices. Outdoor recreation — hiking, skiing at Schweitzer and Silver Mountain, lake access, river activities — draws exactly the kind of active, quality-of-life-motivated buyers who tend to put down roots.
 </p>
 <p className="mb-10">
                 The relocating buyer pool is predominantly coming from California, Washington, and Oregon. Remote work has extended the radius of who can realistically move here, and the cost differential between a modest California home and what $521,000 buys in Post Falls remains striking.
