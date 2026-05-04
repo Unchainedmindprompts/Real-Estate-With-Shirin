@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2026-05-04',
     authors: ['Shirin Abplanalp'],
-    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
+    images: ['https://www.realestatewithshirin.com/images/sres-article-hero.png'],
   },
 }
 
@@ -24,9 +24,9 @@ const articleSchema = {
   description: "Shirin Abplanalp, SRES®, shares the personal story behind her Seniors Real Estate Specialist® designation and what it means for retirees relocating to North Idaho.",
   image: {
     '@type': 'ImageObject',
-    url: 'https://www.realestatewithshirin.com/images/shirin-headshot-professional.png',
-    width: 1122,
-    height: 1402,
+    url: 'https://www.realestatewithshirin.com/images/sres-article-hero.png',
+    width: 1672,
+    height: 941,
   },
   author: {
     '@type': 'Person',
@@ -85,6 +85,20 @@ const articleSchema = {
   ],
   articleSection: 'Senior Real Estate',
   wordCount: 2800,
+  spatialCoverage: {
+    '@type': 'Place',
+    name: 'North Idaho',
+    geo: {
+      '@type': 'GeoShape',
+      box: '47.5 -117.0 48.5 -116.0',
+    },
+  },
+  contentLocation: [
+    { '@type': 'City', name: "Coeur d'Alene", addressRegion: 'ID', addressCountry: 'US' },
+    { '@type': 'City', name: 'Post Falls', addressRegion: 'ID', addressCountry: 'US' },
+    { '@type': 'City', name: 'Hayden', addressRegion: 'ID', addressCountry: 'US' },
+    { '@type': 'City', name: 'Sandpoint', addressRegion: 'ID', addressCountry: 'US' },
+  ],
   about: [
     { '@type': 'Thing', name: 'Seniors Real Estate Specialist (SRES®)' },
     { '@type': 'Thing', name: 'Retirement Relocation' },
@@ -99,23 +113,39 @@ const articleSchema = {
     { '@type': 'City', name: 'Hayden', addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Hayden,_Idaho' },
     { '@type': 'City', name: 'Sandpoint', addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Sandpoint,_Idaho' },
     { '@type': 'AdministrativeArea', name: 'Kootenai County', addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Kootenai_County,_Idaho' },
-    { '@type': 'Organization', name: 'National Association of REALTORS®', url: 'https://www.nar.realtor' },
-    { '@type': 'Organization', name: 'Center for REALTOR® Development', url: 'https://www.nar.realtor/education/designations-and-certifications/sres' },
-    { '@type': 'Hospital', name: 'Kootenai Health', addressRegion: 'ID', url: 'https://www.kh.org' },
-    { '@type': 'Hospital', name: 'Providence Sacred Heart Medical Center', url: 'https://www.providence.org/locations/wa/sacred-heart-medical-center' },
-    { '@type': 'Organization', name: 'MultiCare Health System', url: 'https://www.multicare.org' },
+    { '@type': 'Place', name: "Lake Coeur d'Alene", url: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene_Lake' },
     { '@type': 'GovernmentOrganization', name: 'State of Idaho', url: 'https://www.idaho.gov' },
     { '@type': 'GovernmentOrganization', name: 'State of Washington', url: 'https://www.wa.gov' },
-    { '@type': 'GovernmentOrganization', name: 'State of California', url: 'https://www.ca.gov' },
-    { '@type': 'Legislation', name: 'Washington SB 6346 (Income Tax)', legislationDate: '2026-03' },
-    { '@type': 'LakeBodyOfWater', name: "Lake Coeur d'Alene", url: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene_Lake' },
+    { '@type': 'Hospital', name: 'Kootenai Health', url: 'https://www.kootenaihealth.org' },
+    { '@type': 'Hospital', name: 'Providence Sacred Heart Medical Center', url: 'https://www.providence.org/locations/wa/sacred-heart-medical-center' },
+    { '@type': 'Organization', name: 'MultiCare Health System', url: 'https://www.multicare.org' },
+    { '@type': 'Organization', name: 'National Association of REALTORS®', url: 'https://www.nar.realtor' },
+    { '@type': 'Organization', name: 'Center for REALTOR® Development', url: 'https://crd.realtor' },
+    { '@type': 'Organization', name: 'Seniors Real Estate Specialist Council', alternateName: 'SRES Council', url: 'https://sres.realtor' },
   ],
   citation: [
     {
-      '@type': 'WebPage',
-      name: 'SRES® Designation — National Association of REALTORS®',
-      url: 'https://www.nar.realtor/education/designations-and-certifications/sres',
-      publisher: { '@type': 'Organization', name: 'National Association of REALTORS®' },
+      '@type': 'Legislation',
+      name: 'Washington SB 6346 (Income Tax)',
+      legislationDate: '2026-03',
+    },
+    {
+      '@type': 'CreativeWork',
+      name: 'SRES® Designation Curriculum',
+      publisher: {
+        '@type': 'Organization',
+        name: 'Center for REALTOR® Development',
+        url: 'https://crd.realtor',
+      },
+    },
+    {
+      '@type': 'GovernmentService',
+      name: 'Idaho State Income Tax',
+      provider: {
+        '@type': 'GovernmentOrganization',
+        name: 'Idaho State Tax Commission',
+        url: 'https://tax.idaho.gov',
+      },
     },
   ],
 }
@@ -355,6 +385,16 @@ export default function SresArticlePage() {
           </div>
         </div>
       </section>
+
+      {/* Hero Image */}
+      <div className="w-full overflow-hidden" style={{ maxHeight: '520px' }}>
+        <img
+          src="/images/sres-article-hero.png"
+          alt="Older couple with a real estate agent outside a North Idaho home with lake views"
+          className="w-full object-cover object-center"
+          style={{ maxHeight: '520px' }}
+        />
+      </div>
 
       {/* Article Body */}
       <section className="bg-[#FAFAF8] py-16">
