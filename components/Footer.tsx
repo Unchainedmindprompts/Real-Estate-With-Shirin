@@ -11,26 +11,22 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row justify-between items-start gap-10 pb-12" style={{ borderBottom: '1px solid #2C2A27' }}>
           {/* Brand */}
           <div className="lg:max-w-xs">
-            <div className="flex items-center gap-3 mb-4">
-              <div
-                className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0"
-                style={{ backgroundColor: '#2C2A27', border: '2px solid #C4842A' }}
-              >
-                <div className="w-full h-full flex items-center justify-center text-sm font-semibold" style={{ color: '#C4842A', fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '18px' }}>SA</div>
-              </div>
-              <div>
-                <p
-                  className="leading-tight"
-                  style={{
-                    fontFamily: "'Great Vibes', cursive",
-                    fontSize: 'clamp(24px, 2.5vw, 32px)',
-                    fontWeight: 400,
-                    color: '#FAFAF8',
-                  }}
+            <div className="mb-5">
+              <Link href="/" aria-label="Real Estate With Shirin — Home">
+                <div
+                  className="inline-block rounded-sm"
+                  style={{ backgroundColor: '#FAFAF8', padding: '10px 14px' }}
                 >
-                  Real Estate With Shirin
-                </p>
-              </div>
+                  <Image
+                    src="/images/shirin-logo.png"
+                    alt="Real Estate With Shirin"
+                    width={110}
+                    height={110}
+                    className="object-contain"
+                    style={{ width: 'auto', height: '110px' }}
+                  />
+                </div>
+              </Link>
             </div>
             <p className="text-sm leading-relaxed" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
               Licensed REALTOR® serving Post Falls, Coeur d&apos;Alene, and Northern Idaho
