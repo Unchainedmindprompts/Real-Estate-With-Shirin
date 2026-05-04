@@ -229,17 +229,10 @@ export default function SellersPage() {
             </h2>
           </div>
 
-          <div
-            itemScope
-            itemType="https://schema.org/FAQPage"
-            className="space-y-6"
-          >
+          <div className="space-y-6">
             {faqs.map((faq, i) => (
               <div
                 key={i}
-                itemScope
-                itemProp="mainEntity"
-                itemType="https://schema.org/Question"
                 style={{
                   backgroundColor: '#FAFAF8',
                   border: '1px solid #E8DDD0',
@@ -248,7 +241,6 @@ export default function SellersPage() {
                 }}
               >
                 <h3
-                  itemProp="name"
                   style={{
                     fontFamily: "'Cormorant Garamond', Georgia, serif",
                     fontWeight: 600,
@@ -259,12 +251,8 @@ export default function SellersPage() {
                 >
                   {faq.q}
                 </h3>
-                <div
-                  itemScope
-                  itemProp="acceptedAnswer"
-                  itemType="https://schema.org/Answer"
-                >
-                  <p itemProp="text" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}>
+                <div>
+                  <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}>
                     {faq.a}
                   </p>
                 </div>
