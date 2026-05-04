@@ -472,7 +472,7 @@ export default function SpokaneVsCdaPage() {
                   </ul>
                 </div>
                 <div className="bg-[#1C1A17] rounded-sm p-6">
-                  <h3 className="font-cormorant text-xl text-[#FAFAF8] font-semibold mb-4">Who Should Buy in CDA / Post Falls</h3>
+                  <h3 className="font-cormorant text-xl !text-[#FAFAF8] font-semibold mb-4">Who Should Buy in CDA / Post Falls</h3>
                   <ul className="space-y-2">
                     {[
                       'Lifestyle and environment matter as much as price',
@@ -629,7 +629,7 @@ export default function SpokaneVsCdaPage() {
       <section className="bg-[#1C1A17] py-20">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Inland Northwest Relocation</p>
-          <h2 className="font-cormorant text-4xl md:text-5xl text-[#FAFAF8] mb-6 leading-tight font-semibold">
+          <h2 className="font-cormorant text-4xl md:text-5xl !text-[#FAFAF8] mb-6 leading-tight font-semibold">
             Ready to See Both Sides?
           </h2>
           <p className="font-dm-sans text-[#C4BDB4] text-lg mb-10 leading-relaxed">
