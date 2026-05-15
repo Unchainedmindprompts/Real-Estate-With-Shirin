@@ -160,31 +160,12 @@ item: 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-ma
     },
   ],
 }
-const localBusinessSchema = {
-'@context': 'https://schema.org',
-'@type': ['RealEstateAgent', 'LocalBusiness'],
-'@id': 'https://www.realestatewithshirin.com/#business',
-name: 'Shirin Abplanalp — Real Estate With Shirin',
-url: 'https://www.realestatewithshirin.com',
-telephone: '(208) 660-7468',
-email: 'dreamlifeinidaho@gmail.com',
-founder: {
-'@id': 'https://www.realestatewithshirin.com/#agent',
-  },
-memberOf: {
-'@type': 'Organization',
-'@id': 'https://www.exprealty.com/#organization',
-name: 'eXp Realty',
-url: 'https://www.exprealty.com',
-  },
-}
 export default function PostFallsHousingMarket2026Page() {
 return (
 <>
 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 {/* Hero */}
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">

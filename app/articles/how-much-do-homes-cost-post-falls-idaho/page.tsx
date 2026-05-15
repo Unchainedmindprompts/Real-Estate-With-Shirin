@@ -158,22 +158,6 @@ item: 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post
     },
   ],
 }
-const localBusinessSchema = {
-'@context': 'https://schema.org',
-'@type': ['RealEstateAgent', 'LocalBusiness'],
-'@id': 'https://www.realestatewithshirin.com/#business',
-name: 'Shirin Abplanalp — Real Estate With Shirin',
-url: 'https://www.realestatewithshirin.com',
-telephone: '(208) 660-7468',
-email: 'dreamlifeinidaho@gmail.com',
-founder: { '@id': 'https://www.realestatewithshirin.com/#agent' },
-memberOf: {
-'@type': 'Organization',
-'@id': 'https://www.exprealty.com/#organization',
-name: 'eXp Realty',
-url: 'https://www.exprealty.com',
-  },
-}
 const priceTiers = [
   { range: '$300K–$350K', sqft: '1,100–1,400', beds: '3bd/2ba', color: '#9A9590', width: '44' },
   { range: '$350K–$450K', sqft: '1,200–1,700', beds: '3bd/2-3ba', color: '#C4842A', width: '58' },
@@ -198,7 +182,6 @@ return (
 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 {/* Hero */}
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
