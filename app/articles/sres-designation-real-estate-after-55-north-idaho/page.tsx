@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
+  '@id': 'https://www.realestatewithshirin.com/articles/sres-designation-real-estate-after-55-north-idaho#article',
   headline: "Why I Chose SRES®: A Specialist's Guide to Real Estate After 55 in North Idaho",
   description: "Shirin Abplanalp, SRES®, shares the personal story behind her Seniors Real Estate Specialist® designation and what it means for retirees relocating to North Idaho.",
   image: {
@@ -59,10 +60,16 @@ const articleSchema = {
     '@id': 'https://www.realestatewithshirin.com/#business',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://www.realestatewithshirin.com/images/shirin-headshot-professional.png',
-      width: 1122,
-      height: 1402,
+      url: 'https://www.realestatewithshirin.com/images/shirin-logo.png',
+      width: 1254,
+      height: 1254,
     },
+  },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.realestatewithshirin.com/articles',
+    name: 'Northern Idaho Real Estate Articles',
+    url: 'https://www.realestatewithshirin.com/articles',
   },
   datePublished: '2026-05-04',
   dateModified: '2026-05-04',
@@ -106,6 +113,7 @@ const articleSchema = {
     { '@type': 'Thing', name: 'Active Adult Communities' },
     { '@type': 'City', name: "Coeur d'Alene", containedInPlace: { '@type': 'State', name: 'Idaho' } },
     { '@type': 'City', name: 'Post Falls', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@id': 'https://www.realestatewithshirin.com/#agent' },
   ],
   mentions: [
     { '@type': 'City', name: "Coeur d'Alene", addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho' },
@@ -153,7 +161,7 @@ const articleSchema = {
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  '@id': 'https://www.realestatewithshirin.com/articles/sres-designation-real-estate-after-55-north-idaho/#faq',
+  '@id': 'https://www.realestatewithshirin.com/articles/sres-designation-real-estate-after-55-north-idaho#faq',
   mainEntity: [
     {
       '@type': 'Question',
