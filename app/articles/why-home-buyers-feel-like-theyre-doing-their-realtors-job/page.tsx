@@ -101,8 +101,15 @@ const articleSchema = {
   citation: [
     {
       '@type': 'DiscussionForumPosting',
+      headline: "Why do I feel like I'm doing my realtor's job?",
       name: "Why do I feel like I'm doing my realtor's job?",
       url: 'https://www.reddit.com/r/RealEstateAdvice/comments/1rceb04/why_do_i_feel_like_im_doing_my_realtors_job/',
+      datePublished: '2026',
+      author: {
+        '@type': 'Organization',
+        name: 'r/RealEstateAdvice',
+        url: 'https://www.reddit.com/r/RealEstateAdvice/',
+      },
       isPartOf: {
         '@type': 'WebSite',
         name: 'r/RealEstateAdvice — Reddit',
