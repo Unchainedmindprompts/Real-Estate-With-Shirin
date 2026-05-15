@@ -384,7 +384,7 @@ export default function BuyerAgentArticlePage() {
                 </div>
                 <div className="border-l-2 border-[#C4842A] pl-5">
                   <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-2">While You Are Searching</p>
-                  <p>Your agent should be doing things Zillow cannot. They should be alerting you to coming-soon listings and off-market opportunities before they hit public search. They should be filtering properties based on what actually matters to you, not just price and square footage. They should be flagging concerns about specific neighborhoods, HOA situations, flood zones, and school districts before you fall in love with a house that has a problem you did not know to look for. They should also be responding to you — quickly, without you having to chase them.</p>
+                  <p>Your agent should be doing things Zillow cannot. They should be alerting you to coming-soon listings and off-market opportunities before they hit public search. They should be filtering properties based on what actually matters to you, not just price and square footage. They should be flagging concerns about specific neighborhoods, flood zones, and school districts before you fall in love with a house that has a problem you did not know to look for. They should also be responding to you — quickly, without you having to chase them.</p>
                 </div>
                 <div className="border-l-2 border-[#C4842A] pl-5">
                   <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-2">When You Find the Right Home</p>
