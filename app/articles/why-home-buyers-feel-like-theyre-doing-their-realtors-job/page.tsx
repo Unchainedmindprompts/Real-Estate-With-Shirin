@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2026-05-15',
     authors: ['Shirin Abplanalp'],
-    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
+    images: ['https://www.realestatewithshirin.com/images/buyer-agent-article-hero.png'],
   },
 }
 
@@ -27,9 +27,9 @@ const articleSchema = {
     "Buyers are finding their own listings, sending their own follow-ups, and wondering why they hired a professional. Here is what a great buyer's agent actually does — and how to know if you have the wrong one.",
   image: {
     '@type': 'ImageObject',
-    url: 'https://www.realestatewithshirin.com/images/shirin-headshot-professional.png',
-    width: 1122,
-    height: 1402,
+    url: 'https://www.realestatewithshirin.com/images/buyer-agent-article-hero.png',
+    width: 1672,
+    height: 941,
   },
   author: {
     '@type': 'Person',
@@ -314,6 +314,16 @@ export default function BuyerAgentArticlePage() {
           </div>
         </div>
       </section>
+
+      {/* Hero Image */}
+      <div className="w-full overflow-hidden" style={{ maxHeight: '520px' }}>
+        <img
+          src="/images/buyer-agent-article-hero.png"
+          alt="Couple reviewing a home purchase with their buyer's agent at a table overlooking a North Idaho lake"
+          className="w-full object-cover object-center"
+          style={{ maxHeight: '520px' }}
+        />
+      </div>
 
       {/* Stats Bar */}
       <section className="bg-[#1C1A17] py-8">
