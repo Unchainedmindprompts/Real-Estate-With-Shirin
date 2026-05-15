@@ -167,22 +167,6 @@ item: 'https://www.realestatewithshirin.com/articles/how-to-find-realtor-post-fa
     },
   ],
 }
-const localBusinessSchema = {
-'@context': 'https://schema.org',
-'@type': ['RealEstateAgent', 'LocalBusiness'],
-'@id': 'https://www.realestatewithshirin.com/#business',
-name: 'Shirin Abplanalp — Real Estate With Shirin',
-url: 'https://www.realestatewithshirin.com',
-telephone: '(208) 660-7468',
-email: 'dreamlifeinidaho@gmail.com',
-founder: { '@id': 'https://www.realestatewithshirin.com/#agent' },
-memberOf: {
-'@type': 'Organization',
-'@id': 'https://www.exprealty.com/#organization',
-name: 'eXp Realty',
-url: 'https://www.exprealty.com',
-  },
-}
 export default function HowToFindRealtorPostFallsPage() {
 return (
 <>
@@ -197,10 +181,6 @@ dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
 <script
 type="application/ld+json"
 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-/>
-<script
-type="application/ld+json"
-dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
 />
 {/* Hero */}
 <section className="bg-[#F5EFE6] pt-36 pb-16">
