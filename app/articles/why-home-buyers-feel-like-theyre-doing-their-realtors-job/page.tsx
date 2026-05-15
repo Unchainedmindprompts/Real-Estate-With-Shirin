@@ -22,6 +22,7 @@ export const metadata: Metadata = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
+  '@id': 'https://www.realestatewithshirin.com/articles/why-home-buyers-feel-like-theyre-doing-their-realtors-job#article',
   headline: "Why Do Home Buyers Feel Like They're Doing Their Realtor's Job — And What a Great Agent Actually Does",
   description:
     "Buyers are finding their own listings, sending their own follow-ups, and wondering why they hired a professional. Here is what a great buyer's agent actually does — and how to know if you have the wrong one.",
@@ -43,10 +44,16 @@ const articleSchema = {
     '@id': 'https://www.realestatewithshirin.com/#business',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://www.realestatewithshirin.com/images/shirin-headshot-professional.png',
-      width: 1122,
-      height: 1402,
+      url: 'https://www.realestatewithshirin.com/images/shirin-logo.png',
+      width: 1254,
+      height: 1254,
     },
+  },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.realestatewithshirin.com/articles',
+    name: 'Northern Idaho Real Estate Articles',
+    url: 'https://www.realestatewithshirin.com/articles',
   },
   datePublished: '2026-05-15',
   dateModified: '2026-05-15',
@@ -88,6 +95,7 @@ const articleSchema = {
     { '@type': 'Thing', name: 'Real Estate Agent Accountability' },
     { '@type': 'Thing', name: 'Home Buyer Consultation' },
     { '@type': 'Thing', name: 'Relocation Buyer Services' },
+    { '@id': 'https://www.realestatewithshirin.com/#agent' },
   ],
   mentions: [
     { '@type': 'City', name: "Coeur d'Alene", addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho' },
@@ -122,7 +130,7 @@ const articleSchema = {
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  '@id': 'https://www.realestatewithshirin.com/articles/why-home-buyers-feel-like-theyre-doing-their-realtors-job/#faq',
+  '@id': 'https://www.realestatewithshirin.com/articles/why-home-buyers-feel-like-theyre-doing-their-realtors-job#faq',
   mainEntity: [
     {
       '@type': 'Question',
