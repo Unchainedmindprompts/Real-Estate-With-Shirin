@@ -130,6 +130,23 @@ const articleSchema = {
     { '@type': 'Organization', name: 'National Association of REALTORS®', url: 'https://www.nar.realtor' },
     { '@type': 'Organization', name: 'Center for REALTOR® Development', url: 'https://crd.realtor' },
     { '@type': 'Organization', name: 'Seniors Real Estate Specialist Council', alternateName: 'SRES Council', url: 'https://sres.realtor' },
+    {
+      '@type': 'DiscussionForumPosting',
+      headline: "A 71-year-old Californian explains why she's one of many boomers reluctant to sell their large homes and downsize — and it has nothing to do with money",
+      name: "A 71-year-old Californian explains why she's one of many boomers reluctant to sell their large homes and downsize — and it has nothing to do with money",
+      url: 'https://www.reddit.com/r/bayarea/comments/1bnhx7t/a_71yearold_californian_explains_why_shes_one_of/',
+      datePublished: '2024-03',
+      author: {
+        '@type': 'Person',
+        name: 'digital-didgeridoo',
+        url: 'https://www.reddit.com/user/digital-didgeridoo/',
+      },
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'r/bayarea — Reddit',
+        url: 'https://www.reddit.com/r/bayarea/',
+      },
+    },
   ],
   citation: [
     {
@@ -508,6 +525,18 @@ export default function SresArticlePage() {
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 When the Family Initiates the Conversation
               </h2>
+              <p className="mb-6">
+                There is a window. A{' '}
+                <a
+                  href="https://www.reddit.com/r/bayarea/comments/1bnhx7t/a_71yearold_californian_explains_why_shes_one_of/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#C4842A] hover:underline"
+                >
+                  Bay Area community discussion about why California boomers resist downsizing
+                </a>{' '}
+                surfaced a pattern that matches what I see in North Idaho every day. One commenter described it precisely: in early retirement there is a short period — maybe ten to fifteen years — where people still have the energy and mental flexibility to make a major move. They sell the suburban house, relocate closer to family, try something new. But for many who stay put, somewhere around 75 to 80, change itself becomes overwhelming. It is no longer a cost-benefit decision. The brain resists newness in a way it did not before. Miss that window and the next decision point is often not a choice at all — it is a crisis forcing the move instead of a considered transition making it. This is why the timing conversation matters as much as the transaction itself.
+              </p>
               <p className="mb-6">
                 Sometimes adult children call me about their parents. This is delicate work. The parent may not have asked for help. They may be resistant to changes the children see as obvious. They may be navigating early cognitive changes that complicate the conversation. They may be perfectly capable but living in a home that&apos;s no longer right for them, without recognizing that themselves.
               </p>
