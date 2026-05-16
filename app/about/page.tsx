@@ -137,7 +137,7 @@ export default function AboutPage() {
                 textAlign: 'center',
               }}
             >
-              Before Shirin ever set foot in Northern Idaho, she had already built one of the strongest track records in Bend, Oregon real estate. Licensed since 2015, she closed over 100 personal transactions and earned Top Producer recognition at Bend Premier Real Estate for five consecutive years. That production history isn&apos;t a footnote — it&apos;s the foundation every client benefits from.
+              Before Shirin ever set foot in North Idaho, she had already built one of the strongest track records in Bend, Oregon real estate. Licensed since 2015, she closed over 100 personal transactions and earned Top Producer recognition at Bend Premier Real Estate for five consecutive years. That production history isn&apos;t a footnote — it&apos;s the foundation every client benefits from.
             </p>
           </div>
         </div>
@@ -161,7 +161,7 @@ export default function AboutPage() {
                   color: '#1C1208',
                 }}
               >
-                From Bend to Northern Idaho — On Purpose
+                From Bend to North Idaho — On Purpose
               </h2>
 
               <div
@@ -183,7 +183,7 @@ export default function AboutPage() {
                   She wasn&apos;t looking for somewhere cheaper. She was looking for somewhere that still had what Bend used to have — actual lake access, real mountains, a community that hadn&apos;t been discovered yet by everyone trying to escape the last place that got discovered.
                 </p>
                 <p>
-                  Northern Idaho was that place. She made the move, put down roots, and hasn&apos;t looked back.
+                  North Idaho was that place. She made the move, put down roots, and hasn&apos;t looked back.
                 </p>
                 <p>
                   Now she helps families do the same thing — not just find a house, but find the place. The one that fits how they actually want to live, not just what they can afford.
@@ -251,7 +251,7 @@ export default function AboutPage() {
               {
                 num: '02',
                 title: 'Local Knowledge',
-                body: "She didn't study Northern Idaho from a data sheet — she chose it. Every recommendation comes from lived experience, not a market report.",
+                body: "She didn't study North Idaho from a data sheet — she chose it. Every recommendation comes from lived experience, not a market report.",
               },
               {
                 num: '03',
@@ -327,7 +327,7 @@ export default function AboutPage() {
               letterSpacing: '0.03em',
             }}
           >
-            Licensed to serve all of Northern Idaho — Kootenai, Bonner, and Shoshone Counties.
+            Licensed to serve all of North Idaho — Kootenai, Bonner, and Shoshone Counties.
           </p>
         </div>
       </section>
@@ -343,7 +343,7 @@ export default function AboutPage() {
               { label: 'Licensed Since', value: '2015' },
               { label: 'Recognition', value: '5× Top Producer\nBend Premier Real Estate' },
               { label: 'Experience', value: '100+ Personal\nTransactions Closed' },
-              { label: 'Serving', value: 'Northern Idaho Buyers,\nSellers & Relocating Families' },
+              { label: 'Serving', value: 'North Idaho Buyers,\nSellers & Relocating Families' },
             ].map((item) => (
               <div
                 key={item.label}
@@ -404,7 +404,7 @@ export default function AboutPage() {
               color: '#5C5650',
             }}
           >
-            No pressure, no pitch. Whether you&apos;re buying, selling, or figuring out if Northern Idaho is the right move — reach out.
+            No pressure, no pitch. Whether you&apos;re buying, selling, or figuring out if North Idaho is the right move — reach out.
           </p>
           <Link
             href="/contact"

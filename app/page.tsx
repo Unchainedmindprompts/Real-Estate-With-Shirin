@@ -74,7 +74,7 @@ export default function HomePage() {
           { '@type': 'AdministrativeArea', 'name': 'Kootenai County' },
           { '@type': 'AdministrativeArea', 'name': 'Bonner County' },
           { '@type': 'AdministrativeArea', 'name': 'Shoshone County' },
-          { '@type': 'AdministrativeArea', 'name': 'Northern Idaho' },
+          { '@type': 'AdministrativeArea', 'name': 'North Idaho', 'alternateName': 'Northern Idaho', 'sameAs': 'https://en.wikipedia.org/wiki/Idaho_Panhandle' },
           { '@type': 'AdministrativeArea', 'name': 'Inland Northwest' },
         ],
         'knowsAbout': ['Post Falls real estate', "Coeur d'Alene real estate", 'Northern Idaho relocation', 'Kootenai County homes', 'Buyer representation', 'Seller representation', 'Relocation', 'Idaho real estate market', 'Active family relocation to Northern Idaho'],
@@ -166,7 +166,7 @@ export default function HomePage() {
                 color: '#5C5650',
               }}
             >
-              Licensed REALTOR® · eXp Realty · Northern Idaho
+              Licensed REALTOR® · eXp Realty · North Idaho
             </p>
             <p
               className="mb-10"

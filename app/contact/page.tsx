@@ -66,7 +66,7 @@ export default function ContactPage() {
             Let&apos;s Start the Conversation
           </h1>
           <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '18px', lineHeight: 1.7, color: '#E8DDD0' }}>
-            Whether you&apos;re buying, selling, or just starting to explore Northern Idaho — reach out. No pressure, no pitch. Just an honest conversation.
+            Whether you&apos;re buying, selling, or just starting to explore North Idaho — reach out. No pressure, no pitch. Just an honest conversation.
           </p>
         </div>
       </section>
