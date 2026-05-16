@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const areas = [
   {
     name: 'Post Falls',
-    desc: "Northern Idaho's fastest-growing community, with outstanding outdoor access and great value.",
+    desc: "North Idaho's fastest-growing community, with outstanding outdoor access and great value.",
     href: '/areas/post-falls-idaho',
     image: '/images/mountain-biking.jpg',
   },
@@ -131,7 +131,7 @@ export default function AreasPage() {
             Not Sure Which Area Is Right for You?
           </h2>
           <p className="mb-10" style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-            Let&apos;s talk about how you want to live — I&apos;ll help you figure out where that fits best in Northern Idaho.
+            Let&apos;s talk about how you want to live — I&apos;ll help you figure out where that fits best in North Idaho.
           </p>
           <Link
             href="/contact"
