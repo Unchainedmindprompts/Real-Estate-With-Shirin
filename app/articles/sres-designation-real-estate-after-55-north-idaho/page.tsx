@@ -132,13 +132,18 @@ const articleSchema = {
     { '@type': 'Organization', name: 'Seniors Real Estate Specialist Council', alternateName: 'SRES Council', url: 'https://sres.realtor' },
     {
       '@type': 'DiscussionForumPosting',
-      headline: "A 71-Year-Old Californian Explains Why She's One of the Last to Leave",
-      name: "A 71-Year-Old Californian Explains Why She's One of the Last to Leave",
+      headline: "A 71-year-old Californian explains why she's one of many boomers reluctant to sell their large homes and downsize — and it has nothing to do with money",
+      name: "A 71-year-old Californian explains why she's one of many boomers reluctant to sell their large homes and downsize — and it has nothing to do with money",
       url: 'https://www.reddit.com/r/bayarea/comments/1bnhx7t/a_71yearold_californian_explains_why_shes_one_of/',
-      datePublished: '2024',
+      datePublished: '2024-03',
       author: {
-        '@type': 'Organization',
-        name: 'r/bayarea',
+        '@type': 'Person',
+        name: 'digital-didgeridoo',
+        url: 'https://www.reddit.com/user/digital-didgeridoo/',
+      },
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'r/bayarea — Reddit',
         url: 'https://www.reddit.com/r/bayarea/',
       },
     },
