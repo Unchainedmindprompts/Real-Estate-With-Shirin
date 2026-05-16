@@ -39,10 +39,10 @@ export default function ArticlesPage() {
               color: '#FAFAF8',
             }}
           >
-            Northern Idaho Real Estate Insights
+            North Idaho Real Estate Insights
           </h1>
           <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '18px', lineHeight: 1.7, color: '#E8DDD0' }}>
-            Market updates, neighborhood guides, and honest advice for buyers, sellers, and anyone considering a move to Northern Idaho.
+            Market updates, neighborhood guides, and honest advice for buyers, sellers, and anyone considering a move to North Idaho.
           </p>
         </div>
       </section>
