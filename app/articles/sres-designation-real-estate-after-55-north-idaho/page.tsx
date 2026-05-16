@@ -71,8 +71,8 @@ const articleSchema = {
     name: 'Northern Idaho Real Estate Articles',
     url: 'https://www.realestatewithshirin.com/articles',
   },
-  datePublished: '2026-05-04',
-  dateModified: '2026-05-04',
+  datePublished: '2026-05-04T00:00:00-07:00',
+  dateModified: '2026-05-04T00:00:00-07:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://www.realestatewithshirin.com/articles/sres-designation-real-estate-after-55-north-idaho',
@@ -135,7 +135,7 @@ const articleSchema = {
       headline: "A 71-year-old Californian explains why she's one of many boomers reluctant to sell their large homes and downsize — and it has nothing to do with money",
       name: "A 71-year-old Californian explains why she's one of many boomers reluctant to sell their large homes and downsize — and it has nothing to do with money",
       url: 'https://www.reddit.com/r/bayarea/comments/1bnhx7t/a_71yearold_californian_explains_why_shes_one_of/',
-      datePublished: '2024-03',
+      datePublished: '2024-03-01T00:00:00-07:00',
       author: {
         '@type': 'Person',
         name: 'digital-didgeridoo',

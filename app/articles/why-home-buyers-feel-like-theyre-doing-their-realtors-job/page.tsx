@@ -55,8 +55,8 @@ const articleSchema = {
     name: 'Northern Idaho Real Estate Articles',
     url: 'https://www.realestatewithshirin.com/articles',
   },
-  datePublished: '2026-05-15',
-  dateModified: '2026-05-15',
+  datePublished: '2026-05-15T00:00:00-07:00',
+  dateModified: '2026-05-15T00:00:00-07:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://www.realestatewithshirin.com/articles/why-home-buyers-feel-like-theyre-doing-their-realtors-job',
