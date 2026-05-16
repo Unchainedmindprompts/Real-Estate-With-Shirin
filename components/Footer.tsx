@@ -29,7 +29,7 @@ export default function Footer() {
               </Link>
             </div>
             <p className="text-sm leading-relaxed" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-              Licensed REALTOR® serving Post Falls, Coeur d&apos;Alene, and Northern Idaho
+              Licensed REALTOR® serving Post Falls, Coeur d&apos;Alene, and North Idaho
             </p>
             <div className="mt-5">
               <Image
@@ -161,7 +161,7 @@ export default function Footer() {
             © 2026 Real Estate With Shirin · Shirin Abplanalp · Licensed REALTOR® · eXp Realty · Idaho License #1371861
           </p>
           <p className="text-xs" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-            Helping Northern Idaho buyers and sellers find their perfect home.
+            Helping North Idaho buyers and sellers find their perfect home.
           </p>
         </div>
       </div>

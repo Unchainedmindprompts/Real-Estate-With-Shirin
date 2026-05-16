@@ -129,7 +129,7 @@ export default function BuyersPage() {
               color: '#FAFAF8',
             }}
           >
-            Expert Buyer Representation in Northern Idaho
+            Expert Buyer Representation in North Idaho
           </h1>
           <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '18px', lineHeight: 1.7, color: '#F5EFE6', maxWidth: '600px', margin: '0 auto' }}>
             From your first question to closing day — Shirin guides buyers through the Northern Idaho market with local expertise and honest advice.

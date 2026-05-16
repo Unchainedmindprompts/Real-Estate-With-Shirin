@@ -129,7 +129,7 @@ export default function SellersPage() {
               color: '#FAFAF8',
             }}
           >
-            Sell Your Northern Idaho Home With Confidence
+            Sell Your North Idaho Home With Confidence
           </h1>
           <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '18px', lineHeight: 1.7, color: '#F5EFE6', maxWidth: '600px', margin: '0 auto' }}>
             Strategic pricing, honest advice, and professional execution — from listing day to closing day.

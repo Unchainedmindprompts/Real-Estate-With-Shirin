@@ -60,10 +60,10 @@ export default function AreasPage() {
               color: '#FAFAF8',
             }}
           >
-            Northern Idaho Communities
+            North Idaho Communities
           </h1>
           <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '18px', lineHeight: 1.7, color: '#F5EFE6', maxWidth: '600px', margin: '0 auto' }}>
-            Deep local knowledge across Northern Idaho&apos;s most sought-after communities.
+            Deep local knowledge across North Idaho&apos;s most sought-after communities.
           </p>
         </div>
       </section>
