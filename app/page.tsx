@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import HeroSection from '@/components/HeroSection'
 
 export const metadata: Metadata = {
   title: 'Northern Idaho Real Estate Agent | Shirin Abplanalp · eXp Realty',
@@ -126,8 +125,17 @@ export default function HomePage() {
         ],
       })}} />
 
-      {/* ── Hero — carousel background with split content ── */}
-      <HeroSection />
+      {/* ── Hero — full-bleed image ── */}
+      <section className="relative" style={{ height: '100svh' }}>
+        <Image
+          src="/images/hero-slide-2.webp"
+          alt="Lakefront home at golden hour in North Idaho"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+      </section>
 
       {/* ── 1. How I Can Help ── */}
       <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
