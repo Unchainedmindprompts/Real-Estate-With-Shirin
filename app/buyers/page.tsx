@@ -195,9 +195,9 @@ export default function BuyersPage() {
                   className="mb-3"
                   style={{
                     fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontWeight: 600,
+                    fontWeight: 700,
                     fontSize: '22px',
-                    color: '#C4842A',
+                    color: '#FAFAF8',
                   }}
                 >
                   {step.title}

@@ -164,10 +164,10 @@ export default function AboutPage() {
                 className="mb-8"
                 style={{
                   fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontWeight: 300,
+                  fontWeight: 600,
                   fontSize: 'clamp(28px, 4vw, 44px)',
                   lineHeight: 1.2,
-                  color: '#C4842A',
+                  color: '#FAFAF8',
                 }}
               >
                 From Bend to North Idaho — On Purpose
