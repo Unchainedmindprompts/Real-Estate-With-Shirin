@@ -563,21 +563,6 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="text-center">
-            <Link
-              href="/areas"
-              className="inline-block text-xs uppercase font-semibold tracking-wider rounded-sm transition-all"
-              style={{
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-                color: '#C4842A',
-                border: '1.5px solid #C4842A',
-                padding: '14px 32px',
-                letterSpacing: '0.08em',
-              }}
-            >
-              Explore the Region →
-            </Link>
-          </div>
         </div>
       </section>
 
