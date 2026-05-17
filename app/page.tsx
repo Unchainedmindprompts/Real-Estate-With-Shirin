@@ -125,116 +125,133 @@ export default function HomePage() {
         ],
       })}} />
 
-      {/* ── Hero — split screen ── */}
-      {/*
-        Full cream background. Left: text content. Right: photo as a
-        contained rounded card with padding — matching the Chelsey reference.
-      */}
-      <section
-        className="flex flex-col lg:flex-row"
-        style={{ minHeight: '100svh', backgroundColor: '#F5F0E6' }}
-      >
+      {/* ── Hero — full-bleed image ── */}
+      <section className="relative" style={{ height: '100svh' }}>
+        <Image
+          src="/images/hero-consultation.webp"
+          alt="North Idaho real estate consultation"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
 
-        {/* Left: text, vertically centered */}
+        {/* Gradient — bottom-left quadrant only, diagonal fade to center */}
         <div
-          className="flex items-center w-full lg:w-[43%] px-8 sm:px-14 lg:px-16 xl:px-20"
-          style={{ paddingTop: '96px', paddingBottom: '64px' }}
-        >
-          <div className="w-full">
-            <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>
-              POST FALLS · COEUR D&apos;ALENE · NORTH IDAHO
-            </p>
-            <h1
-              className="mb-6"
-              style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 300,
-                fontSize: 'clamp(46px, 5.5vw, 74px)',
-                lineHeight: 1.1,
-                color: '#1C1A17',
-              }}
-            >
-              I Made This Move.<br />
-              <em style={{ fontStyle: 'italic', fontWeight: 300, color: '#C4842A' }}>Now I Help Others Make Theirs.</em>
-            </h1>
-            <p
-              className="mb-2"
-              style={{
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-                fontSize: '17px',
-                lineHeight: 1.7,
-                color: '#5C5650',
-              }}
-            >
-              Licensed REALTOR® · eXp Realty · North Idaho
-            </p>
-            <p
-              className="mb-10"
-              style={{
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-                fontSize: '13px',
-                letterSpacing: '0.06em',
-                color: '#C4852A',
-              }}
-            >
-              11 Years in Real Estate &nbsp;·&nbsp; 100+ Transactions &nbsp;·&nbsp; 5× Top Producer
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
-                className="inline-block text-center text-white text-xs uppercase font-semibold rounded-sm transition-colors"
-                style={{
-                  fontFamily: "'DM Sans', system-ui, sans-serif",
-                  backgroundColor: '#C4842A',
-                  padding: '15px 36px',
-                  letterSpacing: '0.1em',
-                }}
-              >
-                Let&apos;s Talk
-              </Link>
-              <Link
-                href="/about"
-                className="inline-block text-center text-xs uppercase font-semibold rounded-sm transition-colors"
-                style={{
-                  fontFamily: "'DM Sans', system-ui, sans-serif",
-                  color: '#1C1A17',
-                  border: '1.5px solid #1C1A17',
-                  padding: '15px 36px',
-                  letterSpacing: '0.1em',
-                }}
-              >
-                My Story
-              </Link>
-            </div>
-          </div>
-        </div>
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: 'linear-gradient(to top right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 30%, transparent 55%)',
+          }}
+        />
 
-        {/* Right: photo card — inset with padding, rounded corners, full image */}
+        {/* Text content — bottom left */}
         <div
-          className="w-full lg:w-[57%] flex items-center justify-center lg:justify-end"
-          style={{ padding: '100px 40px 40px 16px' }}
+          className="absolute"
+          style={{
+            bottom: 'clamp(32px, 5vh, 64px)',
+            left: 'clamp(24px, 4vw, 64px)',
+            maxWidth: 'min(560px, 50vw)',
+            zIndex: 10,
+          }}
         >
-          <div
+          {/* Line 1 — eyebrow */}
+          <p
+            className="mb-4"
             style={{
-              maxWidth: '480px',
-              width: '100%',
-              borderRadius: '12px',
-              overflow: 'hidden',
+              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontSize: '11px',
+              fontWeight: 600,
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: '#C4842A',
             }}
           >
-            {/* width/height 0 + sizes + w-full h-auto = natural proportions, no crop */}
-            <Image
-              src="/images/shirin-abplanalp.jpg"
-              alt="Shirin Abplanalp, licensed Northern Idaho REALTOR®"
-              width={0}
-              height={0}
-              sizes="(max-width: 1024px) 100vw, 57vw"
-              priority
-              className="w-full h-auto block"
-            />
+            POST FALLS · COEUR D&apos;ALENE · NORTH IDAHO
+          </p>
+
+          {/* Lines 2 + 3 — headline */}
+          <h1
+            className="mb-4"
+            style={{
+              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontWeight: 400,
+              fontSize: 'clamp(36px, 4.5vw, 66px)',
+              lineHeight: 1.1,
+              margin: 0,
+            }}
+          >
+            <span style={{ color: '#FFFFFF', display: 'block' }}>I Made This Move.</span>
+            <em style={{ color: '#C4842A', fontStyle: 'italic', display: 'block' }}>Now I Help Others Make Theirs.</em>
+          </h1>
+
+          {/* Line 4 — credential line */}
+          <p
+            className="mb-1"
+            style={{
+              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontSize: '14px',
+              fontWeight: 400,
+              color: '#FFFFFF',
+              marginTop: '16px',
+            }}
+          >
+            Licensed REALTOR® · eXp Realty · North Idaho
+          </p>
+
+          {/* Line 5 — trust signals */}
+          <p
+            style={{
+              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontSize: '13px',
+              fontWeight: 400,
+              color: '#C4842A',
+              letterSpacing: '0.04em',
+            }}
+          >
+            11 Years · 100+ Transactions · 5× Top Producer
+          </p>
+
+          {/* Buttons */}
+          <div className="flex flex-row gap-3 mt-6">
+            <Link
+              href="/contact"
+              style={{
+                fontFamily: "'DM Sans', system-ui, sans-serif",
+                fontSize: '11px',
+                fontWeight: 600,
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+                backgroundColor: '#C4842A',
+                color: '#FFFFFF',
+                padding: '12px 28px',
+                borderRadius: '4px',
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              Let&apos;s Talk
+            </Link>
+            <Link
+              href="/about"
+              style={{
+                fontFamily: "'DM Sans', system-ui, sans-serif",
+                fontSize: '11px',
+                fontWeight: 600,
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+                backgroundColor: 'transparent',
+                color: '#FFFFFF',
+                padding: '12px 28px',
+                borderRadius: '4px',
+                border: '1.5px solid rgba(255,255,255,0.75)',
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              My Story
+            </Link>
           </div>
         </div>
-
       </section>
 
       {/* ── 1. How I Can Help ── */}
@@ -337,7 +354,7 @@ export default function HomePage() {
               style={{ height: '600px', minHeight: '400px' }}
             >
               <Image
-                src="/images/realtor-headshot-outdoor.jpeg"
+                src="/images/shirin-headshot-studio.webp"
                 alt="Shirin Abplanalp, Licensed REALTOR® in Northern Idaho"
                 fill
                 className="object-cover object-top"
