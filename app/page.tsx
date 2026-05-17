@@ -504,10 +504,10 @@ export default function HomePage() {
       </section>
 
       {/* ── 3. The 60-Minute Rule ── */}
-      <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
+      <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-4">
-            <p className="eyebrow mb-4">THE REGION</p>
+            <p className="eyebrow mb-4" style={{ color: '#C4842A' }}>THE REGION</p>
             <h2
               className="mb-6"
               style={{
@@ -515,12 +515,12 @@ export default function HomePage() {
                 fontWeight: 500,
                 fontSize: 'clamp(32px, 5vw, 48px)',
                 lineHeight: 1.2,
-                color: '#1C1A17',
+                color: '#FAFAF8',
               }}
             >
               60 Minutes to Everything
             </h2>
-            <p className="max-w-2xl mx-auto mb-12" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+            <p className="max-w-2xl mx-auto mb-12" style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
               We call it the 60-Minute Rule. From Post Falls or Coeur d&apos;Alene, you are sixty minutes from world-class skiing, pristine alpine lakes, championship mountain biking, and a genuine community that still remembers your name. The Inland Northwest packs more into an hour than most regions deliver in a day.
             </p>
           </div>
