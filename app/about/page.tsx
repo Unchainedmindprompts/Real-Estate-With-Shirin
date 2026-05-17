@@ -100,7 +100,16 @@ export default function AboutPage() {
               { stat: '100+', label: 'Personal Transactions Closed' },
               { stat: '5×', label: 'Top Producer, Bend Premier Real Estate' },
             ].map((item) => (
-              <div key={item.label} className="text-center">
+              <div
+                key={item.label}
+                className="text-center"
+                style={{
+                  backgroundColor: '#2A2722',
+                  border: '1px solid #3A3530',
+                  borderRadius: '4px',
+                  padding: '40px 32px',
+                }}
+              >
                 <p
                   style={{
                     fontFamily: "'Cormorant Garamond', Georgia, serif",
@@ -116,8 +125,8 @@ export default function AboutPage() {
                   style={{
                     fontFamily: "'DM Sans', system-ui, sans-serif",
                     fontSize: '14px',
-                    color: '#5C5650',
-                    marginTop: '8px',
+                    color: '#9A9590',
+                    marginTop: '12px',
                     letterSpacing: '0.03em',
                   }}
                 >
