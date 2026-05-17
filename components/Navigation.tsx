@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const areas = [
@@ -36,17 +35,19 @@ export default function Navigation() {
       }}
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 lg:h-20">
-        {/* Logo */}
+        {/* Wordmark */}
         <Link href="/" className="leading-none flex items-center" aria-label="Real Estate With Shirin — Home">
-          <Image
-            src="/images/shirin-logo.png"
-            alt="Real Estate With Shirin"
-            width={52}
-            height={52}
-            priority
-            className="object-contain"
-            style={{ width: 'auto', height: '52px' }}
-          />
+          <span
+            style={{
+              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontWeight: 500,
+              fontSize: '22px',
+              color: '#1C1A17',
+              letterSpacing: '0.01em',
+            }}
+          >
+            Real Estate With Shirin
+          </span>
         </Link>
 
         {/* Desktop nav */}
