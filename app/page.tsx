@@ -135,6 +135,123 @@ export default function HomePage() {
           priority
           sizes="100vw"
         />
+
+        {/* Gradient — bottom-left quadrant only, diagonal fade to center */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: 'linear-gradient(to top right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 30%, transparent 55%)',
+          }}
+        />
+
+        {/* Text content — bottom left */}
+        <div
+          className="absolute"
+          style={{
+            bottom: 'clamp(32px, 5vh, 64px)',
+            left: 'clamp(24px, 4vw, 64px)',
+            maxWidth: 'min(560px, 50vw)',
+            zIndex: 10,
+          }}
+        >
+          {/* Line 1 — eyebrow */}
+          <p
+            className="mb-4"
+            style={{
+              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontSize: '11px',
+              fontWeight: 600,
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: '#C4842A',
+            }}
+          >
+            POST FALLS · COEUR D&apos;ALENE · NORTH IDAHO
+          </p>
+
+          {/* Lines 2 + 3 — headline */}
+          <h1
+            className="mb-4"
+            style={{
+              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontWeight: 400,
+              fontSize: 'clamp(36px, 4.5vw, 66px)',
+              lineHeight: 1.1,
+              margin: 0,
+            }}
+          >
+            <span style={{ color: '#FFFFFF', display: 'block' }}>I Made This Move.</span>
+            <em style={{ color: '#C4842A', fontStyle: 'italic', display: 'block' }}>Now I Help Others Make Theirs.</em>
+          </h1>
+
+          {/* Line 4 — credential line */}
+          <p
+            className="mb-1"
+            style={{
+              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontSize: '14px',
+              fontWeight: 400,
+              color: '#FFFFFF',
+              marginTop: '16px',
+            }}
+          >
+            Licensed REALTOR® · eXp Realty · North Idaho
+          </p>
+
+          {/* Line 5 — trust signals */}
+          <p
+            style={{
+              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontSize: '13px',
+              fontWeight: 400,
+              color: '#C4842A',
+              letterSpacing: '0.04em',
+            }}
+          >
+            11 Years · 100+ Transactions · 5× Top Producer
+          </p>
+
+          {/* Buttons */}
+          <div className="flex flex-row gap-3 mt-6">
+            <Link
+              href="/contact"
+              style={{
+                fontFamily: "'DM Sans', system-ui, sans-serif",
+                fontSize: '11px',
+                fontWeight: 600,
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+                backgroundColor: '#C4842A',
+                color: '#FFFFFF',
+                padding: '12px 28px',
+                borderRadius: '4px',
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              Let&apos;s Talk
+            </Link>
+            <Link
+              href="/about"
+              style={{
+                fontFamily: "'DM Sans', system-ui, sans-serif",
+                fontSize: '11px',
+                fontWeight: 600,
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+                backgroundColor: 'transparent',
+                color: '#FFFFFF',
+                padding: '12px 28px',
+                borderRadius: '4px',
+                border: '1.5px solid rgba(255,255,255,0.75)',
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              My Story
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* ── 1. How I Can Help ── */}
