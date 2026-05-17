@@ -144,7 +144,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── 3. The Story ── */}
-      <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
+      <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
@@ -170,7 +170,7 @@ export default function AboutPage() {
                   fontFamily: "'DM Sans', system-ui, sans-serif",
                   fontSize: '16px',
                   lineHeight: 1.8,
-                  color: '#5C5650',
+                  color: '#E8DDD0',
                 }}
               >
                 <p>
@@ -211,7 +211,7 @@ export default function AboutPage() {
             {/* Photo */}
             <div className="relative" style={{ height: '600px', minHeight: '400px' }}>
               <Image
-                src="/images/shirin-abplanalp.jpg"
+                src="/images/shirin-headshot-studio.webp"
                 alt="Shirin Abplanalp, Licensed REALTOR® at eXp Realty"
                 fill
                 className="object-cover object-top"
