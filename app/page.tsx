@@ -341,7 +341,7 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 title: 'Buyers',
@@ -360,6 +360,12 @@ export default function HomePage() {
                 body: 'I made this move myself. I know what it takes to get here and love it from day one.',
                 href: '/about',
                 linkText: 'My Story',
+              },
+              {
+                title: 'Seniors & 55+',
+                body: 'As an SRES® specialist, Shirin understands the unique financial and lifestyle decisions that come with buying or selling later in life.',
+                href: '/articles/sres-designation-real-estate-after-55-north-idaho',
+                linkText: 'Learn About SRES®',
               },
             ].map((card) => (
               <div
@@ -409,8 +415,7 @@ export default function HomePage() {
 
             {/* Photo */}
             <div
-              className="order-2 lg:order-1 relative"
-              style={{ height: '600px', minHeight: '400px' }}
+              className="order-2 lg:order-1 relative h-72 sm:h-96 lg:h-[600px]"
             >
               <Image
                 src="/images/shirin-headshot-studio.webp"
@@ -499,10 +504,10 @@ export default function HomePage() {
       </section>
 
       {/* ── 3. The 60-Minute Rule ── */}
-      <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
+      <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-4">
-            <p className="eyebrow mb-4">THE REGION</p>
+            <p className="eyebrow mb-4" style={{ color: '#C4842A' }}>THE REGION</p>
             <h2
               className="mb-6"
               style={{
@@ -510,12 +515,12 @@ export default function HomePage() {
                 fontWeight: 500,
                 fontSize: 'clamp(32px, 5vw, 48px)',
                 lineHeight: 1.2,
-                color: '#1C1A17',
+                color: '#FAFAF8',
               }}
             >
               60 Minutes to Everything
             </h2>
-            <p className="max-w-2xl mx-auto mb-12" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+            <p className="max-w-2xl mx-auto mb-12" style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
               We call it the 60-Minute Rule. From Post Falls or Coeur d&apos;Alene, you are sixty minutes from world-class skiing, pristine alpine lakes, championship mountain biking, and a genuine community that still remembers your name. The Inland Northwest packs more into an hour than most regions deliver in a day.
             </p>
           </div>
