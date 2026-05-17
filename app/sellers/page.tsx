@@ -178,7 +178,7 @@ export default function SellersPage() {
                 body: 'Advocating for your interests from the first offer to the moment keys change hands.',
               },
             ].map((step) => (
-              <div key={step.num}>
+              <div key={step.num} style={{ backgroundColor: '#2A2722', border: '1px solid #3A3530', borderRadius: '4px', padding: '32px' }}>
                 <p
                   style={{
                     fontFamily: "'Cormorant Garamond', Georgia, serif",
@@ -197,7 +197,7 @@ export default function SellersPage() {
                     fontFamily: "'Cormorant Garamond', Georgia, serif",
                     fontWeight: 600,
                     fontSize: '22px',
-                    color: '#1C1A17',
+                    color: '#C4842A',
                   }}
                 >
                   {step.title}
@@ -245,7 +245,7 @@ export default function SellersPage() {
                     fontFamily: "'Cormorant Garamond', Georgia, serif",
                     fontWeight: 600,
                     fontSize: '20px',
-                    color: '#1C1A17',
+                    color: '#C4842A',
                     marginBottom: '12px',
                   }}
                 >

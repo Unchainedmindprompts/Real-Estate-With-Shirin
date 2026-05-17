@@ -189,7 +189,7 @@ export default function CdaPage() {
                   padding: '32px',
                 }}
               >
-                <h3 className="mb-4" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: '22px', color: '#FAFAF8' }}>
+                <h3 className="mb-4" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: '22px', color: '#C4842A' }}>
                   {card.title}
                 </h3>
                 <p style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px' }}>
@@ -217,7 +217,7 @@ export default function CdaPage() {
                 key={i}
                 style={{ backgroundColor: '#2A2722', border: '1px solid #3A3530', borderRadius: '4px', padding: '28px 32px' }}
               >
-                <h3 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: '20px', color: '#FAFAF8', marginBottom: '12px' }}>
+                <h3 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: '20px', color: '#C4842A', marginBottom: '12px' }}>
                   {faq.q}
                 </h3>
                 <div>

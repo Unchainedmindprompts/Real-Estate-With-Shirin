@@ -158,7 +158,7 @@ export default function AboutPage() {
                   fontWeight: 300,
                   fontSize: 'clamp(28px, 4vw, 44px)',
                   lineHeight: 1.2,
-                  color: '#1C1208',
+                  color: '#C4842A',
                 }}
               >
                 From Bend to North Idaho — On Purpose
@@ -200,7 +200,7 @@ export default function AboutPage() {
                     <p style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 600 }}>
                       {item.label}
                     </p>
-                    <p style={{ fontSize: '14px', color: '#1C1208', fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 500 }}>
+                    <p style={{ fontSize: '14px', color: '#C4842A', fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 500 }}>
                       {item.value}
                     </p>
                   </div>
@@ -234,7 +234,7 @@ export default function AboutPage() {
                 fontWeight: 300,
                 fontSize: 'clamp(32px, 5vw, 48px)',
                 lineHeight: 1.2,
-                color: '#1C1208',
+                color: '#C4842A',
               }}
             >
               What Sets Her Apart
@@ -287,7 +287,7 @@ export default function AboutPage() {
                     fontWeight: 400,
                     fontSize: '24px',
                     lineHeight: 1.3,
-                    color: '#1C1208',
+                    color: '#C4842A',
                   }}
                 >
                   {card.title}
@@ -312,7 +312,7 @@ export default function AboutPage() {
               fontWeight: 300,
               fontSize: 'clamp(20px, 3vw, 28px)',
               lineHeight: 1.6,
-              color: '#1C1208',
+              color: '#C4842A',
               letterSpacing: '0.02em',
             }}
           >
@@ -389,7 +389,7 @@ export default function AboutPage() {
               fontWeight: 300,
               fontSize: 'clamp(32px, 5vw, 50px)',
               lineHeight: 1.2,
-              color: '#1C1208',
+              color: '#C4842A',
             }}
           >
             Let&apos;s Start the Conversation

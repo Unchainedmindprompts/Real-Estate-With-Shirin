@@ -195,7 +195,7 @@ export default function SandpointPage() {
                     fontFamily: "'Cormorant Garamond', Georgia, serif",
                     fontWeight: 600,
                     fontSize: '22px',
-                    color: '#1C1A17',
+                    color: '#C4842A',
                   }}
                 >
                   {card.title}
@@ -243,7 +243,7 @@ export default function SandpointPage() {
                     fontFamily: "'Cormorant Garamond', Georgia, serif",
                     fontWeight: 600,
                     fontSize: '20px',
-                    color: '#1C1A17',
+                    color: '#C4842A',
                     marginBottom: '12px',
                   }}
                 >

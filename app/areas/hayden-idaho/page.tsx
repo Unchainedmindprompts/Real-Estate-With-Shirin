@@ -136,7 +136,7 @@ export default function HaydenPage() {
               { title: 'Strategic Location', body: "Minutes from Coeur d'Alene Lake, downtown CdA, and major employment centers without the density." },
             ].map((card) => (
               <div key={card.title} style={{ backgroundColor: '#2A2722', border: '1px solid #3A3530', borderRadius: '4px', padding: '32px' }}>
-                <h3 className="mb-4" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: '22px', color: '#FAFAF8' }}>{card.title}</h3>
+                <h3 className="mb-4" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: '22px', color: '#C4842A' }}>{card.title}</h3>
                 <p style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px' }}>{card.body}</p>
               </div>
             ))}
@@ -156,7 +156,7 @@ export default function HaydenPage() {
           <div className="space-y-6">
             {faqs.map((faq, i) => (
               <div key={i} style={{ backgroundColor: '#2A2722', border: '1px solid #3A3530', borderRadius: '4px', padding: '28px 32px' }}>
-                <h3 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: '20px', color: '#FAFAF8', marginBottom: '12px' }}>{faq.q}</h3>
+                <h3 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: '20px', color: '#C4842A', marginBottom: '12px' }}>{faq.q}</h3>
                 <div>
                   <p style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}>{faq.a}</p>
                 </div>
