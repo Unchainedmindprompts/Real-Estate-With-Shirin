@@ -464,7 +464,7 @@ export default function HomePage() {
 
               {/* Credential pills */}
               <div className="flex flex-wrap gap-3 mb-8">
-                {['Licensed REALTOR®', 'eXp Realty', 'Idaho License #1371861'].map((cred) => (
+                {['Licensed REALTOR®', 'eXp Realty', 'Idaho License #1371861', 'SRES®'].map((cred) => (
                   <span
                     key={cred}
                     style={{
