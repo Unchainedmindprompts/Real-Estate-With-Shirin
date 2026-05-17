@@ -224,7 +224,7 @@ export default function AboutPage() {
                   fontWeight: 600,
                   letterSpacing: '0.12em',
                   textTransform: 'uppercase',
-                  color: '#C4842A',
+                  color: '#FAFAF8',
                 }}
               >
                 SRES® Certified · 100+ Transactions · 11 Years in Real Estate
