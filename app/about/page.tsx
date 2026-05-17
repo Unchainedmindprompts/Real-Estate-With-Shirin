@@ -195,7 +195,7 @@ export default function AboutPage() {
                   North Idaho was that place. She made the move, put down roots, and hasn&apos;t looked back.
                 </p>
                 <p>
-                  Now she helps families do the same thing — not just find a house, but find the place. The one that fits how they actually want to live, not just what they can afford.
+                  Now she helps families do the same thing. Not just find a house — find the place. The difference is that she is not guessing what North Idaho feels like from a market report. She chose it herself, with the same questions her clients are asking right now. That is not a talking point. It is just true.
                 </p>
               </div>
 
@@ -215,6 +215,20 @@ export default function AboutPage() {
                   </div>
                 ))}
               </div>
+
+              <p
+                className="mt-8"
+                style={{
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontSize: '12px',
+                  fontWeight: 600,
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  color: '#C4842A',
+                }}
+              >
+                SRES® Certified · 100+ Transactions · 11 Years in Real Estate
+              </p>
             </div>
 
             {/* Photo */}
