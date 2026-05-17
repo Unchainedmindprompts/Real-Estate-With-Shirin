@@ -265,7 +265,7 @@ export default function HomePage() {
       <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="eyebrow mb-4">HOW I CAN HELP</p>
+            <p className="eyebrow mb-4">REVIEWS</p>
             <h2
               style={{
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
@@ -273,6 +273,68 @@ export default function HomePage() {
                 fontSize: 'clamp(32px, 5vw, 48px)',
                 lineHeight: 1.2,
                 color: '#1C1A17',
+              }}
+            >
+              What Clients Say
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {testimonials.map((t) => (
+              <div
+                key={t.name}
+                style={{
+                  backgroundColor: '#2A2722',
+                  border: '1px solid #3A3530',
+                  borderRadius: '4px',
+                  padding: '32px',
+                }}
+              >
+                <div className="flex gap-1 mb-5" aria-label={`${t.stars} out of 5 stars`}>
+                  {Array.from({ length: t.stars }).map((_, i) => (
+                    <svg key={i} width="16" height="16" viewBox="0 0 16 16" fill="#C4842A" aria-hidden="true">
+                      <path d="M8 1l1.85 3.75L14 5.35l-3 2.92.71 4.13L8 10.3l-3.71 2.1.71-4.13-3-2.92 4.15-.6z" />
+                    </svg>
+                  ))}
+                </div>
+                <p
+                  className="mb-6"
+                  style={{
+                    fontFamily: "'Cormorant Garamond', Georgia, serif",
+                    fontSize: '19px',
+                    lineHeight: 1.55,
+                    color: '#F5EFE6',
+                    fontStyle: 'italic',
+                  }}
+                >
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+                <div>
+                  <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 600, fontSize: '14px', color: '#FAFAF8' }}>
+                    {t.name}
+                  </p>
+                  <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590', marginTop: '2px' }}>
+                    {t.location}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 2. How I Can Help ── */}
+      <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="eyebrow mb-4" style={{ color: '#C4842A' }}>HOW I CAN HELP</p>
+            <h2
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontWeight: 500,
+                fontSize: 'clamp(32px, 5vw, 48px)',
+                lineHeight: 1.2,
+                color: '#FAFAF8',
               }}
             >
               Whether You&apos;re Buying, Selling, or Relocating
@@ -284,13 +346,13 @@ export default function HomePage() {
               {
                 title: 'Buyers',
                 body: 'Finding the right home in the right neighborhood. Local market knowledge that goes beyond the listing.',
-                href: '/buy',
+                href: '/buyers',
                 linkText: 'Buyer Services',
               },
               {
                 title: 'Sellers',
                 body: 'Strategic pricing, professional presentation, and a network that moves homes.',
-                href: '/sell',
+                href: '/sellers',
                 linkText: 'Seller Services',
               },
               {
@@ -302,26 +364,13 @@ export default function HomePage() {
             ].map((card) => (
               <div
                 key={card.title}
-                className="relative"
                 style={{
-                  backgroundColor: '#F5EFE6',
-                  border: '1px solid #E8DDD0',
+                  backgroundColor: '#2A2722',
+                  border: '1px solid #3A3530',
                   borderRadius: '4px',
                   padding: '32px',
-                  boxShadow: '0 2px 12px rgba(28,26,23,0.06)',
                 }}
               >
-                <div
-                  style={{
-                    height: '4px',
-                    backgroundColor: '#C4842A',
-                    marginBottom: '24px',
-                    marginLeft: '-32px',
-                    marginRight: '-32px',
-                    marginTop: '-32px',
-                    borderRadius: '4px 4px 0 0',
-                  }}
-                />
                 <h3
                   className="mb-4"
                   style={{
@@ -329,17 +378,20 @@ export default function HomePage() {
                     fontWeight: 600,
                     fontSize: '24px',
                     lineHeight: 1.4,
-                    color: '#1C1A17',
+                    color: '#FAFAF8',
                   }}
                 >
                   {card.title}
                 </h3>
-                <p className="mb-6 text-base" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                <p
+                  className="mb-6"
+                  style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '16px', lineHeight: 1.6, color: '#9A9590' }}
+                >
                   {card.body}
                 </p>
                 <Link
                   href={card.href}
-                  className="text-sm font-semibold uppercase tracking-wider transition-colors"
+                  className="text-sm font-semibold uppercase tracking-wider"
                   style={{ color: '#C4842A', fontFamily: "'DM Sans', system-ui, sans-serif", letterSpacing: '0.08em' }}
                 >
                   {card.linkText} →
@@ -350,7 +402,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 2. Agent Intro ── */}
+      {/* ── 3. Agent Intro ── */}
       <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -395,13 +447,13 @@ export default function HomePage() {
 
               <div className="space-y-4 mb-8" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '16px', lineHeight: 1.7 }}>
                 <p>
-                  Shirin Abplanalp made the move that a lot of people dream about. After years in Bend, Oregon — a place that was once an outdoor paradise before it became too crowded and too expensive — she started looking for something real. A place where you could still afford a home with a yard. Where the lake was actually accessible. Where the trails weren&apos;t overrun by 9 a.m.
+                  If you are thinking about making the move to North Idaho, you probably have more questions than answers right now. Which town. Which neighborhood. What it actually costs. What daily life looks like. Whether it is the right call.
                 </p>
                 <p>
-                  North Idaho checked every box. The lakes, the mountains, the seasons, the community — and a quality of life that reminded her of what the Pacific Northwest used to be before everyone found out about it. She made the move, put down roots, and hasn&apos;t looked back.
+                  Shirin made this exact move from Bend, Oregon — a place that was once everything North Idaho is now. She knows what you are weighing because she weighed it herself. She chose Post Falls, put down roots, and has not looked back.
                 </p>
                 <p>
-                  Now, as a licensed REALTOR® at eXp Realty, Shirin helps families make the same move with confidence. She doesn&apos;t just hand you a list of listings — she helps you understand where you&apos;ll actually want to live, and why.
+                  Now as a licensed REALTOR® and SRES® specialist at eXp Realty, she helps buyers find the right home in the right place — and helps families navigate the transitions that do not come with a simple checklist. She will tell you the truth about a neighborhood, a price, or a property even when it is not what you want to hear. That is the only way she knows how to work.
                 </p>
               </div>
 
@@ -428,7 +480,7 @@ export default function HomePage() {
               </div>
 
               <Link
-                href="/about"
+                href="/contact"
                 className="inline-block text-xs uppercase font-semibold tracking-wider rounded-sm transition-colors"
                 style={{
                   fontFamily: "'DM Sans', system-ui, sans-serif",
@@ -438,7 +490,7 @@ export default function HomePage() {
                   letterSpacing: '0.08em',
                 }}
               >
-                My Full Story →
+                Let&apos;s Talk →
               </Link>
             </div>
 
@@ -555,11 +607,10 @@ export default function HomePage() {
                 href={area.href}
                 className="block group transition-all"
                 style={{
-                  backgroundColor: '#FAFAF8',
-                  border: '1px solid #E8DDD0',
+                  backgroundColor: '#2A2722',
+                  border: '1px solid #3A3530',
                   borderRadius: '4px',
                   padding: '28px 24px',
-                  boxShadow: '0 2px 12px rgba(28,26,23,0.06)',
                   textDecoration: 'none',
                 }}
               >
@@ -569,12 +620,12 @@ export default function HomePage() {
                     fontFamily: "'Cormorant Garamond', Georgia, serif",
                     fontWeight: 600,
                     fontSize: '22px',
-                    color: '#1C1A17',
+                    color: '#FAFAF8',
                   }}
                 >
                   {area.name}
                 </h3>
-                <p className="mb-4 text-sm" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                <p className="mb-4 text-sm" style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                   {area.desc}
                 </p>
                 <span
@@ -584,71 +635,6 @@ export default function HomePage() {
                   Learn More →
                 </span>
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── 5. Testimonials ── */}
-      <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="eyebrow mb-4" style={{ color: '#C4842A' }}>REVIEWS</p>
-            <h2
-              style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 500,
-                fontSize: 'clamp(32px, 5vw, 48px)',
-                lineHeight: 1.2,
-                color: '#FAFAF8',
-              }}
-            >
-              What Clients Say
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
-              <div
-                key={t.name}
-                style={{
-                  backgroundColor: '#2A2722',
-                  border: '1px solid #3A3530',
-                  borderRadius: '4px',
-                  padding: '32px',
-                }}
-              >
-                {/* Stars */}
-                <div className="flex gap-1 mb-5" aria-label={`${t.stars} out of 5 stars`}>
-                  {Array.from({ length: t.stars }).map((_, i) => (
-                    <svg key={i} width="16" height="16" viewBox="0 0 16 16" fill="#C4842A" aria-hidden="true">
-                      <path d="M8 1l1.85 3.75L14 5.35l-3 2.92.71 4.13L8 10.3l-3.71 2.1.71-4.13-3-2.92 4.15-.6z" />
-                    </svg>
-                  ))}
-                </div>
-
-                <p
-                  className="mb-6"
-                  style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontSize: '19px',
-                    lineHeight: 1.55,
-                    color: '#F5EFE6',
-                    fontStyle: 'italic',
-                  }}
-                >
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-
-                <div>
-                  <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 600, fontSize: '14px', color: '#FAFAF8' }}>
-                    {t.name}
-                  </p>
-                  <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590', marginTop: '2px' }}>
-                    {t.location}
-                  </p>
-                </div>
-              </div>
             ))}
           </div>
         </div>
