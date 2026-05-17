@@ -447,13 +447,13 @@ export default function HomePage() {
 
               <div className="space-y-4 mb-8" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '16px', lineHeight: 1.7 }}>
                 <p>
-                  Shirin Abplanalp made the move that a lot of people dream about. After years in Bend, Oregon — a place that was once an outdoor paradise before it became too crowded and too expensive — she started looking for something real. A place where you could still afford a home with a yard. Where the lake was actually accessible. Where the trails weren&apos;t overrun by 9 a.m.
+                  If you are thinking about making the move to North Idaho, you probably have more questions than answers right now. Which town. Which neighborhood. What it actually costs. What daily life looks like. Whether it is the right call.
                 </p>
                 <p>
-                  North Idaho checked every box. The lakes, the mountains, the seasons, the community — and a quality of life that reminded her of what the Pacific Northwest used to be before everyone found out about it. She made the move, put down roots, and hasn&apos;t looked back.
+                  Shirin made this exact move from Bend, Oregon — a place that was once everything North Idaho is now. She knows what you are weighing because she weighed it herself. She chose Post Falls, put down roots, and has not looked back.
                 </p>
                 <p>
-                  Now, as a licensed REALTOR® at eXp Realty, Shirin helps families make the same move with confidence. She doesn&apos;t just hand you a list of listings — she helps you understand where you&apos;ll actually want to live, and why.
+                  Now as a licensed REALTOR® and SRES® specialist at eXp Realty, she helps buyers find the right home in the right place — and helps families navigate the transitions that do not come with a simple checklist. She will tell you the truth about a neighborhood, a price, or a property even when it is not what you want to hear. That is the only way she knows how to work.
                 </p>
               </div>
 
@@ -480,7 +480,7 @@ export default function HomePage() {
               </div>
 
               <Link
-                href="/about"
+                href="/contact"
                 className="inline-block text-xs uppercase font-semibold tracking-wider rounded-sm transition-colors"
                 style={{
                   fontFamily: "'DM Sans', system-ui, sans-serif",
@@ -490,7 +490,7 @@ export default function HomePage() {
                   letterSpacing: '0.08em',
                 }}
               >
-                My Full Story →
+                Let&apos;s Talk →
               </Link>
             </div>
 
