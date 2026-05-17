@@ -55,8 +55,8 @@ export default function ArticlesPage() {
             href="/articles/why-home-buyers-feel-like-theyre-doing-their-realtors-job"
             className="block group rounded-sm transition-colors duration-200 hover:border-[#C4842A]"
             style={{
-              border: '1px solid #E8DDD0',
-              backgroundColor: '#F5EFE6',
+              border: '1px solid #3A3530',
+              backgroundColor: '#2A2722',
               padding: '40px 40px',
             }}
           >
@@ -100,12 +100,12 @@ export default function ArticlesPage() {
                 fontWeight: 600,
                 fontSize: 'clamp(22px, 3vw, 28px)',
                 lineHeight: 1.25,
-                color: '#1C1A17',
+                color: '#FAFAF8',
               }}
             >
               Why Do Home Buyers Feel Like They&apos;re Doing Their Realtor&apos;s Job — And What a Great Agent Actually Does
             </h2>
-            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#5C5650', lineHeight: 1.7, marginBottom: '24px' }}>
+            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#9A9590', lineHeight: 1.7, marginBottom: '24px' }}>
               Buyers are finding their own listings, chasing their own agents, and wondering why they hired a professional. Here is what a great buyer&apos;s agent actually does — and how to know if you have the wrong one.
             </p>
             <div className="flex items-center justify-between">
@@ -131,8 +131,8 @@ export default function ArticlesPage() {
             href="/articles/sres-designation-real-estate-after-55-north-idaho"
             className="block group rounded-sm transition-colors duration-200 hover:border-[#C4842A]"
             style={{
-              border: '1px solid #E8DDD0',
-              backgroundColor: '#F5EFE6',
+              border: '1px solid #3A3530',
+              backgroundColor: '#2A2722',
               padding: '40px 40px',
             }}
           >
@@ -176,12 +176,12 @@ export default function ArticlesPage() {
                 fontWeight: 600,
                 fontSize: 'clamp(22px, 3vw, 28px)',
                 lineHeight: 1.25,
-                color: '#1C1A17',
+                color: '#FAFAF8',
               }}
             >
               Why I Chose SRES®: A Specialist&apos;s Guide to Real Estate After 55 in North Idaho
             </h2>
-            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#5C5650', lineHeight: 1.7, marginBottom: '24px' }}>
+            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#9A9590', lineHeight: 1.7, marginBottom: '24px' }}>
               What the SRES® designation means, why real estate after 55 is genuinely different, and what families navigating a North Idaho relocation or transition should know.
             </p>
             <div className="flex items-center justify-between">
@@ -207,8 +207,8 @@ export default function ArticlesPage() {
             href="/articles/spokane-vs-coeur-dalene-which-is-right-for-you"
             className="block group rounded-sm transition-colors duration-200 hover:border-[#C4842A]"
             style={{
-              border: '1px solid #E8DDD0',
-              backgroundColor: '#F5EFE6',
+              border: '1px solid #3A3530',
+              backgroundColor: '#2A2722',
               padding: '40px 40px',
             }}
           >
@@ -252,12 +252,12 @@ export default function ArticlesPage() {
                 fontWeight: 600,
                 fontSize: 'clamp(22px, 3vw, 28px)',
                 lineHeight: 1.25,
-                color: '#1C1A17',
+                color: '#FAFAF8',
               }}
             >
               Spokane vs. Coeur d&apos;Alene: Why So Many Buyers End Up on the Idaho Side
             </h2>
-            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#5C5650', lineHeight: 1.7, marginBottom: '24px' }}>
+            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#9A9590', lineHeight: 1.7, marginBottom: '24px' }}>
               Thinking about the Inland Northwest but not sure which side of the border to land on? An honest comparison of home prices, taxes, lifestyle, and the geography most agents won&apos;t explain.
             </p>
             <div className="flex items-center justify-between">
@@ -283,8 +283,8 @@ export default function ArticlesPage() {
             href="/articles/post-falls-idaho-housing-market-2026"
             className="block group rounded-sm transition-colors duration-200 hover:border-[#C4842A]"
             style={{
-              border: '1px solid #E8DDD0',
-              backgroundColor: '#F5EFE6',
+              border: '1px solid #3A3530',
+              backgroundColor: '#2A2722',
               padding: '40px 40px',
             }}
           >
@@ -328,12 +328,12 @@ export default function ArticlesPage() {
                 fontWeight: 600,
                 fontSize: 'clamp(22px, 3vw, 28px)',
                 lineHeight: 1.25,
-                color: '#1C1A17',
+                color: '#FAFAF8',
               }}
             >
               Post Falls Idaho Housing Market 2026 — What Buyers and Sellers Need to Know
             </h2>
-            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#5C5650', lineHeight: 1.7, marginBottom: '24px' }}>
+            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#9A9590', lineHeight: 1.7, marginBottom: '24px' }}>
               Median home prices, days on market, inventory levels, and what to expect for the rest of the year. Current data as of March 2026.
             </p>
             <div className="flex items-center justify-between">
@@ -359,8 +359,8 @@ export default function ArticlesPage() {
             href="/articles/how-much-do-homes-cost-post-falls-idaho"
             className="block group rounded-sm transition-colors duration-200 hover:border-[#C4842A]"
             style={{
-              border: '1px solid #E8DDD0',
-              backgroundColor: '#F5EFE6',
+              border: '1px solid #3A3530',
+              backgroundColor: '#2A2722',
               padding: '40px 40px',
             }}
           >
@@ -389,12 +389,12 @@ export default function ArticlesPage() {
                 fontWeight: 600,
                 fontSize: 'clamp(22px, 3vw, 28px)',
                 lineHeight: 1.25,
-                color: '#1C1A17',
+                color: '#FAFAF8',
               }}
             >
               How Much Do Homes Cost in Post Falls, Idaho? (2026 Buyer&apos;s Guide)
             </h2>
-            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#5C5650', lineHeight: 1.7, marginBottom: '24px' }}>
+            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#9A9590', lineHeight: 1.7, marginBottom: '24px' }}>
               A complete price breakdown by budget — from $300K to $650K+ — plus how Post Falls compares to what you&apos;d pay in California, Washington, and Oregon.
             </p>
             <div className="flex items-center justify-between">
@@ -420,8 +420,8 @@ export default function ArticlesPage() {
             href="/articles/is-it-a-good-time-to-buy-home-northern-idaho"
             className="block group rounded-sm transition-colors duration-200 hover:border-[#C4842A]"
             style={{
-              border: '1px solid #E8DDD0',
-              backgroundColor: '#F5EFE6',
+              border: '1px solid #3A3530',
+              backgroundColor: '#2A2722',
               padding: '40px 40px',
             }}
           >
@@ -450,12 +450,12 @@ export default function ArticlesPage() {
                 fontWeight: 600,
                 fontSize: 'clamp(22px, 3vw, 28px)',
                 lineHeight: 1.25,
-                color: '#1C1A17',
+                color: '#FAFAF8',
               }}
             >
               Is It a Good Time to Buy a Home in Northern Idaho? (Honest 2026 Answer)
             </h2>
-            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#5C5650', lineHeight: 1.7, marginBottom: '24px' }}>
+            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#9A9590', lineHeight: 1.7, marginBottom: '24px' }}>
               Data-backed analysis of buyer conditions, mortgage rates, seller leverage, and who should move now versus wait — from a licensed Northern Idaho REALTOR®.
             </p>
             <div className="flex items-center justify-between">
@@ -482,8 +482,8 @@ export default function ArticlesPage() {
             href="/articles/best-places-to-live-north-idaho-leaving-california"
             className="block group rounded-sm transition-colors duration-200 hover:border-[#C4842A]"
             style={{
-              border: '1px solid #E8DDD0',
-              backgroundColor: '#F5EFE6',
+              border: '1px solid #3A3530',
+              backgroundColor: '#2A2722',
               padding: '40px 40px',
             }}
           >
@@ -512,12 +512,12 @@ export default function ArticlesPage() {
                 fontWeight: 600,
                 fontSize: 'clamp(22px, 3vw, 28px)',
                 lineHeight: 1.25,
-                color: '#1C1A17',
+                color: '#FAFAF8',
               }}
             >
               Best Places to Live in North Idaho for People Leaving California
             </h2>
-            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#5C5650', lineHeight: 1.7, marginBottom: '24px' }}>
+            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#9A9590', lineHeight: 1.7, marginBottom: '24px' }}>
               A 2026 relocation guide for Californians moving to North Idaho. Compare Coeur d&apos;Alene, Post Falls, Hayden, and Sandpoint for cost, lifestyle, taxes, and community.
             </p>
             <div className="flex items-center justify-between">
@@ -543,8 +543,8 @@ export default function ArticlesPage() {
             href="/articles/how-to-find-realtor-post-falls-idaho"
             className="block group rounded-sm transition-colors duration-200 hover:border-[#C4842A]"
             style={{
-              border: '1px solid #E8DDD0',
-              backgroundColor: '#F5EFE6',
+              border: '1px solid #3A3530',
+              backgroundColor: '#2A2722',
               padding: '40px 40px',
             }}
           >
@@ -573,12 +573,12 @@ export default function ArticlesPage() {
                 fontWeight: 600,
                 fontSize: 'clamp(22px, 3vw, 28px)',
                 lineHeight: 1.25,
-                color: '#1C1A17',
+                color: '#FAFAF8',
               }}
             >
               How to Find the Right Realtor in Post Falls, Idaho — And What to Look for Before You Hire Anyone
             </h2>
-            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#5C5650', lineHeight: 1.7, marginBottom: '24px' }}>
+            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#9A9590', lineHeight: 1.7, marginBottom: '24px' }}>
               What to look for in a Post Falls realtor, the questions worth asking before you hire anyone, and why local knowledge matters more than you think.
             </p>
             <div className="flex items-center justify-between">
