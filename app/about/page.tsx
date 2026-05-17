@@ -218,7 +218,7 @@ export default function AboutPage() {
             </div>
 
             {/* Photo */}
-            <div className="relative" style={{ height: '600px', minHeight: '400px' }}>
+            <div className="relative h-72 sm:h-96 lg:h-[600px]">
               <Image
                 src="/images/shirin-headshot-studio.webp"
                 alt="Shirin Abplanalp, Licensed REALTOR® at eXp Realty"
