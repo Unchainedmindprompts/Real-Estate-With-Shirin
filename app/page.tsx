@@ -323,7 +323,86 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 2. Agent Intro ── */}
+      {/* ── 2. How I Can Help ── */}
+      <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="eyebrow mb-4" style={{ color: '#C4842A' }}>HOW I CAN HELP</p>
+            <h2
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontWeight: 500,
+                fontSize: 'clamp(32px, 5vw, 48px)',
+                lineHeight: 1.2,
+                color: '#FAFAF8',
+              }}
+            >
+              Whether You&apos;re Buying, Selling, or Relocating
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                title: 'Buyers',
+                body: 'Finding the right home in the right neighborhood. Local market knowledge that goes beyond the listing.',
+                href: '/buyers',
+                linkText: 'Buyer Services',
+              },
+              {
+                title: 'Sellers',
+                body: 'Strategic pricing, professional presentation, and a network that moves homes.',
+                href: '/sellers',
+                linkText: 'Seller Services',
+              },
+              {
+                title: 'Relocating Families',
+                body: 'I made this move myself. I know what it takes to get here and love it from day one.',
+                href: '/about',
+                linkText: 'My Story',
+              },
+            ].map((card) => (
+              <div
+                key={card.title}
+                style={{
+                  backgroundColor: '#2A2722',
+                  border: '1px solid #3A3530',
+                  borderRadius: '4px',
+                  padding: '32px',
+                }}
+              >
+                <h3
+                  className="mb-4"
+                  style={{
+                    fontFamily: "'Cormorant Garamond', Georgia, serif",
+                    fontWeight: 600,
+                    fontSize: '24px',
+                    lineHeight: 1.4,
+                    color: '#FAFAF8',
+                  }}
+                >
+                  {card.title}
+                </h3>
+                <p
+                  className="mb-6"
+                  style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '16px', lineHeight: 1.6, color: '#9A9590' }}
+                >
+                  {card.body}
+                </p>
+                <Link
+                  href={card.href}
+                  className="text-sm font-semibold uppercase tracking-wider"
+                  style={{ color: '#C4842A', fontFamily: "'DM Sans', system-ui, sans-serif", letterSpacing: '0.08em' }}
+                >
+                  {card.linkText} →
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 3. Agent Intro ── */}
       <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -556,85 +635,6 @@ export default function HomePage() {
                   Learn More →
                 </span>
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── 5. Testimonials ── */}
-      <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="eyebrow mb-4" style={{ color: '#C4842A' }}>HOW I CAN HELP</p>
-            <h2
-              style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 500,
-                fontSize: 'clamp(32px, 5vw, 48px)',
-                lineHeight: 1.2,
-                color: '#FAFAF8',
-              }}
-            >
-              Whether You&apos;re Buying, Selling, or Relocating
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'Buyers',
-                body: 'Finding the right home in the right neighborhood. Local market knowledge that goes beyond the listing.',
-                href: '/buyers',
-                linkText: 'Buyer Services',
-              },
-              {
-                title: 'Sellers',
-                body: 'Strategic pricing, professional presentation, and a network that moves homes.',
-                href: '/sellers',
-                linkText: 'Seller Services',
-              },
-              {
-                title: 'Relocating Families',
-                body: 'I made this move myself. I know what it takes to get here and love it from day one.',
-                href: '/about',
-                linkText: 'My Story',
-              },
-            ].map((card) => (
-              <div
-                key={card.title}
-                style={{
-                  backgroundColor: '#2A2722',
-                  border: '1px solid #3A3530',
-                  borderRadius: '4px',
-                  padding: '32px',
-                }}
-              >
-                <h3
-                  className="mb-4"
-                  style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontWeight: 600,
-                    fontSize: '24px',
-                    lineHeight: 1.4,
-                    color: '#FAFAF8',
-                  }}
-                >
-                  {card.title}
-                </h3>
-                <p
-                  className="mb-6"
-                  style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '16px', lineHeight: 1.6, color: '#9A9590' }}
-                >
-                  {card.body}
-                </p>
-                <Link
-                  href={card.href}
-                  className="text-sm font-semibold uppercase tracking-wider"
-                  style={{ color: '#C4842A', fontFamily: "'DM Sans', system-ui, sans-serif", letterSpacing: '0.08em' }}
-                >
-                  {card.linkText} →
-                </Link>
-              </div>
             ))}
           </div>
         </div>
