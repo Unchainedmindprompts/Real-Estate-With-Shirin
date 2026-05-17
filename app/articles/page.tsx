@@ -48,7 +48,7 @@ export default function ArticlesPage() {
       </section>
 
       {/* Articles Grid */}
-      <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
+      <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>
         <div className="max-w-4xl mx-auto px-6 lg:px-8 space-y-6">
           {/* Buyer Resources — Agent Accountability — May 2026 */}
           <Link
