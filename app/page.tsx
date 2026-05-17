@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import HeroSection from '@/components/HeroSection'
 
 export const metadata: Metadata = {
   title: 'Northern Idaho Real Estate Agent | Shirin Abplanalp · eXp Realty',
@@ -125,117 +126,8 @@ export default function HomePage() {
         ],
       })}} />
 
-      {/* ── Hero — split screen ── */}
-      {/*
-        Full cream background. Left: text content. Right: photo as a
-        contained rounded card with padding — matching the Chelsey reference.
-      */}
-      <section
-        className="flex flex-col lg:flex-row"
-        style={{ minHeight: '100svh', backgroundColor: '#F5F0E6' }}
-      >
-
-        {/* Left: text, vertically centered */}
-        <div
-          className="flex items-center w-full lg:w-[43%] px-8 sm:px-14 lg:px-16 xl:px-20"
-          style={{ paddingTop: '96px', paddingBottom: '64px' }}
-        >
-          <div className="w-full">
-            <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>
-              POST FALLS · COEUR D&apos;ALENE · NORTH IDAHO
-            </p>
-            <h1
-              className="mb-6"
-              style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 300,
-                fontSize: 'clamp(46px, 5.5vw, 74px)',
-                lineHeight: 1.1,
-                color: '#1C1A17',
-              }}
-            >
-              I Made This Move.<br />
-              <em style={{ fontStyle: 'italic', fontWeight: 300, color: '#C4842A' }}>Now I Help Others Make Theirs.</em>
-            </h1>
-            <p
-              className="mb-2"
-              style={{
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-                fontSize: '17px',
-                lineHeight: 1.7,
-                color: '#5C5650',
-              }}
-            >
-              Licensed REALTOR® · eXp Realty · North Idaho
-            </p>
-            <p
-              className="mb-10"
-              style={{
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-                fontSize: '13px',
-                letterSpacing: '0.06em',
-                color: '#C4852A',
-              }}
-            >
-              11 Years in Real Estate &nbsp;·&nbsp; 100+ Transactions &nbsp;·&nbsp; 5× Top Producer
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
-                className="inline-block text-center text-white text-xs uppercase font-semibold rounded-sm transition-colors"
-                style={{
-                  fontFamily: "'DM Sans', system-ui, sans-serif",
-                  backgroundColor: '#C4842A',
-                  padding: '15px 36px',
-                  letterSpacing: '0.1em',
-                }}
-              >
-                Let&apos;s Talk
-              </Link>
-              <Link
-                href="/about"
-                className="inline-block text-center text-xs uppercase font-semibold rounded-sm transition-colors"
-                style={{
-                  fontFamily: "'DM Sans', system-ui, sans-serif",
-                  color: '#1C1A17',
-                  border: '1.5px solid #1C1A17',
-                  padding: '15px 36px',
-                  letterSpacing: '0.1em',
-                }}
-              >
-                My Story
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Right: photo card — inset with padding, rounded corners, full image */}
-        <div
-          className="w-full lg:w-[57%] flex items-center justify-center lg:justify-end"
-          style={{ padding: '100px 40px 40px 16px' }}
-        >
-          <div
-            style={{
-              maxWidth: '480px',
-              width: '100%',
-              borderRadius: '12px',
-              overflow: 'hidden',
-            }}
-          >
-            {/* width/height 0 + sizes + w-full h-auto = natural proportions, no crop */}
-            <Image
-              src="/images/shirin-abplanalp.jpg"
-              alt="Shirin Abplanalp, licensed Northern Idaho REALTOR®"
-              width={0}
-              height={0}
-              sizes="(max-width: 1024px) 100vw, 57vw"
-              priority
-              className="w-full h-auto block"
-            />
-          </div>
-        </div>
-
-      </section>
+      {/* ── Hero — carousel background with split content ── */}
+      <HeroSection />
 
       {/* ── 1. How I Can Help ── */}
       <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
