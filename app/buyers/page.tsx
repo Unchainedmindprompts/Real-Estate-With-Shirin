@@ -159,7 +159,7 @@ export default function BuyersPage() {
             {[
               {
                 num: '01',
-                title: 'Initial Conversation',
+                title: 'Buyers Consultation',
                 body: 'Understand your lifestyle, priorities, timeline, and budget before a single listing is pulled.',
               },
               {
