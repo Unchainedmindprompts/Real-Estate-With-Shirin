@@ -409,8 +409,7 @@ export default function HomePage() {
 
             {/* Photo */}
             <div
-              className="order-2 lg:order-1 relative"
-              style={{ height: '600px', minHeight: '400px' }}
+              className="order-2 lg:order-1 relative h-72 sm:h-96 lg:h-[600px]"
             >
               <Image
                 src="/images/shirin-headshot-studio.webp"
