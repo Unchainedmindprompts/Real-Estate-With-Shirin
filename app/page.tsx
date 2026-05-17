@@ -528,11 +528,10 @@ export default function HomePage() {
                 href={area.href}
                 className="block group transition-all"
                 style={{
-                  backgroundColor: '#FAFAF8',
-                  border: '1px solid #E8DDD0',
+                  backgroundColor: '#2A2722',
+                  border: '1px solid #3A3530',
                   borderRadius: '4px',
                   padding: '28px 24px',
-                  boxShadow: '0 2px 12px rgba(28,26,23,0.06)',
                   textDecoration: 'none',
                 }}
               >
@@ -542,12 +541,12 @@ export default function HomePage() {
                     fontFamily: "'Cormorant Garamond', Georgia, serif",
                     fontWeight: 600,
                     fontSize: '22px',
-                    color: '#1C1A17',
+                    color: '#FAFAF8',
                   }}
                 >
                   {area.name}
                 </h3>
-                <p className="mb-4 text-sm" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                <p className="mb-4 text-sm" style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                   {area.desc}
                 </p>
                 <span
