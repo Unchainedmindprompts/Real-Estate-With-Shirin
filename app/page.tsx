@@ -126,7 +126,7 @@ export default function HomePage() {
       })}} />
 
       {/* ── Hero — full-bleed image ── */}
-      <section className="relative" style={{ height: '100svh' }}>
+      <section className="relative overflow-hidden w-full" style={{ height: '100svh' }}>
         <Image
           src="/images/hero-consultation.webp"
           alt="North Idaho real estate consultation"
