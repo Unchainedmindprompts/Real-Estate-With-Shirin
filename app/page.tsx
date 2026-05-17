@@ -265,7 +265,7 @@ export default function HomePage() {
       <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="eyebrow mb-4">HOW I CAN HELP</p>
+            <p className="eyebrow mb-4">REVIEWS</p>
             <h2
               style={{
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
@@ -275,75 +275,48 @@ export default function HomePage() {
                 color: '#1C1A17',
               }}
             >
-              Whether You&apos;re Buying, Selling, or Relocating
+              What Clients Say
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'Buyers',
-                body: 'Finding the right home in the right neighborhood. Local market knowledge that goes beyond the listing.',
-                href: '/buy',
-                linkText: 'Buyer Services',
-              },
-              {
-                title: 'Sellers',
-                body: 'Strategic pricing, professional presentation, and a network that moves homes.',
-                href: '/sell',
-                linkText: 'Seller Services',
-              },
-              {
-                title: 'Relocating Families',
-                body: 'I made this move myself. I know what it takes to get here and love it from day one.',
-                href: '/about',
-                linkText: 'My Story',
-              },
-            ].map((card) => (
+            {testimonials.map((t) => (
               <div
-                key={card.title}
-                className="relative"
+                key={t.name}
                 style={{
-                  backgroundColor: '#F5EFE6',
-                  border: '1px solid #E8DDD0',
+                  backgroundColor: '#2A2722',
+                  border: '1px solid #3A3530',
                   borderRadius: '4px',
                   padding: '32px',
-                  boxShadow: '0 2px 12px rgba(28,26,23,0.06)',
                 }}
               >
-                <div
-                  style={{
-                    height: '4px',
-                    backgroundColor: '#C4842A',
-                    marginBottom: '24px',
-                    marginLeft: '-32px',
-                    marginRight: '-32px',
-                    marginTop: '-32px',
-                    borderRadius: '4px 4px 0 0',
-                  }}
-                />
-                <h3
-                  className="mb-4"
+                <div className="flex gap-1 mb-5" aria-label={`${t.stars} out of 5 stars`}>
+                  {Array.from({ length: t.stars }).map((_, i) => (
+                    <svg key={i} width="16" height="16" viewBox="0 0 16 16" fill="#C4842A" aria-hidden="true">
+                      <path d="M8 1l1.85 3.75L14 5.35l-3 2.92.71 4.13L8 10.3l-3.71 2.1.71-4.13-3-2.92 4.15-.6z" />
+                    </svg>
+                  ))}
+                </div>
+                <p
+                  className="mb-6"
                   style={{
                     fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontWeight: 600,
-                    fontSize: '24px',
-                    lineHeight: 1.4,
-                    color: '#1C1A17',
+                    fontSize: '19px',
+                    lineHeight: 1.55,
+                    color: '#F5EFE6',
+                    fontStyle: 'italic',
                   }}
                 >
-                  {card.title}
-                </h3>
-                <p className="mb-6 text-base" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                  {card.body}
+                  &ldquo;{t.quote}&rdquo;
                 </p>
-                <Link
-                  href={card.href}
-                  className="text-sm font-semibold uppercase tracking-wider transition-colors"
-                  style={{ color: '#C4842A', fontFamily: "'DM Sans', system-ui, sans-serif", letterSpacing: '0.08em' }}
-                >
-                  {card.linkText} →
-                </Link>
+                <div>
+                  <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 600, fontSize: '14px', color: '#FAFAF8' }}>
+                    {t.name}
+                  </p>
+                  <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590', marginTop: '2px' }}>
+                    {t.location}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -593,7 +566,7 @@ export default function HomePage() {
       <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="eyebrow mb-4" style={{ color: '#C4842A' }}>REVIEWS</p>
+            <p className="eyebrow mb-4" style={{ color: '#C4842A' }}>HOW I CAN HELP</p>
             <h2
               style={{
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
@@ -603,14 +576,33 @@ export default function HomePage() {
                 color: '#FAFAF8',
               }}
             >
-              What Clients Say
+              Whether You&apos;re Buying, Selling, or Relocating
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
+            {[
+              {
+                title: 'Buyers',
+                body: 'Finding the right home in the right neighborhood. Local market knowledge that goes beyond the listing.',
+                href: '/buyers',
+                linkText: 'Buyer Services',
+              },
+              {
+                title: 'Sellers',
+                body: 'Strategic pricing, professional presentation, and a network that moves homes.',
+                href: '/sellers',
+                linkText: 'Seller Services',
+              },
+              {
+                title: 'Relocating Families',
+                body: 'I made this move myself. I know what it takes to get here and love it from day one.',
+                href: '/about',
+                linkText: 'My Story',
+              },
+            ].map((card) => (
               <div
-                key={t.name}
+                key={card.title}
                 style={{
                   backgroundColor: '#2A2722',
                   border: '1px solid #3A3530',
@@ -618,36 +610,31 @@ export default function HomePage() {
                   padding: '32px',
                 }}
               >
-                {/* Stars */}
-                <div className="flex gap-1 mb-5" aria-label={`${t.stars} out of 5 stars`}>
-                  {Array.from({ length: t.stars }).map((_, i) => (
-                    <svg key={i} width="16" height="16" viewBox="0 0 16 16" fill="#C4842A" aria-hidden="true">
-                      <path d="M8 1l1.85 3.75L14 5.35l-3 2.92.71 4.13L8 10.3l-3.71 2.1.71-4.13-3-2.92 4.15-.6z" />
-                    </svg>
-                  ))}
-                </div>
-
-                <p
-                  className="mb-6"
+                <h3
+                  className="mb-4"
                   style={{
                     fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontSize: '19px',
-                    lineHeight: 1.55,
-                    color: '#F5EFE6',
-                    fontStyle: 'italic',
+                    fontWeight: 600,
+                    fontSize: '24px',
+                    lineHeight: 1.4,
+                    color: '#FAFAF8',
                   }}
                 >
-                  &ldquo;{t.quote}&rdquo;
+                  {card.title}
+                </h3>
+                <p
+                  className="mb-6"
+                  style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '16px', lineHeight: 1.6, color: '#9A9590' }}
+                >
+                  {card.body}
                 </p>
-
-                <div>
-                  <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 600, fontSize: '14px', color: '#FAFAF8' }}>
-                    {t.name}
-                  </p>
-                  <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590', marginTop: '2px' }}>
-                    {t.location}
-                  </p>
-                </div>
+                <Link
+                  href={card.href}
+                  className="text-sm font-semibold uppercase tracking-wider"
+                  style={{ color: '#C4842A', fontFamily: "'DM Sans', system-ui, sans-serif", letterSpacing: '0.08em' }}
+                >
+                  {card.linkText} →
+                </Link>
               </div>
             ))}
           </div>
