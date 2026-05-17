@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2026-05-15',
     authors: ['Shirin Abplanalp'],
-    images: ['https://www.realestatewithshirin.com/images/buyer-agent-article-hero.png'],
+    images: ['https://www.realestatewithshirin.com/images/north-idaho-lake-hero.webp'],
   },
 }
 
@@ -28,7 +28,7 @@ const articleSchema = {
     "Buyers are finding their own listings, sending their own follow-ups, and wondering why they hired a professional. Here is what a great buyer's agent actually does — and how to know if you have the wrong one.",
   image: {
     '@type': 'ImageObject',
-    url: 'https://www.realestatewithshirin.com/images/buyer-agent-article-hero.png',
+    url: 'https://www.realestatewithshirin.com/images/north-idaho-lake-hero.webp',
     width: 1672,
     height: 941,
   },
@@ -301,7 +301,7 @@ export default function BuyerAgentArticlePage() {
       {/* Hero Image */}
       <div className="w-full overflow-hidden" style={{ maxHeight: '520px' }}>
         <img
-          src="/images/buyer-agent-article-hero.png"
+          src="/images/north-idaho-lake-hero.webp"
           alt="Couple reviewing a home purchase with their buyer's agent at a table overlooking a North Idaho lake"
           className="w-full object-cover object-center"
           style={{ maxHeight: '520px' }}

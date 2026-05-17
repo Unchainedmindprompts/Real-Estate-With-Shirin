@@ -24,7 +24,7 @@ const articleSchema = {
   description: 'AI-powered search is reshaping how buyers find real estate agents. Why video has become the trust signal that gets realtors surfaced in AI discovery.',
   image: {
     '@type': 'ImageObject',
-    url: 'https://www.realestatewithshirin.com/images/hero-home.jpeg',
+    url: 'https://www.realestatewithshirin.com/images/north-idaho-lake-hero.webp',
     width: 1200,
     height: 800,
   },

@@ -89,7 +89,7 @@ export default function HaydenPage() {
       {/* Hero */}
       <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
         <div className="absolute inset-0 z-0">
-          <Image src="/images/hero-home.jpeg" alt="Lake Coeur d'Alene seaplane dock" fill priority className="object-cover"  />
+          <Image src="/images/north-idaho-lake-hero.webp" alt="Lake Coeur d'Alene seaplane dock" fill priority className="object-cover"  />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(28,26,23,0.35), rgba(28,26,23,0.6))' }} />
         </div>
         <div className="relative z-10 text-center px-6 lg:px-8 py-20 max-w-4xl mx-auto">

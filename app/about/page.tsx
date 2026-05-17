@@ -61,7 +61,7 @@ export default function AboutPage() {
       <section className="relative flex items-end" style={{ minHeight: '55vh' }}>
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-home.jpeg"
+            src="/images/north-idaho-lake-hero.webp"
             alt="Northern Idaho landscape"
             fill
             priority

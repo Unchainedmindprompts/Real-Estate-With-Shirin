@@ -42,7 +42,7 @@ export default function ContactPage() {
       <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-home.jpeg"
+            src="/images/north-idaho-lake-hero.webp"
             alt="Northern Idaho landscape"
             fill
             priority
