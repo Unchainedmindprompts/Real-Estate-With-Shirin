@@ -354,7 +354,7 @@ export default function HomePage() {
               style={{ height: '600px', minHeight: '400px' }}
             >
               <Image
-                src="/images/realtor-headshot-outdoor.jpeg"
+                src="/images/shirin-headshot-studio.webp"
                 alt="Shirin Abplanalp, Licensed REALTOR® in Northern Idaho"
                 fill
                 className="object-cover object-top"
