@@ -341,7 +341,7 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 title: 'Buyers',
@@ -360,6 +360,12 @@ export default function HomePage() {
                 body: 'I made this move myself. I know what it takes to get here and love it from day one.',
                 href: '/about',
                 linkText: 'My Story',
+              },
+              {
+                title: 'Seniors & 55+',
+                body: 'As an SRES® specialist, Shirin understands the unique financial and lifestyle decisions that come with buying or selling later in life.',
+                href: '/articles/sres-designation-real-estate-after-55-north-idaho',
+                linkText: 'Learn About SRES®',
               },
             ].map((card) => (
               <div
