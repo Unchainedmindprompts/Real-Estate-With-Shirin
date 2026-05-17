@@ -202,7 +202,7 @@ export default function BuyersPage() {
                 >
                   {step.title}
                 </h3>
-                <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px' }}
+                <p style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px' }}
                    dangerouslySetInnerHTML={{ __html: step.body }}
                 />
               </div>
@@ -234,8 +234,8 @@ export default function BuyersPage() {
               <div
                 key={i}
                 style={{
-                  backgroundColor: '#FAFAF8',
-                  border: '1px solid #E8DDD0',
+                  backgroundColor: '#2A2722',
+                  border: '1px solid #3A3530',
                   borderRadius: '4px',
                   padding: '28px 32px',
                 }}
@@ -252,7 +252,7 @@ export default function BuyersPage() {
                   {faq.q}
                 </h3>
                 <div>
-                  <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}>
+                  <p style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}>
                     {faq.a}
                   </p>
                 </div>

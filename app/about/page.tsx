@@ -262,11 +262,10 @@ export default function AboutPage() {
               <div
                 key={card.num}
                 style={{
-                  backgroundColor: '#FAFAF8',
-                  border: '1px solid #E8DDD0',
+                  backgroundColor: '#2A2722',
+                  border: '1px solid #3A3530',
                   borderRadius: '4px',
                   padding: '32px',
-                  boxShadow: '0 2px 12px rgba(28,26,23,0.06)',
                 }}
               >
                 <p
@@ -293,7 +292,7 @@ export default function AboutPage() {
                 >
                   {card.title}
                 </h3>
-                <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}>
+                <p style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}>
                   {card.body}
                 </p>
               </div>

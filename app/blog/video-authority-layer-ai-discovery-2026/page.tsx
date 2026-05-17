@@ -399,8 +399,8 @@ export default function VideoAuthorityLayerPage() {
               <div
                 className="p-6"
                 style={{
-                  backgroundColor: '#F5EFE6',
-                  border: '1px solid #E8DDD0',
+                  backgroundColor: '#2A2722',
+                  border: '1px solid #3A3530',
                   borderRadius: '4px',
                 }}
               >
@@ -457,8 +457,8 @@ export default function VideoAuthorityLayerPage() {
               <div
                 className="p-6"
                 style={{
-                  backgroundColor: '#F5EFE6',
-                  border: '1px solid #E8DDD0',
+                  backgroundColor: '#2A2722',
+                  border: '1px solid #3A3530',
                   borderRadius: '4px',
                 }}
               >
