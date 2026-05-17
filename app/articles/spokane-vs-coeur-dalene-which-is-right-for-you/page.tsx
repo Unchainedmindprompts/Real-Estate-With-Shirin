@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2026-05-03',
     authors: ['Shirin Abplanalp'],
-    images: ['https://www.realestatewithshirin.com/images/spokane-vs-coeur-dalene-hero.png'],
+    images: ['https://www.realestatewithshirin.com/images/north-idaho-lake-hero.webp'],
   },
 }
 
@@ -24,7 +24,7 @@ const articleSchema = {
   description: "An honest comparison of Spokane and Coeur d'Alene for buyers considering the Inland Northwest — home prices, taxes, lifestyle, and geography.",
   image: {
     '@type': 'ImageObject',
-    url: 'https://www.realestatewithshirin.com/images/spokane-vs-coeur-dalene-hero.png',
+    url: 'https://www.realestatewithshirin.com/images/north-idaho-lake-hero.webp',
     width: 1672,
     height: 941,
   },
@@ -294,7 +294,7 @@ export default function SpokaneVsCdaPage() {
       {/* Hero Image */}
       <div className="w-full overflow-hidden" style={{ maxHeight: '520px' }}>
         <img
-          src="/images/spokane-vs-coeur-dalene-hero.png"
+          src="/images/north-idaho-lake-hero.webp"
           alt="Split view comparing Spokane, Washington with North Idaho's lake country along Interstate 90"
           className="w-full object-cover object-center"
           style={{ maxHeight: '520px' }}

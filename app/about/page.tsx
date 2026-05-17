@@ -61,7 +61,7 @@ export default function AboutPage() {
       <section className="relative flex items-end" style={{ minHeight: '55vh' }}>
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-home.jpeg"
+            src="/images/north-idaho-lake-hero.webp"
             alt="Northern Idaho landscape"
             fill
             priority
@@ -100,7 +100,16 @@ export default function AboutPage() {
               { stat: '100+', label: 'Personal Transactions Closed' },
               { stat: '5×', label: 'Top Producer, Bend Premier Real Estate' },
             ].map((item) => (
-              <div key={item.label} className="text-center">
+              <div
+                key={item.label}
+                className="text-center"
+                style={{
+                  backgroundColor: '#2A2722',
+                  border: '1px solid #3A3530',
+                  borderRadius: '4px',
+                  padding: '40px 32px',
+                }}
+              >
                 <p
                   style={{
                     fontFamily: "'Cormorant Garamond', Georgia, serif",
@@ -116,8 +125,8 @@ export default function AboutPage() {
                   style={{
                     fontFamily: "'DM Sans', system-ui, sans-serif",
                     fontSize: '14px',
-                    color: '#5C5650',
-                    marginTop: '8px',
+                    color: '#9A9590',
+                    marginTop: '12px',
                     letterSpacing: '0.03em',
                   }}
                 >
@@ -144,7 +153,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── 3. The Story ── */}
-      <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
+      <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
@@ -155,10 +164,10 @@ export default function AboutPage() {
                 className="mb-8"
                 style={{
                   fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontWeight: 300,
+                  fontWeight: 600,
                   fontSize: 'clamp(28px, 4vw, 44px)',
                   lineHeight: 1.2,
-                  color: '#1C1208',
+                  color: '#FAFAF8',
                 }}
               >
                 From Bend to North Idaho — On Purpose
@@ -170,7 +179,7 @@ export default function AboutPage() {
                   fontFamily: "'DM Sans', system-ui, sans-serif",
                   fontSize: '16px',
                   lineHeight: 1.8,
-                  color: '#5C5650',
+                  color: '#E8DDD0',
                 }}
               >
                 <p>
@@ -200,7 +209,7 @@ export default function AboutPage() {
                     <p style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 600 }}>
                       {item.label}
                     </p>
-                    <p style={{ fontSize: '14px', color: '#1C1208', fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 500 }}>
+                    <p style={{ fontSize: '14px', color: '#C4842A', fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 500 }}>
                       {item.value}
                     </p>
                   </div>
@@ -211,7 +220,7 @@ export default function AboutPage() {
             {/* Photo */}
             <div className="relative" style={{ height: '600px', minHeight: '400px' }}>
               <Image
-                src="/images/shirin-abplanalp.jpg"
+                src="/images/shirin-headshot-studio.webp"
                 alt="Shirin Abplanalp, Licensed REALTOR® at eXp Realty"
                 fill
                 className="object-cover object-top"
@@ -234,7 +243,7 @@ export default function AboutPage() {
                 fontWeight: 300,
                 fontSize: 'clamp(32px, 5vw, 48px)',
                 lineHeight: 1.2,
-                color: '#1C1208',
+                color: '#C4842A',
               }}
             >
               What Sets Her Apart
@@ -262,11 +271,10 @@ export default function AboutPage() {
               <div
                 key={card.num}
                 style={{
-                  backgroundColor: '#FAFAF8',
-                  border: '1px solid #E8DDD0',
+                  backgroundColor: '#2A2722',
+                  border: '1px solid #3A3530',
                   borderRadius: '4px',
                   padding: '32px',
-                  boxShadow: '0 2px 12px rgba(28,26,23,0.06)',
                 }}
               >
                 <p
@@ -288,12 +296,12 @@ export default function AboutPage() {
                     fontWeight: 400,
                     fontSize: '24px',
                     lineHeight: 1.3,
-                    color: '#1C1208',
+                    color: '#C4842A',
                   }}
                 >
                   {card.title}
                 </h3>
-                <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}>
+                <p style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}>
                   {card.body}
                 </p>
               </div>
@@ -313,7 +321,7 @@ export default function AboutPage() {
               fontWeight: 300,
               fontSize: 'clamp(20px, 3vw, 28px)',
               lineHeight: 1.6,
-              color: '#1C1208',
+              color: '#C4842A',
               letterSpacing: '0.02em',
             }}
           >
@@ -390,7 +398,7 @@ export default function AboutPage() {
               fontWeight: 300,
               fontSize: 'clamp(32px, 5vw, 50px)',
               lineHeight: 1.2,
-              color: '#1C1208',
+              color: '#C4842A',
             }}
           >
             Let&apos;s Start the Conversation

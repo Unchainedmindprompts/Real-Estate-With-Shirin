@@ -101,7 +101,7 @@ export default function RathdrumPage() {
       <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-home.jpeg"
+            src="/images/north-idaho-lake-hero.webp"
             alt="Rathdrum Idaho"
             fill
             priority
@@ -183,11 +183,10 @@ export default function RathdrumPage() {
               <div
                 key={card.title}
                 style={{
-                  backgroundColor: '#FAFAF8',
-                  border: '1px solid #E8DDD0',
+                  backgroundColor: '#2A2722',
+                  border: '1px solid #3A3530',
                   borderRadius: '4px',
                   padding: '32px',
-                  boxShadow: '0 2px 12px rgba(28,26,23,0.06)',
                 }}
               >
                 <h3
@@ -196,12 +195,12 @@ export default function RathdrumPage() {
                     fontFamily: "'Cormorant Garamond', Georgia, serif",
                     fontWeight: 600,
                     fontSize: '22px',
-                    color: '#1C1A17',
+                    color: '#C4842A',
                   }}
                 >
                   {card.title}
                 </h3>
-                <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px' }}>
+                <p style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px' }}>
                   {card.body}
                 </p>
               </div>
@@ -233,8 +232,8 @@ export default function RathdrumPage() {
               <div
                 key={i}
                 style={{
-                  backgroundColor: '#F5EFE6',
-                  border: '1px solid #E8DDD0',
+                  backgroundColor: '#2A2722',
+                  border: '1px solid #3A3530',
                   borderRadius: '4px',
                   padding: '28px 32px',
                 }}
@@ -244,14 +243,14 @@ export default function RathdrumPage() {
                     fontFamily: "'Cormorant Garamond', Georgia, serif",
                     fontWeight: 600,
                     fontSize: '20px',
-                    color: '#1C1A17',
+                    color: '#C4842A',
                     marginBottom: '12px',
                   }}
                 >
                   {faq.q}
                 </h3>
                 <div>
-                  <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}>
+                  <p style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}>
                     {faq.a}
                   </p>
                 </div>

@@ -101,7 +101,7 @@ export default function CdaPage() {
       <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-home.jpeg"
+            src="/images/north-idaho-lake-hero.webp"
             alt="Lake Coeur d'Alene seaplane dock"
             fill
             priority
@@ -183,17 +183,16 @@ export default function CdaPage() {
               <div
                 key={card.title}
                 style={{
-                  backgroundColor: '#FAFAF8',
-                  border: '1px solid #E8DDD0',
+                  backgroundColor: '#2A2722',
+                  border: '1px solid #3A3530',
                   borderRadius: '4px',
                   padding: '32px',
-                  boxShadow: '0 2px 12px rgba(28,26,23,0.06)',
                 }}
               >
-                <h3 className="mb-4" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: '22px', color: '#1C1A17' }}>
+                <h3 className="mb-4" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: '22px', color: '#C4842A' }}>
                   {card.title}
                 </h3>
-                <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px' }}>
+                <p style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px' }}>
                   {card.body}
                 </p>
               </div>
@@ -216,13 +215,13 @@ export default function CdaPage() {
             {faqs.map((faq, i) => (
               <div
                 key={i}
-                style={{ backgroundColor: '#F5EFE6', border: '1px solid #E8DDD0', borderRadius: '4px', padding: '28px 32px' }}
+                style={{ backgroundColor: '#2A2722', border: '1px solid #3A3530', borderRadius: '4px', padding: '28px 32px' }}
               >
-                <h3 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: '20px', color: '#1C1A17', marginBottom: '12px' }}>
+                <h3 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: '20px', color: '#C4842A', marginBottom: '12px' }}>
                   {faq.q}
                 </h3>
                 <div>
-                  <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}>
+                  <p style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}>
                     {faq.a}
                   </p>
                 </div>

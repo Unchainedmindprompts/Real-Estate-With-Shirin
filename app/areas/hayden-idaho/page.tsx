@@ -89,7 +89,7 @@ export default function HaydenPage() {
       {/* Hero */}
       <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
         <div className="absolute inset-0 z-0">
-          <Image src="/images/hero-home.jpeg" alt="Lake Coeur d'Alene seaplane dock" fill priority className="object-cover"  />
+          <Image src="/images/north-idaho-lake-hero.webp" alt="Lake Coeur d'Alene seaplane dock" fill priority className="object-cover"  />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(28,26,23,0.35), rgba(28,26,23,0.6))' }} />
         </div>
         <div className="relative z-10 text-center px-6 lg:px-8 py-20 max-w-4xl mx-auto">
@@ -135,9 +135,9 @@ export default function HaydenPage() {
               { title: 'Space & Privacy', body: "More lot size per dollar compared to central Coeur d'Alene, with the same access to recreation and amenities." },
               { title: 'Strategic Location', body: "Minutes from Coeur d'Alene Lake, downtown CdA, and major employment centers without the density." },
             ].map((card) => (
-              <div key={card.title} style={{ backgroundColor: '#FAFAF8', border: '1px solid #E8DDD0', borderRadius: '4px', padding: '32px', boxShadow: '0 2px 12px rgba(28,26,23,0.06)' }}>
-                <h3 className="mb-4" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: '22px', color: '#1C1A17' }}>{card.title}</h3>
-                <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px' }}>{card.body}</p>
+              <div key={card.title} style={{ backgroundColor: '#2A2722', border: '1px solid #3A3530', borderRadius: '4px', padding: '32px' }}>
+                <h3 className="mb-4" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: '22px', color: '#C4842A' }}>{card.title}</h3>
+                <p style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px' }}>{card.body}</p>
               </div>
             ))}
           </div>
@@ -155,10 +155,10 @@ export default function HaydenPage() {
           </div>
           <div className="space-y-6">
             {faqs.map((faq, i) => (
-              <div key={i} style={{ backgroundColor: '#F5EFE6', border: '1px solid #E8DDD0', borderRadius: '4px', padding: '28px 32px' }}>
-                <h3 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: '20px', color: '#1C1A17', marginBottom: '12px' }}>{faq.q}</h3>
+              <div key={i} style={{ backgroundColor: '#2A2722', border: '1px solid #3A3530', borderRadius: '4px', padding: '28px 32px' }}>
+                <h3 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: '20px', color: '#C4842A', marginBottom: '12px' }}>{faq.q}</h3>
                 <div>
-                  <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}>{faq.a}</p>
+                  <p style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}>{faq.a}</p>
                 </div>
               </div>
             ))}
