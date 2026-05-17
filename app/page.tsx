@@ -128,8 +128,8 @@ export default function HomePage() {
       {/* ── Hero — full-bleed image ── */}
       <section className="relative" style={{ height: '100svh' }}>
         <Image
-          src="/images/hero-slide-2.webp"
-          alt="Lakefront home at golden hour in North Idaho"
+          src="/images/hero-slide-1.webp"
+          alt="North Idaho real estate consultation"
           fill
           className="object-cover"
           priority
