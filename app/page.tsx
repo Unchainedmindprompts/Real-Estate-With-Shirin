@@ -131,35 +131,42 @@ export default function HomePage() {
           src="/images/hero-consultation.webp"
           alt="North Idaho real estate consultation"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
           sizes="100vw"
         />
 
-        {/* Gradient — bottom-left quadrant only, diagonal fade to center */}
+        {/* Mobile gradient — full-width bottom fade */}
         <div
-          className="absolute inset-0 pointer-events-none"
+          className="absolute inset-0 pointer-events-none md:hidden"
+          style={{
+            background: 'linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.45) 40%, transparent 68%)',
+          }}
+        />
+
+        {/* Desktop gradient — bottom-left diagonal only */}
+        <div
+          className="absolute inset-0 pointer-events-none hidden md:block"
           style={{
             background: 'linear-gradient(to top right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 30%, transparent 55%)',
           }}
         />
 
-        {/* Text content — bottom left */}
+        {/* Text content */}
         <div
-          className="absolute"
+          className="absolute left-4 right-4 md:right-auto md:left-16"
           style={{
-            bottom: 'clamp(32px, 5vh, 64px)',
-            left: 'clamp(24px, 4vw, 64px)',
-            maxWidth: 'min(560px, 50vw)',
+            bottom: 'clamp(28px, 5vh, 64px)',
+            maxWidth: '560px',
             zIndex: 10,
           }}
         >
           {/* Line 1 — eyebrow */}
           <p
-            className="mb-4"
+            className="mb-3"
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
-              fontSize: '11px',
+              fontSize: '10px',
               fontWeight: 600,
               letterSpacing: '0.18em',
               textTransform: 'uppercase',
@@ -171,11 +178,11 @@ export default function HomePage() {
 
           {/* Lines 2 + 3 — headline */}
           <h1
-            className="mb-4"
+            className="mb-0"
             style={{
               fontFamily: "'Cormorant Garamond', Georgia, serif",
               fontWeight: 400,
-              fontSize: 'clamp(36px, 4.5vw, 66px)',
+              fontSize: 'clamp(30px, 5vw, 66px)',
               lineHeight: 1.1,
               margin: 0,
             }}
@@ -186,13 +193,13 @@ export default function HomePage() {
 
           {/* Line 4 — credential line */}
           <p
-            className="mb-1"
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
-              fontSize: '14px',
+              fontSize: '13px',
               fontWeight: 400,
               color: '#FFFFFF',
-              marginTop: '16px',
+              marginTop: '14px',
+              marginBottom: '2px',
             }}
           >
             Licensed REALTOR® · eXp Realty · North Idaho
@@ -202,7 +209,7 @@ export default function HomePage() {
           <p
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
-              fontSize: '13px',
+              fontSize: '12px',
               fontWeight: 400,
               color: '#C4842A',
               letterSpacing: '0.04em',
@@ -212,7 +219,7 @@ export default function HomePage() {
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-row gap-3 mt-6">
+          <div className="flex flex-row gap-3 mt-5">
             <Link
               href="/contact"
               style={{
@@ -223,7 +230,7 @@ export default function HomePage() {
                 textTransform: 'uppercase',
                 backgroundColor: '#C4842A',
                 color: '#FFFFFF',
-                padding: '12px 28px',
+                padding: '12px 24px',
                 borderRadius: '4px',
                 textDecoration: 'none',
                 whiteSpace: 'nowrap',
@@ -241,7 +248,7 @@ export default function HomePage() {
                 textTransform: 'uppercase',
                 backgroundColor: 'transparent',
                 color: '#FFFFFF',
-                padding: '12px 28px',
+                padding: '12px 24px',
                 borderRadius: '4px',
                 border: '1.5px solid rgba(255,255,255,0.75)',
                 textDecoration: 'none',
