@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2026-05-21',
     authors: ['Shirin Abplanalp'],
-    images: ['https://www.realestatewithshirin.com/images/north-idaho-lake-hero.webp'],
+    images: ['https://www.realestatewithshirin.com/images/north-idaho-school-districts-guide.webp'],
   },
 }
 
@@ -28,9 +28,9 @@ const articleSchema = {
     "A working Realtor's guide to North Idaho school districts for relocating families: how Coeur d'Alene 271, Post Falls 273, and Lakeland 272 compare, how Idaho's 2023 open enrollment law works, and what charter and private options exist in Kootenai County.",
   image: {
     '@type': 'ImageObject',
-    url: 'https://www.realestatewithshirin.com/images/north-idaho-lake-hero.webp',
-    width: 1672,
-    height: 941,
+    url: 'https://www.realestatewithshirin.com/images/north-idaho-school-districts-guide.webp',
+    width: 1536,
+    height: 1024,
   },
   author: {
     '@type': 'Person',
@@ -445,8 +445,8 @@ export default function NorthIdahoSchoolDistrictsPage() {
       {/* Hero Image */}
       <div className="w-full overflow-hidden" style={{ maxHeight: '520px' }}>
         <img
-          src="/images/north-idaho-lake-hero.webp"
-          alt="North Idaho families — Coeur d'Alene area schools and neighborhoods"
+          src="/images/north-idaho-school-districts-guide.webp"
+          alt="North Idaho School Districts Guide — 271 vs 273 vs 272 comparison"
           className="w-full object-cover object-center"
           style={{ maxHeight: '520px' }}
         />
