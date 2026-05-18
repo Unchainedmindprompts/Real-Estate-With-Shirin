@@ -30,7 +30,7 @@ const articleSchema = {
     '@type': 'ImageObject',
     url: 'https://www.realestatewithshirin.com/images/north-idaho-kootenai-health-helicopter.webp',
     width: 1672,
-    height: 941,
+    height: 851,
   },
   author: {
     '@type': 'Person',
