@@ -22,6 +22,7 @@ const jsonLdAgent = {
     name: 'Post Falls',
     containedInPlace: { '@type': 'State', name: 'Idaho' },
   },
+  founder: { '@type': 'Person', '@id': 'https://www.realestatewithshirin.com/#agent', name: 'Shirin Abplanalp' },
   telephone: '(208) 660-7468',
   address: {
     '@type': 'PostalAddress',
