@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2026-05-23',
     authors: ['Shirin Abplanalp'],
-    images: ['https://www.realestatewithshirin.com/images/north-idaho-lake-hero.webp'],
+    images: ['https://www.realestatewithshirin.com/images/north-idaho-kootenai-health-helicopter.webp'],
   },
 }
 
@@ -28,7 +28,7 @@ const articleSchema = {
     "A working Realtor's honest assessment of healthcare access for North Idaho retirees: Kootenai Health's Level II Trauma designation, Northwest Specialty Hospital in Post Falls, Spokane referrals, and Life Flight Network coverage.",
   image: {
     '@type': 'ImageObject',
-    url: 'https://www.realestatewithshirin.com/images/north-idaho-lake-hero.webp',
+    url: 'https://www.realestatewithshirin.com/images/north-idaho-kootenai-health-helicopter.webp',
     width: 1672,
     height: 941,
   },
@@ -401,8 +401,8 @@ export default function NorthIdahoHealthcarePage() {
       {/* Hero Image */}
       <div className="w-full overflow-hidden" style={{ maxHeight: '520px' }}>
         <img
-          src="/images/north-idaho-lake-hero.webp"
-          alt="Kootenai County, North Idaho — healthcare and regional medical access"
+          src="/images/north-idaho-kootenai-health-helicopter.webp"
+          alt="Kootenai Health regional medical center with Life Flight helicopter, Coeur d'Alene Idaho"
           className="w-full object-cover object-center"
           style={{ maxHeight: '520px' }}
         />
