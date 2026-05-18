@@ -93,6 +93,7 @@ export default function HomePage() {
         'worksFor': { '@type': 'Organization', '@id': 'https://www.exprealty.com/#organization', 'name': 'eXp Realty', 'url': 'https://www.exprealty.com' },
         'hasCredential': [
           { '@type': 'EducationalOccupationalCredential', 'credentialCategory': 'Real Estate License', 'identifier': '1371861', 'recognizedBy': { '@type': 'Organization', 'name': 'Idaho Real Estate Commission' } },
+          { '@type': 'EducationalOccupationalCredential', 'credentialCategory': 'Professional Designation', 'name': 'Seniors Real Estate Specialist®', 'abbreviation': 'SRES®', 'recognizedBy': { '@type': 'Organization', 'name': 'National Association of REALTORS®', 'url': 'https://www.nar.realtor' } },
           { '@type': 'EducationalOccupationalCredential', 'credentialCategory': 'Award', 'name': '5× Top Producer', 'recognizedBy': { '@type': 'Organization', 'name': 'Bend Premier Real Estate' } },
         ],
         'knowsAbout': ['Post Falls Idaho real estate', "Coeur d'Alene Idaho real estate", 'Northern Idaho relocation', 'Kootenai County homes for sale', 'Buyer representation', 'Seller representation', 'Relocation', 'North Idaho lifestyle'],
