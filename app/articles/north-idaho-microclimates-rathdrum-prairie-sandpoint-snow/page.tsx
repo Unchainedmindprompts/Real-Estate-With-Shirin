@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2026-05-17',
     authors: ['Shirin Abplanalp'],
-    images: ['https://www.realestatewithshirin.com/images/north-idaho-lake-hero.webp'],
+    images: ['https://www.realestatewithshirin.com/images/north-idaho-winter-homes.webp'],
   },
 }
 
@@ -28,9 +28,9 @@ const articleSchema = {
     "A working Realtor's honest breakdown of how snowfall, ground cover days, and winter road maintenance differ between the Rathdrum Prairie and Sandpoint — and what equipment you actually need at each.",
   image: {
     '@type': 'ImageObject',
-    url: 'https://www.realestatewithshirin.com/images/north-idaho-lake-hero.webp',
-    width: 1672,
-    height: 941,
+    url: 'https://www.realestatewithshirin.com/images/north-idaho-winter-homes.webp',
+    width: 1874,
+    height: 839,
   },
   author: {
     '@type': 'Person',
@@ -362,8 +362,8 @@ export default function MicroClimatesArticlePage() {
       {/* Hero Image */}
       <div className="w-full overflow-hidden" style={{ maxHeight: '520px' }}>
         <img
-          src="/images/north-idaho-lake-hero.webp"
-          alt="North Idaho lakefront in winter — Rathdrum Prairie and Sandpoint comparison"
+          src="/images/north-idaho-winter-homes.webp"
+          alt="North Idaho neighborhood in winter with snow-covered mountains and lake — Rathdrum Prairie and Sandpoint"
           className="w-full object-cover object-center"
           style={{ maxHeight: '520px' }}
         />
