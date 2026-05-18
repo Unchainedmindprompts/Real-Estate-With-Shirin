@@ -132,7 +132,7 @@ export default function HomePage() {
           src="/images/hero-consultation.webp"
           alt="North Idaho real estate consultation"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[65%_center] lg:object-center"
           priority
           sizes="100vw"
         />
