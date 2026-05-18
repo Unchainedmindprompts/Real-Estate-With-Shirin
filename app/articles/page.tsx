@@ -50,6 +50,81 @@ export default function ArticlesPage() {
       {/* Articles Grid */}
       <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>
         <div className="max-w-4xl mx-auto px-6 lg:px-8 space-y-6">
+          {/* North Idaho Buyer Guides — Micro-Climates — May 2026 */}
+          <Link
+            href="/articles/north-idaho-microclimates-rathdrum-prairie-sandpoint-snow"
+            className="block group rounded-sm transition-colors duration-200 hover:border-[#C4842A]"
+            style={{
+              border: '1px solid #3A3530',
+              backgroundColor: '#2A2722',
+              padding: '40px 40px',
+            }}
+          >
+            <div className="flex items-center gap-3 mb-4 flex-wrap">
+              <span
+                style={{
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontSize: '11px',
+                  fontWeight: 600,
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                  color: '#C4842A',
+                }}
+              >
+                North Idaho Buyer Guides
+              </span>
+              <span style={{ color: '#9A9590', fontSize: '12px' }}>·</span>
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590' }}>
+                14 min read
+              </span>
+              <span style={{ color: '#9A9590', fontSize: '12px' }}>·</span>
+              <span
+                style={{
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontSize: '11px',
+                  fontWeight: 600,
+                  letterSpacing: '0.06em',
+                  color: '#FAFAF8',
+                  backgroundColor: '#C4842A',
+                  padding: '2px 8px',
+                  borderRadius: '2px',
+                }}
+              >
+                New — May 2026
+              </span>
+            </div>
+            <h2
+              className="mb-3"
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontWeight: 600,
+                fontSize: 'clamp(22px, 3vw, 28px)',
+                lineHeight: 1.25,
+                color: '#FAFAF8',
+              }}
+            >
+              North Idaho Micro-Climates: Rathdrum Prairie vs. Sandpoint Snowfall Realities
+            </h2>
+            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#9A9590', lineHeight: 1.7, marginBottom: '24px' }}>
+              40 inches or 90 inches — it depends entirely on which side of the lake you land on. An honest breakdown of what winter actually looks like in Post Falls, Rathdrum, Hayden, and Sandpoint, and what equipment each one actually requires.
+            </p>
+            <div className="flex items-center justify-between">
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', color: '#9A9590' }}>
+                May 17, 2026
+              </span>
+              <span
+                style={{
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontSize: '13px',
+                  fontWeight: 600,
+                  color: '#C4842A',
+                }}
+              >
+                Read Article →
+              </span>
+            </div>
+          </Link>
+
           {/* Buyer Resources — Agent Accountability — May 2026 */}
           <Link
             href="/articles/why-home-buyers-feel-like-theyre-doing-their-realtors-job"
