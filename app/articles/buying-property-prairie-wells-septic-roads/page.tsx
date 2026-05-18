@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2026-05-19',
     authors: ['Shirin Abplanalp'],
-    images: ['https://www.realestatewithshirin.com/images/north-idaho-lake-hero.webp'],
+    images: ['https://www.realestatewithshirin.com/images/north-idaho-prairie-acreage.webp'],
   },
 }
 
@@ -28,7 +28,7 @@ const articleSchema = {
     "A working Realtor's guide to the real infrastructure costs of buying raw land or rural homes in Kootenai County: well drilling depths, Panhandle Health District septic requirements, and private road maintenance realities.",
   image: {
     '@type': 'ImageObject',
-    url: 'https://www.realestatewithshirin.com/images/north-idaho-lake-hero.webp',
+    url: 'https://www.realestatewithshirin.com/images/north-idaho-prairie-acreage.webp',
     width: 1672,
     height: 941,
   },
@@ -379,7 +379,7 @@ export default function PrairiePropertyArticlePage() {
       {/* Hero Image */}
       <div className="w-full overflow-hidden" style={{ maxHeight: '520px' }}>
         <img
-          src="/images/north-idaho-lake-hero.webp"
+          src="/images/north-idaho-prairie-acreage.webp"
           alt="Rural acreage on the Rathdrum Prairie, North Idaho"
           className="w-full object-cover object-center"
           style={{ maxHeight: '520px' }}
