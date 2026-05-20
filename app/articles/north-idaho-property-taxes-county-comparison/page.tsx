@@ -29,8 +29,8 @@ const articleSchema = {
   image: {
     '@type': 'ImageObject',
     url: 'https://www.realestatewithshirin.com/images/north-idaho-property-taxes.webp',
-    width: 1672,
-    height: 941,
+    width: 1536,
+    height: 1024,
   },
   author: {
     '@type': 'Person',
