@@ -1,8 +1,21 @@
 import { MetadataRoute } from 'next'
+import fs from 'fs'
+import path from 'path'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.realestatewithshirin.com'
   const currentDate = new Date().toISOString()
+
+  const articlesDir = path.join(process.cwd(), 'app', 'articles')
+  const articleEntries: MetadataRoute.Sitemap = fs
+    .readdirSync(articlesDir, { withFileTypes: true })
+    .filter(entry => entry.isDirectory() && fs.existsSync(path.join(articlesDir, entry.name, 'page.tsx')))
+    .map(entry => ({
+      url: `${baseUrl}/articles/${entry.name}`,
+      lastModified: fs.statSync(path.join(articlesDir, entry.name, 'page.tsx')).mtime.toISOString(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    }))
 
   return [
     { url: baseUrl, lastModified: currentDate, changeFrequency: 'weekly', priority: 1.0 },
@@ -14,30 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/areas/coeur-dalene-idaho`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/areas/hayden-idaho`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/articles`, lastModified: currentDate, changeFrequency: 'weekly', priority: 0.7 },
-    {
-      url: `${baseUrl}/articles/how-to-find-realtor-post-falls-idaho`,
-      lastModified: new Date('2026-03-18').toISOString(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/articles/how-much-do-homes-cost-post-falls-idaho`,
-      lastModified: new Date('2026-03-18').toISOString(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/articles/post-falls-idaho-housing-market-2026`,
-      lastModified: new Date('2026-03-18').toISOString(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/articles/is-it-a-good-time-to-buy-home-northern-idaho`,
-      lastModified: new Date('2026-03-18').toISOString(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
+    ...articleEntries,
     { url: `${baseUrl}/contact`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.8 },
   ]
 }
