@@ -399,12 +399,11 @@ export default function PropertyTaxesArticlePage() {
       </section>
 
       {/* Hero Image */}
-      <div className="w-full overflow-hidden" style={{ maxHeight: '520px' }}>
+      <div className="w-full">
         <img
           src="/images/north-idaho-property-taxes.webp"
-          alt="North Idaho county landscape — Kootenai, Bonner, Boundary, Shoshone, and Benewah counties property tax comparison"
-          className="w-full object-cover object-center"
-          style={{ maxHeight: '520px' }}
+          alt="North Idaho property tax rates across 5 counties — infographic showing Bonner 0.398%, Boundary 0.405%, Kootenai 0.452%, Benewah 0.601%, Shoshone 0.673%"
+          className="w-full h-auto block"
         />
       </div>
 
