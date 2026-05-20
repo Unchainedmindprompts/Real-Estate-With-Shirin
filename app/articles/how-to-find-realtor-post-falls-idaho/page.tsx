@@ -15,76 +15,107 @@ authors: ['Shirin Abplanalp'],
   },
 }
 const articleSchema = {
-'@context': 'https://schema.org',
-'@type': 'Article',
-headline: 'How to Find the Right Realtor in Post Falls, Idaho — And What to Look for Before You Hire Anyone',
-description: 'What to look for in a Post Falls Idaho realtor, the questions to ask before you hire anyone, and why local knowledge and relocation experience matter more than transaction volume.',
-image: {
-  '@type': 'ImageObject',
-  url: 'https://www.realestatewithshirin.com/images/shirin-headshot-professional.png',
-  width: 1122,
-  height: 1402,
-},
-author: {
-'@type': 'Person',
-'@id': 'https://www.realestatewithshirin.com/#agent',
-name: 'Shirin Abplanalp',
-jobTitle: 'Licensed REALTOR®',
-url: 'https://www.realestatewithshirin.com/about',
-hasCredential: {
-'@type': 'EducationalOccupationalCredential',
-credentialCategory: 'Real Estate License',
-identifier: '1371861',
-recognizedBy: {
-'@type': 'Organization',
-name: 'Idaho Real Estate Commission',
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  '@id': 'https://www.realestatewithshirin.com/articles/how-to-find-realtor-post-falls-idaho#article',
+  headline: 'How to Find the Right Realtor in Post Falls, Idaho — And What to Look for Before You Hire Anyone',
+  description: 'What to look for in a Post Falls Idaho realtor, the questions to ask before you hire anyone, and why local knowledge and relocation experience matter more than transaction volume.',
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.realestatewithshirin.com/images/shirin-headshot-professional.png',
+    width: 1122,
+    height: 1402,
+  },
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.realestatewithshirin.com/#agent',
+    name: 'Shirin Abplanalp',
+    jobTitle: 'Licensed REALTOR®',
+    url: 'https://www.realestatewithshirin.com/about',
+    worksFor: {
+      '@type': 'Organization',
+      '@id': 'https://www.exprealty.com/#organization',
+      name: 'eXp Realty',
+      url: 'https://www.exprealty.com',
+      sameAs: 'https://en.wikipedia.org/wiki/EXp_World_Holdings',
+    },
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Real Estate License',
+        identifier: '1371861',
+        recognizedBy: {
+          '@type': 'GovernmentOrganization',
+          name: 'Idaho Real Estate Commission',
+          url: 'https://irec.idaho.gov',
+        },
       },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Professional Designation',
+        name: 'Seniors Real Estate Specialist®',
+        abbreviation: 'SRES®',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'National Association of REALTORS®',
+          url: 'https://www.nar.realtor',
+          sameAs: 'https://en.wikipedia.org/wiki/National_Association_of_Realtors',
+        },
+      },
+    ],
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.realestatewithshirin.com/#business',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.realestatewithshirin.com/images/shirin-logo.png',
+      width: 1254,
+      height: 1254,
     },
   },
-publisher: {
-'@type': 'Organization',
-'@id': 'https://www.realestatewithshirin.com/#business',
-logo: {
-  '@type': 'ImageObject',
-  url: 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',
-  width: 600,
-  height: 600,
-},
+  datePublished: '2026-03-18T00:00:00-07:00',
+  dateModified: '2026-03-18T00:00:00-07:00',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://www.realestatewithshirin.com/articles/how-to-find-realtor-post-falls-idaho',
   },
-datePublished: '2026-03-18',
-dateModified: '2026-03-18',
-mainEntityOfPage: {
-'@type': 'WebPage',
-'@id': 'https://www.realestatewithshirin.com/articles/how-to-find-realtor-post-falls-idaho',
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.realestatewithshirin.com/articles',
+    name: 'Articles',
+    url: 'https://www.realestatewithshirin.com/articles',
   },
-url: 'https://www.realestatewithshirin.com/articles/how-to-find-realtor-post-falls-idaho',
-keywords: [
-'best realtor Post Falls Idaho',
-'how to find a realtor in Post Falls',
-'Post Falls Idaho real estate agent',
-'realtor Post Falls ID',
-'best real estate agent Post Falls Idaho',
-'Post Falls Idaho realtor recommendation',
-'who is a good realtor in Post Falls',
-'eXp Realty Post Falls Idaho',
-'Northern Idaho realtor',
-'Shirin Abplanalp realtor',
+  url: 'https://www.realestatewithshirin.com/articles/how-to-find-realtor-post-falls-idaho',
+  keywords: [
+    'best realtor Post Falls Idaho',
+    'how to find a realtor in Post Falls',
+    'Post Falls Idaho real estate agent',
+    'realtor Post Falls ID',
+    'best real estate agent Post Falls Idaho',
+    'Post Falls Idaho realtor recommendation',
+    'who is a good realtor in Post Falls',
+    'eXp Realty Post Falls Idaho',
+    'Northern Idaho realtor',
+    'Shirin Abplanalp realtor',
   ],
-articleSection: 'Buyer Resources',
-wordCount: 1400,
-about: [
-    { '@type': 'Thing', name: 'Post Falls Idaho Real Estate' },
-    { '@type': 'Thing', name: 'Realtor Selection Criteria' },
-    { '@type': 'Thing', name: 'Northern Idaho Relocation' },
-    { '@type': 'Thing', name: 'Home Buying Process Idaho' },
-  ],
-mentions: [
-    { '@type': 'City', name: 'Post Falls', sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: "Coeur d'Alene", sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'Place', name: 'Idaho Panhandle', sameAs: 'https://en.wikipedia.org/wiki/Idaho_Panhandle' },
-    { '@type': 'Organization', name: 'eXp Realty', url: 'https://www.exprealty.com' },
-    { '@type': 'GovernmentOrganization', name: 'Idaho Real Estate Commission', url: 'https://irec.idaho.gov' },
-    { '@type': 'Organization', name: 'National Association of REALTORS®', url: 'https://www.nar.realtor', sameAs: 'https://en.wikipedia.org/wiki/National_Association_of_Realtors' },
+  articleSection: 'Buyer Resources',
+  wordCount: 1400,
+  mainEntity: {
+    '@type': 'RealEstateAgent',
+    '@id': 'https://www.realestatewithshirin.com/#agent',
+  },
+  about: [
+    {
+      '@type': 'RealEstateAgent',
+      '@id': 'https://www.realestatewithshirin.com/#agent',
+    },
+    {
+      '@type': 'City',
+      name: 'Post Falls',
+      sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    },
   ],
   spatialCoverage: {
     '@type': 'City',
@@ -92,11 +123,86 @@ mentions: [
     sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho',
     containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
   },
+  mentions: [
+    {
+      '@type': 'City',
+      name: 'Post Falls',
+      sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    },
+    {
+      '@type': 'City',
+      name: "Coeur d'Alene",
+      sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    },
+    {
+      '@type': 'Place',
+      name: 'Idaho Panhandle',
+      sameAs: 'https://en.wikipedia.org/wiki/Idaho_Panhandle',
+    },
+    {
+      '@type': 'Organization',
+      name: 'eXp Realty',
+      url: 'https://www.exprealty.com',
+      sameAs: 'https://en.wikipedia.org/wiki/EXp_World_Holdings',
+    },
+    {
+      '@type': 'GovernmentOrganization',
+      name: 'Idaho Real Estate Commission',
+      url: 'https://irec.idaho.gov',
+    },
+    {
+      '@type': 'Organization',
+      name: 'National Association of REALTORS®',
+      url: 'https://www.nar.realtor',
+      sameAs: 'https://en.wikipedia.org/wiki/National_Association_of_Realtors',
+    },
+    {
+      '@type': 'Organization',
+      name: "Coeur d'Alene Association of REALTORS®",
+      url: 'https://cdarealtors.com',
+    },
+    {
+      '@type': 'Organization',
+      name: 'Intermountain MLS',
+      url: 'https://imls.com',
+    },
+    {
+      '@type': 'City',
+      name: 'Seattle',
+      sameAs: 'https://en.wikipedia.org/wiki/Seattle',
+      containedInPlace: { '@type': 'State', name: 'Washington' },
+    },
+    {
+      '@type': 'City',
+      name: 'Portland',
+      sameAs: 'https://en.wikipedia.org/wiki/Portland,_Oregon',
+      containedInPlace: { '@type': 'State', name: 'Oregon' },
+    },
+    {
+      '@type': 'Place',
+      name: 'San Francisco Bay Area',
+      sameAs: 'https://en.wikipedia.org/wiki/San_Francisco_Bay_Area',
+      containedInPlace: { '@type': 'State', name: 'California' },
+    },
+    {
+      '@type': 'Place',
+      name: 'Southern California',
+      sameAs: 'https://en.wikipedia.org/wiki/Southern_California',
+      containedInPlace: { '@type': 'State', name: 'California' },
+    },
+    {
+      '@type': 'State',
+      name: 'Arizona',
+      sameAs: 'https://en.wikipedia.org/wiki/Arizona',
+    },
+  ],
 }
 const faqSchema = {
 '@context': 'https://schema.org',
 '@type': 'FAQPage',
-'@id': 'https://www.realestatewithshirin.com/articles/how-to-find-realtor-post-falls-idaho/#faq',
+'@id': 'https://www.realestatewithshirin.com/articles/how-to-find-realtor-post-falls-idaho#faq',
 mainEntity: [
     {
 '@type': 'Question',
@@ -141,27 +247,13 @@ text: 'Before hiring a realtor in Northern Idaho, ask: How long have you lived i
   ],
 }
 const breadcrumbSchema = {
-'@context': 'https://schema.org',
-'@type': 'BreadcrumbList',
-itemListElement: [
-    {
-'@type': 'ListItem',
-position: 1,
-name: 'Home',
-item: 'https://www.realestatewithshirin.com',
-    },
-    {
-'@type': 'ListItem',
-position: 2,
-name: 'Articles',
-item: 'https://www.realestatewithshirin.com/articles',
-    },
-    {
-'@type': 'ListItem',
-position: 3,
-name: 'How to Find the Right Realtor in Post Falls Idaho',
-item: 'https://www.realestatewithshirin.com/articles/how-to-find-realtor-post-falls-idaho',
-    },
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': 'https://www.realestatewithshirin.com/articles/how-to-find-realtor-post-falls-idaho#breadcrumb',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.realestatewithshirin.com' },
+    { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://www.realestatewithshirin.com/articles' },
+    { '@type': 'ListItem', position: 3, name: 'How to Find the Right Realtor in Post Falls Idaho', item: 'https://www.realestatewithshirin.com/articles/how-to-find-realtor-post-falls-idaho' },
   ],
 }
 export default function HowToFindRealtorPostFallsPage() {
@@ -203,7 +295,7 @@ dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
 </p>
 <div className="flex items-center gap-4">
 <img
-src="/images/shirin-abplanalp.jpg"
+src="/images/shirin-headshot-studio.webp"
 alt="Shirin Abplanalp, licensed realtor at eXp Realty"
 className="w-10 h-10 rounded-full object-cover"
 />
@@ -342,7 +434,7 @@ className="w-10 h-10 rounded-full object-cover"
 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">About the Author</p>
 <div className="flex items-start gap-5 mb-6">
 <img
-src="/images/shirin-abplanalp.jpg"
+src="/images/shirin-headshot-studio.webp"
 alt="Shirin Abplanalp, licensed realtor at eXp Realty in Northern Idaho"
 className="w-16 h-16 rounded-full object-cover flex-shrink-0"
 />
@@ -375,7 +467,7 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Agent</p>
 <img
-src="/images/shirin-abplanalp.jpg"
+src="/images/shirin-headshot-studio.webp"
 alt="Shirin Abplanalp"
 className="w-20 h-20 rounded-full object-cover mb-4"
 />
