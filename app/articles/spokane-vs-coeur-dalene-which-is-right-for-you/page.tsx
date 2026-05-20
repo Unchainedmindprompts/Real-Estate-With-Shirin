@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
+  '@id': 'https://www.realestatewithshirin.com/articles/spokane-vs-coeur-dalene-which-is-right-for-you#article',
   headline: "Spokane vs. Coeur d'Alene: Why So Many Buyers End Up on the Idaho Side",
   description: "An honest comparison of Spokane and Coeur d'Alene for buyers considering the Inland Northwest — home prices, taxes, lifestyle, and geography.",
   image: {
@@ -34,28 +35,52 @@ const articleSchema = {
     name: 'Shirin Abplanalp',
     jobTitle: 'Licensed REALTOR®',
     url: 'https://www.realestatewithshirin.com/about',
-    hasCredential: {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'Real Estate License',
-      identifier: '1371861',
-      recognizedBy: { '@type': 'Organization', name: 'Idaho Real Estate Commission' },
-    },
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Real Estate License',
+        identifier: '1371861',
+        recognizedBy: {
+          '@type': 'GovernmentOrganization',
+          name: 'Idaho Real Estate Commission',
+          url: 'https://irec.idaho.gov',
+        },
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Professional Designation',
+        name: 'Seniors Real Estate Specialist®',
+        abbreviation: 'SRES®',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'National Association of REALTORS®',
+          url: 'https://www.nar.realtor',
+          sameAs: 'https://en.wikipedia.org/wiki/National_Association_of_Realtors',
+        },
+      },
+    ],
   },
   publisher: {
     '@type': 'Organization',
     '@id': 'https://www.realestatewithshirin.com/#business',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://www.realestatewithshirin.com/images/shirin-headshot-professional.png',
-      width: 1122,
-      height: 1402,
+      url: 'https://www.realestatewithshirin.com/images/shirin-logo.png',
+      width: 1254,
+      height: 1254,
     },
   },
-  datePublished: '2026-05-03',
-  dateModified: '2026-05-03',
+  datePublished: '2026-05-03T00:00:00-07:00',
+  dateModified: '2026-05-03T00:00:00-07:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://www.realestatewithshirin.com/articles/spokane-vs-coeur-dalene-which-is-right-for-you',
+  },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.realestatewithshirin.com/articles',
+    name: 'Articles',
+    url: 'https://www.realestatewithshirin.com/articles',
   },
   url: 'https://www.realestatewithshirin.com/articles/spokane-vs-coeur-dalene-which-is-right-for-you',
   keywords: [
@@ -72,11 +97,24 @@ const articleSchema = {
   articleSection: 'Relocation Guide',
   wordCount: 1800,
   about: [
-    { '@type': 'City', name: "Coeur d'Alene", containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: 'Spokane', containedInPlace: { '@type': 'State', name: 'Washington' } },
-    { '@type': 'Thing', name: 'Inland Northwest Relocation 2026' },
-    { '@type': 'Thing', name: 'Idaho vs Washington Tax Comparison' },
-    { '@type': 'Thing', name: "Idaho Homeowner's Exemption" },
+    {
+      '@type': 'City',
+      name: "Coeur d'Alene",
+      sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    },
+    {
+      '@type': 'City',
+      name: 'Spokane',
+      sameAs: 'https://en.wikipedia.org/wiki/Spokane,_Washington',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Spokane County', containedInPlace: { '@type': 'State', name: 'Washington' } },
+    },
+    {
+      '@type': 'City',
+      name: 'Post Falls',
+      sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    },
   ],
   spatialCoverage: {
     '@type': 'Place',
@@ -92,20 +130,20 @@ const articleSchema = {
     { '@type': 'City', name: 'Spokane', addressRegion: 'WA', addressCountry: 'US' },
   ],
   mentions: [
-    { '@type': 'City', name: 'Spokane', addressRegion: 'WA', url: 'https://en.wikipedia.org/wiki/Spokane,_Washington' },
-    { '@type': 'City', name: "Coeur d'Alene", addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho' },
-    { '@type': 'City', name: 'Post Falls', addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho' },
-    { '@type': 'City', name: 'Hayden', addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Hayden,_Idaho' },
-    { '@type': 'City', name: 'Sandpoint', addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Sandpoint,_Idaho' },
-    { '@type': 'City', name: 'Bend', addressRegion: 'OR', url: 'https://en.wikipedia.org/wiki/Bend,_Oregon' },
-    { '@type': 'AdministrativeArea', name: 'Kootenai County', addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Kootenai_County,_Idaho' },
-    { '@type': 'AdministrativeArea', name: 'Spokane County', addressRegion: 'WA', url: 'https://en.wikipedia.org/wiki/Spokane_County,_Washington' },
-    { '@type': 'LakeBodyOfWater', name: "Lake Coeur d'Alene", url: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene_Lake' },
+    { '@type': 'City', name: 'Spokane', sameAs: 'https://en.wikipedia.org/wiki/Spokane,_Washington', containedInPlace: { '@type': 'AdministrativeArea', name: 'Spokane County', containedInPlace: { '@type': 'State', name: 'Washington' } } },
+    { '@type': 'City', name: "Coeur d'Alene", sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho', containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } } },
+    { '@type': 'City', name: 'Post Falls', sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho', containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } } },
+    { '@type': 'City', name: 'Hayden', sameAs: 'https://en.wikipedia.org/wiki/Hayden,_Idaho', containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } } },
+    { '@type': 'City', name: 'Sandpoint', sameAs: 'https://en.wikipedia.org/wiki/Sandpoint,_Idaho', containedInPlace: { '@type': 'AdministrativeArea', name: 'Bonner County', containedInPlace: { '@type': 'State', name: 'Idaho' } } },
+    { '@type': 'City', name: 'Bend', sameAs: 'https://en.wikipedia.org/wiki/Bend,_Oregon', containedInPlace: { '@type': 'State', name: 'Oregon' } },
+    { '@type': 'AdministrativeArea', name: 'Kootenai County', sameAs: 'https://en.wikipedia.org/wiki/Kootenai_County,_Idaho', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'AdministrativeArea', name: 'Spokane County', sameAs: 'https://en.wikipedia.org/wiki/Spokane_County,_Washington', containedInPlace: { '@type': 'State', name: 'Washington' } },
+    { '@type': 'LakeBodyOfWater', name: "Lake Coeur d'Alene", sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene_Lake' },
     { '@type': 'LakeBodyOfWater', name: 'Hayden Lake', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'LakeBodyOfWater', name: 'Lake Pend Oreille', url: 'https://en.wikipedia.org/wiki/Lake_Pend_Oreille' },
-    { '@type': 'LakeBodyOfWater', name: 'Priest Lake', url: 'https://en.wikipedia.org/wiki/Priest_Lake' },
-    { '@type': 'RiverBodyOfWater', name: 'Spokane River', url: 'https://en.wikipedia.org/wiki/Spokane_River' },
-    { '@type': 'RiverBodyOfWater', name: 'St. Joe River', url: 'https://en.wikipedia.org/wiki/St._Joe_River' },
+    { '@type': 'LakeBodyOfWater', name: 'Lake Pend Oreille', sameAs: 'https://en.wikipedia.org/wiki/Lake_Pend_Oreille' },
+    { '@type': 'LakeBodyOfWater', name: 'Priest Lake', sameAs: 'https://en.wikipedia.org/wiki/Priest_Lake' },
+    { '@type': 'RiverBodyOfWater', name: 'Spokane River', sameAs: 'https://en.wikipedia.org/wiki/Spokane_River' },
+    { '@type': 'RiverBodyOfWater', name: 'St. Joe River', sameAs: 'https://en.wikipedia.org/wiki/St._Joe_River' },
     { '@type': 'GovernmentOrganization', name: 'State of Idaho', url: 'https://www.idaho.gov' },
     { '@type': 'GovernmentOrganization', name: 'State of Washington', url: 'https://www.wa.gov' },
     { '@type': 'Airport', name: 'Spokane International Airport', iataCode: 'GEG', url: 'https://www.spokaneairports.net' },
@@ -135,7 +173,7 @@ const articleSchema = {
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  '@id': 'https://www.realestatewithshirin.com/articles/spokane-vs-coeur-dalene-which-is-right-for-you/#faq',
+  '@id': 'https://www.realestatewithshirin.com/articles/spokane-vs-coeur-dalene-which-is-right-for-you#faq',
   mainEntity: [
     {
       '@type': 'Question',
@@ -226,15 +264,11 @@ const postFallsPlaceSchema = {
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.realestatewithshirin.com/articles/spokane-vs-coeur-dalene-which-is-right-for-you#breadcrumb',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.realestatewithshirin.com' },
     { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://www.realestatewithshirin.com/articles' },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: "Spokane vs. Coeur d'Alene",
-      item: 'https://www.realestatewithshirin.com/articles/spokane-vs-coeur-dalene-which-is-right-for-you',
-    },
+    { '@type': 'ListItem', position: 3, name: "Spokane vs. Coeur d'Alene", item: 'https://www.realestatewithshirin.com/articles/spokane-vs-coeur-dalene-which-is-right-for-you' },
   ],
 }
 
@@ -279,7 +313,7 @@ export default function SpokaneVsCdaPage() {
           </p>
           <div className="flex items-center gap-4">
             <img
-              src="/images/shirin-abplanalp.jpg"
+              src="/images/shirin-headshot-studio.webp"
               alt="Shirin Abplanalp, licensed realtor at eXp Realty"
               className="w-10 h-10 rounded-full object-cover"
             />
@@ -647,7 +681,7 @@ export default function SpokaneVsCdaPage() {
                 {/* Agent Card */}
                 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
                   <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Local Guide</p>
-                  <img src="/images/shirin-abplanalp.jpg" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" />
+                  <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" />
                   <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
                   <p className="font-dm-sans text-xs text-[#9A9590] mb-3">Licensed REALTOR® · eXp Realty · #1371861</p>
                   <p className="font-dm-sans text-xs text-[#5C5650] leading-relaxed mb-4">Shirin and her husband made this exact comparison before relocating from Bend, Oregon — and chose Post Falls. She helps buyers navigate both sides of the border every day.</p>

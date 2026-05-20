@@ -15,76 +15,125 @@ authors: ['Shirin Abplanalp'],
   },
 }
 const articleSchema = {
-'@context': 'https://schema.org',
-'@type': 'Article',
-headline: 'Post Falls Idaho Housing Market 2026 — What Buyers and Sellers Need to Know',
-description: 'Median home prices, days on market, inventory levels, and 2026 forecast for the Post Falls Idaho real estate market. Data as of March 2026.',
-image: {
-  '@type': 'ImageObject',
-  url: 'https://www.realestatewithshirin.com/images/north-idaho-neighborhood.png',
-  width: 1672,
-  height: 941,
-},
-author: {
-'@type': 'Person',
-'@id': 'https://www.realestatewithshirin.com/#agent',
-name: 'Shirin Abplanalp',
-jobTitle: 'Licensed REALTOR®',
-url: 'https://www.realestatewithshirin.com/about',
-hasCredential: {
-'@type': 'EducationalOccupationalCredential',
-credentialCategory: 'Real Estate License',
-identifier: '1371861',
-recognizedBy: {
-'@type': 'Organization',
-name: 'Idaho Real Estate Commission',
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  '@id': 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-market-2026#article',
+  headline: 'Post Falls Idaho Housing Market 2026 — What Buyers and Sellers Need to Know',
+  description: 'Median home prices, days on market, inventory levels, and 2026 forecast for the Post Falls Idaho real estate market. Data as of March 2026.',
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.realestatewithshirin.com/images/north-idaho-neighborhood.png',
+    width: 1672,
+    height: 941,
+  },
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.realestatewithshirin.com/#agent',
+    name: 'Shirin Abplanalp',
+    jobTitle: 'Licensed REALTOR®',
+    url: 'https://www.realestatewithshirin.com/about',
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Real Estate License',
+        identifier: '1371861',
+        recognizedBy: {
+          '@type': 'GovernmentOrganization',
+          name: 'Idaho Real Estate Commission',
+          url: 'https://irec.idaho.gov',
+        },
       },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Professional Designation',
+        name: 'Seniors Real Estate Specialist®',
+        abbreviation: 'SRES®',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'National Association of REALTORS®',
+          url: 'https://www.nar.realtor',
+          sameAs: 'https://en.wikipedia.org/wiki/National_Association_of_Realtors',
+        },
+      },
+    ],
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.realestatewithshirin.com/#business',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.realestatewithshirin.com/images/shirin-logo.png',
+      width: 1254,
+      height: 1254,
     },
   },
-publisher: {
-'@type': 'Organization',
-'@id': 'https://www.realestatewithshirin.com/#business',
-logo: {
-  '@type': 'ImageObject',
-  url: 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',
-  width: 600,
-  height: 600,
-},
+  datePublished: '2026-03-18T00:00:00-07:00',
+  dateModified: '2026-03-18T00:00:00-07:00',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-market-2026',
   },
-datePublished: '2026-03-18',
-dateModified: '2026-03-18',
-mainEntityOfPage: {
-'@type': 'WebPage',
-'@id': 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-market-2026',
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.realestatewithshirin.com/articles',
+    name: 'Articles',
+    url: 'https://www.realestatewithshirin.com/articles',
   },
-url: 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-market-2026',
-keywords: [
-'Post Falls Idaho housing market 2026',
-'Post Falls Idaho real estate market',
-'Post Falls Idaho home prices 2026',
-'Post Falls Idaho market report',
-'is it a good time to buy in Post Falls Idaho',
-'Post Falls Idaho median home price',
-'Northern Idaho real estate market 2026',
-'Kootenai County housing market',
-'Post Falls Idaho buyer market seller market',
+  url: 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-market-2026',
+  keywords: [
+    'Post Falls Idaho housing market 2026',
+    'Post Falls Idaho real estate market',
+    'Post Falls Idaho home prices 2026',
+    'Post Falls Idaho market report',
+    'is it a good time to buy in Post Falls Idaho',
+    'Post Falls Idaho median home price',
+    'Northern Idaho real estate market 2026',
+    'Kootenai County housing market',
+    'Post Falls Idaho buyer market seller market',
   ],
-articleSection: 'Market Reports',
-wordCount: 1200,
-about: [
-    { '@type': 'Thing', name: 'Post Falls Idaho Real Estate Market' },
-    { '@type': 'Thing', name: 'Northern Idaho Housing Market 2026' },
-    { '@type': 'Thing', name: 'Kootenai County Home Prices' },
-    { '@type': 'Thing', name: 'Idaho Real Estate Forecast 2026' },
+  articleSection: 'Market Reports',
+  wordCount: 1200,
+  about: [
+    {
+      '@type': 'City',
+      name: 'Post Falls',
+      sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    },
+    {
+      '@type': 'AdministrativeArea',
+      name: 'Kootenai County',
+      containedInPlace: { '@type': 'State', name: 'Idaho' },
+    },
   ],
-mentions: [
-    { '@type': 'City', name: 'Post Falls', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: "Coeur d'Alene", containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'AdministrativeArea', name: 'Kootenai County' },
-    { '@type': 'Organization', name: 'Redfin' },
-    { '@type': 'Organization', name: 'Zillow' },
+  spatialCoverage: {
+    '@type': 'City',
+    name: 'Post Falls',
+    sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho',
+    containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+  },
+  mentions: [
+    {
+      '@type': 'City',
+      name: 'Post Falls',
+      sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    },
+    {
+      '@type': 'City',
+      name: "Coeur d'Alene",
+      sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    },
+    {
+      '@type': 'AdministrativeArea',
+      name: 'Kootenai County',
+      containedInPlace: { '@type': 'State', name: 'Idaho' },
+    },
+    { '@type': 'Organization', name: 'Redfin', url: 'https://www.redfin.com' },
+    { '@type': 'Organization', name: 'Zillow', url: 'https://www.zillow.com' },
   ],
-citation: [
+  citation: [
     { '@type': 'WebPage', name: 'Redfin Post Falls Market Data', url: 'https://www.redfin.com/city/14898/ID/Post-Falls/housing-market' },
     { '@type': 'WebPage', name: 'Zillow Post Falls Home Values', url: 'https://www.zillow.com/post-falls-id/home-values/' },
   ],
@@ -92,7 +141,7 @@ citation: [
 const faqSchema = {
 '@context': 'https://schema.org',
 '@type': 'FAQPage',
-'@id': 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-market-2026/#faq',
+'@id': 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-market-2026#faq',
 mainEntity: [
     {
 '@type': 'Question',
@@ -137,27 +186,13 @@ text: 'For most buyers, yes — 2026 represents one of the better entry windows 
   ],
 }
 const breadcrumbSchema = {
-'@context': 'https://schema.org',
-'@type': 'BreadcrumbList',
-itemListElement: [
-    {
-'@type': 'ListItem',
-position: 1,
-name: 'Home',
-item: 'https://www.realestatewithshirin.com',
-    },
-    {
-'@type': 'ListItem',
-position: 2,
-name: 'Articles',
-item: 'https://www.realestatewithshirin.com/articles',
-    },
-    {
-'@type': 'ListItem',
-position: 3,
-name: 'Post Falls Idaho Housing Market 2026',
-item: 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-market-2026',
-    },
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-market-2026#breadcrumb',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.realestatewithshirin.com' },
+    { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://www.realestatewithshirin.com/articles' },
+    { '@type': 'ListItem', position: 3, name: 'Post Falls Idaho Housing Market 2026', item: 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-market-2026' },
   ],
 }
 export default function PostFallsHousingMarket2026Page() {
@@ -193,7 +228,7 @@ return (
 </p>
 <div className="flex items-center gap-4">
 <img
-src="/images/shirin-abplanalp.jpg"
+src="/images/shirin-headshot-studio.webp"
 alt="Shirin Abplanalp, licensed realtor at eXp Realty"
 className="w-10 h-10 rounded-full object-cover"
 />
@@ -502,7 +537,7 @@ style={{ width: `${item.indicator}%`, backgroundColor: item.color }}
 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">From Shirin</p>
 <div className="flex items-start gap-5 mb-6">
 <img
-src="/images/shirin-abplanalp.jpg"
+src="/images/shirin-headshot-studio.webp"
 alt="Shirin Abplanalp"
 className="w-14 h-14 rounded-full object-cover flex-shrink-0"
 />
@@ -561,7 +596,7 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
 {/* Agent Card */}
 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Local Advisor</p>
-<img src="/images/shirin-abplanalp.jpg" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" />
+<img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" />
 <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
 <p className="font-dm-sans text-xs text-[#9A9590] mb-4">Licensed REALTOR® · eXp Realty · #1371861</p>
 <a href="/contact" className="block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white font-dm-sans font-semibold text-sm py-3 px-4 transition-colors">
