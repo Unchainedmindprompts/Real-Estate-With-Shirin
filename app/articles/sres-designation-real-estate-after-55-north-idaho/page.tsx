@@ -40,7 +40,11 @@ const articleSchema = {
         '@type': 'EducationalOccupationalCredential',
         credentialCategory: 'Real Estate License',
         identifier: '1371861',
-        recognizedBy: { '@type': 'Organization', name: 'Idaho Real Estate Commission' },
+        recognizedBy: {
+          '@type': 'GovernmentOrganization',
+          name: 'Idaho Real Estate Commission',
+          url: 'https://irec.idaho.gov',
+        },
       },
       {
         '@type': 'EducationalOccupationalCredential',
@@ -51,6 +55,7 @@ const articleSchema = {
           '@type': 'Organization',
           name: 'National Association of REALTORS®',
           url: 'https://www.nar.realtor',
+          sameAs: 'https://en.wikipedia.org/wiki/National_Association_of_Realtors',
         },
       },
     ],
@@ -116,18 +121,18 @@ const articleSchema = {
     { '@id': 'https://www.realestatewithshirin.com/#agent' },
   ],
   mentions: [
-    { '@type': 'City', name: "Coeur d'Alene", addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho' },
-    { '@type': 'City', name: 'Post Falls', addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho' },
-    { '@type': 'City', name: 'Hayden', addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Hayden,_Idaho' },
-    { '@type': 'City', name: 'Sandpoint', addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Sandpoint,_Idaho' },
-    { '@type': 'AdministrativeArea', name: 'Kootenai County', addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Kootenai_County,_Idaho' },
-    { '@type': 'Place', name: "Lake Coeur d'Alene", url: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene_Lake' },
+    { '@type': 'City', name: "Coeur d'Alene", sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho', containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } } },
+    { '@type': 'City', name: 'Post Falls', sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho', containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } } },
+    { '@type': 'City', name: 'Hayden', sameAs: 'https://en.wikipedia.org/wiki/Hayden,_Idaho', containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } } },
+    { '@type': 'City', name: 'Sandpoint', sameAs: 'https://en.wikipedia.org/wiki/Sandpoint,_Idaho', containedInPlace: { '@type': 'AdministrativeArea', name: 'Bonner County', containedInPlace: { '@type': 'State', name: 'Idaho' } } },
+    { '@type': 'AdministrativeArea', name: 'Kootenai County', sameAs: 'https://en.wikipedia.org/wiki/Kootenai_County,_Idaho', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'LakeBodyOfWater', name: "Lake Coeur d'Alene", sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene_Lake' },
     { '@type': 'GovernmentOrganization', name: 'State of Idaho', url: 'https://www.idaho.gov' },
     { '@type': 'GovernmentOrganization', name: 'State of Washington', url: 'https://www.wa.gov' },
-    { '@type': 'Hospital', name: 'Kootenai Health', url: 'https://www.kootenaihealth.org' },
+    { '@type': 'Hospital', name: 'Kootenai Health', url: 'https://www.kh.org' },
     { '@type': 'Hospital', name: 'Providence Sacred Heart Medical Center', url: 'https://www.providence.org/locations/wa/sacred-heart-medical-center' },
     { '@type': 'Organization', name: 'MultiCare Health System', url: 'https://www.multicare.org' },
-    { '@type': 'Organization', name: 'National Association of REALTORS®', url: 'https://www.nar.realtor' },
+    { '@type': 'Organization', name: 'National Association of REALTORS®', url: 'https://www.nar.realtor', sameAs: 'https://en.wikipedia.org/wiki/National_Association_of_Realtors' },
     { '@type': 'Organization', name: 'Center for REALTOR® Development', url: 'https://crd.realtor' },
     { '@type': 'Organization', name: 'Seniors Real Estate Specialist Council', alternateName: 'SRES Council', url: 'https://sres.realtor' },
     {
@@ -234,15 +239,11 @@ const faqSchema = {
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.realestatewithshirin.com/articles/sres-designation-real-estate-after-55-north-idaho#breadcrumb',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.realestatewithshirin.com' },
     { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://www.realestatewithshirin.com/articles' },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: 'SRES® Guide: Real Estate After 55',
-      item: 'https://www.realestatewithshirin.com/articles/sres-designation-real-estate-after-55-north-idaho',
-    },
+    { '@type': 'ListItem', position: 3, name: 'SRES® Guide: Real Estate After 55', item: 'https://www.realestatewithshirin.com/articles/sres-designation-real-estate-after-55-north-idaho' },
   ],
 }
 
@@ -339,7 +340,7 @@ export default function SresArticlePage() {
           </p>
           <div className="flex items-center gap-4">
             <img
-              src="/images/shirin-abplanalp.jpg"
+              src="/images/shirin-headshot-studio.webp"
               alt="Shirin Abplanalp, SRES® and licensed REALTOR® at eXp Realty"
               className="w-10 h-10 rounded-full object-cover"
             />
@@ -633,7 +634,7 @@ export default function SresArticlePage() {
                 {/* About Shirin */}
                 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
                   <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your SRES® Specialist</p>
-                  <img src="/images/shirin-abplanalp.jpg" alt="Shirin Abplanalp, SRES® and licensed REALTOR® at eXp Realty" className="w-16 h-16 rounded-full object-cover mb-3" />
+                  <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp, SRES® and licensed REALTOR® at eXp Realty" className="w-16 h-16 rounded-full object-cover mb-3" />
                   <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
                   <p className="font-dm-sans text-xs text-[#9A9590] mb-3">SRES® · Licensed REALTOR® · eXp Realty · #1371861</p>
                   <p className="font-dm-sans text-xs text-[#5C5650] leading-relaxed mb-4">

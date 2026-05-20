@@ -15,82 +15,127 @@ authors: ['Shirin Abplanalp'],
   },
 }
 const articleSchema = {
-'@context': 'https://schema.org',
-'@type': 'Article',
-headline: "How Much Do Homes Cost in Post Falls, Idaho? (2026 Buyer's Guide)",
-description: 'What does a home cost in Post Falls Idaho in 2026? Price breakdown by budget from $300K to $650K+ plus comparison to California, Washington, and Oregon markets.',
-image: {
-  '@type': 'ImageObject',
-  url: 'https://www.realestatewithshirin.com/images/shirin-headshot-professional.png',
-  width: 1122,
-  height: 1402,
-},
-author: {
-'@type': 'Person',
-'@id': 'https://www.realestatewithshirin.com/#agent',
-name: 'Shirin Abplanalp',
-jobTitle: 'Licensed REALTOR®',
-url: 'https://www.realestatewithshirin.com/about',
-hasCredential: {
-'@type': 'EducationalOccupationalCredential',
-credentialCategory: 'Real Estate License',
-identifier: '1371861',
-recognizedBy: {
-'@type': 'Organization',
-name: 'Idaho Real Estate Commission',
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  '@id': 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho#article',
+  headline: "How Much Do Homes Cost in Post Falls, Idaho? (2026 Buyer's Guide)",
+  description: 'What does a home cost in Post Falls Idaho in 2026? Price breakdown by budget from $300K to $650K+ plus comparison to California, Washington, and Oregon markets.',
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.realestatewithshirin.com/images/shirin-headshot-professional.png',
+    width: 1122,
+    height: 1402,
+  },
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.realestatewithshirin.com/#agent',
+    name: 'Shirin Abplanalp',
+    jobTitle: 'Licensed REALTOR®',
+    url: 'https://www.realestatewithshirin.com/about',
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Real Estate License',
+        identifier: '1371861',
+        recognizedBy: {
+          '@type': 'GovernmentOrganization',
+          name: 'Idaho Real Estate Commission',
+          url: 'https://irec.idaho.gov',
+        },
       },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Professional Designation',
+        name: 'Seniors Real Estate Specialist®',
+        abbreviation: 'SRES®',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'National Association of REALTORS®',
+          url: 'https://www.nar.realtor',
+          sameAs: 'https://en.wikipedia.org/wiki/National_Association_of_Realtors',
+        },
+      },
+    ],
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.realestatewithshirin.com/#business',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.realestatewithshirin.com/images/shirin-logo.png',
+      width: 1254,
+      height: 1254,
     },
   },
-publisher: {
-'@type': 'Organization',
-'@id': 'https://www.realestatewithshirin.com/#business',
-logo: {
-  '@type': 'ImageObject',
-  url: 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',
-  width: 600,
-  height: 600,
-},
+  datePublished: '2026-03-18T00:00:00-07:00',
+  dateModified: '2026-03-18T00:00:00-07:00',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho',
   },
-datePublished: '2026-03-18',
-dateModified: '2026-03-18',
-mainEntityOfPage: {
-'@type': 'WebPage',
-'@id': 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho',
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.realestatewithshirin.com/articles',
+    name: 'Articles',
+    url: 'https://www.realestatewithshirin.com/articles',
   },
-url: 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho',
-keywords: [
-'how much do homes cost in Post Falls Idaho',
-'Post Falls Idaho home prices 2026',
-'average home price Post Falls Idaho',
-'homes under $400000 Post Falls Idaho',
-'what can I get for $500000 Post Falls Idaho',
-'Post Falls Idaho real estate prices',
-'Post Falls vs California home prices',
-'relocating to Post Falls Idaho',
-'Northern Idaho home prices',
-'Kootenai County home prices 2026',
+  url: 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho',
+  keywords: [
+    'how much do homes cost in Post Falls Idaho',
+    'Post Falls Idaho home prices 2026',
+    'average home price Post Falls Idaho',
+    'homes under $400000 Post Falls Idaho',
+    'what can I get for $500000 Post Falls Idaho',
+    'Post Falls Idaho real estate prices',
+    'Post Falls vs California home prices',
+    'relocating to Post Falls Idaho',
+    'Northern Idaho home prices',
+    'Kootenai County home prices 2026',
   ],
-articleSection: 'Buyer Resources',
-wordCount: 1300,
-about: [
-    { '@type': 'Thing', name: 'Post Falls Idaho Home Prices' },
-    { '@type': 'Thing', name: 'Northern Idaho Real Estate Costs' },
-    { '@type': 'Thing', name: 'Idaho vs California Home Prices' },
-    { '@type': 'Thing', name: 'Relocating to Post Falls Idaho' },
+  articleSection: 'Buyer Resources',
+  wordCount: 1300,
+  about: [
+    {
+      '@type': 'City',
+      name: 'Post Falls',
+      sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    },
+    {
+      '@type': 'AdministrativeArea',
+      name: 'Kootenai County',
+      containedInPlace: { '@type': 'State', name: 'Idaho' },
+    },
   ],
-mentions: [
-    { '@type': 'City', name: 'Post Falls', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: "Coeur d'Alene", containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: 'Los Angeles', containedInPlace: { '@type': 'State', name: 'California' } },
-    { '@type': 'City', name: 'Seattle', containedInPlace: { '@type': 'State', name: 'Washington' } },
-    { '@type': 'City', name: 'Portland', containedInPlace: { '@type': 'State', name: 'Oregon' } },
-    { '@type': 'City', name: 'Spokane', containedInPlace: { '@type': 'State', name: 'Washington' } },
+  spatialCoverage: {
+    '@type': 'City',
+    name: 'Post Falls',
+    sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho',
+    containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+  },
+  mentions: [
+    {
+      '@type': 'City',
+      name: 'Post Falls',
+      sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    },
+    {
+      '@type': 'City',
+      name: "Coeur d'Alene",
+      sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    },
+    { '@type': 'City', name: 'Los Angeles', sameAs: 'https://en.wikipedia.org/wiki/Los_Angeles', containedInPlace: { '@type': 'State', name: 'California' } },
+    { '@type': 'City', name: 'Seattle', sameAs: 'https://en.wikipedia.org/wiki/Seattle', containedInPlace: { '@type': 'State', name: 'Washington' } },
+    { '@type': 'City', name: 'Portland', sameAs: 'https://en.wikipedia.org/wiki/Portland,_Oregon', containedInPlace: { '@type': 'State', name: 'Oregon' } },
+    { '@type': 'City', name: 'Spokane', sameAs: 'https://en.wikipedia.org/wiki/Spokane,_Washington', containedInPlace: { '@type': 'State', name: 'Washington' } },
   ],
 }
 const faqSchema = {
 '@context': 'https://schema.org',
 '@type': 'FAQPage',
-'@id': 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho/#faq',
+'@id': 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho#faq',
 mainEntity: [
     {
 '@type': 'Question',
@@ -135,27 +180,13 @@ text: 'Significantly so. The Post Falls median sale price of $521,138 compares t
   ],
 }
 const breadcrumbSchema = {
-'@context': 'https://schema.org',
-'@type': 'BreadcrumbList',
-itemListElement: [
-    {
-'@type': 'ListItem',
-position: 1,
-name: 'Home',
-item: 'https://www.realestatewithshirin.com',
-    },
-    {
-'@type': 'ListItem',
-position: 2,
-name: 'Articles',
-item: 'https://www.realestatewithshirin.com/articles',
-    },
-    {
-'@type': 'ListItem',
-position: 3,
-name: 'How Much Do Homes Cost in Post Falls Idaho?',
-item: 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho',
-    },
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho#breadcrumb',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.realestatewithshirin.com' },
+    { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://www.realestatewithshirin.com/articles' },
+    { '@type': 'ListItem', position: 3, name: 'How Much Do Homes Cost in Post Falls Idaho?', item: 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho' },
   ],
 }
 const priceTiers = [
@@ -209,7 +240,7 @@ return (
 </p>
 <div className="flex items-center gap-4">
 <img
-src="/images/shirin-abplanalp.jpg"
+src="/images/shirin-headshot-studio.webp"
 alt="Shirin Abplanalp, licensed realtor at eXp Realty"
 className="w-10 h-10 rounded-full object-cover"
 />
@@ -518,7 +549,7 @@ backgroundColor: market.highlight ? '#C4842A' : '#6B7A8D',
 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">From Shirin</p>
 <div className="flex items-start gap-5 mb-6">
 <img
-src="/images/shirin-abplanalp.jpg"
+src="/images/shirin-headshot-studio.webp"
 alt="Shirin Abplanalp"
 className="w-14 h-14 rounded-full object-cover flex-shrink-0"
 />
@@ -572,7 +603,7 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
 {/* Agent Card */}
 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Local Advisor</p>
-<img src="/images/shirin-abplanalp.jpg" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" />
+<img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" />
 <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
 <p className="font-dm-sans text-xs text-[#9A9590] mb-4">Licensed REALTOR® · eXp Realty · #1371861</p>
 <a href="/contact" className="block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white font-dm-sans font-semibold text-sm py-3 px-4 transition-colors">

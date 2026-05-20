@@ -38,6 +38,30 @@ const articleSchema = {
     name: 'Shirin Abplanalp',
     jobTitle: 'Licensed REALTOR®',
     url: 'https://www.realestatewithshirin.com/about',
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Real Estate License',
+        identifier: '1371861',
+        recognizedBy: {
+          '@type': 'GovernmentOrganization',
+          name: 'Idaho Real Estate Commission',
+          url: 'https://irec.idaho.gov',
+        },
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Professional Designation',
+        name: 'Seniors Real Estate Specialist®',
+        abbreviation: 'SRES®',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'National Association of REALTORS®',
+          url: 'https://www.nar.realtor',
+          sameAs: 'https://en.wikipedia.org/wiki/National_Association_of_Realtors',
+        },
+      },
+    ],
   },
   publisher: {
     '@type': 'Organization',
@@ -91,20 +115,27 @@ const articleSchema = {
     { '@type': 'City', name: 'Rathdrum', addressRegion: 'ID', addressCountry: 'US' },
   ],
   about: [
-    { '@type': 'Thing', name: 'Buyer Representation' },
-    { '@type': 'Thing', name: 'Real Estate Agent Accountability' },
-    { '@type': 'Thing', name: 'Home Buyer Consultation' },
-    { '@type': 'Thing', name: 'Relocation Buyer Services' },
+    {
+      '@type': 'Place',
+      name: 'North Idaho',
+      sameAs: 'https://en.wikipedia.org/wiki/Idaho_Panhandle',
+    },
+    {
+      '@type': 'City',
+      name: 'Post Falls',
+      sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    },
     { '@id': 'https://www.realestatewithshirin.com/#agent' },
   ],
   mentions: [
-    { '@type': 'City', name: "Coeur d'Alene", addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho' },
-    { '@type': 'City', name: 'Post Falls', addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho' },
-    { '@type': 'City', name: 'Hayden', addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Hayden,_Idaho' },
-    { '@type': 'City', name: 'Rathdrum', addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Rathdrum,_Idaho' },
-    { '@type': 'AdministrativeArea', name: 'Kootenai County', addressRegion: 'ID', url: 'https://en.wikipedia.org/wiki/Kootenai_County,_Idaho' },
+    { '@type': 'City', name: "Coeur d'Alene", sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho', containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } } },
+    { '@type': 'City', name: 'Post Falls', sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho', containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } } },
+    { '@type': 'City', name: 'Hayden', sameAs: 'https://en.wikipedia.org/wiki/Hayden,_Idaho', containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } } },
+    { '@type': 'City', name: 'Rathdrum', sameAs: 'https://en.wikipedia.org/wiki/Rathdrum,_Idaho', containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } } },
+    { '@type': 'AdministrativeArea', name: 'Kootenai County', sameAs: 'https://en.wikipedia.org/wiki/Kootenai_County,_Idaho', containedInPlace: { '@type': 'State', name: 'Idaho' } },
     { '@type': 'WebSite', name: 'r/RealEstateAdvice', url: 'https://www.reddit.com/r/RealEstateAdvice/' },
-    { '@type': 'WebSite', name: 'Zillow', url: 'https://www.zillow.com' },
+    { '@type': 'Organization', name: 'Zillow', url: 'https://www.zillow.com' },
   ],
   citation: [
     {
@@ -194,15 +225,11 @@ const faqSchema = {
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.realestatewithshirin.com/articles/why-home-buyers-feel-like-theyre-doing-their-realtors-job#breadcrumb',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.realestatewithshirin.com' },
     { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://www.realestatewithshirin.com/articles' },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: "Why Buyers Feel Like They're Doing Their Realtor's Job",
-      item: 'https://www.realestatewithshirin.com/articles/why-home-buyers-feel-like-theyre-doing-their-realtors-job',
-    },
+    { '@type': 'ListItem', position: 3, name: "Why Buyers Feel Like They're Doing Their Realtor's Job", item: 'https://www.realestatewithshirin.com/articles/why-home-buyers-feel-like-theyre-doing-their-realtors-job' },
   ],
 }
 
@@ -286,7 +313,7 @@ export default function BuyerAgentArticlePage() {
           </p>
           <div className="flex items-center gap-4">
             <img
-              src="/images/shirin-abplanalp.jpg"
+              src="/images/shirin-headshot-studio.webp"
               alt="Shirin Abplanalp, licensed REALTOR® at eXp Realty in Post Falls, Idaho"
               className="w-10 h-10 rounded-full object-cover"
             />
@@ -508,7 +535,7 @@ export default function BuyerAgentArticlePage() {
                 {/* About Shirin */}
                 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
                   <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Buyer&apos;s Agent</p>
-                  <img src="/images/shirin-abplanalp.jpg" alt="Shirin Abplanalp, licensed REALTOR® at eXp Realty" className="w-16 h-16 rounded-full object-cover mb-3" />
+                  <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp, licensed REALTOR® at eXp Realty" className="w-16 h-16 rounded-full object-cover mb-3" />
                   <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
                   <p className="font-dm-sans text-xs text-[#9A9590] mb-3">SRES® · Licensed REALTOR® · eXp Realty · #1371861</p>
                   <p className="font-dm-sans text-xs text-[#5C5650] leading-relaxed mb-4">

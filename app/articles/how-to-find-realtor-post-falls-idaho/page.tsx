@@ -79,22 +79,19 @@ about: [
     { '@type': 'Thing', name: 'Home Buying Process Idaho' },
   ],
 mentions: [
-    {
-'@type': 'City',
-name: 'Post Falls',
-containedInPlace: { '@type': 'State', name: 'Idaho' },
-    },
-    {
-'@type': 'City',
-name: "Coeur d'Alene",
-containedInPlace: { '@type': 'State', name: 'Idaho' },
-    },
-    {
-'@type': 'Organization',
-name: 'eXp Realty',
-url: 'https://www.exprealty.com',
-    },
+    { '@type': 'City', name: 'Post Falls', sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'City', name: "Coeur d'Alene", sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'Place', name: 'Idaho Panhandle', sameAs: 'https://en.wikipedia.org/wiki/Idaho_Panhandle' },
+    { '@type': 'Organization', name: 'eXp Realty', url: 'https://www.exprealty.com' },
+    { '@type': 'GovernmentOrganization', name: 'Idaho Real Estate Commission', url: 'https://irec.idaho.gov' },
+    { '@type': 'Organization', name: 'National Association of REALTORS®', url: 'https://www.nar.realtor', sameAs: 'https://en.wikipedia.org/wiki/National_Association_of_Realtors' },
   ],
+  spatialCoverage: {
+    '@type': 'City',
+    name: 'Post Falls',
+    sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho',
+    containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+  },
 }
 const faqSchema = {
 '@context': 'https://schema.org',
