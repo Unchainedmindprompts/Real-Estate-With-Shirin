@@ -416,9 +416,9 @@ export default function CommuteTimesPage() {
             </p>
 
             {/* Commute Chart */}
-            <div className="mb-12 rounded-sm overflow-hidden" style={{ border: '1px solid #E8DDD0', backgroundColor: '#fff' }}>
-              <div className="px-6 pt-6 pb-4" style={{ borderBottom: '1px solid #E8DDD0' }}>
-                <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '20px', fontWeight: 600, color: '#1C1A17', marginBottom: '4px' }}>
+            <div className="mb-12 rounded-sm overflow-hidden" style={{ border: '1px solid #3A3530', backgroundColor: '#1C1A17' }}>
+              <div className="px-6 pt-6 pb-4" style={{ borderBottom: '1px solid #3A3530' }}>
+                <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '20px', fontWeight: 600, color: '#FAFAF8', marginBottom: '4px' }}>
                   Commute to Downtown Spokane — Typical Drive Times
                 </p>
                 <p style={{ fontSize: '12px', color: '#9A9590' }}>Off-peak (gray) vs. AM/PM peak (gold) · minutes one-way · ITD / STA corridor data</p>
@@ -430,20 +430,20 @@ export default function CommuteTimesPage() {
                   return (
                     <div key={row.town}>
                       <div className="flex items-center justify-between mb-1">
-                        <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', fontWeight: 600, color: '#1C1A17', minWidth: '140px' }}>{row.town}</span>
+                        <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', fontWeight: 600, color: '#FAFAF8', minWidth: '140px' }}>{row.town}</span>
                         <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', color: '#9A9590' }}>{row.miles} mi</span>
                       </div>
                       <div className="space-y-1">
                         <div className="flex items-center gap-2">
                           <span style={{ fontSize: '10px', color: '#9A9590', width: '52px', flexShrink: 0 }}>Off-peak</span>
-                          <div style={{ flex: 1, backgroundColor: '#F0EBE3', borderRadius: '2px', height: '12px' }}>
+                          <div style={{ flex: 1, backgroundColor: '#2A2722', borderRadius: '2px', height: '12px' }}>
                             <div style={{ width: `${offPct}%`, backgroundColor: '#8B7D6B', height: '12px', borderRadius: '2px', transition: 'width 0.3s' }} />
                           </div>
-                          <span style={{ fontSize: '11px', fontWeight: 600, color: '#5C5650', width: '64px', textAlign: 'right', flexShrink: 0 }}>{row.offLabel}</span>
+                          <span style={{ fontSize: '11px', fontWeight: 600, color: '#C8B99A', width: '64px', textAlign: 'right', flexShrink: 0 }}>{row.offLabel}</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <span style={{ fontSize: '10px', color: '#9A9590', width: '52px', flexShrink: 0 }}>Peak</span>
-                          <div style={{ flex: 1, backgroundColor: '#F0EBE3', borderRadius: '2px', height: '12px' }}>
+                          <div style={{ flex: 1, backgroundColor: '#2A2722', borderRadius: '2px', height: '12px' }}>
                             <div style={{ width: `${peakPct}%`, backgroundColor: '#C4842A', height: '12px', borderRadius: '2px', transition: 'width 0.3s' }} />
                           </div>
                           <span style={{ fontSize: '11px', fontWeight: 600, color: '#C4842A', width: '64px', textAlign: 'right', flexShrink: 0 }}>{row.peakLabel}</span>
@@ -452,7 +452,7 @@ export default function CommuteTimesPage() {
                     </div>
                   )
                 })}
-                <p style={{ fontSize: '11px', color: '#9A9590', paddingTop: '8px', borderTop: '1px solid #F0EBE3' }}>
+                <p style={{ fontSize: '11px', color: '#9A9590', paddingTop: '8px', borderTop: '1px solid #3A3530' }}>
                   Scale: 0–120 min. Sandpoint bar capped at chart width (actual 90–110 min). All times to downtown Spokane (Sprague/Browne area). Subtract 5–10 min for Spokane Valley/Liberty Lake.
                 </p>
               </div>
@@ -509,9 +509,9 @@ export default function CommuteTimesPage() {
                     { loc: 'Near the state line', vol: '~4,600 vehicles/hour' },
                     { loc: '2040 projected growth', vol: '10–20% across corridor' },
                   ].map((row, i) => (
-                    <tr key={row.loc} style={{ backgroundColor: i % 2 === 0 ? '#fff' : '#FAFAF8' }}>
-                      <td style={{ padding: '11px 16px', color: '#3A3530', borderBottom: '1px solid #F0EBE3' }}>{row.loc}</td>
-                      <td style={{ padding: '11px 16px', textAlign: 'right', fontWeight: 600, color: '#1C1A17', borderBottom: '1px solid #F0EBE3' }}>{row.vol}</td>
+                    <tr key={row.loc} style={{ backgroundColor: i % 2 === 0 ? '#2A2722' : '#1C1A17' }}>
+                      <td style={{ padding: '11px 16px', color: '#C8B99A', borderBottom: '1px solid #3A3530' }}>{row.loc}</td>
+                      <td style={{ padding: '11px 16px', textAlign: 'right', fontWeight: 600, color: '#FAFAF8', borderBottom: '1px solid #3A3530' }}>{row.vol}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -539,13 +539,13 @@ export default function CommuteTimesPage() {
                 </thead>
                 <tbody>
                   {fullCommuteTable.map((row, i) => (
-                    <tr key={row.town} style={{ backgroundColor: i % 2 === 0 ? '#fff' : '#FAFAF8' }}>
-                      <td style={{ padding: '10px 12px', fontWeight: 600, color: '#1C1A17', borderBottom: '1px solid #F0EBE3', whiteSpace: 'nowrap' }}>{row.town}</td>
-                      <td style={{ padding: '10px 12px', color: '#5C5650', borderBottom: '1px solid #F0EBE3', whiteSpace: 'nowrap' }}>{row.miles}</td>
-                      <td style={{ padding: '10px 12px', color: '#5C5650', borderBottom: '1px solid #F0EBE3', whiteSpace: 'nowrap' }}>{row.offPeak}</td>
-                      <td style={{ padding: '10px 12px', color: '#C4842A', fontWeight: 600, borderBottom: '1px solid #F0EBE3', whiteSpace: 'nowrap' }}>{row.amPeak}</td>
-                      <td style={{ padding: '10px 12px', color: '#C4842A', fontWeight: 600, borderBottom: '1px solid #F0EBE3', whiteSpace: 'nowrap' }}>{row.pmPeak}</td>
-                      <td style={{ padding: '10px 12px', color: '#9A9590', borderBottom: '1px solid #F0EBE3', fontSize: '12px' }}>{row.notes}</td>
+                    <tr key={row.town} style={{ backgroundColor: i % 2 === 0 ? '#2A2722' : '#1C1A17' }}>
+                      <td style={{ padding: '10px 12px', fontWeight: 600, color: '#FAFAF8', borderBottom: '1px solid #3A3530', whiteSpace: 'nowrap' }}>{row.town}</td>
+                      <td style={{ padding: '10px 12px', color: '#C8B99A', borderBottom: '1px solid #3A3530', whiteSpace: 'nowrap' }}>{row.miles}</td>
+                      <td style={{ padding: '10px 12px', color: '#C8B99A', borderBottom: '1px solid #3A3530', whiteSpace: 'nowrap' }}>{row.offPeak}</td>
+                      <td style={{ padding: '10px 12px', color: '#C4842A', fontWeight: 600, borderBottom: '1px solid #3A3530', whiteSpace: 'nowrap' }}>{row.amPeak}</td>
+                      <td style={{ padding: '10px 12px', color: '#C4842A', fontWeight: 600, borderBottom: '1px solid #3A3530', whiteSpace: 'nowrap' }}>{row.pmPeak}</td>
+                      <td style={{ padding: '10px 12px', color: '#9A9590', borderBottom: '1px solid #3A3530', fontSize: '12px' }}>{row.notes}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -749,7 +749,7 @@ export default function CommuteTimesPage() {
                 <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C4842A', margin: 0 }}>Quick Reference</p>
                 <p style={{ fontSize: '12px', color: '#9A9590', marginTop: '2px', marginBottom: 0 }}>Downtown Spokane · AM Peak</p>
               </div>
-              <div className="divide-y" style={{ backgroundColor: '#FAFAF8' }}>
+              <div className="divide-y" style={{ backgroundColor: '#2A2722' }}>
                 {[
                   { town: 'Post Falls', time: '35–45 min', miles: '20 mi' },
                   { town: "Coeur d'Alene", time: '40 min', miles: '32 mi' },
@@ -757,9 +757,9 @@ export default function CommuteTimesPage() {
                   { town: 'Rathdrum', time: '40–50 min', miles: '32 mi' },
                   { town: 'Sandpoint', time: '90–110 min', miles: '80 mi' },
                 ].map((row) => (
-                  <div key={row.town} className="flex items-center justify-between px-5 py-3" style={{ borderBottom: '1px solid #F0EBE3' }}>
+                  <div key={row.town} className="flex items-center justify-between px-5 py-3" style={{ borderBottom: '1px solid #3A3530' }}>
                     <div>
-                      <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', fontWeight: 600, color: '#1C1A17', margin: 0 }}>{row.town}</p>
+                      <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', fontWeight: 600, color: '#FAFAF8', margin: 0 }}>{row.town}</p>
                       <p style={{ fontSize: '11px', color: '#9A9590', margin: 0 }}>{row.miles}</p>
                     </div>
                     <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', fontWeight: 700, color: '#C4842A' }}>{row.time}</span>
@@ -778,7 +778,7 @@ export default function CommuteTimesPage() {
             </div>
 
             {/* Key facts */}
-            <div className="p-5 rounded-sm" style={{ border: '1px solid #E8DDD0', backgroundColor: '#FAFAF8' }}>
+            <div className="p-5 rounded-sm" style={{ border: '1px solid #3A3530', backgroundColor: '#2A2722' }}>
               <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C4842A', marginBottom: '14px' }}>Key Facts</p>
               <div className="space-y-3">
                 {[
@@ -788,16 +788,16 @@ export default function CommuteTimesPage() {
                   { label: '2040 traffic growth', value: '10–20% projected' },
                   { label: 'PM peak near Spokane', value: '~10,100 vehicles/hr' },
                 ].map((item) => (
-                  <div key={item.label} style={{ borderBottom: '1px solid #F0EBE3', paddingBottom: '10px' }}>
+                  <div key={item.label} style={{ borderBottom: '1px solid #3A3530', paddingBottom: '10px' }}>
                     <p style={{ fontSize: '11px', color: '#9A9590', margin: '0 0 2px 0' }}>{item.label}</p>
-                    <p style={{ fontSize: '13px', fontWeight: 600, color: '#1C1A17', margin: 0 }}>{item.value}</p>
+                    <p style={{ fontSize: '13px', fontWeight: 600, color: '#FAFAF8', margin: 0 }}>{item.value}</p>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Related articles */}
-            <div className="p-5 rounded-sm" style={{ border: '1px solid #E8DDD0', backgroundColor: '#FAFAF8' }}>
+            <div className="p-5 rounded-sm" style={{ border: '1px solid #3A3530', backgroundColor: '#2A2722' }}>
               <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C4842A', marginBottom: '14px' }}>Related Articles</p>
               <div className="space-y-3">
                 {[
@@ -807,7 +807,7 @@ export default function CommuteTimesPage() {
                   { href: '/articles/north-idaho-property-taxes-county-comparison', label: 'Property Taxes by County' },
                   { href: '/articles/buying-property-prairie-wells-septic-roads', label: 'Wells, Septic & County Roads' },
                 ].map((link) => (
-                  <a key={link.href} href={link.href} style={{ display: 'block', fontSize: '13px', color: '#C4842A', textDecoration: 'none', paddingBottom: '10px', borderBottom: '1px solid #F0EBE3' }}>
+                  <a key={link.href} href={link.href} style={{ display: 'block', fontSize: '13px', color: '#C4842A', textDecoration: 'none', paddingBottom: '10px', borderBottom: '1px solid #3A3530' }}>
                     {link.label} →
                   </a>
                 ))}

@@ -415,14 +415,14 @@ export default function NARSettlementPage() {
                 </thead>
                 <tbody>
                   {narStats.map((row, i) => (
-                    <tr key={row.stat} style={{ backgroundColor: i % 2 === 0 ? '#fff' : '#FAFAF8' }}>
-                      <td style={{ padding: '11px 16px', color: '#3A3530', borderBottom: '1px solid #F0EBE3' }}>{row.stat}</td>
-                      <td style={{ padding: '11px 16px', textAlign: 'right', fontWeight: 700, color: '#1C1A17', borderBottom: '1px solid #F0EBE3', whiteSpace: 'nowrap' }}>{row.value}</td>
+                    <tr key={row.stat} style={{ backgroundColor: i % 2 === 0 ? '#2A2722' : '#1C1A17' }}>
+                      <td style={{ padding: '11px 16px', color: '#C8B99A', borderBottom: '1px solid #3A3530' }}>{row.stat}</td>
+                      <td style={{ padding: '11px 16px', textAlign: 'right', fontWeight: 700, color: '#FAFAF8', borderBottom: '1px solid #3A3530', whiteSpace: 'nowrap' }}>{row.value}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
-              <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', color: '#9A9590', padding: '10px 16px', margin: 0, backgroundColor: '#FAFAF8' }}>
+              <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', color: '#9A9590', padding: '10px 16px', margin: 0, backgroundColor: '#1C1A17' }}>
                 Source: NAR 2025 Profile of Home Buyers and Sellers, released November 4, 2025.
               </p>
             </div>
@@ -512,13 +512,13 @@ export default function NARSettlementPage() {
             </h2>
             <div className="space-y-4 mb-10">
               {threePaths.map((path) => (
-                <div key={path.label} className="p-6 rounded-sm" style={{ border: path.highlight ? '2px solid #C4842A' : '1px solid #E8DDD0', backgroundColor: path.highlight ? '#FDF8F2' : '#FAFAF8' }}>
+                <div key={path.label} className="p-6 rounded-sm" style={{ border: path.highlight ? '2px solid #C4842A' : '1px solid #3A3530', backgroundColor: path.highlight ? '#1C1A17' : '#2A2722' }}>
                   <div className="flex items-center gap-3 mb-3">
                     <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '10px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#FAFAF8', backgroundColor: '#C4842A', padding: '3px 8px', borderRadius: '2px' }}>{path.label}</span>
                     {path.highlight && <span style={{ fontSize: '11px', color: '#C4842A', fontWeight: 600 }}>88% of buyers · 91% satisfaction</span>}
                   </div>
-                  <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '18px', fontWeight: 600, color: '#1C1A17', marginBottom: '8px' }}>{path.title}</p>
-                  <p style={{ fontSize: '14px', color: '#5C5650', margin: 0, lineHeight: 1.75 }}>{path.body}</p>
+                  <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '18px', fontWeight: 600, color: '#FAFAF8', marginBottom: '8px' }}>{path.title}</p>
+                  <p style={{ fontSize: '14px', color: '#C8B99A', margin: 0, lineHeight: 1.75 }}>{path.body}</p>
                 </div>
               ))}
             </div>
@@ -582,7 +582,7 @@ export default function NARSettlementPage() {
                 <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C4842A', margin: 0 }}>By the Numbers</p>
                 <p style={{ fontSize: '12px', color: '#9A9590', marginTop: '2px', marginBottom: 0 }}>NAR 2025 · Post-Settlement</p>
               </div>
-              <div style={{ backgroundColor: '#FAFAF8' }}>
+              <div style={{ backgroundColor: '#2A2722' }}>
                 {[
                   { num: '88%', label: 'of buyers still use an agent' },
                   { num: '91%', label: 'would use their agent again' },
@@ -591,9 +591,9 @@ export default function NARSettlementPage() {
                   { num: '$12–18K', label: 'potential savings on $600K home' },
                   { num: 'Aug 17', label: '2024 — settlement effective date' },
                 ].map((item) => (
-                  <div key={item.label} className="flex items-center gap-4 px-5 py-3" style={{ borderBottom: '1px solid #F0EBE3' }}>
+                  <div key={item.label} className="flex items-center gap-4 px-5 py-3" style={{ borderBottom: '1px solid #3A3530' }}>
                     <span style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '20px', fontWeight: 700, color: '#C4842A', minWidth: '68px', flexShrink: 0 }}>{item.num}</span>
-                    <span style={{ fontSize: '12px', color: '#5C5650' }}>{item.label}</span>
+                    <span style={{ fontSize: '12px', color: '#C8B99A' }}>{item.label}</span>
                   </div>
                 ))}
               </div>
@@ -609,20 +609,20 @@ export default function NARSettlementPage() {
             </div>
 
             {/* BRA checklist */}
-            <div className="p-5 rounded-sm" style={{ border: '1px solid #E8DDD0', backgroundColor: '#FAFAF8' }}>
+            <div className="p-5 rounded-sm" style={{ border: '1px solid #3A3530', backgroundColor: '#2A2722' }}>
               <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C4842A', marginBottom: '14px' }}>BRA — What to Check</p>
               <div className="space-y-3">
                 {['Fee structure (flat, hourly, or %)', 'Term length — negotiate short', 'Early termination clause', 'Holdover clause length', 'Double-commission scenarios', 'Property scope — limit to one if needed'].map((item) => (
-                  <div key={item} className="flex gap-2" style={{ borderBottom: '1px solid #F0EBE3', paddingBottom: '10px' }}>
+                  <div key={item} className="flex gap-2" style={{ borderBottom: '1px solid #3A3530', paddingBottom: '10px' }}>
                     <span style={{ color: '#C4842A', flexShrink: 0, fontSize: '14px' }}>✓</span>
-                    <span style={{ fontSize: '12px', color: '#5C5650' }}>{item}</span>
+                    <span style={{ fontSize: '12px', color: '#C8B99A' }}>{item}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Related articles */}
-            <div className="p-5 rounded-sm" style={{ border: '1px solid #E8DDD0', backgroundColor: '#FAFAF8' }}>
+            <div className="p-5 rounded-sm" style={{ border: '1px solid #3A3530', backgroundColor: '#2A2722' }}>
               <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C4842A', marginBottom: '14px' }}>Related Articles</p>
               <div className="space-y-3">
                 {[
@@ -632,7 +632,7 @@ export default function NARSettlementPage() {
                   { href: '/articles/north-idaho-property-taxes-county-comparison', label: 'Property Taxes by County' },
                   { href: '/articles/north-idaho-to-spokane-commute-times', label: 'Commute Times to Spokane by Town' },
                 ].map((link) => (
-                  <a key={link.href} href={link.href} style={{ display: 'block', fontSize: '13px', color: '#C4842A', textDecoration: 'none', paddingBottom: '10px', borderBottom: '1px solid #F0EBE3' }}>
+                  <a key={link.href} href={link.href} style={{ display: 'block', fontSize: '13px', color: '#C4842A', textDecoration: 'none', paddingBottom: '10px', borderBottom: '1px solid #3A3530' }}>
                     {link.label} →
                   </a>
                 ))}
