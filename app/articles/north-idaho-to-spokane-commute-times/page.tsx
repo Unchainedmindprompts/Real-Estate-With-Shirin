@@ -819,7 +819,7 @@ export default function CommuteTimesPage() {
       </section>
 
       {/* FAQ */}
-      <section style={{ backgroundColor: '#1C1A17', paddingTop: '64px', paddingBottom: '80px' }}>
+      <section style={{ backgroundColor: '#2A2722', paddingTop: '64px', paddingBottom: '80px' }}>
         <div className="max-w-3xl mx-auto px-6">
           <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#C4842A', marginBottom: '12px', textAlign: 'center' }}>FAQ</p>
           <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: 'clamp(28px, 4vw, 40px)', color: '#FAFAF8', textAlign: 'center', marginBottom: '48px', lineHeight: 1.15 }}>
