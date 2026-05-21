@@ -700,7 +700,7 @@ export default function CommuteTimesPage() {
             {/* Sources */}
             <div className="mb-10 p-5 rounded-sm" style={{ backgroundColor: '#F5EFE6', border: '1px solid #E8DDD0' }}>
               <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#9A9590', marginBottom: '12px' }}>Primary Sources</p>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, space: '8px' }} className="space-y-2">
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }} className="space-y-2">
                 {[
                   { label: 'Idaho Transportation Department Traffic Data Program', url: 'https://itd.idaho.gov/traffic-data/' },
                   { label: 'Idaho 511 — Real-time road conditions', url: 'https://511.idaho.gov' },
