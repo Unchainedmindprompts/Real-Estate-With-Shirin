@@ -154,7 +154,7 @@ const faqSchema = {
       name: "How much does it cost to live in Coeur d'Alene compared to Seattle?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Coeur d'Alene runs roughly 14–16% cheaper than Seattle overall on the Bureau of Economic Analysis Regional Price Parity scale (97.5 vs 113). The savings are most pronounced in housing (35% cheaper on median home value), property tax (40–50% cheaper), and home insurance (Idaho averages $1,673/yr vs Washington's $1,800–2,400 depending on zone). Gasoline runs slightly more expensive in Idaho. State income tax favors Idaho at the high end of the income scale (5.695% top rate vs Washington's no income tax but 9.5%+ sales tax and capital gains tax on high earners).",
+        text: "Coeur d'Alene runs roughly 14–16% cheaper than Seattle overall on the Bureau of Economic Analysis Regional Price Parity scale (97.5 vs 113). The savings are most pronounced in housing (35% cheaper on median home value), property tax (40–50% cheaper), and home insurance (Idaho averages $1,673/yr vs Washington's $1,800–2,400 depending on zone). Gasoline is cheaper in Idaho than Washington — Washington's carbon pricing adds roughly $0.35–0.50/gallon. State income tax favors Idaho at the high end of the income scale (5.695% top rate vs Washington's no income tax but 9.5%+ sales tax and capital gains tax on high earners).",
       },
     },
     {
@@ -186,7 +186,7 @@ const faqSchema = {
       name: "How much should I budget for a typical Coeur d'Alene household?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "For a two-adult, two-child household in Coeur d'Alene with a $600,000 home and 20% down at current 6.5% mortgage rates, realistic 2026 annual fixed costs run approximately $67,500 — that covers mortgage principal and interest (~$36,400), property tax (~$2,150), home insurance (~$1,673), utilities (~$3,600), groceries for four (~$13,200), gasoline for two vehicles (~$4,510), and employer-shared healthcare premiums (~$6,000). Discretionary spending, childcare, savings, and vehicle replacement run on top of that base. The same household profile in Seattle would run approximately $115,000–125,000 on the same line items.",
+        text: "For a two-adult, two-child household in Coeur d'Alene with a $600,000 home and 20% down at current 6.5% mortgage rates, realistic 2026 annual fixed costs run approximately $66,300 — that covers mortgage principal and interest (~$36,400), property tax (~$2,150), home insurance (~$1,673), utilities (~$3,600), groceries for four (~$13,200), gasoline for two vehicles (~$3,264), and employer-shared healthcare premiums (~$6,000). Discretionary spending, childcare, savings, and vehicle replacement run on top of that base. The same household profile in Seattle would run approximately $115,000–125,000 on the same line items.",
       },
     },
     {
@@ -251,7 +251,7 @@ const budgetItems = [
   { label: 'Mortgage P&I (20% down, 6.5%)', annual: 36400, pct: 54 },
   { label: 'Groceries (4 people)', annual: 13200, pct: 20 },
   { label: 'Healthcare premiums (employer-shared)', annual: 6000, pct: 9 },
-  { label: 'Gasoline (2 vehicles, 24K mi)', annual: 4510, pct: 7 },
+  { label: 'Gasoline (2 vehicles, 24K mi)', annual: 3264, pct: 5 },
   { label: 'Utilities (electric/gas/water/internet/garbage)', annual: 3600, pct: 5 },
   { label: 'Property tax (after homeowner\'s exemption)', annual: 2150, pct: 3 },
   { label: 'Home insurance', annual: 1673, pct: 2 },
@@ -272,7 +272,7 @@ const faqs = [
   },
   {
     q: "How much does it cost to live in Coeur d'Alene compared to Seattle?",
-    a: "Coeur d'Alene runs roughly 14–16% cheaper than Seattle overall on the BEA Regional Price Parity scale (97.5 vs 113). The savings are most pronounced in housing (35% cheaper on median value), property tax (40–50% cheaper), and home insurance ($1,673/yr vs Washington's $1,800–2,400). Gasoline runs slightly more expensive in Idaho. State income tax favors Idaho at the high end of the income scale (5.695% top rate vs Washington's no income tax but 9.5%+ sales tax and capital gains tax on high earners).",
+    a: "Coeur d'Alene runs roughly 14–16% cheaper than Seattle overall on the BEA Regional Price Parity scale (97.5 vs 113). The savings are most pronounced in housing (35% cheaper on median value), property tax (40–50% cheaper), and home insurance ($1,673/yr vs Washington's $1,800–2,400). Gasoline is also cheaper in Idaho — Washington's carbon pricing adds roughly $0.35–0.50/gallon. State income tax favors Idaho at the high end of the income scale (5.695% top rate vs Washington's no income tax but 9.5%+ sales tax and capital gains tax on high earners).",
   },
   {
     q: 'What is the average home price in Kootenai County in 2026?',
@@ -288,7 +288,7 @@ const faqs = [
   },
   {
     q: "How much should I budget for a typical Coeur d'Alene household?",
-    a: "For a two-adult, two-child household with a $600,000 home and 20% down at 6.5%, realistic 2026 annual fixed costs run approximately $67,500 — covering mortgage P&I (~$36,400), property tax (~$2,150), insurance (~$1,673), utilities (~$3,600), groceries for four (~$13,200), gasoline for two vehicles (~$4,510), and employer-shared healthcare (~$6,000). The same profile in Seattle runs approximately $115,000–125,000.",
+    a: "For a two-adult, two-child household with a $600,000 home and 20% down at 6.5%, realistic 2026 annual fixed costs run approximately $66,300 — covering mortgage P&I (~$36,400), property tax (~$2,150), insurance (~$1,673), utilities (~$3,600), groceries for four (~$13,200), gasoline for two vehicles (~$3,264), and employer-shared healthcare (~$6,000). The same profile in Seattle runs approximately $115,000–125,000.",
   },
   {
     q: 'Is North Idaho a good move financially for retirees?',
@@ -606,7 +606,7 @@ export default function CostOfLivingArticlePage() {
               </h2>
               <p className="mb-6">
                 <a href="https://gasprices.aaa.com/?state=ID" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">AAA Fuel Prices</a>{' '}
-                shows Idaho&apos;s average at <strong className="text-[#1C1A17]">$4.698 per gallon</strong> as of May 20, 2026, versus a national average of $4.555 — Idaho runs slightly above national primarily because of limited regional refinery capacity and trucking distances from West Coast supply. For a two-car household driving 24,000 miles per year at 25 MPG combined, that translates to roughly <strong className="text-[#1C1A17]">$4,510/year in fuel</strong> at current Idaho prices.
+                shows Idaho&apos;s average at <strong className="text-[#1C1A17]">$3.20–3.50 per gallon</strong> (2025–2026 range), meaningfully cheaper than Washington (~$4.00–4.50) and California (~$4.50–5.00+). Washington&apos;s Climate Commitment Act carbon pricing adds roughly $0.35–0.50/gallon on top of its already-higher base fuel taxes. California adds its own carbon program and excise taxes that push pump prices to among the highest in the country. For a two-car household driving 24,000 miles per year at 25 MPG combined, Idaho fuel costs run roughly <strong className="text-[#1C1A17]">$3,100–3,400/year</strong> — versus $3,800–4,300 in Washington and $4,300–4,800 in California at comparable usage.
               </p>
               <p className="mb-10">
                 Vehicle registration is modest — passenger car registration runs $45–110 depending on vehicle age — and there is no annual emissions inspection in any of the five panhandle counties. Public transit in North Idaho is limited: Citylink operates a free fixed-route system across Kootenai County, but outside Kootenai, buyers should plan on car ownership.
@@ -679,7 +679,7 @@ export default function CostOfLivingArticlePage() {
                   ))}
                   <div className="px-6 py-4 flex items-center justify-between">
                     <span className="font-dm-sans text-sm font-semibold text-[#9A9590] uppercase tracking-wide">Subtotal fixed costs</span>
-                    <span className="font-cormorant text-2xl text-[#C4842A] font-semibold">~$67,500</span>
+                    <span className="font-cormorant text-2xl text-[#C4842A] font-semibold">~$66,300</span>
                   </div>
                 </div>
                 <div className="px-6 py-3 border-t border-[#2C2A27]">
@@ -698,7 +698,7 @@ export default function CostOfLivingArticlePage() {
                 {[
                   {
                     market: 'Seattle metro',
-                    summary: 'North Idaho saves roughly 30–40% on housing, 40–50% on property tax, 5–10% on most other categories. Gasoline is slightly more expensive in Idaho than Washington.',
+                    summary: "North Idaho saves roughly 30–40% on housing, 40–50% on property tax, 5–10% on most other categories. Gasoline is cheaper in Idaho than Washington — Washington's carbon pricing adds $0.35–0.50/gallon at the pump.",
                   },
                   {
                     market: 'California (statewide)',
@@ -805,7 +805,7 @@ export default function CostOfLivingArticlePage() {
                   <div className="space-y-3">
                     {[
                       { label: 'Avista electricity', value: '~$112/mo' },
-                      { label: 'Idaho gas (AAA, May 2026)', value: '$4.698/gal' },
+                      { label: 'Idaho gas vs Washington', value: '$0.35–0.50/gal cheaper' },
                       { label: 'Groceries per person (BEA)', value: '$318/mo' },
                       { label: 'Home insurance (statewide avg)', value: '$1,673/yr' },
                       { label: 'Childcare (center-based)', value: '$728–1,002/mo' },
