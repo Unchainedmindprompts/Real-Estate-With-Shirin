@@ -112,6 +112,9 @@ export default function HomePage() {
           'https://www.yelp.com/biz/shirin-abplanalp-exp-realty-post-falls',
           'https://www.instagram.com/dreamlifeinidaho',
           'https://www.facebook.com/ShirinRealty',
+          'https://www.realty.com/a/Shirin-Abplanalp-1777925821520',
+          'https://www.linkedin.com/in/shirinrealty/',
+          'https://members.cdarealtors.com/directory/Details/shirin-abplanalp-4150054',
         ],
       })}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
