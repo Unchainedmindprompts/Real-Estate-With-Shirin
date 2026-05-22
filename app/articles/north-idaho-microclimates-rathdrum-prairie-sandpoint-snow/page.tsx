@@ -378,7 +378,7 @@ export default function MicroClimatesArticlePage() {
             <article className="lg:col-span-2 font-dm-sans text-[#5C5650] text-[17px] leading-[1.75]">
 
               <p className="mb-6">
-                The Rathdrum Prairie — Post Falls, Rathdrum, Hayden, and the flatter parts of Coeur d&apos;Alene — averages roughly <strong className="text-[#1C1A17]">40–45 inches of snow per year</strong>, with most of it melting between storms. Drive 45 minutes north into Bonner County and Sandpoint, and you&apos;re suddenly in a different climate zone: <strong className="text-[#1C1A17]">80 to 90 inches a year</strong> at lake level, snow that often stays on the ground from mid-December through early March, and a{' '}
+                The Rathdrum Prairie — Post Falls, Rathdrum, Hayden, and the flatter parts of Coeur d&apos;Alene — averages roughly <strong className="text-[#1C1A17]">40–45 inches of snow per year</strong>, with most of it melting between storms. Drive 45 minutes north into Bonner County and <a href="https://lifestylenorthrealty.com/blog/living-in-sandpoint-idaho" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Sandpoint</a>, and you&apos;re suddenly in a different climate zone: <strong className="text-[#1C1A17]">80 to 90 inches a year</strong> at lake level, snow that often stays on the ground from mid-December through early March, and a{' '}
                 <a href="https://www.schweitzer.com/discover-schweitzer/stats-and-info" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Schweitzer Mountain summit that pulls in roughly 300 inches annually</a>.
               </p>
               <p className="mb-10">
