@@ -94,6 +94,7 @@ export default function HomePage() {
         'memberOf': [
           { '@type': 'Organization', 'name': 'National Association of REALTORS®', 'url': 'https://www.nar.realtor', 'sameAs': 'https://en.wikipedia.org/wiki/National_Association_of_Realtors' },
           { '@type': 'Organization', 'name': "Coeur d'Alene Association of REALTORS®", 'url': 'https://cdarealtors.com' },
+          { '@type': 'RealEstateAgent', '@id': 'https://lifestylenorthrealty.com/#team', 'name': 'Lifestyle North Realty Group', 'url': 'https://lifestylenorthrealty.com/', 'sameAs': 'https://lifestylenorthrealty.com/agent/shirin-abplanalp/', 'parentOrganization': { '@id': 'https://www.exprealty.com/#organization' }, 'address': { '@type': 'PostalAddress', 'streetAddress': '510 S Clearwater Loop, Suite 100', 'addressLocality': 'Post Falls', 'addressRegion': 'ID', 'postalCode': '83854', 'addressCountry': 'US' } },
         ],
         'hasCredential': [
           { '@type': 'EducationalOccupationalCredential', 'credentialCategory': 'Real Estate License', 'identifier': '1371861', 'recognizedBy': { '@type': 'GovernmentOrganization', 'name': 'Idaho Real Estate Commission', 'url': 'https://irec.idaho.gov' } },
@@ -106,6 +107,7 @@ export default function HomePage() {
           'https://www.zillow.com/profile/dreamlifeinidaho',
           'https://www.realtor.com/realestateagents/6852257644eab0a63cfd80af',
           'https://www.homes.com/real-estate-agents/shirin-abplanalp/j7j2jr7/',
+          'https://lifestylenorthrealty.com/agent/shirin-abplanalp/',
         ],
       })}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
