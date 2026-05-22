@@ -422,7 +422,7 @@ export default function SnowestCitiesArticlePage() {
             <article className="lg:col-span-2 font-dm-sans text-[#5C5650] text-[17px] leading-[1.75]">
 
               <p className="mb-6">
-                Ask two people how much it snows in North Idaho and you&apos;ll get two different answers — because they&apos;re probably living in two different climates without knowing it. A buyer who landed in Post Falls will tell you winter is mild, manageable, nothing like what they expected. A buyer who bought a few acres north of <a href="https://lifestylenorthrealty.com/blog/living-in-sandpoint-idaho" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Sandpoint</a> might tell you they didn&apos;t realize what they were signing up for.
+                Ask two people how much it snows in North Idaho and you&apos;ll get two different answers — because they&apos;re probably living in two different climates without knowing it. A buyer who landed in Post Falls will tell you winter is mild, manageable, nothing like what they expected. A buyer who bought a few acres north of <a href="https://lifestylenorthrealty.com/blog/living-in-sandpoint-idaho" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Sandpoint</a>{' '}might tell you they didn&apos;t realize what they were signing up for.
               </p>
               <p className="mb-10">
                 Both are right. North Idaho spans roughly 100 miles from the Rathdrum Prairie to the Canadian border, and snowfall across that distance triples. This ranking pulls from{' '}
