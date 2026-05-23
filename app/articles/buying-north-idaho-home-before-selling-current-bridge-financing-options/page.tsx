@@ -354,7 +354,7 @@ export default function BridgeFinancingArticlePage() {
               {/* Strategy 2 */}
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">Strategy #2: The 401(k) Loan</h2>
               <p className="mb-6">
-                This one&apos;s different. Not a withdrawal — an actual loan from your own account, where you pay yourself back with interest. Here&apos;s what the IRS says you can borrow ({' '}
+                This one&apos;s different. Not a withdrawal — an actual loan from your own account, where you pay yourself back with interest. It won&apos;t fund a whole purchase, but it&apos;s a useful way to boost a down payment or bridge a short gap. Here&apos;s what the IRS says you can borrow ({' '}
                 <a href="https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-loans" target="_blank" rel="noopener noreferrer" className={linkClass}>IRS: Retirement Topics – Plan Loans</a>):
               </p>
               <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -363,10 +363,13 @@ export default function BridgeFinancingArticlePage() {
                 <li><strong className="text-[#1C1A17]">Primary-residence exception:</strong> the law allows a longer repayment window when the loan is used to buy a primary residence — some plans extend it to 10, 15, even 25 years (check with your administrator)</li>
               </ul>
               <p className="mb-6">
+                Here&apos;s the honest limitation, and it&apos;s a real one: $50,000 won&apos;t buy a North Idaho house — on a $600,000 home it&apos;s a slice, not the meal. Two things make it matter anyway. First, the cap is <strong className="text-[#1C1A17]">per person</strong>, so a married couple can each borrow against their own 401(k) — roughly <strong className="text-[#1C1A17]">$100,000 combined</strong>. Second, it&apos;s a down-payment booster, not whole-house funding: $50&ndash;100K can be exactly what lets you put 20% down and make a clean, non-contingent offer, then repay the loan when your current home sells. It&apos;s most powerful stacked with a HELOC or a recast — rarely the right move on its own.
+              </p>
+              <p className="mb-6">
                 The thing people get wrong: old advice said if you leave your job you have 60 days to repay or it becomes taxable. The Tax Cuts and Jobs Act of 2017 changed that. Now you have until the due date of your federal tax return (including extensions) for the year the loan was deemed distributed — potentially until October 15 of the following year — to repay it or roll the offset into an IRA. It used to be a 60-day panic; now it&apos;s a structured runway.
               </p>
-              <p className="mb-2"><strong className="text-[#1C1A17]">Who this works for:</strong> you&apos;re employed and staying employed, and you want retirement money without starting the IRA-rollover clock. The primary-residence exception is the big draw.</p>
-              <p className="mb-10"><strong className="text-[#1C1A17]">Who this doesn&apos;t work for:</strong> self-employed buyers with no 401(k), or anyone planning to leave their job mid-loan.</p>
+              <p className="mb-2"><strong className="text-[#1C1A17]">Who this works for:</strong> couples who can each tap a 401(k) to assemble a stronger down payment, or anyone boosting a down payment or bridging a short gap without starting the IRA-rollover clock. Best used alongside another strategy, not as your only one.</p>
+              <p className="mb-10"><strong className="text-[#1C1A17]">Who this doesn&apos;t work for:</strong> self-employed buyers with no 401(k), anyone planning to leave their job mid-loan, or anyone expecting $50K to fund the whole purchase.</p>
 
               {/* Strategy 3 */}
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">Strategy #3: The Bridge Loan</h2>
