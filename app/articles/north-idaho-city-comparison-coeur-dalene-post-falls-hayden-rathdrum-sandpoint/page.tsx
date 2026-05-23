@@ -485,7 +485,7 @@ export default function CityComparisonArticlePage() {
                 Sandpoint — the mountain town
               </h2>
               <p className="mb-6">
-                Sandpoint is in a different conversation than the other four. It&apos;s an hour and a half north of Coeur d&apos;Alene. It&apos;s on Lake Pend Oreille (1,158 feet deep, the fifth-deepest lake in the country). It has Schweitzer Mountain Resort 11 miles up the road. It gets 80–100+ inches of snow a year. And it has the highest &ldquo;I came here for vacation and never left&rdquo; rate of any town in North Idaho.
+                Sandpoint is in a different conversation than the other four. It&apos;s an hour and a half north of Coeur d&apos;Alene. It&apos;s on Lake Pend Oreille (1,158 feet deep, the fifth-deepest lake in the country). It has Schweitzer Mountain Resort 11 miles up the road — which averages roughly 300 inches of snow a year at the summit. The town of Sandpoint itself gets 80–100+ inches a year. And it has the highest &ldquo;I came here for vacation and never left&rdquo; rate of any town in North Idaho.
               </p>
               <p className="mb-6">
                 $634,657 typical home value, 1.8% appreciation, 39 days to pending — the slowest market of the five cities, which means buyers who do their homework can find genuine value here. The{' '}
