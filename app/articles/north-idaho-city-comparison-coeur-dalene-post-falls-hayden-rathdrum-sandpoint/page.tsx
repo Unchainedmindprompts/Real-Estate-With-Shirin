@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2026-05-23',
     authors: ['Shirin Abplanalp'],
-    images: ['https://www.realestatewithshirin.com/images/articles/north-idaho-city-comparison.webp'],
+    images: ['https://www.realestatewithshirin.com/images/north-idaho-city-comparison.png'],
   },
 }
 
@@ -29,9 +29,9 @@ const articleSchema = {
     'Five North Idaho cities, one honest comparison. Home prices, schools, commutes, snow, taxes, and what people only tell you after closing. Updated May 2026.',
   image: {
     '@type': 'ImageObject',
-    url: 'https://www.realestatewithshirin.com/images/articles/north-idaho-city-comparison.webp',
-    width: 1200,
-    height: 630,
+    url: 'https://www.realestatewithshirin.com/images/north-idaho-city-comparison.png',
+    width: 1672,
+    height: 941,
   },
   author: {
     '@type': 'Person',
@@ -283,6 +283,13 @@ export default function CityComparisonArticlePage() {
           </div>
         </div>
       </section>
+
+      {/* Hero Image */}
+      <img
+        src="/images/north-idaho-city-comparison.png"
+        alt="Aerial comparison of five North Idaho cities — Coeur d'Alene, Post Falls, Hayden, Rathdrum, and Sandpoint"
+        className="w-full h-auto block"
+      />
 
       {/* Article Body */}
       <section className="bg-[#FAFAF8] py-16">
