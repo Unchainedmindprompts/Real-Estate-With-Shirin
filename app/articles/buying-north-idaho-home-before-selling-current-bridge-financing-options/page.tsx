@@ -182,7 +182,7 @@ const faqSchema = {
       name: "What's the first step if I've found my Idaho home but haven't sold my current one?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Call a North Idaho REALTOR® before making an offer. Map out the financing options, identify which strategy fits the situation, and structure the offer to give the best shot at the house without overcommitting financially. Buyers who lose homes in this market almost always lost them because they tried to figure out the financing piece after making an offer instead of before.',
+        text: "Get familiar with these options early and talk them through with your lender and CPA before you make an offer — they'll tell you which path fits your taxes and accounts. Your REALTOR®'s role is the real estate side: structuring the offer and closing timeline around the path you choose so the house doesn't slip away on a technicality. Buyers who lose homes in this market usually didn't know these options existed until it was too late.",
       },
     },
   ],
@@ -294,10 +294,13 @@ export default function BridgeFinancingArticlePage() {
                 It usually goes something like this: &ldquo;Shirin, we found <em>the</em>{' '}house. The one with the view, the workshop, the right neighborhood — everything we&apos;ve been looking for. But our place in San Jose isn&apos;t on the market yet, and we don&apos;t want to carry two mortgages. What do we do?&rdquo;
               </p>
               <p className="mb-6">
-                Here&apos;s what I tell them: <strong className="text-[#1C1A17]">deep breath.</strong>{' '}You have more options than you think. And most of them are options your California financial advisor has never thought about, because they don&apos;t deal with people buying second homes in Coeur d&apos;Alene every week. I do.
+                Here&apos;s what I tell them: <strong className="text-[#1C1A17]">deep breath.</strong>{' '}You have more options than you think — and most buyers don&apos;t know that five of them even exist until they&apos;re already in a bind.
+              </p>
+              <p className="mb-6">
+                Let me be clear about my lane: I&apos;m a REALTOR®, not a CPA or a financial advisor, and I won&apos;t pretend to be one. I don&apos;t map out your finances and I don&apos;t tell you which account to pull from. What I&apos;ve seen is a lot of out-of-state buyers navigate this exact gap — and the ones who walk in already aware of their options do far better than the ones scrambling six weeks too late. The whole point of this article is awareness, so you can take the strategies that fit your situation to your own CPA and lender with a head start.
               </p>
               <p className="mb-10">
-                So let&apos;s walk through this. Seven real strategies — what works, what doesn&apos;t, what the IRS actually says (not what your brother-in-law thinks they said), and how to make a move from out of state without losing your mind or the house.
+                So let&apos;s walk through this. Seven real strategies — what works, what doesn&apos;t, what the IRS actually says (not what your brother-in-law thinks they said), and how to make a move from out of state without losing your mind or the house. None of these are decisions you make alone, and none are ones I make for you — they&apos;re options to put on the table with the professionals who handle your money.
               </p>
 
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">First, why this even matters</h2>
@@ -445,15 +448,15 @@ export default function BridgeFinancingArticlePage() {
               <p className="mb-6">
                 Honest answer: it depends — on your equity, your timeline, your retirement balances, your tax situation, whether your current home is already listed, and a dozen other factors. The right strategy for someone selling a paid-off house in Seattle is completely different from someone selling a leveraged condo in San Diego, which is different again from a couple pulling from a Roth and a 401(k) at the same time.
               </p>
-              <p className="mb-4 font-semibold text-[#1C1A17]">What I do for my buyers:</p>
+              <p className="mb-4 font-semibold text-[#1C1A17]">How to actually use this list:</p>
               <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li>We map out your full financial picture (with your CPA looped in if needed — I work with your team, not around them)</li>
-                <li>We identify the two or three strategies that fit your situation</li>
-                <li>I connect you directly with North Idaho lenders I&apos;ve worked with for years who specialize in these structures — you talk to the lender directly, I make sure the right person is matched to your situation</li>
-                <li>We build the offer around the financing reality so you don&apos;t lose the house on a technicality</li>
+                <li>Pick the two or three strategies that sound like they could fit your situation</li>
+                <li>Run them by <strong className="text-[#1C1A17]">your CPA and your lender</strong> — they&apos;ll tell you what actually works for your taxes, your accounts, and your loan. That&apos;s their lane, not mine.</li>
+                <li>If it helps, I&apos;m glad to point you toward local lenders who handle these structures — but you talk to them directly, and the financial call is yours and your advisors&apos;</li>
+                <li>Once you and your team land on a path, I build the offer and closing timeline around it so you don&apos;t lose the house on a technicality — that part is my job</li>
               </ul>
               <p className="mb-10">
-                The buyers who lose their dream home in North Idaho usually lose it because they tried to figure all of this out on their own, six weeks too late. The ones who get the house usually called me first.
+                The buyers who lose their dream home in North Idaho usually lose it because they didn&apos;t know these options existed until it was six weeks too late. The ones who get the house knew their choices going in.
               </p>
 
               {/* Disclaimers */}
@@ -479,7 +482,7 @@ export default function BridgeFinancingArticlePage() {
               {/* Closing */}
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-14 mb-5 font-semibold">Ready to make a move?</h2>
               <p className="mb-6">
-                If you&apos;ve found a home and need to talk through how to actually close on it without selling your current place first, let&apos;s talk. I&apos;ll walk you through your options, get my local lender contacts on the phone with you when it makes sense, and help you build an offer that fits your real-life financial timeline — not a generic one. You found the house. Let&apos;s not lose it.
+                If you&apos;ve found a home and you&apos;re trying to figure out how to close on it without selling your current place first, let&apos;s talk. I&apos;ll make sure you know which options exist, point you toward local lenders worth a conversation, and — once you and your financial team settle on an approach — structure your offer and timeline so the house doesn&apos;t slip away on a technicality. You found the house. Let&apos;s not lose it.
               </p>
               <p className="mb-2 text-[15px] text-[#9A9590]">
                 Shirin Abplanalp is a licensed Idaho REALTOR® with{' '}
@@ -496,7 +499,7 @@ export default function BridgeFinancingArticlePage() {
                 {/* CTA */}
                 <div className="bg-[#C4842A] rounded-sm p-6">
                   <p className="font-cormorant text-2xl text-white font-semibold mb-2">Found the house, haven&apos;t sold yours?</p>
-                  <p className="font-dm-sans text-sm text-white/90 mb-4 leading-relaxed">Let&apos;s map your options before you make an offer — and loop in my local lender contacts when it makes sense.</p>
+                  <p className="font-dm-sans text-sm text-white/90 mb-4 leading-relaxed">I&apos;ll make sure you know your options and structure the offer around whatever path you and your lender choose.</p>
                   <a href="/contact" className="block text-center bg-[#1C1A17] hover:bg-[#2C2A27] text-white font-dm-sans font-semibold text-sm py-3 px-4 transition-colors">
                     Schedule a call →
                   </a>
