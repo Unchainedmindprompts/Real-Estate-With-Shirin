@@ -390,7 +390,7 @@ export default function CityComparisonArticlePage() {
                 Post Falls is the city most relocating buyers underestimate, and it&apos;s the one I find myself recommending the most. The numbers tell the story. $530,937 typical home value — the lowest of the five cities. 10 days to pending — the fastest, by a wide margin. 1.5% appreciation over the last year — the slowest, which sounds bad until you realize it means the market is <em>stabilizing</em>, not stagnating, while inventory turns over fast.
               </p>
               <p className="mb-6">
-                Translation: homes in Post Falls are priced right, they sell fast, and they&apos;re not getting bid up into absurd territory. For a buyer who wants to actually <em>close</em> on a house this quarter without an emotional bidding war, that&apos;s the profile you want.
+                Translation: homes in Post Falls are priced right, they sell fast, and they&apos;re not getting bid up into absurd territory. For a buyer who wants to actually <em>close</em>{' '}on a house this quarter without an emotional bidding war, that&apos;s the profile you want.
               </p>
               <p className="mb-3 font-semibold text-[#1C1A17]">Who Post Falls is right for:</p>
               <ul className="list-disc pl-6 mb-6 space-y-1">
@@ -452,7 +452,7 @@ export default function CityComparisonArticlePage() {
                 Rathdrum grew 6.6% in 2025 and is on pace for 6.2% in 2026. That&apos;s the fastest in this group, and it&apos;s not close. I&apos;ll be direct: Rathdrum is where the smart money has been quietly going for the last 24 months, and the buyers I&apos;m seeing there are not the buyers who used to be there. They&apos;re younger families relocating from Spokane, Boise transplants priced out of Treasure Valley, and California buyers who did the homework and figured out that you can get a four-bedroom on a half-acre in Rathdrum for what a two-bedroom condo costs in Coeur d&apos;Alene.
               </p>
               <p className="mb-6">
-                $578,248 typical home value with 2.7% appreciation. $642,099 median list price. The market is <em>active</em> but not frothy — 31 days to pending, which suggests buyers have time to think, and sellers aren&apos;t dictating terms.
+                $578,248 typical home value with 2.7% appreciation. $642,099 median list price. The market is <em>active</em>{' '}but not frothy — 31 days to pending, which suggests buyers have time to think, and sellers aren&apos;t dictating terms.
               </p>
               <p className="mb-3 font-semibold text-[#1C1A17]">Who Rathdrum is right for:</p>
               <ul className="list-disc pl-6 mb-6 space-y-1">
