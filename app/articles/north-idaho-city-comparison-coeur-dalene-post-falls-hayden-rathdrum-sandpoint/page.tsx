@@ -511,9 +511,7 @@ export default function CityComparisonArticlePage() {
                 <li>You want a faster transaction. Sandpoint inventory sits longer because the buyer pool is smaller — good for you as a buyer, less good if you&apos;ll eventually be a seller.</li>
               </ul>
               <div className="my-6 p-5 rounded-sm border-l-2 border-[#C4842A] bg-[#F5EFE6] mb-10">
-                <p><strong className="text-[#1C1A17]">The thing nobody tells you:</strong> the{' '}
-                <a href="https://lifestylenorthrealty.com/blog/hidden-gems-in-sandpoint-you-need-to-discover" target="_blank" rel="noopener noreferrer" className={linkClass}>Lifestyle North Realty Group has a guide to hidden gems in Sandpoint</a>{' '}
-                that&apos;s worth reading before you visit — there are restaurants, shops, and views off the main drag that change how the town feels. Also: the winter is <em>real</em>. Plan for it. Buy the snowblower. Order winter tires before October.</p>
+                <p><strong className="text-[#1C1A17]">The thing nobody tells you:</strong> the Sandpoint visitors see is First Avenue in July. The Sandpoint you&apos;d actually live in is the quieter stuff off the main drag — the neighborhood restaurants, the small shops, and the lake-access spots locals use and tourists drive right past. That&apos;s the version that makes people stay. And the winter is <em>real</em>. Plan for it. Buy the snowblower. Order winter tires before October.</p>
               </div>
 
               {/* How to decide */}
