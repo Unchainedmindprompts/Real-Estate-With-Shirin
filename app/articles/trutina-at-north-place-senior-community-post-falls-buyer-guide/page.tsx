@@ -312,7 +312,7 @@ export default function TrutinaArticlePage() {
                 <li><strong className="text-[#1C1A17]">$140 million development</strong> with a 20-year build timeline at about 25–40 homes per year</li>
                 <li><strong className="text-[#1C1A17]">Realistic 2026 price range for desirable single-family homes: $500,000 to $650,000</strong> (lower-end cottages run smaller and less; this is what buyers are actually purchasing today)</li>
                 <li>A mix of product types — single-family homes, cottage homes (1,000–1,300 sq ft), townhomes, and elevator-served apartments — available to <strong className="text-[#1C1A17]">own or rent</strong>, depending on the product</li>
-                <li>Model home: Magnolia, at 1078 E Blair Ave., Post Falls, ID 83854; onsite Greenstone community agent: Ian Swanstrom</li>
+                <li>Model home: Magnolia, at 1078 E Blair Ave., Post Falls, ID 83854, with an onsite Greenstone community agent</li>
               </ul>
               <p className="mb-10">
                 The name &ldquo;Trutina&rdquo; means balance. Greenstone has already built one in Liberty Lake, Washington (it&apos;s been operating for years — go drive it, it&apos;s a real, lived-in community), with another planned at Mead Works. Post Falls is the newest. That&apos;s the surface. Now here&apos;s what the brochure won&apos;t tell you.
@@ -426,7 +426,7 @@ export default function TrutinaArticlePage() {
 
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">Why you want your own REALTOR® — even in new construction</h2>
               <p className="mb-6">
-                The onsite Greenstone agent, Ian Swanstrom, is professional and knowledgeable; I have nothing bad to say about him. But Ian works for <em>Greenstone</em> — he represents the seller (the builder). His job is to sell you a Greenstone home, not to advocate for your specific interests against the builder when those interests don&apos;t align. Here&apos;s what an outside buyer&apos;s agent does that the onsite agent structurally can&apos;t:
+                The onsite Greenstone agent is professional and knowledgeable; I have nothing bad to say about them. But they work for <em>Greenstone</em> — they represent the seller (the builder). Their job is to sell you a Greenstone home, not to advocate for your specific interests against the builder when those interests don&apos;t align. Here&apos;s what an outside buyer&apos;s agent does that the onsite agent structurally can&apos;t:
               </p>
               <ul className="list-disc pl-6 mb-6 space-y-1">
                 <li>Reviews the builder contract independently and flags clauses worth negotiating — earnest money, change-order pricing, completion timelines, warranty language, delay remedies</li>
