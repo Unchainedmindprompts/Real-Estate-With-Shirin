@@ -32,8 +32,8 @@ const articleSchema = {
   image: {
     '@type': 'ImageObject',
     url: 'https://www.realestatewithshirin.com/images/trutina-at-north-place-post-falls.png',
-    width: 1200,
-    height: 630,
+    width: 1672,
+    height: 941,
   },
   author: {
     '@type': 'Person',
