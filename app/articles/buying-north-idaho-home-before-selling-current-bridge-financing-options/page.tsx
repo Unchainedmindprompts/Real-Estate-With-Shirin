@@ -253,7 +253,7 @@ export default function BridgeFinancingArticlePage() {
             />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
-              <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · Lifestyle North Realty Group · eXp Realty · May 23, 2026</p>
+              <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · eXp Realty · May 23, 2026</p>
             </div>
           </div>
         </div>
@@ -488,9 +488,7 @@ export default function BridgeFinancingArticlePage() {
                 If you&apos;ve found a home and you&apos;re trying to figure out how to close on it without selling your current place first, let&apos;s talk. I&apos;ll make sure you know which options exist, point you toward local lenders worth a conversation, and — once you and your financial team settle on an approach — structure your offer and timeline so the house doesn&apos;t slip away on a technicality. You found the house. Let&apos;s not lose it.
               </p>
               <p className="mb-2 text-[15px] text-[#9A9590]">
-                Shirin Abplanalp is a licensed Idaho REALTOR® with{' '}
-                Lifestyle North Realty Group{' '}
-                at eXp Realty, serving Coeur d&apos;Alene, Post Falls, Hayden, Rathdrum, and Sandpoint. Educational information only — not tax, legal, or financial advice.
+                Shirin Abplanalp is a licensed Idaho REALTOR® at eXp Realty, serving Coeur d&apos;Alene, Post Falls, Hayden, Rathdrum, and Sandpoint. Educational information only — not tax, legal, or financial advice.
               </p>
 
             </article>
@@ -539,7 +537,7 @@ export default function BridgeFinancingArticlePage() {
                   <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Local Agent</p>
                   <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp, Licensed REALTOR® at eXp Realty" className="w-16 h-16 rounded-full object-cover mb-3" />
                   <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
-                  <p className="font-dm-sans text-xs text-[#9A9590] mb-3">Licensed REALTOR® · SRES® · Lifestyle North Realty Group · eXp Realty</p>
+                  <p className="font-dm-sans text-xs text-[#9A9590] mb-3">Licensed REALTOR® · SRES® · eXp Realty</p>
                   <p className="font-dm-sans text-xs text-[#5C5650] leading-relaxed">
                     Shirin helps out-of-state buyers structure the move to North Idaho without carrying two mortgages or losing the house.
                   </p>
