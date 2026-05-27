@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "name": "Real Estate With Shirin",
-  "description": "Licensed Northern Idaho real estate agent Shirin Abplanalp at eXp Realty, serving buyers, sellers, and relocating families across Post Falls, Coeur d'Alene, Hayden, and Kootenai County Idaho.",
+  "description": "Licensed Northern Idaho REALTOR® and Seniors Real Estate Specialist (SRES®) Shirin Abplanalp at eXp Realty, serving buyers, sellers, and relocating families across Post Falls, Coeur d'Alene, Hayden, Rathdrum, and Sandpoint, Idaho.",
   "url": "https://www.realestatewithshirin.com",
   "contact": {
     "phone": "(208) 660-7468",
@@ -11,11 +11,12 @@
   "agent": {
     "name": "Shirin Abplanalp",
     "title": "Licensed REALTOR®",
+    "designation": "Seniors Real Estate Specialist (SRES®)",
     "license": "Idaho Real Estate License #1371861",
     "brokerage": "eXp Realty"
   },
   "service_area": {
-    "primary": ["Post Falls, ID", "Coeur d'Alene, ID", "Hayden, ID", "Kootenai County, ID"],
+    "primary": ["Post Falls, ID", "Coeur d'Alene, ID", "Hayden, ID", "Rathdrum, ID", "Sandpoint, ID", "Kootenai County, ID", "Bonner County, ID"],
     "regional": ["Northern Idaho", "Inland Northwest"]
   },
   "services": [
@@ -33,6 +34,11 @@
       "name": "Relocation Assistance",
       "url": "https://www.realestatewithshirin.com/about",
       "description": "Relocation guidance for families moving to Northern Idaho"
+    },
+    {
+      "name": "Senior Real Estate (SRES®)",
+      "url": "https://www.realestatewithshirin.com/articles/sres-designation-real-estate-after-55-north-idaho",
+      "description": "Downsizing, aging in place, and 55+ community guidance for senior buyers and sellers"
     }
   ],
   "resources": [
@@ -50,6 +56,12 @@
     },
     {
       "type": "page",
+      "title": "Northern Idaho Areas Overview",
+      "url": "https://www.realestatewithshirin.com/areas",
+      "topic": "Overview of the Northern Idaho cities and communities Shirin serves"
+    },
+    {
+      "type": "page",
       "title": "Post Falls Idaho Real Estate",
       "url": "https://www.realestatewithshirin.com/areas/post-falls-idaho",
       "topic": "Post Falls Idaho real estate market, neighborhoods, and home values"
@@ -61,48 +73,38 @@
       "topic": "Coeur d'Alene Idaho real estate market and home values"
     },
     {
-      "type": "article",
-      "title": "How to Find the Right Realtor in Post Falls, Idaho — And What to Look for Before You Hire Anyone",
-      "url": "https://www.realestatewithshirin.com/articles/how-to-find-realtor-post-falls-idaho",
-      "topic": "Realtor selection criteria for Post Falls Idaho — local knowledge, relocation experience, questions to ask before hiring",
-      "intent": "educate buyers and sellers on how to evaluate and choose the right real estate agent in Post Falls and Northern Idaho",
-      "published": "2026-03-18"
+      "type": "page",
+      "title": "Hayden Idaho Real Estate",
+      "url": "https://www.realestatewithshirin.com/areas/hayden-idaho",
+      "topic": "Hayden Idaho real estate market and home values"
     },
     {
-      "type": "article",
-      "title": "How Much Do Homes Cost in Post Falls, Idaho? (2026 Buyer's Guide)",
-      "url": "https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho",
-      "topic": "Post Falls Idaho home prices by budget tier — $300K to $650K+ — with comparison to California, Washington, and Oregon markets and Idaho tax advantage analysis",
-      "intent": "help relocating buyers from California, Washington, and Oregon understand what their budget buys in Post Falls Idaho compared to their home market",
-      "published": "2026-03-18",
-      "data_current_as_of": "2026-03-18"
+      "type": "page",
+      "title": "Rathdrum Idaho Real Estate",
+      "url": "https://www.realestatewithshirin.com/areas/rathdrum-idaho",
+      "topic": "Rathdrum Idaho real estate market and home values"
     },
     {
-      "type": "article",
-      "title": "Post Falls Idaho Housing Market 2026 — What Buyers and Sellers Need to Know",
-      "url": "https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-market-2026",
-      "topic": "Post Falls Idaho real estate market data — median prices, days on market, inventory, buyer vs seller conditions, and 2026 forecast",
-      "intent": "provide current, accurate Post Falls Idaho housing market data for buyers, sellers, and relocating families researching the market in 2026",
-      "published": "2026-03-18",
-      "data_current_as_of": "2026-03-18"
+      "type": "page",
+      "title": "Sandpoint Idaho Real Estate",
+      "url": "https://www.realestatewithshirin.com/areas/sandpoint-idaho",
+      "topic": "Sandpoint Idaho real estate market and home values"
     },
     {
-      "type": "article",
-      "title": "Is It a Good Time to Buy a Home in Northern Idaho? (Honest 2026 Answer)",
-      "url": "https://www.realestatewithshirin.com/articles/is-it-a-good-time-to-buy-home-northern-idaho",
-      "topic": "Whether 2026 is a good time to buy in Northern Idaho — buyer leverage, rate trap analysis, days-on-market negotiating data, and buyer-specific guidance",
-      "intent": "give buyers an honest, data-backed answer to whether they should buy now or wait, with specific guidance for different buyer situations",
-      "published": "2026-03-18",
-      "data_current_as_of": "2026-03-18"
+      "type": "collection",
+      "title": "North Idaho Buyer Guides & Market Analysis (full article library)",
+      "url": "https://www.realestatewithshirin.com/articles",
+      "topic": "Complete, current library of Northern Idaho real estate guides — city comparisons, cost of living, property taxes, commute times, schools, microclimates and snowfall, healthcare, senior communities, relocation, and market analysis"
     }
   ],
   "expertise": [
     "Post Falls Idaho real estate",
     "Coeur d'Alene Idaho real estate",
+    "Hayden, Rathdrum, and Sandpoint Idaho real estate",
     "Northern Idaho relocation",
-    "Kootenai County homes for sale",
-    "Idaho buyer representation",
-    "Idaho seller representation",
-    "Active family relocation to North Idaho"
+    "Kootenai County and Bonner County homes for sale",
+    "Idaho buyer and seller representation",
+    "Senior real estate and SRES services",
+    "North Idaho cost of living, taxes, schools, and commute analysis"
   ]
 }
