@@ -395,7 +395,7 @@ export default function PrairiePropertyArticlePage() {
             <article className="lg:col-span-2 font-dm-sans text-[#5C5650] text-[17px] leading-[1.75]">
 
               <p className="mb-6">
-                If you&apos;re shopping rural acreage in Athol, Harrison, Worley, or the unincorporated stretches outside Post Falls because you want to escape HOA restrictions, the freedom is real — but so are the line items most relocation buyers don&apos;t see coming. A typical residential well in <a href="https://lifestylenorthrealty.com/blog/2024-housing-market-recap-for-north-idaho" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">North Idaho&apos;s rural communities</a> runs <strong className="text-[#1C1A17]">$8,000 to $15,000</strong> drilled, permitted, and pumped, with depths usually between 150 and 400 feet depending on where you sit relative to the{' '}
+                If you&apos;re shopping rural acreage in Athol, Harrison, Worley, or the unincorporated stretches outside Post Falls because you want to escape HOA restrictions, the freedom is real — but so are the line items most relocation buyers don&apos;t see coming. A typical residential well in North Idaho&apos;s rural communities runs <strong className="text-[#1C1A17]">$8,000 to $15,000</strong> drilled, permitted, and pumped, with depths usually between 150 and 400 feet depending on where you sit relative to the{' '}
                 <a href="https://www.deq.idaho.gov/water-quality/groundwater/rathdrum-prairie-aquifer/" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Spokane Valley-Rathdrum Prairie Aquifer</a>.
                 A standard septic system permitted through the{' '}
                 <a href="https://panhandlehealthdistrict.org/licensing-and-permitting/septic-permits-and-records/" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Panhandle Health District</a>{' '}
@@ -431,7 +431,7 @@ export default function PrairiePropertyArticlePage() {
               <p className="mb-6">
                 The{' '}
                 <a href="https://idwr.idaho.gov/wells/" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Idaho Department of Water Resources (IDWR)</a>{' '}
-                regulates well construction statewide. Before any well is drilled — including a domestic well on private acreage — the well owner or licensed driller must obtain a drilling permit from IDWR. All wells deeper than <strong className="text-[#1C1A17]">18 vertical feet below land surface</strong> require a permit, and every well must be drilled by a contractor holding a valid IDWR driller&apos;s license.
+                regulates well construction statewide. Before any well is drilled — including a domestic well on private acreage — the well owner or licensed driller must obtain a drilling permit from IDWR. All wells deeper than <strong className="text-[#1C1A17]">18 vertical feet below land surface</strong>{' '}require a permit, and every well must be drilled by a contractor holding a valid IDWR driller&apos;s license.
               </p>
 
               <div className="my-6 bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm overflow-hidden">

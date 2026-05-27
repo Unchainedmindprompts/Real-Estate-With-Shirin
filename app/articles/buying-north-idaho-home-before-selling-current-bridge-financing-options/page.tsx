@@ -489,7 +489,7 @@ export default function BridgeFinancingArticlePage() {
               </p>
               <p className="mb-2 text-[15px] text-[#9A9590]">
                 Shirin Abplanalp is a licensed Idaho REALTOR® with{' '}
-                <a href="https://lifestylenorthrealty.com/agent/shirin-abplanalp/" target="_blank" rel="noopener noreferrer" className={linkClass}>Lifestyle North Realty Group</a>{' '}
+                Lifestyle North Realty Group{' '}
                 at eXp Realty, serving Coeur d&apos;Alene, Post Falls, Hayden, Rathdrum, and Sandpoint. Educational information only — not tax, legal, or financial advice.
               </p>
 
