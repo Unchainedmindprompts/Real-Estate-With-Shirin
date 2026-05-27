@@ -422,13 +422,13 @@ export default function SnowestCitiesArticlePage() {
             <article className="lg:col-span-2 font-dm-sans text-[#5C5650] text-[17px] leading-[1.75]">
 
               <p className="mb-6">
-                Ask two people how much it snows in North Idaho and you&apos;ll get two different answers — because they&apos;re probably living in two different climates without knowing it. A buyer who landed in Post Falls will tell you winter is mild, manageable, nothing like what they expected. A buyer who bought a few acres north of <a href="https://lifestylenorthrealty.com/blog/living-in-sandpoint-idaho" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Sandpoint</a>{' '}might tell you they didn&apos;t realize what they were signing up for.
+                Ask two people how much it snows in North Idaho and you&apos;ll get two different answers — because they&apos;re probably living in two different climates without knowing it. A buyer who landed in Post Falls will tell you winter is mild, manageable, nothing like what they expected. A buyer who bought a few acres north of Sandpoint might tell you they didn&apos;t realize what they were signing up for.
               </p>
               <p className="mb-10">
                 Both are right. North Idaho spans roughly 100 miles from the Rathdrum Prairie to the Canadian border, and snowfall across that distance triples. This ranking pulls from{' '}
                 <a href="https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">NOAA NCEI 1991–2020 climate normals</a>,{' '}
                 <a href="https://www.weather.gov/otx/" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">NWS Spokane Forecast Office</a> data, and{' '}
-                <a href="https://www.nrcs.usda.gov/wps/portal/wcc/home/snowClimateMonitoring/snotel/" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">NRCS SNOTEL network</a> readings — not estimates or marketing. The point isn&apos;t to scare anyone away from the snowier parts. It&apos;s to make sure buyers know what they&apos;re choosing, and what equipment budget goes with that choice.
+                <a href="https://www.nrcs.usda.gov/wps/portal/wcc/home/snowClimateMonitoring/snotel/" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">NRCS SNOTEL network</a>{' '}readings — not estimates or marketing. The point isn&apos;t to scare anyone away from the snowier parts. It&apos;s to make sure buyers know what they&apos;re choosing, and what equipment budget goes with that choice.
               </p>
 
               {/* Full Ranking Visualization */}

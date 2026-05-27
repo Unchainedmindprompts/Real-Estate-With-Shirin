@@ -402,10 +402,7 @@ export default function CityComparisonArticlePage() {
               <p className="mb-3 font-semibold text-[#1C1A17]">Who Post Falls is right for:</p>
               <ul className="list-disc pl-6 mb-6 space-y-1">
                 <li>You commute to Spokane (25–35 minutes, the closest of the five)</li>
-                <li>
-                  You want new construction at reasonable prices — there&apos;s more inventory being built here than anywhere else in Kootenai County, and the{' '}
-                  <a href="https://lifestylenorthrealty.com/blog/new-construction-home-buying-in-post-falls" target="_blank" rel="noopener noreferrer" className={linkClass}>Lifestyle North Realty Group has a detailed guide to the new construction process</a>
-                </li>
+                <li>You want new construction at reasonable prices — there&apos;s more inventory being built here than anywhere else in Kootenai County</li>
                 <li>You want city water and sewer (not all of Post Falls has it, but most does — unlike Rathdrum and parts of Hayden)</li>
                 <li>You want a family-friendly community with city services</li>
                 <li>You&apos;re shopping under $600K and want options</li>

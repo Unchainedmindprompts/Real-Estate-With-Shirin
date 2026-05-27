@@ -484,7 +484,7 @@ export default function TrutinaArticlePage() {
               </p>
               <p className="mb-2 text-[15px] text-[#9A9590]">
                 Shirin Abplanalp is a licensed Idaho REALTOR® and SRES® (Seniors Real Estate Specialist) with{' '}
-                <a href="https://lifestylenorthrealty.com/agent/shirin-abplanalp/" target="_blank" rel="noopener noreferrer" className={linkClass}>Lifestyle North Realty Group</a>{' '}
+                Lifestyle North Realty Group{' '}
                 at eXp Realty, serving Coeur d&apos;Alene, Post Falls, Hayden, Rathdrum, and Sandpoint.
               </p>
 
