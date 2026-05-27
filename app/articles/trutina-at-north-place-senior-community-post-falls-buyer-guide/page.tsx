@@ -256,7 +256,7 @@ export default function TrutinaArticlePage() {
             />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
-              <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · SRES® · Lifestyle North Realty Group · eXp Realty · May 25, 2026</p>
+              <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · SRES® · eXp Realty · May 25, 2026</p>
             </div>
           </div>
         </div>
@@ -483,9 +483,7 @@ export default function TrutinaArticlePage() {
                 If you&apos;re considering Trutina at North Place — or any senior move in North Idaho — and you&apos;d like a representative who has actually been through the buyer process here, I&apos;d love to help. <strong className="text-[#1C1A17]">Important:</strong> if you haven&apos;t yet visited the Trutina model home or registered with the onsite agent, call me <em>first</em>. Once you&apos;ve registered with the builder&apos;s onsite agent without representation, your ability to bring in a buyer&apos;s agent later can be limited. The right time to engage me is before your first visit. You&apos;re not just buying a house — you&apos;re choosing where to live the next chapter of your life. Let&apos;s get this right.
               </p>
               <p className="mb-2 text-[15px] text-[#9A9590]">
-                Shirin Abplanalp is a licensed Idaho REALTOR® and SRES® (Seniors Real Estate Specialist) with{' '}
-                Lifestyle North Realty Group{' '}
-                at eXp Realty, serving Coeur d&apos;Alene, Post Falls, Hayden, Rathdrum, and Sandpoint.
+                Shirin Abplanalp is a licensed Idaho REALTOR® and SRES® (Seniors Real Estate Specialist) at eXp Realty, serving Coeur d&apos;Alene, Post Falls, Hayden, Rathdrum, and Sandpoint.
               </p>
 
             </article>
@@ -544,7 +542,7 @@ export default function TrutinaArticlePage() {
                   <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Local Agent</p>
                   <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp, Licensed REALTOR® at eXp Realty" className="w-16 h-16 rounded-full object-cover mb-3" />
                   <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
-                  <p className="font-dm-sans text-xs text-[#9A9590] mb-3">Licensed REALTOR® · SRES® · Lifestyle North Realty Group · eXp Realty</p>
+                  <p className="font-dm-sans text-xs text-[#9A9590] mb-3">Licensed REALTOR® · SRES® · eXp Realty</p>
                   <p className="font-dm-sans text-xs text-[#5C5650] leading-relaxed">
                     A Seniors Real Estate Specialist® who has walked the Trutina buyer process firsthand, serving buyers across North Idaho.
                   </p>
