@@ -32,8 +32,8 @@ const articleSchema = {
   image: {
     '@type': 'ImageObject',
     url: 'https://www.realestatewithshirin.com/images/moving-to-north-idaho-honest-guide.png',
-    width: 1200,
-    height: 630,
+    width: 1536,
+    height: 1024,
   },
   author: {
     '@type': 'Person',
