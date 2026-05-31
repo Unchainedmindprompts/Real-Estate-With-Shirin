@@ -262,7 +262,7 @@ const faqSchema = {
       name: 'How bad are North Idaho winters?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Winter severity varies significantly by location. Post Falls averages approximately 40 inches of snow per year. Sandpoint averages closer to 90 inches. Priest Lake, further north, averages 120 inches. The Rathdrum Prairie receives less snow than lakeside Coeur d’Alene due to terrain effects. Winters are real — four-wheel drive is advisable — but are considerably milder than the northern Midwest or mountain regions.',
+        text: 'Winter severity varies significantly by location. Post Falls averages approximately 40 inches of snow per year. The town of Sandpoint runs closer to 60–65 inches, while Schweitzer Mountain Resort above town averages around 300 inches at the summit. Priest Lake, further north, averages roughly 120 inches at lake level. The Rathdrum Prairie receives less snow than lakeside Coeur d’Alene due to terrain effects. Winters are real — four-wheel drive is advisable — but are considerably milder than the northern Midwest or mountain regions.',
       },
     },
     {
@@ -409,7 +409,7 @@ export default function RelocatingToNorthIdahoPage() {
                 <strong className="text-[#1C1A17]">The California equity trade.</strong>{' '}Buyers selling a California home &mdash; even a modest one &mdash; frequently have enough equity to buy here outright or with a very small mortgage. A $750,000 house in the Bay Area often funds a $550,000 home in Coeur d&rsquo;Alene with cash left over. The lifestyle math changes dramatically when you remove the mortgage payment.
               </p>
               <p className="mb-6">
-                <strong className="text-[#1C1A17]">Washington&rsquo;s 2025 tax law.</strong>{' '}Washington state passed a new 9.9% income tax on high-earning households in 2025. For business owners and higher earners in the Seattle area, North Idaho &mdash; which sits 30 miles east of Spokane &mdash; suddenly became a serious financial conversation.
+                <strong className="text-[#1C1A17]">Washington&rsquo;s proposed millionaires tax.</strong>{' '}Washington&rsquo;s 2026 legislative session is advancing SB 6346 &mdash; a 9.9% income tax on household income above $1 million, which would take effect in 2028 with first payments due in 2029. It passed the state Senate in February 2026 and is still moving through the House. For business owners and very high earners in the Seattle area, the prospect alone has sharpened the financial conversation, and North Idaho &mdash; which sits 30 miles east of Spokane &mdash; is increasingly part of it.
               </p>
               <p className="mb-6">
                 <strong className="text-[#1C1A17]">Outdoor access without the price premium.</strong>{' '}Lake Coeur d&rsquo;Alene, the ski runs at Silver Mountain and Schweitzer, the mountain biking trails, the fishing &mdash; all of it is here. And unlike resort towns that have priced out everyone who isn&rsquo;t a second-home buyer, North Idaho is still a place where working families live year-round.
@@ -471,7 +471,7 @@ export default function RelocatingToNorthIdahoPage() {
                 Idaho has no estate tax and no inheritance tax.
               </p>
               <p className="mb-10">
-                For buyers coming from Washington or California, the tax comparison gets interesting quickly. Washington had no income tax for most earners &mdash; but the 2025 legislation changes that calculus for high earners. California&rsquo;s top marginal rate is 13.3%. Idaho&rsquo;s flat 5.3% sits between those extremes, and when you factor in property tax differences and the cost of daily life, the full picture often looks different than the headline numbers suggest.
+                For buyers coming from Washington or California, the tax comparison gets interesting quickly. Washington still has no broad state income tax &mdash; but the millionaires-tax bill advancing in the 2026 legislature would change that calculus for households over $1 million starting in 2028. California&rsquo;s top statutory income tax bracket is 13.3%, and as of 2024 the effective top rate on wage income above $1 million is 14.4% once the uncapped 1.1% state disability payroll tax is included. Idaho&rsquo;s flat 5.3% sits well below either of those, and when you factor in property tax differences and the cost of daily life, the full picture often looks different than the headline numbers suggest.
               </p>
 
               {/* ==================== H2 3: FIVE TOWNS ==================== */}
@@ -557,7 +557,7 @@ export default function RelocatingToNorthIdahoPage() {
               <p className="mb-6">The most common misconception from buyers who haven&rsquo;t visited: that North Idaho winter is uniform. It isn&rsquo;t.</p>
               {/* VERIFY: NOAA/NWS snowfall figures — confirm Post Falls 40", Sandpoint 90", Priest Lake 120" via NWS Spokane (weather.gov/otx) */}
               <p className="mb-6">
-                Post Falls averages about 40 inches of snow per year. Priest Lake, 60 miles north, averages 120. Sandpoint runs close to 90. The Rathdrum Prairie, due to the rain shadow effect of the surrounding terrain, gets significantly less than lakeside Coeur d&rsquo;Alene. This is not a trivial difference &mdash; it affects what equipment you need, what your driveway looks like in January, and which communities are genuinely livable through February for people who didn&rsquo;t grow up with real winter.
+                Post Falls averages about 40 inches of snow per year. The town of Sandpoint runs closer to 60&ndash;65 inches, while Schweitzer Mountain Resort above town averages around 300 inches at the summit &mdash; so the &ldquo;Sandpoint winter&rdquo; depends heavily on whether you&rsquo;re buying in town or in the higher-elevation neighborhoods. Priest Lake, 60 miles north, averages roughly 120 inches at lake level. The Rathdrum Prairie, due to the rain shadow effect of the surrounding terrain, gets significantly less than lakeside Coeur d&rsquo;Alene. This is not a trivial difference &mdash; it affects what equipment you need, what your driveway looks like in January, and which communities are genuinely livable through February for people who didn&rsquo;t grow up with real winter.
               </p>
               <p className="mb-10">
                 For a town-by-town snow ranking with real data:{' '}
@@ -631,7 +631,7 @@ export default function RelocatingToNorthIdahoPage() {
                 The Seattle-to-North-Idaho move is geographically closer and financially interesting in a different way. You&rsquo;re essentially 30 miles east of Spokane, which means the lifestyle difference is significant but the distance isn&rsquo;t enormous.
               </p>
               <p className="mb-6">
-                The tax argument got sharper in 2025 when Washington passed its new income tax legislation. For business owners and high earners who were already considering the move, it pushed the financial math from &ldquo;interesting&rdquo; to &ldquo;urgent&rdquo; for many of them.
+                The tax argument got sharper with Washington&rsquo;s 2026 millionaires-tax bill (SB 6346) advancing through the legislature &mdash; a proposed 9.9% income tax on household income over $1 million, effective 2028 if it becomes law. For business owners and very high earners who were already considering the move, the prospect alone has pushed the financial math from &ldquo;interesting&rdquo; to &ldquo;urgent.&rdquo;
               </p>
               <p className="mb-10">
                 For the Spokane vs. CDA comparison that almost every Washington buyer eventually asks:{' '}
