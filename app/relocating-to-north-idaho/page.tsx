@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2026-05-31',
     authors: ['Shirin Abplanalp'],
-    images: ['https://www.realestatewithshirin.com/images/north-idaho-relocation-guide.jpg'],
+    images: ['https://www.realestatewithshirin.com/images/north-idaho-relocation-guide.png'],
   },
 }
 
@@ -46,7 +46,7 @@ const webPageSchema = {
   breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` },
   primaryImageOfPage: {
     '@type': 'ImageObject',
-    url: `${BASE_URL}/images/north-idaho-relocation-guide.jpg`,
+    url: `${BASE_URL}/images/north-idaho-relocation-guide.png`,
   },
   datePublished: '2026-05-31T00:00:00-07:00',
   dateModified: '2026-05-31T00:00:00-07:00',
@@ -80,7 +80,7 @@ const articleSchema = {
   url: PAGE_URL,
   image: {
     '@type': 'ImageObject',
-    url: `${BASE_URL}/images/north-idaho-relocation-guide.jpg`,
+    url: `${BASE_URL}/images/north-idaho-relocation-guide.png`,
     width: 1536,
     height: 1024,
   },
@@ -355,9 +355,9 @@ export default function RelocatingToNorthIdahoPage() {
         </div>
       </section>
 
-      {/* Hero Image (placeholder — upload to /public/images/north-idaho-relocation-guide.jpg) */}
+      {/* Hero Image */}
       <img
-        src="/images/north-idaho-relocation-guide.jpg"
+        src="/images/north-idaho-relocation-guide.png"
         alt="North Idaho lakes, mountains, and towns &mdash; a complete relocation guide for out-of-state buyers"
         className="w-full h-auto block"
       />
