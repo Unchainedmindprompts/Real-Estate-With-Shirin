@@ -50,6 +50,35 @@ export default function ArticlesPage() {
       {/* Articles Grid */}
       <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>
         <div className="max-w-4xl mx-auto px-6 lg:px-8 space-y-6">
+          {/* PILLAR — Relocating to North Idaho — May 2026 */}
+          <Link
+            href="/relocating-to-north-idaho"
+            className="block group rounded-sm transition-colors duration-200"
+            style={{ border: '2px solid #C4842A', backgroundColor: '#2A2722', padding: '40px 40px' }}
+          >
+            <div className="flex items-center gap-3 mb-4 flex-wrap">
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase' as const, color: '#C4842A' }}>
+                Complete Relocation Guide
+              </span>
+              <span style={{ color: '#9A9590', fontSize: '12px' }}>·</span>
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590' }}>18 min read</span>
+              <span style={{ color: '#9A9590', fontSize: '12px' }}>·</span>
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '0.08em', color: '#1C1A17', backgroundColor: '#C4842A', padding: '2px 10px', borderRadius: '2px' }}>
+                Start Here
+              </span>
+            </div>
+            <h2 className="mb-3" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: 'clamp(22px, 3vw, 28px)', lineHeight: 1.25, color: '#FAFAF8' }}>
+              Relocating to North Idaho: The Complete Local Guide for Out-of-State Buyers
+            </h2>
+            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#9A9590', lineHeight: 1.7, marginBottom: '24px' }}>
+              The hub for everything below &mdash; costs, taxes, the five towns, schools, healthcare, weather, commutes, and the out-of-state buying process, all in one place. The right starting point if you&rsquo;re still building the picture from a distance.
+            </p>
+            <div className="flex items-center justify-between">
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', color: '#9A9590' }}>May 31, 2026</span>
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', fontWeight: 600, color: '#C4842A' }}>Open the Guide &rarr;</span>
+            </div>
+          </Link>
+
           {/* Relocation Guide — Moving to North Idaho — May 2026 */}
           <Link
             href="/articles/moving-to-north-idaho-cheapest-places-migration-best-small-towns"
