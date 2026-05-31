@@ -467,6 +467,8 @@ export default function NorthIdahoSchoolDistrictsPage() {
                 <strong className="text-[#1C1A17]">Lakeland Joint School District 272</strong> in Rathdrum (~5,780 students) — each serve a different slice of Kootenai County and operate on meaningfully different schedules, programs, and attendance philosophies. Since Idaho&apos;s revised open enrollment law took effect on <strong className="text-[#1C1A17]">July 1, 2023</strong>, families also have the legal right to apply to any public school in the state with available space — across district lines, with priority given to applications submitted by <strong className="text-[#1C1A17]">February 1</strong> for the following school year. The short version: which district your address falls into matters far less than it used to, but knowing the lay of the land before you make an offer still saves real headaches later.
               </p>
 
+              <p className="mb-10">Schools are one part of the relocation decision. The{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">complete North Idaho relocation guide for out-of-state buyers</a>{' '}covers everything else &mdash; cost of living, neighborhoods, taxes, and the buying process.</p>
+
               {/* District Table */}
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 The Three Public Districts at a Glance

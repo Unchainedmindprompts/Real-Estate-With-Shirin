@@ -300,6 +300,7 @@ export default function TrutinaArticlePage() {
                 I&apos;ll explain why. But first, let me tell you what Trutina actually is, because most of what&apos;s online about it reads like a brochure, and that&apos;s not what you need.
               </p>
 
+              <p className="mb-10">Buyers making the move to North Idaho later in life often have questions that go beyond a single community. The complete relocation guide covers everything from cost of living to healthcare access:{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">Relocating to North Idaho: The Complete Local Guide for Out-of-State Buyers</a>.</p>
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">What Trutina at North Place actually is</h2>
               <p className="mb-6">
                 Trutina at North Place is a <strong className="text-[#1C1A17]">55+ active adult community</strong> being built by{' '}

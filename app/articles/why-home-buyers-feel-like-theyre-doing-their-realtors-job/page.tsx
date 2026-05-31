@@ -387,6 +387,8 @@ export default function BuyerAgentArticlePage() {
                 If that is not what you are experiencing, the problem is not you. It is the agent.
               </p>
 
+              <p className="mb-10">If you&rsquo;re an out-of-state buyer still building your research foundation, the{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">complete North Idaho relocation guide</a>{' '}is the starting point before the agent search.</p>
+
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 What a Realtor Is Actually Supposed to Do for You
               </h2>

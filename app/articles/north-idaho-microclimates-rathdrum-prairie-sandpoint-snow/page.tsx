@@ -385,6 +385,8 @@ export default function MicroClimatesArticlePage() {
                 Same state, same general region, completely different winters. As a Realtor who works both sides of this divide every week, the question isn&apos;t whether you&apos;ll see snow — it&apos;s whether the property you&apos;re considering needs a plow, a snowblower, or just a good shovel and a set of decent tires.
               </p>
 
+              <p className="mb-10">If micro-climate is driving your location decision, the{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">full North Idaho relocation guide</a>{' '}maps it to neighborhoods, commutes, and home prices.</p>
+
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 The Two North Idahos: Why Rathdrum and Sandpoint Aren&apos;t the Same Winter
               </h2>

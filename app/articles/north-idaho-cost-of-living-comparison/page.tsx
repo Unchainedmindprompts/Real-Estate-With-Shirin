@@ -401,6 +401,8 @@ export default function CostOfLivingArticlePage() {
                 Where estimates or calculated examples are used, they&apos;re labeled as such.
               </p>
 
+              <p className="mb-10">Cost of living is the foundation, but it&rsquo;s one piece. For the full relocation picture &mdash; neighborhoods, schools, commutes, and the buying process &mdash;{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">start with the complete North Idaho relocation guide</a>.</p>
+
               {/* How to read COL numbers */}
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 How to read cost-of-living numbers

@@ -277,6 +277,7 @@ className="w-10 h-10 rounded-full object-cover"
 <p className="mb-6">
                 The Post Falls housing market in 2026 is balanced, measured, and meaningfully different from the frenzy of 2021 and 2022. Median home prices are up 7.5% year-over-year at $521,138 as of February 2026, but homes are taking longer to sell and most are closing under list price. For buyers and sellers who understand what&apos;s actually happening, this market offers real opportunities on both sides.
 </p>
+<p className="mb-10">Post Falls market data is the current snapshot. For out-of-state buyers building the full picture, the{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">North Idaho relocation guide</a>{' '}covers everything from cost of living to the buying process.</p>
 {/* H2: Current Home Prices */}
 <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 Current Home Prices in Post Falls (2026)

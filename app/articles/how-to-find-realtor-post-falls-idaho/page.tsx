@@ -316,6 +316,7 @@ className="w-10 h-10 rounded-full object-cover"
 <p className="mb-6">
                 Northern Idaho&apos;s real estate market has real nuance — and the agent who&apos;s great for a first-time buyer relocating from California isn&apos;t necessarily the right fit for someone who&apos;s lived here twenty years and wants to downsize. This guide walks you through what actually matters when choosing a real estate agent in Post Falls, the questions worth asking before you commit, and how to think about fit before you sign anything.
 </p>
+<p className="mb-10">If you&rsquo;re still early in the research process,{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">the complete North Idaho relocation guide</a>{' '}covers everything you need to know before choosing an agent.</p>
 <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 What Makes a Good Realtor in Post Falls Specifically
 </h2>

@@ -458,6 +458,10 @@ export default function CommuteTimesPage() {
               </div>
             </div>
 
+            <p className="mb-10" style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '17px', lineHeight: 1.75, color: '#5C5650' }}>
+              Commutes are one piece of the location decision. For the full picture on cost of living, neighborhoods, and taxes, see:{' '}<a href="/relocating-to-north-idaho" style={{ color: '#C4842A', textDecoration: 'none' }}>Relocating to North Idaho: The Complete Local Guide for Out-of-State Buyers</a>.
+            </p>
+
             {/* How geography works */}
             <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(22px, 2.5vw, 28px)', fontWeight: 600, color: '#1C1A17', marginTop: '48px', marginBottom: '20px' }}>
               How North Idaho&apos;s commute geography actually works

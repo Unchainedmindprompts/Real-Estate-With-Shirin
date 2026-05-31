@@ -402,6 +402,8 @@ export default function PrairiePropertyArticlePage() {
                 adds another <strong className="text-[#1C1A17]">$8,000 to $18,000</strong> installed, plus a non-refundable <strong className="text-[#1C1A17]">$950 subsurface sewage permit fee</strong>. And if the parcel is on a private road or unimproved county right-of-way, you may be responsible for grading, gravel, snow plowing, and dust abatement — none of which the county does for you.
               </p>
 
+              <p className="mb-10">Rural properties have unique infrastructure considerations. If you&rsquo;re still deciding between rural and neighborhood living, the{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">full North Idaho relocation guide</a>{' '}covers what each area of the region actually looks like on the ground.</p>
+
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 The First Thing to Verify: Is This Parcel on the Aquifer?
               </h2>

@@ -316,6 +316,7 @@ export default function MovingToNorthIdahoArticlePage() {
                 The honest answers are not what most relocation websites tell you. So let me give you the real version — backed by Census data, U-Haul migration numbers, Zillow values, and my own daily on-the-ground reality as someone who works this market. Some of this is going to surprise you. Some of it might disappoint you. All of it is true.
               </p>
 
+              <p className="mb-10">If you&rsquo;re still in the research phase, the full relocation guide covers costs, taxes, neighborhoods, schools, and the buying process in one place:{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">Relocating to North Idaho: The Complete Local Guide for Out-of-State Buyers</a>.</p>
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">First: North Idaho is not the cheapest part of Idaho</h2>
               <p className="mb-6">
                 Almost every &ldquo;cheapest places in Idaho&rdquo; article quietly pretends North Idaho doesn&apos;t exist — and there&apos;s a reason. When{' '}

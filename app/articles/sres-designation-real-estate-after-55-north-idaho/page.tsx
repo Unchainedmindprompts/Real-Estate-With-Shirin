@@ -190,7 +190,7 @@ const faqSchema = {
       name: 'Why is North Idaho becoming a retiree relocation destination?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "The combination of Idaho's flat 5.3% income tax (with no tax on groceries), lower property taxes than most western states, the lake-area lifestyle, real seasons without the Pacific coast's gray climate, and accessible regional medical infrastructure makes the area particularly suited to retirees from California, Washington, Oregon, Texas, and Arizona. Washington's new 9.9% income tax on household income over $1 million, effective January 2028, is accelerating inquiries from Western Washington retirees specifically.",
+        text: "The combination of Idaho's flat 5.3% income tax (with no tax on groceries), lower property taxes than most western states, the lake-area lifestyle, real seasons without the Pacific coast's gray climate, and accessible regional medical infrastructure makes the area particularly suited to retirees from California, Washington, Oregon, Texas, and Arizona. Washington's proposed millionaires tax — a 9.9% income tax on household income over $1 million, advancing through the 2026 legislature and effective 2028 if enacted — is already accelerating inquiries from Western Washington retirees specifically.",
       },
     },
     {
@@ -222,7 +222,7 @@ const faqSchema = {
       name: 'How does Idaho residency affect taxes for relocating retirees?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Idaho has a flat 5.3% state income tax compared to California's progressive structure that can exceed 13%, Oregon's up to 9.9%, and Washington's new $1M+ income tax effective January 2028. The order of operations matters significantly — establishing Idaho residency before selling a long-held home in a high-tax state can save substantial tax on the gain. Coordinate with a CPA who understands both states.",
+        text: "Idaho has a flat 5.3% state income tax compared to California's progressive structure that can exceed 13%, Oregon's up to 9.9%, and Washington's proposed $1M+ income tax advancing through the 2026 legislature (effective 2028 if enacted). The order of operations matters significantly — establishing Idaho residency before selling a long-held home in a high-tax state can save substantial tax on the gain. Coordinate with a CPA who understands both states.",
       },
     },
     {
@@ -284,7 +284,7 @@ const agingInPlaceQuestions = [
 const faqs = [
   {
     q: 'Why is North Idaho becoming a retiree relocation destination?',
-    a: "The combination of Idaho's flat 5.3% income tax (with no tax on groceries), lower property taxes than most western states, the lake-area lifestyle, real seasons without the Pacific coast's gray climate, and accessible regional medical infrastructure makes the area particularly suited to retirees from California, Washington, Oregon, Texas, and Arizona. Washington's new 9.9% income tax on household income over $1 million, effective January 2028, is accelerating inquiries from Western Washington retirees specifically.",
+    a: "The combination of Idaho's flat 5.3% income tax (with no tax on groceries), lower property taxes than most western states, the lake-area lifestyle, real seasons without the Pacific coast's gray climate, and accessible regional medical infrastructure makes the area particularly suited to retirees from California, Washington, Oregon, Texas, and Arizona. Washington's proposed millionaires tax — a 9.9% income tax on household income over $1 million, advancing through the 2026 legislature and effective 2028 if enacted — is already accelerating inquiries from Western Washington retirees specifically.",
   },
   {
     q: 'What is the SRES® designation?',
@@ -300,7 +300,7 @@ const faqs = [
   },
   {
     q: 'How does Idaho residency affect taxes for relocating retirees?',
-    a: "Idaho has a flat 5.3% state income tax compared to California's progressive structure that can exceed 13%, Oregon's up to 9.9%, and Washington's new $1M+ income tax effective January 2028. The order of operations matters significantly — establishing Idaho residency before selling a long-held home in a high-tax state can save substantial tax on the gain. Coordinate with a CPA who understands both states.",
+    a: "Idaho has a flat 5.3% state income tax compared to California's progressive structure that can exceed 13%, Oregon's up to 9.9%, and Washington's proposed $1M+ income tax advancing through the 2026 legislature (effective 2028 if enacted). The order of operations matters significantly — establishing Idaho residency before selling a long-held home in a high-tax state can save substantial tax on the gain. Coordinate with a CPA who understands both states.",
   },
   {
     q: "Should adult children be involved in their parents' real estate decisions?",
@@ -373,8 +373,8 @@ export default function SresArticlePage() {
             </div>
             <div className="text-center">
               <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">2028</p>
-              <p className="font-dm-sans text-xs text-[#9A9590] mt-1 uppercase tracking-wide">WA Income Tax</p>
-              <p className="font-dm-sans text-xs text-[#6B7A8D] mt-0.5">9.9% on $1M+ begins</p>
+              <p className="font-dm-sans text-xs text-[#9A9590] mt-1 uppercase tracking-wide">WA Tax Bill</p>
+              <p className="font-dm-sans text-xs text-[#6B7A8D] mt-0.5">9.9% on $1M+ if enacted</p>
             </div>
           </div>
         </div>
@@ -411,6 +411,8 @@ export default function SresArticlePage() {
                 I believe our later years should be lived with dignity, comfort, and peace of mind. Whether that means aging in place with the right support, transitioning to an active adult community, or finding a home in a quieter, more manageable setting — the goal is the same: a safe, secure, and welcoming environment. No one should feel alone or unsupported in this stage of life. No family should feel uncertain about what to do next.
               </p>
 
+              <p className="mb-10">Buyers considering North Idaho later in life often have questions that span healthcare, cost of living, and community. The{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">complete North Idaho relocation guide</a>{' '}covers all of it in one place.</p>
+
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 The North Idaho Retiree Reality
               </h2>
@@ -418,7 +420,7 @@ export default function SresArticlePage() {
                 Coeur d&apos;Alene, Post Falls, Hayden, and Sandpoint have become some of the most active retiree relocation destinations in the western United States. The reasons aren&apos;t complicated. Idaho has a flat 5.3% state income tax. No tax on groceries. Lower property taxes in dollar terms than most western states. Real seasons without the gray oppression of the Pacific coast. A lake culture that defines the region&apos;s identity.
               </p>
               <p className="mb-6">
-                As of March 2026, Washington signed a 9.9% income tax on household income over $1 million, effective January 2028 — which is already accelerating relocation inquiries from Western Washington retirees with significant assets. I&apos;ve watched the influx firsthand. Buyers from California, Washington, Oregon, and increasingly from Texas and Arizona, all approaching or already in retirement, looking for a different chapter of life.
+                As of mid-2026, Washington&apos;s proposed millionaires tax (SB 6346) &mdash; a 9.9% income tax on household income over $1 million, effective 2028 if enacted &mdash; is advancing through the legislature, and the prospect alone is already accelerating relocation inquiries from Western Washington retirees with significant assets. I&apos;ve watched the influx firsthand. Buyers from California, Washington, Oregon, and increasingly from Texas and Arizona, all approaching or already in retirement, looking for a different chapter of life.
               </p>
               <p className="mb-8">
                 What I&apos;ve also watched is how often the real estate process fails these buyers. Not because agents are bad people — most are well-intentioned. But because a relocation transaction for someone over 55 is genuinely different, and most agents don&apos;t know what they don&apos;t know.

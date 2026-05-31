@@ -284,6 +284,7 @@ className="w-10 h-10 rounded-full object-cover"
 <p className="mb-6">
                 Yes — with clear eyes about what you&apos;re walking into. 2026 is one of the more buyer-friendly windows Northern Idaho has seen since 2019. Not because prices are dropping — they&apos;re not — but because buyer leverage has returned: more inventory, longer days on market, seller concessions on 37.5% of transactions, and meaningfully less competition than the 2021-2022 frenzy. The honest counterpoint is that mortgage rates are at 7-month highs right now, and timing within 2026 matters.
 </p>
+<p className="mb-10">Market timing is one question. If you&rsquo;re also still evaluating where in North Idaho to land and what it costs to live here, the{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">complete relocation guide</a>{' '}answers both.</p>
 {/* H2: What the Market Actually Looks Like */}
 <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 What the Northern Idaho Market Actually Looks Like Right Now

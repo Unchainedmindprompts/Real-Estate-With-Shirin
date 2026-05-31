@@ -303,6 +303,7 @@ export default function BridgeFinancingArticlePage() {
                 So let&apos;s walk through this. Seven real strategies — what works, what doesn&apos;t, what the IRS actually says (not what your brother-in-law thinks they said), and how to make a move from out of state without losing your mind or the house. None of these are decisions you make alone, and none are ones I make for you — they&apos;re options to put on the table with the professionals who handle your money.
               </p>
 
+              <p className="mb-10">If you&rsquo;re still evaluating which part of North Idaho you want to land in, start with the full relocation guide before choosing a financing strategy:{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">Relocating to North Idaho: The Complete Local Guide for Out-of-State Buyers</a>.</p>
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">First, why this even matters</h2>
               <p className="mb-6">
                 In May 2026, the average 30-year fixed mortgage rate is sitting at <strong className="text-[#1C1A17]">6.51%</strong> ({' '}
