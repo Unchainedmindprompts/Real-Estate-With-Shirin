@@ -141,70 +141,88 @@ const articleSchema = {
   },
   citation: [
     {
-      '@type': 'GovernmentOrganization',
-      name: 'U.S. Census Bureau',
+      '@type': 'WebPage',
+      name: 'U.S. Census Bureau QuickFacts: Kootenai County, Idaho',
       url: 'https://www.census.gov/quickfacts/fact/table/kootenaicountyidaho/PST045224',
+      publisher: { '@type': 'GovernmentOrganization', name: 'U.S. Census Bureau', url: 'https://www.census.gov' },
       description:
         'Kootenai County population estimates: 191,864 (July 2025), 138,494 (2010 Census). Broadband subscription: 92.2% of households.',
     },
     {
-      '@type': 'GovernmentOrganization',
+      '@type': 'WebPage',
       name: 'U.S. Census Bureau — Population Estimates Program',
       url: 'https://www.census.gov/programs-surveys/popest.html',
+      publisher: { '@type': 'GovernmentOrganization', name: 'U.S. Census Bureau', url: 'https://www.census.gov' },
       description:
         'Kootenai County domestic migration 2023–2024: +2,900 net domestic migrants, primary driver of +3,100 total population growth.',
     },
     {
-      '@type': 'GovernmentOrganization',
-      name: 'Idaho State Tax Commission',
+      '@type': 'WebPage',
+      name: 'Idaho Individual Income Tax Online Guide',
       url: 'https://tax.idaho.gov/taxes/income-tax/individual-income/online-guide/',
+      publisher: { '@type': 'GovernmentOrganization', name: 'Idaho State Tax Commission', url: 'https://tax.idaho.gov' },
       description: 'Idaho individual income tax rate: 5.3% flat rate effective January 1, 2025.',
     },
     {
-      '@type': 'Organization',
-      name: 'Tax Foundation',
+      '@type': 'WebPage',
+      name: 'Property Taxes by State and County, 2026',
       url: 'https://taxfoundation.org/data/all/state/property-taxes-by-state-county/',
+      publisher: { '@type': 'Organization', name: 'Tax Foundation', url: 'https://taxfoundation.org' },
       description: 'Idaho effective property tax rate: approximately 0.53% of assessed value (2026 data).',
     },
     {
-      '@type': 'Organization',
-      name: 'Bureau of Economic Analysis — U.S. Department of Commerce',
+      '@type': 'WebPage',
+      name: 'Regional Price Parities by State and Metro Area',
       url: 'https://www.bea.gov/data/prices-inflation/regional-price-parities-state-and-metro-area',
+      publisher: {
+        '@type': 'GovernmentOrganization',
+        name: 'Bureau of Economic Analysis — U.S. Department of Commerce',
+        url: 'https://www.bea.gov',
+      },
       description:
         "Regional Price Parity index: Coeur d'Alene MSA at 97.5, approximately 15.5 points below the Seattle metro.",
     },
     {
-      '@type': 'Organization',
-      name: 'Redfin',
+      '@type': 'WebPage',
+      name: "Coeur d'Alene, ID Housing Market",
       url: 'https://www.redfin.com/city/4370/ID/Coeur-d-Alene/housing-market',
+      publisher: { '@type': 'Organization', name: 'Redfin', url: 'https://www.redfin.com' },
       description:
         "Coeur d'Alene median sale price $596,392 (April 2026, +1.9% YoY); 229 homes sold (+28.8% YoY); median 37 days on market. Inbound migration: LA (+420), Portland (+163), San Francisco (+105).",
     },
     {
-      '@type': 'GovernmentOrganization',
+      '@type': 'WebPage',
       name: 'Idaho Transportation Department',
       url: 'https://itd.idaho.gov',
+      publisher: { '@type': 'GovernmentOrganization', name: 'Idaho Transportation Department', url: 'https://itd.idaho.gov' },
       description:
         'SH-41 to US-95 interchange identified as most congested segment in Idaho Panhandle; construction through 2029.',
     },
     {
-      '@type': 'Organization',
-      name: 'First Street Foundation',
+      '@type': 'WebPage',
+      name: 'First Street Foundation — Climate Risk Data',
       url: 'https://firststreet.org',
+      publisher: { '@type': 'Organization', name: 'First Street Foundation', url: 'https://firststreet.org' },
       description:
         "Wildfire risk assessment: less than 1% of Coeur d'Alene area properties face meaningful wildfire risk over a 30-year horizon.",
     },
     {
-      '@type': 'GovernmentOrganization',
-      name: 'National Weather Service — Spokane Forecast Office',
+      '@type': 'WebPage',
+      name: 'NWS Spokane Forecast Office',
       url: 'https://www.weather.gov/otx/',
+      publisher: {
+        '@type': 'GovernmentOrganization',
+        name: 'National Weather Service — NOAA',
+        url: 'https://www.weather.gov',
+      },
       description:
-        'Snowfall climatology for North Idaho: Post Falls ~40 in/yr, Sandpoint ~90 in/yr, Priest Lake ~120 in/yr.',
+        'Snowfall climatology for North Idaho: Post Falls ~40 in/yr, Sandpoint town ~60–65 in/yr, Schweitzer summit ~300 in/yr, Priest Lake ~120 in/yr.',
     },
     {
-      '@type': 'Organization',
-      name: "Coeur d'Alene Regional REALTORS®",
+      '@type': 'WebPage',
+      name: "Coeur d'Alene Regional REALTORS® — Market Data",
       url: 'https://www.cdarealtors.com/market-data/',
+      publisher: { '@type': 'Organization', name: "Coeur d'Alene Regional REALTORS®", url: 'https://www.cdarealtors.com' },
       description: 'Official monthly market snapshots for Kootenai County residential real estate.',
     },
   ],
