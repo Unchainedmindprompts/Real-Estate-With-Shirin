@@ -341,6 +341,9 @@ export default function BestPlacesNorthIdahoCaliforniaPage() {
               <p className="mb-6">
                 The migration from California to Idaho has been one of the steadiest patterns of the last five years, and it has not slowed in 2026. The reasons people give when they sit down to talk about the move are consistent: taxes, home prices, cost of living, safety, politics, and a desire for a quieter life closer to the outdoors.
               </p>
+              <p className="mb-6">
+                This article focuses on location options for California buyers. For the full picture &mdash; taxes, cost of living, schools, weather, and the buying process &mdash; the{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">complete North Idaho relocation guide</a>{' '}covers it all.
+              </p>
               <p className="mb-8">
                 What surprises most Californians when they arrive is not any single one of those things. It is the combination. You are not just saving on income tax. You are also paying less for your house, less for gas, less at the grocery store, less for your car registration, and in most cases less for your insurance. Small differences stacked together produce a lifestyle most Californians had given up on affording.
               </p>

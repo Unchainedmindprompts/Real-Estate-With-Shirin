@@ -424,6 +424,8 @@ export default function NorthIdahoHealthcarePage() {
                 and you have a healthcare ecosystem that&apos;s substantially more capable than most relocating retirees realize.
               </p>
 
+              <p className="mb-10">Healthcare access is a key factor for many relocating families and buyers after 55. The{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">complete North Idaho relocation guide</a>{' '}covers all the major relocation considerations in one place.</p>
+
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 Kootenai Health: The Anchor of Regional Care
               </h2>

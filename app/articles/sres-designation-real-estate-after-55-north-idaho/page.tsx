@@ -411,6 +411,8 @@ export default function SresArticlePage() {
                 I believe our later years should be lived with dignity, comfort, and peace of mind. Whether that means aging in place with the right support, transitioning to an active adult community, or finding a home in a quieter, more manageable setting — the goal is the same: a safe, secure, and welcoming environment. No one should feel alone or unsupported in this stage of life. No family should feel uncertain about what to do next.
               </p>
 
+              <p className="mb-10">Buyers considering North Idaho later in life often have questions that span healthcare, cost of living, and community. The{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">complete North Idaho relocation guide</a>{' '}covers all of it in one place.</p>
+
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 The North Idaho Retiree Reality
               </h2>

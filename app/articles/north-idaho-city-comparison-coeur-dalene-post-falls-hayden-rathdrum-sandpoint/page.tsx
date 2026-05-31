@@ -318,6 +318,7 @@ export default function CityComparisonArticlePage() {
                 I&apos;m Shirin Abplanalp. I&apos;m a licensed REALTOR® who relocated here from Bend, Oregon two years ago. I&apos;ve shown homes in all five of these cities. I&apos;ll tell you what I tell my own family members when they ask — including the parts most agents won&apos;t.
               </p>
 
+              <p className="mb-10">This article focuses on the city comparison. For the full picture &mdash; including cost of living, taxes, schools, and the buying process &mdash;{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">the complete North Idaho relocation guide</a>{' '}is the place to start.</p>
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 The comparison at a glance
               </h2>

@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/areas/post-falls-idaho`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/areas/coeur-dalene-idaho`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/areas/hayden-idaho`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/relocating-to-north-idaho`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.95 },
     { url: `${baseUrl}/articles`, lastModified: currentDate, changeFrequency: 'weekly', priority: 0.7 },
     ...articleEntries,
     { url: `${baseUrl}/contact`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.8 },

@@ -371,6 +371,10 @@ export default function NARSettlementPage() {
               The math case for going solo looks compelling — potentially <strong style={{ color: '#1C1A17' }}>$12,000–$18,000 in commission savings</strong> on a $600,000 Coeur d&apos;Alene home. But the Rice/RISMedia research explicitly notes that solo buyers may &ldquo;end up over-paying for properties&rdquo; by amounts that can erase those savings entirely. This article explains what changed, what the rules actually say, what unrepresented buyers are missing in real dollars, and how to decide which path makes sense for your specific transaction.
             </p>
 
+            <p className="mb-10" style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '17px', lineHeight: 1.75, color: '#5C5650' }}>
+              If you&rsquo;re still early in the relocation decision,{' '}<a href="/relocating-to-north-idaho" style={{ color: '#C4842A', textDecoration: 'none' }}>the North Idaho relocation guide</a>{' '}covers the full buying process context for out-of-state buyers &mdash; before the agent decision matters.
+            </p>
+
             {/* What changed */}
             <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: 'clamp(22px, 2.5vw, 28px)', fontWeight: 600, color: '#1C1A17', marginTop: '48px', marginBottom: '20px' }}>
               What changed on August 17, 2024

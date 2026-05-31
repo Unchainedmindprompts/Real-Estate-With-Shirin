@@ -289,6 +289,7 @@ className="w-10 h-10 rounded-full object-cover"
 <p className="mb-6">
                 The median sale price for a home in Post Falls, Idaho is $521,138 as of February 2026 — up 7.5% year-over-year. Depending on your budget, that translates to anything from a modest 3-bedroom starter home to a newer 4-5 bedroom property with room to breathe. For buyers relocating from California, Washington, or Oregon, what that number buys here is almost always more than what they left behind.
 </p>
+<p className="mb-10">Home prices are one input into the relocation decision. For the full picture &mdash; taxes, cost of living, neighborhoods, and schools &mdash;{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">the complete North Idaho relocation guide</a>{' '}is the starting point.</p>
 {/* H2: Price Landscape at a Glance */}
 <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 The Post Falls Price Landscape at a Glance

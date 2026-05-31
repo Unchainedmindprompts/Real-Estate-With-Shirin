@@ -431,6 +431,8 @@ export default function SnowestCitiesArticlePage() {
                 <a href="https://www.nrcs.usda.gov/wps/portal/wcc/home/snowClimateMonitoring/snotel/" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">NRCS SNOTEL network</a>{' '}readings — not estimates or marketing. The point isn&apos;t to scare anyone away from the snowier parts. It&apos;s to make sure buyers know what they&apos;re choosing, and what equipment budget goes with that choice.
               </p>
 
+              <p className="mb-10">Snow is one factor in the location decision. For everything else &mdash; home prices, taxes, schools, and commutes &mdash; the{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">full North Idaho relocation guide</a>{' '}covers it all.</p>
+
               {/* Full Ranking Visualization */}
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 The Full Ranking: Lightest to Heaviest

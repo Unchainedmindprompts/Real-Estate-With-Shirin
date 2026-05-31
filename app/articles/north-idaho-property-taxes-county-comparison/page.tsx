@@ -423,6 +423,8 @@ export default function PropertyTaxesArticlePage() {
                 <a href="https://tax.idaho.gov/document-mngr/reports_epb00129/" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Idaho State Tax Commission&apos;s 2025 Average Property Tax Rates report (EPB00129)</a>, published November 25, 2025, based on actual levied amounts. These are official figures — not estimates or third-party data aggregations.
               </p>
 
+              <p className="mb-10">Property taxes are one part of the cost picture. For the full breakdown &mdash; income taxes, cost of living, home prices, and how North Idaho compares to California and Washington &mdash; see:{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">Relocating to North Idaho: The Complete Local Guide for Out-of-State Buyers</a>.</p>
+
               {/* How it works */}
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 How Idaho property tax actually works
