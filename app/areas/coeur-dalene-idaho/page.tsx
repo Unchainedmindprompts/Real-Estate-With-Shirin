@@ -5,7 +5,7 @@ import Image from 'next/image'
 export const metadata: Metadata = {
   title: "Coeur d'Alene Idaho Real Estate | Homes for Sale | Shirin Abplanalp",
   description:
-    "Looking for homes in Coeur d'Alene Idaho? Shirin Abplanalp is a licensed Coeur d'Alene real estate agent with eXp Realty.",
+    "Looking for homes in Coeur d'Alene Idaho? Shirin Abplanalp is a licensed Coeur d'Alene real estate agent with Berkshire Hathaway HomeServices Jacklin Real Estate.",
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/areas/coeur-dalene-idaho',
   },

@@ -1,19 +1,19 @@
 {
   "schema_version": "1.0",
   "name": "Real Estate With Shirin",
-  "description": "Licensed Northern Idaho REALTOR® and Seniors Real Estate Specialist (SRES®) Shirin Abplanalp at eXp Realty, serving buyers, sellers, and relocating families across Post Falls, Coeur d'Alene, Hayden, Rathdrum, and Sandpoint, Idaho.",
+  "description": "Licensed Northern Idaho REALTOR® and Seniors Real Estate Specialist (SRES®) Shirin Abplanalp at Berkshire Hathaway HomeServices Jacklin Real Estate, serving buyers, sellers, and relocating families across Post Falls, Coeur d'Alene, Hayden, Rathdrum, and Sandpoint, Idaho.",
   "url": "https://www.realestatewithshirin.com",
   "contact": {
     "phone": "(208) 660-7468",
     "email": "dreamlifeinidaho@gmail.com",
-    "address": "510 S Clearwater Loop, Suite 100, Post Falls, ID 83854"
+    "address": "1927 W. Riverstone Drive, Coeur d'Alene, ID 83814"
   },
   "agent": {
     "name": "Shirin Abplanalp",
     "title": "Licensed REALTOR®",
     "designation": "Seniors Real Estate Specialist (SRES®)",
     "license": "Idaho Real Estate License #1371861",
-    "brokerage": "eXp Realty"
+    "brokerage": "Berkshire Hathaway HomeServices Jacklin Real Estate"
   },
   "service_area": {
     "primary": ["Post Falls, ID", "Coeur d'Alene, ID", "Hayden, ID", "Rathdrum, ID", "Sandpoint, ID", "Kootenai County, ID", "Bonner County, ID"],

@@ -5,7 +5,7 @@ import Image from 'next/image'
 export const metadata: Metadata = {
   title: 'Post Falls Idaho Real Estate | Homes for Sale | Shirin Abplanalp',
   description:
-    'Looking for homes in Post Falls Idaho? Shirin Abplanalp is a licensed Post Falls real estate agent with eXp Realty. Expert buyer and seller representation.',
+    'Looking for homes in Post Falls Idaho? Shirin Abplanalp is a licensed Post Falls real estate agent with Berkshire Hathaway HomeServices Jacklin Real Estate. Expert buyer and seller representation.',
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/areas/post-falls-idaho',
   },

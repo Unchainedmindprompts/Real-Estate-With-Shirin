@@ -3,9 +3,9 @@ import Image from 'next/image'
 import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
-  title: 'Contact Shirin Abplanalp | Northern Idaho Realtor · eXp Realty',
+  title: 'Contact Shirin Abplanalp | Northern Idaho Realtor · Berkshire Hathaway HomeServices Jacklin Real Estate',
   description:
-    "Get in touch with Shirin Abplanalp, licensed Northern Idaho realtor at eXp Realty. Serving Post Falls, Coeur d'Alene, Hayden, and Kootenai County.",
+    "Get in touch with Shirin Abplanalp, licensed Northern Idaho realtor at Berkshire Hathaway HomeServices Jacklin Real Estate. Serving Post Falls, Coeur d'Alene, Hayden, and Kootenai County.",
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/contact',
   },
@@ -162,7 +162,7 @@ export default function ContactPage() {
                 <div>
                   <p className="eyebrow mb-2" style={{ fontSize: '11px' }}>BROKERAGE</p>
                   <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '16px', color: '#5C5650' }}>
-                    eXp Realty
+                    Berkshire Hathaway HomeServices Jacklin Real Estate
                   </p>
                 </div>
 

@@ -5,7 +5,7 @@ import Image from 'next/image'
 export const metadata: Metadata = {
   title: 'Hayden Idaho Real Estate | Homes for Sale | Shirin Abplanalp',
   description:
-    'Looking for homes in Hayden Idaho? Shirin Abplanalp is a licensed realtor with eXp Realty serving Hayden and Kootenai County.',
+    'Looking for homes in Hayden Idaho? Shirin Abplanalp is a licensed realtor with Berkshire Hathaway HomeServices Jacklin Real Estate serving Hayden and Kootenai County.',
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/areas/hayden-idaho',
   },

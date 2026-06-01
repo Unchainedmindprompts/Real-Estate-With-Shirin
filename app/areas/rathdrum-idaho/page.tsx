@@ -5,7 +5,7 @@ import Image from 'next/image'
 export const metadata: Metadata = {
   title: 'Rathdrum Idaho Real Estate | Homes for Sale | Shirin Abplanalp',
   description:
-    'Looking for homes in Rathdrum Idaho? Shirin Abplanalp is a licensed Rathdrum real estate agent with eXp Realty. Expert buyer and seller representation.',
+    'Looking for homes in Rathdrum Idaho? Shirin Abplanalp is a licensed Rathdrum real estate agent with Berkshire Hathaway HomeServices Jacklin Real Estate. Expert buyer and seller representation.',
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/areas/rathdrum-idaho',
   },
