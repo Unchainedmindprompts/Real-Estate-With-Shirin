@@ -642,6 +642,153 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── 5. Latest Guides ── */}
+      <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="eyebrow mb-4" style={{ color: '#C4842A' }}>LATEST GUIDES</p>
+            <h2
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontWeight: 500,
+                fontSize: 'clamp(32px, 5vw, 48px)',
+                lineHeight: 1.2,
+                color: '#FAFAF8',
+              }}
+            >
+              North Idaho Buyer Guides
+            </h2>
+            <p
+              className="max-w-2xl mx-auto mt-5"
+              style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}
+            >
+              Honest, locally written research for out-of-state buyers, sellers thinking through timing, and families relocating to the region.
+            </p>
+          </div>
+
+          {/* Featured pillar */}
+          <Link
+            href="/relocating-to-north-idaho"
+            className="block mb-6"
+            style={{ backgroundColor: '#2A2722', border: '2px solid #C4842A', borderRadius: '4px', padding: '32px', textDecoration: 'none' }}
+          >
+            <div className="flex items-center gap-3 mb-3 flex-wrap">
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C4842A' }}>
+                Complete Relocation Guide
+              </span>
+              <span style={{ color: '#9A9590', fontSize: '12px' }}>·</span>
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '0.08em', color: '#1C1A17', backgroundColor: '#C4842A', padding: '2px 10px', borderRadius: '2px' }}>
+                Start Here
+              </span>
+            </div>
+            <h3
+              className="mb-3"
+              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: 'clamp(22px, 3vw, 28px)', lineHeight: 1.25, color: '#FAFAF8' }}
+            >
+              Relocating to North Idaho: The Complete Local Guide for Out-of-State Buyers
+            </h3>
+            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#9A9590', lineHeight: 1.7, marginBottom: '16px' }}>
+              The hub for everything below &mdash; costs, taxes, the five towns, schools, healthcare, weather, commutes, and the out-of-state buying process, all in one place.
+            </p>
+            <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: '#C4842A', fontFamily: "'DM Sans', system-ui, sans-serif", letterSpacing: '0.08em' }}>
+              Open the Guide &rarr;
+            </span>
+          </Link>
+
+          {/* Six article cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              {
+                href: '/articles/moving-to-north-idaho-cheapest-places-migration-best-small-towns',
+                label: 'Migration & Affordability',
+                title: 'The Honest Answer About Moving to North Idaho',
+                desc: "What's cheap, what's not, and why people keep coming — backed by Census data and Zillow values.",
+              },
+              {
+                href: '/articles/best-places-to-live-north-idaho-leaving-california',
+                label: 'For California Buyers',
+                title: 'Best Places to Live in North Idaho for People Leaving California',
+                desc: "Compare Coeur d'Alene, Post Falls, Hayden, and Sandpoint for cost, lifestyle, taxes, and community.",
+              },
+              {
+                href: '/articles/buying-north-idaho-home-before-selling-current-bridge-financing-options',
+                label: 'Bridge Financing',
+                title: 'You Found Your North Idaho Dream Home — But You Still Have a House to Sell',
+                desc: 'Seven real ways to bridge the gap — bridge loans, HELOCs, 401(k) loans, sale-leasebacks, and more.',
+              },
+              {
+                href: '/articles/buying-home-without-agent-nar-settlement-north-idaho',
+                label: 'NAR Settlement',
+                title: "Buying a Home Without a Buyer's Agent in 2026",
+                desc: 'What the August 2024 rule changes mean for North Idaho buyers, and what solo buyers actually risk.',
+              },
+              {
+                href: '/articles/trutina-at-north-place-senior-community-post-falls-buyer-guide',
+                label: 'Senior Real Estate',
+                title: 'Trutina at North Place: The Best Senior Location in North Idaho?',
+                desc: "Greenstone's new 55+ community in Post Falls — the location math, the new hospital, the lowest snow in the region.",
+              },
+              {
+                href: '/articles/is-it-a-good-time-to-buy-home-northern-idaho',
+                label: 'Market Timing',
+                title: 'Is It a Good Time to Buy a Home in Northern Idaho?',
+                desc: 'Honest 2026 analysis — buyer leverage, mortgage rates, seller concessions, and who should move now versus wait.',
+              },
+            ].map((g) => (
+              <Link
+                key={g.href}
+                href={g.href}
+                className="block transition-colors"
+                style={{ backgroundColor: '#2A2722', border: '1px solid #3A3530', borderRadius: '4px', padding: '24px', textDecoration: 'none' }}
+              >
+                <p
+                  className="mb-3"
+                  style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C4842A' }}
+                >
+                  {g.label}
+                </p>
+                <h3
+                  className="mb-2"
+                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: '20px', lineHeight: 1.3, color: '#FAFAF8' }}
+                >
+                  {g.title}
+                </h3>
+                <p
+                  className="mb-4"
+                  style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '14px', color: '#9A9590', lineHeight: 1.6 }}
+                >
+                  {g.desc}
+                </p>
+                <span
+                  className="text-xs font-semibold uppercase tracking-wider"
+                  style={{ color: '#C4842A', fontFamily: "'DM Sans', system-ui, sans-serif", letterSpacing: '0.08em' }}
+                >
+                  Read Guide &rarr;
+                </span>
+              </Link>
+            ))}
+          </div>
+
+          {/* Browse-all CTA */}
+          <div className="text-center mt-10">
+            <Link
+              href="/articles"
+              className="inline-block text-xs uppercase font-semibold tracking-wider rounded-sm"
+              style={{
+                fontFamily: "'DM Sans', system-ui, sans-serif",
+                color: '#C4842A',
+                border: '1px solid #C4842A',
+                padding: '12px 32px',
+                letterSpacing: '0.1em',
+                textDecoration: 'none',
+              }}
+            >
+              Browse All Articles &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ── 6. CTA ── */}
       <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
