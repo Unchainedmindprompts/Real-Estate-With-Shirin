@@ -139,7 +139,7 @@ export default function HomePage() {
           'https://www.realtor.com/realestateagents/6852257644eab0a63cfd80af',
           'https://www.homes.com/real-estate-agents/shirin-abplanalp/j7j2jr7/',
           'https://www.bbb.org/us/id/post-falls/profile/real-estate-agent/real-estate-with-shirin-1296-1000195359',
-          'https://www.yelp.com/biz/shirin-abplanalp-exp-realty-post-falls',
+          'https://www.yelp.com/biz/real-estate-with-shirin-coeur-d-alene',
           'https://www.instagram.com/dreamlifeinidaho',
           'https://www.facebook.com/ShirinRealty',
           'https://www.realty.com/a/Shirin-Abplanalp-1777925821520',
