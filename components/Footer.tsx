@@ -123,9 +123,8 @@ export default function Footer() {
                   </a>
                 </li>
                 <li className="text-sm" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                  510 S Clearwater Loop<br />
-                  Suite 100<br />
-                  Post Falls, ID 83854
+                  1927 W. Riverstone Drive<br />
+                  Coeur d&apos;Alene, ID 83814
                 </li>
               </ul>
             </div>

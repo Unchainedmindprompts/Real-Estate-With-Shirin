@@ -24,10 +24,10 @@ const jsonLd = {
     email: 'dreamlifeinidaho@gmail.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '510 S Clearwater Loop, Suite 100',
-      addressLocality: 'Post Falls',
+      streetAddress: '1927 W. Riverstone Drive',
+      addressLocality: "Coeur d'Alene",
       addressRegion: 'ID',
-      postalCode: '83854',
+      postalCode: '83814',
       addressCountry: 'US',
     },
   },
@@ -152,8 +152,8 @@ export default function ContactPage() {
                       lineHeight: 1.7,
                     }}
                   >
-                    510 S Clearwater Loop, Suite 100<br />
-                    Post Falls, ID 83854
+                    1927 W. Riverstone Drive<br />
+                    Coeur d&apos;Alene, ID 83814
                   </address>
                 </div>
 
