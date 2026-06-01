@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Selling Your Home in Northern Idaho | Shirin Abplanalp · eXp Realty',
+  title: 'Selling Your Home in Northern Idaho | Shirin Abplanalp · Berkshire Hathaway HomeServices Jacklin Real Estate',
   description:
     "Selling your home in Post Falls, Coeur d'Alene, or Northern Idaho? Shirin Abplanalp delivers strategic pricing, professional presentation, and results.",
   alternates: {

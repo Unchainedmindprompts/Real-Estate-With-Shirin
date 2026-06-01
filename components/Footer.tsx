@@ -33,11 +33,12 @@ export default function Footer() {
             </p>
             <div className="mt-5">
               <Image
-                src="/images/exp-realty-white.png"
-                alt="eXp Realty"
-                width={110}
-                height={40}
-                className="object-contain opacity-80"
+                src="/images/bhhs-jacklin-logo-white.png"
+                alt="Berkshire Hathaway HomeServices Jacklin Real Estate"
+                width={200}
+                height={38}
+                className="object-contain opacity-90"
+                style={{ width: 'auto', height: '38px' }}
               />
             </div>
           </div>
@@ -122,9 +123,8 @@ export default function Footer() {
                   </a>
                 </li>
                 <li className="text-sm" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                  510 S Clearwater Loop<br />
-                  Suite 100<br />
-                  Post Falls, ID 83854
+                  1927 W. Riverstone Drive<br />
+                  Coeur d&apos;Alene, ID 83814
                 </li>
               </ul>
             </div>
@@ -134,7 +134,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 flex flex-col lg:flex-row justify-between items-center gap-4">
           <p className="text-xs text-center lg:text-left" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-            © 2026 Real Estate With Shirin · Shirin Abplanalp · Licensed REALTOR® · eXp Realty · Idaho License #1371861
+            © 2026 Real Estate With Shirin · Shirin Abplanalp · Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · Idaho License #1371861
           </p>
           <p className="text-xs" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
             Helping North Idaho buyers and sellers find their perfect home.

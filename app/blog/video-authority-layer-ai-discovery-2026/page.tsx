@@ -155,10 +155,10 @@ const localBusinessSchema = {
   email: 'dreamlifeinidaho@gmail.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '510 S Clearwater Loop, Suite 100',
-    addressLocality: 'Post Falls',
+    streetAddress: '1927 W. Riverstone Drive',
+    addressLocality: "Coeur d'Alene",
     addressRegion: 'ID',
-    postalCode: '83854',
+    postalCode: '83814',
     addressCountry: 'US',
   },
   areaServed: [
@@ -171,8 +171,8 @@ const localBusinessSchema = {
   memberOf: {
     '@type': 'Organization',
     '@id': 'https://www.exprealty.com/#organization',
-    name: 'eXp Realty',
-    url: 'https://www.exprealty.com',
+    name: 'Berkshire Hathaway HomeServices Jacklin Real Estate',
+    url: 'https://www.jacklinrealestate.com/',
   },
 }
 
@@ -211,12 +211,12 @@ export default function VideoAuthorityLayerPage() {
           <div className="flex items-center gap-4">
             <img
               src="/images/shirin-abplanalp.jpg"
-              alt="Shirin Abplanalp, licensed realtor at eXp Realty"
+              alt="Shirin Abplanalp, licensed realtor at Berkshire Hathaway HomeServices Jacklin Real Estate"
               className="w-10 h-10 rounded-full object-cover"
             />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
-              <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · eXp Realty · March 23, 2026</p>
+              <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · March 23, 2026</p>
             </div>
           </div>
         </div>
@@ -410,7 +410,7 @@ export default function VideoAuthorityLayerPage() {
                   className="w-16 h-16 rounded-full object-cover mb-4"
                 />
                 <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
-                <p className="font-dm-sans text-xs text-[#9A9590] mb-3">Licensed REALTOR® · eXp Realty<br />Idaho License #1371861</p>
+                <p className="font-dm-sans text-xs text-[#9A9590] mb-3">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate<br />Idaho License #1371861</p>
                 <p className="font-dm-sans text-sm text-[#5C5650] leading-relaxed mb-4">
                   Shirin relocated from Bend, Oregon to Northern Idaho and now helps buyers, sellers, and relocating families navigate the Kootenai County market.
                 </p>

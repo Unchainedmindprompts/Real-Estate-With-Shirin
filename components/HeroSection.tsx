@@ -126,7 +126,7 @@ export default function HeroSection() {
               color: '#5C5650',
             }}
           >
-            Licensed REALTOR® · eXp Realty · North Idaho
+            Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · North Idaho
           </p>
           <p
             className="mb-10"

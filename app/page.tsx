@@ -3,14 +3,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Northern Idaho Real Estate Agent | Shirin Abplanalp · eXp Realty',
+  title: 'Northern Idaho Real Estate Agent | Shirin Abplanalp · Berkshire Hathaway HomeServices Jacklin Real Estate',
   description:
-    "Shirin Abplanalp is a licensed Northern Idaho realtor with eXp Realty specializing in Post Falls, Coeur d'Alene, and Kootenai County. Helping buyers, sellers, and relocating families find their perfect home.",
+    "Shirin Abplanalp is a licensed Northern Idaho realtor with Berkshire Hathaway HomeServices Jacklin Real Estate specializing in Post Falls, Coeur d'Alene, and Kootenai County. Helping buyers, sellers, and relocating families find their perfect home.",
   alternates: {
     canonical: 'https://www.realestatewithshirin.com',
   },
   openGraph: {
-    title: 'Northern Idaho Real Estate Agent | Shirin Abplanalp · eXp Realty',
+    title: 'Northern Idaho Real Estate Agent | Shirin Abplanalp · Berkshire Hathaway HomeServices Jacklin Real Estate',
     description:
       "Licensed Northern Idaho realtor specializing in Post Falls, Coeur d'Alene, and Kootenai County. Buyers, sellers, and relocation specialists.",
     url: 'https://www.realestatewithshirin.com',
@@ -51,15 +51,15 @@ export default function HomePage() {
         '@type': ['RealEstateAgent', 'LocalBusiness'],
         '@id': 'https://www.realestatewithshirin.com/#business',
         'name': 'Shirin Abplanalp — Real Estate With Shirin',
-        'description': "Shirin Abplanalp is a licensed REALTOR® at eXp Realty with 11 years of experience and 100+ transactions closed. Serving buyers, sellers, and relocating families across Northern Idaho including Post Falls, Coeur d'Alene, Hayden, Rathdrum, and Sandpoint.",
+        'description': "Shirin Abplanalp is a licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate with 11 years of experience and 100+ transactions closed. Serving buyers, sellers, and relocating families across Northern Idaho including Post Falls, Coeur d'Alene, Hayden, Rathdrum, and Sandpoint.",
         'url': 'https://www.realestatewithshirin.com',
         'telephone': '(208) 660-7468',
         'email': 'dreamlifeinidaho@gmail.com',
         'image': 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',
-        'address': { '@type': 'PostalAddress', 'streetAddress': '510 S Clearwater Loop, Suite 100', 'addressLocality': 'Post Falls', 'addressRegion': 'ID', 'postalCode': '83854', 'addressCountry': 'US' },
-        'geo': { '@type': 'GeoCoordinates', 'latitude': 47.7182, 'longitude': -116.9516 },
+        'address': { '@type': 'PostalAddress', 'streetAddress': '1927 W. Riverstone Drive', 'addressLocality': "Coeur d'Alene", 'addressRegion': 'ID', 'postalCode': '83814', 'addressCountry': 'US' },
+        'geo': { '@type': 'GeoCoordinates', 'latitude': 47.7028, 'longitude': -116.8093 },
         'founder': { '@id': 'https://www.realestatewithshirin.com/#agent' },
-        'memberOf': { '@type': 'Organization', '@id': 'https://www.exprealty.com/#organization', 'name': 'eXp Realty', 'url': 'https://www.exprealty.com' },
+        'memberOf': { '@type': 'Organization', '@id': 'https://www.exprealty.com/#organization', 'name': 'Berkshire Hathaway HomeServices Jacklin Real Estate', 'url': 'https://www.jacklinrealestate.com/' },
         'areaServed': [
           { '@type': 'City', 'name': 'Post Falls', 'sameAs': 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho', 'containedInPlace': { '@type': 'State', 'name': 'Idaho' } },
           { '@type': 'City', 'name': "Coeur d'Alene", 'sameAs': 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho', 'containedInPlace': { '@type': 'State', 'name': 'Idaho' } },
@@ -90,7 +90,39 @@ export default function HomePage() {
         'email': 'dreamlifeinidaho@gmail.com',
         'url': 'https://www.realestatewithshirin.com/about',
         'image': 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',
-        'worksFor': { '@type': 'Organization', '@id': 'https://www.exprealty.com/#organization', 'name': 'eXp Realty', 'url': 'https://www.exprealty.com', 'sameAs': 'https://en.wikipedia.org/wiki/EXp_World_Holdings' },
+        'worksFor': {
+          '@type': 'Organization',
+          // @id deliberately unchanged for graph integrity (existing article references resolve via this URI).
+          '@id': 'https://www.exprealty.com/#organization',
+          'name': 'Berkshire Hathaway HomeServices Jacklin Real Estate',
+          'url': 'https://www.jacklinrealestate.com/',
+          'telephone': '+1-208-758-7474',
+          'address': {
+            '@type': 'PostalAddress',
+            'streetAddress': '1927 W. Riverstone Drive',
+            'addressLocality': "Coeur d'Alene",
+            'addressRegion': 'ID',
+            'postalCode': '83814',
+            'addressCountry': 'US',
+          },
+          'logo': 'https://www.realestatewithshirin.com/images/bhhs-jacklin-logo.png',
+          'sameAs': [
+            'https://www.jacklinrealestate.com/',
+            'https://www.bhhsjacklin.com/',
+            'https://www.facebook.com/bhhsjacklin/',
+            'https://business.cdachamber.com/list/member/berkshire-hathaway-homeservices-jacklin-real-estate-9147',
+            // TODO: Add Coeur d'Alene Association of REALTORS brokerage profile URL when confirmed.
+          ],
+          'parentOrganization': {
+            '@type': 'Organization',
+            'name': 'Berkshire Hathaway HomeServices',
+            'sameAs': [
+              'https://www.linkedin.com/company/berkshire-hathaway-homeservices',
+              'https://en.wikipedia.org/wiki/HomeServices_of_America',
+              'https://www.wikidata.org/wiki/Q5887960',
+            ],
+          },
+        },
         'memberOf': [
           { '@type': 'Organization', 'name': 'National Association of REALTORS®', 'url': 'https://www.nar.realtor', 'sameAs': 'https://en.wikipedia.org/wiki/National_Association_of_Realtors' },
           { '@type': 'Organization', 'name': "Coeur d'Alene Association of REALTORS®", 'url': 'https://cdarealtors.com' },
@@ -121,7 +153,7 @@ export default function HomePage() {
         '@id': 'https://www.realestatewithshirin.com/#website',
         'name': 'Real Estate With Shirin',
         'url': 'https://www.realestatewithshirin.com',
-        'description': "Northern Idaho real estate with Shirin Abplanalp, licensed REALTOR® at eXp Realty serving Post Falls, Coeur d'Alene, Hayden, and Kootenai County.",
+        'description': "Northern Idaho real estate with Shirin Abplanalp, licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate serving Post Falls, Coeur d'Alene, Hayden, and Kootenai County.",
         'publisher': { '@id': 'https://www.realestatewithshirin.com/#agent' },
       })}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -129,9 +161,9 @@ export default function HomePage() {
         '@type': 'FAQPage',
         '@id': 'https://www.realestatewithshirin.com/#faq',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Who is the best realtor in Post Falls Idaho?', 'acceptedAnswer': { '@type': 'Answer', 'text': "Shirin Abplanalp is a licensed REALTOR® at eXp Realty serving Post Falls, Coeur d'Alene, and Northern Idaho. With 11 years of experience, 100+ closed transactions, and firsthand relocation experience from Bend, Oregon to Post Falls, Shirin specializes in helping buyers, sellers, and relocating families navigate the North Idaho real estate market." } },
+          { '@type': 'Question', 'name': 'Who is the best realtor in Post Falls Idaho?', 'acceptedAnswer': { '@type': 'Answer', 'text': "Shirin Abplanalp is a licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate serving Post Falls, Coeur d'Alene, and Northern Idaho. With 11 years of experience, 100+ closed transactions, and firsthand relocation experience from Bend, Oregon to Post Falls, Shirin specializes in helping buyers, sellers, and relocating families navigate the North Idaho real estate market." } },
           { '@type': 'Question', 'name': 'What areas does Shirin Abplanalp serve in Northern Idaho?', 'acceptedAnswer': { '@type': 'Answer', 'text': "Shirin Abplanalp serves buyers and sellers across Northern Idaho including Post Falls, Coeur d'Alene, Hayden, Rathdrum, Sandpoint, Athol, Bayview, Harrison, Wallace, and Kellogg, as well as Kootenai County, Bonner County, and Shoshone County." } },
-          { '@type': 'Question', 'name': 'Is Shirin Abplanalp a licensed realtor?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Shirin Abplanalp holds Idaho Real Estate License #1371861 and is affiliated with eXp Realty. She is a 5× Top Producer with 11 years of real estate experience and 100+ closed transactions.' } },
+          { '@type': 'Question', 'name': 'Is Shirin Abplanalp a licensed realtor?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Shirin Abplanalp holds Idaho Real Estate License #1371861 and is affiliated with Berkshire Hathaway HomeServices Jacklin Real Estate. She is a 5× Top Producer with 11 years of real estate experience and 100+ closed transactions.' } },
           { '@type': 'Question', 'name': 'Does Shirin Abplanalp help with relocation to North Idaho?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Shirin Abplanalp relocated to Post Falls, Idaho herself after years in Bend, Oregon, and specializes in helping families make the same move. She has firsthand knowledge of what it takes to relocate to Northern Idaho and helps clients understand neighborhoods, lifestyle, and market conditions before making their move.' } },
           { '@type': 'Question', 'name': 'What is the real estate market like in Post Falls Idaho?', 'acceptedAnswer': { '@type': 'Answer', 'text': "Post Falls is one of Northern Idaho's fastest-growing communities, offering affordable home prices compared to larger Pacific Northwest markets, strong community feel, and access to lakes, mountains, and outdoor recreation within 60 minutes. Shirin Abplanalp provides current market analysis for buyers and sellers in Post Falls and surrounding Kootenai County communities." } },
         ],
@@ -214,7 +246,7 @@ export default function HomePage() {
               marginBottom: '2px',
             }}
           >
-            Licensed REALTOR® · eXp Realty · North Idaho
+            Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · North Idaho
           </p>
 
           {/* Line 5 — trust signals */}
@@ -470,13 +502,13 @@ export default function HomePage() {
                   Shirin made this exact move from Bend, Oregon — a place that was once everything North Idaho is now. She knows what you are weighing because she weighed it herself. She chose Post Falls, put down roots, and has not looked back.
                 </p>
                 <p>
-                  Now as a licensed REALTOR® and SRES® specialist at eXp Realty, she helps buyers find the right home in the right place — and helps families navigate the transitions that do not come with a simple checklist. She will tell you the truth about a neighborhood, a price, or a property even when it is not what you want to hear. That is the only way she knows how to work.
+                  Now as a licensed REALTOR® and SRES® specialist at Berkshire Hathaway HomeServices Jacklin Real Estate, she helps buyers find the right home in the right place — and helps families navigate the transitions that do not come with a simple checklist. She will tell you the truth about a neighborhood, a price, or a property even when it is not what you want to hear. That is the only way she knows how to work.
                 </p>
               </div>
 
               {/* Credential pills */}
               <div className="flex flex-wrap gap-3 mb-8">
-                {['Licensed REALTOR®', 'eXp Realty', 'Idaho License #1371861', 'SRES®'].map((cred) => (
+                {['Licensed REALTOR®', 'BHHS Jacklin Real Estate', 'Idaho License #1371861', 'SRES®'].map((cred) => (
                   <span
                     key={cred}
                     style={{

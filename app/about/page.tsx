@@ -3,9 +3,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'About Shirin Abplanalp | Licensed Northern Idaho Realtor · eXp Realty',
+  title: 'About Shirin Abplanalp | Licensed Northern Idaho Realtor · Berkshire Hathaway HomeServices Jacklin Real Estate',
   description:
-    "11 years in real estate, 100+ transactions closed, 5× Top Producer. Shirin Abplanalp is a licensed REALTOR® at eXp Realty serving Post Falls, Coeur d'Alene, and Northern Idaho.",
+    "11 years in real estate, 100+ transactions closed, 5× Top Producer. Shirin Abplanalp is a licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate serving Post Falls, Coeur d'Alene, and Northern Idaho.",
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/about',
   },
@@ -20,12 +20,12 @@ const jsonLdProfile = {
     name: 'Shirin Abplanalp',
     jobTitle: 'Licensed REALTOR®',
     description:
-      "Licensed Northern Idaho realtor at eXp Realty with 11 years of experience and 100+ transactions closed. Specialising in buyer representation, seller representation, and relocation for families moving to Post Falls, Coeur d'Alene, and Kootenai County.",
+      "Licensed Northern Idaho realtor at Berkshire Hathaway HomeServices Jacklin Real Estate with 11 years of experience and 100+ transactions closed. Specialising in buyer representation, seller representation, and relocation for families moving to Post Falls, Coeur d'Alene, and Kootenai County.",
     telephone: '(208) 660-7468',
     email: 'dreamlifeinidaho@gmail.com',
     url: 'https://www.realestatewithshirin.com/about',
     image: 'https://www.realestatewithshirin.com/images/realtor-headshot-outdoor.jpeg',
-    worksFor: { '@type': 'Organization', '@id': 'https://www.exprealty.com/#organization', name: 'eXp Realty', url: 'https://www.exprealty.com' },
+    worksFor: { '@type': 'Organization', '@id': 'https://www.exprealty.com/#organization', name: 'Berkshire Hathaway HomeServices Jacklin Real Estate', url: 'https://www.jacklinrealestate.com/' },
     hasCredential: {
       '@type': 'EducationalOccupationalCredential',
       credentialCategory: 'Real Estate License',
@@ -202,7 +202,7 @@ export default function AboutPage() {
               <div className="mt-10 flex flex-wrap gap-4">
                 {[
                   { label: 'License #', value: '1371861' },
-                  { label: 'Brokerage', value: 'eXp Realty' },
+                  { label: 'Brokerage', value: 'Berkshire Hathaway HomeServices Jacklin Real Estate' },
                   { label: 'Licensed Since', value: '2015' },
                 ].map((item) => (
                   <div key={item.label} style={{ borderLeft: '3px solid #C4852A', paddingLeft: '12px' }}>
@@ -235,7 +235,7 @@ export default function AboutPage() {
             <div className="relative h-72 sm:h-96 lg:h-[600px]">
               <Image
                 src="/images/shirin-headshot-studio.webp"
-                alt="Shirin Abplanalp, Licensed REALTOR® at eXp Realty"
+                alt="Shirin Abplanalp, Licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate"
                 fill
                 className="object-cover object-top"
                 style={{ borderRadius: '2px' }}
@@ -361,7 +361,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { label: 'License', value: 'Licensed REALTOR®\nIdaho License #1371861' },
-              { label: 'Brokerage', value: 'eXp Realty\nPost Falls, ID' },
+              { label: 'Brokerage', value: "Berkshire Hathaway HomeServices Jacklin Real Estate\nCoeur d'Alene, ID" },
               { label: 'Licensed Since', value: '2015' },
               { label: 'Recognition', value: '5× Top Producer\nBend Premier Real Estate' },
               { label: 'Experience', value: '100+ Personal\nTransactions Closed' },

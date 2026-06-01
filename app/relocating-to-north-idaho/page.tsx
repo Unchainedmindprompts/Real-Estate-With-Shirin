@@ -347,12 +347,12 @@ export default function RelocatingToNorthIdahoPage() {
           <div className="flex items-center gap-4">
             <img
               src="/images/shirin-headshot-studio.webp"
-              alt="Shirin Abplanalp, Licensed REALTOR® at eXp Realty"
+              alt="Shirin Abplanalp, Licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate"
               className="w-10 h-10 rounded-full object-cover"
             />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
-              <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR&reg; · SRES&reg; · eXp Realty · May 31, 2026</p>
+              <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR&reg; · SRES&reg; · Berkshire Hathaway HomeServices Jacklin Real Estate · May 31, 2026</p>
             </div>
           </div>
         </div>
@@ -745,7 +745,7 @@ export default function RelocatingToNorthIdahoPage() {
                 The questions in this guide are the questions I get every week from buyers who are serious about this move. If yours isn&rsquo;t answered here, it&rsquo;s answered in one of the articles linked throughout &mdash; or you can ask me directly.
               </p>
               <p className="mb-2 text-[15px] text-[#9A9590]">
-                Shirin Abplanalp is a licensed Idaho REALTOR&reg; and SRES&reg; (Seniors Real Estate Specialist) at eXp Realty, serving Coeur d&rsquo;Alene, Post Falls, Hayden, Rathdrum, and Sandpoint.
+                Shirin Abplanalp is a licensed Idaho REALTOR&reg; and SRES&reg; (Seniors Real Estate Specialist) at Berkshire Hathaway HomeServices Jacklin Real Estate, serving Coeur d&rsquo;Alene, Post Falls, Hayden, Rathdrum, and Sandpoint.
               </p>
               <p className="mt-8 text-[13px] text-[#9A9590] italic">
                 Guide last updated: May 2026. Market statistics reflect April 2026 data from Redfin and U.S. Census Bureau. Tax rates reflect 2025 Idaho State Tax Commission schedules. All data subject to change; verify current figures with relevant sources before making real estate or financial decisions.
