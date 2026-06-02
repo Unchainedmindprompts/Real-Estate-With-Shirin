@@ -135,6 +135,7 @@ export default function HomePage() {
         'knowsAbout': ['Post Falls Idaho real estate', "Coeur d'Alene Idaho real estate", 'Northern Idaho relocation', 'Kootenai County homes for sale', 'Buyer representation', 'Seller representation', 'Relocation', 'North Idaho lifestyle', 'Out-of-state relocation real estate', 'Seniors Real Estate Specialist services', 'First-time home buyers Idaho', 'Kootenai County neighborhoods'],
         'address': { '@type': 'PostalAddress', 'addressLocality': 'Post Falls', 'addressRegion': 'ID', 'addressCountry': 'US' },
         'sameAs': [
+          'https://www.jacklinrealestate.com/agents/2081255/Shirin+Abplanalp',
           'https://www.zillow.com/profile/dreamlifeinidaho',
           'https://www.realtor.com/realestateagents/6852257644eab0a63cfd80af',
           'https://www.homes.com/real-estate-agents/shirin-abplanalp/j7j2jr7/',
