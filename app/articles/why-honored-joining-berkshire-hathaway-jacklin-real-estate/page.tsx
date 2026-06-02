@@ -354,6 +354,8 @@ export default function JoiningBHHSJacklinPage() {
                 So let me tell you what this move means, what these names actually stand for, and why I feel genuinely privileged to put their names alongside mine.
               </p>
 
+              <p className="mb-10">If you&rsquo;re new to my work and arrived here trying to understand North Idaho relocation,{' '}<a href="/relocating-to-north-idaho" className={linkClass}>the complete relocation guide for out-of-state buyers</a>{' '}is the better starting point &mdash; this article is about the brokerage that now sits behind that work.</p>
+
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">The three layers that make this rare</h2>
               <p className="mb-10">Most real estate brokerages are one thing. This one is three things stacked.</p>
 
