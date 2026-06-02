@@ -111,6 +111,7 @@ export default function HomePage() {
             'https://www.bhhsjacklin.com/',
             'https://www.facebook.com/bhhsjacklin/',
             'https://business.cdachamber.com/list/member/berkshire-hathaway-homeservices-jacklin-real-estate-9147',
+            'https://member.postfallschamber.org/list/member/berkshire-hathaway-homeservices-jacklin-real-estate-3040',
             // TODO: Add Coeur d'Alene Association of REALTORS brokerage profile URL when confirmed.
           ],
           'parentOrganization': {
