@@ -60,6 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/relocating-to-north-idaho`, lastModified: pageLastModified('app/relocating-to-north-idaho/page.tsx'), changeFrequency: 'monthly', priority: 0.95 },
     { url: `${baseUrl}/articles`, lastModified: gitLastModified('app/articles/page.tsx'), changeFrequency: 'weekly', priority: 0.7 },
     ...articleEntries,
+    { url: `${baseUrl}/videos`, lastModified: gitLastModified('app/videos/page.tsx'), changeFrequency: 'weekly', priority: 0.7 },
     { url: `${baseUrl}/contact`, lastModified: gitLastModified('app/contact/page.tsx'), changeFrequency: 'monthly', priority: 0.8 },
   ]
 }
