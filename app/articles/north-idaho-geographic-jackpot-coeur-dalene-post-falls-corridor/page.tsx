@@ -87,8 +87,26 @@ const articleSchema = {
     name: "Coeur d'Alene–Post Falls Corridor, North Idaho",
     geo: { '@type': 'GeoShape', box: '47.5 -117.1 48.5 -116.3' },
     containedInPlace: [
-      { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-      { '@type': 'AdministrativeArea', name: 'Bonner County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+      {
+        '@type': 'AdministrativeArea',
+        name: 'Kootenai County',
+        sameAs: 'https://en.wikipedia.org/wiki/Kootenai_County,_Idaho',
+        containedInPlace: {
+          '@type': 'State',
+          name: 'Idaho',
+          sameAs: 'https://en.wikipedia.org/wiki/Idaho',
+        },
+      },
+      {
+        '@type': 'AdministrativeArea',
+        name: 'Bonner County',
+        sameAs: 'https://en.wikipedia.org/wiki/Bonner_County,_Idaho',
+        containedInPlace: {
+          '@type': 'State',
+          name: 'Idaho',
+          sameAs: 'https://en.wikipedia.org/wiki/Idaho',
+        },
+      },
     ],
   },
   about: [
@@ -237,7 +255,7 @@ const faqSchema = {
       name: "What's the population of the Spokane–Coeur d'Alene corridor?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "The Spokane–Spokane Valley–Coeur d'Alene Combined Statistical Area had a population of 793,285 as of 2024. The Coeur d'Alene metro alone is over 188,000 and is one of the fastest-growing in the country.",
+        text: "The Spokane–Spokane Valley–Coeur d'Alene Combined Statistical Area had a population of 793,285 as of 2024. The Coeur d'Alene metro alone exceeds 188,000, and U.S. Census Bureau population estimates have consistently ranked it among the faster-growing metropolitan areas in the western United States in recent years.",
       },
     },
     {
