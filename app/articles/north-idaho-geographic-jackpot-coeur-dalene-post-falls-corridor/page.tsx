@@ -7,12 +7,12 @@ const PAGE_URL = `${BASE_URL}/articles/${SLUG}`
 export const metadata: Metadata = {
   title: "The Geographic Jackpot: Why North Idaho's Coeur d'Alene–Post Falls Corridor Is So Hard to Beat",
   description:
-    "Four mountain ranges, four major lakes, three rivers, and a major airport — all within an hour of Coeur d'Alene. A North Idaho REALTOR's honest read on what makes the CdA–Post Falls corridor unusual, and what it means for buyers.",
+    "Four mountain ranges, four major lakes, three rivers, and a major airport — all in reach of Coeur d'Alene. A North Idaho REALTOR's honest read on what makes the CdA–Post Falls corridor unusual, and what it means for buyers.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "The Geographic Jackpot: Why North Idaho's Coeur d'Alene–Post Falls Corridor Is So Hard to Beat",
     description:
-      "Mountains, lakes, rivers, and a major airport — all within an hour of Coeur d'Alene. The real geography behind North Idaho relocation decisions.",
+      "Mountains, lakes, rivers, and a major airport — all in reach of Coeur d'Alene. The real geography behind North Idaho relocation decisions.",
     url: PAGE_URL,
     type: 'article',
     publishedTime: '2026-06-10',
@@ -27,7 +27,7 @@ const articleSchema = {
   '@id': `${PAGE_URL}#article`,
   headline: "The Geographic Jackpot: Why North Idaho's Coeur d'Alene–Post Falls Corridor Is So Hard to Beat",
   alternativeHeadline:
-    "A North Idaho REALTOR's read on the geographic convergence behind the Coeur d'Alene–Post Falls corridor — four mountain ranges, four major lakes, three rivers, and a major airport all within an hour — and what that geography means for relocation buyers.",
+    "A North Idaho REALTOR's read on the geographic convergence behind the Coeur d'Alene–Post Falls corridor — four mountain ranges, four major lakes, three rivers, and a major airport all in reach — and what that geography means for relocation buyers.",
   description:
     "An honest geographic walkthrough of the Coeur d'Alene–Post Falls corridor: the mountains, lakes, rivers, climate, and Spokane access that converge here, and how each translates into real-estate options most regions don't offer.",
   image: {
@@ -286,7 +286,7 @@ const breadcrumbSchema = {
 }
 
 const stats = [
-  { value: '4', label: 'Lakes Within 60 Min', sub: "CdA · Hayden · Pend Oreille · Priest" },
+  { value: '4', label: 'Major Lakes in Reach', sub: "CdA · Hayden · Pend Oreille · Priest" },
   { value: '3', label: 'Mountain Ranges in Reach', sub: "CdA · Selkirk · Bitterroot" },
   { value: '45 min', label: 'To Spokane Intl (GEG)', sub: '20+ nonstop destinations' },
   { value: '793K', label: 'CSA Population', sub: 'Spokane–CdA combined' },
@@ -324,7 +324,7 @@ export default function GeographicJackpotPage() {
             The Geographic Jackpot: Why North Idaho&rsquo;s Coeur d&rsquo;Alene&ndash;Post Falls Corridor Is So Hard to Beat
           </h1>
           <p className="font-dm-sans text-lg text-[#5C5650] max-w-3xl mb-8 leading-relaxed">
-            Four mountain ranges. Four major lakes. Three working rivers. A major airport. All within an hour of downtown Coeur d&rsquo;Alene &mdash; and that&rsquo;s not a marketing line, it&rsquo;s just geography.
+            Four mountain ranges. Four major lakes. Three working rivers. A major airport. All within easy reach of downtown Coeur d&rsquo;Alene &mdash; and that&rsquo;s not a marketing line, it&rsquo;s just geography.
           </p>
           <div className="flex items-center gap-4">
             <img
@@ -358,7 +358,7 @@ export default function GeographicJackpotPage() {
       {/* Hero Image (placeholder — upload to /public/images/north-idaho-geographic-jackpot-corridor.png) */}
       <img
         src="/images/north-idaho-geographic-jackpot-corridor.png"
-        alt="The Coeur d&rsquo;Alene–Post Falls corridor — mountains, lakes, and rivers converging within an hour"
+        alt="The Coeur d&rsquo;Alene–Post Falls corridor — mountains, lakes, and rivers converging in one region"
         className="w-full h-auto block"
       />
 
@@ -396,14 +396,14 @@ export default function GeographicJackpotPage() {
 
               {/* H3: Lake Country */}
               <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">Lake Country</h3>
-              <p className="mb-6">This is the part of North Idaho that does the heavy lifting in most relocation conversations. Four major lakes are within an hour of Coeur d&rsquo;Alene:</p>
+              <p className="mb-6">This is the part of North Idaho that does the heavy lifting in most relocation conversations. Four major lakes shape this region &mdash; three of them within an hour of downtown Coeur d&rsquo;Alene, plus Priest Lake just beyond as a longer day trip:</p>
               <ul className="list-disc pl-6 mb-6 space-y-3">
                 <li><strong className="text-[#1C1A17]">Coeur d&rsquo;Alene Lake</strong>{' '}&mdash; 25 miles long, with over 109 miles of shoreline, according to U.S. Geological Survey and lake authority data. It&rsquo;s often called one of the most beautiful lakes in the world, and the downtown waterfront, the boardwalk, and the cruises are what define the region&rsquo;s identity.</li>
                 <li><strong className="text-[#1C1A17]">Hayden Lake</strong>{' '}&mdash; just 15 minutes north of downtown. About 7 miles long, with an irregular shoreline of roughly 40 miles and a maximum depth near 178 feet, per the{' '}<a href="https://www.iwac.us/protect-our-waters/inland-empire-lakes/coeur-dalene-lake-idaho/" target="_blank" rel="noopener noreferrer" className={linkClass}>Idaho Washington Aquifer Collaborative</a>. (You&rsquo;ll hear locals swear it runs 800 feet deep &mdash; that&rsquo;s a long-running legend, not the surveyed number.) Quieter, residential, and home to some of the most coveted waterfront real estate in the region.</li>
                 <li><strong className="text-[#1C1A17]">Lake Pend Oreille</strong>{' '}&mdash; Idaho&rsquo;s largest, 43 miles long with 111 miles of shoreline, and 1,158 feet deep at its deepest point. It is the fifth-deepest lake in the United States, according to{' '}<a href="https://visitnorthidaho.com/activity/lake-pend-oreille/" target="_blank" rel="noopener noreferrer" className={linkClass}>Visit North Idaho</a>. Sandpoint sits on its northern shore.</li>
                 <li><strong className="text-[#1C1A17]">Priest Lake</strong>{' '}&mdash; the one locals call the Crown Jewel of Idaho. A 19-mile glacial lake surrounded by old-growth cedar and remote enough that cell service is still a coin flip. The{' '}<a href="https://priestlake.org/" target="_blank" rel="noopener noreferrer" className={linkClass}>Priest Lake Chamber of Commerce</a>{' '}is the starting point if you&rsquo;ve never been.</li>
               </ul>
-              <p className="mb-10">Living within a 60-minute radius of four lakes like these is not normal. It&rsquo;s the kind of thing you stop noticing after a couple of years, until a visiting friend points out that you have a beach problem most cities would kill for.</p>
+              <p className="mb-10">Living within reach of four lakes like these is not normal. It&rsquo;s the kind of thing you stop noticing after a couple of years, until a visiting friend points out that you have a beach problem most cities would kill for.</p>
 
               {/* H3: River Valleys */}
               <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">River Valleys</h3>
