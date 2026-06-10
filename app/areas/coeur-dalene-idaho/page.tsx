@@ -3,9 +3,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: "Coeur d'Alene Idaho Real Estate | Homes for Sale | Shirin Abplanalp",
+  title: "Coeur d'Alene, Idaho Real Estate & Living Guide",
   description:
-    "Looking for homes in Coeur d'Alene Idaho? Shirin Abplanalp is a licensed Coeur d'Alene real estate agent with Berkshire Hathaway HomeServices Jacklin Real Estate.",
+    "Thinking about Coeur d'Alene, Idaho? A local REALTOR's guide to neighborhoods, home prices, lifestyle, and what living on the lake is actually like.",
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/areas/coeur-dalene-idaho',
   },
@@ -104,7 +104,7 @@ export default function CdaPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/north-idaho-lake-hero.webp"
-            alt="Lake Coeur d'Alene seaplane dock"
+            alt="Coeur d'Alene, Idaho — lake seaplane dock"
             fill
             priority
             className="object-cover"

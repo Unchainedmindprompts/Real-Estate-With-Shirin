@@ -3,16 +3,16 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Northern Idaho Real Estate Agent | Shirin Abplanalp · Berkshire Hathaway HomeServices Jacklin Real Estate',
+  title: 'Shirin Abplanalp | North Idaho REALTOR® | BHHS Jacklin',
   description:
-    "Shirin Abplanalp is a licensed Northern Idaho realtor with Berkshire Hathaway HomeServices Jacklin Real Estate specializing in Post Falls, Coeur d'Alene, and Kootenai County. Helping buyers, sellers, and relocating families find their perfect home.",
+    "Shirin Abplanalp is a licensed North Idaho REALTOR® with BHHS Jacklin Real Estate, helping buyers, sellers, and relocating families across North Idaho.",
   alternates: {
     canonical: 'https://www.realestatewithshirin.com',
   },
   openGraph: {
-    title: 'Northern Idaho Real Estate Agent | Shirin Abplanalp · Berkshire Hathaway HomeServices Jacklin Real Estate',
+    title: 'Shirin Abplanalp | North Idaho REALTOR® | BHHS Jacklin',
     description:
-      "Licensed Northern Idaho realtor specializing in Post Falls, Coeur d'Alene, and Kootenai County. Buyers, sellers, and relocation specialists.",
+      "Shirin Abplanalp is a licensed North Idaho REALTOR® with BHHS Jacklin Real Estate, helping buyers, sellers, and relocating families across North Idaho.",
     url: 'https://www.realestatewithshirin.com',
     type: 'website',
   },

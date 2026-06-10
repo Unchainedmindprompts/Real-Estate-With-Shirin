@@ -3,9 +3,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Post Falls Idaho Real Estate | Homes for Sale | Shirin Abplanalp',
+  title: 'Post Falls, Idaho Real Estate & Living Guide',
   description:
-    'Looking for homes in Post Falls Idaho? Shirin Abplanalp is a licensed Post Falls real estate agent with Berkshire Hathaway HomeServices Jacklin Real Estate. Expert buyer and seller representation.',
+    "Thinking about Post Falls, Idaho? A local REALTOR's guide to neighborhoods, home prices, lifestyle, and what living in this fast-growing Kootenai city is like.",
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/areas/post-falls-idaho',
   },
@@ -104,7 +104,7 @@ export default function PostFallsPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/north-idaho-lake-hero.webp"
-            alt="Lake Coeur d'Alene seaplane dock"
+            alt="Post Falls, Idaho — Lake Coeur d'Alene area"
             fill
             priority
             className="object-cover"
@@ -153,6 +153,9 @@ export default function PostFallsPage() {
           </p>
           <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", marginBottom: '16px' }}>
             The market has seen consistent demand from buyers relocating from California, Washington, and Oregon. As of early 2026, Post Falls has just 1.4 months of housing supply — one of the tightest inventory conditions in Northern Idaho. Well-priced homes move. Overpriced homes sit. Knowing the difference is where local expertise matters.
+          </p>
+          <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", marginBottom: '16px' }}>
+            For the budget-by-budget price breakdown, see <a href="/articles/how-much-do-homes-cost-post-falls-idaho" style={{ color: '#C4842A' }}>what homes actually cost in Post Falls</a>. For the broader market read — inventory, days on market, and where prices are heading — see the <a href="/articles/post-falls-idaho-housing-market-2026" style={{ color: '#C4842A' }}>2026 Post Falls housing market trends</a>.
           </p>
         </div>
       </section>

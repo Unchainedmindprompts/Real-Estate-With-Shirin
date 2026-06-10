@@ -3,9 +3,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Buying a Home in Northern Idaho | Shirin Abplanalp · Berkshire Hathaway HomeServices Jacklin Real Estate',
+  title: 'Buying a Home in North Idaho | Shirin Abplanalp, REALTOR®',
   description:
-    "Looking to buy a home in Post Falls, Coeur d'Alene, or Northern Idaho? Shirin Abplanalp provides expert buyer representation with deep local market knowledge.",
+    "Buying a home in Post Falls, Coeur d'Alene, or anywhere in North Idaho? A local REALTOR's honest read on neighborhoods, prices, and what actually matters.",
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/buyers',
   },

@@ -565,7 +565,7 @@ export default function CommuteTimesPage() {
             </h3>
             <p className="mb-8">
               Post Falls is the closest North Idaho town to Spokane and the most popular commuter address. The drive is straight west on I-90, with the most reliable departure window being before 7:00 AM or after 9:00 AM for return trips. Post Falls also has the most interchange options — Pleasant View, Spokane Street, and SH-41 — which lets commuters tune their route to current conditions via{' '}
-              <a href="https://511.idaho.gov" target="_blank" rel="noopener noreferrer" style={{ color: '#C4842A' }}>Idaho 511</a>.
+              <a href="https://511.idaho.gov" target="_blank" rel="noopener noreferrer" style={{ color: '#C4842A' }}>Idaho 511</a>. For neighborhood-level context, see{' '}<a href="/areas/post-falls-idaho" style={{ color: '#C4842A' }}>the Post Falls living guide</a>.
             </p>
 
             {/* CdA */}

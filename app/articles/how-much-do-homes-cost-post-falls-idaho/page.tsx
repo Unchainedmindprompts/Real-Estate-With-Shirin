@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 export const metadata: Metadata = {
-title: "How Much Do Homes Cost in Post Falls Idaho? (2026 Buyer's Guide) | Shirin Abplanalp",
-description: "What does a home cost in Post Falls Idaho in 2026? Price breakdown by budget — from $300K to $650K+ — plus how Post Falls compares to California, Washington, and Oregon.",
+title: "Post Falls, Idaho Home Prices in 2026 (What Buyers Pay)",
+description: "What does a home actually cost in Post Falls right now? A local REALTOR breaks down 2026 prices by home type, neighborhood, and budget — see the full picture.",
 alternates: {
 canonical: 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho',
   },
 openGraph: {
-title: "How Much Do Homes Cost in Post Falls Idaho? (2026 Buyer's Guide)",
-description: "What does a home cost in Post Falls Idaho in 2026? Price breakdown by budget from $300K to $650K+ plus comparison to California, Washington, and Oregon markets.",
+title: "Post Falls, Idaho Home Prices in 2026 (What Buyers Pay)",
+description: "What does a home actually cost in Post Falls right now? A local REALTOR breaks down 2026 prices by home type, neighborhood, and budget — see the full picture.",
 url: 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho',
 type: 'article',
 publishedTime: '2026-03-18',
@@ -18,8 +18,8 @@ const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   '@id': 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho#article',
-  headline: "How Much Do Homes Cost in Post Falls, Idaho? (2026 Buyer's Guide)",
-  description: 'What does a home cost in Post Falls Idaho in 2026? Price breakdown by budget from $300K to $650K+ plus comparison to California, Washington, and Oregon markets.',
+  headline: "What Homes Actually Cost in Post Falls, Idaho (2026)",
+  description: "What does a home actually cost in Post Falls right now? A local REALTOR breaks down 2026 prices by home type, neighborhood, and budget — see the full picture.",
   image: {
     '@type': 'ImageObject',
     url: 'https://www.realestatewithshirin.com/images/shirin-headshot-professional.png',
@@ -233,7 +233,7 @@ return (
 </div>
 {/* H1 */}
 <h1 className="font-cormorant text-5xl md:text-6xl text-[#1C1A17] leading-tight mb-6 font-semibold">
-            How Much Do Homes Cost in Post Falls, Idaho? (2026 Buyer&apos;s Guide)
+            What Homes Actually Cost in Post Falls, Idaho (2026)
 </h1>
 <p className="font-dm-sans text-lg text-[#5C5650] max-w-3xl mb-8 leading-relaxed">
             A complete price breakdown by budget — from entry-level to premium — plus how Post Falls compares to what you&apos;d pay in California, Washington, and Oregon.

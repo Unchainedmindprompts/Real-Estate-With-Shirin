@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 export const metadata: Metadata = {
-title: 'Post Falls Idaho Housing Market 2026 — What Buyers and Sellers Need to Know | Shirin Abplanalp',
-description: 'Median home prices, days on market, inventory, and 2026 forecast for Post Falls Idaho. Current data as of March 2026 from a licensed local REALTOR®.',
+title: 'Post Falls, ID Housing Market 2026: Trends & Forecast',
+description: "Buyer's or seller's market in Post Falls for 2026? Inventory, days on market, and where prices are heading — from a REALTOR who works it daily.",
 alternates: {
 canonical: 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-market-2026',
   },
 openGraph: {
-title: 'Post Falls Idaho Housing Market 2026 — What Buyers and Sellers Need to Know',
-description: 'Median home prices, days on market, inventory, and 2026 forecast for Post Falls Idaho. Current data as of March 2026.',
+title: 'Post Falls, ID Housing Market 2026: Trends & Forecast',
+description: "Buyer's or seller's market in Post Falls for 2026? Inventory, days on market, and where prices are heading — from a REALTOR who works it daily.",
 url: 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-market-2026',
 type: 'article',
 publishedTime: '2026-03-18',
@@ -18,8 +18,8 @@ const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   '@id': 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-market-2026#article',
-  headline: 'Post Falls Idaho Housing Market 2026 — What Buyers and Sellers Need to Know',
-  description: 'Median home prices, days on market, inventory levels, and 2026 forecast for the Post Falls Idaho real estate market. Data as of March 2026.',
+  headline: "The Post Falls Housing Market in 2026: What's Actually Happening",
+  description: "Buyer's or seller's market in Post Falls for 2026? Inventory, days on market, and where prices are heading — from a REALTOR who works it daily.",
   image: {
     '@type': 'ImageObject',
     url: 'https://www.realestatewithshirin.com/images/north-idaho-neighborhood.png',
@@ -221,7 +221,7 @@ return (
 </div>
 {/* H1 */}
 <h1 className="font-cormorant text-5xl md:text-6xl text-[#1C1A17] leading-tight mb-6 font-semibold">
-            Post Falls Idaho Housing Market 2026 — What Buyers and Sellers Need to Know
+            The Post Falls Housing Market in 2026: What&apos;s Actually Happening
 </h1>
 <p className="font-dm-sans text-lg text-[#5C5650] max-w-3xl mb-8 leading-relaxed">
             Median home prices, days on market, inventory levels, and what to expect for the rest of the year. Current data as of March 2026.
@@ -289,7 +289,7 @@ className="w-10 h-10 rounded-full object-cover"
                 The gap between list and sale price tells a more nuanced story. The median list price is sitting at $583,300, which means many homes are entering the market priced above where they ultimately sell. About 60.2% of homes closed under list price in recent months, and on average homes are selling for roughly 1% below asking. Sellers who price correctly from the start are getting offers. Sellers who don&apos;t are sitting.
 </p>
 <p className="mb-8">
-                Post Falls remains more affordable than the broader Kootenai County median of $558,000, which is part of what continues to draw buyers who&apos;ve been priced out of Coeur d&apos;Alene proper.
+                Post Falls remains more affordable than the broader Kootenai County median of $558,000, which is part of what continues to draw buyers who&apos;ve been priced out of Coeur d&apos;Alene proper. For the budget-by-budget price breakdown, see{' '}<a href="/articles/how-much-do-homes-cost-post-falls-idaho" className="text-[#C4842A] hover:underline">what homes actually cost in Post Falls in 2026</a>{' '}— and for neighborhood-level context,{' '}<a href="/areas/post-falls-idaho" className="text-[#C4842A] hover:underline">the Post Falls living guide</a>.
 </p>
 {/* Chart 1: Price Comparison */}
 <div className="my-8 p-6 bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm">

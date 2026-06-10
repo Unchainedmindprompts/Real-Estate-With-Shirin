@@ -3,9 +3,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'About Shirin Abplanalp | Licensed Northern Idaho Realtor · Berkshire Hathaway HomeServices Jacklin Real Estate',
+  title: 'About Shirin Abplanalp | North Idaho REALTOR®',
   description:
-    "11 years in real estate, 100+ transactions closed, 5× Top Producer. Shirin Abplanalp is a licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate serving Post Falls, Coeur d'Alene, and Northern Idaho.",
+    "About Shirin Abplanalp, licensed North Idaho REALTOR® at BHHS Jacklin Real Estate. 11 years in real estate, 100+ transactions closed, 5× Top Producer.",
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/about',
   },

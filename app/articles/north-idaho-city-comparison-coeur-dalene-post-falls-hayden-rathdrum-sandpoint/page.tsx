@@ -386,9 +386,10 @@ export default function CityComparisonArticlePage() {
                 <li>You&apos;re commuting to Spokane every day. 35–45 minutes in peak traffic is fine; it&apos;s also 50+ when there&apos;s an accident on I-90, which happens more than anyone wants to admit.</li>
                 <li>You&apos;re price-sensitive. The Foothills neighborhood is $604K typical. Riverton is $390K. There&apos;s variance, but there isn&apos;t a &ldquo;cheap&rdquo; Coeur d&apos;Alene.</li>
               </ul>
-              <div className="my-6 p-5 rounded-sm border-l-2 border-[#C4842A] bg-[#F5EFE6] mb-10">
+              <div className="my-6 p-5 rounded-sm border-l-2 border-[#C4842A] bg-[#F5EFE6] mb-6">
                 <p><strong className="text-[#1C1A17]">The thing nobody tells you:</strong> the summer tourist traffic is real, and it changes the city for three months a year. Coeur d&apos;Alene from June to early September is a different place than from October to May. If you&apos;re a homebody who wants quiet, you&apos;ll love October. If you came here for the lake, you&apos;ll love June. If you wanted both — that&apos;s the trade.</p>
               </div>
+              <p className="mb-10 text-[15px] text-[#9A9590] italic">More on living in the city day-to-day:{' '}<a href="/areas/coeur-dalene-idaho" className={linkClass}>the Coeur d&apos;Alene living guide</a>.</p>
 
               {/* Post Falls */}
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
@@ -414,10 +415,11 @@ export default function CityComparisonArticlePage() {
                 <li>You want lake views as a default. Post Falls is on the Spokane River, which is beautiful, but it&apos;s not Lake Coeur d&apos;Alene.</li>
                 <li>You want prestige. Post Falls isn&apos;t trying to be that. If &ldquo;address matters&rdquo; is on your list, you&apos;ll feel it.</li>
               </ul>
-              <div className="my-6 p-5 rounded-sm border-l-2 border-[#C4842A] bg-[#F5EFE6] mb-10">
+              <div className="my-6 p-5 rounded-sm border-l-2 border-[#C4842A] bg-[#F5EFE6] mb-6">
                 <p><strong className="text-[#1C1A17]">The thing nobody tells you:</strong> Post Falls schools are genuinely good, and most people don&apos;t know it. Post Falls School District 273 has been quietly outperforming for years on graduation rates and college matriculation, and the elementary schools (especially Mullan Trail and West Ridge) have strong reputations. If you have school-aged kids and you&apos;ve been talked into thinking you have to live in Coeur d&apos;Alene proper to get good schools, this is worth a closer look. (More in my{' '}
                 <a href="/articles/north-idaho-school-districts-open-enrollment-charters" className={linkClass}>North Idaho school districts article</a>.)</p>
               </div>
+              <p className="mb-10 text-[15px] text-[#9A9590] italic">Deeper read on the city, its neighborhoods, and current pricing:{' '}<a href="/areas/post-falls-idaho" className={linkClass}>the Post Falls living guide</a>.</p>
 
               {/* Hayden */}
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
@@ -445,9 +447,10 @@ export default function CityComparisonArticlePage() {
                 <li>You want urban energy. Hayden does not have it. It is residential by design.</li>
                 <li>You commute to Spokane. 40–50 minutes is real here, especially from the east side near the lake.</li>
               </ul>
-              <div className="my-6 p-5 rounded-sm border-l-2 border-[#C4842A] bg-[#F5EFE6] mb-10">
+              <div className="my-6 p-5 rounded-sm border-l-2 border-[#C4842A] bg-[#F5EFE6] mb-6">
                 <p><strong className="text-[#1C1A17]">The thing nobody tells you:</strong> there&apos;s a meaningful difference between <em>Hayden</em> and <em>Hayden Lake</em> (the much smaller unincorporated community of 680 people on the lake&apos;s east shore). When buyers say &ldquo;I want Hayden Lake,&rdquo; they often mean &ldquo;I want a house with a view of Hayden Lake.&rdquo; Those are different properties at different price points. Be specific with your agent about which one you actually mean.</p>
               </div>
+              <p className="mb-10 text-[15px] text-[#9A9590] italic">Neighborhood-level read on the city:{' '}<a href="/areas/hayden-idaho" className={linkClass}>the Hayden living guide</a>.</p>
 
               {/* Rathdrum */}
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
