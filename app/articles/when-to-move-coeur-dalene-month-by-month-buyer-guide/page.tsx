@@ -224,7 +224,7 @@ const faqSchema = {
       name: "When is the slowest month for buying a home in Coeur d'Alene?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "January and February are consistently the slowest. Kootenai County's active listings totaled about 1,058 in January 2026 versus typical summer peaks well above that, per Federal Reserve Economic Data (FRED) sourced from Realtor.com. Less inventory, but the sellers on the market in those months are typically more motivated, giving buyers more negotiating room.",
+        text: "January and February are usually among the slowest months. Kootenai County's active listings totaled about 1,058 in January 2026 versus typical summer peaks well above that, per Federal Reserve Economic Data (FRED) sourced from Realtor.com. Less inventory, but the sellers on the market in those months are typically more motivated, giving buyers more negotiating room.",
       },
     },
     {
@@ -273,7 +273,7 @@ const breadcrumbSchema = {
 const stats = [
   { value: '42 in', label: 'Avg Annual Snowfall', sub: "In-town CdA (BestPlaces)" },
   { value: '1,058', label: 'Active Listings', sub: 'Kootenai County Jan 2026 (FRED)' },
-  { value: '16%', label: 'Winter Discount', sub: 'Vs June peak (NAR national)' },
+  { value: '16%', label: 'National Price Gap', sub: 'Winter vs June peak (NAR)' },
   { value: '8h 25m', label: 'Shortest Day', sub: 'December 21 daylight' },
 ]
 
