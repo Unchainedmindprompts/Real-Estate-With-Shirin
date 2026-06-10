@@ -335,24 +335,24 @@ export default function HomePage() {
             <p>
               Moving to North Idaho is not only a real estate decision. It is a lifestyle decision, a community decision, and often a family decision.
             </p>
+            <p style={{ color: '#1C1A17', fontWeight: 600 }}>I know because I made this move myself.</p>
             <p>
-              When I made the move myself, I had the same questions many buyers have now. Which town feels right? What does daily life really look like? How do the seasons, schools, commute, healthcare, and neighborhoods compare? And how do you know when a home is not just beautiful, but actually right for the life you want to build?
+              I know what it feels like to compare towns, wonder about the seasons, think through the commute, question the timing, and try to picture what daily life will actually look like once the move is real.
             </p>
-            <p style={{ color: '#1C1A17', fontWeight: 600 }}>That is where I help.</p>
+            <p style={{ color: '#1C1A17', fontWeight: 600 }}>That is why I love helping people through this process.</p>
             <p>
-              My role is to guide you through the whole picture &mdash; the home, the neighborhood, the tradeoffs, the timing, and the lifestyle behind the move. I will tell you the truth about a property, a price, or a community, even when the answer is not the easy one.
+              There is something special about watching a buyer start to understand North Idaho &mdash; the space, the pace, the lake days, the mountain access, the neighborhoods, and the feeling that life here can be a little more grounded. I get excited about that moment because I know what it meant for me.
             </p>
-            <p>Because the goal is not just to buy a home in North Idaho.</p>
             <p
               style={{
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontSize: '24px',
+                fontSize: '22px',
                 fontStyle: 'italic',
-                lineHeight: 1.45,
+                lineHeight: 1.5,
                 color: '#1C1A17',
               }}
             >
-              The goal is to make a move you still feel good about years from now.
+              I love helping people see what life here can look like when the right home and the right community come together. My job is to help you find that fit &mdash; not just on paper, but in a way that feels right when you picture your life here.
             </p>
           </div>
           <div className="mt-10">
