@@ -33,8 +33,8 @@ const articleSchema = {
   image: {
     '@type': 'ImageObject',
     url: `${BASE_URL}/images/north-idaho-geographic-jackpot-corridor.png`,
-    width: 1536,
-    height: 1024,
+    width: 1916,
+    height: 821,
   },
   author: {
     '@type': 'Person',
