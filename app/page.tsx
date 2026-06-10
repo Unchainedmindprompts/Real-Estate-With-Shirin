@@ -307,69 +307,72 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 1. How I Can Help ── */}
-      <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="eyebrow mb-4">REVIEWS</p>
-            <h2
+      {/* ── 2. Positioning Bridge ── */}
+      <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>
+        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+          <p className="eyebrow mb-4" style={{ color: '#C4842A' }}>WHY THIS WORK MATTERS</p>
+          <h2
+            className="mb-10"
+            style={{
+              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontWeight: 500,
+              fontSize: 'clamp(32px, 5vw, 48px)',
+              lineHeight: 1.2,
+              color: '#1C1A17',
+            }}
+          >
+            Helping You Find the Life That Fits &mdash; Not Just the House
+          </h2>
+          <div
+            className="space-y-6 text-left"
+            style={{
+              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontSize: '17px',
+              lineHeight: 1.75,
+              color: '#5C5650',
+            }}
+          >
+            <p>
+              Moving to North Idaho is not only a real estate decision. It is a lifestyle decision, a community decision, and often a family decision.
+            </p>
+            <p style={{ color: '#1C1A17', fontWeight: 600 }}>I know because I made this move myself.</p>
+            <p>
+              I know what it feels like to compare towns, wonder about the seasons, think through the commute, question the timing, and try to picture what daily life will actually look like once the move is real.
+            </p>
+            <p style={{ color: '#1C1A17', fontWeight: 600 }}>That is why I love helping people through this process.</p>
+            <p>
+              There is something special about watching a buyer start to understand North Idaho &mdash; the space, the pace, the lake days, the mountain access, the neighborhoods, and the feeling that life here can be a little more grounded. I get excited about that moment because I know what it meant for me.
+            </p>
+            <p
               style={{
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 500,
-                fontSize: 'clamp(32px, 5vw, 48px)',
-                lineHeight: 1.2,
+                fontSize: '22px',
+                fontStyle: 'italic',
+                lineHeight: 1.5,
                 color: '#1C1A17',
               }}
             >
-              What Clients Say
-            </h2>
+              I love helping people see what life here can look like when the right home and the right community come together. My job is to help you find that fit &mdash; not just on paper, but in a way that feels right when you picture your life here.
+            </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
-              <div
-                key={t.name}
-                style={{
-                  backgroundColor: '#2A2722',
-                  border: '1px solid #3A3530',
-                  borderRadius: '4px',
-                  padding: '32px',
-                }}
-              >
-                <div className="flex gap-1 mb-5" aria-label={`${t.stars} out of 5 stars`}>
-                  {Array.from({ length: t.stars }).map((_, i) => (
-                    <svg key={i} width="16" height="16" viewBox="0 0 16 16" fill="#C4842A" aria-hidden="true">
-                      <path d="M8 1l1.85 3.75L14 5.35l-3 2.92.71 4.13L8 10.3l-3.71 2.1.71-4.13-3-2.92 4.15-.6z" />
-                    </svg>
-                  ))}
-                </div>
-                <p
-                  className="mb-6"
-                  style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontSize: '19px',
-                    lineHeight: 1.55,
-                    color: '#F5EFE6',
-                    fontStyle: 'italic',
-                  }}
-                >
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <div>
-                  <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 600, fontSize: '14px', color: '#FAFAF8' }}>
-                    {t.name}
-                  </p>
-                  <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590', marginTop: '2px' }}>
-                    {t.location}
-                  </p>
-                </div>
-              </div>
-            ))}
+          <div className="mt-10">
+            <Link
+              href="/contact"
+              className="inline-block text-white text-xs uppercase font-semibold tracking-wider rounded-sm transition-colors"
+              style={{
+                fontFamily: "'DM Sans', system-ui, sans-serif",
+                backgroundColor: '#C4842A',
+                padding: '14px 32px',
+                letterSpacing: '0.1em',
+              }}
+            >
+              Start With a Conversation
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* ── 2. How I Can Help ── */}
+      {/* ── 3. How I Can Help ── */}
       <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-14">
@@ -454,7 +457,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 3. Agent Intro ── */}
+      {/* ── 4. Your Agent ── */}
       <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -549,7 +552,69 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 3. The 60-Minute Rule ── */}
+      {/* ── 5. Reviews ── */}
+      <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="eyebrow mb-4">REVIEWS</p>
+            <h2
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontWeight: 500,
+                fontSize: 'clamp(32px, 5vw, 48px)',
+                lineHeight: 1.2,
+                color: '#1C1A17',
+              }}
+            >
+              What Clients Say
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {testimonials.map((t) => (
+              <div
+                key={t.name}
+                style={{
+                  backgroundColor: '#2A2722',
+                  border: '1px solid #3A3530',
+                  borderRadius: '4px',
+                  padding: '32px',
+                }}
+              >
+                <div className="flex gap-1 mb-5" aria-label={`${t.stars} out of 5 stars`}>
+                  {Array.from({ length: t.stars }).map((_, i) => (
+                    <svg key={i} width="16" height="16" viewBox="0 0 16 16" fill="#C4842A" aria-hidden="true">
+                      <path d="M8 1l1.85 3.75L14 5.35l-3 2.92.71 4.13L8 10.3l-3.71 2.1.71-4.13-3-2.92 4.15-.6z" />
+                    </svg>
+                  ))}
+                </div>
+                <p
+                  className="mb-6"
+                  style={{
+                    fontFamily: "'Cormorant Garamond', Georgia, serif",
+                    fontSize: '19px',
+                    lineHeight: 1.55,
+                    color: '#F5EFE6',
+                    fontStyle: 'italic',
+                  }}
+                >
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+                <div>
+                  <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 600, fontSize: '14px', color: '#FAFAF8' }}>
+                    {t.name}
+                  </p>
+                  <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590', marginTop: '2px' }}>
+                    {t.location}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 6. The Region ── */}
       <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-4">
@@ -612,7 +677,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 4. Service Areas ── */}
+      {/* ── 7. Service Areas ── */}
       <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -676,7 +741,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 5. Latest Guides ── */}
+      {/* ── 8. Latest Guides ── */}
       <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -823,7 +888,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 6. CTA ── */}
+      {/* ── 9. CTA ── */}
       <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
           <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>READY TO MOVE FORWARD</p>
