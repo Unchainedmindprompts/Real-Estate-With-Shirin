@@ -359,7 +359,7 @@ export default function SnowestCitiesArticlePage() {
             Snowiest Cities in North Idaho: A Data-Backed Ranking
           </h1>
           <p className="font-dm-sans text-lg text-[#5C5650] max-w-3xl mb-8 leading-relaxed">
-            North Idaho gets lumped together as one winter. It isn&apos;t. Post Falls averages 40 inches a year. Priest Lake averages 120. This is the town-by-town ranking — with real estate implications at every level.
+            North Idaho gets lumped together as one winter. It isn&apos;t. Post Falls averages 40 inches a year. Priest Lake averages 120. This is the town-by-town ranking — with real estate implications at every level. (For more on the lowest-snow town in the ranking, see <a href="/areas/post-falls-idaho" className="text-[#C4842A] hover:underline">the Post Falls living guide</a>.)
           </p>
           <div className="flex items-center gap-4">
             <img

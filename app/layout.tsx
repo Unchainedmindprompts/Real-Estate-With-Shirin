@@ -6,10 +6,10 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.realestatewithshirin.com'),
   title: {
-    default: 'Northern Idaho Real Estate Agent | Shirin Abplanalp · Berkshire Hathaway HomeServices Jacklin Real Estate',
-    template: '%s | Shirin Abplanalp · Berkshire Hathaway HomeServices Jacklin Real Estate',
+    default: 'Shirin Abplanalp | North Idaho REALTOR® | BHHS Jacklin',
+    template: '%s',
   },
-  description: "Shirin Abplanalp is a licensed Northern Idaho realtor with Berkshire Hathaway HomeServices Jacklin Real Estate specializing in Post Falls, Coeur d'Alene, and Kootenai County.",
+  description: "Shirin Abplanalp is a licensed North Idaho REALTOR® with BHHS Jacklin Real Estate, helping buyers, sellers, and relocating families across North Idaho.",
 }
 
 export default function RootLayout({

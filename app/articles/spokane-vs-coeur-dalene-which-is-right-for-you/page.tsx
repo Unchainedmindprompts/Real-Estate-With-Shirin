@@ -381,7 +381,7 @@ export default function SpokaneVsCdaPage() {
                 I made this comparison myself when my husband and I relocated from Bend, Oregon. We looked at both sides. We talked to people who&apos;d landed in each. And we planted our roots in Post Falls. This is the comparison I wish I&apos;d had when we were deciding.
               </p>
 
-              <p className="mb-10">If the Spokane vs. CDA decision is settled, the next step is understanding the full North Idaho picture &mdash; costs, taxes, towns, schools, and the buying process:{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">Relocating to North Idaho: The Complete Local Guide for Out-of-State Buyers</a>.</p>
+              <p className="mb-10">If the Spokane vs. CDA decision is settled, the next step is understanding the full North Idaho picture &mdash; costs, taxes, towns, schools, and the buying process:{' '}<a href="/relocating-to-north-idaho" className="text-[#C4842A] hover:underline">Relocating to North Idaho: The Complete Local Guide for Out-of-State Buyers</a>. Already focused on CDA specifically? See{' '}<a href="/areas/coeur-dalene-idaho" className="text-[#C4842A] hover:underline">the Coeur d&rsquo;Alene living guide</a>{' '}and how the{' '}<a href="/buyers" className="text-[#C4842A] hover:underline">out-of-state buying process</a>{' '}actually works.</p>
 
               {/* Section: Geography */}
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">

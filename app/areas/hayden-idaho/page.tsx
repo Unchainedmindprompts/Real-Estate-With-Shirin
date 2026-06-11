@@ -3,9 +3,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Hayden Idaho Real Estate | Homes for Sale | Shirin Abplanalp',
+  title: 'Hayden, Idaho Real Estate & Neighborhood Guide',
   description:
-    'Looking for homes in Hayden Idaho? Shirin Abplanalp is a licensed realtor with Berkshire Hathaway HomeServices Jacklin Real Estate serving Hayden and Kootenai County.',
+    "Thinking about Hayden, Idaho? A local REALTOR's guide to neighborhoods, home prices, schools, lifestyle, and what living here is actually like.",
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/areas/hayden-idaho',
   },
@@ -90,7 +90,7 @@ export default function HaydenPage() {
       {/* Hero */}
       <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
         <div className="absolute inset-0 z-0">
-          <Image src="/images/north-idaho-lake-hero.webp" alt="Lake Coeur d'Alene seaplane dock" fill priority className="object-cover"  />
+          <Image src="/images/north-idaho-lake-hero.webp" alt="Hayden, Idaho — Lake Coeur d'Alene area" fill priority className="object-cover"  />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(28,26,23,0.35), rgba(28,26,23,0.6))' }} />
         </div>
         <div className="relative z-10 text-center px-6 lg:px-8 py-20 max-w-4xl mx-auto">
