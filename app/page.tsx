@@ -174,10 +174,10 @@ export default function HomePage() {
       {/* ── Hero — full-bleed image ── */}
       <section className="relative overflow-hidden w-full" style={{ height: '100svh' }}>
         <Image
-          src="/images/hero-consultation.webp"
-          alt="North Idaho real estate consultation"
+          src="/images/shirin-portrait-2026.png"
+          alt="Shirin Abplanalp — Licensed North Idaho REALTOR® at BHHS Jacklin Real Estate"
           fill
-          className="object-cover object-[57%_center] lg:object-center"
+          className="object-cover object-[70%_center] lg:object-[65%_center]"
           priority
           sizes="100vw"
         />
