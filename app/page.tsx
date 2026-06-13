@@ -174,10 +174,10 @@ export default function HomePage() {
       {/* ── Hero — full-bleed image ── */}
       <section className="relative overflow-hidden w-full" style={{ height: '100svh' }}>
         <Image
-          src="/images/shirin-portrait-2026.png"
-          alt="Shirin Abplanalp — Licensed North Idaho REALTOR® at BHHS Jacklin Real Estate"
+          src="/images/hero-consultation.webp"
+          alt="North Idaho real estate consultation"
           fill
-          className="object-cover object-[70%_center] lg:object-[65%_center]"
+          className="object-cover object-[57%_center] lg:object-center"
           priority
           sizes="100vw"
         />
@@ -467,10 +467,10 @@ export default function HomePage() {
               className="order-2 lg:order-1 relative h-72 sm:h-96 lg:h-[600px]"
             >
               <Image
-                src="/images/shirin-headshot-studio.webp"
-                alt="Shirin Abplanalp, Licensed REALTOR® in Northern Idaho"
+                src="/images/shirin-portrait-2026.png"
+                alt="Shirin Abplanalp, Licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate"
                 fill
-                className="object-cover object-top"
+                className="object-cover object-center"
                 style={{ borderRadius: '2px' }}
               />
               {/* Warm-toned inset frame */}
