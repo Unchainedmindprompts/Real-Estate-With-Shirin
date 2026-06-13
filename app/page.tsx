@@ -467,10 +467,10 @@ export default function HomePage() {
               className="order-2 lg:order-1 relative h-72 sm:h-96 lg:h-[600px]"
             >
               <Image
-                src="/images/shirin-headshot-studio.webp"
-                alt="Shirin Abplanalp, Licensed REALTOR® in Northern Idaho"
+                src="/images/shirin-portrait-2026.png"
+                alt="Shirin Abplanalp, Licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate"
                 fill
-                className="object-cover object-top"
+                className="object-cover object-center"
                 style={{ borderRadius: '2px' }}
               />
               {/* Warm-toned inset frame */}
