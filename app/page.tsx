@@ -23,6 +23,7 @@ const testimonials = [
   {
     name: 'Koval Dan',
     location: 'Buyer — Mountain View, Bend OR · Zillow',
+    source: 'Zillow',
     quote:
       "Shirin was able to help me locate the perfect house. As a first time buyer I really didn't know much about the whole process but Shirin was there to help with any concerns. She is very pro active in searching for a home for her clients. She seems to enjoy what she does. Well done, Shirin.",
     stars: 5,
@@ -30,6 +31,7 @@ const testimonials = [
   {
     name: 'Verified Buyer',
     location: 'Bend, OR · Zillow',
+    source: 'Zillow',
     quote:
       "Shirin went above and beyond for us and blew us away. Her responsiveness is lightning fast and she took the time to call several counties to look into state zoning and property laws — we had no idea a realtor even did that. What we appreciated most was how genuine Shirin was. It was so apparent she cared about what was best for us. We can't recommend Shirin enough.",
     stars: 5,
@@ -37,6 +39,7 @@ const testimonials = [
   {
     name: 'Jacque Martini Roberts',
     location: 'Facebook Recommendation',
+    source: 'Facebook',
     quote:
       "Shirin is an amazing real estate broker. She always goes above and beyond and she definitely knows her stuff. On a scale from 1–10, Shirin is a 10!",
     stars: 5,
@@ -79,6 +82,20 @@ export default function HomePage() {
         ],
         'knowsAbout': ['Post Falls real estate', "Coeur d'Alene real estate", 'Northern Idaho relocation', 'Kootenai County homes', 'Buyer representation', 'Seller representation', 'Relocation', 'Idaho real estate market', 'Active family relocation to Northern Idaho'],
         'slogan': 'Your Northern Idaho Real Estate Advisor',
+        'review': testimonials.map((t) => ({
+          '@type': 'Review',
+          'author': { '@type': 'Person', 'name': t.name },
+          'reviewRating': { '@type': 'Rating', 'ratingValue': t.stars, 'bestRating': 5 },
+          'reviewBody': t.quote,
+          'itemReviewed': { '@id': 'https://www.realestatewithshirin.com/#business' },
+          'publisher': { '@type': 'Organization', 'name': t.source },
+        })),
+        'aggregateRating': {
+          '@type': 'AggregateRating',
+          'ratingValue': 5,
+          'reviewCount': testimonials.length,
+          'bestRating': 5,
+        },
       })}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org',
