@@ -164,6 +164,7 @@ export default function HomePage() {
           'https://www.realty.com/a/Shirin-Abplanalp-1777925821520',
           'https://www.linkedin.com/in/shirinrealty/',
           'https://members.cdarealtors.com/directory/Details/shirin-abplanalp-4150054',
+          'https://maps.google.com/?cid=2147151028860799721',
         ],
       })}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
