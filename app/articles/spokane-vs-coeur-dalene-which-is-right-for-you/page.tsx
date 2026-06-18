@@ -314,12 +314,12 @@ export default function SpokaneVsCdaPage() {
           <div className="flex items-center gap-4">
             <img
               src="/images/shirin-headshot-studio.webp"
-              alt="Shirin Abplanalp, licensed realtor at eXp Realty"
+              alt="Shirin Abplanalp, licensed realtor at Berkshire Hathaway HomeServices Jacklin Real Estate"
               className="w-10 h-10 rounded-full object-cover"
             />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
-              <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · eXp Realty · May 3, 2026</p>
+              <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · May 3, 2026</p>
             </div>
           </div>
         </div>
@@ -685,7 +685,7 @@ export default function SpokaneVsCdaPage() {
                   <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Local Guide</p>
                   <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" />
                   <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
-                  <p className="font-dm-sans text-xs text-[#9A9590] mb-3">Licensed REALTOR® · eXp Realty · #1371861</p>
+                  <p className="font-dm-sans text-xs text-[#9A9590] mb-3">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · #1371861</p>
                   <p className="font-dm-sans text-xs text-[#5C5650] leading-relaxed mb-4">Shirin and her husband made this exact comparison before relocating from Bend, Oregon — and chose Post Falls. She helps buyers navigate both sides of the border every day.</p>
                   <a href="/about" className="block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white font-dm-sans font-semibold text-sm py-3 px-4 transition-colors">
                     About Shirin

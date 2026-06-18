@@ -264,12 +264,12 @@ export default function MovingToNorthIdahoArticlePage() {
           <div className="flex items-center gap-4">
             <img
               src="/images/shirin-headshot-studio.webp"
-              alt="Shirin Abplanalp, Licensed REALTOR® at eXp Realty"
+              alt="Shirin Abplanalp, Licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate"
               className="w-10 h-10 rounded-full object-cover"
             />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
-              <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · SRES® · eXp Realty · May 27, 2026</p>
+              <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · SRES® · Berkshire Hathaway HomeServices Jacklin Real Estate · May 27, 2026</p>
             </div>
           </div>
         </div>
@@ -500,7 +500,7 @@ export default function MovingToNorthIdahoArticlePage() {
                 I&apos;ll tell you what&apos;s affordable. I&apos;ll tell you what&apos;s not. I&apos;ll tell you whether what you&apos;re picturing actually exists at your budget — and if it doesn&apos;t, I&apos;ll tell you that too. The buyers who succeed in this market are the ones who came in with realistic expectations and made informed decisions, not the ones who got sold a fantasy. You don&apos;t need a sales pitch. You need someone who knows the market and will tell you the truth.
               </p>
               <p className="mb-2 text-[15px] text-[#9A9590]">
-                Shirin Abplanalp is a licensed Idaho REALTOR® and SRES® (Seniors Real Estate Specialist) at eXp Realty, serving Coeur d&apos;Alene, Post Falls, Hayden, Rathdrum, and Sandpoint.
+                Shirin Abplanalp is a licensed Idaho REALTOR® and SRES® (Seniors Real Estate Specialist) at Berkshire Hathaway HomeServices Jacklin Real Estate, serving Coeur d&apos;Alene, Post Falls, Hayden, Rathdrum, and Sandpoint.
               </p>
 
             </article>
@@ -559,9 +559,9 @@ export default function MovingToNorthIdahoArticlePage() {
                 {/* About Shirin */}
                 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
                   <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Local Agent</p>
-                  <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp, Licensed REALTOR® at eXp Realty" className="w-16 h-16 rounded-full object-cover mb-3" />
+                  <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp, Licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate" className="w-16 h-16 rounded-full object-cover mb-3" />
                   <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
-                  <p className="font-dm-sans text-xs text-[#9A9590] mb-3">Licensed REALTOR® · SRES® · eXp Realty</p>
+                  <p className="font-dm-sans text-xs text-[#9A9590] mb-3">Licensed REALTOR® · SRES® · Berkshire Hathaway HomeServices Jacklin Real Estate</p>
                   <p className="font-dm-sans text-xs text-[#5C5650] leading-relaxed">
                     Relocated from Bend, Oregon — she gives buyers the honest picture of what&apos;s affordable across North Idaho, not a sales pitch.
                   </p>

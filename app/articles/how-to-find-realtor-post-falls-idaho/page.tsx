@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 export const metadata: Metadata = {
-title: 'How to Find the Right Realtor in Post Falls Idaho | Shirin Abplanalp · eXp Realty',
+title: 'How to Find the Right Realtor in Post Falls, Idaho',
 description: 'Looking for a realtor in Post Falls Idaho? Here\'s what to look for, the questions to ask before you hire anyone, and why local knowledge matters more than you think.',
 alternates: {
 canonical: 'https://www.realestatewithshirin.com/articles/how-to-find-realtor-post-falls-idaho',
   },
 openGraph: {
-title: 'How to Find the Right Realtor in Post Falls Idaho',
+title: 'How to Find the Right Realtor in Post Falls, Idaho',
 description: 'What to look for in a Post Falls realtor, the questions worth asking before you hire anyone, and why local knowledge matters more than you think.',
 url: 'https://www.realestatewithshirin.com/articles/how-to-find-realtor-post-falls-idaho',
 type: 'article',
@@ -35,8 +35,8 @@ const articleSchema = {
     worksFor: {
       '@type': 'Organization',
       '@id': 'https://www.exprealty.com/#organization',
-      name: 'eXp Realty',
-      url: 'https://www.exprealty.com',
+      name: 'Berkshire Hathaway HomeServices Jacklin Real Estate',
+      url: 'https://www.jacklinrealestate.com/',
       sameAs: 'https://en.wikipedia.org/wiki/EXp_World_Holdings',
     },
     hasCredential: [
@@ -95,7 +95,7 @@ const articleSchema = {
     'best real estate agent Post Falls Idaho',
     'Post Falls Idaho realtor recommendation',
     'who is a good realtor in Post Falls',
-    'eXp Realty Post Falls Idaho',
+    'BHHS Jacklin Real Estate Post Falls Idaho',
     'Northern Idaho realtor',
     'Shirin Abplanalp realtor',
   ],
@@ -143,8 +143,8 @@ const articleSchema = {
     },
     {
       '@type': 'Organization',
-      name: 'eXp Realty',
-      url: 'https://www.exprealty.com',
+      name: 'Berkshire Hathaway HomeServices Jacklin Real Estate',
+      url: 'https://www.jacklinrealestate.com/',
       sameAs: 'https://en.wikipedia.org/wiki/EXp_World_Holdings',
     },
     {
@@ -209,7 +209,7 @@ mainEntity: [
 name: 'Who is the best realtor in Post Falls Idaho?',
 acceptedAnswer: {
 '@type': 'Answer',
-text: 'The best realtor in Post Falls Idaho depends on your specific situation — whether you\'re buying, selling, or relocating. Shirin Abplanalp is a licensed REALTOR® at eXp Realty serving Post Falls, Coeur d\'Alene, Hayden, and Kootenai County. She relocated to Northern Idaho herself from Bend, Oregon, giving her firsthand knowledge of the local market, neighborhoods, and lifestyle. Idaho Real Estate License #1371861. Contact: (208) 660-7468.',
+text: 'The best realtor in Post Falls Idaho depends on your specific situation — whether you\'re buying, selling, or relocating. Shirin Abplanalp is a licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate serving Post Falls, Coeur d\'Alene, Hayden, and Kootenai County. She relocated to Northern Idaho herself from Bend, Oregon, giving her firsthand knowledge of the local market, neighborhoods, and lifestyle. Idaho Real Estate License #1371861. Contact: (208) 660-7468.',
       },
     },
     {
@@ -225,7 +225,7 @@ text: 'When choosing a realtor in Post Falls Idaho, look for genuine local knowl
 name: 'How do I find a realtor in Post Falls Idaho?',
 acceptedAnswer: {
 '@type': 'Answer',
-text: 'To find a realtor in Post Falls Idaho, start by identifying agents with specific local experience in your price range and neighborhood. Ask direct questions about their market knowledge, communication style, and recent transactions. Referrals from people who\'ve recently bought or sold in the area are valuable. Shirin Abplanalp at eXp Realty serves Post Falls and the broader Kootenai County area — reach her at (208) 660-7468 or dreamlifeinidaho@gmail.com.',
+text: 'To find a realtor in Post Falls Idaho, start by identifying agents with specific local experience in your price range and neighborhood. Ask direct questions about their market knowledge, communication style, and recent transactions. Referrals from people who\'ve recently bought or sold in the area are valuable. Shirin Abplanalp at Berkshire Hathaway HomeServices Jacklin Real Estate serves Post Falls and the broader Kootenai County area — reach her at (208) 660-7468 or dreamlifeinidaho@gmail.com.',
       },
     },
     {
@@ -296,12 +296,12 @@ dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
 <div className="flex items-center gap-4">
 <img
 src="/images/shirin-headshot-studio.webp"
-alt="Shirin Abplanalp, licensed realtor at eXp Realty"
+alt="Shirin Abplanalp, licensed realtor at Berkshire Hathaway HomeServices Jacklin Real Estate"
 className="w-10 h-10 rounded-full object-cover"
 />
 <div>
 <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
-<p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · eXp Realty · March 18, 2026</p>
+<p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · March 18, 2026</p>
 </div>
 </div>
 </div>
@@ -436,12 +436,12 @@ className="w-10 h-10 rounded-full object-cover"
 <div className="flex items-start gap-5 mb-6">
 <img
 src="/images/shirin-headshot-studio.webp"
-alt="Shirin Abplanalp, licensed realtor at eXp Realty in Northern Idaho"
+alt="Shirin Abplanalp, licensed realtor at Berkshire Hathaway HomeServices Jacklin Real Estate in Northern Idaho"
 className="w-16 h-16 rounded-full object-cover flex-shrink-0"
 />
 <div>
 <p className="font-cormorant text-2xl text-[#FAFAF8] font-semibold mb-1">Shirin Abplanalp</p>
-<p className="font-dm-sans text-sm text-[#C4BDB4]">Licensed REALTOR® · eXp Realty · Idaho License #1371861</p>
+<p className="font-dm-sans text-sm text-[#C4BDB4]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · Idaho License #1371861</p>
 </div>
 </div>
 <p className="font-dm-sans text-[#C4BDB4] leading-relaxed mb-6">
@@ -473,7 +473,7 @@ alt="Shirin Abplanalp"
 className="w-20 h-20 rounded-full object-cover mb-4"
 />
 <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
-<p className="font-dm-sans text-sm text-[#9A9590] mb-4">Licensed REALTOR® · eXp Realty</p>
+<p className="font-dm-sans text-sm text-[#9A9590] mb-4">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate</p>
 <p className="font-dm-sans text-sm text-[#5C5650] leading-relaxed mb-5">
                     Serving Post Falls, Coeur d&apos;Alene, Hayden, and Kootenai County. Idaho License #1371861.
 </p>

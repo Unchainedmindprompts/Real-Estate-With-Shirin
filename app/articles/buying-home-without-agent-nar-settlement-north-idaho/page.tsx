@@ -352,7 +352,7 @@ export default function NARSettlementPage() {
               <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" style={{ width: '52px', height: '52px', borderRadius: '50%', objectFit: 'cover' }} />
               <div>
                 <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '14px', fontWeight: 600, color: '#1C1A17', margin: 0 }}>Shirin Abplanalp</p>
-                <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590', margin: 0 }}>Licensed REALTOR® · SRES® · eXp Realty, North Idaho</p>
+                <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590', margin: 0 }}>Licensed REALTOR® · SRES® · Berkshire Hathaway HomeServices Jacklin Real Estate, North Idaho</p>
               </div>
             </div>
 
