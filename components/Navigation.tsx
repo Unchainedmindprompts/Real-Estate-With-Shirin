@@ -194,17 +194,6 @@ export default function Navigation() {
             Videos
           </Link>
 
-          {/* BHHS Jacklin brokerage logo — required prominent placement per BHHS franchisee guidelines */}
-          <Image
-            src="/images/bhhs-jacklin-logo.png"
-            alt="Berkshire Hathaway HomeServices Jacklin Real Estate"
-            width={2937}
-            height={558}
-            className="object-contain"
-            style={{ width: 'auto', height: '30px' }}
-            priority
-          />
-
           <Link
             href="/contact"
             className="inline-block text-white text-xs uppercase font-semibold tracking-wider rounded-sm transition-colors"
@@ -223,6 +212,17 @@ export default function Navigation() {
           >
             Contact
           </Link>
+
+          {/* BHHS Jacklin brokerage logo — required prominent placement per BHHS franchisee guidelines */}
+          <Image
+            src="/images/bhhs-jacklin-logo.png"
+            alt="Berkshire Hathaway HomeServices Jacklin Real Estate"
+            width={2937}
+            height={558}
+            className="object-contain"
+            style={{ width: 'auto', height: '30px' }}
+            priority
+          />
         </div>
 
         {/* Mobile right side — brokerage logo + hamburger */}
