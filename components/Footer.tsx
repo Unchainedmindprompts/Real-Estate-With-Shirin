@@ -144,11 +144,11 @@ export default function Footer() {
         {/* BHHS franchisee disclaimer — required by Berkshire Hathaway HomeServices for franchisees */}
         <div className="pt-8 mt-2 flex justify-center" style={{ borderTop: '1px solid #2C2A27' }}>
           <Image
-            src="/images/bhhs-franchisee-disclaimer-white.png"
+            src="/images/bhhs-franchisee-disclaimer.png"
             alt="© 2026 BHH Affiliates, LLC. An independently owned and operated franchisee of BHH Affiliates, LLC. Berkshire Hathaway HomeServices and the Berkshire Hathaway HomeServices symbol are registered service marks of Columbia Insurance Company, a Berkshire Hathaway affiliate. Equal Housing Opportunity."
             width={1737}
             height={193}
-            className="object-contain opacity-70"
+            className="object-contain"
             style={{ width: '100%', maxWidth: '960px', height: 'auto' }}
           />
         </div>
