@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const areas = [
@@ -193,6 +194,17 @@ export default function Navigation() {
             Videos
           </Link>
 
+          {/* BHHS Jacklin brokerage logo — required prominent placement per BHHS franchisee guidelines */}
+          <Image
+            src="/images/bhhs-jacklin-logo.png"
+            alt="Berkshire Hathaway HomeServices Jacklin Real Estate"
+            width={2937}
+            height={558}
+            className="object-contain"
+            style={{ width: 'auto', height: '30px' }}
+            priority
+          />
+
           <Link
             href="/contact"
             className="inline-block text-white text-xs uppercase font-semibold tracking-wider rounded-sm transition-colors"
@@ -213,9 +225,20 @@ export default function Navigation() {
           </Link>
         </div>
 
-        {/* Mobile menu button */}
+        {/* Mobile right side — brokerage logo + hamburger */}
+        <div className="lg:hidden flex items-center gap-3">
+          {/* BHHS Jacklin brokerage logo — visible on mobile per BHHS franchisee guidelines */}
+          <Image
+            src="/images/bhhs-jacklin-logo.png"
+            alt="Berkshire Hathaway HomeServices Jacklin Real Estate"
+            width={2937}
+            height={558}
+            className="object-contain hidden sm:block"
+            style={{ width: 'auto', height: '22px' }}
+            priority
+          />
         <button
-          className="lg:hidden p-2"
+          className="p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
           style={{ color: solid ? '#1C1A17' : '#FAFAF8' }}
@@ -235,6 +258,7 @@ export default function Navigation() {
             )}
           </svg>
         </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
@@ -244,6 +268,17 @@ export default function Navigation() {
           style={{ backgroundColor: '#FAFAF8', borderTop: '1px solid #E8DDD0' }}
         >
           <div className="flex flex-col gap-4 pt-4">
+            {/* BHHS Jacklin brokerage logo — also shown inside menu for small screens that hide it in the top bar */}
+            <div className="sm:hidden pb-2" style={{ borderBottom: '1px solid #E8DDD0' }}>
+              <Image
+                src="/images/bhhs-jacklin-logo.png"
+                alt="Berkshire Hathaway HomeServices Jacklin Real Estate"
+                width={2937}
+                height={558}
+                className="object-contain"
+                style={{ width: 'auto', height: '24px' }}
+              />
+            </div>
             <Link href="/buyers" className="text-sm uppercase tracking-wider font-medium" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }} onClick={() => setMobileOpen(false)}>Buy</Link>
             <Link href="/sellers" className="text-sm uppercase tracking-wider font-medium" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }} onClick={() => setMobileOpen(false)}>Sell</Link>
             <div>
