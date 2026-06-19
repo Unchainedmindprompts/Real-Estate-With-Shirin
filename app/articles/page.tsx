@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Northern Idaho Real Estate Articles | Shirin Abplanalp',
   description:
-    'Real estate insights, market updates, and Northern Idaho lifestyle guides from Shirin Abplanalp, licensed realtor at eXp Realty.',
+    'Real estate insights, market updates, and Northern Idaho lifestyle guides from Shirin Abplanalp, licensed realtor at Berkshire Hathaway HomeServices Jacklin Real Estate.',
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/articles',
   },

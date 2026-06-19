@@ -236,12 +236,12 @@ return (
 <div className="flex items-center gap-4">
 <img
 src="/images/shirin-headshot-studio.webp"
-alt="Shirin Abplanalp, licensed realtor at eXp Realty"
+alt="Shirin Abplanalp, licensed realtor at Berkshire Hathaway HomeServices Jacklin Real Estate"
 className="w-10 h-10 rounded-full object-cover"
 />
 <div>
 <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
-<p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · eXp Realty · March 18, 2026</p>
+<p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · March 18, 2026</p>
 </div>
 </div>
 </div>
@@ -537,7 +537,7 @@ className="w-14 h-14 rounded-full object-cover flex-shrink-0"
 />
 <div>
 <p className="font-cormorant text-2xl text-[#F5EFE6] font-semibold mb-1">Shirin Abplanalp</p>
-<p className="font-dm-sans text-sm text-[#9A9590]">Licensed REALTOR® · eXp Realty · Idaho License #1371861</p>
+<p className="font-dm-sans text-sm text-[#9A9590]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · Idaho License #1371861</p>
 </div>
 </div>
 <p className="font-dm-sans text-[#9A9590] leading-relaxed mb-6">
@@ -610,7 +610,7 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Local Advisor</p>
 <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" />
 <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
-<p className="font-dm-sans text-xs text-[#9A9590] mb-4">Licensed REALTOR® · eXp Realty · #1371861</p>
+<p className="font-dm-sans text-xs text-[#9A9590] mb-4">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · #1371861</p>
 <a href="/contact" className="block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white font-dm-sans font-semibold text-sm py-3 px-4 transition-colors">
                     Is Now Right for Me?
 </a>
