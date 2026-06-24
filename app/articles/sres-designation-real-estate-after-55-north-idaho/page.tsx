@@ -423,7 +423,7 @@ export default function SresArticlePage() {
                 As of mid-2026, Washington&apos;s proposed millionaires tax (SB 6346) &mdash; a 9.9% income tax on household income over $1 million, effective 2028 if enacted &mdash; is advancing through the legislature, and the prospect alone is already accelerating relocation inquiries from Western Washington retirees with significant assets. I&apos;ve watched the influx firsthand. Buyers from California, Washington, Oregon, and increasingly from Texas and Arizona, all approaching or already in retirement, looking for a different chapter of life.
               </p>
               <p className="mb-8">
-                What I&apos;ve also watched is how often the real estate process fails these buyers. Not because agents are bad people — most are well-intentioned. But because a relocation transaction for someone over 55 is genuinely different, and most agents don&apos;t know what they don&apos;t know.
+                What I&apos;ve also watched is <a href="/articles/why-home-buyers-feel-like-theyre-doing-their-realtors-job" className="text-[#C4842A] hover:underline">how often the real estate process fails these buyers</a>. Not because agents are bad people — most are well-intentioned. But because a relocation transaction for someone over 55 is genuinely different, and most agents don&apos;t know what they don&apos;t know.
               </p>
 
               {/* Tax Comparison Chart */}
@@ -516,7 +516,7 @@ export default function SresArticlePage() {
                 The Active Adult Community Option
               </h2>
               <p className="mb-6">
-                Some retirees relocating to North Idaho aren&apos;t looking for traditional single-family homes. They want active adult communities — typically age-restricted developments designed for residents 55+ with amenities, social programming, and built-in community.
+                Some retirees relocating to North Idaho aren&apos;t looking for traditional single-family homes. They want <a href="/articles/trutina-at-north-place-senior-community-post-falls-buyer-guide" className="text-[#C4842A] hover:underline">active adult communities</a> — typically age-restricted developments designed for residents 55+ with amenities, social programming, and built-in community.
               </p>
               <p className="mb-6">
                 North Idaho has a growing number of these options, primarily concentrated around Coeur d&apos;Alene and Post Falls. They range from modest patio-home developments to communities with golf, pickleball, fitness centers, and clubhouse social calendars.

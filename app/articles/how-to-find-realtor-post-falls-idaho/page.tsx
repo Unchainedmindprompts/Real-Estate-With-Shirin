@@ -34,7 +34,7 @@ const articleSchema = {
     url: 'https://www.realestatewithshirin.com/about',
     worksFor: {
       '@type': 'Organization',
-      '@id': 'https://www.exprealty.com/#organization',
+      '@id': 'https://www.jacklinrealestate.com/#organization',
       name: 'Berkshire Hathaway HomeServices Jacklin Real Estate',
       url: 'https://www.jacklinrealestate.com/',
       sameAs: 'https://en.wikipedia.org/wiki/EXp_World_Holdings',
@@ -393,10 +393,10 @@ className="w-10 h-10 rounded-full object-cover"
                 Why Relocation Experience Matters in This Market
 </h2>
 <p className="mb-6">
-                A significant percentage of Post Falls buyers are coming from somewhere else. California, Washington, Oregon, Arizona — people who&apos;ve done their research, visited the area, and decided Northern Idaho is where they want to put down roots.
+                A significant percentage of Post Falls buyers are coming from somewhere else. <a href="/articles/best-places-to-live-north-idaho-leaving-california" className="text-[#C4842A] hover:underline">California</a>, Washington, Oregon, Arizona — people who&apos;ve done their research, visited the area, and decided Northern Idaho is where they want to put down roots.
 </p>
 <p className="mb-6">
-                Relocating is different from a local move. You&apos;re often buying without being able to visit multiple times. You&apos;re making decisions about neighborhoods you don&apos;t know from personal experience. You may be selling a home in another state simultaneously. The logistics are more complex, the stakes feel higher, and the questions you have are different from someone who&apos;s lived here for years.
+                Relocating is different from a local move. You&apos;re often buying without being able to visit multiple times. You&apos;re making decisions about neighborhoods you don&apos;t know from personal experience. You may be <a href="/articles/buying-north-idaho-home-before-selling-current-bridge-financing-options" className="text-[#C4842A] hover:underline">selling a home in another state simultaneously</a>. The logistics are more complex, the stakes feel higher, and the questions you have are different from someone who&apos;s lived here for years.
 </p>
 <p className="mb-10">
                 An agent who has made this move themselves — who knows what it&apos;s like to research a market from a distance, make the leap, and build a life in a new place — brings something to that process that purely transactional experience can&apos;t replicate.

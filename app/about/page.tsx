@@ -25,7 +25,7 @@ const jsonLdProfile = {
     email: 'dreamlifeinidaho@gmail.com',
     url: 'https://www.realestatewithshirin.com/about',
     image: 'https://www.realestatewithshirin.com/images/realtor-headshot-outdoor.jpeg',
-    worksFor: { '@type': 'Organization', '@id': 'https://www.exprealty.com/#organization', name: 'Berkshire Hathaway HomeServices Jacklin Real Estate', url: 'https://www.jacklinrealestate.com/' },
+    worksFor: { '@type': 'Organization', '@id': 'https://www.jacklinrealestate.com/#organization', name: 'Berkshire Hathaway HomeServices Jacklin Real Estate', url: 'https://www.jacklinrealestate.com/' },
     hasCredential: {
       '@type': 'EducationalOccupationalCredential',
       credentialCategory: 'Real Estate License',

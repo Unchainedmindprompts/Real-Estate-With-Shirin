@@ -347,7 +347,7 @@ className="w-10 h-10 rounded-full object-cover"
                 That said, the market hasn&apos;t gone cold — it&apos;s gone normal. Hot homes that are priced correctly and show well are still going pending in around 9 days. The median days to pending across all homes is 35 days. What&apos;s stretching the average is overpriced inventory that sits until sellers adjust.
 </p>
 <p className="mb-8">
-                For buyers, this means more time to think, more room to negotiate, and fewer situations where you&apos;re making a decision in 48 hours or losing out entirely. For sellers, it means pricing strategy matters more than it has in years.
+                <a href="/buyers" className="text-[#C4842A] hover:underline">For buyers</a>, this means more time to think, more room to negotiate, and fewer situations where you&apos;re making a decision in 48 hours or losing out entirely. For sellers, it means pricing strategy matters more than it has in years.
 </p>
 {/* Chart 2: Days on Market */}
 <div className="my-8 p-6 bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm">
@@ -402,7 +402,7 @@ className="w-10 h-10 rounded-full object-cover"
                 2026 is as close to a balanced market as Post Falls has seen since before the pandemic. It&apos;s not a buyer&apos;s market in the traditional sense — inventory is still relatively tight, with 677 active listings across Kootenai County as of January 2026, down 9.31% year-over-year. But new listings are up 50% year-over-year, which means more options are coming online regularly.
 </p>
 <p className="mb-8">
-                Well-priced, move-in ready homes in desirable neighborhoods still attract strong interest and occasionally multiple offers. Overpriced homes or homes with deferred maintenance are sitting, sometimes for months. For buyers, this is genuinely one of the better entry windows in several years. For sellers who are realistic about pricing, the market is still functioning well.
+                Well-priced, move-in ready homes in desirable neighborhoods still attract strong interest and occasionally multiple offers. Overpriced homes or homes with deferred maintenance are sitting, sometimes for months. For buyers, this is genuinely <a href="/articles/is-it-a-good-time-to-buy-home-northern-idaho" className="text-[#C4842A] hover:underline">one of the better entry windows in several years</a>. For sellers who are realistic about pricing, the market is still functioning well.
 </p>
 {/* Chart 3: Market Conditions Scorecard */}
 <div className="my-8 p-6 bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm">
@@ -485,7 +485,7 @@ style={{ width: `${item.indicator}%`, backgroundColor: item.color }}
                 For buyers: the case for moving forward in 2026 is stronger than it was in 2022 or 2023. You have more options, more time, and more leverage than at any point in the last four years. Waiting for rates to drop significantly before buying is a gamble — if rates do fall, demand will surge and prices will follow. Buying now and refinancing later has become a legitimate strategy for buyers who find the right home at the right price.
 </p>
 <p className="mb-10">
-                For sellers: the market rewards preparation and honest pricing. Homes that are clean, updated, and priced within 3–5% of comparable sales are moving. Homes that are overpriced based on what a neighbor got in 2022 are sitting. A realistic comparative market analysis before listing is more important in this market than it&apos;s been in years.
+                For sellers: the market rewards preparation and honest pricing. Homes that are clean, updated, and priced within 3–5% of comparable sales are moving. Homes that are overpriced based on what a neighbor got in 2022 are sitting. A realistic <a href="/sellers" className="text-[#C4842A] hover:underline">comparative market analysis before listing</a> is more important in this market than it&apos;s been in years.
 </p>
 {/* H2: FAQ */}
 <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
