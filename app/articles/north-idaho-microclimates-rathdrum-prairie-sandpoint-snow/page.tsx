@@ -495,7 +495,7 @@ export default function MicroClimatesArticlePage() {
                 ))}
               </div>
               <p className="mb-10">
-                When I show acreage north of Hayden or out past Athol, the first question I ask the listing agent isn&apos;t about the well or the septic. It&apos;s <em>who plows this road in February?</em>
+                When I show acreage north of Hayden or out past Athol, the first question I ask the listing agent isn&apos;t about <a href="/articles/buying-property-prairie-wells-septic-roads" className="text-[#C4842A] hover:underline">the well or the septic</a>. It&apos;s <em>who plows this road in February?</em>
               </p>
 
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
@@ -543,7 +543,7 @@ export default function MicroClimatesArticlePage() {
                 There are a lot of great Realtors in North Idaho. What I bring to climate-sensitive buyers is a road-tested map of which neighborhoods drift, which private roads get reliably plowed, which subdivisions have HOA snow removal built into dues, and which properties have south-facing driveways that melt themselves versus north-facing slopes that don&apos;t see sun until April. That&apos;s the kind of granular, lived-in knowledge you only get from showing homes through five or six full winters, not from a relocation guide.
               </p>
               <p className="mb-10">
-                If you&apos;re planning a move to Kootenai or Bonner County and want a straight answer on what winter actually looks like at the specific address you&apos;re considering, reach out. I&apos;ll pull the historical snow data for that zip code, tell you who plows the road, and walk you through what equipment the current owners actually use. No pressure, no scripted relocation pitch — just the real picture.
+                If you&apos;re planning a move to Kootenai or Bonner County and want a straight answer on what winter actually looks like at the specific address you&apos;re considering, <a href="/contact" className="text-[#C4842A] hover:underline">reach out</a>. I&apos;ll pull the historical snow data for that zip code, tell you who plows the road, and walk you through what equipment the current owners actually use. No pressure, no scripted relocation pitch — just the real picture.
               </p>
 
               {/* FAQ */}

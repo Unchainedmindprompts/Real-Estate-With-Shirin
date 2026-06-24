@@ -506,7 +506,7 @@ export default function CostOfLivingArticlePage() {
                 </div>
               </div>
               <p className="mb-10">
-                The five-county panhandle outside Kootenai is not its own MSA, so BEA does not publish a separate parity for Bonner, Boundary, Shoshone, or Benewah. Industry aggregators put Sandpoint and Bonners Ferry slightly below Coeur d&apos;Alene on overall cost — mainly through lower housing and rents — with Shoshone and Benewah running closer because lower housing is partly offset by higher utility and grocery delivery costs in rural counties.
+                The five-county panhandle outside Kootenai is not its own MSA, so BEA does not publish a separate parity for Bonner, Boundary, Shoshone, or Benewah. Industry aggregators put <a href="/articles/moving-to-north-idaho-cheapest-places-migration-best-small-towns" className="text-[#C4842A] hover:underline">Sandpoint and Bonners Ferry slightly below Coeur d&apos;Alene on overall cost</a> — mainly through lower housing and rents — with Shoshone and Benewah running closer because lower housing is partly offset by higher utility and grocery delivery costs in rural counties.
               </p>
 
               {/* Housing */}
