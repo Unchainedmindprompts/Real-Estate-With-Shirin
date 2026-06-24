@@ -34,7 +34,7 @@ const articleSchema = {
     url: 'https://www.realestatewithshirin.com/about',
     worksFor: {
       '@type': 'Organization',
-      '@id': 'https://www.exprealty.com/#organization',
+      '@id': 'https://www.jacklinrealestate.com/#organization',
       name: 'Berkshire Hathaway HomeServices Jacklin Real Estate',
       url: 'https://www.jacklinrealestate.com/',
       sameAs: 'https://en.wikipedia.org/wiki/EXp_World_Holdings',

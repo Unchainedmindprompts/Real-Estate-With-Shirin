@@ -62,7 +62,7 @@ export default function HomePage() {
         'address': { '@type': 'PostalAddress', 'streetAddress': '1927 W. Riverstone Drive', 'addressLocality': "Coeur d'Alene", 'addressRegion': 'ID', 'postalCode': '83814', 'addressCountry': 'US' },
         'geo': { '@type': 'GeoCoordinates', 'latitude': 47.7028, 'longitude': -116.8093 },
         'founder': { '@id': 'https://www.realestatewithshirin.com/#agent' },
-        'memberOf': { '@type': 'Organization', '@id': 'https://www.exprealty.com/#organization', 'name': 'Berkshire Hathaway HomeServices Jacklin Real Estate', 'url': 'https://www.jacklinrealestate.com/' },
+        'memberOf': { '@type': 'Organization', '@id': 'https://www.jacklinrealestate.com/#organization', 'name': 'Berkshire Hathaway HomeServices Jacklin Real Estate', 'url': 'https://www.jacklinrealestate.com/' },
         'areaServed': [
           { '@type': 'City', 'name': 'Post Falls', 'sameAs': 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho', 'containedInPlace': { '@type': 'State', 'name': 'Idaho' } },
           { '@type': 'City', 'name': "Coeur d'Alene", 'sameAs': 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho', 'containedInPlace': { '@type': 'State', 'name': 'Idaho' } },
@@ -109,8 +109,7 @@ export default function HomePage() {
         'image': 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',
         'worksFor': {
           '@type': 'Organization',
-          // @id deliberately unchanged for graph integrity (existing article references resolve via this URI).
-          '@id': 'https://www.exprealty.com/#organization',
+          '@id': 'https://www.jacklinrealestate.com/#organization',
           'name': 'Berkshire Hathaway HomeServices Jacklin Real Estate',
           'url': 'https://www.jacklinrealestate.com/',
           'telephone': '+1-208-758-7474',
