@@ -26,9 +26,10 @@ const jsonLdAgent = {
   telephone: '+1-208-660-7468',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Rathdrum',
+    streetAddress: '1927 W. Riverstone Drive',
+    addressLocality: "Coeur d'Alene",
     addressRegion: 'ID',
-    postalCode: '83858',
+    postalCode: '83814',
     addressCountry: 'US',
   },
 }

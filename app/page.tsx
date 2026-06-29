@@ -176,7 +176,7 @@ export default function HomePage() {
           { '@type': 'EducationalOccupationalCredential', 'credentialCategory': 'Award', 'name': '5× Top Producer', 'recognizedBy': { '@type': 'Organization', 'name': 'Bend Premier Real Estate' } },
         ],
         'knowsAbout': ['Post Falls Idaho real estate', "Coeur d'Alene Idaho real estate", 'Northern Idaho relocation', 'Kootenai County homes for sale', 'Buyer representation', 'Seller representation', 'Relocation', 'North Idaho lifestyle', 'Out-of-state relocation real estate', 'Seniors Real Estate Specialist services', 'First-time home buyers Idaho', 'Kootenai County neighborhoods'],
-        'address': { '@type': 'PostalAddress', 'addressLocality': 'Post Falls', 'addressRegion': 'ID', 'addressCountry': 'US' },
+        'address': { '@type': 'PostalAddress', 'streetAddress': '1927 W. Riverstone Drive', 'addressLocality': "Coeur d'Alene", 'addressRegion': 'ID', 'postalCode': '83814', 'addressCountry': 'US' },
         'sameAs': [
           'https://www.jacklinrealestate.com/agents/2081255/Shirin+Abplanalp',
           'https://www.zillow.com/profile/dreamlifeinidaho',
