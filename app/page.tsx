@@ -54,6 +54,7 @@ const testimonials = [
     quote:
       "Shirin went above and beyond for us and blew us away. Her responsiveness is lightning fast and she took the time to call several counties to look into state zoning and property laws — we had no idea a realtor even did that. What we appreciated most was how genuine Shirin was. It was so apparent she cared about what was best for us. We can't recommend Shirin enough.",
     stars: 5,
+    excludeFromSchema: true,
   },
   {
     name: 'Jacque Martini Roberts',
@@ -108,7 +109,7 @@ export default function HomePage() {
           'https://www.zillow.com/profile/dreamlifeinidaho',
           'https://www.facebook.com/ShirinRealty',
         ],
-        'review': testimonials.map((t) => ({
+        'review': testimonials.filter((t) => !t.excludeFromSchema).map((t) => ({
           '@type': 'Review',
           'author': { '@type': 'Person', 'name': t.name },
           'reviewRating': { '@type': 'Rating', 'ratingValue': t.stars, 'bestRating': 5 },
@@ -119,7 +120,7 @@ export default function HomePage() {
         'aggregateRating': {
           '@type': 'AggregateRating',
           'ratingValue': 5,
-          'reviewCount': testimonials.length,
+          'reviewCount': testimonials.filter((t) => !t.excludeFromSchema).length,
           'bestRating': 5,
         },
       })}} />
