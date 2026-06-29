@@ -19,7 +19,7 @@ const jsonLdAgent = {
   url: 'https://www.realestatewithshirin.com/areas/hayden-idaho',
   areaServed: { '@type': 'City', name: 'Hayden', containedInPlace: { '@type': 'State', name: 'Idaho' } },
   founder: { '@type': 'Person', '@id': 'https://www.realestatewithshirin.com/#agent', name: 'Shirin Abplanalp' },
-  telephone: '(208) 660-7468',
+  telephone: '+1-208-660-7468',
 }
 
 const jsonLdFaq = {

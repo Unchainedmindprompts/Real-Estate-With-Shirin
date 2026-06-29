@@ -14,7 +14,26 @@ export const metadata: Metadata = {
     description:
       "Shirin Abplanalp is a licensed North Idaho REALTOR® with BHHS Jacklin Real Estate, helping buyers, sellers, and relocating families across North Idaho.",
     url: 'https://www.realestatewithshirin.com',
+    siteName: 'Real Estate With Shirin',
     type: 'website',
+    locale: 'en_US',
+    images: [
+      {
+        url: 'https://www.realestatewithshirin.com/images/shirin-portrait-2026.png',
+        width: 1448,
+        height: 1086,
+        alt: 'Shirin Abplanalp, Licensed REALTOR® at BHHS Jacklin Real Estate',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Shirin Abplanalp | North Idaho REALTOR® | BHHS Jacklin',
+    description:
+      "Shirin Abplanalp is a licensed North Idaho REALTOR® with BHHS Jacklin Real Estate, helping buyers, sellers, and relocating families across North Idaho.",
+    images: [
+      'https://www.realestatewithshirin.com/images/shirin-portrait-2026.png',
+    ],
   },
 }
 
@@ -56,7 +75,7 @@ export default function HomePage() {
         'name': 'Shirin Abplanalp — Real Estate With Shirin',
         'description': "Shirin Abplanalp is a licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate with 11 years of experience and 100+ transactions closed. Serving buyers, sellers, and relocating families across Northern Idaho including Post Falls, Coeur d'Alene, Hayden, Rathdrum, and Sandpoint.",
         'url': 'https://www.realestatewithshirin.com',
-        'telephone': '(208) 660-7468',
+        'telephone': '+1-208-660-7468',
         'email': 'dreamlifeinidaho@gmail.com',
         'image': 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',
         'address': { '@type': 'PostalAddress', 'streetAddress': '1927 W. Riverstone Drive', 'addressLocality': "Coeur d'Alene", 'addressRegion': 'ID', 'postalCode': '83814', 'addressCountry': 'US' },
@@ -82,6 +101,13 @@ export default function HomePage() {
         ],
         'knowsAbout': ['Post Falls real estate', "Coeur d'Alene real estate", 'Northern Idaho relocation', 'Kootenai County homes', 'Buyer representation', 'Seller representation', 'Relocation', 'Idaho real estate market', 'Active family relocation to Northern Idaho'],
         'slogan': 'Your Northern Idaho Real Estate Advisor',
+        'sameAs': [
+          'https://maps.google.com/?cid=2147151028860799721',
+          'https://www.yelp.com/biz/real-estate-with-shirin-coeur-d-alene',
+          'https://www.bbb.org/us/id/post-falls/profile/real-estate-agent/real-estate-with-shirin-1296-1000195359',
+          'https://www.zillow.com/profile/dreamlifeinidaho',
+          'https://www.facebook.com/ShirinRealty',
+        ],
         'review': testimonials.map((t) => ({
           '@type': 'Review',
           'author': { '@type': 'Person', 'name': t.name },
@@ -103,7 +129,7 @@ export default function HomePage() {
         '@id': 'https://www.realestatewithshirin.com/#agent',
         'name': 'Shirin Abplanalp',
         'jobTitle': 'Licensed REALTOR®',
-        'telephone': '(208) 660-7468',
+        'telephone': '+1-208-660-7468',
         'email': 'dreamlifeinidaho@gmail.com',
         'url': 'https://www.realestatewithshirin.com/about',
         'image': 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',

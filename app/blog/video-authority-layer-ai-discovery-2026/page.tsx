@@ -151,7 +151,7 @@ const localBusinessSchema = {
   '@id': 'https://www.realestatewithshirin.com/#business',
   name: 'Shirin Abplanalp — Real Estate With Shirin',
   url: 'https://www.realestatewithshirin.com',
-  telephone: '(208) 660-7468',
+  telephone: '+1-208-660-7468',
   email: 'dreamlifeinidaho@gmail.com',
   address: {
     '@type': 'PostalAddress',
