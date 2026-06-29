@@ -23,12 +23,13 @@ const jsonLdAgent = {
     containedInPlace: { '@type': 'State', name: 'Idaho' },
   },
   founder: { '@type': 'Person', '@id': 'https://www.realestatewithshirin.com/#agent', name: 'Shirin Abplanalp' },
-  telephone: '(208) 660-7468',
+  telephone: '+1-208-660-7468',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Sandpoint',
+    streetAddress: '1927 W. Riverstone Drive',
+    addressLocality: "Coeur d'Alene",
     addressRegion: 'ID',
-    postalCode: '83864',
+    postalCode: '83814',
     addressCountry: 'US',
   },
 }

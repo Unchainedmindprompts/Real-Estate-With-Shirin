@@ -23,7 +23,7 @@ const jsonLdAgent = {
     containedInPlace: { '@type': 'State', name: 'Idaho' },
   },
   founder: { '@type': 'Person', '@id': 'https://www.realestatewithshirin.com/#agent', name: 'Shirin Abplanalp' },
-  telephone: '(208) 660-7468',
+  telephone: '+1-208-660-7468',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '1927 W. Riverstone Drive',

@@ -21,7 +21,7 @@ const jsonLdProfile = {
     jobTitle: 'Licensed REALTOR®',
     description:
       "Licensed Northern Idaho realtor at Berkshire Hathaway HomeServices Jacklin Real Estate with 11 years of experience and 100+ transactions closed. Specialising in buyer representation, seller representation, and relocation for families moving to Post Falls, Coeur d'Alene, and Kootenai County.",
-    telephone: '(208) 660-7468',
+    telephone: '+1-208-660-7468',
     email: 'dreamlifeinidaho@gmail.com',
     url: 'https://www.realestatewithshirin.com/about',
     image: 'https://www.realestatewithshirin.com/images/realtor-headshot-outdoor.jpeg',
