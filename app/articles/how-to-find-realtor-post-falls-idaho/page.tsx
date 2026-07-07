@@ -102,12 +102,12 @@ const articleSchema = {
   articleSection: 'Buyer Resources',
   wordCount: 1400,
   mainEntity: {
-    '@type': 'RealEstateAgent',
+    '@type': 'Person',
     '@id': 'https://www.realestatewithshirin.com/#agent',
   },
   about: [
     {
-      '@type': 'RealEstateAgent',
+      '@type': 'Person',
       '@id': 'https://www.realestatewithshirin.com/#agent',
     },
     {

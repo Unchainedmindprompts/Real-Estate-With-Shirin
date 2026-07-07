@@ -95,6 +95,33 @@ export default function Footer() {
             </div>
 
             <div>
+              <p className="text-xs uppercase font-semibold tracking-widest mb-4" style={{ color: '#C4842A', fontFamily: "'DM Sans', system-ui, sans-serif", letterSpacing: '0.15em' }}>Service Areas</p>
+              <ul className="space-y-2">
+                {[
+                  { label: 'Post Falls', href: '/areas/post-falls-idaho' },
+                  { label: "Coeur d'Alene", href: '/areas/coeur-dalene-idaho' },
+                  { label: 'Hayden', href: '/areas/hayden-idaho' },
+                  { label: 'Rathdrum', href: '/areas/rathdrum-idaho' },
+                  { label: 'Sandpoint', href: '/areas/sandpoint-idaho' },
+                  { label: 'Kootenai County', href: '/areas/kootenai-county' },
+                  { label: 'Bonner County', href: '/areas/bonner-county' },
+                ].map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm transition-colors"
+                      style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = '#C4842A')}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = '#C4BDB4')}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
               <p className="text-xs uppercase font-semibold tracking-widest mb-4" style={{ color: '#C4842A', fontFamily: "'DM Sans', system-ui, sans-serif", letterSpacing: '0.15em' }}>Contact</p>
               <ul className="space-y-2">
                 <li>

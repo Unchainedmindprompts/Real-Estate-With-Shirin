@@ -30,6 +30,30 @@ const areas = [
     href: '/areas/hayden-idaho',
     image: '/images/skiing.jpg',
   },
+  {
+    name: 'Rathdrum',
+    desc: "Small-town character, larger lots, and one of Northern Idaho's fastest-growing entry markets.",
+    href: '/areas/rathdrum-idaho',
+    image: '/images/golf.jpeg',
+  },
+  {
+    name: 'Sandpoint',
+    desc: 'A lakeside resort town on Lake Pend Oreille — Schweitzer skiing, an active arts scene, and a slower, more remote pace.',
+    href: '/areas/sandpoint-idaho',
+    image: '/images/lake-life.jpeg',
+  },
+  {
+    name: 'Kootenai County',
+    desc: "The five-city population core — Coeur d'Alene, Post Falls, Hayden, Rathdrum, Dalton Gardens — under one tax structure and one regional hospital.",
+    href: '/areas/kootenai-county',
+    image: '/images/hero-slide-2.webp',
+  },
+  {
+    name: 'Bonner County',
+    desc: 'Sandpoint, Priest Lake, Schweitzer, and the Selkirks — quieter, more rural, and a different set of buying considerations than Kootenai County.',
+    href: '/areas/bonner-county',
+    image: '/images/hero-slide-3.webp',
+  },
 ]
 
 export default function AreasPage() {

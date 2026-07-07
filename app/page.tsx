@@ -71,6 +71,16 @@ export default function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        '@id': 'https://www.realestatewithshirin.com/#website',
+        'url': 'https://www.realestatewithshirin.com',
+        'name': 'Real Estate With Shirin',
+        'description': "Northern Idaho real estate with Shirin Abplanalp, licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate serving Post Falls, Coeur d'Alene, Hayden, and Kootenai County.",
+        'publisher': { '@id': 'https://www.realestatewithshirin.com/#business' },
+        'inLanguage': 'en-US',
+      })}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
         '@type': ['RealEstateAgent', 'LocalBusiness'],
         '@id': 'https://www.realestatewithshirin.com/#business',
         'name': 'Shirin Abplanalp — Real Estate With Shirin',
@@ -94,9 +104,9 @@ export default function HomePage() {
           { '@type': 'City', 'name': 'Harrison', 'containedInPlace': { '@type': 'State', 'name': 'Idaho' } },
           { '@type': 'City', 'name': 'Wallace', 'containedInPlace': { '@type': 'State', 'name': 'Idaho' } },
           { '@type': 'City', 'name': 'Kellogg', 'containedInPlace': { '@type': 'State', 'name': 'Idaho' } },
-          { '@type': 'AdministrativeArea', 'name': 'Kootenai County' },
-          { '@type': 'AdministrativeArea', 'name': 'Bonner County' },
-          { '@type': 'AdministrativeArea', 'name': 'Shoshone County' },
+          { '@type': 'AdministrativeArea', 'name': 'Kootenai County', 'sameAs': 'https://en.wikipedia.org/wiki/Kootenai_County,_Idaho' },
+          { '@type': 'AdministrativeArea', 'name': 'Bonner County', 'sameAs': 'https://en.wikipedia.org/wiki/Bonner_County,_Idaho' },
+          { '@type': 'AdministrativeArea', 'name': 'Shoshone County', 'sameAs': 'https://en.wikipedia.org/wiki/Shoshone_County,_Idaho' },
           { '@type': 'AdministrativeArea', 'name': 'North Idaho', 'alternateName': 'Northern Idaho', 'sameAs': 'https://en.wikipedia.org/wiki/Idaho_Panhandle' },
           { '@type': 'AdministrativeArea', 'name': 'Inland Northwest' },
         ],
@@ -192,15 +202,6 @@ export default function HomePage() {
           'https://members.cdarealtors.com/directory/Details/shirin-abplanalp-4150054',
           'https://maps.google.com/?cid=2147151028860799721',
         ],
-      })}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'WebSite',
-        '@id': 'https://www.realestatewithshirin.com/#website',
-        'name': 'Real Estate With Shirin',
-        'url': 'https://www.realestatewithshirin.com',
-        'description': "Northern Idaho real estate with Shirin Abplanalp, licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate serving Post Falls, Coeur d'Alene, Hayden, and Kootenai County.",
-        'publisher': { '@id': 'https://www.realestatewithshirin.com/#agent' },
       })}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org',
