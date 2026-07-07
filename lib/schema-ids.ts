@@ -24,6 +24,13 @@ export const AGENT_IMAGE = `${BASE_URL}/images/shirin-abplanalp.jpg`
 // worksFor edge from #agent.
 export const BROKERAGE_PHONE = '+1-208-758-7474'
 
+// Homepage / hero portrait card — landscape framing (1448×1086) used for
+// og:image, twitter card, and homepage primaryImageOfPage. Real file at
+// public/images/shirin-portrait-2026.png.
+export const PORTRAIT_2026 = `${BASE_URL}/images/shirin-portrait-2026.png`
+export const PORTRAIT_2026_WIDTH = 1448
+export const PORTRAIT_2026_HEIGHT = 1086
+
 // Wikipedia sameAs for the cities Shirin serves. Referenced from each area page's
 // areaServed City node so AI answer engines can resolve the entity.
 export const CITY_SAMEAS = {

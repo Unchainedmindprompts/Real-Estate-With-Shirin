@@ -1,40 +1,51 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { PHONE, EMAIL, AGENT_IMAGE, BROKERAGE_PHONE } from '@/lib/schema-ids'
+import {
+  PHONE,
+  EMAIL,
+  AGENT_IMAGE,
+  BROKERAGE_PHONE,
+  PORTRAIT_2026,
+  PORTRAIT_2026_WIDTH,
+  PORTRAIT_2026_HEIGHT,
+} from '@/lib/schema-ids'
+
+// Homepage page-scoped copy. Single source; both metadata AND the WebPage
+// JSON-LD node reference these so title/description/image can't drift between
+// what search sees and what the entity graph declares.
+const HOMEPAGE_TITLE = 'Shirin Abplanalp | North Idaho REALTOR® | BHHS Jacklin'
+const HOMEPAGE_DESCRIPTION =
+  "Shirin Abplanalp is a licensed North Idaho REALTOR® with BHHS Jacklin Real Estate, helping buyers, sellers, and relocating families across North Idaho."
+const HOMEPAGE_IMAGE_ALT = 'Shirin Abplanalp, Licensed REALTOR® at BHHS Jacklin Real Estate'
 
 export const metadata: Metadata = {
-  title: 'Shirin Abplanalp | North Idaho REALTOR® | BHHS Jacklin',
-  description:
-    "Shirin Abplanalp is a licensed North Idaho REALTOR® with BHHS Jacklin Real Estate, helping buyers, sellers, and relocating families across North Idaho.",
+  title: HOMEPAGE_TITLE,
+  description: HOMEPAGE_DESCRIPTION,
   alternates: {
     canonical: 'https://www.realestatewithshirin.com',
   },
   openGraph: {
-    title: 'Shirin Abplanalp | North Idaho REALTOR® | BHHS Jacklin',
-    description:
-      "Shirin Abplanalp is a licensed North Idaho REALTOR® with BHHS Jacklin Real Estate, helping buyers, sellers, and relocating families across North Idaho.",
+    title: HOMEPAGE_TITLE,
+    description: HOMEPAGE_DESCRIPTION,
     url: 'https://www.realestatewithshirin.com',
     siteName: 'Real Estate With Shirin',
     type: 'website',
     locale: 'en_US',
     images: [
       {
-        url: 'https://www.realestatewithshirin.com/images/shirin-portrait-2026.png',
-        width: 1448,
-        height: 1086,
-        alt: 'Shirin Abplanalp, Licensed REALTOR® at BHHS Jacklin Real Estate',
+        url: PORTRAIT_2026,
+        width: PORTRAIT_2026_WIDTH,
+        height: PORTRAIT_2026_HEIGHT,
+        alt: HOMEPAGE_IMAGE_ALT,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shirin Abplanalp | North Idaho REALTOR® | BHHS Jacklin',
-    description:
-      "Shirin Abplanalp is a licensed North Idaho REALTOR® with BHHS Jacklin Real Estate, helping buyers, sellers, and relocating families across North Idaho.",
-    images: [
-      'https://www.realestatewithshirin.com/images/shirin-portrait-2026.png',
-    ],
+    title: HOMEPAGE_TITLE,
+    description: HOMEPAGE_DESCRIPTION,
+    images: [PORTRAIT_2026],
   },
 }
 
@@ -79,6 +90,24 @@ export default function HomePage() {
         'description': "Northern Idaho real estate with Shirin Abplanalp, licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate serving Post Falls, Coeur d'Alene, Hayden, and Kootenai County.",
         'publisher': { '@id': 'https://www.realestatewithshirin.com/#business' },
         'inLanguage': 'en-US',
+      })}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        '@id': 'https://www.realestatewithshirin.com/#webpage',
+        'url': 'https://www.realestatewithshirin.com',
+        'name': HOMEPAGE_TITLE,
+        'description': HOMEPAGE_DESCRIPTION,
+        'isPartOf': { '@id': 'https://www.realestatewithshirin.com/#website' },
+        'about': { '@id': 'https://www.realestatewithshirin.com/#business' },
+        'mainEntity': { '@id': 'https://www.realestatewithshirin.com/#business' },
+        'inLanguage': 'en-US',
+        'primaryImageOfPage': {
+          '@type': 'ImageObject',
+          'url': PORTRAIT_2026,
+          'width': PORTRAIT_2026_WIDTH,
+          'height': PORTRAIT_2026_HEIGHT,
+        },
       })}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org',
@@ -203,6 +232,7 @@ export default function HomePage() {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         '@id': 'https://www.realestatewithshirin.com/#faq',
+        'isPartOf': { '@id': 'https://www.realestatewithshirin.com/#webpage' },
         'mainEntity': [
           { '@type': 'Question', 'name': 'Who is the best realtor in Post Falls Idaho?', 'acceptedAnswer': { '@type': 'Answer', 'text': "Shirin Abplanalp is a licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate serving Post Falls, Coeur d'Alene, and Northern Idaho. With 11 years of experience, 100+ closed transactions, and firsthand relocation experience from Bend, Oregon to Post Falls, Shirin specializes in helping buyers, sellers, and relocating families navigate the North Idaho real estate market." } },
           { '@type': 'Question', 'name': 'What areas does Shirin Abplanalp serve in Northern Idaho?', 'acceptedAnswer': { '@type': 'Answer', 'text': "Shirin Abplanalp serves buyers and sellers across Northern Idaho including Post Falls, Coeur d'Alene, Hayden, Rathdrum, Sandpoint, Athol, Bayview, Harrison, Wallace, and Kellogg, as well as Kootenai County, Bonner County, and Shoshone County." } },
