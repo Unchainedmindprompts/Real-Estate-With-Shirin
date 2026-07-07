@@ -134,6 +134,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/articles/best-places-to-live-north-idaho-leaving-california#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/best-places-to-live-north-idaho-leaving-california#article' },
   mainEntity: [
     {
       '@type': 'Question',

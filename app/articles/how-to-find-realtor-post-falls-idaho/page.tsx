@@ -149,6 +149,7 @@ const faqSchema = {
 '@context': 'https://schema.org',
 '@type': 'FAQPage',
 '@id': 'https://www.realestatewithshirin.com/articles/how-to-find-realtor-post-falls-idaho#faq',
+isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/how-to-find-realtor-post-falls-idaho#article' },
 mainEntity: [
     {
 '@type': 'Question',

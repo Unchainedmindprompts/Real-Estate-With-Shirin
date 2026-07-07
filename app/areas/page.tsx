@@ -11,6 +11,19 @@ export const metadata: Metadata = {
   },
 }
 
+const jsonLdCollection = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  '@id': 'https://www.realestatewithshirin.com/areas',
+  url: 'https://www.realestatewithshirin.com/areas',
+  name: 'North Idaho Communities',
+  description:
+    "Shirin Abplanalp serves buyers and sellers across Post Falls, Coeur d'Alene, Hayden, Rathdrum, Sandpoint, and Kootenai + Bonner counties, Idaho.",
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/#website' },
+  about: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  inLanguage: 'en-US',
+}
+
 const areas = [
   {
     name: 'Post Falls',
@@ -59,6 +72,7 @@ const areas = [
 export default function AreasPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCollection) }} />
       {/* Hero */}
       <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
         <div className="absolute inset-0 z-0">

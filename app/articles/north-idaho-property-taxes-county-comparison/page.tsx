@@ -97,6 +97,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/articles/north-idaho-property-taxes-county-comparison#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/north-idaho-property-taxes-county-comparison#article' },
   mainEntity: [
     {
       '@type': 'Question',

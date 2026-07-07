@@ -57,6 +57,7 @@ const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': `${PAGE_URL}#faq`,
+  isPartOf: { '@id': `${PAGE_URL}#webpage` },
   mainEntity: [
     {
       '@type': 'Question',

@@ -116,6 +116,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/articles/snowiest-cities-north-idaho-ranking#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/snowiest-cities-north-idaho-ranking#article' },
   mainEntity: [
     {
       '@type': 'Question',

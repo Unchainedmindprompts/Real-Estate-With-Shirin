@@ -93,6 +93,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/articles/moving-to-north-idaho-cheapest-places-migration-best-small-towns#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/moving-to-north-idaho-cheapest-places-migration-best-small-towns#article' },
   mainEntity: [
     {
       '@type': 'Question',

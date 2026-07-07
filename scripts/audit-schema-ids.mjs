@@ -1,17 +1,35 @@
 #!/usr/bin/env node
-// Whole-graph @id audit. Runs after `npm run build` and scans the built HTML
-// for JSON-LD blocks — this is what search engines actually see, not source.
+// Whole-graph @id audit + completeness checks. Runs after `npm run build` and
+// scans the built HTML for JSON-LD blocks — this is what search engines see.
 //
-// Reports:
+// Integrity checks (catches CORRUPTION):
 //   - Duplicate @id DEFINITIONS across pages
 //   - Dangling @id REFERENCES (referenced but never defined)
-//   - Per-page node inventory
+//
+// Completeness checks (catches MISSING NODES that pass integrity but are wrong):
+//   - Every emitted page has at least one page-container node
+//     (WebPage / ProfilePage / ContactPage / CollectionPage / ItemPage /
+//      Article / BlogPosting / NewsArticle)
+//   - Every FAQPage has isPartOf (so it doesn't float loose off the site root)
+//   - Every Article/BlogPosting/NewsArticle has mainEntityOfPage set
 //
 // Exit codes:
-//   0 = clean, 1 = duplicate defs or dangling refs found
+//   0 = clean, 1 = any integrity OR completeness failure
 
 import { readdirSync, readFileSync, statSync, existsSync } from 'node:fs'
 import { join } from 'node:path'
+
+const PAGE_CONTAINER_TYPES = new Set([
+  'WebPage', 'ProfilePage', 'ContactPage', 'CollectionPage', 'ItemPage',
+  'Article', 'BlogPosting', 'NewsArticle',
+])
+const ARTICLE_TYPES = new Set(['Article', 'BlogPosting', 'NewsArticle'])
+const FAQ_TYPES = new Set(['FAQPage'])
+
+function typeMatchesAny(nodeType, checkSet) {
+  const types = Array.isArray(nodeType) ? nodeType : [nodeType]
+  return types.some(t => checkSet.has(t))
+}
 
 const BUILT_ROOT = '.next/server/app'
 const SOURCE_HOST_PREFIXES = [
@@ -66,6 +84,7 @@ function isSiteScoped(id) {
 const definitions = new Map() // @id -> [{ file, type, node }]
 const references = new Map()  // @id -> [{ file, node }]
 const externalDefs = new Set() // brokerage #organization, City sameAs, etc. — allowed cross-domain defs
+const perFileTopNodes = new Map() // file -> [{ topLevelType, node }] — top-level JSON-LD nodes for completeness checks
 
 const files = findHtmlFiles(BUILT_ROOT)
 if (files.length === 0) {
@@ -76,6 +95,7 @@ if (files.length === 0) {
 for (const file of files) {
   const html = readFileSync(file, 'utf-8')
   const blocks = extractJsonLdBlocks(html)
+  const topNodes = []
   for (const raw of blocks) {
     let parsed
     try {
@@ -83,6 +103,12 @@ for (const file of files) {
     } catch (e) {
       console.warn(`Skipped unparseable JSON-LD block in ${file}: ${e.message}`)
       continue
+    }
+    // A JSON-LD block's ROOT is what search engines treat as the top-level entity.
+    // Track those separately from nested nodes for completeness checks.
+    const roots = Array.isArray(parsed) ? parsed : [parsed]
+    for (const root of roots) {
+      if (root && typeof root === 'object' && '@type' in root) topNodes.push(root)
     }
     walkNodes(parsed, (node) => {
       const kind = classifyNode(node)
@@ -98,6 +124,7 @@ for (const file of files) {
       }
     })
   }
+  perFileTopNodes.set(file, topNodes)
 }
 
 // Report
@@ -136,9 +163,72 @@ if (dangling.length === 0) {
   }
 }
 
+// ============================================================================
+// Completeness checks — catch MISSING nodes, not just corrupt ones.
+// ============================================================================
+
+console.log('\n=== COMPLETENESS CHECKS ===')
+const completenessFailures = []
+
+for (const [file, topNodes] of perFileTopNodes) {
+  // Skip non-page HTML (Next.js system pages, favicon, robots, sitemap)
+  if (
+    file.endsWith('_not-found.html') ||
+    file.endsWith('_global-error.html') ||
+    file.endsWith('robots.txt')
+  ) continue
+
+  // Check 1 — every page has at least one page-container node
+  const hasContainer = topNodes.some(n => typeMatchesAny(n['@type'], PAGE_CONTAINER_TYPES))
+  if (!hasContainer) {
+    completenessFailures.push({
+      kind: 'MISSING_PAGE_CONTAINER',
+      file,
+      detail: `emitted types: ${topNodes.map(n => JSON.stringify(n['@type'])).join(', ') || '(none)'}`,
+    })
+  }
+
+  // Check 2 — every FAQPage has isPartOf (must not float)
+  for (const node of topNodes) {
+    if (typeMatchesAny(node['@type'], FAQ_TYPES)) {
+      if (!node.isPartOf) {
+        completenessFailures.push({
+          kind: 'FAQPAGE_MISSING_ISPARTOF',
+          file,
+          detail: `@id ${node['@id'] || '(none)'}`,
+        })
+      }
+    }
+  }
+
+  // Check 3 — every Article/BlogPosting/NewsArticle has mainEntityOfPage
+  for (const node of topNodes) {
+    if (typeMatchesAny(node['@type'], ARTICLE_TYPES)) {
+      if (!node.mainEntityOfPage) {
+        completenessFailures.push({
+          kind: 'ARTICLE_MISSING_MAINENTITYOFPAGE',
+          file,
+          detail: `@id ${node['@id'] || '(none)'}, @type ${JSON.stringify(node['@type'])}`,
+        })
+      }
+    }
+  }
+}
+
+if (completenessFailures.length === 0) {
+  console.log('  ✅ every page has a container; every FAQPage has isPartOf; every Article has mainEntityOfPage')
+} else {
+  for (const f of completenessFailures) {
+    console.log(`  🔴 ${f.kind}: ${f.file}`)
+    console.log(`         ${f.detail}`)
+    issues++
+  }
+}
+
 console.log('\n=== SUMMARY ===')
 console.log(`  Site-scoped definitions: ${siteScoped.length}`)
 console.log(`  References tracked:      ${references.size}`)
+console.log(`  Completeness failures:   ${completenessFailures.length}`)
 console.log(`  Issues:                  ${issues}`)
 
 process.exit(issues > 0 ? 1 : 0)

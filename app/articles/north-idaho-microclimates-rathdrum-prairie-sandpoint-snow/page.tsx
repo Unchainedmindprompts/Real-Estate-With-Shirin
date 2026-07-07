@@ -102,6 +102,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/articles/north-idaho-microclimates-rathdrum-prairie-sandpoint-snow#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/north-idaho-microclimates-rathdrum-prairie-sandpoint-snow#article' },
   mainEntity: [
     {
       '@type': 'Question',

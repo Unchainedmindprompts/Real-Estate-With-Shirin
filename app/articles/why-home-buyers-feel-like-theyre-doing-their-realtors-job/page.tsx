@@ -115,6 +115,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/articles/why-home-buyers-feel-like-theyre-doing-their-realtors-job#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/why-home-buyers-feel-like-theyre-doing-their-realtors-job#article' },
   mainEntity: [
     {
       '@type': 'Question',

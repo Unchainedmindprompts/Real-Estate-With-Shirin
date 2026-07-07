@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 const jsonLdService = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  '@id': 'https://www.realestatewithshirin.com/buyers#service',
   name: 'Buyer Representation — Northern Idaho Real Estate',
   description:
     "Expert buyer representation for home purchases in Post Falls, Coeur d'Alene, Hayden, and Kootenai County Idaho.",
@@ -27,10 +28,25 @@ const jsonLdService = {
   serviceType: 'Real Estate Buyer Representation',
 }
 
+const jsonLdWebPage = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://www.realestatewithshirin.com/buyers#webpage',
+  url: 'https://www.realestatewithshirin.com/buyers',
+  name: 'Buying a Home in North Idaho | Shirin Abplanalp, REALTOR®',
+  description:
+    "Buying a home in Post Falls, Coeur d'Alene, or anywhere in North Idaho? A local REALTOR's honest read on neighborhoods, prices, and what actually matters.",
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/#website' },
+  about: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  mainEntity: { '@id': 'https://www.realestatewithshirin.com/buyers#service' },
+  inLanguage: 'en-US',
+}
+
 const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/buyers/#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/buyers#webpage' },
   mainEntity: [
     {
       '@type': 'Question',
@@ -102,6 +118,7 @@ export default function BuyersPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebPage) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
 
       {/* Hero */}

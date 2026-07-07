@@ -112,6 +112,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/articles/buying-property-prairie-wells-septic-roads#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/buying-property-prairie-wells-septic-roads#article' },
   mainEntity: [
     {
       '@type': 'Question',

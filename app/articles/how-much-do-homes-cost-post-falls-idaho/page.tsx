@@ -89,6 +89,7 @@ const faqSchema = {
 '@context': 'https://schema.org',
 '@type': 'FAQPage',
 '@id': 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho#faq',
+isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho#article' },
 mainEntity: [
     {
 '@type': 'Question',

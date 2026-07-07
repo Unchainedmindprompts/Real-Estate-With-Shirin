@@ -150,6 +150,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/articles/north-idaho-to-spokane-commute-times#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/north-idaho-to-spokane-commute-times#article' },
   mainEntity: [
     {
       '@type': 'Question',

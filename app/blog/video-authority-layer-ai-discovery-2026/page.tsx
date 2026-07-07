@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
+  '@id': 'https://www.realestatewithshirin.com/blog/video-authority-layer-ai-discovery-2026#article',
   headline: 'The Video Authority Layer: How AI Discovery Is Changing Real Estate in 2026',
   description: 'AI-powered search is reshaping how buyers find real estate agents. Why video has become the trust signal that gets realtors surfaced in AI discovery.',
   image: {
@@ -57,6 +58,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/blog/video-authority-layer-ai-discovery-2026/#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/blog/video-authority-layer-ai-discovery-2026#article' },
   mainEntity: [
     {
       '@type': 'Question',

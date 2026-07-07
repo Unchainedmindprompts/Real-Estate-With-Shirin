@@ -95,6 +95,7 @@ const faqSchema = {
 '@context': 'https://schema.org',
 '@type': 'FAQPage',
 '@id': 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-market-2026#faq',
+isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-market-2026#article' },
 mainEntity: [
     {
 '@type': 'Question',
