@@ -36,25 +36,11 @@ const articleSchema = {
     width: 1536,
     height: 1024,
   },
-  author: {
-    '@type': 'Person',
-    '@id': `${BASE_URL}/#agent`,
-    name: 'Shirin Abplanalp',
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': `${BASE_URL}/#business`,
-    name: 'Shirin Abplanalp — Real Estate With Shirin',
-    logo: {
-      '@type': 'ImageObject',
-      url: `${BASE_URL}/images/shirin-logo.png`,
-      width: 1254,
-      height: 1254,
-    },
-  },
+  author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
+  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
   datePublished: '2026-06-10T00:00:00-07:00',
   dateModified: '2026-06-10T00:00:00-07:00',
-  mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
+  mainEntityOfPage: PAGE_URL,
   url: PAGE_URL,
   articleSection: 'North Idaho Buyer Guides',
   keywords: [
@@ -75,12 +61,7 @@ const articleSchema = {
   ],
   wordCount: 3500,
   inLanguage: 'en-US',
-  isPartOf: {
-    '@type': 'CollectionPage',
-    '@id': `${BASE_URL}/articles`,
-    name: 'Northern Idaho Real Estate Articles',
-    url: `${BASE_URL}/articles`,
-  },
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles' },
   spatialCoverage: {
     '@type': 'Place',
     name: "Coeur d'Alene, Idaho",

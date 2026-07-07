@@ -14,32 +14,7 @@ export const metadata: Metadata = {
 const jsonLdProfile = {
   '@context': 'https://schema.org',
   '@type': 'ProfilePage',
-  mainEntity: {
-    '@type': 'Person',
-    '@id': 'https://www.realestatewithshirin.com/#agent',
-    name: 'Shirin Abplanalp',
-    jobTitle: 'Licensed REALTOR®',
-    description:
-      "Licensed Northern Idaho realtor at Berkshire Hathaway HomeServices Jacklin Real Estate with 11 years of experience and 100+ transactions closed. Specialising in buyer representation, seller representation, and relocation for families moving to Post Falls, Coeur d'Alene, and Kootenai County.",
-    telephone: '+1-208-660-7468',
-    email: 'dreamlifeinidaho@gmail.com',
-    url: 'https://www.realestatewithshirin.com/about',
-    image: 'https://www.realestatewithshirin.com/images/realtor-headshot-outdoor.jpeg',
-    worksFor: { '@type': 'Organization', '@id': 'https://www.jacklinrealestate.com/#organization', name: 'Berkshire Hathaway HomeServices Jacklin Real Estate', url: 'https://www.jacklinrealestate.com/' },
-    hasCredential: {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'Real Estate License',
-      identifier: '1371861',
-      recognizedBy: { '@type': 'Organization', name: 'Idaho Real Estate Commission' },
-    },
-    knowsAbout: [
-      'Post Falls Idaho real estate',
-      "Coeur d'Alene Idaho real estate",
-      'Northern Idaho relocation',
-      'Active family lifestyle North Idaho',
-      'Kootenai County homes',
-    ],
-  },
+  mainEntity: { '@id': 'https://www.realestatewithshirin.com/#agent' },
 }
 
 const jsonLdBreadcrumb = {

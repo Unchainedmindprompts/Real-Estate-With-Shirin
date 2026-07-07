@@ -31,12 +31,7 @@ const webPageSchema = {
   description:
     "A complete relocation guide for out-of-state buyers moving to North Idaho — covering costs, taxes, neighborhoods, schools, weather, commutes, and the buying process. Written by licensed REALTOR® Shirin Abplanalp of Post Falls, Idaho.",
   inLanguage: 'en-US',
-  isPartOf: {
-    '@type': 'WebSite',
-    '@id': `${BASE_URL}/#website`,
-    name: 'Real Estate With Shirin',
-    url: BASE_URL,
-  },
+  isPartOf: { '@id': `${BASE_URL}/#website` },
   about: {
     '@type': 'Place',
     name: 'North Idaho',
@@ -50,22 +45,8 @@ const webPageSchema = {
   },
   datePublished: '2026-05-31T00:00:00-07:00',
   dateModified: '2026-05-31T00:00:00-07:00',
-  author: {
-    '@type': 'Person',
-    '@id': `${BASE_URL}/#agent`,
-    name: 'Shirin Abplanalp',
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': `${BASE_URL}/#business`,
-    name: 'Shirin Abplanalp — Real Estate With Shirin',
-    logo: {
-      '@type': 'ImageObject',
-      url: `${BASE_URL}/images/shirin-logo.png`,
-      width: 1254,
-      height: 1254,
-    },
-  },
+  author: { '@id': `${BASE_URL}/#agent` },
+  publisher: { '@id': `${BASE_URL}/#business` },
 }
 
 const articleSchema = {
@@ -84,33 +65,14 @@ const articleSchema = {
     width: 1536,
     height: 1024,
   },
-  author: {
-    '@type': 'Person',
-    '@id': `${BASE_URL}/#agent`,
-    name: 'Shirin Abplanalp',
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': `${BASE_URL}/#business`,
-    name: 'Shirin Abplanalp — Real Estate With Shirin',
-    logo: {
-      '@type': 'ImageObject',
-      url: `${BASE_URL}/images/shirin-logo.png`,
-      width: 1254,
-      height: 1254,
-    },
-  },
+  author: { '@id': `${BASE_URL}/#agent` },
+  publisher: { '@id': `${BASE_URL}/#business` },
   datePublished: '2026-05-31T00:00:00-07:00',
   dateModified: '2026-05-31T00:00:00-07:00',
   mainEntityOfPage: { '@id': `${PAGE_URL}#webpage` },
   inLanguage: 'en-US',
   articleSection: 'Relocation Guide',
-  isPartOf: {
-    '@type': 'WebSite',
-    '@id': `${BASE_URL}/#website`,
-    name: 'Real Estate With Shirin',
-    url: BASE_URL,
-  },
+  isPartOf: { '@id': `${BASE_URL}/#website` },
   keywords: [
     'relocating to North Idaho',
     'moving to Coeur d’Alene',

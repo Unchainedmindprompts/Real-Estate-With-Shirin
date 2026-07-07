@@ -35,28 +35,11 @@ const articleSchema = {
     width: 1536,
     height: 1024,
   },
-  author: {
-    '@type': 'Person',
-    '@id': 'https://www.realestatewithshirin.com/#agent',
-    name: 'Shirin Abplanalp',
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://www.realestatewithshirin.com/#business',
-    name: 'Shirin Abplanalp — Real Estate With Shirin',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.realestatewithshirin.com/images/shirin-logo.png',
-      width: 1254,
-      height: 1254,
-    },
-  },
+  author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
+  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
   datePublished: '2026-05-27T00:00:00-07:00',
   dateModified: '2026-05-27T00:00:00-07:00',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.realestatewithshirin.com/articles/moving-to-north-idaho-cheapest-places-migration-best-small-towns',
-  },
+  mainEntityOfPage: 'https://www.realestatewithshirin.com/articles/moving-to-north-idaho-cheapest-places-migration-best-small-towns',
   url: 'https://www.realestatewithshirin.com/articles/moving-to-north-idaho-cheapest-places-migration-best-small-towns',
   articleSection: 'North Idaho Buyer Guides',
   keywords: [
@@ -83,12 +66,7 @@ const articleSchema = {
       { '@type': 'AdministrativeArea', name: 'Bonner County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
     ],
   },
-  isPartOf: {
-    '@type': 'CollectionPage',
-    '@id': 'https://www.realestatewithshirin.com/articles',
-    name: 'Northern Idaho Real Estate Articles',
-    url: 'https://www.realestatewithshirin.com/articles',
-  },
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles' },
   about: [
     { '@type': 'Thing', name: 'North Idaho Relocation' },
     { '@type': 'Thing', name: 'Idaho Cost of Living' },

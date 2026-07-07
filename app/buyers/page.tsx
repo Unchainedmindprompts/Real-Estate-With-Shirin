@@ -17,7 +17,7 @@ const jsonLdService = {
   name: 'Buyer Representation — Northern Idaho Real Estate',
   description:
     "Expert buyer representation for home purchases in Post Falls, Coeur d'Alene, Hayden, and Kootenai County Idaho.",
-  provider: { '@type': 'RealEstateAgent', '@id': 'https://www.realestatewithshirin.com/#business', name: 'Shirin Abplanalp', url: 'https://www.realestatewithshirin.com' },
+  provider: { '@id': 'https://www.realestatewithshirin.com/#business' },
   areaServed: [
     { '@type': 'City', name: 'Post Falls' },
     { '@type': 'City', name: "Coeur d'Alene" },

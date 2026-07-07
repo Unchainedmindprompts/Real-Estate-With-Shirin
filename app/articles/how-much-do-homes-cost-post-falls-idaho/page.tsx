@@ -26,59 +26,12 @@ const articleSchema = {
     width: 1122,
     height: 1402,
   },
-  author: {
-    '@type': 'Person',
-    '@id': 'https://www.realestatewithshirin.com/#agent',
-    name: 'Shirin Abplanalp',
-    jobTitle: 'Licensed REALTOR®',
-    url: 'https://www.realestatewithshirin.com/about',
-    hasCredential: [
-      {
-        '@type': 'EducationalOccupationalCredential',
-        credentialCategory: 'Real Estate License',
-        identifier: '1371861',
-        recognizedBy: {
-          '@type': 'GovernmentOrganization',
-          name: 'Idaho Real Estate Commission',
-          url: 'https://irec.idaho.gov',
-        },
-      },
-      {
-        '@type': 'EducationalOccupationalCredential',
-        credentialCategory: 'Professional Designation',
-        name: 'Seniors Real Estate Specialist®',
-        abbreviation: 'SRES®',
-        recognizedBy: {
-          '@type': 'Organization',
-          name: 'National Association of REALTORS®',
-          url: 'https://www.nar.realtor',
-          sameAs: 'https://en.wikipedia.org/wiki/National_Association_of_Realtors',
-        },
-      },
-    ],
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://www.realestatewithshirin.com/#business',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.realestatewithshirin.com/images/shirin-logo.png',
-      width: 1254,
-      height: 1254,
-    },
-  },
+  author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
+  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
   datePublished: '2026-03-18T00:00:00-07:00',
   dateModified: '2026-03-18T00:00:00-07:00',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho',
-  },
-  isPartOf: {
-    '@type': 'CollectionPage',
-    '@id': 'https://www.realestatewithshirin.com/articles',
-    name: 'Articles',
-    url: 'https://www.realestatewithshirin.com/articles',
-  },
+  mainEntityOfPage: 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles' },
   url: 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho',
   keywords: [
     'how much do homes cost in Post Falls Idaho',

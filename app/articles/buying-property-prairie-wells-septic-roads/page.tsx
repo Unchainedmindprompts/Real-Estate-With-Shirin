@@ -32,54 +32,12 @@ const articleSchema = {
     width: 1672,
     height: 941,
   },
-  author: {
-    '@type': 'Person',
-    '@id': 'https://www.realestatewithshirin.com/#agent',
-    name: 'Shirin Abplanalp',
-    jobTitle: 'Licensed REALTOR®',
-    url: 'https://www.realestatewithshirin.com/about',
-    hasCredential: [
-      {
-        '@type': 'EducationalOccupationalCredential',
-        credentialCategory: 'Real Estate License',
-        identifier: '1371861',
-        recognizedBy: { '@type': 'Organization', name: 'Idaho Real Estate Commission' },
-      },
-      {
-        '@type': 'EducationalOccupationalCredential',
-        credentialCategory: 'Professional Designation',
-        name: 'Seniors Real Estate Specialist®',
-        abbreviation: 'SRES®',
-        recognizedBy: {
-          '@type': 'Organization',
-          name: 'National Association of REALTORS®',
-          url: 'https://www.nar.realtor',
-        },
-      },
-    ],
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://www.realestatewithshirin.com/#business',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.realestatewithshirin.com/images/shirin-logo.png',
-      width: 1254,
-      height: 1254,
-    },
-  },
-  isPartOf: {
-    '@type': 'CollectionPage',
-    '@id': 'https://www.realestatewithshirin.com/articles',
-    name: 'Northern Idaho Real Estate Articles',
-    url: 'https://www.realestatewithshirin.com/articles',
-  },
+  author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
+  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles' },
   datePublished: '2026-05-19T00:00:00-07:00',
   dateModified: '2026-05-19T00:00:00-07:00',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.realestatewithshirin.com/articles/buying-property-prairie-wells-septic-roads',
-  },
+  mainEntityOfPage: 'https://www.realestatewithshirin.com/articles/buying-property-prairie-wells-septic-roads',
   url: 'https://www.realestatewithshirin.com/articles/buying-property-prairie-wells-septic-roads',
   keywords: [
     'raw land Kootenai County',

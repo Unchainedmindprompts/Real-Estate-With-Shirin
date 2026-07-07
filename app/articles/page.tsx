@@ -11,9 +11,24 @@ export const metadata: Metadata = {
   },
 }
 
+const jsonLdCollection = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  '@id': 'https://www.realestatewithshirin.com/articles',
+  url: 'https://www.realestatewithshirin.com/articles',
+  name: 'Northern Idaho Real Estate Articles',
+  description:
+    'Real estate insights, market updates, and Northern Idaho lifestyle guides from Shirin Abplanalp, licensed realtor at Berkshire Hathaway HomeServices Jacklin Real Estate.',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/#website' },
+  about: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  inLanguage: 'en-US',
+}
+
 export default function ArticlesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCollection) }} />
       {/* Hero */}
       <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
         <div className="absolute inset-0 z-0">
