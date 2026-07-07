@@ -16,21 +16,7 @@ const jsonLd = {
   '@type': 'ContactPage',
   name: 'Contact Shirin Abplanalp',
   url: 'https://www.realestatewithshirin.com/contact',
-  mainEntity: {
-    '@type': 'RealEstateAgent',
-    '@id': 'https://www.realestatewithshirin.com/#business',
-    name: 'Shirin Abplanalp',
-    telephone: '+1-208-660-7468',
-    email: 'dreamlifeinidaho@gmail.com',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '1927 W. Riverstone Drive',
-      addressLocality: "Coeur d'Alene",
-      addressRegion: 'ID',
-      postalCode: '83814',
-      addressCountry: 'US',
-    },
-  },
+  mainEntity: { '@id': 'https://www.realestatewithshirin.com/#business' },
 }
 
 export default function ContactPage() {
