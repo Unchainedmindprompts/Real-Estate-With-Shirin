@@ -42,6 +42,18 @@ const areas = [
     href: '/areas/sandpoint-idaho',
     image: '/images/lake-life.jpeg',
   },
+  {
+    name: 'Kootenai County',
+    desc: "The five-city population core — Coeur d'Alene, Post Falls, Hayden, Rathdrum, Dalton Gardens — under one tax structure and one regional hospital.",
+    href: '/areas/kootenai-county',
+    image: '/images/hero-slide-2.webp',
+  },
+  {
+    name: 'Bonner County',
+    desc: 'Sandpoint, Priest Lake, Schweitzer, and the Selkirks — quieter, more rural, and a different set of buying considerations than Kootenai County.',
+    href: '/areas/bonner-county',
+    image: '/images/hero-slide-3.webp',
+  },
 ]
 
 export default function AreasPage() {

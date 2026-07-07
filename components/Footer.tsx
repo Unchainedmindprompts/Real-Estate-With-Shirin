@@ -103,6 +103,8 @@ export default function Footer() {
                   { label: 'Hayden', href: '/areas/hayden-idaho' },
                   { label: 'Rathdrum', href: '/areas/rathdrum-idaho' },
                   { label: 'Sandpoint', href: '/areas/sandpoint-idaho' },
+                  { label: 'Kootenai County', href: '/areas/kootenai-county' },
+                  { label: 'Bonner County', href: '/areas/bonner-county' },
                 ].map((link) => (
                   <li key={link.href}>
                     <Link

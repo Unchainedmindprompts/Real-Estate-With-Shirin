@@ -59,6 +59,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/areas/hayden-idaho`, lastModified: gitLastModified('app/areas/hayden-idaho/page.tsx'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/areas/rathdrum-idaho`, lastModified: gitLastModified('app/areas/rathdrum-idaho/page.tsx'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/areas/sandpoint-idaho`, lastModified: gitLastModified('app/areas/sandpoint-idaho/page.tsx'), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/areas/kootenai-county`, lastModified: gitLastModified('app/areas/kootenai-county/page.tsx'), changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/areas/bonner-county`, lastModified: gitLastModified('app/areas/bonner-county/page.tsx'), changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/relocating-to-north-idaho`, lastModified: pageLastModified('app/relocating-to-north-idaho/page.tsx'), changeFrequency: 'monthly', priority: 0.95 },
     { url: `${baseUrl}/articles`, lastModified: gitLastModified('app/articles/page.tsx'), changeFrequency: 'weekly', priority: 0.7 },
     ...articleEntries,
