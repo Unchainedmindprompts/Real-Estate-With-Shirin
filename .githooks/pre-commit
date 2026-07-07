@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Entity-graph gate. Blocks the commit if the schema audit fails.
+#
+# Runs the full production build, which triggers the postbuild `audit:schema`
+# script (scripts/audit-schema-ids.mjs) against the emitted HTML — this is
+# what search engines actually see, not source.
+#
+# The audit blocks the commit on:
+#   • duplicate @id definitions across pages
+#   • dangling @id references (referenced but never defined)
+#
+# Bypass in emergencies: `git commit --no-verify`.
+# Read `.claude/skills/schema-audit/SKILL.md` for the standard and how to fix.
+
+set -e
+
+echo "→ [pre-commit] Building + running entity-graph audit…"
+
+if ! npm run --silent build > /tmp/precommit-build.log 2>&1; then
+  echo ""
+  echo "✗ pre-commit BLOCKED — build failed or entity-graph audit failed."
+  echo ""
+  echo "=== Last 40 lines of build output ==="
+  tail -40 /tmp/precommit-build.log
+  echo ""
+  echo "Fix the issue above (or run \`npm run audit:schema\` after \`npm run build\` to see the audit report alone), then re-commit."
+  echo "Rules: .claude/skills/schema-audit/SKILL.md"
+  exit 1
+fi
+
+echo "✓ [pre-commit] gate passed (build clean, 0 duplicate @ids, 0 dangling refs)."
