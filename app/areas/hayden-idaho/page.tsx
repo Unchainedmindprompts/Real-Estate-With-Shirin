@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import { BASE_URL, BUSINESS_ID, WEBSITE_ID, CITY_SAMEAS } from '@/lib/schema-ids'
+
+const PAGE_URL = `${BASE_URL}/areas/hayden-idaho`
 
 export const metadata: Metadata = {
   title: 'Hayden, Idaho Real Estate & Neighborhood Guide',
@@ -11,23 +14,43 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLdAgent = {
+const jsonLdService = {
   '@context': 'https://schema.org',
-  '@type': 'RealEstateAgent',
-  '@id': 'https://www.realestatewithshirin.com/#business',
-  name: 'Shirin Abplanalp — Hayden Idaho Real Estate',
-  url: 'https://www.realestatewithshirin.com/areas/hayden-idaho',
-  areaServed: { '@type': 'City', name: 'Hayden', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-  founder: { '@type': 'Person', '@id': 'https://www.realestatewithshirin.com/#agent', name: 'Shirin Abplanalp' },
-  telephone: '+1-208-660-7468',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '1927 W. Riverstone Drive',
-    addressLocality: "Coeur d'Alene",
-    addressRegion: 'ID',
-    postalCode: '83814',
-    addressCountry: 'US',
+  '@type': 'Service',
+  '@id': `${PAGE_URL}#service`,
+  name: 'Real Estate Services — Hayden, Idaho',
+  serviceType: 'Real estate representation',
+  provider: { '@id': BUSINESS_ID },
+  areaServed: {
+    '@type': 'City',
+    name: 'Hayden',
+    sameAs: CITY_SAMEAS.hayden,
+    containedInPlace: { '@type': 'State', name: 'Idaho' },
   },
+}
+
+const jsonLdWebPage = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${PAGE_URL}#webpage`,
+  url: PAGE_URL,
+  name: 'Hayden, Idaho Real Estate & Neighborhood Guide',
+  isPartOf: { '@id': WEBSITE_ID },
+  about: { '@id': BUSINESS_ID },
+  mainEntity: { '@id': `${PAGE_URL}#service` },
+  breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` },
+  inLanguage: 'en-US',
+}
+
+const jsonLdBreadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': `${PAGE_URL}#breadcrumb`,
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Areas', item: `${BASE_URL}/areas` },
+    { '@type': 'ListItem', position: 3, name: 'Hayden, Idaho', item: PAGE_URL },
+  ],
 }
 
 const jsonLdFaq = {
@@ -92,7 +115,9 @@ const faqs = [
 export default function HaydenPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdAgent) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebPage) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
 
       {/* Hero */}
