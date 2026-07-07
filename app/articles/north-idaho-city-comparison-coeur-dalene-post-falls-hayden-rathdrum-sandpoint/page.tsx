@@ -33,34 +33,12 @@ const articleSchema = {
     width: 1672,
     height: 941,
   },
-  author: {
-    '@type': 'Person',
-    '@id': 'https://www.realestatewithshirin.com/#agent',
-    name: 'Shirin Abplanalp',
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://www.realestatewithshirin.com/#business',
-    name: 'Shirin Abplanalp — Real Estate With Shirin',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.realestatewithshirin.com/images/shirin-logo.png',
-      width: 1254,
-      height: 1254,
-    },
-  },
-  isPartOf: {
-    '@type': 'CollectionPage',
-    '@id': 'https://www.realestatewithshirin.com/articles',
-    name: 'Northern Idaho Real Estate Articles',
-    url: 'https://www.realestatewithshirin.com/articles',
-  },
+  author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
+  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles' },
   datePublished: '2026-05-23T00:00:00-07:00',
   dateModified: '2026-05-23T00:00:00-07:00',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.realestatewithshirin.com/articles/north-idaho-city-comparison-coeur-dalene-post-falls-hayden-rathdrum-sandpoint',
-  },
+  mainEntityOfPage: 'https://www.realestatewithshirin.com/articles/north-idaho-city-comparison-coeur-dalene-post-falls-hayden-rathdrum-sandpoint',
   url: 'https://www.realestatewithshirin.com/articles/north-idaho-city-comparison-coeur-dalene-post-falls-hayden-rathdrum-sandpoint',
   keywords: [
     "Coeur d'Alene vs Post Falls",

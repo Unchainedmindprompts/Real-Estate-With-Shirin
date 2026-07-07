@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import { PHONE, EMAIL, AGENT_IMAGE, BROKERAGE_PHONE } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: 'Shirin Abplanalp | North Idaho REALTOR® | BHHS Jacklin',
@@ -86,9 +87,9 @@ export default function HomePage() {
         'name': 'Shirin Abplanalp — Real Estate With Shirin',
         'description': "Shirin Abplanalp is a licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate with 11 years of experience and 100+ transactions closed. Serving buyers, sellers, and relocating families across Northern Idaho including Post Falls, Coeur d'Alene, Hayden, Rathdrum, and Sandpoint.",
         'url': 'https://www.realestatewithshirin.com',
-        'telephone': '+1-208-660-7468',
-        'email': 'dreamlifeinidaho@gmail.com',
-        'image': 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',
+        'telephone': PHONE,
+        'email': EMAIL,
+        'image': AGENT_IMAGE,
         'address': { '@type': 'PostalAddress', 'streetAddress': '1927 W. Riverstone Drive', 'addressLocality': "Coeur d'Alene", 'addressRegion': 'ID', 'postalCode': '83814', 'addressCountry': 'US' },
         'geo': { '@type': 'GeoCoordinates', 'latitude': 47.7028, 'longitude': -116.8093 },
         'founder': { '@id': 'https://www.realestatewithshirin.com/#agent' },
@@ -116,8 +117,8 @@ export default function HomePage() {
           'https://maps.google.com/?cid=2147151028860799721',
           'https://www.yelp.com/biz/real-estate-with-shirin-coeur-d-alene',
           'https://www.bbb.org/us/id/post-falls/profile/real-estate-agent/real-estate-with-shirin-1296-1000195359',
-          'https://www.zillow.com/profile/dreamlifeinidaho',
           'https://www.facebook.com/ShirinRealty',
+          'https://www.instagram.com/dreamlifeinidaho',
         ],
         'review': testimonials.filter((t) => !t.excludeFromSchema).map((t) => ({
           '@type': 'Review',
@@ -140,16 +141,16 @@ export default function HomePage() {
         '@id': 'https://www.realestatewithshirin.com/#agent',
         'name': 'Shirin Abplanalp',
         'jobTitle': 'Licensed REALTOR®',
-        'telephone': '+1-208-660-7468',
-        'email': 'dreamlifeinidaho@gmail.com',
+        'telephone': PHONE,
+        'email': EMAIL,
         'url': 'https://www.realestatewithshirin.com/about',
-        'image': 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',
+        'image': AGENT_IMAGE,
         'worksFor': {
           '@type': 'Organization',
           '@id': 'https://www.jacklinrealestate.com/#organization',
           'name': 'Berkshire Hathaway HomeServices Jacklin Real Estate',
           'url': 'https://www.jacklinrealestate.com/',
-          'telephone': '+1-208-758-7474',
+          'telephone': BROKERAGE_PHONE,
           'address': {
             '@type': 'PostalAddress',
             'streetAddress': '1927 W. Riverstone Drive',
@@ -187,20 +188,15 @@ export default function HomePage() {
           { '@type': 'EducationalOccupationalCredential', 'credentialCategory': 'Award', 'name': '5× Top Producer', 'recognizedBy': { '@type': 'Organization', 'name': 'Bend Premier Real Estate' } },
         ],
         'knowsAbout': ['Post Falls Idaho real estate', "Coeur d'Alene Idaho real estate", 'Northern Idaho relocation', 'Kootenai County homes for sale', 'Buyer representation', 'Seller representation', 'Relocation', 'North Idaho lifestyle', 'Out-of-state relocation real estate', 'Seniors Real Estate Specialist services', 'First-time home buyers Idaho', 'Kootenai County neighborhoods'],
-        'address': { '@type': 'PostalAddress', 'streetAddress': '1927 W. Riverstone Drive', 'addressLocality': "Coeur d'Alene", 'addressRegion': 'ID', 'postalCode': '83814', 'addressCountry': 'US' },
+        'affiliation': { '@id': 'https://www.realestatewithshirin.com/#business' },
         'sameAs': [
           'https://www.jacklinrealestate.com/agents/2081255/Shirin+Abplanalp',
           'https://www.zillow.com/profile/dreamlifeinidaho',
           'https://www.realtor.com/realestateagents/6852257644eab0a63cfd80af',
           'https://www.homes.com/real-estate-agents/shirin-abplanalp/j7j2jr7/',
-          'https://www.bbb.org/us/id/post-falls/profile/real-estate-agent/real-estate-with-shirin-1296-1000195359',
-          'https://www.yelp.com/biz/real-estate-with-shirin-coeur-d-alene',
-          'https://www.instagram.com/dreamlifeinidaho',
-          'https://www.facebook.com/ShirinRealty',
           'https://www.realty.com/a/Shirin-Abplanalp-1777925821520',
           'https://www.linkedin.com/in/shirinrealty/',
           'https://members.cdarealtors.com/directory/Details/shirin-abplanalp-4150054',
-          'https://maps.google.com/?cid=2147151028860799721',
         ],
       })}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({

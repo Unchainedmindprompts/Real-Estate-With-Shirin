@@ -32,59 +32,12 @@ const articleSchema = {
     width: 1536,
     height: 1024,
   },
-  author: {
-    '@type': 'Person',
-    '@id': 'https://www.realestatewithshirin.com/#agent',
-    name: 'Shirin Abplanalp',
-    jobTitle: 'Licensed REALTOR®',
-    url: 'https://www.realestatewithshirin.com/about',
-    hasCredential: [
-      {
-        '@type': 'EducationalOccupationalCredential',
-        credentialCategory: 'Real Estate License',
-        identifier: '1371861',
-        recognizedBy: {
-          '@type': 'GovernmentOrganization',
-          name: 'Idaho Real Estate Commission',
-          url: 'https://irec.idaho.gov',
-        },
-      },
-      {
-        '@type': 'EducationalOccupationalCredential',
-        credentialCategory: 'Professional Designation',
-        name: 'Seniors Real Estate Specialist®',
-        abbreviation: 'SRES®',
-        recognizedBy: {
-          '@type': 'Organization',
-          name: 'National Association of REALTORS®',
-          url: 'https://www.nar.realtor',
-          sameAs: 'https://en.wikipedia.org/wiki/National_Association_of_Realtors',
-        },
-      },
-    ],
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://www.realestatewithshirin.com/#business',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.realestatewithshirin.com/images/shirin-logo.png',
-      width: 1254,
-      height: 1254,
-    },
-  },
-  isPartOf: {
-    '@type': 'CollectionPage',
-    '@id': 'https://www.realestatewithshirin.com/articles',
-    name: 'Northern Idaho Real Estate Articles',
-    url: 'https://www.realestatewithshirin.com/articles',
-  },
+  author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
+  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles' },
   datePublished: '2026-05-20T00:00:00-07:00',
   dateModified: '2026-05-20T00:00:00-07:00',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.realestatewithshirin.com/articles/north-idaho-property-taxes-county-comparison',
-  },
+  mainEntityOfPage: 'https://www.realestatewithshirin.com/articles/north-idaho-property-taxes-county-comparison',
   url: 'https://www.realestatewithshirin.com/articles/north-idaho-property-taxes-county-comparison',
   keywords: [
     'North Idaho property taxes',

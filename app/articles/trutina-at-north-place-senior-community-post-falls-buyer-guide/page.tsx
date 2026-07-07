@@ -35,28 +35,11 @@ const articleSchema = {
     width: 1672,
     height: 941,
   },
-  author: {
-    '@type': 'Person',
-    '@id': 'https://www.realestatewithshirin.com/#agent',
-    name: 'Shirin Abplanalp',
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://www.realestatewithshirin.com/#business',
-    name: 'Shirin Abplanalp — Real Estate With Shirin',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.realestatewithshirin.com/images/shirin-logo.png',
-      width: 1254,
-      height: 1254,
-    },
-  },
+  author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
+  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
   datePublished: '2026-05-25T00:00:00-07:00',
   dateModified: '2026-05-25T00:00:00-07:00',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.realestatewithshirin.com/articles/trutina-at-north-place-senior-community-post-falls-buyer-guide',
-  },
+  mainEntityOfPage: 'https://www.realestatewithshirin.com/articles/trutina-at-north-place-senior-community-post-falls-buyer-guide',
   url: 'https://www.realestatewithshirin.com/articles/trutina-at-north-place-senior-community-post-falls-buyer-guide',
   articleSection: 'North Idaho Buyer Guides',
   keywords: [
@@ -79,12 +62,7 @@ const articleSchema = {
     geo: { '@type': 'GeoShape', box: '47.6500 -116.9800 47.7600 -116.8800' },
     containedInPlace: { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
   },
-  isPartOf: {
-    '@type': 'CollectionPage',
-    '@id': 'https://www.realestatewithshirin.com/articles',
-    name: 'Northern Idaho Real Estate Articles',
-    url: 'https://www.realestatewithshirin.com/articles',
-  },
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles' },
   about: [
     {
       '@type': 'Place',

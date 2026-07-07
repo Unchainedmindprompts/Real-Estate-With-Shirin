@@ -28,38 +28,11 @@ const articleSchema = {
     width: 1200,
     height: 800,
   },
-  author: {
-    '@type': 'Person',
-    '@id': 'https://www.realestatewithshirin.com/#agent',
-    name: 'Shirin Abplanalp',
-    jobTitle: 'Licensed REALTOR®',
-    url: 'https://www.realestatewithshirin.com/about',
-    hasCredential: {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'Real Estate License',
-      identifier: '1371861',
-      recognizedBy: {
-        '@type': 'Organization',
-        name: 'Idaho Real Estate Commission',
-      },
-    },
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://www.realestatewithshirin.com/#business',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.realestatewithshirin.com/images/shirin-abplanalp.jpg',
-      width: 600,
-      height: 600,
-    },
-  },
+  author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
+  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
   datePublished: '2026-03-23',
   dateModified: '2026-03-23',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.realestatewithshirin.com/blog/video-authority-layer-ai-discovery-2026',
-  },
+  mainEntityOfPage: 'https://www.realestatewithshirin.com/blog/video-authority-layer-ai-discovery-2026',
   url: 'https://www.realestatewithshirin.com/blog/video-authority-layer-ai-discovery-2026',
   keywords: [
     'AI real estate discovery 2026',
@@ -145,44 +118,12 @@ const breadcrumbSchema = {
   ],
 }
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': ['RealEstateAgent', 'LocalBusiness'],
-  '@id': 'https://www.realestatewithshirin.com/#business',
-  name: 'Shirin Abplanalp — Real Estate With Shirin',
-  url: 'https://www.realestatewithshirin.com',
-  telephone: '+1-208-660-7468',
-  email: 'dreamlifeinidaho@gmail.com',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '1927 W. Riverstone Drive',
-    addressLocality: "Coeur d'Alene",
-    addressRegion: 'ID',
-    postalCode: '83814',
-    addressCountry: 'US',
-  },
-  areaServed: [
-    { '@type': 'City', name: 'Post Falls', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: "Coeur d'Alene", containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'AdministrativeArea', name: 'Kootenai County' },
-    { '@type': 'AdministrativeArea', name: 'Northern Idaho' },
-  ],
-  founder: { '@id': 'https://www.realestatewithshirin.com/#agent' },
-  memberOf: {
-    '@type': 'Organization',
-    '@id': 'https://www.jacklinrealestate.com/#organization',
-    name: 'Berkshire Hathaway HomeServices Jacklin Real Estate',
-    url: 'https://www.jacklinrealestate.com/',
-  },
-}
-
 export default function VideoAuthorityLayerPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
       {/* Hero */}
       <section className="bg-[#F5EFE6] pt-36 pb-16">
