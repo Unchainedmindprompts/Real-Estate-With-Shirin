@@ -30,6 +30,18 @@ const areas = [
     href: '/areas/hayden-idaho',
     image: '/images/skiing.jpg',
   },
+  {
+    name: 'Rathdrum',
+    desc: "Small-town character, larger lots, and one of Northern Idaho's fastest-growing entry markets.",
+    href: '/areas/rathdrum-idaho',
+    image: '/images/golf.jpeg',
+  },
+  {
+    name: 'Sandpoint',
+    desc: 'A lakeside resort town on Lake Pend Oreille — Schweitzer skiing, an active arts scene, and a slower, more remote pace.',
+    href: '/areas/sandpoint-idaho',
+    image: '/images/lake-life.jpeg',
+  },
 ]
 
 export default function AreasPage() {
