@@ -12,6 +12,18 @@ export const WEBSITE_ID = `${BASE_URL}/#website`
 // The brokerage Organization — canonical @id is on jacklinrealestate.com.
 export const ORGANIZATION_ID = 'https://www.jacklinrealestate.com/#organization'
 
+// Contact facts — same real-world values live on both #agent (Person) and
+// #business (LocalBusiness) for a solo practitioner. Sourcing both nodes from
+// these constants prevents drift. Rule 3 governs sameAs (identity links);
+// telephone/email are contact facts, not identity links — legitimate to share.
+export const PHONE = '+1-208-660-7468'
+export const EMAIL = 'dreamlifeinidaho@gmail.com'
+export const AGENT_IMAGE = `${BASE_URL}/images/shirin-abplanalp.jpg`
+
+// Brokerage (BHHS Jacklin) canonical scalar values, when referenced via the
+// worksFor edge from #agent.
+export const BROKERAGE_PHONE = '+1-208-758-7474'
+
 // Wikipedia sameAs for the cities Shirin serves. Referenced from each area page's
 // areaServed City node so AI answer engines can resolve the entity.
 export const CITY_SAMEAS = {
