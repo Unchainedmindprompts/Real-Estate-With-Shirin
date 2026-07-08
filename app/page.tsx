@@ -652,7 +652,7 @@ export default function HomePage() {
                   padding: '32px',
                 }}
               >
-                <div className="flex gap-1 mb-5" aria-label={`${t.stars} out of 5 stars`}>
+                <div className="flex gap-1 mb-5" role="img" aria-label={`${t.stars} out of 5 stars`}>
                   {Array.from({ length: t.stars }).map((_, i) => (
                     <svg key={i} width="16" height="16" viewBox="0 0 16 16" fill="#C4842A" aria-hidden="true">
                       <path d="M8 1l1.85 3.75L14 5.35l-3 2.92.71 4.13L8 10.3l-3.71 2.1.71-4.13-3-2.92 4.15-.6z" />
