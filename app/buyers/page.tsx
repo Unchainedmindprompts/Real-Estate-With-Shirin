@@ -39,7 +39,18 @@ const jsonLdWebPage = {
   isPartOf: { '@id': 'https://www.realestatewithshirin.com/#website' },
   about: { '@id': 'https://www.realestatewithshirin.com/#business' },
   mainEntity: { '@id': 'https://www.realestatewithshirin.com/buyers#service' },
+  breadcrumb: { '@id': 'https://www.realestatewithshirin.com/buyers#breadcrumb' },
   inLanguage: 'en-US',
+}
+
+const jsonLdBreadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': 'https://www.realestatewithshirin.com/buyers#breadcrumb',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.realestatewithshirin.com' },
+    { '@type': 'ListItem', position: 2, name: 'Buy', item: 'https://www.realestatewithshirin.com/buyers' },
+  ],
 }
 
 const jsonLdFaq = {
@@ -119,6 +130,7 @@ export default function BuyersPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebPage) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
 
       {/* Hero */}

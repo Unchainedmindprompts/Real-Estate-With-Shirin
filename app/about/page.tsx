@@ -14,12 +14,19 @@ export const metadata: Metadata = {
 const jsonLdProfile = {
   '@context': 'https://schema.org',
   '@type': 'ProfilePage',
+  '@id': 'https://www.realestatewithshirin.com/about#webpage',
+  url: 'https://www.realestatewithshirin.com/about',
+  name: 'About Shirin Abplanalp | North Idaho REALTOR®',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/#website' },
   mainEntity: { '@id': 'https://www.realestatewithshirin.com/#agent' },
+  breadcrumb: { '@id': 'https://www.realestatewithshirin.com/about#breadcrumb' },
+  inLanguage: 'en-US',
 }
 
 const jsonLdBreadcrumb = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.realestatewithshirin.com/about#breadcrumb',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.realestatewithshirin.com' },
     { '@type': 'ListItem', position: 2, name: 'About', item: 'https://www.realestatewithshirin.com/about' },

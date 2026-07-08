@@ -29,6 +29,18 @@ const collectionSchema = {
     "Video library from Shirin Abplanalp — Licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate. North Idaho market commentary, buyer guides, and relocation insights.",
   isPartOf: { '@id': `${BASE_URL}/#website` },
   about: { '@id': `${BASE_URL}/#agent` },
+  breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` },
+  inLanguage: 'en-US',
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': `${PAGE_URL}#breadcrumb`,
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Videos', item: PAGE_URL },
+  ],
 }
 
 // One VideoObject per video — each anchored to its #<slug> section on this page.
@@ -58,6 +70,7 @@ export default function VideosPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {videoSchemas.map((s) => (
         <script
           key={s['@id']}

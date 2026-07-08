@@ -14,15 +14,30 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
+  '@id': 'https://www.realestatewithshirin.com/contact#webpage',
   name: 'Contact Shirin Abplanalp',
   url: 'https://www.realestatewithshirin.com/contact',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/#website' },
   mainEntity: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  breadcrumb: { '@id': 'https://www.realestatewithshirin.com/contact#breadcrumb' },
+  inLanguage: 'en-US',
+}
+
+const jsonLdBreadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': 'https://www.realestatewithshirin.com/contact#breadcrumb',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.realestatewithshirin.com' },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://www.realestatewithshirin.com/contact' },
+  ],
 }
 
 export default function ContactPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
 
       {/* Hero */}
       <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
