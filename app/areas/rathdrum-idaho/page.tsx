@@ -57,6 +57,7 @@ const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/areas/rathdrum-idaho/#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/areas/rathdrum-idaho#webpage' },
   mainEntity: [
     {
       '@type': 'Question',

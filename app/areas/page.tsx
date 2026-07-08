@@ -11,6 +11,43 @@ export const metadata: Metadata = {
   },
 }
 
+const AREA_SLUGS = [
+  'post-falls-idaho',
+  'coeur-dalene-idaho',
+  'hayden-idaho',
+  'rathdrum-idaho',
+  'sandpoint-idaho',
+  'kootenai-county',
+  'bonner-county',
+]
+
+const jsonLdCollection = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  '@id': 'https://www.realestatewithshirin.com/areas',
+  url: 'https://www.realestatewithshirin.com/areas',
+  name: 'North Idaho Communities',
+  description:
+    "Shirin Abplanalp serves buyers and sellers across Post Falls, Coeur d'Alene, Hayden, Rathdrum, Sandpoint, and Kootenai + Bonner counties, Idaho.",
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/#website' },
+  about: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  breadcrumb: { '@id': 'https://www.realestatewithshirin.com/areas#breadcrumb' },
+  inLanguage: 'en-US',
+  hasPart: AREA_SLUGS.map((slug) => ({
+    '@id': `https://www.realestatewithshirin.com/areas/${slug}#webpage`,
+  })),
+}
+
+const jsonLdBreadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': 'https://www.realestatewithshirin.com/areas#breadcrumb',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.realestatewithshirin.com' },
+    { '@type': 'ListItem', position: 2, name: 'Areas', item: 'https://www.realestatewithshirin.com/areas' },
+  ],
+}
+
 const areas = [
   {
     name: 'Post Falls',
@@ -59,6 +96,8 @@ const areas = [
 export default function AreasPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCollection) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       {/* Hero */}
       <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
         <div className="absolute inset-0 z-0">

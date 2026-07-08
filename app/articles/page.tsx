@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import fs from 'fs'
+import path from 'path'
+
+const ARTICLE_SLUGS = fs
+  .readdirSync(path.join(process.cwd(), 'app', 'articles'), { withFileTypes: true })
+  .filter((d) => d.isDirectory() && fs.existsSync(path.join(process.cwd(), 'app', 'articles', d.name, 'page.tsx')))
+  .map((d) => d.name)
 
 export const metadata: Metadata = {
   title: 'Northern Idaho Real Estate Articles | Shirin Abplanalp',
@@ -22,13 +29,28 @@ const jsonLdCollection = {
   isPartOf: { '@id': 'https://www.realestatewithshirin.com/#website' },
   about: { '@id': 'https://www.realestatewithshirin.com/#business' },
   publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  breadcrumb: { '@id': 'https://www.realestatewithshirin.com/articles#breadcrumb' },
   inLanguage: 'en-US',
+  hasPart: ARTICLE_SLUGS.map((slug) => ({
+    '@id': `https://www.realestatewithshirin.com/articles/${slug}#article`,
+  })),
+}
+
+const jsonLdBreadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': 'https://www.realestatewithshirin.com/articles#breadcrumb',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.realestatewithshirin.com' },
+    { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://www.realestatewithshirin.com/articles' },
+  ],
 }
 
 export default function ArticlesPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCollection) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       {/* Hero */}
       <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
         <div className="absolute inset-0 z-0">

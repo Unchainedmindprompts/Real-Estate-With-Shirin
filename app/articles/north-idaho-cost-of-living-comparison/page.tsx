@@ -93,6 +93,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/articles/north-idaho-cost-of-living-comparison#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/north-idaho-cost-of-living-comparison#article' },
   mainEntity: [
     {
       '@type': 'Question',

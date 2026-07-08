@@ -57,6 +57,7 @@ const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/areas/sandpoint-idaho/#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/areas/sandpoint-idaho#webpage' },
   mainEntity: [
     {
       '@type': 'Question',

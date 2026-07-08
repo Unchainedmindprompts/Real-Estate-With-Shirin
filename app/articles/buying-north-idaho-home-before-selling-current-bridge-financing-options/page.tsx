@@ -90,6 +90,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/articles/buying-north-idaho-home-before-selling-current-bridge-financing-options#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/buying-north-idaho-home-before-selling-current-bridge-financing-options#article' },
   mainEntity: [
     {
       '@type': 'Question',

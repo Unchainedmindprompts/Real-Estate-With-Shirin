@@ -127,6 +127,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/articles/spokane-vs-coeur-dalene-which-is-right-for-you#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/spokane-vs-coeur-dalene-which-is-right-for-you#article' },
   mainEntity: [
     {
       '@type': 'Question',

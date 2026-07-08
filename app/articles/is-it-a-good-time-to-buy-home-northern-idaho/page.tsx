@@ -96,6 +96,7 @@ const faqSchema = {
 '@context': 'https://schema.org',
 '@type': 'FAQPage',
 '@id': 'https://www.realestatewithshirin.com/articles/is-it-a-good-time-to-buy-home-northern-idaho#faq',
+isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/is-it-a-good-time-to-buy-home-northern-idaho#article' },
 mainEntity: [
     {
 '@type': 'Question',

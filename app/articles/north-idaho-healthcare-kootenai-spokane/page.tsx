@@ -166,6 +166,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/articles/north-idaho-healthcare-kootenai-spokane#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/north-idaho-healthcare-kootenai-spokane#article' },
   mainEntity: [
     {
       '@type': 'Question',

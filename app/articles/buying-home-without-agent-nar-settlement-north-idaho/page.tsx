@@ -120,6 +120,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/articles/buying-home-without-agent-nar-settlement-north-idaho#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/buying-home-without-agent-nar-settlement-north-idaho#article' },
   mainEntity: [
     {
       '@type': 'Question',

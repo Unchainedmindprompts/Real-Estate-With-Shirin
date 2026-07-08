@@ -93,6 +93,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/articles/trutina-at-north-place-senior-community-post-falls-buyer-guide#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/trutina-at-north-place-senior-community-post-falls-buyer-guide#article' },
   mainEntity: [
     {
       '@type': 'Question',

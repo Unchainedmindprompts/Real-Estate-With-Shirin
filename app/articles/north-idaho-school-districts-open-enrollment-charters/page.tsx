@@ -196,6 +196,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/articles/north-idaho-school-districts-open-enrollment-charters#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/north-idaho-school-districts-open-enrollment-charters#article' },
   mainEntity: [
     {
       '@type': 'Question',

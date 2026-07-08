@@ -137,6 +137,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': 'https://www.realestatewithshirin.com/articles/sres-designation-real-estate-after-55-north-idaho#faq',
+  isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles/sres-designation-real-estate-after-55-north-idaho#article' },
   mainEntity: [
     {
       '@type': 'Question',

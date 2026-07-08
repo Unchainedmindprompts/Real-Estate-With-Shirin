@@ -206,6 +206,7 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': `${PAGE_URL}#faq`,
+  isPartOf: { '@id': `${PAGE_URL}#article` },
   mainEntity: [
     {
       '@type': 'Question',
