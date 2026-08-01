@@ -39,7 +39,7 @@ const articleSchema = {
   author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
   publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
   datePublished: '2026-06-10T00:00:00-07:00',
-  dateModified: '2026-06-10T00:00:00-07:00',
+  dateModified: '2026-07-07T00:00:00-07:00',
   mainEntityOfPage: PAGE_URL,
   url: PAGE_URL,
   articleSection: 'North Idaho Buyer Guides',

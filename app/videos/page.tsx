@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   description:
     "North Idaho real estate videos from Shirin Abplanalp — short, honest takes on the market, the towns, and the buying process.",
   alternates: { canonical: PAGE_URL },
+  // Noindex while the library is empty — an indexable page with no content is a
+  // negative quality signal. REMOVE this block (and restore the /videos entry in
+  // app/sitemap.ts) as soon as `videos` in lib/videos.ts has real entries.
+  robots: { index: false, follow: true },
   openGraph: {
     title: 'Videos | Shirin Abplanalp',
     description: "North Idaho real estate videos from Shirin Abplanalp.",

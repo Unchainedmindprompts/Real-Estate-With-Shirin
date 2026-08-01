@@ -44,7 +44,7 @@ const webPageSchema = {
     url: `${BASE_URL}/images/north-idaho-relocation-guide.png`,
   },
   datePublished: '2026-05-31T00:00:00-07:00',
-  dateModified: '2026-05-31T00:00:00-07:00',
+  dateModified: '2026-07-07T00:00:00-07:00',
   author: { '@id': `${BASE_URL}/#agent` },
   publisher: { '@id': `${BASE_URL}/#business` },
 }
@@ -68,7 +68,7 @@ const articleSchema = {
   author: { '@id': `${BASE_URL}/#agent` },
   publisher: { '@id': `${BASE_URL}/#business` },
   datePublished: '2026-05-31T00:00:00-07:00',
-  dateModified: '2026-05-31T00:00:00-07:00',
+  dateModified: '2026-07-07T00:00:00-07:00',
   mainEntityOfPage: { '@id': `${PAGE_URL}#webpage` },
   inLanguage: 'en-US',
   articleSection: 'Relocation Guide',

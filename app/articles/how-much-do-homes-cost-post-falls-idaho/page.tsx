@@ -29,7 +29,7 @@ const articleSchema = {
   author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
   publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
   datePublished: '2026-03-18T00:00:00-07:00',
-  dateModified: '2026-03-18T00:00:00-07:00',
+  dateModified: '2026-07-07T00:00:00-07:00',
   mainEntityOfPage: 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho',
   isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles' },
   url: 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho',

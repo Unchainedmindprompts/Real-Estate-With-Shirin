@@ -38,7 +38,7 @@ const articleSchema = {
   author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
   publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
   datePublished: '2026-05-23T00:00:00-07:00',
-  dateModified: '2026-05-23T00:00:00-07:00',
+  dateModified: '2026-07-07T00:00:00-07:00',
   mainEntityOfPage: 'https://www.realestatewithshirin.com/articles/buying-north-idaho-home-before-selling-current-bridge-financing-options',
   url: 'https://www.realestatewithshirin.com/articles/buying-north-idaho-home-before-selling-current-bridge-financing-options',
   articleSection: 'North Idaho Buyer Guides',
