@@ -36,7 +36,7 @@ const articleSchema = {
   publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
   isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles' },
   datePublished: '2026-05-19T00:00:00-07:00',
-  dateModified: '2026-05-19T00:00:00-07:00',
+  dateModified: '2026-07-07T00:00:00-07:00',
   mainEntityOfPage: 'https://www.realestatewithshirin.com/articles/buying-property-prairie-wells-septic-roads',
   url: 'https://www.realestatewithshirin.com/articles/buying-property-prairie-wells-septic-roads',
   keywords: [

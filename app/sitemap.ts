@@ -64,7 +64,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/relocating-to-north-idaho`, lastModified: pageLastModified('app/relocating-to-north-idaho/page.tsx'), changeFrequency: 'monthly', priority: 0.95 },
     { url: `${baseUrl}/articles`, lastModified: gitLastModified('app/articles/page.tsx'), changeFrequency: 'weekly', priority: 0.7 },
     ...articleEntries,
-    { url: `${baseUrl}/videos`, lastModified: gitLastModified('app/videos/page.tsx'), changeFrequency: 'weekly', priority: 0.7 },
+    // /videos is intentionally omitted while lib/videos.ts is empty — the page is
+    // noindex'd until it has real content. Restore this entry (and drop the
+    // `robots` block in app/videos/page.tsx) once videos are published.
     { url: `${baseUrl}/contact`, lastModified: gitLastModified('app/contact/page.tsx'), changeFrequency: 'monthly', priority: 0.8 },
   ]
 }
