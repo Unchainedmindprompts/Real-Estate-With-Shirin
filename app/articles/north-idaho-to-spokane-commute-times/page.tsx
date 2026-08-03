@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Commute Times from North Idaho to Spokane: Town-by-Town Guide | Shirin Abplanalp',
+  title: "North Idaho to Spokane Commute Times (Town by Town)",
   description:
-    "Town-by-town North Idaho to Spokane commute times with ITD traffic data — Post Falls, Coeur d'Alene, Hayden, Rathdrum, Sandpoint — plus the I-90 SH-41 to US-95 congestion zone explained for buyers.",
+    "Post Falls is 25-30 minutes. Coeur d'Alene is 33, or 40 at peak. Sandpoint is 90+. Real drive times from every North Idaho town, with ITD traffic data.",
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/articles/north-idaho-to-spokane-commute-times',
   },
