@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Snowiest Cities in North Idaho: A Data-Backed Ranking | Shirin Abplanalp',
+  title: "Snowiest Cities in North Idaho: All 10 Towns Ranked",
   description:
-    'A data-backed ranking of the 10 snowiest towns in North Idaho, from Post Falls (40") to Priest Lake (120"), with buyer implications for each snow zone. Sources: NOAA NCEI, NWS Spokane, NRCS SNOTEL.',
+    "Post Falls averages 40 inches a year. Priest Lake gets 120. A town-by-town snowfall ranking of 10 North Idaho communities, and what each snow zone means.",
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/articles/snowiest-cities-north-idaho-ranking',
   },

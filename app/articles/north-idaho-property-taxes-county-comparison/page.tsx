@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Property Taxes in North Idaho: County Comparison 2025 | Shirin Abplanalp',
+  title: "North Idaho Property Taxes: All 5 Counties Compared",
   description:
-    'Official 2025 Idaho State Tax Commission property tax rates for Kootenai, Bonner, Boundary, Shoshone, and Benewah counties — plus the homeowner\'s exemption, Circuit Breaker, and Disabled Veterans programs explained for buyers.',
+    "Official Idaho State Tax Commission rates for Kootenai, Bonner, Boundary, Shoshone, and Benewah counties, plus the $125,000 homeowner's exemption.",
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/articles/north-idaho-property-taxes-county-comparison',
   },

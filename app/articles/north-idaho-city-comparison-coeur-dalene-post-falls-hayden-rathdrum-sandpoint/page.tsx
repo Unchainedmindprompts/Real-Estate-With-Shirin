@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Coeur d'Alene vs Post Falls vs Hayden vs Rathdrum vs Sandpoint | Shirin Abplanalp",
+  title: "North Idaho City Comparison: All 5 Towns, Honest Data",
   description:
-    'Five North Idaho cities, one honest comparison. Home prices, schools, commutes, snow, taxes, and the things people only tell you after closing. Updated May 2026.',
+    "Coeur d'Alene, Post Falls, Hayden, Rathdrum, and Sandpoint compared on prices, schools, commutes, snow, and taxes, with a side-by-side data table.",
   alternates: {
     canonical:
       'https://www.realestatewithshirin.com/articles/north-idaho-city-comparison-coeur-dalene-post-falls-hayden-rathdrum-sandpoint',
