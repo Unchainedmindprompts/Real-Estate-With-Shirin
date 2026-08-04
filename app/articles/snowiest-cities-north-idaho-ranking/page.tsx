@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: "Snowiest Cities in North Idaho: All 10 Towns Ranked",
@@ -296,7 +297,7 @@ export default function SnowestCitiesArticlePage() {
       <section className="bg-[#F5EFE6] pt-36 pb-16">
         <div className="max-w-5xl mx-auto px-6">
           <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">
-            <a href="/" className="hover:text-[#C4842A] transition-colors">Home</a>
+            <Link href="/" className="hover:text-[#C4842A] transition-colors">Home</Link>
             <span className="mx-2">·</span>
             <a href="/articles" className="hover:text-[#C4842A] transition-colors">Articles</a>
             <span className="mx-2">·</span>
@@ -334,17 +335,17 @@ export default function SnowestCitiesArticlePage() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center">
-              <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">40"</p>
+              <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">40&quot;</p>
               <p className="font-dm-sans text-xs text-[#9A9590] mt-1 uppercase tracking-wide">Post Falls avg</p>
               <p className="font-dm-sans text-xs text-[#6B7A8D] mt-0.5">Lightest in the region</p>
             </div>
             <div className="text-center">
-              <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">70.3"</p>
+              <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">70.3&quot;</p>
               <p className="font-dm-sans text-xs text-[#9A9590] mt-1 uppercase tracking-wide">Sandpoint avg</p>
               <p className="font-dm-sans text-xs text-[#6B7A8D] mt-0.5">NOAA climate normals</p>
             </div>
             <div className="text-center">
-              <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">~120"</p>
+              <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">~120&quot;</p>
               <p className="font-dm-sans text-xs text-[#9A9590] mt-1 uppercase tracking-wide">Priest Lake area avg</p>
               <p className="font-dm-sans text-xs text-[#6B7A8D] mt-0.5">Heaviest in ranking</p>
             </div>

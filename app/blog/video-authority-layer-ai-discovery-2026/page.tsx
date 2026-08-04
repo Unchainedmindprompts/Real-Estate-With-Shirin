@@ -108,8 +108,8 @@ const breadcrumbSchema = {
     {
       '@type': 'ListItem',
       position: 2,
-      name: 'Blog',
-      item: 'https://www.realestatewithshirin.com/blog',
+      name: 'Articles',
+      item: 'https://www.realestatewithshirin.com/articles',
     },
     {
       '@type': 'ListItem',
@@ -132,9 +132,9 @@ export default function VideoAuthorityLayerPage() {
         <div className="max-w-5xl mx-auto px-6">
           {/* Breadcrumbs */}
           <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">
-            <a href="/" className="hover:text-[#C4842A] transition-colors">Home</a>
+            <Link href="/" className="hover:text-[#C4842A] transition-colors">Home</Link>
             <span className="mx-2">·</span>
-            <a href="/blog" className="hover:text-[#C4842A] transition-colors">Blog</a>
+            <Link href="/articles" className="hover:text-[#C4842A] transition-colors">Articles</Link>
             <span className="mx-2">·</span>
             <span className="text-[#5C5650]">The Video Authority Layer</span>
           </nav>

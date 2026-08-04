@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 export const metadata: Metadata = {
 title: 'How to Find the Right Realtor in Post Falls, Idaho',
 description: 'Looking for a realtor in Post Falls Idaho? Here\'s what to look for, the questions to ask before you hire anyone, and why local knowledge matters more than you think.',
@@ -223,7 +224,7 @@ dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
 <div className="max-w-5xl mx-auto px-6">
 {/* Breadcrumbs */}
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans">
-<a href="/" className="hover:text-[#C4842A] transition-colors">Home</a>
+<Link href="/" className="hover:text-[#C4842A] transition-colors">Home</Link>
 <span className="mx-2">·</span>
 <a href="/articles" className="hover:text-[#C4842A] transition-colors">Articles</a>
 <span className="mx-2">·</span>
