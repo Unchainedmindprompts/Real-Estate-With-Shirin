@@ -1,0 +1,163 @@
+#!/usr/bin/env node
+// Kodecite Verification Harness — Phase 1A
+// Fast SOURCE-level validator. Runs in milliseconds against source files only.
+// It does NOT build, render, or crawl anything — that is what the production
+// build (`npm run build`) and the rendered schema audit
+// (scripts/audit-schema-ids.mjs) already do, and this script deliberately
+// does not duplicate them.
+//
+// FAILS (exit 1) on:
+//   1. A local /images/... reference whose file does not exist under public/
+//   2. A forbidden production placeholder:
+//        PASTE_  REPLACE_ME  YOUR_  example.com  localhost  127.0.0.1  blob:
+//
+// Node built-ins only. Reads files; never writes.
+
+import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs'
+import { join, relative, extname } from 'node:path'
+
+const ROOT = process.cwd()
+
+// Directories scanned. `data/` and `content/` are included if they exist so the
+// script keeps working as the content architecture grows.
+const SCAN_DIRS = ['app', 'components', 'lib', 'data', 'content']
+
+// Never scanned. `public` is excluded because it holds the assets themselves.
+const IGNORE_DIRS = new Set([
+  'node_modules', '.next', '.git', 'public', 'out', 'build', 'coverage', '.vercel',
+])
+
+// Text extensions only — keeps us off binaries.
+const TEXT_EXT = new Set([
+  '.ts', '.tsx', '.js', '.jsx', '.mjs', '.cjs',
+  '.json', '.md', '.mdx', '.css', '.txt', '.yml', '.yaml',
+])
+
+const PLACEHOLDERS = [
+  { token: 'PASTE_',      why: 'Unfilled paste-in placeholder left in source.' },
+  { token: 'REPLACE_ME',  why: 'Unfilled replacement placeholder left in source.' },
+  { token: 'YOUR_',       why: 'Unfilled template placeholder left in source.' },
+  { token: 'example.com', why: 'Example domain would ship as a real link or identifier.' },
+  { token: 'localhost',   why: 'Local-only host would break in production.' },
+  { token: '127.0.0.1',   why: 'Loopback address would break in production.' },
+  { token: 'blob:',       why: 'Blob URL is session-scoped and cannot resolve for another visitor or a crawler.' },
+]
+
+function walk(dir, acc = []) {
+  let entries
+  try {
+    entries = readdirSync(dir, { withFileTypes: true })
+  } catch {
+    return acc
+  }
+  for (const entry of entries) {
+    if (entry.name.startsWith('.')) continue
+    const full = join(dir, entry.name)
+    if (entry.isDirectory()) {
+      if (IGNORE_DIRS.has(entry.name)) continue
+      walk(full, acc)
+    } else if (TEXT_EXT.has(extname(entry.name))) {
+      acc.push(full)
+    }
+  }
+  return acc
+}
+
+const files = []
+for (const d of SCAN_DIRS) {
+  const p = join(ROOT, d)
+  if (existsSync(p) && statSync(p).isDirectory()) walk(p, files)
+}
+
+const findings = []
+
+// Matches /images/... inside quotes, template literals, or markdown links.
+// Stops at the closing quote, backtick, whitespace, or paren.
+const IMAGE_REF = /\/images\/[A-Za-z0-9._\-/]+\.[A-Za-z0-9]{2,5}/g
+
+// Strip comments before looking for image references. A path mentioned in a
+// comment (an example, a TODO, a "upload this file here" note) is not a live
+// reference and cannot 404 — flagging it trains people to ignore the validator.
+// Placeholder checks below still run against the RAW line, because a stray
+// localhost/blob: URL matters even when commented out.
+function stripComments(line) {
+  let out = line
+  // Block comments, including JSX {/* ... */}
+  out = out.replace(/\{?\/\*[\s\S]*?\*\/\}?/g, ' ')
+  // Whole-line // comment
+  if (/^\s*\/\//.test(out)) return ''
+  // Trailing // comment — but never treat the // in a URL scheme (://) as one
+  const m = out.match(/(^|[^:])\/\/(?!\/)/)
+  if (m && m.index !== undefined) out = out.slice(0, m.index + m[1].length)
+  return out
+}
+
+for (const file of files) {
+  const rel = relative(ROOT, file)
+  let text
+  try {
+    text = readFileSync(file, 'utf8')
+  } catch {
+    continue
+  }
+  // Skip anything that looks binary despite its extension.
+  if (text.includes('\0')) continue
+
+  const lines = text.split('\n')
+
+  lines.forEach((line, i) => {
+    const lineNo = i + 1
+
+    // --- Check 1: local image references resolve on disk ---
+    for (const match of stripComments(line).matchAll(IMAGE_REF)) {
+      const ref = match[0]
+      // Template-literal interpolation (e.g. `/images/${SLUG}.png`) cannot be
+      // resolved statically; report it rather than guessing or ignoring it.
+      if (ref.includes('${')) continue
+      if (!existsSync(join(ROOT, 'public', ref))) {
+        findings.push({
+          file: rel,
+          line: lineNo,
+          value: ref,
+          why: `Referenced image does not exist at public${ref}. It will 404 for visitors, in og:image previews, and in any schema image field.`,
+        })
+      }
+    }
+
+    // --- Check 2: forbidden production placeholders ---
+    for (const { token, why } of PLACEHOLDERS) {
+      let idx = line.indexOf(token)
+      while (idx !== -1) {
+        findings.push({
+          file: rel,
+          line: lineNo,
+          value: line.trim().slice(0, 160),
+          why: `Forbidden placeholder "${token}". ${why}`,
+        })
+        idx = line.indexOf(token, idx + token.length)
+      }
+    }
+  })
+}
+
+// Report
+console.log('')
+console.log('=== validate:source — Phase 1A source-asset validator ===')
+console.log(`  scanned ${files.length} text files under: ${SCAN_DIRS.filter(d => existsSync(join(ROOT, d))).join(', ')}`)
+console.log('')
+
+if (findings.length === 0) {
+  console.log('  ✅ no missing image references, no forbidden placeholders')
+  console.log('')
+  process.exit(0)
+}
+
+for (const f of findings) {
+  console.log(`  🔴 ${f.file}:${f.line}`)
+  console.log(`       value: ${f.value}`)
+  console.log(`       why:   ${f.why}`)
+  console.log('')
+}
+console.log(`  ${findings.length} problem${findings.length === 1 ? '' : 's'} found.`)
+console.log('')
+process.exit(1)

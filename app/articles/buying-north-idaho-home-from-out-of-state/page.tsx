@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 const SLUG = 'buying-north-idaho-home-from-out-of-state'
 const BASE_URL = 'https://www.realestatewithshirin.com'
 const PAGE_URL = `${BASE_URL}/articles/${SLUG}`
-const HERO_IMAGE = `${BASE_URL}/images/${SLUG}.png` // TODO: bespoke 16:9 hero (1600×900) pending upload
+const HERO_IMAGE = `${BASE_URL}/images/couple-craftsman-home.png`
 
 export const metadata: Metadata = {
   title: 'Buying a Home in North Idaho from Out of State: A Step-by-Step Guide',
@@ -34,8 +35,8 @@ const articleSchema = {
   image: {
     '@type': 'ImageObject',
     url: HERO_IMAGE,
-    width: 1600,
-    height: 900,
+    width: 1672,
+    height: 941,
   },
   author: { '@id': `${BASE_URL}/#agent` },
   publisher: { '@id': `${BASE_URL}/#business` },
@@ -204,7 +205,7 @@ export default function BuyingFromOutOfStatePage() {
       <section className="bg-[#F5EFE6] pt-36 pb-16">
         <div className="max-w-5xl mx-auto px-6">
           <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">
-            <a href="/" className="hover:text-[#C4842A] transition-colors">Home</a>
+            <Link href="/" className="hover:text-[#C4842A] transition-colors">Home</Link>
             <span className="mx-2">·</span>
             <a href="/articles" className="hover:text-[#C4842A] transition-colors">Articles</a>
             <span className="mx-2">·</span>
@@ -237,10 +238,10 @@ export default function BuyingFromOutOfStatePage() {
         </div>
       </section>
 
-      {/* Hero Image (placeholder — upload a 16:9 image, e.g. 1600×900, to /public/images/buying-north-idaho-home-from-out-of-state.png) */}
+      {/* Hero Image — shares the same asset as og:image and Article.image via HERO_IMAGE */}
       <img
-        src="/images/buying-north-idaho-home-from-out-of-state.png"
-        alt="Out-of-state buyers touring a North Idaho home by video before relocating"
+        src="/images/couple-craftsman-home.png"
+        alt="A couple outside a craftsman-style North Idaho home"
         className="w-full h-auto block"
       />
 
