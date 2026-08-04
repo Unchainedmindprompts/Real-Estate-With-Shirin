@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: "Cost of Living in North Idaho: Comparison with Spokane, Seattle & National Average | Shirin Abplanalp",
+  title: "North Idaho Cost of Living vs Spokane, Seattle & U.S.",
   description:
-    "Federal and industry 2024–2026 cost-of-living data for North Idaho — housing, utilities, insurance, groceries, gas, healthcare — compared to Spokane, Seattle, Boise, and the national average.",
+    "Coeur d'Alene sits 2.5% below the national average and 15.5 points below Seattle on federal BEA data. Housing, utilities, gas, and groceries compared.",
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/articles/north-idaho-cost-of-living-comparison',
   },

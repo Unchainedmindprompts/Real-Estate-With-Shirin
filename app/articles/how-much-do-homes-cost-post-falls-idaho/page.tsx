@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 export const metadata: Metadata = {
-title: "Post Falls, Idaho Home Prices in 2026 (What Buyers Pay)",
-description: "What does a home actually cost in Post Falls right now? A local REALTOR breaks down 2026 prices by home type, neighborhood, and budget — see the full picture.",
+title: "Post Falls Home Prices 2026: What Buyers Actually Pay",
+description:
+    "The median Post Falls home runs $521,138. What that buys, what $400K vs $600K gets you, and how it compares to Coeur d'Alene, from a local REALTOR.",
 alternates: {
 canonical: 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho',
   },
