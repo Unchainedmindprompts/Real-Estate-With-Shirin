@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 const SLUG = 'north-idaho-geographic-jackpot-coeur-dalene-post-falls-corridor'
 const BASE_URL = 'https://www.realestatewithshirin.com'
@@ -289,7 +290,7 @@ export default function GeographicJackpotPage() {
       <section className="bg-[#F5EFE6] pt-36 pb-16">
         <div className="max-w-5xl mx-auto px-6">
           <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">
-            <a href="/" className="hover:text-[#C4842A] transition-colors">Home</a>
+            <Link href="/" className="hover:text-[#C4842A] transition-colors">Home</Link>
             <span className="mx-2">·</span>
             <a href="/articles" className="hover:text-[#C4842A] transition-colors">Articles</a>
             <span className="mx-2">·</span>

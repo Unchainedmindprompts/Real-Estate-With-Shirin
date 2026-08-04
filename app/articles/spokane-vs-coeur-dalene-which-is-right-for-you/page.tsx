@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: "Spokane vs. Coeur d'Alene: Why So Many Buyers End Up on the Idaho Side | Shirin Abplanalp",
-  description: "Thinking about the Inland Northwest but not sure which side of the border to land on? An honest comparison of Spokane and Coeur d'Alene — home prices, taxes, lifestyle, and the geography most agents won't explain.",
+  title: "Spokane vs. Coeur d'Alene: An Honest 2026 Comparison",
+  description:
+    "Home prices, taxes, crime, and lifestyle compared, plus why so many Inland Northwest buyers end up on the Idaho side. From a REALTOR who made the move.",
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/articles/spokane-vs-coeur-dalene-which-is-right-for-you',
   },
@@ -246,7 +248,7 @@ export default function SpokaneVsCdaPage() {
       <section className="bg-[#F5EFE6] pt-36 pb-16">
         <div className="max-w-5xl mx-auto px-6">
           <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">
-            <a href="/" className="hover:text-[#C4842A] transition-colors">Home</a>
+            <Link href="/" className="hover:text-[#C4842A] transition-colors">Home</Link>
             <span className="mx-2">·</span>
             <a href="/articles" className="hover:text-[#C4842A] transition-colors">Articles</a>
             <span className="mx-2">·</span>

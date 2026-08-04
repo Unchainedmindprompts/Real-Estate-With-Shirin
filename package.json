@@ -2,11 +2,17 @@
   "name": "nextapp",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "postbuild": "node scripts/audit-schema-ids.mjs",
     "audit:schema": "node scripts/audit-schema-ids.mjs",
+    "typecheck": "tsc --noEmit",
+    "validate:source": "node scripts/validate-source-assets.mjs",
+    "check": "npm run typecheck && npm run lint && npm run validate:source",
     "start": "next start",
     "lint": "eslint",
     "prepare": "git config core.hooksPath .githooks 2>/dev/null || true"

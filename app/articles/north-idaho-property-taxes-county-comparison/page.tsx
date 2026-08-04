@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Property Taxes in North Idaho: County Comparison 2025 | Shirin Abplanalp',
+  title: "North Idaho Property Taxes: All 5 Counties Compared",
   description:
-    'Official 2025 Idaho State Tax Commission property tax rates for Kootenai, Bonner, Boundary, Shoshone, and Benewah counties — plus the homeowner\'s exemption, Circuit Breaker, and Disabled Veterans programs explained for buyers.',
+    "Official Idaho State Tax Commission rates for Kootenai, Bonner, Boundary, Shoshone, and Benewah counties, plus the $125,000 homeowner's exemption.",
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/articles/north-idaho-property-taxes-county-comparison',
   },
@@ -291,7 +292,7 @@ export default function PropertyTaxesArticlePage() {
       <section className="bg-[#F5EFE6] pt-36 pb-16">
         <div className="max-w-5xl mx-auto px-6">
           <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">
-            <a href="/" className="hover:text-[#C4842A] transition-colors">Home</a>
+            <Link href="/" className="hover:text-[#C4842A] transition-colors">Home</Link>
             <span className="mx-2">·</span>
             <a href="/articles" className="hover:text-[#C4842A] transition-colors">Articles</a>
             <span className="mx-2">·</span>

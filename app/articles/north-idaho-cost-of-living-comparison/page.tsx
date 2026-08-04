@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: "Cost of Living in North Idaho: Comparison with Spokane, Seattle & National Average | Shirin Abplanalp",
+  title: "North Idaho Cost of Living vs Spokane, Seattle & U.S.",
   description:
-    "Federal and industry 2024–2026 cost-of-living data for North Idaho — housing, utilities, insurance, groceries, gas, healthcare — compared to Spokane, Seattle, Boise, and the national average.",
+    "Coeur d'Alene sits 2.5% below the national average and 15.5 points below Seattle on federal BEA data. Housing, utilities, gas, and groceries compared.",
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/articles/north-idaho-cost-of-living-comparison',
   },
@@ -265,7 +266,7 @@ export default function CostOfLivingArticlePage() {
       <section className="bg-[#F5EFE6] pt-36 pb-16">
         <div className="max-w-5xl mx-auto px-6">
           <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">
-            <a href="/" className="hover:text-[#C4842A] transition-colors">Home</a>
+            <Link href="/" className="hover:text-[#C4842A] transition-colors">Home</Link>
             <span className="mx-2">·</span>
             <a href="/articles" className="hover:text-[#C4842A] transition-colors">Articles</a>
             <span className="mx-2">·</span>
@@ -800,7 +801,7 @@ export default function CostOfLivingArticlePage() {
                     <div className="border-t border-[#E8DDD0] pt-4">
                       <a href="/articles/north-idaho-healthcare-kootenai-spokane" className="block group">
                         <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Healthcare in Kootenai County: Regional Care vs. Spokane</p>
-                        <p className="font-dm-sans text-xs text-[#9A9590] mt-1">What's local and what requires a drive</p>
+                        <p className="font-dm-sans text-xs text-[#9A9590] mt-1">What&apos;s local and what requires a drive</p>
                       </a>
                     </div>
                     <div className="border-t border-[#E8DDD0] pt-4">
@@ -812,7 +813,7 @@ export default function CostOfLivingArticlePage() {
                     <div className="border-t border-[#E8DDD0] pt-4">
                       <a href="/articles/snowiest-cities-north-idaho-ranking" className="block group">
                         <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Snowiest Cities in North Idaho: A Data-Backed Ranking</p>
-                        <p className="font-dm-sans text-xs text-[#9A9590] mt-1">How winter affects each county's cost picture</p>
+                        <p className="font-dm-sans text-xs text-[#9A9590] mt-1">How winter affects each county&apos;s cost picture</p>
                       </a>
                     </div>
                   </div>
