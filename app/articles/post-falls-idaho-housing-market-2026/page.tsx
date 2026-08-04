@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 export const metadata: Metadata = {
 title: 'Post Falls, ID Housing Market 2026: Trends & Forecast',
 description: "Buyer's or seller's market in Post Falls for 2026? Inventory, days on market, and where prices are heading — from a REALTOR who works it daily.",
@@ -160,7 +161,7 @@ return (
 <div className="max-w-5xl mx-auto px-6">
 {/* Breadcrumbs */}
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">
-<a href="/" className="hover:text-[#C4842A] transition-colors">Home</a>
+<Link href="/" className="hover:text-[#C4842A] transition-colors">Home</Link>
 <span className="mx-2">·</span>
 <a href="/articles" className="hover:text-[#C4842A] transition-colors">Articles</a>
 <span className="mx-2">·</span>
