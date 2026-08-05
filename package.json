@@ -12,7 +12,11 @@
     "audit:schema": "node scripts/audit-schema-ids.mjs",
     "typecheck": "tsc --noEmit",
     "validate:source": "node scripts/validate-source-assets.mjs",
+    "validate:routes": "node scripts/validate-routes.mjs",
+    "validate:links": "node scripts/validate-links.mjs",
     "check": "npm run typecheck && npm run lint && npm run validate:source",
+    "verify:build": "npm run validate:routes && npm run validate:links",
+    "verify": "npm run check && npm run build && npm run verify:build",
     "start": "next start",
     "lint": "eslint",
     "prepare": "git config core.hooksPath .githooks 2>/dev/null || true"
