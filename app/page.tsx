@@ -130,7 +130,7 @@ export default function HomePage() {
         '@type': 'Organization',
         '@id': BUSINESS_ID,
         name: BRAND_NAME,
-        description: `${BRAND_NAME} is the customer-facing practice of licensed REALTOR® ${AGENT_NAME}, helping buyers, sellers, and relocating families in Post Falls, Coeur d'Alene, Hayden, Rathdrum, Sandpoint, and the surrounding North Idaho market. Luxury and commercial work are referrals through ${BROKERAGE_NAME}, not services this practice performs.`,
+        description: `${BRAND_NAME} is the customer-facing practice of licensed REALTOR® ${AGENT_NAME}, helping buyers, sellers, and relocating families in Post Falls, Coeur d'Alene, Hayden, Rathdrum, Sandpoint, and the surrounding North Idaho market.`,
         url: BASE_URL,
         telephone: PHONE,
         email: EMAIL,
@@ -172,7 +172,7 @@ export default function HomePage() {
         '@id': AGENT_ID,
         name: AGENT_NAME,
         jobTitle: 'Licensed REALTOR®',
-        description: `${AGENT_NAME} is a licensed REALTOR® and SRES® at ${BROKERAGE_NAME}. 11 years in real estate, 100+ transactions closed, 5× Top Producer. She relocated from Bend, Oregon to Post Falls and helps buyers, sellers, and relocating families across North Idaho. Through the brokerage she can refer departing clients to a BHHS agent in another city, luxury work to a Luxury Collection Specialist, and commercial work to Jacklin's commercial team. She does the residential buy, sell, and relocate work herself.`,
+        description: `${AGENT_NAME} is a licensed REALTOR® and SRES® at ${BROKERAGE_NAME}. 11 years in real estate, 100+ transactions closed, 5× Top Producer. She relocated from Bend, Oregon to Post Falls and helps buyers, sellers, and relocating families across North Idaho.`,
         telephone: PHONE,
         email: EMAIL,
         url: `${BASE_URL}/about`,
@@ -521,12 +521,6 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <p
-            className="max-w-3xl mx-auto mt-10 text-center"
-            style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7, color: '#9A9590' }}
-          >
-            Luxury or commercial work is a referral — a BHHS Luxury Collection Specialist or Jacklin&apos;s commercial team. Shirin does the residential buy, sell, and relocate work herself.
-          </p>
         </div>
       </section>
 
