@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import VideoPlayer from '@/components/VideoPlayer'
 import { videos } from '@/lib/videos'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
 
 const BASE_URL = 'https://www.realestatewithshirin.com'
 const PAGE_URL = `${BASE_URL}/videos`
@@ -64,9 +65,9 @@ const videoSchemas = videos.map((v) => ({
   url: `${PAGE_URL}#${v.slug}`,
   transcript: v.transcript,
   isPartOf: { '@id': `${PAGE_URL}#collection` },
-  creator: { '@id': `${BASE_URL}/#agent` },
-  author: { '@id': `${BASE_URL}/#agent` },
-  publisher: { '@id': `${BASE_URL}/#business` },
+  creator: AGENT_AUTHOR_STUB,
+  author: AGENT_AUTHOR_STUB,
+  publisher: BRAND_PUBLISHER_STUB,
   inLanguage: 'en-US',
 }))
 

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: "Why Do Home Buyers Feel Like They're Doing Their Realtor's Job? | Shirin Abplanalp",
@@ -33,8 +34,8 @@ const articleSchema = {
     width: 1672,
     height: 941,
   },
-  author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
-  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  author: AGENT_AUTHOR_STUB,
+  publisher: BRAND_PUBLISHER_STUB,
   isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles' },
   datePublished: '2026-05-15T00:00:00-07:00',
   dateModified: '2026-07-07T00:00:00-07:00',

@@ -3,6 +3,9 @@ import fs from 'fs'
 import path from 'path'
 import { execSync } from 'child_process'
 
+// Local copy — importing @/lib/schema-ids from sitemap.ts makes Turbopack
+// trace the whole project (fs/git in this file + identity module). The host
+// string is also asserted by validate:routes.
 const baseUrl = 'https://www.realestatewithshirin.com'
 
 function gitLastModified(relPath: string): string {

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: "Spokane vs. Coeur d'Alene: An Honest 2026 Comparison",
@@ -31,8 +32,8 @@ const articleSchema = {
     width: 1672,
     height: 941,
   },
-  author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
-  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  author: AGENT_AUTHOR_STUB,
+  publisher: BRAND_PUBLISHER_STUB,
   datePublished: '2026-05-03T00:00:00-07:00',
   dateModified: '2026-07-07T00:00:00-07:00',
   mainEntityOfPage: 'https://www.realestatewithshirin.com/articles/spokane-vs-coeur-dalene-which-is-right-for-you',
@@ -179,8 +180,8 @@ const priceDatasetSchema = {
   '@type': 'Dataset',
   name: 'Inland Northwest Median Home Price Comparison — 2025',
   description: 'Year-end 2025 median sale prices: Spokane County (WA) $406,000 · Post Falls (ID) $521,000 · Kootenai County (ID) $575,000 · Seattle metro (WA) $850,000.',
-  creator: { '@id': 'https://www.realestatewithshirin.com/#agent' },
-  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  creator: AGENT_AUTHOR_STUB,
+  publisher: BRAND_PUBLISHER_STUB,
   url: 'https://www.realestatewithshirin.com/articles/spokane-vs-coeur-dalene-which-is-right-for-you',
   temporalCoverage: '2025',
   variableMeasured: 'Median residential sale price (USD)',

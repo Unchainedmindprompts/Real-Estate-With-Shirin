@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
 export const metadata: Metadata = {
 title: "Post Falls Home Prices 2026: What Buyers Actually Pay",
 description:
@@ -28,8 +29,8 @@ const articleSchema = {
     width: 1122,
     height: 1402,
   },
-  author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
-  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  author: AGENT_AUTHOR_STUB,
+  publisher: BRAND_PUBLISHER_STUB,
   datePublished: '2026-03-18T00:00:00-07:00',
   dateModified: '2026-07-07T00:00:00-07:00',
   mainEntityOfPage: 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho',

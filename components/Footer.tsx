@@ -77,7 +77,7 @@ export default function Footer() {
                 {[
                   { label: 'Buyers', href: '/buyers' },
                   { label: 'Sellers', href: '/sellers' },
-                  { label: 'Relocation', href: '/about' },
+                  { label: 'Relocation', href: '/relocating-to-north-idaho' },
                 ].map((link) => (
                   <li key={link.href}>
                     <Link

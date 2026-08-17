@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: "North Idaho to Spokane Commute Times (Town by Town)",
@@ -32,8 +33,8 @@ const articleSchema = {
     width: 1874,
     height: 839,
   },
-  author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
-  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  author: AGENT_AUTHOR_STUB,
+  publisher: BRAND_PUBLISHER_STUB,
   isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles' },
   datePublished: '2026-05-21T00:00:00-07:00',
   dateModified: '2026-07-07T00:00:00-07:00',

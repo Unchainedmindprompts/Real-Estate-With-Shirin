@@ -1,12 +1,17 @@
 {
   "schema_version": "1.0",
   "name": "Real Estate With Shirin",
-  "description": "Licensed Northern Idaho REALTOR® and Seniors Real Estate Specialist (SRES®) Shirin Abplanalp at Berkshire Hathaway HomeServices Jacklin Real Estate, serving buyers, sellers, and relocating families across Post Falls, Coeur d'Alene, Hayden, Rathdrum, and Sandpoint, Idaho.",
+  "description": "Customer-facing practice of licensed Northern Idaho REALTOR® and Seniors Real Estate Specialist (SRES®) Shirin Abplanalp at Berkshire Hathaway HomeServices Jacklin Real Estate, serving buyers, sellers, and relocating families across Post Falls, Coeur d'Alene, Hayden, Rathdrum, and Sandpoint, Idaho.",
   "url": "https://www.realestatewithshirin.com",
   "contact": {
     "phone": "+1-208-660-7468",
     "email": "dreamlifeinidaho@gmail.com",
     "address": "1927 W. Riverstone Drive, Coeur d'Alene, ID 83814"
+  },
+  "brand": {
+    "name": "Real Estate With Shirin",
+    "type": "Organization",
+    "url": "https://www.realestatewithshirin.com"
   },
   "agent": {
     "name": "Shirin Abplanalp",
@@ -15,25 +20,29 @@
     "license": "Idaho Real Estate License #1371861",
     "brokerage": "Berkshire Hathaway HomeServices Jacklin Real Estate"
   },
+  "brokerage": {
+    "name": "Berkshire Hathaway HomeServices Jacklin Real Estate",
+    "url": "https://www.jacklinrealestate.com/"
+  },
   "service_area": {
     "primary": ["Post Falls, ID", "Coeur d'Alene, ID", "Hayden, ID", "Rathdrum, ID", "Sandpoint, ID", "Kootenai County, ID", "Bonner County, ID"],
-    "regional": ["Northern Idaho", "Inland Northwest"]
+    "regional": ["North Idaho", "Northern Idaho"]
   },
   "services": [
     {
       "name": "Buyer Representation",
       "url": "https://www.realestatewithshirin.com/buyers",
-      "description": "Expert buyer representation for home purchases in Northern Idaho"
+      "description": "Buyer representation for home purchases in Northern Idaho"
     },
     {
       "name": "Seller Representation",
       "url": "https://www.realestatewithshirin.com/sellers",
-      "description": "Strategic seller representation for home sales in Northern Idaho"
+      "description": "Seller representation for home sales in Northern Idaho"
     },
     {
-      "name": "Relocation Assistance",
-      "url": "https://www.realestatewithshirin.com/about",
-      "description": "Relocation guidance for families moving to Northern Idaho"
+      "name": "Relocation Guidance",
+      "url": "https://www.realestatewithshirin.com/relocating-to-north-idaho",
+      "description": "Relocation guidance for families moving to Northern Idaho. Contact is a request, not a confirmed appointment."
     },
     {
       "name": "Senior Real Estate (SRES®)",
@@ -53,6 +62,12 @@
       "title": "Selling Your Home in Northern Idaho",
       "url": "https://www.realestatewithshirin.com/sellers",
       "topic": "Seller representation and home sale process in Northern Idaho"
+    },
+    {
+      "type": "page",
+      "title": "Relocating to North Idaho",
+      "url": "https://www.realestatewithshirin.com/relocating-to-north-idaho",
+      "topic": "Complete local guide for out-of-state buyers relocating to North Idaho"
     },
     {
       "type": "page",

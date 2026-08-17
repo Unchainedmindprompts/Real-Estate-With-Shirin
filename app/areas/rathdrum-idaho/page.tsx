@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { BASE_URL, BUSINESS_ID, WEBSITE_ID, CITY_SAMEAS } from '@/lib/schema-ids'
+import { BASE_URL, BUSINESS_ID, WEBSITE_ID, PLACE } from '@/lib/schema-ids'
 
 const PAGE_URL = `${BASE_URL}/areas/rathdrum-idaho`
 
@@ -21,12 +21,7 @@ const jsonLdService = {
   name: 'Real Estate Services — Rathdrum, Idaho',
   serviceType: 'Real estate representation',
   provider: { '@id': BUSINESS_ID },
-  areaServed: {
-    '@type': 'City',
-    name: 'Rathdrum',
-    sameAs: CITY_SAMEAS.rathdrum,
-    containedInPlace: { '@type': 'State', name: 'Idaho' },
-  },
+  areaServed: PLACE.rathdrum,
 }
 
 const jsonLdWebPage = {

@@ -1,63 +1,59 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import { BASE_URL, BUSINESS_ID, WEBSITE_ID, MARKET_AREA_SERVED } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: 'Selling Your North Idaho Home | Shirin Abplanalp, REALTOR®',
   description:
     "Selling a home in Post Falls, Coeur d'Alene, or anywhere in North Idaho? Strategic pricing, professional presentation, and an honest read on the market.",
   alternates: {
-    canonical: 'https://www.realestatewithshirin.com/sellers',
+    canonical: `${BASE_URL}/sellers`,
   },
 }
 
 const jsonLdService = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  '@id': 'https://www.realestatewithshirin.com/sellers#service',
+  '@id': `${BASE_URL}/sellers#service`,
   name: 'Seller Representation — Northern Idaho Real Estate',
   description:
-    "Expert seller representation for home sales in Post Falls, Coeur d'Alene, Hayden, and Kootenai County Idaho.",
-  provider: { '@id': 'https://www.realestatewithshirin.com/#business' },
-  areaServed: [
-    { '@type': 'City', name: 'Post Falls' },
-    { '@type': 'City', name: "Coeur d'Alene" },
-    { '@type': 'City', name: 'Hayden' },
-    { '@type': 'AdministrativeArea', name: 'Kootenai County' },
-  ],
+    "Seller representation for home sales in Post Falls, Coeur d'Alene, Hayden, Rathdrum, Sandpoint, and the surrounding North Idaho market.",
+  provider: { '@id': BUSINESS_ID },
+  areaServed: MARKET_AREA_SERVED,
   serviceType: 'Real Estate Seller Representation',
 }
 
 const jsonLdWebPage = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': 'https://www.realestatewithshirin.com/sellers#webpage',
-  url: 'https://www.realestatewithshirin.com/sellers',
+  '@id': `${BASE_URL}/sellers#webpage`,
+  url: `${BASE_URL}/sellers`,
   name: 'Selling Your North Idaho Home | Shirin Abplanalp, REALTOR®',
   description:
     "Selling a home in Post Falls, Coeur d'Alene, or anywhere in North Idaho? Strategic pricing, professional presentation, and an honest read on the market.",
-  isPartOf: { '@id': 'https://www.realestatewithshirin.com/#website' },
-  about: { '@id': 'https://www.realestatewithshirin.com/#business' },
-  mainEntity: { '@id': 'https://www.realestatewithshirin.com/sellers#service' },
-  breadcrumb: { '@id': 'https://www.realestatewithshirin.com/sellers#breadcrumb' },
+  isPartOf: { '@id': WEBSITE_ID },
+  about: { '@id': BUSINESS_ID },
+  mainEntity: { '@id': `${BASE_URL}/sellers#service` },
+  breadcrumb: { '@id': `${BASE_URL}/sellers#breadcrumb` },
   inLanguage: 'en-US',
 }
 
 const jsonLdBreadcrumb = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  '@id': 'https://www.realestatewithshirin.com/sellers#breadcrumb',
+  '@id': `${BASE_URL}/sellers#breadcrumb`,
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.realestatewithshirin.com' },
-    { '@type': 'ListItem', position: 2, name: 'Sell', item: 'https://www.realestatewithshirin.com/sellers' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Sell', item: `${BASE_URL}/sellers` },
   ],
 }
 
 const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  '@id': 'https://www.realestatewithshirin.com/sellers/#faq',
-  isPartOf: { '@id': 'https://www.realestatewithshirin.com/sellers#webpage' },
+  '@id': `${BASE_URL}/sellers/#faq`,
+  isPartOf: { '@id': `${BASE_URL}/sellers#webpage` },
   mainEntity: [
     {
       '@type': 'Question',

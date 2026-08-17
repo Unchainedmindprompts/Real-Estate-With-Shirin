@@ -1,5 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import {
+  BASE_URL,
+  WEBSITE_ID,
+  AGENT_AUTHOR_STUB,
+  BRAND_PUBLISHER_STUB,
+  placeStub,
+} from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: 'Relocating to North Idaho: The Complete Local Guide for Out-of-State Buyers',
@@ -20,7 +27,6 @@ export const metadata: Metadata = {
   },
 }
 
-const BASE_URL = 'https://www.realestatewithshirin.com'
 const PAGE_URL = `${BASE_URL}/relocating-to-north-idaho`
 
 const webPageSchema = {
@@ -32,13 +38,8 @@ const webPageSchema = {
   description:
     "A complete relocation guide for out-of-state buyers moving to North Idaho — covering costs, taxes, neighborhoods, schools, weather, commutes, and the buying process. Written by licensed REALTOR® Shirin Abplanalp of Post Falls, Idaho.",
   inLanguage: 'en-US',
-  isPartOf: { '@id': `${BASE_URL}/#website` },
-  about: {
-    '@type': 'Place',
-    name: 'North Idaho',
-    alternateName: 'Northern Idaho',
-    sameAs: 'https://en.wikipedia.org/wiki/Idaho_Panhandle',
-  },
+  isPartOf: { '@id': WEBSITE_ID },
+  about: placeStub('northIdaho'),
   breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` },
   primaryImageOfPage: {
     '@type': 'ImageObject',
@@ -46,8 +47,8 @@ const webPageSchema = {
   },
   datePublished: '2026-05-31T00:00:00-07:00',
   dateModified: '2026-07-07T00:00:00-07:00',
-  author: { '@id': `${BASE_URL}/#agent` },
-  publisher: { '@id': `${BASE_URL}/#business` },
+  author: AGENT_AUTHOR_STUB,
+  publisher: BRAND_PUBLISHER_STUB,
 }
 
 const articleSchema = {
@@ -66,14 +67,14 @@ const articleSchema = {
     width: 1536,
     height: 1024,
   },
-  author: { '@id': `${BASE_URL}/#agent` },
-  publisher: { '@id': `${BASE_URL}/#business` },
+  author: AGENT_AUTHOR_STUB,
+  publisher: BRAND_PUBLISHER_STUB,
   datePublished: '2026-05-31T00:00:00-07:00',
   dateModified: '2026-07-07T00:00:00-07:00',
   mainEntityOfPage: { '@id': `${PAGE_URL}#webpage` },
   inLanguage: 'en-US',
   articleSection: 'Relocation Guide',
-  isPartOf: { '@id': `${BASE_URL}/#website` },
+  isPartOf: { '@id': WEBSITE_ID },
   keywords: [
     'relocating to North Idaho',
     'moving to Coeur d’Alene',

@@ -1,35 +1,36 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import { BASE_URL, WEBSITE_ID, AGENT_AUTHOR_STUB } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: 'About Shirin Abplanalp | North Idaho REALTOR®',
   description:
     "About Shirin Abplanalp, licensed North Idaho REALTOR® at BHHS Jacklin Real Estate. 11 years in real estate, 100+ transactions closed, 5× Top Producer.",
   alternates: {
-    canonical: 'https://www.realestatewithshirin.com/about',
+    canonical: `${BASE_URL}/about`,
   },
 }
 
 const jsonLdProfile = {
   '@context': 'https://schema.org',
   '@type': 'ProfilePage',
-  '@id': 'https://www.realestatewithshirin.com/about#webpage',
-  url: 'https://www.realestatewithshirin.com/about',
+  '@id': `${BASE_URL}/about#webpage`,
+  url: `${BASE_URL}/about`,
   name: 'About Shirin Abplanalp | North Idaho REALTOR®',
-  isPartOf: { '@id': 'https://www.realestatewithshirin.com/#website' },
-  mainEntity: { '@id': 'https://www.realestatewithshirin.com/#agent' },
-  breadcrumb: { '@id': 'https://www.realestatewithshirin.com/about#breadcrumb' },
+  isPartOf: { '@id': WEBSITE_ID },
+  mainEntity: AGENT_AUTHOR_STUB,
+  breadcrumb: { '@id': `${BASE_URL}/about#breadcrumb` },
   inLanguage: 'en-US',
 }
 
 const jsonLdBreadcrumb = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  '@id': 'https://www.realestatewithshirin.com/about#breadcrumb',
+  '@id': `${BASE_URL}/about#breadcrumb`,
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.realestatewithshirin.com' },
-    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://www.realestatewithshirin.com/about' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
+    { '@type': 'ListItem', position: 2, name: 'About', item: `${BASE_URL}/about` },
   ],
 }
 

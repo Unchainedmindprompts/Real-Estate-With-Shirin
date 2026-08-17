@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { BASE_URL } from '@/lib/schema-ids'
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -15,6 +16,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'cohere-ai', allow: '/' },
       { userAgent: 'YouBot', allow: '/' },
     ],
-    sitemap: 'https://www.realestatewithshirin.com/sitemap.xml',
+    sitemap: `${BASE_URL}/sitemap.xml`,
   }
 }

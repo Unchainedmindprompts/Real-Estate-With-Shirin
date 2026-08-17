@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
 
 const PAGE_URL = 'https://www.realestatewithshirin.com/articles/is-it-a-good-time-to-buy-home-northern-idaho'
 
@@ -82,8 +83,8 @@ const articleSchema = {
     width: 1122,
     height: 1402,
   },
-  author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
-  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  author: AGENT_AUTHOR_STUB,
+  publisher: BRAND_PUBLISHER_STUB,
   datePublished: '2026-03-18T00:00:00-07:00',
   dateModified: '2026-08-06T00:00:00-07:00',
   mainEntityOfPage: PAGE_URL,

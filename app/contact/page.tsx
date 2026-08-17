@@ -1,35 +1,36 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import ContactForm from '@/components/ContactForm'
+import { BASE_URL, WEBSITE_ID, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: 'Contact Shirin Abplanalp | Northern Idaho Realtor · Berkshire Hathaway HomeServices Jacklin Real Estate',
   description:
     "Get in touch with Shirin Abplanalp, licensed Northern Idaho realtor at Berkshire Hathaway HomeServices Jacklin Real Estate. Serving Post Falls, Coeur d'Alene, Hayden, and Kootenai County.",
   alternates: {
-    canonical: 'https://www.realestatewithshirin.com/contact',
+    canonical: `${BASE_URL}/contact`,
   },
 }
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
-  '@id': 'https://www.realestatewithshirin.com/contact#webpage',
+  '@id': `${BASE_URL}/contact#webpage`,
   name: 'Contact Shirin Abplanalp',
-  url: 'https://www.realestatewithshirin.com/contact',
-  isPartOf: { '@id': 'https://www.realestatewithshirin.com/#website' },
-  mainEntity: { '@id': 'https://www.realestatewithshirin.com/#business' },
-  breadcrumb: { '@id': 'https://www.realestatewithshirin.com/contact#breadcrumb' },
+  url: `${BASE_URL}/contact`,
+  isPartOf: { '@id': WEBSITE_ID },
+  mainEntity: BRAND_PUBLISHER_STUB,
+  breadcrumb: { '@id': `${BASE_URL}/contact#breadcrumb` },
   inLanguage: 'en-US',
 }
 
 const jsonLdBreadcrumb = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  '@id': 'https://www.realestatewithshirin.com/contact#breadcrumb',
+  '@id': `${BASE_URL}/contact#breadcrumb`,
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.realestatewithshirin.com' },
-    { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://www.realestatewithshirin.com/contact' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: `${BASE_URL}/contact` },
   ],
 }
 

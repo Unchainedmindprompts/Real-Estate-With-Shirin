@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: 'The Video Authority Layer: How AI Discovery Is Changing Real Estate in 2026 | Shirin Abplanalp',
@@ -29,8 +30,8 @@ const articleSchema = {
     width: 1200,
     height: 800,
   },
-  author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
-  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  author: AGENT_AUTHOR_STUB,
+  publisher: BRAND_PUBLISHER_STUB,
   datePublished: '2026-03-23',
   dateModified: '2026-03-23',
   mainEntityOfPage: 'https://www.realestatewithshirin.com/blog/video-authority-layer-ai-discovery-2026',
