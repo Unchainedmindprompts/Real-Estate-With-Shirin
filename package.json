@@ -8,8 +8,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "node scripts/audit-schema-ids.mjs",
+    "postbuild": "node scripts/audit-schema-ids.mjs && node scripts/audit-graph-invariants.mjs",
     "audit:schema": "node scripts/audit-schema-ids.mjs",
+    "audit:graph": "node scripts/audit-graph-invariants.mjs",
     "typecheck": "tsc --noEmit",
     "validate:source": "node scripts/validate-source-assets.mjs",
     "validate:routes": "node scripts/validate-routes.mjs",
