@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import fs from 'fs'
 import path from 'path'
+import { BASE_URL, BUSINESS_ID, WEBSITE_ID, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
 
 const ARTICLE_SLUGS = fs
   .readdirSync(path.join(process.cwd(), 'app', 'articles'), { withFileTypes: true })
@@ -14,35 +15,35 @@ export const metadata: Metadata = {
   description:
     'Real estate insights, market updates, and Northern Idaho lifestyle guides from Shirin Abplanalp, licensed realtor at Berkshire Hathaway HomeServices Jacklin Real Estate.',
   alternates: {
-    canonical: 'https://www.realestatewithshirin.com/articles',
+    canonical: `${BASE_URL}/articles`,
   },
 }
 
 const jsonLdCollection = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  '@id': 'https://www.realestatewithshirin.com/articles',
-  url: 'https://www.realestatewithshirin.com/articles',
+  '@id': `${BASE_URL}/articles`,
+  url: `${BASE_URL}/articles`,
   name: 'Northern Idaho Real Estate Articles',
   description:
     'Real estate insights, market updates, and Northern Idaho lifestyle guides from Shirin Abplanalp, licensed realtor at Berkshire Hathaway HomeServices Jacklin Real Estate.',
-  isPartOf: { '@id': 'https://www.realestatewithshirin.com/#website' },
-  about: { '@id': 'https://www.realestatewithshirin.com/#business' },
-  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
-  breadcrumb: { '@id': 'https://www.realestatewithshirin.com/articles#breadcrumb' },
+  isPartOf: { '@id': WEBSITE_ID },
+  about: { '@id': BUSINESS_ID },
+  publisher: BRAND_PUBLISHER_STUB,
+  breadcrumb: { '@id': `${BASE_URL}/articles#breadcrumb` },
   inLanguage: 'en-US',
   hasPart: ARTICLE_SLUGS.map((slug) => ({
-    '@id': `https://www.realestatewithshirin.com/articles/${slug}#article`,
+    '@id': `${BASE_URL}/articles/${slug}#article`,
   })),
 }
 
 const jsonLdBreadcrumb = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  '@id': 'https://www.realestatewithshirin.com/articles#breadcrumb',
+  '@id': `${BASE_URL}/articles#breadcrumb`,
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.realestatewithshirin.com' },
-    { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://www.realestatewithshirin.com/articles' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Articles', item: `${BASE_URL}/articles` },
   ],
 }
 

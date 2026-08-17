@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { BASE_URL, BUSINESS_ID, WEBSITE_ID, COUNTY_SAMEAS } from '@/lib/schema-ids'
+import { BASE_URL, BUSINESS_ID, WEBSITE_ID, PLACE } from '@/lib/schema-ids'
 
 const PAGE_URL = `${BASE_URL}/areas/bonner-county`
 
@@ -21,12 +21,7 @@ const jsonLdService = {
   name: 'Real Estate Services — Bonner County, Idaho',
   serviceType: 'Real estate representation',
   provider: { '@id': BUSINESS_ID },
-  areaServed: {
-    '@type': 'AdministrativeArea',
-    name: 'Bonner County',
-    sameAs: COUNTY_SAMEAS.bonner,
-    containedInPlace: { '@type': 'State', name: 'Idaho' },
-  },
+  areaServed: PLACE.bonner,
 }
 
 const jsonLdWebPage = {

@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import { BASE_URL, BUSINESS_ID, WEBSITE_ID } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: "Northern Idaho Real Estate Areas | Post Falls, Coeur d'Alene, Hayden",
   description:
     "Shirin Abplanalp serves buyers and sellers across Post Falls, Coeur d'Alene, Hayden, and Kootenai County Idaho.",
   alternates: {
-    canonical: 'https://www.realestatewithshirin.com/areas',
+    canonical: `${BASE_URL}/areas`,
   },
 }
 
@@ -24,27 +25,27 @@ const AREA_SLUGS = [
 const jsonLdCollection = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  '@id': 'https://www.realestatewithshirin.com/areas',
-  url: 'https://www.realestatewithshirin.com/areas',
+  '@id': `${BASE_URL}/areas`,
+  url: `${BASE_URL}/areas`,
   name: 'North Idaho Communities',
   description:
     "Shirin Abplanalp serves buyers and sellers across Post Falls, Coeur d'Alene, Hayden, Rathdrum, Sandpoint, and Kootenai + Bonner counties, Idaho.",
-  isPartOf: { '@id': 'https://www.realestatewithshirin.com/#website' },
-  about: { '@id': 'https://www.realestatewithshirin.com/#business' },
-  breadcrumb: { '@id': 'https://www.realestatewithshirin.com/areas#breadcrumb' },
+  isPartOf: { '@id': WEBSITE_ID },
+  about: { '@id': BUSINESS_ID },
+  breadcrumb: { '@id': `${BASE_URL}/areas#breadcrumb` },
   inLanguage: 'en-US',
   hasPart: AREA_SLUGS.map((slug) => ({
-    '@id': `https://www.realestatewithshirin.com/areas/${slug}#webpage`,
+    '@id': `${BASE_URL}/areas/${slug}#webpage`,
   })),
 }
 
 const jsonLdBreadcrumb = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  '@id': 'https://www.realestatewithshirin.com/areas#breadcrumb',
+  '@id': `${BASE_URL}/areas#breadcrumb`,
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.realestatewithshirin.com' },
-    { '@type': 'ListItem', position: 2, name: 'Areas', item: 'https://www.realestatewithshirin.com/areas' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Areas', item: `${BASE_URL}/areas` },
   ],
 }
 

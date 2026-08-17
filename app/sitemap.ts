@@ -3,6 +3,9 @@ import fs from 'fs'
 import path from 'path'
 import { execSync } from 'child_process'
 
+// Local copy — importing @/lib/schema-ids from sitemap.ts makes Turbopack
+// trace the whole project (fs/git in this file + identity module). The host
+// string is also asserted by validate:routes.
 const baseUrl = 'https://www.realestatewithshirin.com'
 
 function gitLastModified(relPath: string): string {
@@ -64,9 +67,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/relocating-to-north-idaho`, lastModified: pageLastModified('app/relocating-to-north-idaho/page.tsx'), changeFrequency: 'monthly', priority: 0.95 },
     { url: `${baseUrl}/articles`, lastModified: gitLastModified('app/articles/page.tsx'), changeFrequency: 'weekly', priority: 0.7 },
     ...articleEntries,
-    // Hand-listed: articleEntries only scans app/articles, and this indexable
-    // page is the sole route under app/blog.
-    { url: `${baseUrl}/blog/video-authority-layer-ai-discovery-2026`, lastModified: pageLastModified('app/blog/video-authority-layer-ai-discovery-2026/page.tsx'), changeFrequency: 'monthly', priority: 0.8 },
+    // /blog/video-authority-layer-ai-discovery-2026 is omitted while /videos is
+    // empty — the post is noindex'd so crawlers are not told a video library
+    // exists. Restore this entry (and drop the robots block on that page) once
+    // real videos are published.
     // /videos is intentionally omitted while lib/videos.ts is empty — the page is
     // noindex'd until it has real content. Restore this entry (and drop the
     // `robots` block in app/videos/page.tsx) once videos are published.

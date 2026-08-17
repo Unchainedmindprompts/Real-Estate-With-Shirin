@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
 
 const SLUG = 'buying-north-idaho-home-from-out-of-state'
 const BASE_URL = 'https://www.realestatewithshirin.com'
@@ -38,8 +39,8 @@ const articleSchema = {
     width: 1672,
     height: 941,
   },
-  author: { '@id': `${BASE_URL}/#agent` },
-  publisher: { '@id': `${BASE_URL}/#business` },
+  author: AGENT_AUTHOR_STUB,
+  publisher: BRAND_PUBLISHER_STUB,
   datePublished: '2026-07-18T00:00:00-07:00',
   dateModified: '2026-07-18T00:00:00-07:00',
   mainEntityOfPage: PAGE_URL,

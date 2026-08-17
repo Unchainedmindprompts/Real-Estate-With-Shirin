@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
 export const metadata: Metadata = {
 title: 'Post Falls, ID Housing Market 2026: Trends & Forecast',
 description: "Buyer's or seller's market in Post Falls for 2026? Inventory, days on market, and where prices are heading — from a REALTOR who works it daily.",
@@ -27,8 +28,8 @@ const articleSchema = {
     width: 1672,
     height: 941,
   },
-  author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
-  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  author: AGENT_AUTHOR_STUB,
+  publisher: BRAND_PUBLISHER_STUB,
   datePublished: '2026-03-18T00:00:00-07:00',
   dateModified: '2026-07-07T00:00:00-07:00',
   mainEntityOfPage: 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-market-2026',

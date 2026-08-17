@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: 'Best Places to Live in North Idaho for People Leaving California (2026 Relocation Guide) | Shirin Abplanalp',
@@ -29,8 +30,8 @@ const articleSchema = {
     width: 1672,
     height: 941,
   },
-  author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
-  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  author: AGENT_AUTHOR_STUB,
+  publisher: BRAND_PUBLISHER_STUB,
   datePublished: '2026-04-22T00:00:00-07:00',
   dateModified: '2026-07-07T00:00:00-07:00',
   mainEntityOfPage: 'https://www.realestatewithshirin.com/articles/best-places-to-live-north-idaho-leaving-california',

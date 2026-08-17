@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: 'Trutina at North Place: The Best Senior Location in North Idaho? | Shirin Abplanalp',
@@ -36,8 +37,8 @@ const articleSchema = {
     width: 1672,
     height: 941,
   },
-  author: { '@id': 'https://www.realestatewithshirin.com/#agent' },
-  publisher: { '@id': 'https://www.realestatewithshirin.com/#business' },
+  author: AGENT_AUTHOR_STUB,
+  publisher: BRAND_PUBLISHER_STUB,
   datePublished: '2026-05-25T00:00:00-07:00',
   dateModified: '2026-07-07T00:00:00-07:00',
   mainEntityOfPage: 'https://www.realestatewithshirin.com/articles/trutina-at-north-place-senior-community-post-falls-buyer-guide',

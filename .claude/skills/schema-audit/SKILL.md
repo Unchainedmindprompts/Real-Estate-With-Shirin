@@ -20,8 +20,11 @@ If a value belongs to a shared identity (phone, email, portrait URL, brokerage a
 
 **Concrete list (extend the constants file as the graph grows):**
 - `BASE_URL`, `BUSINESS_ID`, `AGENT_ID`, `WEBSITE_ID`, `ORGANIZATION_ID`
-- `PHONE`, `EMAIL`, `AGENT_IMAGE`, `BROKERAGE_PHONE`
-- `CITY_SAMEAS`, `COUNTY_SAMEAS`, `REGION_SAMEAS` (Wikipedia URIs)
+- `AGENT_NAME`, `BRAND_NAME`, `BROKERAGE_NAME`, `LICENSE_NUMBER`
+- `PHONE`, `EMAIL`, `AGENT_IMAGE`, `BROKERAGE_PHONE`, `BROKERAGE_ADDRESS`
+- `AGENT_AUTHOR_STUB`, `BRAND_PUBLISHER_STUB`, `BROKERAGE_STUB`
+- `PLACE_ID`, `PLACE`, `placeStub()`, `MARKET_AREA_SERVED`
+- `CITY_SAMEAS`, `COUNTY_SAMEAS`, `REGION_SAMEAS`, `STATE_SAMEAS` (Wikipedia URIs)
 
 **Anti-pattern:**
 ```ts
@@ -60,11 +63,15 @@ author: {
 **Where each canonical entity lives:**
 | `@id` | Defined in |
 |---|---|
-| `#business` (RealEstateAgent + LocalBusiness) | `app/page.tsx` |
-| `#agent` (Person) | `app/page.tsx` |
+| `#business` (Organization — brand "Real Estate With Shirin") | `app/page.tsx` |
+| `#agent` (Person — Shirin Abplanalp) | `app/page.tsx` |
 | `#website` (WebSite) | `app/page.tsx` |
 | `/articles` (CollectionPage) | `app/articles/page.tsx` |
+| city/county Place IDs | matching `app/areas/*/page.tsx` |
+| `#place-north-idaho`, `#place-idaho` | `app/page.tsx` |
 | `#organization` (BHHS Jacklin brokerage) | External (jacklinrealestate.com) — allowed as unresolved cross-domain ref |
+
+Do not collapse brand, person, and brokerage. Career facts belong on `#agent`. Brokerage affiliation is `worksFor` / `memberOf`, not "the brand is the brokerage."
 
 The audit script treats a node as a "definition" if it has `@type` + `@id` + any substantive property beyond those. A bare `{@id}` reference does not count as a definition.
 
@@ -125,9 +132,9 @@ Some contexts genuinely need a small NAP-carrying business declaration inside an
 import { BUSINESS_ID, PHONE, EMAIL } from '@/lib/schema-ids'
 
 export const BUSINESS_NAP_STUB = {
-  '@type': ['RealEstateAgent', 'LocalBusiness'],
+  '@type': 'Organization',
   '@id': BUSINESS_ID,
-  name: 'Shirin Abplanalp — Real Estate With Shirin',
+  name: BRAND_NAME,
   telephone: PHONE,
   email: EMAIL,
 } as const
@@ -155,7 +162,7 @@ author: { '@type': 'Person', '@id': AGENT_ID, name: AGENT_NAME },
 
 Rule: the `name` value MUST come from a constant (`AGENT_NAME`), not a hardcoded string. Otherwise you've just recreated the drift problem this doc exists to prevent.
 
-Prefer bare `{ '@id': AGENT_ID }` unless there's a documented reason a single-page consumer needs the name inline.
+Articles and other single-page consumers **must** use this stub for `author` and the matching `BRAND_PUBLISHER_STUB` for `publisher`. A bare `{ '@id' }` is not enough — Google and AI crawlers read one URL at a time. The name value MUST come from `AGENT_NAME` / `BRAND_NAME`. The auditor treats these stubs as references, not competing definitions.
 
 ---
 

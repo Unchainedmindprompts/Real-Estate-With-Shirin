@@ -178,21 +178,6 @@ export default function Navigation() {
           >
             Articles
           </Link>
-          <Link
-            href="/videos"
-            className="text-sm uppercase tracking-wider font-medium transition-colors"
-            style={{
-              fontFamily: "'DM Sans', system-ui, sans-serif",
-              color: solid ? '#5C5650' : '#F5EFE6',
-              letterSpacing: '0.08em',
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = '#C4842A')}
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.color = solid ? '#5C5650' : '#F5EFE6')
-            }
-          >
-            Videos
-          </Link>
 
           <Link
             href="/contact"
@@ -291,7 +276,6 @@ export default function Navigation() {
             </div>
             <Link href="/about" className="text-sm uppercase tracking-wider font-medium" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }} onClick={() => setMobileOpen(false)}>About</Link>
             <Link href="/articles" className="text-sm uppercase tracking-wider font-medium" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }} onClick={() => setMobileOpen(false)}>Articles</Link>
-            <Link href="/videos" className="text-sm uppercase tracking-wider font-medium" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }} onClick={() => setMobileOpen(false)}>Videos</Link>
             <Link
               href="/contact"
               className="inline-block text-white text-xs uppercase font-semibold tracking-wider rounded-sm text-center"

@@ -36,13 +36,25 @@ const SOURCE_HOST_PREFIXES = [
   'https://www.realestatewithshirin.com/',
 ]
 
+// Exception B name stubs ({ @type, @id, name } and optional url) are REFERENCES,
+// not competing definitions. They exist so a single page is self-describing
+// without redeclaring the canonical Person / brand / Place.
+const STUB_KEYS = new Set(['@context', '@id', '@type', 'name', 'url'])
+
+function isNameStub(obj) {
+  if (!('@type' in obj) || !('@id' in obj) || !('name' in obj)) return false
+  return Object.keys(obj).every((k) => STUB_KEYS.has(k))
+}
+
 // A node counts as a DEFINITION when it has @type AND at least one property beyond
-// @context/@id/@type. A bare { @id: ... } is a REFERENCE.
+// @context/@id/@type, excluding Exception B name stubs. A bare { @id: ... } is a
+// REFERENCE.
 function classifyNode(obj) {
   const keys = Object.keys(obj)
   const hasType = '@type' in obj
   const hasId = '@id' in obj
   if (!hasId) return null
+  if (isNameStub(obj)) return 'REFERENCE'
   const substantiveKeys = keys.filter(k => k !== '@context' && k !== '@id' && k !== '@type')
   if (hasType && substantiveKeys.length > 0) return 'DEFINITION'
   return 'REFERENCE'

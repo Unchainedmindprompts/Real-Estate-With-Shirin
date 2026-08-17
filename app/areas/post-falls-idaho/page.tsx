@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { BASE_URL, BUSINESS_ID, WEBSITE_ID, CITY_SAMEAS } from '@/lib/schema-ids'
+import { BASE_URL, BUSINESS_ID, WEBSITE_ID, PLACE } from '@/lib/schema-ids'
 
 const PAGE_URL = `${BASE_URL}/areas/post-falls-idaho`
 
@@ -21,12 +21,7 @@ const jsonLdService = {
   name: 'Real Estate Services — Post Falls, Idaho',
   serviceType: 'Real estate representation',
   provider: { '@id': BUSINESS_ID },
-  areaServed: {
-    '@type': 'City',
-    name: 'Post Falls',
-    sameAs: CITY_SAMEAS.postFalls,
-    containedInPlace: { '@type': 'State', name: 'Idaho' },
-  },
+  areaServed: PLACE.postFalls,
 }
 
 const jsonLdWebPage = {
