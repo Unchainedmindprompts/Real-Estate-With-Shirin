@@ -180,6 +180,9 @@ export default function AboutPage() {
                 <p>
                   Now she helps families do the same thing. Not just find a house — find the place. The difference is that she is not guessing what North Idaho feels like from a market report. She chose it herself, with the same questions her clients are asking right now. That is not a talking point. It is just true.
                 </p>
+                <p>
+                  Through Berkshire Hathaway HomeServices Jacklin Real Estate, Shirin can tap the BHHS network. If you are leaving North Idaho, she can introduce a BHHS agent in the next city. If a home needs a luxury specialist, or a deal is commercial, she will make that introduction. Those are referrals. She does the residential buy, sell, and relocate work herself.
+                </p>
               </div>
 
               <div className="mt-10 flex flex-wrap gap-4">
@@ -322,7 +325,7 @@ export default function AboutPage() {
               letterSpacing: '0.02em',
             }}
           >
-            Post Falls · Coeur d&apos;Alene · Hayden · Rathdrum · Sandpoint · Athol · Bayview · Harrison · Wallace · Kellogg
+            Post Falls · Coeur d&apos;Alene · Hayden · Rathdrum · Sandpoint
           </p>
           <p
             style={{
@@ -332,7 +335,7 @@ export default function AboutPage() {
               letterSpacing: '0.03em',
             }}
           >
-            Licensed to serve all of North Idaho — Kootenai, Bonner, and Shoshone Counties.
+            Serving Kootenai County, Bonner County, and the broader North Idaho market.
           </p>
         </div>
       </section>
