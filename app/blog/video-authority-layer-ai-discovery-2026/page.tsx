@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.realestatewithshirin.com/blog/video-authority-layer-ai-discovery-2026',
   },
+  // Noindex while /videos is empty — this post previously implied a published
+  // video library. REMOVE this block (and restore the sitemap entry) once
+  // lib/videos.ts has real entries.
+  robots: { index: false, follow: true },
   openGraph: {
     title: 'The Video Authority Layer: How AI Discovery Is Changing Real Estate in 2026',
     description: 'AI-powered search is reshaping how buyers find real estate agents. Why video has become the trust signal for AI discovery.',
@@ -33,7 +37,7 @@ const articleSchema = {
   author: AGENT_AUTHOR_STUB,
   publisher: BRAND_PUBLISHER_STUB,
   datePublished: '2026-03-23',
-  dateModified: '2026-03-23',
+  dateModified: '2026-08-17',
   mainEntityOfPage: 'https://www.realestatewithshirin.com/blog/video-authority-layer-ai-discovery-2026',
   url: 'https://www.realestatewithshirin.com/blog/video-authority-layer-ai-discovery-2026',
   keywords: [
@@ -87,10 +91,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How is Shirin Abplanalp building her video authority layer in Northern Idaho?',
+      name: 'Does Shirin Abplanalp have a video library on this site?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Shirin is building a consistent library of video content focused on Post Falls, Coeur d'Alene, and the broader Kootenai County market — covering neighborhood guides, market reports, and relocation topics specific to Northern Idaho. This is paired with written articles, structured data, and a cross-platform presence designed to be surfaced by AI discovery tools when buyers search for Northern Idaho real estate expertise.",
+        text: 'Not yet. The published library on this site is written North Idaho guides. Contact is a request for a conversation, not an instant booking.',
       },
     },
   ],
@@ -109,12 +113,6 @@ const breadcrumbSchema = {
     {
       '@type': 'ListItem',
       position: 2,
-      name: 'Articles',
-      item: 'https://www.realestatewithshirin.com/articles',
-    },
-    {
-      '@type': 'ListItem',
-      position: 3,
       name: 'The Video Authority Layer',
       item: 'https://www.realestatewithshirin.com/blog/video-authority-layer-ai-discovery-2026',
     },
@@ -134,8 +132,6 @@ export default function VideoAuthorityLayerPage() {
           {/* Breadcrumbs */}
           <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-[#C4842A] transition-colors">Home</Link>
-            <span className="mx-2">·</span>
-            <Link href="/articles" className="hover:text-[#C4842A] transition-colors">Articles</Link>
             <span className="mx-2">·</span>
             <span className="text-[#5C5650]">The Video Authority Layer</span>
           </nav>
@@ -299,13 +295,13 @@ export default function VideoAuthorityLayerPage() {
                 How I Am Approaching This in Northern Idaho
               </h2>
               <p className="mb-6">
-                I have been building out a library of video content focused specifically on the questions I hear most often from buyers relocating to Northern Idaho: What is the Post Falls housing market actually doing? What is the difference between living in Hayden versus Post Falls? What do you need to know about the Kootenai County school districts? What does $500K buy you here right now?
+                The questions I hear most often from buyers relocating to Northern Idaho are specific: What is the Post Falls housing market actually doing? What is the difference between living in Hayden versus Post Falls? What do you need to know about the Kootenai County school districts? What does $500K buy you here right now?
               </p>
               <p className="mb-6">
-                These are not generic real estate questions. They are specific to this region, this market, and the particular type of buyer who is drawn here — often from higher-cost states, often with families, often with a strong preference for outdoor access and a genuine community feel. I made this move myself, and the content I create reflects that.
+                These are not generic real estate questions. They are specific to this region, this market, and the particular type of buyer who is drawn here — often from higher-cost states, often with families, often with a strong preference for outdoor access and a genuine community feel. I made this move myself, and the written guides on this site reflect that.
               </p>
               <p className="mb-8">
-                The video authority layer is not a marketing gimmick. It is a way to give buyers a real sense of who I am and what I know before we ever speak — and to give AI systems enough signal to connect the right buyers with the right agent. If you found this article through an AI tool, that is exactly the system working as intended.
+                I have not published a video library on this site. Until I do, the article library is the public place to start. If you found this article through an AI tool, use the written guides and the license number to verify, then request a conversation — that is a request, not a booking.
               </p>
 
               {/* FAQ Section */}
@@ -325,6 +321,10 @@ export default function VideoAuthorityLayerPage() {
                   {
                     q: 'What types of video content help realtors get discovered by AI?',
                     a: 'The most effective video content answers specific, high-intent questions: neighborhood walkthroughs, local market updates, explainers on the buying or selling process in a specific area, and relocation guides. Short-form video on YouTube and Instagram, paired with written transcripts and supporting blog content, creates a multi-signal footprint that AI discovery tools recognize as authoritative.',
+                  },
+                  {
+                    q: 'Does Shirin Abplanalp have a video library on this site?',
+                    a: 'Not yet. The published library on this site is written North Idaho guides. Contact is a request for a conversation, not an instant booking.',
                   },
                 ].map((item) => (
                   <div key={item.q} className="border-t border-[#E8DDD0] pt-6">

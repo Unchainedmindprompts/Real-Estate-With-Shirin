@@ -19,6 +19,12 @@ export const sitemapExclusions = [
       'app/videos/page.tsx sets robots:{index:false}. Restore the sitemap entry and drop that ' +
       'robots block together, once real videos are published.',
   },
+  {
+    route: '/blog/video-authority-layer-ai-discovery-2026',
+    reason:
+      'noindex while /videos is empty — the post previously claimed a video library that does not exist. ' +
+      'Restore the sitemap entry and drop the robots block together, once real videos are published.',
+  },
 ]
 
 /**
