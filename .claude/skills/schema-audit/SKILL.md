@@ -19,7 +19,7 @@ If a value belongs to a shared identity (phone, email, portrait URL, brokerage a
 **Why:** the drift problem. If `#business.telephone` and `#agent.telephone` are both literal strings, one can silently change without the other. Sourcing both from a single `PHONE` constant makes drift impossible.
 
 **Concrete list (extend the constants file as the graph grows):**
-- `BASE_URL`, `BUSINESS_ID`, `AGENT_ID`, `WEBSITE_ID`, `ORGANIZATION_ID`
+- `BASE_URL`, `BUSINESS_ID`, `AGENT_ID`, `WEBSITE_ID`, `JACKLIN_ID`, `BHHS_BRAND_ID`
 - `AGENT_NAME`, `BRAND_NAME`, `BROKERAGE_NAME`, `LICENSE_NUMBER`
 - `PHONE`, `EMAIL`, `AGENT_IMAGE`, `BROKERAGE_PHONE`, `BROKERAGE_ADDRESS`
 - `AGENT_AUTHOR_STUB`, `BRAND_PUBLISHER_STUB`, `BROKERAGE_STUB`
@@ -63,13 +63,14 @@ author: {
 **Where each canonical entity lives:**
 | `@id` | Defined in |
 |---|---|
-| `#business` (Organization — brand "Real Estate With Shirin") | `app/page.tsx` |
+| `#business` (RealEstateAgent — practice "Real Estate With Shirin") | `app/page.tsx` |
 | `#agent` (Person — Shirin Abplanalp) | `app/page.tsx` |
 | `#website` (WebSite) | `app/page.tsx` |
 | `/articles` (CollectionPage) | `app/articles/page.tsx` |
 | city/county Place IDs | matching `app/areas/*/page.tsx` |
 | `#place-north-idaho`, `#place-idaho` | `app/page.tsx` |
-| `#organization` (BHHS Jacklin brokerage) | External (jacklinrealestate.com) — allowed as unresolved cross-domain ref |
+| `#jacklin-real-estate` (BHHS Jacklin brokerage) | `app/page.tsx` — locally controlled. Do **not** mint `jacklinrealestate.com/#organization` |
+| `#bhhs-brand` (Berkshire Hathaway HomeServices Brand) | `app/page.tsx` — franchise brand relationship, never `parentOrganization` |
 
 Do not collapse brand, person, and brokerage. Career facts belong on `#agent`. Brokerage affiliation is `worksFor` / `memberOf`, not "the brand is the brokerage."
 
@@ -106,6 +107,8 @@ Rule 3 governs `sameAs` *only*. Contact facts (`telephone`, `email`, `address`) 
 
 A human is `@type: 'Person'`. Profession is expressed via `jobTitle` and `hasCredential` (or `hasOccupation` for stricter modeling). **A person is never `@type: 'RealEstateAgent'` at the top level** — RealEstateAgent is a LocalBusiness subtype, and typing a human as a business is category confusion.
 
+The customer-facing practice `#business` **is** `@type: 'RealEstateAgent'` only. Do not also type it `Organization` or `LocalBusiness`. Do not type `#agent` as `RealEstateAgent`.
+
 The `#agent` node has ONLY these kinds of properties: `name`, `jobTitle`, `telephone`, `email`, `url`, `image`, `address` (optional if not covered by `worksFor`), `worksFor`, `affiliation`, `memberOf`, `hasCredential`, `knowsAbout`, `sameAs`.
 
 **Business-only properties that must never appear on a Person:**
@@ -132,7 +135,7 @@ Some contexts genuinely need a small NAP-carrying business declaration inside an
 import { BUSINESS_ID, PHONE, EMAIL } from '@/lib/schema-ids'
 
 export const BUSINESS_NAP_STUB = {
-  '@type': 'Organization',
+  '@type': 'RealEstateAgent',
   '@id': BUSINESS_ID,
   name: BRAND_NAME,
   telephone: PHONE,
@@ -249,7 +252,7 @@ Do not modify the audit script to accept the dangling ref.
 
 Audit reports:
 ```
-🟡 external (expected): https://www.jacklinrealestate.com/#organization
+🟡 external (expected): https://en.wikipedia.org/wiki/Idaho
 ```
 
-This is fine. The brokerage `@id` is defined on their site, not ours. The auditor recognizes off-site anchors and reports them as expected rather than failing.
+Off-site sameAs / official-website targets are expected. Do **not** mint `https://www.jacklinrealestate.com/#organization` — Jacklin is defined locally as `#jacklin-real-estate`.

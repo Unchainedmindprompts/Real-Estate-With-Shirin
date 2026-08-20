@@ -121,6 +121,12 @@ for (const file of files) {
     const roots = Array.isArray(parsed) ? parsed : [parsed]
     for (const root of roots) {
       if (root && typeof root === 'object' && '@type' in root) topNodes.push(root)
+      // A single @graph document still has page-container / FAQ nodes as graph members.
+      if (root && typeof root === 'object' && Array.isArray(root['@graph'])) {
+        for (const node of root['@graph']) {
+          if (node && typeof node === 'object' && '@type' in node) topNodes.push(node)
+        }
+      }
     }
     walkNodes(parsed, (node) => {
       const kind = classifyNode(node)
@@ -163,8 +169,7 @@ if (dangling.length === 0) {
   console.log('  ✅ none')
 } else {
   for (const { id, refs } of dangling) {
-    // External brokerage @id (jacklinrealestate.com) is expected to be undefined here
-    // (it's defined on the brokerage's own domain, we reference it).
+    // Off-site sameAs / official-website targets are expected to be undefined here.
     if (!isSiteScoped(id)) {
       console.log(`  🟡 external (expected): ${id}  (${refs.length} refs)`)
       continue

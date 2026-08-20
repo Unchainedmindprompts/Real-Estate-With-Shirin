@@ -3,11 +3,12 @@
 // schema. Avoids drift when URLs, brokerage identity, or the entity graph change.
 //
 // Three real-world entities — do not collapse them:
-//   #business  Organization "Real Estate With Shirin" (customer-facing brand)
+//   #business  RealEstateAgent "Real Estate With Shirin" (customer-facing practice)
 //   #agent     Person "Shirin Abplanalp" (licensed REALTOR®)
-//   ORGANIZATION_ID  BHHS Jacklin brokerage (defined on jacklinrealestate.com)
+//   #jacklin-real-estate  Organization "BHHS Jacklin" (locally controlled)
 //
-// Conceptual relationship: Brand ↔ Shirin ↔ Brokerage.
+// Conceptual relationship: Practice ↔ Shirin ↔ Brokerage.
+// Do not mint https://www.jacklinrealestate.com/#organization — we do not control that domain.
 
 export const BASE_URL = 'https://www.realestatewithshirin.com'
 
@@ -16,8 +17,13 @@ export const BUSINESS_ID = `${BASE_URL}/#business`
 export const AGENT_ID = `${BASE_URL}/#agent`
 export const WEBSITE_ID = `${BASE_URL}/#website`
 
-// The brokerage Organization — canonical @id is on jacklinrealestate.com.
-export const ORGANIZATION_ID = 'https://www.jacklinrealestate.com/#organization'
+// Locally controlled Jacklin identity. Official website remains jacklinrealestate.com.
+export const JACKLIN_ID = `${BASE_URL}/#jacklin-real-estate`
+export const ORGANIZATION_ID = JACKLIN_ID
+
+// BHHS brand relationship for the independently owned Jacklin franchisee.
+// Model as Brand — never as Jacklin parentOrganization / subsidiary.
+export const BHHS_BRAND_ID = `${BASE_URL}/#bhhs-brand`
 
 // Public names. Rule 1: never re-type these as string literals in schema.
 export const AGENT_NAME = 'Shirin Abplanalp'
@@ -30,7 +36,7 @@ export const LICENSE_NUMBER = '1371861'
 export const LICENSE_LABEL = `Idaho Real Estate License #${LICENSE_NUMBER}`
 
 // Contact facts — same real-world values live on both #agent (Person) and
-// #business (Organization) for a solo practitioner. Sourcing both nodes from
+// #business (RealEstateAgent) for a solo practitioner. Sourcing both nodes from
 // these constants prevents drift. Rule 3 governs sameAs (identity links);
 // telephone/email are contact facts, not identity links — legitimate to share.
 export const PHONE = '+1-208-660-7468'
@@ -70,14 +76,14 @@ export const AGENT_AUTHOR_STUB = {
 } as const
 
 export const BRAND_PUBLISHER_STUB = {
-  '@type': 'Organization',
+  '@type': 'RealEstateAgent',
   '@id': BUSINESS_ID,
   name: BRAND_NAME,
 } as const
 
 export const BROKERAGE_STUB = {
   '@type': 'Organization',
-  '@id': ORGANIZATION_ID,
+  '@id': JACKLIN_ID,
   name: BROKERAGE_NAME,
   url: BROKERAGE_URL,
 } as const
