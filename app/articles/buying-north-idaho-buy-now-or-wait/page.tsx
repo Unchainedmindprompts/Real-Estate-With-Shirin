@@ -113,6 +113,13 @@ const articleSchema = {
     { '@type': 'GovernmentOrganization', name: 'Panhandle Health District' },
     { '@type': 'GovernmentOrganization', name: 'Idaho Department of Water Resources' },
     { '@type': 'GovernmentOrganization', name: 'Idaho State Tax Commission' },
+    { '@type': 'WebPage', name: 'Is It a Good Time to Buy a Home in Northern Idaho?', url: `${BASE_URL}/articles/is-it-a-good-time-to-buy-home-northern-idaho` },
+    { '@type': 'WebPage', name: 'How Much Do Homes Cost in Post Falls, Idaho?', url: `${BASE_URL}/articles/how-much-do-homes-cost-post-falls-idaho` },
+    { '@type': 'WebPage', name: 'Coeur d’Alene vs Post Falls vs Hayden vs Rathdrum vs Sandpoint comparison', url: `${BASE_URL}/articles/north-idaho-city-comparison-coeur-dalene-post-falls-hayden-rathdrum-sandpoint` },
+    { '@type': 'WebPage', name: 'Buying Property on the Prairie: Wells, Septic, and Road Rights-of-Way', url: `${BASE_URL}/articles/buying-property-prairie-wells-septic-roads` },
+    { '@type': 'WebPage', name: 'North Idaho property tax comparison', url: `${BASE_URL}/articles/north-idaho-property-taxes-county-comparison` },
+    { '@type': 'WebPage', name: 'Complete North Idaho Relocation Guide', url: `${BASE_URL}/relocating-to-north-idaho` },
+    { '@type': 'WebPage', name: 'Buying a Home in Northern Idaho', url: `${BASE_URL}/buyers` },
   ],
   citation: [
     { '@type': 'WebPage', name: 'Coeur d’Alene Regional REALTORS® Market Statistics, July 2026' },
@@ -385,8 +392,11 @@ className="w-full h-auto block"
 <p className="mb-6">
                 I&rsquo;m not predicting that&rsquo;s what will happen. Nobody knows exactly where rates or home prices will be six months from now. That&rsquo;s the point.
 </p>
-<p className="mb-10">
+<p className="mb-6">
                 I would never recommend buying a house today because &quot;you can always refinance later.&quot; Today&rsquo;s payment needs to work today. But I also wouldn&rsquo;t automatically postpone a purchase you can comfortably afford because you&rsquo;re hoping someone correctly predicts the mortgage market.
+</p>
+<p className="mb-10">
+                I take a deeper look at this question in{' '}<a href="/articles/is-it-a-good-time-to-buy-home-northern-idaho" className="text-[#C4842A] hover:underline">Is It a Good Time to Buy a Home in Northern Idaho?</a>
 </p>
 
 {/* H2 */}
@@ -417,6 +427,9 @@ className="w-full h-auto block"
                   Principal, interest, estimated taxes and insurance. Not HOA fees, utilities or maintenance. Planning numbers, not loan quotes — built from Idaho State Tax Commission property-tax information and the prevailing national mortgage-rate benchmark.
 </p>
 </div>
+<p className="mb-6">
+                For a deeper look at how taxes differ across the region, see my{' '}<a href="/articles/north-idaho-property-taxes-county-comparison" className="text-[#C4842A] hover:underline">North Idaho property tax comparison</a>.
+</p>
 <p className="mb-10">
                 The more important question is: what payment still leaves you enough room to live your life? If buying the house means every repair, trip, medical bill or car problem becomes a financial emergency, the house is probably too expensive — even if a lender approves it.
 </p>
@@ -432,6 +445,9 @@ className="w-full h-auto block"
                 The tradeoff is size. You&rsquo;re not generally getting a big rancher, three-car garage and huge backyard at those numbers. Move toward Post Falls, Rathdrum or other surrounding communities and the equation changes again.
 </p>
 <p className="mb-6">
+                If Post Falls is on your list, I break down the current price ranges in more detail in{' '}<a href="/articles/how-much-do-homes-cost-post-falls-idaho" className="text-[#C4842A] hover:underline">How Much Do Homes Cost in Post Falls, Idaho?</a>
+</p>
+<p className="mb-6">
                 That&rsquo;s where buyers need to stop thinking only in terms of price and start thinking in terms of what they&rsquo;re willing to trade: more square footage or shorter commute? New construction or mature neighborhood? Smaller yard or more maintenance? Coeur d&rsquo;Alene address or more house in Post Falls?
 </p>
 <p className="mb-10">
@@ -443,7 +459,7 @@ className="w-full h-auto block"
                 Coeur d&rsquo;Alene vs. Post Falls: Where Does Your Money Go Further?
 </h2>
 <p className="mb-6">
-                Generally? Post Falls. But the difference isn&rsquo;t always as dramatic as people expect.
+                Generally? <a href="/areas/post-falls-idaho" className="text-[#C4842A] hover:underline">Post Falls</a>. But the difference isn&rsquo;t always as dramatic as people expect.
 </p>
 <p className="mb-8">
                 One interesting apples-to-apples comparison comes from Greenstone. As of August 19, the same 1,586-square-foot Springfield plan was being offered at approximately $517,000 at North Place in Post Falls, compared with a starting point around $537,000 at Coeur d&rsquo;Alene Place. Same builder. Same floor plan. About a $20,000 difference at the low end. Broader resale data shows a larger gap.
@@ -476,8 +492,11 @@ className="w-full h-auto block"
 <p className="mb-6">
                 But price isn&rsquo;t the entire decision. I&rsquo;ve found that buyers often start by asking &quot;which city is cheaper?&quot; and eventually realize they&rsquo;re actually asking &quot;where will I be happier living?&quot;
 </p>
+<p className="mb-6">
+                Commute matters. Neighborhood matters. Lot size matters. Schools may matter. Access to restaurants, shopping, recreation and the interstate may matter. Sometimes spending a little more in{' '}<a href="/areas/coeur-dalene-idaho" className="text-[#C4842A] hover:underline">Coeur d&rsquo;Alene</a>{' '}makes sense. Sometimes a buyer sees what the same budget buys in Post Falls and the decision becomes easy.
+</p>
 <p className="mb-10">
-                Commute matters. Neighborhood matters. Lot size matters. Schools may matter. Access to restaurants, shopping, recreation and the interstate may matter. Sometimes spending a little more in{' '}<a href="/areas/coeur-dalene-idaho" className="text-[#C4842A] hover:underline">Coeur d&rsquo;Alene</a>{' '}makes sense. Sometimes a buyer sees what the same budget buys in{' '}<a href="/areas/post-falls-idaho" className="text-[#C4842A] hover:underline">Post Falls</a>{' '}and the decision becomes easy.
+                If you&rsquo;re comparing the communities more broadly than price alone, see my full{' '}<a href="/articles/north-idaho-city-comparison-coeur-dalene-post-falls-hayden-rathdrum-sandpoint" className="text-[#C4842A] hover:underline">Coeur d&rsquo;Alene vs Post Falls vs Hayden vs Rathdrum vs Sandpoint comparison</a>.
 </p>
 
 {/* H2 */}
@@ -556,8 +575,11 @@ className="w-full h-auto block"
 <p className="mb-6">
                 Acreage is one of those North Idaho dreams that can look incredibly simple online. Five acres. Beautiful trees. Mountain view. Plenty of room for a shop. Then you start asking about the well, septic, road, utilities, zoning and water rights. The property can become complicated very quickly.
 </p>
-<p className="mb-8">
+<p className="mb-6">
                 Because beautiful land doesn&rsquo;t necessarily mean buildable land. Here is what belongs in due diligence before you remove contingencies.
+</p>
+<p className="mb-8">
+                I go much deeper into these issues in{' '}<a href="/articles/buying-property-prairie-wells-septic-roads" className="text-[#C4842A] hover:underline">Buying Property on the Prairie: Wells, Septic, and Road Rights-of-Way</a>.
 </p>
 {/* Acreage checklist */}
 <div className="my-8 p-6 bg-[#1C1A17] rounded-sm">
@@ -658,7 +680,7 @@ className="w-14 h-14 rounded-full object-cover flex-shrink-0"
 </div>
 </div>
 <p className="font-dm-sans text-[#9A9590] leading-relaxed mb-6">
-                  If you&rsquo;re considering buying in Coeur d&rsquo;Alene, Post Falls, Hayden, Rathdrum, Sandpoint or the surrounding North Idaho communities, tell me what you&rsquo;re looking for, what price range you&rsquo;re considering and what matters most to you. I can help you look at what&rsquo;s actually available — and whether buying now makes sense for you.
+                  If you&rsquo;re considering <a href="/buyers" className="text-[#C4842A] hover:underline">buying in North Idaho</a> — Coeur d&rsquo;Alene, Post Falls, Hayden, Rathdrum, Sandpoint or the surrounding communities, tell me what you&rsquo;re looking for, what price range you&rsquo;re considering and what matters most to you. I can help you look at what&rsquo;s actually available — and whether buying now makes sense for you.
 </p>
 <div className="flex flex-col sm:flex-row gap-4">
 <a
