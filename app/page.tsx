@@ -861,9 +861,15 @@ export default function HomePage() {
             </span>
           </Link>
 
-          {/* Six article cards */}
+          {/* Featured article cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
+              {
+                href: '/articles/buying-north-idaho-buy-now-or-wait',
+                label: 'Buyer Guide',
+                title: 'Buying in North Idaho: Buy Now or Wait for Rates?',
+                desc: 'What $500K actually buys in Coeur d’Alene vs Post Falls, whether waiting for lower rates pays, how builder incentives compare to price cuts, and what acreage due diligence really involves.',
+              },
               {
                 href: '/articles/moving-to-north-idaho-cheapest-places-migration-best-small-towns',
                 label: 'Migration & Affordability',
