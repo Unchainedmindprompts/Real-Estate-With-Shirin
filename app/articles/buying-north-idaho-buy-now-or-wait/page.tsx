@@ -108,11 +108,11 @@ const articleSchema = {
     placeStub('sandpoint'),
     placeStub('kootenai'),
     placeStub('bonner'),
-    { '@type': 'Organization', name: 'Freddie Mac', url: 'https://www.freddiemac.com' },
+    { '@type': 'Organization', name: 'Freddie Mac', url: 'https://www.freddiemac.com/pmms' },
     { '@type': 'Organization', name: 'National Association of Home Builders', url: 'https://www.nahb.org' },
-    { '@type': 'GovernmentOrganization', name: 'Panhandle Health District' },
-    { '@type': 'GovernmentOrganization', name: 'Idaho Department of Water Resources' },
-    { '@type': 'GovernmentOrganization', name: 'Idaho State Tax Commission' },
+    { '@type': 'GovernmentOrganization', name: 'Panhandle Health District', url: 'https://panhandlehealthdistrict.org/licensing-and-permitting/septic-permits-and-records/' },
+    { '@type': 'GovernmentOrganization', name: 'Idaho Department of Water Resources', url: 'https://idwr.idaho.gov/wells/' },
+    { '@type': 'GovernmentOrganization', name: 'Idaho State Tax Commission', url: 'https://tax.idaho.gov/taxes/property/homeowners/' },
     { '@type': 'WebPage', name: 'Is It a Good Time to Buy a Home in Northern Idaho?', url: `${BASE_URL}/articles/is-it-a-good-time-to-buy-home-northern-idaho` },
     { '@type': 'WebPage', name: 'How Much Do Homes Cost in Post Falls, Idaho?', url: `${BASE_URL}/articles/how-much-do-homes-cost-post-falls-idaho` },
     { '@type': 'WebPage', name: 'Coeur d’Alene vs Post Falls vs Hayden vs Rathdrum vs Sandpoint comparison', url: `${BASE_URL}/articles/north-idaho-city-comparison-coeur-dalene-post-falls-hayden-rathdrum-sandpoint` },
@@ -122,15 +122,15 @@ const articleSchema = {
     { '@type': 'WebPage', name: 'Buying a Home in Northern Idaho', url: `${BASE_URL}/buyers` },
   ],
   citation: [
-    { '@type': 'WebPage', name: 'Coeur d’Alene Regional REALTORS® Market Statistics, July 2026' },
+    { '@type': 'WebPage', name: 'Coeur d’Alene Regional REALTORS® Market Statistics, July 2026', url: 'https://www.cdarealtors.com/market-data/' },
     { '@type': 'WebPage', name: 'Freddie Mac Primary Mortgage Market Survey, August 13, 2026', url: 'https://www.freddiemac.com/pmms' },
-    { '@type': 'WebPage', name: 'Realtor.com Residential Listing Metrics via Federal Reserve Bank of St. Louis (FRED)' },
-    { '@type': 'WebPage', name: 'Redfin Data Center — Coeur d’Alene and Post Falls Market Data' },
+    { '@type': 'WebPage', name: 'Realtor.com Residential Listing Metrics via Federal Reserve Bank of St. Louis (FRED)', url: 'https://fred.stlouisfed.org/series/ACTLISCOU16055' },
+    { '@type': 'WebPage', name: 'Redfin Data Center — Coeur d’Alene and Post Falls Market Data', url: 'https://www.redfin.com/city/4370/ID/Coeur-d-Alene/housing-market' },
     { '@type': 'WebPage', name: 'National Association of Home Builders Builder Confidence Survey, August 2026', url: 'https://www.nahb.org' },
-    { '@type': 'WebPage', name: 'Greenstone Homes Community Pricing, August 19, 2026' },
-    { '@type': 'WebPage', name: 'Panhandle Health District Subsurface Sewage Disposal Guidelines, June 2026' },
-    { '@type': 'WebPage', name: 'Idaho Department of Water Resources Guidance Following Senate Bill 1222 (2026)' },
-    { '@type': 'WebPage', name: 'Idaho State Tax Commission Property Tax Information' },
+    { '@type': 'WebPage', name: 'Greenstone Homes Community Pricing, August 19, 2026', url: 'https://www.greenstonehomes.com/' },
+    { '@type': 'WebPage', name: 'Panhandle Health District Subsurface Sewage Disposal Guidelines, June 2026', url: 'https://panhandlehealthdistrict.org/licensing-and-permitting/septic-permits-and-records/' },
+    { '@type': 'WebPage', name: 'Idaho Department of Water Resources Guidance Following Senate Bill 1222 (2026)', url: 'https://idwr.idaho.gov/wells/' },
+    { '@type': 'WebPage', name: 'Idaho State Tax Commission Property Tax Information', url: 'https://tax.idaho.gov/taxes/property/homeowners/' },
   ],
 }
 
@@ -231,10 +231,10 @@ const marketPulse = [
 ]
 
 const dueDiligenceLinks = [
-  { label: 'Septic permitting', value: 'Panhandle Health District' },
-  { label: 'Wells and water rights', value: 'Idaho Dept. of Water Resources' },
-  { label: 'Property tax info', value: 'Idaho State Tax Commission' },
-  { label: 'Rate benchmark', value: 'Freddie Mac PMMS' },
+  { label: 'Septic permitting', value: 'Panhandle Health District', href: 'https://panhandlehealthdistrict.org/licensing-and-permitting/septic-permits-and-records/' },
+  { label: 'Wells and water rights', value: 'Idaho Dept. of Water Resources', href: 'https://idwr.idaho.gov/wells/' },
+  { label: 'Property tax info', value: 'Idaho State Tax Commission', href: 'https://tax.idaho.gov/taxes/property/homeowners/' },
+  { label: 'Rate benchmark', value: 'Freddie Mac PMMS', href: 'https://www.freddiemac.com/pmms' },
 ]
 
 export default function BuyNowOrWaitNorthIdahoPage() {
@@ -332,13 +332,13 @@ className="w-full h-auto block"
                 North Idaho is not one housing market. That matters. A buyer shopping for a $475,000 home in Post Falls is participating in a very different market than someone looking for five acres outside Sandpoint or a lakefront home on Lake Pend Oreille.
 </p>
 <p className="mb-6">
-                As of July 2026, the median sale price for site-built homes on less than two acres in Kootenai County was $565,000, up 3.8% year over year, according to Coeur d&rsquo;Alene Regional REALTORS®. There were also 1,124 active residential listings as of August 5.
+                As of July 2026, the median sale price for site-built homes on less than two acres in Kootenai County was $565,000, up 3.8% year over year, according to <a href="https://www.cdarealtors.com/market-data/" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Coeur d&rsquo;Alene Regional REALTORS®</a>. There were also 1,124 active residential listings as of August 5.
 </p>
 <p className="mb-6">
                 That&rsquo;s important because buyers have something they didn&rsquo;t have much of during the hottest years of the market: choices. And choices create leverage.
 </p>
 <p className="mb-6">
-                You can see that in asking prices. Roughly 36% of active Kootenai County listings had experienced a price reduction in July, based on Realtor.com listing data hosted by FRED. That doesn&rsquo;t mean sellers are suddenly accepting enormous discounts. It means overpriced homes are sitting long enough that sellers are having to respond.
+                You can see that in asking prices. Roughly 36% of active Kootenai County listings had experienced a price reduction in July, based on <a href="https://fred.stlouisfed.org/series/ACTLISCOU16055" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Realtor.com listing data hosted by FRED</a>. That doesn&rsquo;t mean sellers are suddenly accepting enormous discounts. It means overpriced homes are sitting long enough that sellers are having to respond.
 </p>
 <p className="mb-10">
                 And that creates a very different buying experience. A home that came on the market yesterday and is priced correctly may still have very little negotiating room. A home that has been sitting for 60 days after two price reductions? That&rsquo;s a different conversation entirely.
@@ -348,7 +348,7 @@ className="w-full h-auto block"
                 Bonner County is another market altogether
 </h3>
 <p className="mb-6">
-                Bonner County illustrates why I don&rsquo;t like talking about &quot;the North Idaho market&quot; as if it&rsquo;s one number. Coeur d&rsquo;Alene Regional REALTORS® reported a median of $522,450 through July 2026 for site-built homes on less than two acres, while Redfin has reported much higher numbers when all property types are included.
+                Bonner County illustrates why I don&rsquo;t like talking about &quot;the North Idaho market&quot; as if it&rsquo;s one number. Coeur d&rsquo;Alene Regional REALTORS® reported a median of $522,450 through July 2026 for site-built homes on less than two acres, while <a href="https://www.redfin.com/city/4370/ID/Coeur-d-Alene/housing-market" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Redfin</a> has reported much higher numbers when all property types are included.
 </p>
 <p className="mb-6">
                 Both can be correct. Acreage, waterfront and luxury property around Sandpoint can dramatically change the median depending on what a dataset includes.
@@ -365,7 +365,7 @@ className="w-full h-auto block"
                 This is probably the question I hear most often. And here&rsquo;s the part that gets overlooked: waiting for lower rates is a bet on two things, not one. You&rsquo;re betting that rates fall. But you&rsquo;re also betting that home prices and buyer competition don&rsquo;t move against you when they do.
 </p>
 <p className="mb-8">
-                For the week ending August 13, 2026, Freddie Mac reported an average 30-year fixed mortgage rate of 6.67% through its Primary Mortgage Market Survey. Let&rsquo;s put that into actual dollars on a $500,000 mortgage.
+                For the week ending August 13, 2026, Freddie Mac reported an average 30-year fixed mortgage rate of 6.67% through its <a href="https://www.freddiemac.com/pmms" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Primary Mortgage Market Survey</a>. Let&rsquo;s put that into actual dollars on a $500,000 mortgage.
 </p>
 {/* Rate table */}
 <div className="my-8 p-6 bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm">
@@ -424,7 +424,7 @@ className="w-full h-auto block"
                     ))}
 </div>
 <p className="font-dm-sans text-xs text-[#9A9590] mt-4">
-                  Principal, interest, estimated taxes and insurance. Not HOA fees, utilities or maintenance. Planning numbers, not loan quotes — built from Idaho State Tax Commission property-tax information and the prevailing national mortgage-rate benchmark.
+                  Principal, interest, estimated taxes and insurance. Not HOA fees, utilities or maintenance. Planning numbers, not loan quotes — built from <a href="https://tax.idaho.gov/taxes/property/homeowners/" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Idaho State Tax Commission</a> property-tax information and the prevailing national mortgage-rate benchmark.
 </p>
 </div>
 <p className="mb-6">
@@ -439,7 +439,7 @@ className="w-full h-auto block"
                 Can You Still Buy a Home for Under $500,000 in North Idaho?
 </h2>
 <p className="mb-6">
-                Yes. But the compromises have changed. Under $500,000 does not necessarily mean leaving Coeur d&rsquo;Alene altogether. As of August 19, 2026, Greenstone Homes was advertising new cottages at Coeur d&rsquo;Alene Place beginning around $444,000, with several plans still below $500,000.
+                Yes. But the compromises have changed. Under $500,000 does not necessarily mean leaving Coeur d&rsquo;Alene altogether. As of August 19, 2026, <a href="https://www.greenstonehomes.com/" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Greenstone Homes</a> was advertising new cottages at Coeur d&rsquo;Alene Place beginning around $444,000, with several plans still below $500,000.
 </p>
 <p className="mb-6">
                 The tradeoff is size. You&rsquo;re not generally getting a big rancher, three-car garage and huge backyard at those numbers. Move toward Post Falls, Rathdrum or other surrounding communities and the equation changes again.
@@ -530,7 +530,7 @@ className="w-full h-auto block"
                 New Construction vs. Resale: Which Is the Better Deal?
 </h2>
 <p className="mb-6">
-                One of the most interesting things happening in today&rsquo;s market is that builders don&rsquo;t necessarily want to reduce the advertised price of a home. They may instead give you money somewhere else. Nationally, 63% of builders were using sales incentives in August 2026, according to the National Association of Home Builders.
+                One of the most interesting things happening in today&rsquo;s market is that builders don&rsquo;t necessarily want to reduce the advertised price of a home. They may instead give you money somewhere else. Nationally, 63% of builders were using sales incentives in August 2026, according to the <a href="https://www.nahb.org" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">National Association of Home Builders</a>.
 </p>
 <p className="mb-4">Those incentives might include:</p>
 <ul className="mb-6 space-y-2">
@@ -696,7 +696,7 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
 </div>
 </div>
 <p className="font-dm-sans text-xs text-[#9A9590] mt-6 leading-relaxed">
-                Data sources: Coeur d&rsquo;Alene Regional REALTORS® market statistics (July 2026); Realtor.com residential listing metrics hosted by the Federal Reserve Bank of St. Louis (FRED); Freddie Mac Primary Mortgage Market Survey (August 13, 2026); Redfin Data Center (three months ending June 2026); National Association of Home Builders (August 2026); Greenstone Homes community pricing (August 19, 2026); Panhandle Health District subsurface sewage disposal guidelines (June 2026); Idaho Department of Water Resources guidance following Senate Bill 1222; Idaho State Tax Commission property-tax information. Market conditions change — contact Shirin for current data. Payment figures are planning estimates, not loan quotes.
+                Data sources: <a href="https://www.cdarealtors.com/market-data/" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Coeur d&rsquo;Alene Regional REALTORS®</a> market statistics (July 2026); Realtor.com residential listing metrics hosted by the <a href="https://fred.stlouisfed.org/series/ACTLISCOU16055" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Federal Reserve Bank of St. Louis (FRED)</a>; <a href="https://www.freddiemac.com/pmms" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Freddie Mac Primary Mortgage Market Survey</a> (August 13, 2026); <a href="https://www.redfin.com/city/4370/ID/Coeur-d-Alene/housing-market" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Redfin Data Center</a> (three months ending June 2026); <a href="https://www.nahb.org" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">National Association of Home Builders</a> (August 2026); <a href="https://www.greenstonehomes.com/" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Greenstone Homes</a> community pricing (August 19, 2026); <a href="https://panhandlehealthdistrict.org/licensing-and-permitting/septic-permits-and-records/" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Panhandle Health District</a> subsurface sewage disposal guidelines (June 2026); <a href="https://idwr.idaho.gov/wells/" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Idaho Department of Water Resources</a> guidance following Senate Bill 1222; <a href="https://tax.idaho.gov/taxes/property/homeowners/" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">Idaho State Tax Commission</a> property-tax information. Market conditions change — contact Shirin for current data. Payment figures are planning estimates, not loan quotes.
 </p>
 </article>
 {/* Sidebar */}
@@ -722,7 +722,9 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
 {dueDiligenceLinks.map((d) => (
 <div key={d.label} className="border-b border-[#E8DDD0] pb-2 last:border-0 last:pb-0">
 <p className="font-dm-sans text-xs text-[#9A9590]">{d.label}</p>
-<p className="font-dm-sans text-xs font-semibold text-[#1C1A17]">{d.value}</p>
+<p className="font-dm-sans text-xs font-semibold text-[#1C1A17]">
+                      <a href={d.href} target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">{d.value}</a>
+</p>
 </div>
                     ))}
 </div>
