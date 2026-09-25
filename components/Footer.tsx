@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { INSTAGRAM_HANDLE, INSTAGRAM_URL } from '@/lib/schema-ids'
 
 export default function Footer() {
   return (
@@ -147,6 +148,19 @@ export default function Footer() {
                     onMouseLeave={(e) => (e.currentTarget.style.color = '#C4BDB4')}
                   >
                     dreamlifeinidaho@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={INSTAGRAM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm transition-colors"
+                    style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#C4842A')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = '#C4BDB4')}
+                  >
+                    Instagram · {INSTAGRAM_HANDLE}
                   </a>
                 </li>
                 <li className="text-sm" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>

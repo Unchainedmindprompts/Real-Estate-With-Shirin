@@ -10,6 +10,7 @@ import {
   BHHS_BRAND_ID,
   PHONE,
   EMAIL,
+  INSTAGRAM_URL,
   AGENT_IMAGE,
   BROKERAGE_PHONE,
   PORTRAIT_2026,
@@ -147,7 +148,7 @@ export default function HomePage() {
               'https://www.yelp.com/biz/real-estate-with-shirin-coeur-d-alene',
               'https://www.bbb.org/us/id/post-falls/profile/real-estate-agent/real-estate-with-shirin-1296-1000195359',
               'https://www.facebook.com/ShirinRealty',
-              'https://www.instagram.com/dreamlifeinidaho',
+              INSTAGRAM_URL,
             ],
             review: testimonials.filter((t) => !t.excludeFromSchema).map((t) => ({
               '@type': 'Review',

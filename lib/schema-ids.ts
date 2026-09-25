@@ -42,6 +42,8 @@ export const LICENSE_LABEL = `Idaho Real Estate License #${LICENSE_NUMBER}`
 export const PHONE = '+1-208-660-7468'
 export const PHONE_DISPLAY = '(208) 660-7468'
 export const EMAIL = 'dreamlifeinidaho@gmail.com'
+export const INSTAGRAM_HANDLE = '@thisisnorthidaho'
+export const INSTAGRAM_URL = 'https://www.instagram.com/thisisnorthidaho/'
 export const AGENT_IMAGE = `${BASE_URL}/images/shirin-abplanalp.jpg`
 
 // Brokerage (BHHS Jacklin) canonical scalar values, when referenced via the
