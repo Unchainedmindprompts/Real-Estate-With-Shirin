@@ -67,6 +67,19 @@ export const metadata: Metadata = {
 }
 
 
+const googleReviews = [
+  {
+    name: 'Justine Kingston',
+    context: 'Home sale and rental purchase · Bend, Oregon',
+    quote: "I've worked with Shirin twice in Bend, Oregon, once to list my home and once to buy a rental property, and she was fantastic both times. She is incredibly organized, friendly, and efficient, and she kept every step clear and on track.",
+  },
+  {
+    name: 'Paul Weaver',
+    context: 'Two home purchases',
+    quote: 'We have had the pleasure of working with Shirin on two home purchases. Shirin’s professionalism, attention to detail, communication and follow-up are second to none. Shirin carefully guided us through every step of our recent transaction.',
+  },
+]
+
 const testimonials = [
   {
     name: 'Koval Dan',
@@ -638,6 +651,22 @@ export default function HomePage() {
             >
               What Clients Say
             </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            {googleReviews.map((review) => (
+              <figure key={review.name} className="p-8 rounded" style={{ backgroundColor: '#2A2722', border: '1px solid #3A3530' }}>
+                <div className="mb-5" role="img" aria-label="5 out of 5 stars" style={{ color: '#C4842A', letterSpacing: '0.15em' }}>★★★★★</div>
+                <blockquote className="mb-6" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '19px', lineHeight: 1.55, color: '#F5EFE6', fontStyle: 'italic' }}>
+                  &ldquo;{review.quote}&rdquo;
+                </blockquote>
+                <figcaption>
+                  <p className="text-sm font-semibold" style={{ color: '#FAFAF8' }}>{review.name}</p>
+                  <p className="text-xs mt-1" style={{ color: '#C4BDB4' }}>{review.context}</p>
+                  <a href="https://maps.google.com/?cid=2147151028860799721" target="_blank" rel="noopener noreferrer" className="inline-block text-xs mt-3 underline underline-offset-4" style={{ color: '#C4842A' }}>Google review excerpt · View on Google ↗</a>
+                </figcaption>
+              </figure>
+            ))}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
