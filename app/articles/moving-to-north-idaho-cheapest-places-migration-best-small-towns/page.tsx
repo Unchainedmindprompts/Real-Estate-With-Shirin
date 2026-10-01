@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     url: 'https://www.realestatewithshirin.com/articles/moving-to-north-idaho-cheapest-places-migration-best-small-towns',
     type: 'article',
     publishedTime: '2026-05-27',
+    modifiedTime: '2026-10-01',
     authors: ['Shirin Abplanalp'],
     images: ['https://www.realestatewithshirin.com/images/moving-to-north-idaho-honest-guide.png'],
   },
@@ -40,7 +41,7 @@ const articleSchema = {
   author: AGENT_AUTHOR_STUB,
   publisher: BRAND_PUBLISHER_STUB,
   datePublished: '2026-05-27T00:00:00-07:00',
-  dateModified: '2026-07-07T00:00:00-07:00',
+  dateModified: '2026-10-01T00:00:00-07:00',
   mainEntityOfPage: 'https://www.realestatewithshirin.com/articles/moving-to-north-idaho-cheapest-places-migration-best-small-towns',
   url: 'https://www.realestatewithshirin.com/articles/moving-to-north-idaho-cheapest-places-migration-best-small-towns',
   articleSection: 'North Idaho Buyer Guides',
@@ -250,7 +251,7 @@ export default function MovingToNorthIdahoArticlePage() {
             />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
-              <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · SRES® · Berkshire Hathaway HomeServices Jacklin Real Estate · May 27, 2026</p>
+              <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · SRES® · Berkshire Hathaway HomeServices Jacklin Real Estate · Published May 27, 2026 · Income-tax reference reviewed October 1, 2026</p>
             </div>
           </div>
         </div>
@@ -424,7 +425,7 @@ export default function MovingToNorthIdahoArticlePage() {
               <ul className="list-disc pl-6 mb-6 space-y-1">
                 <li><strong className="text-[#1C1A17]">Property taxes:</strong> among the lower rates in the country ({' '}
                   <a href="/articles/north-idaho-property-taxes-county-comparison" className={linkClass}>detail here</a>)</li>
-                <li><strong className="text-[#1C1A17]">Income tax:</strong> Idaho&apos;s 5.695% flat rate — meaningfully lower than California&apos;s progressive structure</li>
+                <li><strong className="text-[#1C1A17]">Income tax:</strong> Idaho&apos;s individual rate is 5.3%, effective January 1, 2025, according to the <a href="https://tax.idaho.gov/pressrelease/whats-new-for-2025-income-tax-returns/" target="_blank" rel="noopener noreferrer" className={linkClass}>Idaho State Tax Commission</a>. Taxable income, deductions, credits, and residency determine the amount owed; a move does not guarantee savings</li>
                 <li><strong className="text-[#1C1A17]">Sales tax:</strong> 6% statewide</li>
                 <li><strong className="text-[#1C1A17]">Electricity:</strong> ~27% below national average (Avista serves most of the area)</li>
                 <li><strong className="text-[#1C1A17]">Gas:</strong> cheaper than Washington (no Cap-and-Trade premium)</li>

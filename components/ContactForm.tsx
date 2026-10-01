@@ -1,9 +1,11 @@
 'use client'
 
 import { useState } from 'react'
+import { EMAIL, PHONE, PHONE_DISPLAY } from '@/lib/schema-ids'
 
 export default function ContactForm() {
-  const [submitted, setSubmitted] = useState(false)
+  const [draftOpened, setDraftOpened] = useState(false)
+  const [error, setError] = useState('')
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -14,42 +16,32 @@ export default function ContactForm() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
+    setError('')
+    setDraftOpened(false)
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // In production, integrate with a form backend (e.g., Formspree, Resend, etc.)
-    setSubmitted(true)
-  }
+    setError('')
 
-  if (submitted) {
-    return (
-      <div
-        style={{
-          backgroundColor: '#F5EFE6',
-          border: '1px solid #E8DDD0',
-          borderRadius: '4px',
-          padding: '48px 32px',
-          textAlign: 'center',
-        }}
-      >
-        <div style={{ width: '48px', height: '3px', backgroundColor: '#C4842A', margin: '0 auto 24px' }} />
-        <h3
-          style={{
-            fontFamily: "'Cormorant Garamond', Georgia, serif",
-            fontWeight: 500,
-            fontSize: '28px',
-            color: '#1C1A17',
-            marginBottom: '12px',
-          }}
-        >
-          Message Received
-        </h3>
-        <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-          Thanks for reaching out. Shirin will be in touch shortly.
-        </p>
-      </div>
-    )
+    if (!formData.name.trim()) {
+      setError('Please enter your name before opening an email draft.')
+      return
+    }
+
+    const body = [
+      `Name: ${formData.name.trim()}`,
+      `Email: ${formData.email.trim()}`,
+      `Phone: ${formData.phone.trim() || 'Not provided'}`,
+      `How I can help: ${formData.helpType}`,
+      '',
+      formData.message.trim(),
+    ].join('\n')
+    const subject = `Website inquiry: ${formData.helpType}`
+
+    // Opening a mailto link cannot confirm that an email was sent or delivered.
+    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    setDraftOpened(true)
   }
 
   const inputStyle = {
@@ -61,7 +53,6 @@ export default function ContactForm() {
     fontFamily: "'DM Sans', system-ui, sans-serif",
     fontSize: '15px',
     color: '#1C1A17',
-    outline: 'none',
   }
 
   const labelStyle = {
@@ -71,12 +62,21 @@ export default function ContactForm() {
     fontWeight: 600,
     textTransform: 'uppercase' as const,
     letterSpacing: '0.1em',
-    color: '#9A9590',
+    color: '#5C5650',
     marginBottom: '8px',
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6" aria-describedby="contact-email-instructions">
+      <div id="contact-email-instructions" style={{ color: '#5C5650', fontSize: '15px', lineHeight: 1.7 }}>
+        <p>This form prepares a draft in your email app. You must review it and press Send there. Nothing is sent or saved by this website.</p>
+        <p className="mt-2">
+          You can also email{' '}
+          <a href={`mailto:${EMAIL}`} className="underline break-all" style={{ color: '#8B4F2A' }}>{EMAIL}</a>
+          {' '}or call{' '}
+          <a href={`tel:${PHONE}`} className="underline whitespace-nowrap" style={{ color: '#8B4F2A' }}>{PHONE_DISPLAY}</a>.
+        </p>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" style={labelStyle}>Name *</label>
@@ -84,9 +84,12 @@ export default function ContactForm() {
             id="name"
             name="name"
             type="text"
+            autoComplete="name"
+            maxLength={100}
             required
             value={formData.name}
             onChange={handleChange}
+            className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#96601A]"
             style={inputStyle}
             placeholder="Your full name"
           />
@@ -97,9 +100,12 @@ export default function ContactForm() {
             id="email"
             name="email"
             type="email"
+            autoComplete="email"
+            maxLength={254}
             required
             value={formData.email}
             onChange={handleChange}
+            className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#96601A]"
             style={inputStyle}
             placeholder="your@email.com"
           />
@@ -112,9 +118,12 @@ export default function ContactForm() {
           id="phone"
           name="phone"
           type="tel"
+          autoComplete="tel"
+          maxLength={40}
           value={formData.phone}
           onChange={handleChange}
-          style={inputStyle}
+          className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#96601A]"
+            style={inputStyle}
           placeholder="(208) 555-0000"
         />
       </div>
@@ -127,6 +136,7 @@ export default function ContactForm() {
           required
           value={formData.helpType}
           onChange={handleChange}
+          className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#96601A]"
           style={{ ...inputStyle, cursor: 'pointer' }}
         >
           <option value="">Select one...</option>
@@ -143,28 +153,37 @@ export default function ContactForm() {
           id="message"
           name="message"
           rows={5}
+          maxLength={1500}
           value={formData.message}
           onChange={handleChange}
+          className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#96601A]"
           style={{ ...inputStyle, resize: 'vertical' }}
           placeholder="Tell me a bit about what you're looking for..."
         />
       </div>
+
+      {error && <p role="alert" style={{ color: '#9B2525' }}>{error}</p>}
+      {draftOpened && (
+        <p role="status" style={{ color: '#5C5650', lineHeight: 1.7 }}>
+          Your email app should open with your draft. This website cannot confirm whether it opened or whether you sent the email. If it did not open, copy your message into an email to {EMAIL}. Your entries are still here.
+        </p>
+      )}
 
       <button
         type="submit"
         className="w-full text-white text-xs uppercase font-semibold tracking-wider rounded-sm transition-colors"
         style={{
           fontFamily: "'DM Sans', system-ui, sans-serif",
-          backgroundColor: '#C4842A',
+          backgroundColor: '#96601A',
           padding: '16px 32px',
           letterSpacing: '0.08em',
           border: 'none',
           cursor: 'pointer',
         }}
         onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#8B4F2A')}
-        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#C4842A')}
+        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#96601A')}
       >
-        Send Message
+        Open Email Draft
       </button>
     </form>
   )

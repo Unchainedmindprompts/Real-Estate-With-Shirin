@@ -88,6 +88,18 @@ export default function ArticlesPage() {
       {/* Articles Grid */}
       <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>
         <div className="max-w-4xl mx-auto px-6 lg:px-8 space-y-6">
+          {[
+            { href: '/articles/moving-from-washington-to-north-idaho', title: 'Moving from Washington to North Idaho: A Home Buyer’s Planning Guide', description: 'Keeping a Spokane job or relocating from western Washington? Start with daily routes, a realistic ownership budget, current tax rules, and your home-sale plan.' },
+            { href: '/articles/moving-from-arizona-to-north-idaho', title: 'Moving from Arizona to North Idaho: What to Check Before You Buy', description: 'Winter access, heating and cooling, insurance, and a scouting trip that helps you compare the work of owning each home.' },
+          ].map((article) => (
+            <Link key={article.href} href={article.href} className="block group rounded-sm transition-colors duration-200 hover:border-[#C4842A] border border-[#3A3530] bg-[#2A2722] p-7 md:p-10">
+              <p className="eyebrow mb-3">Relocation Guide · October 1, 2026</p>
+              <h2 className="mb-3 text-2xl md:text-3xl font-semibold leading-tight" style={{ color: '#FAFAF8' }}>{article.title}</h2>
+              <p className="text-[#C9C2B9] text-[15px] mb-6">{article.description}</p>
+              <span className="text-[#C4842A] text-sm font-semibold">Read Article →</span>
+            </Link>
+          ))}
+
           {/* Buyer Guide — Buy Now or Wait — August 2026 */}
           <Link
             href="/articles/buying-north-idaho-buy-now-or-wait"
@@ -419,20 +431,20 @@ export default function ArticlesPage() {
                 North Idaho Buyer Guides
               </span>
               <span style={{ color: '#9A9590', fontSize: '12px' }}>·</span>
-              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590' }}>12 min read</span>
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590' }}>Route planning</span>
               <span style={{ color: '#9A9590', fontSize: '12px' }}>·</span>
               <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', fontWeight: 600, letterSpacing: '0.06em', color: '#FAFAF8', backgroundColor: '#C4842A', padding: '2px 8px', borderRadius: '2px' }}>
-                New — May 2026
+                Updated — October 2026
               </span>
             </div>
             <h2 className="mb-3" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: 'clamp(22px, 3vw, 28px)', lineHeight: 1.25, color: '#FAFAF8' }}>
-              Commute Times from North Idaho to Spokane: A Town-by-Town Guide with Real Traffic Data
+              North Idaho to Spokane: Plan Your Commute by Address
             </h2>
             <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#9A9590', lineHeight: 1.7, marginBottom: '24px' }}>
-              Post Falls is 25–30 minutes off-peak. Coeur d&apos;Alene is 33 minutes, 40 at AM peak. Sandpoint is 90–110. ITD identifies the 5-mile SH-41 to US-95 stretch as the most congested segment in the panhandle — with construction through 2029.
+              Compare the routes from Post Falls, Coeur d&apos;Alene, Hayden, Rathdrum, and Sandpoint to your actual destination. Use current traffic and project information, then test your workday in both directions.
             </p>
             <div className="flex items-center justify-between">
-              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', color: '#9A9590' }}>May 21, 2026</span>
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', color: '#9A9590' }}>October 1, 2026</span>
               <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', fontWeight: 600, color: '#C4842A' }}>Read Article →</span>
             </div>
           </Link>
@@ -685,20 +697,20 @@ export default function ArticlesPage() {
                 North Idaho Buyer Guides
               </span>
               <span style={{ color: '#9A9590', fontSize: '12px' }}>·</span>
-              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590' }}>14 min read</span>
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590' }}>Ownership checklist</span>
               <span style={{ color: '#9A9590', fontSize: '12px' }}>·</span>
               <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', fontWeight: 600, letterSpacing: '0.06em', color: '#FAFAF8', backgroundColor: '#C4842A', padding: '2px 8px', borderRadius: '2px' }}>
-                New — May 2026
+                Updated — October 2026
               </span>
             </div>
             <h2 className="mb-3" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: 'clamp(22px, 3vw, 28px)', lineHeight: 1.25, color: '#FAFAF8' }}>
-              North Idaho Cost of Living: BEA Data Comparison vs. Seattle, Boise, and California (2024)
+              North Idaho Cost of Living: Compare the Full Cost of a Home
             </h2>
             <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#9A9590', lineHeight: 1.7, marginBottom: '24px' }}>
-              The Coeur d&apos;Alene MSA sits at 97.5 on the BEA&apos;s Regional Price Parity index — 2.5% below the national average, 15.5 points below Seattle. A category-by-category breakdown using official BEA, USDA, and EIA data.
+              Compare mortgage terms, parcel taxes, insurance, utilities, maintenance, and everyday travel. Historical BEA metro data provides context; the home you choose determines your budget.
             </p>
             <div className="flex items-center justify-between">
-              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', color: '#9A9590' }}>May 20, 2026</span>
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', color: '#9A9590' }}>October 1, 2026</span>
               <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', fontWeight: 600, color: '#C4842A' }}>Read Article →</span>
             </div>
           </Link>
@@ -955,7 +967,7 @@ export default function ArticlesPage() {
               </span>
               <span style={{ color: '#9A9590', fontSize: '12px' }}>·</span>
               <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590' }}>
-                9 min read
+                Buyer comparison
               </span>
               <span style={{ color: '#9A9590', fontSize: '12px' }}>·</span>
               <span
@@ -970,7 +982,7 @@ export default function ArticlesPage() {
                   borderRadius: '2px',
                 }}
               >
-                New — May 2026
+                Updated — October 2026
               </span>
             </div>
             <h2
@@ -983,14 +995,14 @@ export default function ArticlesPage() {
                 color: '#FAFAF8',
               }}
             >
-              Spokane vs. Coeur d&apos;Alene: Why So Many Buyers End Up on the Idaho Side
+              Spokane vs. Coeur d&apos;Alene: Which Fits Your Home Search?
             </h2>
             <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#9A9590', lineHeight: 1.7, marginBottom: '24px' }}>
-              Thinking about the Inland Northwest but not sure which side of the border to land on? An honest comparison of home prices, taxes, lifestyle, and the geography most agents won&apos;t explain.
+              Compare the homes, work routes, ownership costs, and daily services that matter to you on either side of the state line, including when to add Post Falls to your search.
             </p>
             <div className="flex items-center justify-between">
               <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', color: '#9A9590' }}>
-                May 3, 2026
+                October 1, 2026
               </span>
               <span
                 style={{

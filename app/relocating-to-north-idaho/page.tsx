@@ -22,8 +22,9 @@ export const metadata: Metadata = {
     url: 'https://www.realestatewithshirin.com/relocating-to-north-idaho',
     type: 'article',
     publishedTime: '2026-05-31',
+    modifiedTime: '2026-10-01',
     authors: ['Shirin Abplanalp'],
-    images: ['https://www.realestatewithshirin.com/images/north-idaho-relocation-guide.png'],
+    images: ['https://www.realestatewithshirin.com/images/north-idaho-city-comparison.png'],
   },
 }
 
@@ -43,10 +44,10 @@ const webPageSchema = {
   breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` },
   primaryImageOfPage: {
     '@type': 'ImageObject',
-    url: `${BASE_URL}/images/north-idaho-relocation-guide.png`,
+    url: `${BASE_URL}/images/north-idaho-city-comparison.png`,
   },
   datePublished: '2026-05-31T00:00:00-07:00',
-  dateModified: '2026-07-07T00:00:00-07:00',
+  dateModified: '2026-10-01T00:00:00-07:00',
   author: AGENT_AUTHOR_STUB,
   publisher: BRAND_PUBLISHER_STUB,
 }
@@ -63,14 +64,14 @@ const articleSchema = {
   url: PAGE_URL,
   image: {
     '@type': 'ImageObject',
-    url: `${BASE_URL}/images/north-idaho-relocation-guide.png`,
-    width: 1536,
-    height: 1024,
+    url: `${BASE_URL}/images/north-idaho-city-comparison.png`,
+    width: 1672,
+    height: 941,
   },
   author: AGENT_AUTHOR_STUB,
   publisher: BRAND_PUBLISHER_STUB,
   datePublished: '2026-05-31T00:00:00-07:00',
-  dateModified: '2026-07-07T00:00:00-07:00',
+  dateModified: '2026-10-01T00:00:00-07:00',
   mainEntityOfPage: { '@id': `${PAGE_URL}#webpage` },
   inLanguage: 'en-US',
   articleSection: 'Relocation Guide',
@@ -129,22 +130,22 @@ const articleSchema = {
     },
     {
       '@type': 'WebPage',
-      name: 'Property Taxes by State and County, 2026',
-      url: 'https://taxfoundation.org/data/all/state/property-taxes-by-state-county/',
-      publisher: { '@type': 'Organization', name: 'Tax Foundation', url: 'https://taxfoundation.org' },
-      description: 'Idaho effective property tax rate: approximately 0.53% of assessed value (2026 data).',
+      name: 'Idaho Homeowner Property Tax Relief',
+      url: 'https://tax.idaho.gov/search-category/property-tax/homeowners/',
+      publisher: { '@type': 'GovernmentOrganization', name: 'Idaho State Tax Commission', url: 'https://tax.idaho.gov' },
+      description: 'Property-specific taxes and homeowner exemption eligibility; a statewide average is not a parcel tax quote.',
     },
     {
       '@type': 'WebPage',
       name: 'Regional Price Parities by State and Metro Area',
-      url: 'https://www.bea.gov/data/prices-inflation/regional-price-parities-state-and-metro-area',
+      url: 'https://fred.stlouisfed.org/series/RPPALL17660',
       publisher: {
         '@type': 'GovernmentOrganization',
         name: 'Bureau of Economic Analysis — U.S. Department of Commerce',
         url: 'https://www.bea.gov',
       },
       description:
-        "Regional Price Parity index: Coeur d'Alene MSA at 97.5, approximately 15.5 points below the Seattle metro.",
+        "BEA 2024 all-items Regional Price Parity: Coeur d'Alene MSA 98.293 (U.S. = 100), as published through FRED in February 2026.",
     },
     {
       '@type': 'WebPage',
@@ -156,19 +157,18 @@ const articleSchema = {
     },
     {
       '@type': 'WebPage',
-      name: 'Idaho Transportation Department',
-      url: 'https://itd.idaho.gov',
+      name: 'ITD I-90 Widening: SH-41 to US-95',
+      url: 'https://itd.idaho.gov/news/construction-begins-monday-to-widen-i-90-between-post-falls-and-coeur-dalene/',
       publisher: { '@type': 'GovernmentOrganization', name: 'Idaho Transportation Department', url: 'https://itd.idaho.gov' },
       description:
-        'SH-41 to US-95 interchange identified as most congested segment in Idaho Panhandle; construction through 2029.',
+        'I-90 widening between SH-41 in Post Falls and US-95 in Coeur d’Alene began in August 2025, with completion expected in 2029.',
     },
     {
       '@type': 'WebPage',
-      name: 'First Street Foundation — Climate Risk Data',
-      url: 'https://firststreet.org',
-      publisher: { '@type': 'Organization', name: 'First Street Foundation', url: 'https://firststreet.org' },
-      description:
-        "Wildfire risk assessment: less than 1% of Coeur d'Alene area properties face meaningful wildfire risk over a 30-year horizon.",
+      name: 'Idaho Department of Insurance — Home and Renters Insurance',
+      url: 'https://doi.idaho.gov/consumers/home-renters-insurance/',
+      publisher: { '@type': 'GovernmentOrganization', name: 'Idaho Department of Insurance', url: 'https://doi.idaho.gov' },
+      description: 'Property-insurance coverage and consumer guidance.',
     },
     {
       '@type': 'WebPage',
@@ -213,7 +213,7 @@ const faqSchema = {
       name: 'Is North Idaho expensive to live in?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "North Idaho is below the national average cost of living. The Coeur d'Alene metro area scores 97.5 on the Bureau of Economic Analysis Regional Price Parity index, compared to approximately 113 for the Seattle metro — a difference of 15.5 points. Daily living costs including groceries, utilities, and services run lower than the major Pacific Northwest metros. Median home prices in Coeur d'Alene were $596,392 as of April 2026 (Redfin), but Post Falls and Rathdrum offer significantly lower entry points.",
+        text: "The Coeur d'Alene metro area has a 2024 BEA all-items Regional Price Parity of 98.293, compared with a U.S. baseline of 100. This historical metro-wide price measure is not a quote for a household or a specific North Idaho town. Compare current housing, insurance, utilities, taxes, and travel costs for the property you are considering.",
       },
     },
     {
@@ -221,7 +221,7 @@ const faqSchema = {
       name: 'Does Idaho have a state income tax?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Yes. Idaho's individual income tax rate is 5.3% flat as of January 1, 2025, reduced from 5.695% in 2024. This flat rate applies to all Idaho taxable income. Idaho has no estate tax and no inheritance tax. Source: Idaho State Tax Commission (tax.idaho.gov).",
+        text: "Yes. Idaho's individual income tax rate is 5.3%, effective January 1, 2025. The amount owed depends on taxable income, deductions, credits, and residency. Idaho residents generally pay Idaho tax on income from all sources, including outside Idaho. Review a move with a qualified tax professional.",
       },
     },
     {
@@ -229,7 +229,7 @@ const faqSchema = {
       name: 'What is the property tax rate in North Idaho?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Idaho's effective property tax rate is approximately 0.53% of assessed value — one of the lowest in the western United States, according to the Tax Foundation's 2026 data. Primary residence owners qualify for Idaho's $125,000 homeowner's exemption, which reduces the assessed value used for tax calculation. Seniors and disabled residents may qualify for the Circuit Breaker program for additional reductions.",
+        text: "There is no single North Idaho property-tax rate. The parcel's taxable value, taxing districts, levies, exemptions, and any separate fees determine the bill. Eligible owner-occupants can apply to their county assessor for an exemption of 50% of the home and up to one acre, capped at $125,000. Confirm eligibility and a property-specific estimate before budgeting.",
       },
     },
     {
@@ -237,7 +237,7 @@ const faqSchema = {
       name: "What is the best town to live in near Coeur d'Alene?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "It depends on your priorities. Coeur d'Alene offers the lake and highest amenity density at a price premium. Post Falls is the most affordable major entry point and fastest-growing community in Kootenai County. Hayden is the family-friendly middle ground. Rathdrum is the most affordable and most rural option. Sandpoint, 45 minutes north, is a mountain resort town with its own distinct market.",
+        text: "It depends on your priorities. Coeur d'Alene offers the lake and highest amenity density at a price premium. Post Falls is the most affordable major entry point and fastest-growing community in Kootenai County. Hayden is the family-friendly middle ground. Rathdrum is the most affordable and most rural option. Sandpoint is farther north and has its own distinct market; check the actual route and travel time for your destinations.",
       },
     },
     {
@@ -271,9 +271,9 @@ const breadcrumbSchema = {
 
 const stats = [
   { value: '+53K', label: 'Kootenai County growth', sub: 'Residents added since 2010' },
-  { value: '97.5', label: 'BEA cost-of-living index', sub: "Coeur d'Alene MSA (vs. 100 U.S.)" },
+  { value: '98.293', label: 'BEA regional price parity', sub: "Coeur d'Alene MSA · 2024 · U.S. = 100" },
   { value: '5.3%', label: 'Idaho flat income tax', sub: 'Effective January 1, 2025' },
-  { value: '0.53%', label: 'Effective property tax', sub: 'Idaho — Tax Foundation 2026' },
+  { value: '$125K', label: 'Homeowner exemption cap', sub: 'Eligibility and application required' },
 ]
 
 const faqs = faqSchema.mainEntity.map((q) => ({ q: q.name, a: q.acceptedAnswer.text }))
@@ -301,7 +301,7 @@ export default function RelocatingToNorthIdahoPage() {
             <span className="text-[#9A9590] text-xs font-dm-sans">·</span>
             <span className="text-xs text-[#9A9590] font-dm-sans">18 min read</span>
             <span className="text-[#9A9590] text-xs font-dm-sans">·</span>
-            <span className="text-xs text-[#9A9590] font-dm-sans">May 2026</span>
+            <span className="text-xs text-[#9A9590] font-dm-sans">Updated October 1, 2026</span>
           </div>
           <h1 className="font-cormorant text-5xl md:text-6xl text-[#1C1A17] leading-tight mb-6 font-semibold">
             Relocating to North Idaho: The Complete Local Guide for Out-of-State Buyers
@@ -317,7 +317,7 @@ export default function RelocatingToNorthIdahoPage() {
             />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
-              <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR&reg; · SRES&reg; · Berkshire Hathaway HomeServices Jacklin Real Estate · May 31, 2026</p>
+              <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR&reg; · SRES&reg; · Berkshire Hathaway HomeServices Jacklin Real Estate · Published May 31, 2026 · Updated October 1, 2026</p>
             </div>
           </div>
         </div>
@@ -340,7 +340,7 @@ export default function RelocatingToNorthIdahoPage() {
 
       {/* Hero Image */}
       <img
-        src="/images/north-idaho-relocation-guide.png"
+        src="/images/north-idaho-city-comparison.png"
         alt="North Idaho lakes, mountains, and towns &mdash; a complete relocation guide for out-of-state buyers"
         className="w-full h-auto block"
       />
@@ -392,7 +392,7 @@ export default function RelocatingToNorthIdahoPage() {
                 <strong className="text-[#1C1A17]">The California equity trade.</strong>{' '}Buyers selling a California home &mdash; even a modest one &mdash; frequently have enough equity to buy here outright or with a very small mortgage. A $750,000 house in the Bay Area often funds a $550,000 home in Coeur d&rsquo;Alene with cash left over. The lifestyle math changes dramatically when you remove the mortgage payment.
               </p>
               <p className="mb-6">
-                <strong className="text-[#1C1A17]">Washington&rsquo;s proposed millionaires tax.</strong>{' '}Washington&rsquo;s 2026 legislative session is advancing SB 6346 &mdash; a 9.9% income tax on household income above $1 million, which would take effect in 2028 with first payments due in 2029. It passed the state Senate in February 2026 and is still moving through the House. For business owners and very high earners in the Seattle area, the prospect alone has sharpened the financial conversation, and North Idaho &mdash; which sits 30 miles east of Spokane &mdash; is increasingly part of it.
+                <strong className="text-[#1C1A17]">Washington&rsquo;s enacted income-tax change.</strong>{' '}Washington approved ESSB 6346 on March 30, 2026. Its 9.9% tax begins with 2028 income, with first payments due in 2029. This is a future tax on Washington taxable income after applicable deductions, not a tax on every Washington household.{' '}<a href="https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/Session%20Laws/Senate/6346-S.SL.htm" target="_blank" rel="noopener noreferrer" className={linkClass}>Read the enacted law</a>. A move needs an individual tax review, especially if Washington-source income continues.
               </p>
               <p className="mb-6">
                 <strong className="text-[#1C1A17]">Outdoor access without the price premium.</strong>{' '}Lake Coeur d&rsquo;Alene, the ski runs at Silver Mountain and Schweitzer, the mountain biking trails, the fishing &mdash; all of it is here. And unlike resort towns that have priced out everyone who isn&rsquo;t a second-home buyer, North Idaho is still a place where working families live year-round.
@@ -409,10 +409,10 @@ export default function RelocatingToNorthIdahoPage() {
 
               <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">The honest cost-of-living picture</h3>
               <p className="mb-6">
-                The Coeur d&rsquo;Alene metro area sits at 97.5 on the Bureau of Economic Analysis&rsquo;s Regional Price Parity index &mdash; meaning it&rsquo;s about 2.5% below the national average. Seattle scores approximately 113 on the same index. That&rsquo;s a 15.5-point difference in everyday purchasing power.
+                The Coeur d&rsquo;Alene metro area&rsquo;s 2024 all-items Regional Price Parity is <strong>98.293</strong>, compared with a U.S. baseline of 100. The <a href="https://fred.stlouisfed.org/series/RPPALL17660" target="_blank" rel="noopener noreferrer" className={linkClass}>BEA series published through FRED</a> was updated February 20, 2026. This is a historical regional price measure, not a current household budget.
               </p>
               <p className="mb-6">
-                That gap shows up in groceries, utilities, restaurants, and services &mdash; not just housing. North Idaho is genuinely less expensive than the major Pacific Northwest metros on nearly every daily-life line item.
+                Your costs can move differently from the regional average. Compare a specific home&rsquo;s mortgage or purchase price, insurance, utility history, property taxes, and commute before deciding what the move would save or cost.
               </p>
               <p className="mb-10">
                 The full category-by-category breakdown using BEA, USDA, and EIA data is here:{' '}
@@ -432,29 +432,23 @@ export default function RelocatingToNorthIdahoPage() {
                 <a href="/articles/north-idaho-city-comparison-coeur-dalene-post-falls-hayden-rathdrum-sandpoint" className={linkClass}>Coeur d&rsquo;Alene vs Post Falls vs Hayden vs Rathdrum vs Sandpoint</a>.
               </p>
 
-              <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">Property taxes &mdash; lower than you expect</h3>
+              <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">Property taxes: budget for the parcel</h3>
               <p className="mb-6">
-                Idaho&rsquo;s effective property tax rate is approximately 0.53% of assessed value, according to the{' '}
-                <a href="https://taxfoundation.org/data/all/state/property-taxes-by-state-county/" target="_blank" rel="noopener noreferrer" className={linkClass}>Tax Foundation&rsquo;s 2026 data</a>{' '}
-                &mdash; one of the lowest in the western United States. On a $500,000 home, that&rsquo;s roughly $2,650 per year before exemptions.
+                A statewide effective property-tax average is not the levy for a particular home. Ask for the current parcel assessment, taxing districts, tax bill, exemptions, and separate charges. A seller&rsquo;s bill may not reflect your ownership or eligibility. Confirm the assumptions with the county assessor before using it in your budget.
               </p>
-              {/* VERIFY: $125,000 homeowner's exemption — confirm exact figure and URL at tax.idaho.gov/taxes/property/homeowners-exemption/ */}
               <p className="mb-6">
-                Primary residence owners qualify for Idaho&rsquo;s $125,000 homeowner&rsquo;s exemption, which reduces the assessed value used for tax calculation. There&rsquo;s also a Circuit Breaker program for seniors and disabled residents that can reduce the bill further.
+                Under Idaho&rsquo;s <a href="https://tax.idaho.gov/search-category/property-tax/homeowners/" target="_blank" rel="noopener noreferrer" className={linkClass}>homeowner&rsquo;s exemption guidance</a>, eligible owners who occupy a home as their primary residence may apply for an exemption of 50% of the value of the home and up to one acre, capped at $125,000. The county assessor determines eligibility. A seasonal or second home should not be budgeted as though it automatically qualifies.
               </p>
               <p className="mb-10">
-                For the full county-by-county breakdown across all five panhandle counties, with official 2025 Idaho State Tax Commission rates:{' '}
-                <a href="/articles/north-idaho-property-taxes-county-comparison" className={linkClass}>Property Taxes in North Idaho</a>.
+                For more background, see <a href="/articles/north-idaho-property-taxes-county-comparison" className={linkClass}>Property Taxes in North Idaho</a>. Use county averages as context and a parcel-specific estimate for the buying decision.
               </p>
 
               <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">Idaho&rsquo;s income tax explained</h3>
               <p className="mb-6">
-                Idaho&rsquo;s individual income tax rate is 5.3% as of January 1, 2025 &mdash; a flat rate that applies to all Idaho taxable income. That&rsquo;s down from 5.695% in 2024.{' '}
-                {/* VERIFY: Idaho has no estate tax / no inheritance tax — confirm current statement on tax.idaho.gov */}
-                Idaho has no estate tax and no inheritance tax.
+                Idaho&rsquo;s individual income-tax rate is 5.3%, effective January 1, 2025, according to the <a href="https://tax.idaho.gov/pressrelease/whats-new-for-2025-income-tax-returns/" target="_blank" rel="noopener noreferrer" className={linkClass}>Idaho State Tax Commission</a>. The amount owed depends on taxable income, deductions, credits, and residency. Idaho generally taxes residents on income from all sources, including income earned outside Idaho; see the <a href="https://tax.idaho.gov/taxes/income-tax/individual-income/online-guide/" target="_blank" rel="noopener noreferrer" className={linkClass}>residency guidance</a>.
               </p>
               <p className="mb-10">
-                For buyers coming from Washington or California, the tax comparison gets interesting quickly. Washington still has no broad state income tax &mdash; but the millionaires-tax bill advancing in the 2026 legislature would change that calculus for households over $1 million starting in 2028. California&rsquo;s top statutory income tax bracket is 13.3%, and as of 2024 the effective top rate on wage income above $1 million is 14.4% once the uncapped 1.1% state disability payroll tax is included. Idaho&rsquo;s flat 5.3% sits well below either of those, and when you factor in property tax differences and the cost of daily life, the full picture often looks different than the headline numbers suggest.
+                Washington&rsquo;s <a href="https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/Session%20Laws/Senate/6346-S.SL.htm" target="_blank" rel="noopener noreferrer" className={linkClass}>enacted ESSB 6346</a> imposes a 9.9% tax beginning January 1, 2028 on Washington taxable income after deductions. It includes a $1 million standard deduction for an individual, or a combined $1 million for spouses and state-registered domestic partners. Nonresident and part-year rules can change the deduction and which income is taxed. Compare your full situation with a qualified tax professional; relocating does not guarantee tax savings or eliminate all obligations in the state you leave.
               </p>
 
               {/* ==================== H2 3: FIVE TOWNS ==================== */}
@@ -482,7 +476,7 @@ export default function RelocatingToNorthIdahoPage() {
                 </div>
                 <div className="border-l-2 border-[#C4842A] pl-5">
                   <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Sandpoint &mdash; a different kind of move</p>
-                  <p>Sandpoint is 45 minutes north on Highway 95 and operates like a different market entirely. It&rsquo;s a ski town on Lake Pend Oreille, with Schweitzer Mountain Resort as the anchor. Prices have risen significantly with demand. If you&rsquo;re buying in Sandpoint, expect a smaller job market, longer drives to Spokane, more winter, and a town that heavily rewards those who came for exactly that.</p>
+                  <p>Sandpoint is farther north on Highway 95 and operates like a different market entirely. It&rsquo;s a ski town on Lake Pend Oreille, with Schweitzer Mountain Resort as the anchor. Prices have risen significantly with demand. If you&rsquo;re buying in Sandpoint, expect a smaller job market, longer drives to Spokane, more winter, and a town that heavily rewards those who came for exactly that.</p>
                 </div>
               </div>
               <p className="mb-10">
@@ -553,30 +547,22 @@ export default function RelocatingToNorthIdahoPage() {
               <p className="mb-6">
                 Hot, dry, and genuinely spectacular. Coeur d&rsquo;Alene in July and August is what people in California and Seattle imagine when they picture the Pacific Northwest at its best &mdash; except it actually exists. Lake temperatures get swimmable. The sun sets at 9:30 pm. The mountains are accessible without crowds.
               </p>
-              {/* VERIFY: First Street Foundation wildfire risk — confirm <1% CDA figure via firststreet.org directly */}
               <p className="mb-10">
-                Wildfire risk in the immediate CDA/Post Falls/Hayden area is low &mdash; First Street Foundation data shows less than 1% of properties in the CDA area face meaningful wildfire risk over a 30-year horizon. Smoke from regional fires can be an issue in late summer, but it&rsquo;s different from direct structural fire risk.
+                Assess wildfire exposure and insurance at the property level. Vegetation, access, construction, and insurer underwriting matter; a regional average cannot establish that a particular home is low-risk. Obtain a property-specific insurance quote and review coverage before your purchase deadlines. The <a href="https://doi.idaho.gov/consumers/home-renters-insurance/" target="_blank" rel="noopener noreferrer" className={linkClass}>Idaho Department of Insurance</a> provides consumer guidance.
               </p>
 
               {/* ==================== H2 6: COMMUTES ==================== */}
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">Commutes, infrastructure, and remote work</h2>
 
               <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">How far is everything really?</h3>
-              <p className="mb-6">&ldquo;60 minutes from everything&rdquo; is the phrase I use because it&rsquo;s accurate. From Post Falls or CDA, you are:</p>
-              <ul className="list-disc pl-6 mb-6 space-y-1">
-                <li>25&ndash;30 minutes from Spokane (off-peak on I-90, Post Falls)</li>
-                <li>33 minutes from Spokane (CDA, off-peak); closer to 40 minutes at AM peak</li>
-                <li>50 minutes from Silver Mountain ski resort</li>
-                <li>About 45 minutes from Sandpoint</li>
-                <li>90+ minutes from Sandpoint to Spokane (for buyers considering that commute)</li>
-              </ul>
-              {/* VERIFY: ITD SH-41/US-95 construction through 2029 — confirm via itd.idaho.gov */}
               <p className="mb-6">
-                The caveat: the SH-41 to US-95 interchange in Post Falls is the most congested segment in the Idaho Panhandle, per Idaho Transportation Department data, with construction continuing through 2029. If your morning commute runs through that stretch, understand the current timeline.
+                A city-to-city estimate is only a starting point. A Post Falls trip to Liberty Lake, a Coeur d&rsquo;Alene trip to downtown Spokane, and a Sandpoint trip to the airport are different commutes. Check the exact home address and destination, then test both directions at your actual weekday departure times. Allow for parking, local streets, construction, and winter conditions.
+              </p>
+              <p className="mb-6">
+                <a href="https://itd.idaho.gov/news/construction-begins-monday-to-widen-i-90-between-post-falls-and-coeur-dalene/" target="_blank" rel="noopener noreferrer" className={linkClass}>ITD&rsquo;s I-90 widening project</a> runs between SH-41 in Post Falls and US-95 in Coeur d&rsquo;Alene, with completion expected in 2029. This is a freeway segment between two interchanges, not one interchange. Whether you travel through it depends on your address and route. Check <a href="https://511.idaho.gov" target="_blank" rel="noopener noreferrer" className={linkClass}>Idaho 511</a> and <a href="https://wsdot.wa.gov/travel/real-time" target="_blank" rel="noopener noreferrer" className={linkClass}>WSDOT real-time travel</a> before leaving.
               </p>
               <p className="mb-10">
-                For the full town-by-town commute guide with real traffic data:{' '}
-                <a href="/articles/north-idaho-to-spokane-commute-times" className={linkClass}>Commute Times from North Idaho to Spokane</a>.
+                For town-by-town route considerations and a practical test-drive checklist, see <a href="/articles/north-idaho-to-spokane-commute-times" className={linkClass}>Commute Times from North Idaho to Spokane</a>.
               </p>
 
               <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">Remote work viability</h3>
@@ -592,7 +578,7 @@ export default function RelocatingToNorthIdahoPage() {
               </p>
 
               {/* ==================== H2 7: FROM CA / WA ==================== */}
-              <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">The relocation move &mdash; if you&rsquo;re coming from California or Washington</h2>
+              <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">Plan for the place you are moving from</h2>
 
               <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">Moving from California</h3>
               <p className="mb-6">
@@ -609,17 +595,20 @@ export default function RelocatingToNorthIdahoPage() {
                 <a href="/articles/best-places-to-live-north-idaho-leaving-california" className={linkClass}>Best Places to Live in North Idaho for People Leaving California</a>.
               </p>
 
-              <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">Moving from Washington (Seattle area)</h3>
+              <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">Moving from Washington</h3>
               <p className="mb-6">
-                The Seattle-to-North-Idaho move is geographically closer and financially interesting in a different way. You&rsquo;re essentially 30 miles east of Spokane, which means the lifestyle difference is significant but the distance isn&rsquo;t enormous.
+                For a Washington-to-North-Idaho move, separate your home search from the tax and work-location questions. Verify your employer&rsquo;s remote-work requirements, the actual commute, and your property-specific ownership costs.
               </p>
               <p className="mb-6">
-                The tax argument got sharper with Washington&rsquo;s 2026 millionaires-tax bill (SB 6346) advancing through the legislature &mdash; a proposed 9.9% income tax on household income over $1 million, effective 2028 if it becomes law. For business owners and very high earners who were already considering the move, the prospect alone has pushed the financial math from &ldquo;interesting&rdquo; to &ldquo;urgent.&rdquo;
+                Washington enacted ESSB 6346 in March 2026, with the new tax beginning in 2028. The rate and deduction rules are explained above. An Idaho address alone does not settle domicile or Washington-source-income questions. Ask a qualified tax professional to compare the move year and later years before making a purchase based on a projected tax saving.
               </p>
               <p className="mb-10">
-                For the Spokane vs. CDA comparison that almost every Washington buyer eventually asks:{' '}
+                For a step-by-step starting point, read the <a href="/articles/moving-from-washington-to-north-idaho" className={linkClass}>Washington-to-North-Idaho home buyer guide</a>. If you are choosing which side of the state line fits your work and daily life, compare:{' '}
                 <a href="/articles/spokane-vs-coeur-dalene-which-is-right-for-you" className={linkClass}>Spokane vs. Coeur d&rsquo;Alene</a>.
               </p>
+
+              <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">Moving from Arizona</h3>
+              <p className="mb-10">If you are coming from Phoenix, Scottsdale, or another Arizona community, compare the upkeep of each home as closely as its asking price. Winter access, heating and cooling, drainage, insurance, and a realistic scouting trip deserve attention before an offer. The <a href="/articles/moving-from-arizona-to-north-idaho" className={linkClass}>Arizona-to-North-Idaho buyer guide</a> helps you organize those checks around the home and routines you are leaving.</p>
 
               <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">Should you rent before buying?</h3>
               <p className="mb-10">
@@ -713,7 +702,7 @@ export default function RelocatingToNorthIdahoPage() {
                 Shirin Abplanalp is a licensed Idaho REALTOR&reg; and SRES&reg; (Seniors Real Estate Specialist) at Berkshire Hathaway HomeServices Jacklin Real Estate, serving Coeur d&rsquo;Alene, Post Falls, Hayden, Rathdrum, and Sandpoint.
               </p>
               <p className="mt-8 text-[13px] text-[#9A9590] italic">
-                Guide last updated: May 2026. Market statistics reflect April 2026 data from Redfin and U.S. Census Bureau. Tax rates reflect 2025 Idaho State Tax Commission schedules. All data subject to change; verify current figures with relevant sources before making real estate or financial decisions.
+                Tax, cost-index, and commute sections reviewed October 1, 2026. Earlier market statistics remain historical April–May 2026 snapshots, not current quotes. The cited BEA price index is for 2024. Verify current laws, property costs, and road conditions before making real estate or financial decisions.
               </p>
 
             </article>
@@ -741,7 +730,7 @@ export default function RelocatingToNorthIdahoPage() {
                     <li>Schools, healthcare, families</li>
                     <li>Winters and the weather</li>
                     <li>Commutes and remote work</li>
-                    <li>From California or Washington</li>
+                    <li>From California, Washington, or Arizona</li>
                     <li>The out-of-state buying process</li>
                     <li>Frequently asked questions</li>
                   </ul>

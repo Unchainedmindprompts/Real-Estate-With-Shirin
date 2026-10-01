@@ -88,7 +88,7 @@ export default function ContactPage() {
                   color: '#1C1A17',
                 }}
               >
-                Send a Message
+                Prepare an Email
               </h2>
               <ContactForm />
             </div>
