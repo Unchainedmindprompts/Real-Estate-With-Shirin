@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     url: 'https://www.realestatewithshirin.com/articles/sres-designation-real-estate-after-55-north-idaho',
     type: 'article',
     publishedTime: '2026-05-04',
+    modifiedTime: '2026-10-01',
     authors: ['Shirin Abplanalp'],
     images: ['https://www.realestatewithshirin.com/images/north-idaho-lake-hero.webp'],
   },
@@ -35,7 +36,7 @@ const articleSchema = {
   publisher: BRAND_PUBLISHER_STUB,
   isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles' },
   datePublished: '2026-05-04T00:00:00-07:00',
-  dateModified: '2026-07-07T00:00:00-07:00',
+  dateModified: '2026-10-01T00:00:00-07:00',
   mainEntityOfPage: 'https://www.realestatewithshirin.com/articles/sres-designation-real-estate-after-55-north-idaho',
   url: 'https://www.realestatewithshirin.com/articles/sres-designation-real-estate-after-55-north-idaho',
   keywords: [
@@ -51,7 +52,6 @@ const articleSchema = {
     'Idaho senior relocation',
   ],
   articleSection: 'Senior Real Estate',
-  wordCount: 2800,
   spatialCoverage: {
     '@type': 'Place',
     name: 'North Idaho',
@@ -112,7 +112,8 @@ const articleSchema = {
     {
       '@type': 'Legislation',
       name: 'Washington SB 6346 (Income Tax)',
-      legislationDate: '2026-03',
+      legislationDate: '2026-03-30',
+      url: 'https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/Session%20Laws/Senate/6346-S.SL.htm',
     },
     {
       '@type': 'CreativeWork',
@@ -126,6 +127,7 @@ const articleSchema = {
     {
       '@type': 'GovernmentService',
       name: 'Idaho State Income Tax',
+      url: 'https://tax.idaho.gov/pressrelease/whats-new-for-2025-income-tax-returns/',
       provider: {
         '@type': 'GovernmentOrganization',
         name: 'Idaho State Tax Commission',
@@ -146,7 +148,7 @@ const faqSchema = {
       name: 'Why is North Idaho becoming a retiree relocation destination?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "The combination of Idaho's flat 5.3% income tax (with no tax on groceries), lower property taxes than most western states, the lake-area lifestyle, real seasons without the Pacific coast's gray climate, and accessible regional medical infrastructure makes the area particularly suited to retirees from California, Washington, Oregon, Texas, and Arizona. Washington's proposed millionaires tax — a 9.9% income tax on household income over $1 million, advancing through the 2026 legislature and effective 2028 if enacted — is already accelerating inquiries from Western Washington retirees specifically.",
+        text: "North Idaho offers a range of lake-area, in-town, and rural settings, but the right retirement move depends on the individual home, access to services, and total ownership costs. Idaho has a 5.3% individual income-tax rate effective January 1, 2025, and groceries are generally subject to sales tax. Eligible residents may claim a food tax credit. Compare property-specific costs and your own tax situation rather than assuming a move will save money.",
       },
     },
     {
@@ -178,7 +180,7 @@ const faqSchema = {
       name: 'How does Idaho residency affect taxes for relocating retirees?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Idaho has a flat 5.3% state income tax compared to California's progressive structure that can exceed 13%, Oregon's up to 9.9%, and Washington's proposed $1M+ income tax advancing through the 2026 legislature (effective 2028 if enacted). The order of operations matters significantly — establishing Idaho residency before selling a long-held home in a high-tax state can save substantial tax on the gain. Coordinate with a CPA who understands both states.",
+        text: "Idaho generally taxes residents on income from all sources, subject to deductions, credits, and other rules. Moving does not automatically end obligations in another state: California real-estate gains can remain taxable by California after a move. Washington enacted ESSB 6346 in March 2026, with its new income tax beginning in 2028 and rules covering Washington-source income of nonresidents. Have a qualified tax professional review residency, income sources, any home-sale exclusion, and move-year returns before acting.",
       },
     },
     {
@@ -202,15 +204,6 @@ const breadcrumbSchema = {
     { '@type': 'ListItem', position: 3, name: 'SRES® Guide: Real Estate After 55', item: 'https://www.realestatewithshirin.com/articles/sres-designation-real-estate-after-55-north-idaho' },
   ],
 }
-
-const taxData = [
-  { state: 'California', rate: 13.3, note: 'Top marginal rate', highlight: false },
-  { state: 'Oregon', rate: 9.9, note: 'Top marginal rate', highlight: false },
-  { state: 'Washington (2028+)', rate: 9.9, note: '$1M+ household income only', highlight: false },
-  { state: 'Idaho', rate: 5.3, note: 'Flat rate — all income levels', highlight: true },
-  { state: 'Arizona', rate: 2.5, note: 'Flat rate', highlight: false },
-  { state: 'Texas / Nevada', rate: 0, note: 'No state income tax', highlight: false },
-]
 
 const agentChecklist = [
   { q: 'Do they hold the SRES® designation?', a: 'Not a guarantee of quality, but it indicates specialized training and care about this client demographic.' },
@@ -240,7 +233,7 @@ const agingInPlaceQuestions = [
 const faqs = [
   {
     q: 'Why is North Idaho becoming a retiree relocation destination?',
-    a: "The combination of Idaho's flat 5.3% income tax (with no tax on groceries), lower property taxes than most western states, the lake-area lifestyle, real seasons without the Pacific coast's gray climate, and accessible regional medical infrastructure makes the area particularly suited to retirees from California, Washington, Oregon, Texas, and Arizona. Washington's proposed millionaires tax — a 9.9% income tax on household income over $1 million, advancing through the 2026 legislature and effective 2028 if enacted — is already accelerating inquiries from Western Washington retirees specifically.",
+    a: "North Idaho offers a range of lake-area, in-town, and rural settings, but the right retirement move depends on the individual home, access to services, and total ownership costs. Idaho has a 5.3% individual income-tax rate effective January 1, 2025, and groceries are generally subject to sales tax. Eligible residents may claim a food tax credit. Compare property-specific costs and your own tax situation rather than assuming a move will save money.",
   },
   {
     q: 'What is the SRES® designation?',
@@ -256,7 +249,7 @@ const faqs = [
   },
   {
     q: 'How does Idaho residency affect taxes for relocating retirees?',
-    a: "Idaho has a flat 5.3% state income tax compared to California's progressive structure that can exceed 13%, Oregon's up to 9.9%, and Washington's proposed $1M+ income tax advancing through the 2026 legislature (effective 2028 if enacted). The order of operations matters significantly — establishing Idaho residency before selling a long-held home in a high-tax state can save substantial tax on the gain. Coordinate with a CPA who understands both states.",
+    a: "Idaho generally taxes residents on income from all sources, subject to deductions, credits, and other rules. Moving does not automatically end obligations in another state: California real-estate gains can remain taxable by California after a move. Washington enacted ESSB 6346 in March 2026, with its new income tax beginning in 2028 and rules covering Washington-source income of nonresidents. Have a qualified tax professional review residency, income sources, any home-sale exclusion, and move-year returns before acting.",
   },
   {
     q: "Should adult children be involved in their parents' real estate decisions?",
@@ -302,7 +295,7 @@ export default function SresArticlePage() {
             />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
-              <p className="font-dm-sans text-xs text-[#9A9590]">SRES® · Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · May 4, 2026</p>
+              <p className="font-dm-sans text-xs text-[#9A9590]">SRES® · Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · Published May 4, 2026 · Tax references reviewed October 1, 2026</p>
             </div>
           </div>
         </div>
@@ -320,7 +313,7 @@ export default function SresArticlePage() {
             <div className="text-center">
               <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">5.3%</p>
               <p className="font-dm-sans text-xs text-[#9A9590] mt-1 uppercase tracking-wide">Idaho Income Tax</p>
-              <p className="font-dm-sans text-xs text-[#6B7A8D] mt-0.5">Flat rate, all income levels</p>
+              <p className="font-dm-sans text-xs text-[#6B7A8D] mt-0.5">Effective January 1, 2025</p>
             </div>
             <div className="text-center">
               <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">30 min</p>
@@ -329,8 +322,8 @@ export default function SresArticlePage() {
             </div>
             <div className="text-center">
               <p className="font-cormorant text-3xl text-[#C4842A] font-semibold">2028</p>
-              <p className="font-dm-sans text-xs text-[#9A9590] mt-1 uppercase tracking-wide">WA Tax Bill</p>
-              <p className="font-dm-sans text-xs text-[#6B7A8D] mt-0.5">9.9% on $1M+ if enacted</p>
+              <p className="font-dm-sans text-xs text-[#9A9590] mt-1 uppercase tracking-wide">WA Law: Future Start</p>
+              <p className="font-dm-sans text-xs text-[#6B7A8D] mt-0.5">Applies after deductions; see below</p>
             </div>
           </div>
         </div>
@@ -340,7 +333,7 @@ export default function SresArticlePage() {
       <div className="w-full overflow-hidden" style={{ maxHeight: '520px' }}>
         <img
           src="/images/north-idaho-lake-hero.webp"
-          alt="Older couple with a real estate agent outside a North Idaho home with lake views"
+          alt="Illustrative lake-view home and wooded North Idaho landscape"
           className="w-full object-cover object-center"
           style={{ maxHeight: '520px' }}
         />
@@ -373,44 +366,19 @@ export default function SresArticlePage() {
                 The North Idaho Retiree Reality
               </h2>
               <p className="mb-6">
-                Coeur d&apos;Alene, Post Falls, Hayden, and Sandpoint have become some of the most active retiree relocation destinations in the western United States. The reasons aren&apos;t complicated. Idaho has a flat 5.3% state income tax. No tax on groceries. Lower property taxes in dollar terms than most western states. Real seasons without the gray oppression of the Pacific coast. A lake culture that defines the region&apos;s identity.
+                Coeur d&apos;Alene, Post Falls, Hayden, and Sandpoint offer different settings for a retirement move. Compare access to services, seasonal routines, property upkeep, and total ownership costs. Idaho&apos;s individual income-tax rate is <a href="https://tax.idaho.gov/pressrelease/whats-new-for-2025-income-tax-returns/" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">5.3%, effective January 1, 2025</a>. Idaho&apos;s <a href="https://tax.idaho.gov/taxes/sales-use/online-guide/" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">sales-tax rate is 6%</a>; groceries are generally taxable, and <a href="https://tax.idaho.gov/pressrelease/claim-your-food-tax-credit-even-if-you-dont-earn-enough-to-file-income-taxes/" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">eligible residents may claim a food tax credit</a>. Use actual parcel taxes and insurance quotes rather than assuming a lower bill.
               </p>
               <p className="mb-6">
-                As of mid-2026, Washington&apos;s proposed millionaires tax (SB 6346) &mdash; a 9.9% income tax on household income over $1 million, effective 2028 if enacted &mdash; is advancing through the legislature, and the prospect alone is already accelerating relocation inquiries from Western Washington retirees with significant assets. I&apos;ve watched the influx firsthand. Buyers from California, Washington, Oregon, and increasingly from Texas and Arizona, all approaching or already in retirement, looking for a different chapter of life.
+                Washington approved <a href="https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/Session%20Laws/Senate/6346-S.SL.htm" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">ESSB 6346</a> on March 30, 2026. Its 9.9% tax begins January 1, 2028 on Washington taxable income after applicable deductions. The law includes a $1 million standard deduction per individual, or a combined $1 million for spouses and state-registered domestic partners, with adjustments for nonresidents and part-year residents. It also addresses Washington-source income of nonresidents. This is an income tax, not a tax triggered simply by owning substantial assets; moving to Idaho does not automatically eliminate every Washington obligation.
               </p>
               <p className="mb-8">
                 What I&apos;ve also watched is <a href="/articles/why-home-buyers-feel-like-theyre-doing-their-realtors-job" className="text-[#C4842A] hover:underline">how often the real estate process fails these buyers</a>. Not because agents are bad people — most are well-intentioned. But because a relocation transaction for someone over 55 is genuinely different, and most agents don&apos;t know what they don&apos;t know.
               </p>
 
-              {/* Tax Comparison Chart */}
               <div className="my-8 p-6 bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm">
-                <h3 className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-6">
-                  State Income Tax — Common Retirement Origin States vs. Idaho
-                </h3>
-                <div className="space-y-5">
-                  {taxData.map((row) => (
-                    <div key={row.state}>
-                      <div className="flex justify-between mb-1.5">
-                        <span className={`font-dm-sans text-sm ${row.highlight ? 'font-semibold text-[#C4842A]' : 'text-[#1C1A17]'}`}>
-                          {row.state}
-                        </span>
-                        <span className={`font-dm-sans text-sm font-semibold ${row.highlight ? 'text-[#C4842A]' : 'text-[#1C1A17]'}`}>
-                          {row.rate === 0 ? 'None' : `${row.rate}%`}
-                        </span>
-                      </div>
-                      <div className="h-2 bg-[#E8DDD0] rounded-full overflow-hidden">
-                        <div
-                          className={`h-full rounded-full transition-all ${row.highlight ? 'bg-[#C4842A]' : 'bg-[#9A9590]'}`}
-                          style={{ width: row.rate === 0 ? '1.5%' : `${(row.rate / 13.3) * 100}%` }}
-                        />
-                      </div>
-                      <p className="font-dm-sans text-xs text-[#9A9590] mt-1">{row.note}</p>
-                    </div>
-                  ))}
-                </div>
-                <p className="font-dm-sans text-xs text-[#9A9590] mt-6 pt-4 border-t border-[#E8DDD0]">
-                  Sources: State revenue departments. Washington rate applies to household income over $1M beginning January 2028 (SB 6346). Idaho rate is a flat tax applied to all taxable income.
-                </p>
+                <h3 className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Build an individual tax comparison</h3>
+                <p className="mb-4">A top marginal rate in one state, a flat rate in another, and a future tax with a large deduction do not measure the same thing. Ask your tax adviser to review your income sources, deductions, credits, residency, and property-sale plans before relying on a projected saving.</p>
+                <p className="font-dm-sans text-xs text-[#9A9590]">Tax references reviewed October 1, 2026. The linked state sources explain the applicable dates and rules; this article is general real-estate planning information, not individual tax advice.</p>
               </div>
 
               <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
@@ -434,7 +402,7 @@ export default function SresArticlePage() {
                 </div>
                 <div className="border-l-2 border-[#C4842A] pl-5">
                   <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-2">The Financial Structure Is More Complex</p>
-                  <p>Buyers over 55 are often working with multiple income streams: pension distributions, 401(k) and IRA withdrawals, Social Security timing, capital gains from the sale of a long-held home, and sometimes 1031 exchanges from investment properties. The order in which these moves happen affects taxes significantly. Selling your California home before establishing Idaho residency means California taxes the gain. Establishing Idaho residency first means Idaho&apos;s lower rate applies. I&apos;m not your tax advisor — but I&apos;ve learned to ask the questions that prompt buyers to talk to one before they make decisions they&apos;ll regret.</p>
+                  <p>Buyers over 55 are often working with multiple income streams: pension distributions, 401(k) and IRA withdrawals, Social Security timing, capital gains from the sale of a long-held home, and sometimes 1031 exchanges from investment properties. Residency, income sources, exclusions, and credits all matter. Moving to Idaho before selling a California property does not by itself make the gain Idaho-only income. The <a href="https://www.ftb.ca.gov/forms/2024/2024-1031-publication.pdf" target="_blank" rel="noopener noreferrer" className="text-[#C4842A] hover:underline">California Franchise Tax Board&apos;s residency guidance</a> explains that a gain from California real estate can remain taxable by California even when the seller is a nonresident. Ask a qualified tax adviser to review both states and any available home-sale exclusion before setting the sale and move timeline.</p>
                 </div>
                 <div className="border-l-2 border-[#C4842A] pl-5">
                   <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-2">The Family Coordination Is Real</p>
@@ -442,7 +410,7 @@ export default function SresArticlePage() {
                 </div>
                 <div className="border-l-2 border-[#C4842A] pl-5">
                   <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-2">The Selling Side Has Its Own Complexity</p>
-                  <p>For local North Idaho seniors selling a long-held family home, the considerations multiply. Decades of accumulated possessions. Emotional attachment to a home where major life events happened. Estate planning intersections. Capital gains exclusions ($250,000 single, $500,000 married filing jointly) that need to be timed correctly. This is where SRES® training matters most. The technical real estate transaction is straightforward. The human transaction underneath it isn&apos;t.</p>
+                  <p>For local North Idaho seniors selling a long-held family home, the considerations multiply. Decades of accumulated possessions. Emotional attachment to a home where major life events happened. Estate planning intersections. Potential home-sale capital gains exclusions whose ownership, use, and other eligibility requirements need an individual tax review. This is where SRES® training matters most. The technical real estate transaction is straightforward. The human transaction underneath it isn&apos;t.</p>
                 </div>
               </div>
 
@@ -576,9 +544,9 @@ export default function SresArticlePage() {
                       { label: 'Full Name', value: 'Seniors Real Estate Specialist®' },
                       { label: 'Issued By', value: 'National Association of REALTORS®' },
                       { label: 'Client Focus', value: 'Buyers and sellers 50+' },
-                      { label: 'Idaho Income Tax', value: '5.3% flat rate' },
-                      { label: 'Capital Gains Exclusion', value: '$250K single / $500K married' },
-                      { label: 'WA Tax (2028)', value: '9.9% on $1M+ household income' },
+                      { label: 'Idaho Individual Income Tax', value: '5.3% effective January 1, 2025; individual rules apply' },
+                      { label: 'Home-Sale Tax Treatment', value: 'Confirm exclusion eligibility and source-state rules' },
+                      { label: 'WA Income Tax', value: 'Enacted March 2026; starts 2028 after applicable deductions' },
                       { label: 'CDA to Spokane Medical', value: '~30 minutes' },
                     ].map((item) => (
                       <div key={item.label} className="border-t border-[#2C2A27] pt-3 first:border-0 first:pt-0">

@@ -42,7 +42,7 @@ const articleSchema = {
   author: AGENT_AUTHOR_STUB,
   publisher: BRAND_PUBLISHER_STUB,
   datePublished: '2026-07-18T00:00:00-07:00',
-  dateModified: '2026-07-18T00:00:00-07:00',
+  dateModified: '2026-10-01T00:00:00-07:00',
   mainEntityOfPage: PAGE_URL,
   url: PAGE_URL,
   isPartOf: { '@id': `${BASE_URL}/articles` },
@@ -265,6 +265,12 @@ export default function BuyingFromOutOfStatePage() {
               <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">A realistic timeline</h3>
               <p className="mb-10">Once you&rsquo;re pre-approved and we&rsquo;ve zeroed in on a home, a typical purchase runs about 30 to 60 days from accepted offer to keys, depending on your loan and the property&rsquo;s due diligence (well, septic, survey items take a little longer). If you&rsquo;re paying cash, it can move faster. We&rsquo;ll build the timeline around your move, not the other way around.</p>
 
+              <div className="bg-[#F5EFE6] border-l-4 border-[#C4842A] p-6 my-8">
+                <h2 className="font-cormorant text-2xl text-[#1C1A17] font-semibold mb-3">Start with the questions specific to your move</h2>
+                <p className="mb-3">Moving from Washington? The <Link href="/articles/moving-from-washington-to-north-idaho" className={linkClass}>Washington buyer guide</Link> covers Spokane work routes, remote-work approval, taxes, and coordinating your current-home sale.</p>
+                <p>Moving from Arizona? The <Link href="/articles/moving-from-arizona-to-north-idaho" className={linkClass}>Arizona buyer guide</Link> focuses on winter access, heating and cooling, ownership costs, and making the scouting trip useful. Then use the steps below to organize the purchase itself.</p>
+              </div>
+
               {/* Step 1 */}
               <h2 id="step-1" className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold scroll-mt-24">Step 1 &mdash; Narrow Down the Right North Idaho Town</h2>
               <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">Coeur d&rsquo;Alene, Post Falls, Hayden, Rathdrum, Sandpoint</h3>
@@ -277,7 +283,7 @@ export default function BuyingFromOutOfStatePage() {
               {/* Step 2 */}
               <h2 id="step-2" className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold scroll-mt-24">Step 2 &mdash; Get Your Financing (or Home-Sale Plan) Ready</h2>
               <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">Pre-approval before you shop</h3>
-              <p className="mb-6">Get pre-approved before we tour anything serious. In a market where good North Idaho homes still move, a pre-approval letter is what makes your offer real to a seller. A local or Idaho-savvy lender is worth it &mdash; they understand our appraisals and rural properties. For the broader budget picture, the{' '}<a href="/articles/north-idaho-cost-of-living-comparison" className={linkClass}>North Idaho cost of living comparison</a>{' '}puts real numbers around the move.</p>
+              <p className="mb-6">Get pre-approved before we tour anything serious. In a market where good North Idaho homes still move, a pre-approval letter is what makes your offer real to a seller. A local or Idaho-savvy lender is worth it &mdash; they understand our appraisals and rural properties. For the broader budget picture, the{' '}<a href="/articles/north-idaho-cost-of-living-comparison" className={linkClass}>North Idaho cost of living comparison</a>{' '}helps you build a property-specific budget for the move.</p>
               <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">If you still have a house to sell</h3>
               <p className="mb-6">Plenty of my out-of-state buyers are carrying a home somewhere else. There are real strategies for this &mdash; sale contingencies, bridge financing, timing your listing &mdash; and the right one depends on your equity and how much certainty you need. I walk through seven of them in{' '}<a href="/articles/buying-north-idaho-home-before-selling-current-bridge-financing-options" className={linkClass}>You Found Your Dream Home &mdash; But You Still Have a House to Sell</a>. The point: you have options, and we plan them before you fall in love with a house.</p>
               <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">Rural, well/septic, and acreage lending quirks</h3>

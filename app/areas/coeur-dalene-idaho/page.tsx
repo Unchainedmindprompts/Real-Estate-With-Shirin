@@ -276,7 +276,7 @@ export default function CdaPage() {
                   ['Median sale price', '$601,000', '$553,000', '$521,000'],
                   ['Months of supply', '2.6', '2.1', '1.4'],
                   ['Character', 'Walkable lake town', 'Quiet residential', 'Newer, suburban'],
-                  ['Spokane commute', '35–45 min', '40–50 min', '25–30 min'],
+                  ['Spokane route to test', 'I-90 from the home', 'Local access to I-90', 'I-90 from the home'],
                   ['Best for', 'Lake & walkability', 'Space & schools', 'Value & new build'],
                 ].map((row) => (
                   <tr key={row[0]} style={{ borderBottom: '1px solid #E8DDD0' }}>
@@ -290,8 +290,17 @@ export default function CdaPage() {
             </table>
           </div>
           <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-            Deeper reads:{' '}<Link href="/areas/hayden-idaho" className={linkClass}>the Hayden guide</Link>,{' '}<Link href="/areas/post-falls-idaho" className={linkClass}>the Post Falls guide</Link>,{' '}<Link href="/articles/spokane-vs-coeur-dalene-which-is-right-for-you" className={linkClass}>Spokane vs. Coeur d&apos;Alene</Link>, and{' '}<Link href="/articles/north-idaho-to-spokane-commute-times" className={linkClass}>real commute times</Link>.
+            Deeper reads:{' '}<Link href="/areas/hayden-idaho" className={linkClass}>the Hayden guide</Link>,{' '}<Link href="/areas/post-falls-idaho" className={linkClass}>the Post Falls guide</Link>,{' '}<Link href="/articles/spokane-vs-coeur-dalene-which-is-right-for-you" className={linkClass}>Spokane vs. Coeur d&apos;Alene</Link>, and{' '}<Link href="/articles/north-idaho-to-spokane-commute-times" className={linkClass}>planning a Spokane commute</Link>.
           </p>
+        </div>
+      </section>
+
+      <section className="section-padding bg-[#FAFAF8]">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <p className="eyebrow mb-4" style={{ color: '#96601A' }}>RELOCATION PLANNING</p>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6">Bring your everyday routine into the home search</h2>
+          <p className="text-[#5C5650] mb-5">If you are moving from Washington, compare the trip from each candidate home to your actual work destination at your normal hours. Spokane Valley, downtown Spokane, and the airport are different trips. Our <Link href="/articles/moving-from-washington-to-north-idaho" className={linkClass}>Washington-to-North-Idaho guide</Link> also covers employer, tax, and home-sale questions to settle before buying.</p>
+          <p className="text-[#5C5650]">Coming from Arizona? Use the <Link href="/articles/moving-from-arizona-to-north-idaho" className={linkClass}>Arizona-to-North-Idaho guide</Link> to compare winter access, home systems, insurance, and maintenance. Then follow the <Link href="/articles/buying-north-idaho-home-from-out-of-state" className={linkClass}>out-of-state purchase guide</Link> for the transaction steps.</p>
         </div>
       </section>
 

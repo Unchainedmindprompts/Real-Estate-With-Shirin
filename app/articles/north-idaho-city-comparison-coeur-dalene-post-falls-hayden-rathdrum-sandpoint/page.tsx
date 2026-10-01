@@ -28,7 +28,7 @@ const articleSchema = {
   '@id': 'https://www.realestatewithshirin.com/articles/north-idaho-city-comparison-coeur-dalene-post-falls-hayden-rathdrum-sandpoint#article',
   headline: "Coeur d'Alene vs Post Falls vs Hayden vs Rathdrum vs Sandpoint: The Honest Comparison",
   description:
-    'Five North Idaho cities, one honest comparison. Home prices, schools, commutes, snow, taxes, and what people only tell you after closing. Updated May 2026.',
+    'Five North Idaho cities, one honest comparison. Home prices, schools, commutes, snow, taxes, and what people only tell you after closing. Commute guidance reviewed October 1, 2026; market snapshots are dated separately.',
   image: {
     '@type': 'ImageObject',
     url: 'https://www.realestatewithshirin.com/images/north-idaho-city-comparison.png',
@@ -39,7 +39,7 @@ const articleSchema = {
   publisher: BRAND_PUBLISHER_STUB,
   isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles' },
   datePublished: '2026-05-23T00:00:00-07:00',
-  dateModified: '2026-07-07T00:00:00-07:00',
+  dateModified: '2026-10-01T00:00:00-07:00',
   mainEntityOfPage: 'https://www.realestatewithshirin.com/articles/north-idaho-city-comparison-coeur-dalene-post-falls-hayden-rathdrum-sandpoint',
   url: 'https://www.realestatewithshirin.com/articles/north-idaho-city-comparison-coeur-dalene-post-falls-hayden-rathdrum-sandpoint',
   keywords: [
@@ -150,7 +150,7 @@ const faqSchema = {
       name: "What's the best North Idaho city for someone commuting to Spokane?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Post Falls, by a clear margin. The drive from central Post Falls to downtown Spokane runs 25-35 minutes in peak traffic, the shortest of the five cities. Coeur d'Alene adds 10-15 minutes (35-45 minutes peak). Hayden and Rathdrum sit in the 40-55 minute range depending on which side of each town you're starting from. Sandpoint is 90+ minutes and is not realistically a daily commute. For commuters who specifically want to minimize drive time without sacrificing quality of life, the Post Falls neighborhoods west of Spokane Street (closer to the Washington border) cut another 5-10 minutes off the commute.",
+        text: "Post Falls is west of the other four towns, which can make it a useful starting point for a Spokane-side home search. The best address depends on your workplace, departure time, and route. Compare the exact home-to-work trip in both directions on workdays, including local streets and parking. Check Idaho 511 and WSDOT for construction, incidents, and winter conditions. A city-wide peak-time estimate cannot predict your commute.",
       },
     },
     {
@@ -188,7 +188,7 @@ const comparisonRows = [
   { metric: 'Typical home value', values: ['$604,956', '$530,937', '$645,199', '$578,248', '$634,657'], hi: 1 },
   { metric: '1-yr value change', values: ['+3.0%', '+1.5%', '+2.8%', '+2.7%', '+1.8%'], hi: -1 },
   { metric: 'Median days to pending', values: ['25', '10', '14', '31', '39'], hi: 1 },
-  { metric: 'Commute to Spokane (peak)', values: ['35–45 min', '25–35 min', '40–50 min', '40–55 min', '90+ min'], hi: 1 },
+  { metric: 'Spokane route to test', values: ['I-90 west', 'Local access to I-90 west', 'Local roads / US-95 to I-90', 'SH-41 to I-90 or destination-specific alternate', 'Longer regional trip; test both directions'], hi: -1 },
   { metric: 'Effective property tax rate', values: ['~0.55%', '~0.55%', '~0.55%', '~0.55%', '~0.58%'], hi: -1 },
   { metric: 'Annual snowfall', values: ['50–60 in', '45–55 in', '55–65 in', '50–60 in', '80–100+ in'], hi: 4 },
   { metric: 'Distance to Kootenai Health', values: ['5 min', '15 min', '8 min', '25 min', '75 min'], hi: -1 },
@@ -228,7 +228,7 @@ export default function CityComparisonArticlePage() {
             <span className="text-[#9A9590] text-xs font-dm-sans">·</span>
             <span className="text-xs text-[#9A9590] font-dm-sans">15 min read</span>
             <span className="text-[#9A9590] text-xs font-dm-sans">·</span>
-            <span className="text-xs text-[#9A9590] font-dm-sans">May 2026</span>
+            <span className="text-xs text-[#9A9590] font-dm-sans">Commute update · October 1, 2026</span>
           </div>
           <h1 className="font-cormorant text-5xl md:text-6xl text-[#1C1A17] leading-tight mb-6 font-semibold">
             Coeur d&apos;Alene vs Post Falls vs Hayden vs Rathdrum vs Sandpoint: The Honest Comparison
@@ -244,7 +244,7 @@ export default function CityComparisonArticlePage() {
             />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
-              <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · May 23, 2026</p>
+              <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · Published May 23, 2026 · Commute update October 1, 2026</p>
             </div>
           </div>
         </div>
@@ -337,7 +337,7 @@ export default function CityComparisonArticlePage() {
                 <a href="https://www.zillow.com/home-values/" target="_blank" rel="noopener noreferrer" className={linkClass}>Zillow</a>{' '}
                 (data through April 30, 2026). Other metrics from my prior articles on{' '}
                 <a href="/articles/north-idaho-property-taxes-county-comparison" className={linkClass}>property taxes</a>,{' '}
-                <a href="/articles/north-idaho-to-spokane-commute-times" className={linkClass}>commute times</a>,{' '}
+                <a href="/articles/north-idaho-to-spokane-commute-times" className={linkClass}>commute planning</a> (reviewed October 1, 2026; check <a href="https://511.idaho.gov" target="_blank" rel="noopener noreferrer" className={linkClass}>Idaho 511</a> and <a href="https://wsdot.wa.gov/travel/real-time" target="_blank" rel="noopener noreferrer" className={linkClass}>WSDOT</a> for current conditions),{' '}
                 <a href="/articles/snowiest-cities-north-idaho-ranking" className={linkClass}>snowfall</a>, and{' '}
                 <a href="/articles/north-idaho-healthcare-kootenai-spokane" className={linkClass}>healthcare</a>.
               </p>
@@ -364,7 +364,7 @@ export default function CityComparisonArticlePage() {
               <p className="mb-3 font-semibold text-[#1C1A17]">Who it&apos;s not right for:</p>
               <ul className="list-disc pl-6 mb-6 space-y-1">
                 <li>You want acreage. CdA proper doesn&apos;t really have that — you&apos;ll be looking at compact lots or paying $1M+ for the exceptions.</li>
-                <li>You&apos;re commuting to Spokane every day. 35–45 minutes in peak traffic is fine; it&apos;s also 50+ when there&apos;s an accident on I-90, which happens more than anyone wants to admit.</li>
+                <li>You commute to Spokane every day. Test the exact home-to-work route at your usual hours; the I-90 construction segment between SH-41 and US-95 may be part of that trip.</li>
                 <li>You&apos;re price-sensitive. The Foothills neighborhood is $604K typical. Riverton is $390K. There&apos;s variance, but there isn&apos;t a &ldquo;cheap&rdquo; Coeur d&apos;Alene.</li>
               </ul>
               <div className="my-6 p-5 rounded-sm border-l-2 border-[#C4842A] bg-[#F5EFE6] mb-6">
@@ -384,7 +384,7 @@ export default function CityComparisonArticlePage() {
               </p>
               <p className="mb-3 font-semibold text-[#1C1A17]">Who Post Falls is right for:</p>
               <ul className="list-disc pl-6 mb-6 space-y-1">
-                <li>You commute to Spokane (25–35 minutes, the closest of the five)</li>
+                <li>You commute to Spokane and want to compare addresses west of the other four towns; test your actual route and schedule</li>
                 <li>You want new construction at reasonable prices — there&apos;s more inventory being built here than anywhere else in Kootenai County</li>
                 <li>You want city water and sewer (not all of Post Falls has it, but most does — unlike Rathdrum and parts of Hayden)</li>
                 <li>You want a family-friendly community with city services</li>
@@ -426,7 +426,7 @@ export default function CityComparisonArticlePage() {
               <ul className="list-disc pl-6 mb-6 space-y-1">
                 <li>First-time buyers under $500K. You&apos;ll struggle here — the starter inventory is thin.</li>
                 <li>You want urban energy. Hayden does not have it. It is residential by design.</li>
-                <li>You commute to Spokane. 40–50 minutes is real here, especially from the east side near the lake.</li>
+                <li>You commute to Spokane. Local-road access and the approach to I-90 can materially affect the trip; test the property address rather than relying on a city average.</li>
               </ul>
               <div className="my-6 p-5 rounded-sm border-l-2 border-[#C4842A] bg-[#F5EFE6] mb-6">
                 <p><strong className="text-[#1C1A17]">The thing nobody tells you:</strong> there&apos;s a meaningful difference between <em>Hayden</em> and <em>Hayden Lake</em> (the much smaller unincorporated community of 680 people on the lake&apos;s east shore). When buyers say &ldquo;I want Hayden Lake,&rdquo; they often mean &ldquo;I want a house with a view of Hayden Lake.&rdquo; Those are different properties at different price points. Be specific with your agent about which one you actually mean.</p>
@@ -462,7 +462,7 @@ export default function CityComparisonArticlePage() {
                   <a href="/articles/buying-property-prairie-wells-septic-roads" className={linkClass}>understanding the infrastructure tradeoffs matters</a>.
                 </li>
                 <li>You want walkable urbanism. Downtown Rathdrum has a few restaurants and a coffee shop, but it&apos;s small.</li>
-                <li>You&apos;re commuting to Spokane every day. 40–55 minutes is the realistic range, and the route via Highway 53 has its own bottlenecks.</li>
+                <li>You commute to Spokane every day. Compare SH-41/I-90 and any destination-specific alternate using current routing and actual weekday drives.</li>
               </ul>
               <div className="my-6 p-5 rounded-sm border-l-2 border-[#C4842A] bg-[#F5EFE6] mb-10">
                 <p><strong className="text-[#1C1A17]">The thing nobody tells you:</strong> Rathdrum Prairie has a microclimate of its own. It tends to be colder than Coeur d&apos;Alene in winter, hotter in summer, and the wind comes off the prairie in ways that surprise transplants. I{' '}
@@ -491,7 +491,7 @@ export default function CityComparisonArticlePage() {
               </ul>
               <p className="mb-3 font-semibold text-[#1C1A17]">Who it&apos;s not right for:</p>
               <ul className="list-disc pl-6 mb-6 space-y-1">
-                <li>You need to be near Spokane. 90+ minutes. Don&apos;t kid yourself.</li>
+                <li>You need frequent access to Spokane. Test the longer regional drive and consider how winter conditions and office frequency fit your schedule.</li>
                 <li>You rely on Kootenai Health or you have ongoing medical care. Bonner General Health is in Sandpoint, but the major medical center is 75 minutes south.</li>
                 <li>
                   You hate snow. 80–100 inches a year is not a typo — it&apos;s the everyday reality. (More in my{' '}
@@ -508,7 +508,7 @@ export default function CityComparisonArticlePage() {
                 How to decide
               </h2>
               <p className="mb-6">I get asked this question every week. Here&apos;s how I actually walk people through it:</p>
-              <p className="mb-4"><strong className="text-[#1C1A17]">Start with the commute.</strong> If you&apos;re working in Spokane five days a week, the calculation is already half-made. Post Falls or Coeur d&apos;Alene. Rathdrum at the outside. Hayden if you&apos;re on the west side of town. Sandpoint is out.</p>
+              <p className="mb-4"><strong className="text-[#1C1A17]">Start with the commute.</strong> If you work in Spokane, compare the exact home and workplace addresses at your actual hours. Office frequency, parking, winter flexibility, and local-road access matter more than a single city-wide estimate.</p>
               <p className="mb-4"><strong className="text-[#1C1A17]">Then layer the budget.</strong> Under $500K, Post Falls is your friend. $500–700K, all five are in play but with tradeoffs. Over $700K, you have real options in every city — but the <em>value</em> per dollar is best in Rathdrum and Post Falls, and the <em>prestige</em> per dollar is best in Hayden.</p>
               <p className="mb-4"><strong className="text-[#1C1A17]">Then the lifestyle.</strong> Lake person? Coeur d&apos;Alene or Hayden for in-town access; Sandpoint for the dramatic version. Walkability? Coeur d&apos;Alene by a wide margin, with Sandpoint as the quieter second choice. Room to spread out? Rathdrum or rural Hayden. Quiet residential? Post Falls or Hayden.</p>
               <p className="mb-4"><strong className="text-[#1C1A17]">Then the schools.</strong> Coeur d&apos;Alene 271 covers Coeur d&apos;Alene and Hayden. Post Falls 273 covers Post Falls. Lakeland 272 covers Rathdrum, Spirit Lake, and Athol. Lake Pend Oreille 84 covers Sandpoint. All four are functional. The differences are real but smaller than the marketing implies. (See{' '}
@@ -521,7 +521,7 @@ export default function CityComparisonArticlePage() {
                 What I&apos;d buy if I were starting over today
               </h2>
               <p className="mb-6">
-                Honest answer: a Rathdrum Prairie home on a half-acre, in the Lakeland district, with a $550–650K budget. Here&apos;s why. The growth rate is doing the work for you. The value-per-dollar is the strongest in the region. The schools are quietly good and improving. You have city services if you stay in town, well/septic if you want acreage, and you&apos;re 15 minutes from Coeur d&apos;Alene when you need restaurants or the lake. You&apos;re 40 minutes from Spokane when you need it. You&apos;re getting in before the price catches up to the trajectory.
+                Honest answer: a Rathdrum Prairie home on a half-acre, in the Lakeland district, with a $550–650K budget. Here&apos;s why. The growth rate is doing the work for you. The value-per-dollar is the strongest in the region. The schools are quietly good and improving. You have city services if you stay in town, well/septic if you want acreage, and you&apos;re 15 minutes from Coeur d&apos;Alene when you need restaurants or the lake. Check your actual drive to Spokane at the times you expect to travel. You&apos;re getting in before the price catches up to the trajectory.
               </p>
               <p className="mb-10">
                 That&apos;s not the answer for every buyer. But if you don&apos;t have a strong reason to choose a different city — a specific job location, a specific school, a specific lifestyle anchor — Rathdrum is where the math points.
