@@ -1,47 +1,70 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { EMAIL, PHONE, PHONE_DISPLAY } from '@/lib/schema-ids'
 
 export default function ContactForm() {
-  const [draftOpened, setDraftOpened] = useState(false)
+  const [ready, setReady] = useState(false)
+  useEffect(() => setReady(true), [])
+  const [status, setStatus] = useState<'idle' | 'sending' | 'accepted'>('idle')
   const [error, setError] = useState('')
+  const [reference, setReference] = useState('')
+  const requestId = useRef<string | null>(null)
+  const sending = useRef(false)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     helpType: '',
     message: '',
+    website: '',
   })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
     setError('')
-    setDraftOpened(false)
+    setStatus('idle')
+    requestId.current = null
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    if (sending.current || status === 'accepted') return
     setError('')
 
     if (!formData.name.trim()) {
-      setError('Please enter your name before opening an email draft.')
+      setError('Please enter your name.')
       return
     }
 
-    const body = [
-      `Name: ${formData.name.trim()}`,
-      `Email: ${formData.email.trim()}`,
-      `Phone: ${formData.phone.trim() || 'Not provided'}`,
-      `How I can help: ${formData.helpType}`,
-      '',
-      formData.message.trim(),
-    ].join('\n')
-    const subject = `Website inquiry: ${formData.helpType}`
-
-    // Opening a mailto link cannot confirm that an email was sent or delivered.
-    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-    setDraftOpened(true)
+    sending.current = true
+    setStatus('sending')
+    // Keep the same key after a timeout or retry; change it only if the inquiry changes.
+    try {
+      requestId.current ??= crypto.randomUUID()
+      const currentRequestId = requestId.current
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, requestId: currentRequestId }),
+        signal: AbortSignal.timeout(15_000),
+      })
+      const result = await response.json().catch(() => null)
+      if (response.status !== 202 || result?.ok !== true || result?.status !== 'accepted' || result?.reference !== currentRequestId) {
+        setError(typeof result?.error === 'string'
+          ? result.error.slice(0, 400)
+          : 'We could not confirm your inquiry was accepted. Please try again or use the email or phone link on this page. Your entries are still here.')
+        setStatus('idle')
+        return
+      }
+      setReference(result.reference)
+      setStatus('accepted')
+    } catch {
+      setError('We could not confirm your inquiry was accepted. Please try again or use the email or phone link on this page. Your entries are still here.')
+      setStatus('idle')
+    } finally {
+      sending.current = false
+    }
   }
 
   const inputStyle = {
@@ -67,9 +90,9 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6" aria-describedby="contact-email-instructions">
+    <form method="post" action="/api/contact" onSubmit={handleSubmit} className="space-y-6" aria-describedby="contact-email-instructions" aria-busy={status === 'sending'}>
       <div id="contact-email-instructions" style={{ color: '#5C5650', fontSize: '15px', lineHeight: 1.7 }}>
-        <p>This form prepares a draft in your email app. You must review it and press Send there. Nothing is sent or saved by this website.</p>
+        <p>Send your inquiry to Shirin by email. Please don&apos;t include financial account details or other sensitive information.</p>
         <p className="mt-2">
           You can also email{' '}
           <a href={`mailto:${EMAIL}`} className="underline break-all" style={{ color: '#8B4F2A' }}>{EMAIL}</a>
@@ -77,6 +100,14 @@ export default function ContactForm() {
           <a href={`tel:${PHONE}`} className="underline whitespace-nowrap" style={{ color: '#8B4F2A' }}>{PHONE_DISPLAY}</a>.
         </p>
       </div>
+      <noscript><p>Please use the email or phone link above to contact Shirin. This form needs JavaScript to send an inquiry.</p></noscript>
+      <div aria-hidden="true" style={{ position: 'absolute', left: '-10000px', width: '1px', height: '1px', overflow: 'hidden' }}>
+        <label htmlFor="contact-website">Leave this field empty</label>
+        <input id="contact-website" name="website" type="text" autoComplete="off" tabIndex={-1}
+          value={formData.website} onChange={handleChange} maxLength={200} />
+      </div>
+      <fieldset disabled={!ready || status === 'sending' || status === 'accepted'} className="space-y-6" style={{ border: 0, padding: 0, margin: 0, minWidth: 0 }}>
+      <legend className="sr-only">Your contact details and inquiry</legend>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" style={labelStyle}>Name *</label>
@@ -153,7 +184,7 @@ export default function ContactForm() {
           id="message"
           name="message"
           rows={5}
-          maxLength={1500}
+          maxLength={5000}
           value={formData.message}
           onChange={handleChange}
           className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#96601A]"
@@ -162,28 +193,32 @@ export default function ContactForm() {
         />
       </div>
 
+      </fieldset>
+
       {error && <p role="alert" style={{ color: '#9B2525' }}>{error}</p>}
-      {draftOpened && (
-        <p role="status" style={{ color: '#5C5650', lineHeight: 1.7 }}>
-          Your email app should open with your draft. This website cannot confirm whether it opened or whether you sent the email. If it did not open, copy your message into an email to {EMAIL}. Your entries are still here.
-        </p>
+      {status === 'accepted' && (
+        <div role="status" style={{ color: '#5C5650', lineHeight: 1.7 }}>
+          <p>Your inquiry was accepted for email delivery to Shirin. Thank you for reaching out.</p>
+          <p className="text-sm mt-2 break-all">Reference: {reference}</p>
+        </div>
       )}
 
       <button
         type="submit"
-        className="w-full text-white text-xs uppercase font-semibold tracking-wider rounded-sm transition-colors"
+        disabled={!ready || status === 'sending' || status === 'accepted'}
+        className="w-full text-white text-xs uppercase font-semibold tracking-wider rounded-sm transition-colors disabled:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#96601A]"
         style={{
           fontFamily: "'DM Sans', system-ui, sans-serif",
           backgroundColor: '#96601A',
           padding: '16px 32px',
           letterSpacing: '0.08em',
           border: 'none',
-          cursor: 'pointer',
+          cursor: status === 'idle' ? 'pointer' : 'default',
         }}
         onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#8B4F2A')}
         onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#96601A')}
       >
-        Open Email Draft
+        {status === 'sending' ? 'Sending…' : status === 'accepted' ? 'Inquiry Accepted' : 'Send Inquiry'}
       </button>
     </form>
   )
