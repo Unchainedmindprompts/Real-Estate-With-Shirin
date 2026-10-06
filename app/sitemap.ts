@@ -53,6 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: baseUrl, lastModified: gitLastModified('app/page.tsx'), changeFrequency: 'weekly', priority: 1.0 },
+    { url: `${baseUrl}/life-in-north-idaho`, lastModified: gitLastModified('app/life-in-north-idaho/page.tsx'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/about`, lastModified: gitLastModified('app/about/page.tsx'), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/buyers`, lastModified: gitLastModified('app/buyers/page.tsx'), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/sellers`, lastModified: gitLastModified('app/sellers/page.tsx'), changeFrequency: 'monthly', priority: 0.9 },
