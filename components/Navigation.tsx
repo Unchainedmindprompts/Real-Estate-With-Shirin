@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+import { KVCORE_BASE } from '@/lib/idx-search'
 
 const areas = [
   { label: 'Post Falls', href: '/areas/post-falls-idaho' },
@@ -178,6 +179,23 @@ export default function Navigation() {
           >
             Articles
           </Link>
+          <a
+            href={KVCORE_BASE}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm uppercase tracking-wider font-medium transition-colors"
+            style={{
+              fontFamily: "'DM Sans', system-ui, sans-serif",
+              color: solid ? '#5C5650' : '#F5EFE6',
+              letterSpacing: '0.08em',
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = '#C4842A')}
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.color = solid ? '#5C5650' : '#F5EFE6')
+            }
+          >
+            Search Homes
+          </a>
 
           <Link
             href="/contact"
@@ -276,6 +294,7 @@ export default function Navigation() {
             </div>
             <Link href="/about" className="text-sm uppercase tracking-wider font-medium" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }} onClick={() => setMobileOpen(false)}>About</Link>
             <Link href="/articles" className="text-sm uppercase tracking-wider font-medium" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }} onClick={() => setMobileOpen(false)}>Articles</Link>
+            <a href={KVCORE_BASE} target="_blank" rel="noopener noreferrer" className="text-sm uppercase tracking-wider font-medium" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }} onClick={() => setMobileOpen(false)}>Search Homes</a>
             <Link
               href="/contact"
               className="inline-block text-white text-xs uppercase font-semibold tracking-wider rounded-sm text-center"
