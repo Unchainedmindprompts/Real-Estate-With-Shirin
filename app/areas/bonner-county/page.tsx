@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { BASE_URL, BUSINESS_ID, WEBSITE_ID, PLACE } from '@/lib/schema-ids'
+import IdxSearchCta from '@/components/IdxSearchCta'
+import { IDX_SEARCH_BY_AREA } from '@/lib/idx-search'
 
 const PAGE_URL = `${BASE_URL}/areas/bonner-county`
 
@@ -348,6 +350,8 @@ export default function BonnerCountyPage() {
           </div>
         </div>
       </section>
+
+      <IdxSearchCta placeName="Bonner County" searchUrl={IDX_SEARCH_BY_AREA['bonner-county']} />
 
       {/* Bottom CTA */}
       <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>

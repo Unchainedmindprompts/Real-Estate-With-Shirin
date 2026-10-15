@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { BASE_URL, BUSINESS_ID, EMAIL, PHONE, PHONE_DISPLAY, WEBSITE_ID, PLACE } from '@/lib/schema-ids'
+import IdxSearchCta from '@/components/IdxSearchCta'
+import { IDX_SEARCH_BY_AREA } from '@/lib/idx-search'
 
 const PAGE_URL = `${BASE_URL}/areas/post-falls-idaho`
 
@@ -297,6 +299,8 @@ export default function PostFallsPage() {
           </div>
         </div>
       </section>
+
+      <IdxSearchCta placeName="Post Falls" searchUrl={IDX_SEARCH_BY_AREA['post-falls-idaho']} />
 
       {/* Bottom CTA */}
       <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>

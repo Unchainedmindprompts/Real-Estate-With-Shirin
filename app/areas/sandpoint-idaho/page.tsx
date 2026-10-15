@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { BASE_URL, BUSINESS_ID, WEBSITE_ID, PLACE } from '@/lib/schema-ids'
+import IdxSearchCta from '@/components/IdxSearchCta'
+import { IDX_SEARCH_BY_AREA } from '@/lib/idx-search'
 
 const PAGE_URL = `${BASE_URL}/areas/sandpoint-idaho`
 
@@ -278,6 +280,8 @@ export default function SandpointPage() {
           </div>
         </div>
       </section>
+
+      <IdxSearchCta placeName="Sandpoint" searchUrl={IDX_SEARCH_BY_AREA['sandpoint-idaho']} />
 
       {/* Bottom CTA */}
       <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
