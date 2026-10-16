@@ -180,6 +180,12 @@ export default function Footer() {
           <p className="text-xs" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
             Helping North Idaho buyers and sellers find their perfect home.
           </p>
+          <p className="text-xs" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+            Website by{" "}
+            <a href="https://kodecite.ai" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-80">
+              KodeCite
+            </a>
+          </p>
         </div>
 
         {/* BHHS franchisee disclaimer — required by Berkshire Hathaway HomeServices for franchisees */}
