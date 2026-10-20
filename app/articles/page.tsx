@@ -1338,6 +1338,67 @@ export default function ArticlesPage() {
             </div>
           </Link>
 
+          {/* Buyer Resources — How Much Do Homes Cost Sandpoint */}
+          <Link
+            href="/articles/how-much-do-homes-cost-sandpoint-idaho"
+            className="block group rounded-sm transition-colors duration-200 hover:border-[#C4842A]"
+            style={{
+              border: '1px solid #3A3530',
+              backgroundColor: '#2A2722',
+              padding: '40px 40px',
+            }}
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <span
+                style={{
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontSize: '11px',
+                  fontWeight: 600,
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                  color: '#C4842A',
+                }}
+              >
+                Buyer Resources
+              </span>
+              <span style={{ color: '#9A9590', fontSize: '12px' }}>·</span>
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590' }}>
+                9 min read
+              </span>
+            </div>
+            <h2
+              className="mb-3"
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontWeight: 600,
+                fontSize: 'clamp(22px, 3vw, 28px)',
+                lineHeight: 1.25,
+                color: '#FAFAF8',
+              }}
+            >
+              How Much Do Homes Cost in Sandpoint, Idaho? (2026 Buyer&apos;s Guide)
+            </h2>
+            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#9A9590', lineHeight: 1.7, marginBottom: '24px' }}>
+              A complete price breakdown by budget — from the in-town entry level to Lake Pend Oreille waterfront and Schweitzer — plus how Sandpoint compares to Coeur d&apos;Alene and the western metros.
+            </p>
+            <div className="flex items-center justify-between">
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', color: '#9A9590' }}>
+                October 20, 2026
+              </span>
+              <span
+                style={{
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontSize: '13px',
+                  fontWeight: 600,
+                  color: '#C4842A',
+                  letterSpacing: '0.04em',
+                }}
+              >
+                Read Article →
+              </span>
+            </div>
+          </Link>
+
           {/* Buyer Resources — Best Realtor in North Idaho */}
           <Link
             href="/articles/best-realtor-north-idaho-how-to-choose"
