@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
+  robots: process.env.VERCEL_ENV === 'preview' ? { index: false, follow: false } : undefined,
   metadataBase: new URL('https://www.realestatewithshirin.com'),
   title: {
     default: 'Shirin Abplanalp | North Idaho REALTOR® | BHHS Jacklin',

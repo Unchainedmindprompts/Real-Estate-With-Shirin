@@ -776,6 +776,15 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <p className="eyebrow mb-4">LIFE IN NORTH IDAHO</p>
+          <h2 className="mb-6" style={{ fontSize: 'clamp(36px, 5vw, 52px)', lineHeight: 1.15 }}>Find Your Kind of Everyday</h2>
+          <p className="mb-8" style={{ color: '#5C5650' }}>A favorite table, a lake day, a new routine. Get to know the life around the homes — with local food and wine, outdoor inspiration, and ideas for your discovery visit.</p>
+          <Link href="/life-in-north-idaho" className="inline-block text-xs uppercase font-semibold tracking-wider" style={{ color: '#8B4F2A', borderBottom: '1px solid #C4842A', paddingBottom: '8px' }}>Explore Life in North Idaho →</Link>
+        </div>
+      </section>
+
       {/* ── 7. Service Areas ── */}
       <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
