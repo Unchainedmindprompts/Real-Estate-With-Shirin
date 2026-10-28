@@ -1643,6 +1643,67 @@ export default function ArticlesPage() {
             </div>
           </Link>
 
+          {/* Seller Resources — Selling a Home in North Idaho */}
+          <Link
+            href="/articles/selling-a-home-north-idaho-what-your-home-is-worth"
+            className="block group rounded-sm transition-colors duration-200 hover:border-[#C4842A]"
+            style={{
+              border: '1px solid #3A3530',
+              backgroundColor: '#2A2722',
+              padding: '40px 40px',
+            }}
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <span
+                style={{
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontSize: '11px',
+                  fontWeight: 600,
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                  color: '#C4842A',
+                }}
+              >
+                Seller Resources
+              </span>
+              <span style={{ color: '#9A9590', fontSize: '12px' }}>·</span>
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590' }}>
+                12 min read
+              </span>
+            </div>
+            <h2
+              className="mb-3"
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontWeight: 600,
+                fontSize: 'clamp(22px, 3vw, 28px)',
+                lineHeight: 1.25,
+                color: '#FAFAF8',
+              }}
+            >
+              Selling a Home in North Idaho: What Your Home Is Worth in 2026
+            </h2>
+            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#9A9590', lineHeight: 1.7, marginBottom: '24px' }}>
+              Median sale prices checked October 28, 2026 run from $520,000 in Rathdrum to $616,050 in Sandpoint, while median list prices sit higher in every city. Why the list to sale gap is not a discount rate, and how to price from closed sales.
+            </p>
+            <div className="flex items-center justify-between">
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', color: '#9A9590' }}>
+                October 28, 2026
+              </span>
+              <span
+                style={{
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontSize: '13px',
+                  fontWeight: 600,
+                  color: '#C4842A',
+                  letterSpacing: '0.04em',
+                }}
+              >
+                Read Article →
+              </span>
+            </div>
+          </Link>
+
           {/* Buyer Resources — Short-Term Rental Rules in North Idaho Cities */}
           <Link
             href="/articles/short-term-rental-rules-north-idaho-cities"
