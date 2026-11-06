@@ -2070,6 +2070,67 @@ export default function ArticlesPage() {
             </div>
           </Link>
 
+          {/* Buyer Resources — How Much Can You Negotiate November 2026 */}
+          <Link
+            href="/articles/how-much-can-you-negotiate-north-idaho-home-november-2026"
+            className="block group rounded-sm transition-colors duration-200 hover:border-[#C4842A]"
+            style={{
+              border: '1px solid #3A3530',
+              backgroundColor: '#2A2722',
+              padding: '40px 40px',
+            }}
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <span
+                style={{
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontSize: '11px',
+                  fontWeight: 600,
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                  color: '#C4842A',
+                }}
+              >
+                Buyer Resources
+              </span>
+              <span style={{ color: '#9A9590', fontSize: '12px' }}>·</span>
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590' }}>
+                9 min read
+              </span>
+            </div>
+            <h2
+              className="mb-3"
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontWeight: 600,
+                fontSize: 'clamp(22px, 3vw, 28px)',
+                lineHeight: 1.25,
+                color: '#FAFAF8',
+              }}
+            >
+              How Much Can You Negotiate on a North Idaho Home in November 2026?
+            </h2>
+            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#9A9590', lineHeight: 1.7, marginBottom: '24px' }}>
+              No standard discount exists. Nationally 20.5% of listings cut price in October, while local closed sales rose 4.0%. The hard limits are loan rules: seller credits capped at 3%, 6%, or 9% on a conventional loan.
+            </p>
+            <div className="flex items-center justify-between">
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', color: '#9A9590' }}>
+                November 6, 2026
+              </span>
+              <span
+                style={{
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontSize: '13px',
+                  fontWeight: 600,
+                  color: '#C4842A',
+                  letterSpacing: '0.04em',
+                }}
+              >
+                Read Article →
+              </span>
+            </div>
+          </Link>
+
           {/* Market Updates — Are North Idaho Homebuyers Pulling Back */}
           <Link
             href="/articles/are-north-idaho-buyers-pulling-back-housing-market"
