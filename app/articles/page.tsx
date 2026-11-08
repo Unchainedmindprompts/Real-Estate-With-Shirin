@@ -2070,6 +2070,67 @@ export default function ArticlesPage() {
             </div>
           </Link>
 
+          {/* Market Updates — Are North Idaho Home Prices Falling */}
+          <Link
+            href="/articles/are-north-idaho-home-prices-falling"
+            className="block group rounded-sm transition-colors duration-200 hover:border-[#C4842A]"
+            style={{
+              border: '1px solid #3A3530',
+              backgroundColor: '#2A2722',
+              padding: '40px 40px',
+            }}
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <span
+                style={{
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontSize: '11px',
+                  fontWeight: 600,
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                  color: '#C4842A',
+                }}
+              >
+                Market Updates
+              </span>
+              <span style={{ color: '#9A9590', fontSize: '12px' }}>·</span>
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590' }}>
+                10 min read
+              </span>
+            </div>
+            <h2
+              className="mb-3"
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontWeight: 600,
+                fontSize: 'clamp(22px, 3vw, 28px)',
+                lineHeight: 1.25,
+                color: '#FAFAF8',
+              }}
+            >
+              Are North Idaho Home Prices Falling? Why National Headlines Don&apos;t Tell the Whole Story
+            </h2>
+            <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', color: '#9A9590', lineHeight: 1.7, marginBottom: '24px' }}>
+              National asking prices fell 2.2%, national sold prices rose 1.3%, and prices fell after inflation. Locally, Kootenai County sold prices were up 4.3% year to date. Four measures, kept separate.
+            </p>
+            <div className="flex items-center justify-between">
+              <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', color: '#9A9590' }}>
+                November 8, 2026
+              </span>
+              <span
+                style={{
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontSize: '13px',
+                  fontWeight: 600,
+                  color: '#C4842A',
+                  letterSpacing: '0.04em',
+                }}
+              >
+                Read Article →
+              </span>
+            </div>
+          </Link>
+
           {/* Seller Resources — Sell Before the Holidays or Wait Until Spring */}
           <Link
             href="/articles/sell-before-holidays-or-wait-until-spring-north-idaho"
