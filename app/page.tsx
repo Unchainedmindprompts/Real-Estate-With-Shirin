@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import OpeningImageMotion from '@/components/OpeningImageMotion'
+import motionStyles from '@/components/EditorialMotion.module.css'
 import {
   BASE_URL,
   BUSINESS_ID,
@@ -256,6 +258,7 @@ export default function HomePage() {
 
       {/* ── Hero — full-bleed image ── */}
       <section className="relative overflow-hidden w-full" style={{ height: '100svh' }}>
+        <OpeningImageMotion>
         <Image
           src="/images/hero-consultation.webp"
           alt="North Idaho real estate consultation"
@@ -264,6 +267,7 @@ export default function HomePage() {
           priority
           sizes="100vw"
         />
+        </OpeningImageMotion>
 
         {/* Mobile gradient — full-width bottom fade */}
         <div
@@ -735,25 +739,26 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+          <div className={motionStyles.rail}>
             {[
               { image: '/images/community.jpeg', title: 'Community', desc: "A real town feel — local restaurants, breweries, and neighbors who show up" },
               { image: '/images/lake-life.jpeg', title: 'Lake Life', desc: "Coeur d'Alene Lake — one of the most beautiful lakes in North America" },
               { image: '/images/skiing-action.jpeg', title: 'Skiing', desc: 'Schweitzer Mountain and Silver Mountain, both within an hour' },
               { image: '/images/golf.jpeg', title: 'Golf', desc: 'Championship courses with stunning mountain and lake views' },
             ].map((tile) => (
-              <div key={tile.title} className="relative overflow-hidden rounded-none group" style={{ height: '300px' }}>
+              <div key={tile.title} className={motionStyles.panel} tabIndex={0} role="group" aria-label={tile.title}>
                 <Image
                   src={tile.image}
                   alt={tile.title}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className={motionStyles.panelImage}
+                  sizes="(max-width: 700px) 86vw, (max-width: 1100px) 70vw, 55vw"
                 />
                 <div
                   className="absolute inset-0"
                   style={{ background: 'linear-gradient(to top, rgba(28,26,23,0.5), rgba(28,26,23,0.0))' }}
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
+                <div className={motionStyles.caption}>
                   <h3
                     style={{
                       fontFamily: "'Cormorant Garamond', Georgia, serif",
