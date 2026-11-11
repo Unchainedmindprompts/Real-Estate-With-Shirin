@@ -741,15 +741,17 @@ export default function HomePage() {
 
           <div className={motionStyles.rail}>
             {[
-              { image: '/images/community.jpeg', title: 'Community', desc: "A real town feel — local restaurants, breweries, and neighbors who show up" },
               { image: '/images/lake-life.jpeg', title: 'Lake Life', desc: "Coeur d'Alene Lake — one of the most beautiful lakes in North America" },
               { image: '/images/skiing-action.jpeg', title: 'Skiing', desc: 'Schweitzer Mountain and Silver Mountain, both within an hour' },
               { image: '/images/golf.jpeg', title: 'Golf', desc: 'Championship courses with stunning mountain and lake views' },
+              { image: '/images/silver-mountain-bike-park.jpg', title: 'Mountain Biking', desc: 'Lift-served trails at Silver Mountain Bike Park in Kellogg', alt: 'Mountain biker carving a forest trail at Silver Mountain Bike Park' },
+              { image: '/images/river-and-rye-dining.webp', title: 'Dining', desc: "River & Rye — scratch-made dining in downtown Coeur d'Alene", alt: 'A fresh pasta dish at River & Rye in Coeur d’Alene' },
+              { image: '/images/rivaura-cda-tasting-room.jpg', title: 'Wine Tasting', desc: "Rivaura — estate wines at the downtown Coeur d'Alene tasting room", alt: 'Rivaura tasting room on Sherman Avenue in downtown Coeur d’Alene' },
             ].map((tile) => (
               <div key={tile.title} className={motionStyles.panel} tabIndex={0} role="group" aria-label={tile.title}>
                 <Image
                   src={tile.image}
-                  alt={tile.title}
+                  alt={tile.alt ?? tile.title}
                   fill
                   className={motionStyles.panelImage}
                   sizes="(max-width: 700px) 86vw, (max-width: 1100px) 70vw, 55vw"

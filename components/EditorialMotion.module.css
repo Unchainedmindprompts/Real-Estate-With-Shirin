@@ -36,6 +36,10 @@
 }
 
 @media (min-width: 1101px) and (hover: hover) and (pointer: fine) {
+  .caption {
+    padding: 24px 16px;
+  }
+
   .rail:not(:has(.panel:focus-visible)) .panel:hover,
   .panel:focus-visible {
     flex-grow: 2.2;
