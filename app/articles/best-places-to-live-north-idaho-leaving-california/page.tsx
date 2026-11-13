@@ -494,15 +494,15 @@ export default function BestPlacesNorthIdahoCaliforniaPage() {
                       </a>
                     </div>
                     <div className="border-t border-[#E8DDD0] pt-4">
-                      <a href="/articles/how-to-find-realtor-post-falls-idaho" className="block group">
-                        <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">How to Find a Realtor in Post Falls</p>
+                      <a href="/articles/best-realtor-north-idaho-how-to-choose" className="block group">
+                        <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Best Realtor in North Idaho: How to Choose One</p>
                         <p className="font-dm-sans text-xs text-[#9A9590] mt-1">What to look for before you hire anyone</p>
                       </a>
                     </div>
                     <div className="border-t border-[#E8DDD0] pt-4">
-                      <a href="/articles/is-it-a-good-time-to-buy-home-northern-idaho" className="block group">
-                        <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Is It a Good Time to Buy in Northern Idaho?</p>
-                        <p className="font-dm-sans text-xs text-[#9A9590] mt-1">Honest 2026 answer</p>
+                      <a href="/articles/north-idaho-housing-market-update" className="block group">
+                        <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">North Idaho Housing Market Update</p>
+                        <p className="font-dm-sans text-xs text-[#9A9590] mt-1">The latest month, in plain numbers</p>
                       </a>
                     </div>
                   </div>

@@ -521,10 +521,10 @@ export default function RelocatingToNorthIdahoPage() {
                 Greenstone recently opened Trutina at North Place &mdash; a 55+ community in Post Falls that&rsquo;s one of the more thoughtfully located senior developments I&rsquo;ve seen in North Idaho. Post Falls has the region&rsquo;s lowest average snowfall, a new hospital being built nearby, and freeway access. For buyers in that stage of life, it&rsquo;s worth a close look.
               </p>
               <p className="mb-10">
-                Details on Trutina and what to know about buying in a new construction senior community:{' '}
-                <a href="/articles/trutina-at-north-place-senior-community-post-falls-buyer-guide" className={linkClass}>Trutina at North Place</a>.{' '}
+                What homes cost in Post Falls, where Trutina sits:{' '}
+                <a href="/articles/how-much-do-homes-cost-post-falls-idaho" className={linkClass}>How Much Do Homes Cost in Post Falls?</a>{' '}
                 What the SRES&reg; designation actually means and why it matters:{' '}
-                <a href="/articles/sres-designation-real-estate-after-55-north-idaho" className={linkClass}>Why I Chose SRES&reg;</a>.
+                <a href="/about" className={linkClass}>About Shirin Abplanalp</a>.
               </p>
 
               {/* ==================== H2 5: WEATHER ==================== */}
@@ -629,7 +629,7 @@ export default function RelocatingToNorthIdahoPage() {
                 For the Post Falls market specifically:{' '}
                 <a href="/articles/post-falls-idaho-housing-market-2026" className={linkClass}>Post Falls Idaho Housing Market 2026</a>.{' '}
                 For the broader timing question:{' '}
-                <a href="/articles/is-it-a-good-time-to-buy-home-northern-idaho" className={linkClass}>Is It a Good Time to Buy a Home in Northern Idaho?</a>
+                <a href="/articles/north-idaho-housing-market-update" className={linkClass}>North Idaho Housing Market Update</a>
               </p>
 
               <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">The out-of-state buying process</h3>
@@ -638,15 +638,15 @@ export default function RelocatingToNorthIdahoPage() {
               </p>
               <p className="mb-10">
                 A great buyer&rsquo;s agent makes this workable. A mediocre one makes it a nightmare. What that difference looks like in practice:{' '}
-                <a href="/articles/why-home-buyers-feel-like-theyre-doing-their-realtors-job" className={linkClass}>Why Do Home Buyers Feel Like They&rsquo;re Doing Their Realtor&rsquo;s Job?</a>{' '}
+                <a href="/articles/best-realtor-north-idaho-how-to-choose" className={linkClass}>Best Realtor in North Idaho: How to Choose One</a>{' '}
                 On representing yourself without an agent in the current environment:{' '}
                 <a href="/articles/buying-home-without-agent-nar-settlement-north-idaho" className={linkClass}>Buying a Home Without a Buyer&rsquo;s Agent in 2026</a>.
               </p>
 
               <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">If you still have a house to sell</h3>
               <p className="mb-10">
-                This is the most common structural problem I see: buyer finds the right house in North Idaho but can&rsquo;t close until they sell their home in California or Washington. There are seven real ways to bridge that gap &mdash; bridge loans, HELOCs, 60-day IRA rollovers, 401(k) loans, sale-leasebacks, recasts, and contingent offers &mdash; and each comes with different cost structures and timelines. The full breakdown of what works, what doesn&rsquo;t, and what the IRS actually says:{' '}
-                <a href="/articles/buying-north-idaho-home-before-selling-current-bridge-financing-options" className={linkClass}>You Found Your North Idaho Dream Home &mdash; But You Still Have a House to Sell</a>.
+                This is the most common structural problem I see: buyer finds the right house in North Idaho but can&rsquo;t close until they sell their home in California or Washington. What your current home would actually sell for decides how much room you have to solve it:{' '}
+                <a href="/articles/selling-a-home-north-idaho-what-your-home-is-worth" className={linkClass}>Selling a Home in North Idaho: What Your Home Is Worth</a>.
               </p>
 
               <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">Rural and acreage properties</h3>
@@ -658,7 +658,7 @@ export default function RelocatingToNorthIdahoPage() {
               <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-3 font-semibold">How to find the right agent</h3>
               <p className="mb-10">
                 The criteria that matter when you&rsquo;re buying from out of state are different from what matters in a local transaction. What to look for &mdash; and what to ask before you hire anyone:{' '}
-                <a href="/articles/how-to-find-realtor-post-falls-idaho" className={linkClass}>How to Find the Right Realtor in Post Falls, Idaho</a>.
+                <a href="/articles/best-realtor-north-idaho-how-to-choose" className={linkClass}>Best Realtor in North Idaho: How to Choose One</a>.
               </p>
 
               {/* Disclaimers */}

@@ -300,7 +300,7 @@ style={{ width: `${item.width}%`, backgroundColor: '#C4842A' }}
                 A large share of North Idaho buyers are moving from somewhere else, and a relocation purchase is a different job from a local move. You may tour most homes on video, choose a neighborhood you have visited once, and coordinate a sale in another state at the same time. The questions are different too: winter driving, snow load, well and septic, wildfire insurance, and how a place feels in February, not just in July.
 </p>
 <p className="mb-10">
-                This is Shirin&apos;s genuine differentiator, and it is a fact rather than a slogan: she relocated from Bend, Oregon to Post Falls herself. An agent who has made the move knows which questions a relocating buyer forgets to ask, because they once forgot them too. Whatever agent you interview for a relocation, ask them to walk you through a recent out-of-state purchase step by step. A clear, specific answer is the credential. Our earlier guide on{' '}<a href="/articles/how-to-find-realtor-post-falls-idaho" className="text-[#C4842A] hover:underline">how to find the right realtor in Post Falls</a>{' '}goes deeper on the local version of this conversation.
+                This is Shirin&apos;s genuine differentiator, and it is a fact rather than a slogan: she relocated from Bend, Oregon to Post Falls herself. An agent who has made the move knows which questions a relocating buyer forgets to ask, because they once forgot them too. Whatever agent you interview for a relocation, ask them to walk you through a recent out-of-state purchase step by step. A clear, specific answer is the credential. This guide is the local version of that conversation.
 </p>
 <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 Read Reviews Where They Live, One Platform at a Time
@@ -456,9 +456,9 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
 </a>
 </div>
 <div className="border-t border-[#E8DDD0] pt-4">
-<a href="/articles/how-to-find-realtor-post-falls-idaho" className="block group">
-<p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">How to Find the Right Realtor in Post Falls</p>
-<p className="font-dm-sans text-xs text-[#9A9590] mt-1">The local version of this guide</p>
+<a href="/areas/post-falls-idaho" className="block group">
+<p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Post Falls Idaho Real Estate</p>
+<p className="font-dm-sans text-xs text-[#9A9590] mt-1">Neighborhoods and market overview</p>
 </a>
 </div>
 <div className="border-t border-[#E8DDD0] pt-4">

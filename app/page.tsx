@@ -500,7 +500,7 @@ export default function HomePage() {
               {
                 title: 'Seniors & 55+',
                 body: 'As an SRES® specialist, Shirin understands the unique financial and lifestyle decisions that come with buying or selling later in life.',
-                href: '/articles/sres-designation-real-estate-after-55-north-idaho',
+                href: '/about',
                 linkText: 'Learn About SRES®',
               },
             ].map((card) => (
@@ -922,10 +922,10 @@ export default function HomePage() {
                 desc: "Compare Coeur d'Alene, Post Falls, Hayden, and Sandpoint for cost, lifestyle, taxes, and community.",
               },
               {
-                href: '/articles/buying-north-idaho-home-before-selling-current-bridge-financing-options',
-                label: 'Bridge Financing',
-                title: 'You Found Your North Idaho Dream Home — But You Still Have a House to Sell',
-                desc: 'Seven real ways to bridge the gap — bridge loans, HELOCs, 401(k) loans, sale-leasebacks, and more.',
+                href: '/articles/selling-a-home-north-idaho-what-your-home-is-worth',
+                label: 'Selling',
+                title: 'Selling a Home in North Idaho: What Your Home Is Worth in 2026',
+                desc: 'What your home is worth, and how pricing, timing, and preparation actually work in this market.',
               },
               {
                 href: '/articles/buying-home-without-agent-nar-settlement-north-idaho',
@@ -934,16 +934,16 @@ export default function HomePage() {
                 desc: 'What the August 2024 rule changes mean for North Idaho buyers, and what solo buyers actually risk.',
               },
               {
-                href: '/articles/trutina-at-north-place-senior-community-post-falls-buyer-guide',
-                label: 'Senior Real Estate',
-                title: 'Trutina at North Place: The Best Senior Location in North Idaho?',
-                desc: "Greenstone's new 55+ community in Post Falls — the location math, the new hospital, the lowest snow in the region.",
+                href: '/articles/how-much-do-homes-cost-post-falls-idaho',
+                label: 'Post Falls',
+                title: 'How Much Do Homes Cost in Post Falls?',
+                desc: 'Price breakdown by budget, 2026.',
               },
               {
-                href: '/articles/is-it-a-good-time-to-buy-home-northern-idaho',
+                href: '/articles/north-idaho-housing-market-update',
                 label: 'Market Timing',
-                title: 'Is It a Good Time to Buy a Home in Northern Idaho?',
-                desc: 'Honest 2026 analysis — buyer leverage, mortgage rates, seller concessions, and who should move now versus wait.',
+                title: 'North Idaho Housing Market Update',
+                desc: 'The latest month of North Idaho market data, in plain numbers.',
               },
             ].map((g) => (
               <Link

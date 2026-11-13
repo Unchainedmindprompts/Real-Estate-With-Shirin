@@ -756,9 +756,9 @@ export default function PropertyTaxesArticlePage() {
                       </a>
                     </div>
                     <div className="border-t border-[#E8DDD0] pt-4">
-                      <a href="/articles/sres-designation-real-estate-after-55-north-idaho" className="block group">
-                        <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Real Estate After 55 in North Idaho: The SRES® Guide</p>
-                        <p className="font-dm-sans text-xs text-[#9A9590] mt-1">Senior programs and why the designation matters</p>
+                      <a href="/about" className="block group">
+                        <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">About Shirin Abplanalp</p>
+                        <p className="font-dm-sans text-xs text-[#9A9590] mt-1">SRES® Certified · 100+ Transactions · 11 Years in Real Estate</p>
                       </a>
                     </div>
                   </div>

@@ -585,8 +585,7 @@ export default function NARSettlementPage() {
               <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C4842A', marginBottom: '14px' }}>Related Articles</p>
               <div className="space-y-3">
                 {[
-                  { href: '/articles/why-home-buyers-feel-like-theyre-doing-their-realtors-job', label: "Why Buyers Feel Like They're Doing Their Agent's Job" },
-                  { href: '/articles/how-to-find-realtor-post-falls-idaho', label: 'How to Find the Right Realtor in Post Falls' },
+                  { href: '/articles/best-realtor-north-idaho-how-to-choose', label: 'Best Realtor in North Idaho: How to Choose One' },
                   { href: '/articles/north-idaho-cost-of-living-comparison', label: 'North Idaho Cost of Living (BEA Data)' },
                   { href: '/articles/north-idaho-property-taxes-county-comparison', label: 'Property Taxes by County' },
                   { href: '/articles/north-idaho-to-spokane-commute-times', label: 'Commute Times to Spokane by Town' },

@@ -4,6 +4,7 @@ import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/homeowners-insurance-idaho-cost-wildfire-flood-coverage'
 const sources = [
   { label: 'Idaho Department of Insurance, Disasters page (checked October 30, 2026): homeowner and renter policies usually do not provide coverage for damages caused by flooding; not all policies provide earthquake coverage and carriers that offer it typically require a separate, higher deductible; wildfire preparation guidance for rural homeowners; Consumer Affairs (208) 334-4319 and Consumer Hotline 1-800-721-3272', url: 'https://doi.idaho.gov/consumers/home-renters-insurance/disasters/' },
+  { label: 'Idaho Earthquake Guide for Insurance Agents, CREW.org, February 2026, prepared in consultation with the Idaho Office of Emergency Management and the Idaho Geological Survey, funded by a FEMA National Earthquake Hazards Reduction Program grant, pages 13 and 14 (checked November 10, 2026): standard homeowners, renters, condo, and business policies do not cover earthquake damage, coverage comes only by endorsement or a separate policy, and Idaho earthquake deductibles are typically 10 to 20 percent of the insured amount; principal hazard areas are in south-central and southeastern Idaho', url: 'https://www.piawest.com/wp-content/uploads/2026/02/Idaho-Earthquake-Guide-for-Insurance-Agents_CREW-IOEM-IGS.pdf' },
   { label: 'Idaho Department of Insurance, March is Flood Awareness Month press release, March 19, 2026: standard homeowners policies do not cover flood damage, flood policies typically have a 30-day waiting period, and NFIP data shows just over 5,600 flood insurance policies in effect statewide', url: 'https://doi.idaho.gov/pressrelease/march-is-flood-awareness-month-idahoans-urged-to-review-flood-risk-and-consider-flood-insurance/' },
   { label: 'Consumer Financial Protection Bureau, What is homeowner insurance and why is it required (last reviewed August 8, 2024): lenders generally require proof of homeowner insurance when you have a mortgage, and standard homeowner insurance does not cover damage from earthquakes or floods', url: 'https://www.consumerfinance.gov/ask-cfpb/what-is-homeowners-insurance-why-is-homeowners-insurance-required-en-162/' },
   { label: 'Consumer Financial Protection Bureau, force-placed homeowner insurance guidance: if you do not have insurance, or it lapses, a servicer may charge for force-placed insurance, which in many instances protects only the lender and is usually more expensive than a policy you buy yourself', url: 'https://www.consumerfinance.gov/ask-cfpb/what-can-i-do-if-my-mortgage-lender-servicer-is-charging-me-for-force-placed-homeowners-insurance-en-219/' },
@@ -55,6 +56,18 @@ const faqs = [
     q: 'What does homeowners insurance cover in Idaho?',
     a: 'A standard policy covers the structure of your home and your belongings against covered perils such as fire and lightning, wind, and theft, and it covers your liability if someone is injured on your property or you damage theirs. It also provides additional living expenses if a covered loss makes your home uninhabitable. What it does not cover is just as important in Idaho. Flood is excluded and needs a separate NFIP or private flood policy. Earthquake is not automatic: the Idaho Department of Insurance notes that not all policies provide earthquake coverage, and carriers that offer it typically require a separate deductible, which can be higher than the standard deductible. Sewer backup and sump failure are a third bucket, typically handled by a separate endorsement on the homeowners policy, not by the standard policy and not by a flood policy.',
   },
+  {
+    q: 'Does a standard homeowners policy cover earthquakes in Idaho?',
+    a: 'No. The February 2026 Idaho Earthquake Guide for Insurance Agents, prepared by CREW in consultation with the Idaho Office of Emergency Management and the Idaho Geological Survey, states that standard homeowners, renters, condo, and business insurance policies do not cover earthquake damage. The Idaho Department of Insurance consumer alert says the same in plain words: flood and earthquake damage are not covered in a typical homeowners or renters policy. Earthquake damage is covered only if the policyholder buys earthquake insurance, either as an endorsement or as a separate policy. Without it, all repairs and any additional living expenses resulting from earthquake damage must be paid out of pocket.',
+  },
+  {
+    q: 'How does an earthquake deductible work?',
+    a: 'In Idaho, the deductible is usually a percentage, typically 10 to 20 percent, of the insured amount, which may be the replacement value of the property. It is a percentage of the insured amount, not of the damage. On a home insured for $500,000, a 10 percent deductible is $50,000 and a 20 percent deductible is $100,000 out of pocket before the policy pays anything, as a labeled example, not a quote. Separate deductibles may apply per coverage, for the dwelling, contents, and detached structures such as a garage. Lower deductibles can be chosen and change the premium. That is why earthquake coverage is best understood as catastrophic loss protection, not repair coverage.',
+  },
+  {
+    q: 'Does North Idaho get earthquakes?',
+    a: 'Yes, but smaller and rarer ones than the parts of Idaho the hazard maps flag most strongly. The CREW guide locates Idaho principal earthquake hazard areas in the south-central and southeastern parts of the state. For the Panhandle, earthquakes in the Sandpoint area are rare, but not unheard of, in the words of Idaho Geological Survey research geologist Bill Phillips quoted in 2015: an intensity VI shock was centered near Sandpoint in 1942 and was felt over about 25,000 square miles with minor damage, and in April 2015 a sequence near Sandpoint topped out at about magnitude 4, with no injuries or damage reported. Low probability is not zero probability, and it is not the same hazard picture as central Idaho.',
+  },
 ]
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -71,7 +84,7 @@ const articleSchema = {
   author: AGENT_AUTHOR_STUB,
   publisher: BRAND_PUBLISHER_STUB,
   datePublished: '2026-10-30T00:00:00-07:00',
-  dateModified: '2026-10-30T00:00:00-07:00',
+  dateModified: '2026-11-13T00:00:00-08:00',
   mainEntityOfPage: articleUrl,
   isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles' },
   url: articleUrl,
@@ -84,9 +97,11 @@ const articleSchema = {
     'does homeowners insurance cover flood damage',
     'homeowners insurance Coeur d\'Alene',
     'homeowners insurance Post Falls Idaho',
+    'earthquake insurance Idaho',
+    'earthquake deductible percentage Idaho',
   ],
   articleSection: 'Buyer Resources',
-  wordCount: 2100,
+  wordCount: 2700,
   about: [
     {
       '@type': 'State',
@@ -302,11 +317,23 @@ style={{ width: `${bar.width}%`, backgroundColor: '#C4842A' }}
                 One timing note, stated with its date. The NFIP runs on short-term congressional authorizations, and as checked October 30, 2026, its current authorization runs through December 11, 2026. If that authorization lapses, FEMA could not sell or renew NFIP policies during the lapse, while policies already in force continue. Private flood insurance is outside the NFIP and is not affected by a lapse. Check the current status with your agent before relying on an NFIP purchase near any deadline, and do not treat NFIP availability as unconditional.
 </p>
 <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
-                Earthquake, Sewer Backup, and the Required Question
+                Earthquake: Excluded Entirely, and the Deductible Is the Decision
 </h2>
 <p className="mb-6">
-                Earthquake coverage is not automatic in Idaho. The DOI Disasters page says that not all homeowner and renter policies provide coverage for earthquake damage, and that carriers that offer it typically require a separate deductible, which can be higher than the standard deductible. Treat earthquake protection as an explicit add-on question for your agent, with its own deductible, never as included coverage.
+                Earthquake sits in a harder category than flood. The February 2026 Idaho Earthquake Guide for Insurance Agents, prepared by CREW in consultation with the Idaho Office of Emergency Management and the Idaho Geological Survey and checked November 10, 2026, states it flatly: standard homeowners, renters, condo, and business policies do not cover earthquake damage. Without separate coverage, all repairs and any additional living expenses resulting from earthquake damage must be paid out of pocket. There is no small claim exception and no partial payment for a minor quake.
 </p>
+<p className="mb-6">
+                Coverage comes only two ways: an endorsement on the homeowners policy, or a separate earthquake policy. What it buys is physical damage and loss caused by ground shaking, and it typically covers additional living expenses, such as rent for temporary housing while repairs are made, though not all policies include that coverage, so check whether yours does. The secondary effects split apart, and this is where buyers most often misread a policy. Earthquake coverage typically does not cover damage from secondary effects such as landslide or water damage. Fire is the exception in the other direction: damage and loss caused by fire may be covered by a standard homeowners or renters policy, even if the fire was caused by an earthquake, and flood or rising water belongs to a flood policy, as the section above covers. Keep the three buckets separate: shaking under an earthquake policy, fire following a quake potentially under the standard policy, and water under a flood policy.
+</p>
+<p className="mb-6">
+                The deductible is why this is a math decision, not a fear decision. In Idaho, the deductible is usually a percentage, typically 10 to 20 percent, of the insured amount, which may be the replacement value of the property, per the CREW guide. It is a percentage of the insured amount, not of the damage. On a home insured for $500,000, a 10 percent deductible is $50,000 and a 20 percent deductible is $100,000 out of pocket before the policy pays anything, as a labeled example, not a quote. Separate deductibles may apply per coverage, for the dwelling, contents, and detached structures such as a garage, and lower deductibles can be chosen and change the premium. Read at that scale, earthquake coverage is catastrophic loss protection, not repair coverage.
+</p>
+<p className="mb-10">
+                The local risk belongs in the same honest frame. The CREW guide locates Idaho&apos;s principal earthquake hazard areas in the south-central and southeastern parts of the state, and North Idaho is not Idaho&apos;s high hazard zone. Its own record is smaller and rarer: an intensity VI shock centered near Sandpoint in 1942, felt over about 25,000 square miles with minor damage, and a sequence near Sandpoint in April 2015 that topped out at about magnitude 4, with no injuries or damage reported. Low probability is not zero probability, and older homes with masonry chimneys are the vulnerable stock in any Idaho quake. Know the exclusion, know what the deductible would actually be on your home, and decide from the numbers.
+</p>
+<h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
+                Sewer Backup and the Required Question
+</h2>
 <p className="mb-6">
                 Keep water damage in three separate buckets, because buyers mix them up. A sudden internal discharge, such as a burst pipe, is the standard policy bucket. Rising external water is flood, and only a flood policy responds. Sewer backup and sump pump failure are neither of those: they are typically a separate endorsement on the homeowners policy. A home with a basement and a sump pump needs that endorsement question asked out loud.
 </p>
@@ -332,7 +359,7 @@ style={{ width: `${bar.width}%`, backgroundColor: '#C4842A' }}
 </h2>
 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6 mb-6"><ul className="space-y-3">{sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer" className="text-sm text-[#96601A] hover:underline">{source.label}</a></li>)}</ul></div>
 <p className="text-sm mb-10">
-                Published October 30, 2026. Cost figures were checked October 29 to 30, 2026 on the sources named, and every figure in this guide carries its basis with it: the NAIC figure is an average premium actually paid from the most recent NAIC data published in that compilation (HO-3, 2021), and each quote figure prices the fixed sample policy its source describes. No figure here is a quote for your home, and no year-over-year increase is claimed, because aggregator tables mix methodologies between years. Coverage statements are from the Idaho Department of Insurance, the Consumer Financial Protection Bureau, and the Insurance Information Institute, checked October 30, 2026. NFIP terms are as summarized from FloodSmart and FEMA materials in the sources above, and the NFIP authorization date of December 11, 2026 was checked October 30, 2026. The NFIP cap comparison uses this site&apos;s published Homes.com median sale prices, checked October 28, 2026, labeled as a computed comparison of scale. This guide is general information about Idaho homeowners insurance, not insurance or legal advice. Your own policy, its declarations, and its exclusions control your coverage, and an Idaho-licensed insurance agent can price a specific home.
+                Published October 30, 2026. Cost figures were checked October 29 to 30, 2026 on the sources named, and every figure in this guide carries its basis with it: the NAIC figure is an average premium actually paid from the most recent NAIC data published in that compilation (HO-3, 2021), and each quote figure prices the fixed sample policy its source describes. No figure here is a quote for your home, and no year-over-year increase is claimed, because aggregator tables mix methodologies between years. Coverage statements are from the Idaho Department of Insurance, the Consumer Financial Protection Bureau, and the Insurance Information Institute, checked October 30, 2026. NFIP terms are as summarized from FloodSmart and FEMA materials in the sources above, and the NFIP authorization date of December 11, 2026 was checked October 30, 2026. The NFIP cap comparison uses this site&apos;s published Homes.com median sale prices, checked October 28, 2026, labeled as a computed comparison of scale. The earthquake section was expanded on November 13, 2026 with facts from the February 2026 CREW Idaho Earthquake Guide for Insurance Agents, checked November 10, 2026: the total exclusion, the endorsement and separate policy routes, the 10 to 20 percent deductible, and the North Idaho hazard record. This guide is general information about Idaho homeowners insurance, not insurance or legal advice. Your own policy, its declarations, and its exclusions control your coverage, and an Idaho-licensed insurance agent can price a specific home.
 </p>
 <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 Frequently Asked Questions
@@ -393,6 +420,7 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
                       { range: 'Quote averages', desc: 'Roughly $1,400 to $2,500 per year by source and sample, $300,000 to $350,000 dwelling' },
                       { range: 'Flood, NFIP', desc: 'Building cap $250,000, contents cap $100,000, 30-day typical wait' },
                       { range: 'Wildfire', desc: 'Fire is a covered peril, availability varies by property risk' },
+                      { range: 'Earthquake', desc: 'Excluded from a standard policy; endorsement or separate policy, deductible 10 to 20 percent of the insured amount' },
                       { range: 'Help line', desc: 'Idaho DOI Consumer Affairs (208) 334-4319' }
                     ].map((item) => (
 <div key={item.range} className="border-b border-[#2C2A27] pb-3 last:border-0 last:pb-0">

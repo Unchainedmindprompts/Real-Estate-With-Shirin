@@ -358,7 +358,7 @@ className="w-10 h-10 rounded-full object-cover"
                 2026 is as close to a balanced market as Post Falls has seen since before the pandemic. It&apos;s not a buyer&apos;s market in the traditional sense — inventory is still relatively tight, with 677 active listings across Kootenai County as of January 2026, down 9.31% year-over-year. But new listings are up 50% year-over-year, which means more options are coming online regularly.
 </p>
 <p className="mb-8">
-                Well-priced, move-in ready homes in desirable neighborhoods still attract strong interest and occasionally multiple offers. Overpriced homes or homes with deferred maintenance are sitting, sometimes for months. For buyers, this is genuinely <a href="/articles/is-it-a-good-time-to-buy-home-northern-idaho" className="text-[#C4842A] hover:underline">one of the better entry windows in several years</a>. For sellers who are realistic about pricing, the market is still functioning well.
+                Well-priced, move-in ready homes in desirable neighborhoods still attract strong interest and occasionally multiple offers. Overpriced homes or homes with deferred maintenance are sitting, sometimes for months. For buyers, this is genuinely <a href="/articles/north-idaho-housing-market-update" className="text-[#C4842A] hover:underline">one of the better entry windows in several years</a>. For sellers who are realistic about pricing, the market is still functioning well.
 </p>
 {/* Chart 3: Market Conditions Scorecard */}
 <div className="my-8 p-6 bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm">
@@ -581,8 +581,8 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
 </a>
 </div>
 <div className="border-t border-[#E8DDD0] pt-4">
-<a href="/articles/how-to-find-realtor-post-falls-idaho" className="block group">
-<p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">How to Find the Right Realtor in Post Falls</p>
+<a href="/articles/best-realtor-north-idaho-how-to-choose" className="block group">
+<p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Best Realtor in North Idaho: How to Choose One</p>
 <p className="font-dm-sans text-xs text-[#9A9590] mt-1">What to look for before you hire anyone</p>
 </a>
 </div>

@@ -650,9 +650,9 @@ export default function NorthIdahoHealthcarePage() {
                 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
                   <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Related Articles</p>
                   <div className="space-y-4">
-                    <a href="/articles/sres-designation-real-estate-after-55-north-idaho" className="block group">
-                      <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Why I Chose SRES®: Real Estate After 55 in North Idaho</p>
-                      <p className="font-dm-sans text-xs text-[#9A9590] mt-1">What the designation means in practice</p>
+                    <a href="/about" className="block group">
+                      <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">About Shirin Abplanalp</p>
+                      <p className="font-dm-sans text-xs text-[#9A9590] mt-1">SRES® Certified · 100+ Transactions · 11 Years in Real Estate</p>
                     </a>
                     <div className="border-t border-[#E8DDD0] pt-4">
                       <a href="/articles/north-idaho-school-districts-open-enrollment-charters" className="block group">
@@ -698,8 +698,8 @@ export default function NorthIdahoHealthcarePage() {
             <a href="/contact" className="bg-[#C4842A] hover:bg-[#8B4F2A] text-white font-dm-sans font-semibold py-4 px-8 transition-colors">
               Get in Touch
             </a>
-            <a href="/articles/sres-designation-real-estate-after-55-north-idaho" className="border border-[#5C5650] hover:border-[#9A9590] text-[#C4BDB4] hover:text-[#FAFAF8] font-dm-sans font-semibold py-4 px-8 transition-colors">
-              Read the SRES® Guide
+            <a href="/about" className="border border-[#5C5650] hover:border-[#9A9590] text-[#C4BDB4] hover:text-[#FAFAF8] font-dm-sans font-semibold py-4 px-8 transition-colors">
+              About Shirin Abplanalp
             </a>
           </div>
         </div>

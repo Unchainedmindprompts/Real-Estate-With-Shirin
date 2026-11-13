@@ -412,8 +412,8 @@ export default function VideoAuthorityLayerPage() {
                 <ul className="space-y-3">
                   {[
                     { label: 'Post Falls Housing Market 2026', href: '/articles/post-falls-idaho-housing-market-2026' },
-                    { label: 'Is It a Good Time to Buy in Northern Idaho?', href: '/articles/is-it-a-good-time-to-buy-home-northern-idaho' },
-                    { label: 'How to Find a Realtor in Post Falls', href: '/articles/how-to-find-realtor-post-falls-idaho' },
+                    { label: 'North Idaho Housing Market Update', href: '/articles/north-idaho-housing-market-update' },
+                    { label: 'Best Realtor in North Idaho: How to Choose One', href: '/articles/best-realtor-north-idaho-how-to-choose' },
                   ].map((link) => (
                     <li key={link.href}>
                       <Link

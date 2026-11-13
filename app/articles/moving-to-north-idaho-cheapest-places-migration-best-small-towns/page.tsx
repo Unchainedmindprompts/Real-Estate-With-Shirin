@@ -350,7 +350,7 @@ export default function MovingToNorthIdahoArticlePage() {
               <p className="text-sm text-[#9A9590] mb-3">ZHVI $530,937 · +1.5% YoY · 10 days to pending</p>
               <p className="mb-6">
                 Post Falls is hands-down the most affordable major city in Kootenai County and the smartest entry point for most first-time North Idaho buyers I work with. You&apos;re still close to everything — minutes to I-90, 30 minutes to Spokane International Airport, 15 minutes to downtown Coeur d&apos;Alene — but the lake-adjacent premium isn&apos;t there yet. It&apos;s also growing fast, with new construction everywhere and the brand-new{' '}
-                <a href="/articles/trutina-at-north-place-senior-community-post-falls-buyer-guide" className={linkClass}>Prairie Medical Campus being built right now</a> — the biggest infrastructure announcement Kootenai County has seen in a decade.
+                <a href="/articles/how-much-do-homes-cost-post-falls-idaho" className={linkClass}>Prairie Medical Campus being built right now</a> — the biggest infrastructure announcement Kootenai County has seen in a decade.
               </p>
 
               <h3 className="font-cormorant text-2xl text-[#1C1A17] mt-10 mb-2 font-semibold">Rathdrum — the smart-money play, if you can stomach the commute</h3>
@@ -532,8 +532,8 @@ export default function MovingToNorthIdahoArticlePage() {
                     <a href="/articles/north-idaho-property-taxes-county-comparison" className="block group">
                       <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Property Taxes: County Comparison</p>
                     </a>
-                    <a href="/articles/trutina-at-north-place-senior-community-post-falls-buyer-guide" className="block group">
-                      <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Trutina at North Place (55+ in Post Falls)</p>
+                    <a href="/articles/how-much-do-homes-cost-post-falls-idaho" className="block group">
+                      <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">How Much Do Homes Cost in Post Falls?</p>
                     </a>
                   </div>
                 </div>

@@ -589,8 +589,8 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
 </a>
 </div>
 <div className="border-t border-[#E8DDD0] pt-4">
-<a href="/articles/how-to-find-realtor-post-falls-idaho" className="block group">
-<p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">How to Find the Right Realtor in Post Falls</p>
+<a href="/articles/best-realtor-north-idaho-how-to-choose" className="block group">
+<p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Best Realtor in North Idaho: How to Choose One</p>
 <p className="font-dm-sans text-xs text-[#9A9590] mt-1">What to look for before you hire anyone</p>
 </a>
 </div>

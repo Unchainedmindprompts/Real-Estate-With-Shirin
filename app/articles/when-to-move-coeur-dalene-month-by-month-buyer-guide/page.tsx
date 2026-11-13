@@ -538,7 +538,7 @@ export default function WhenToMoveCdAPage() {
                     <li><a href="/articles/north-idaho-cost-of-living-comparison" className="text-white/90 hover:text-[#C4842A]">North Idaho Cost of Living Comparison</a></li>
                     <li><a href="/articles/north-idaho-city-comparison-coeur-dalene-post-falls-hayden-rathdrum-sandpoint" className="text-white/90 hover:text-[#C4842A]">CdA vs Post Falls vs Hayden vs Rathdrum vs Sandpoint</a></li>
                     <li><a href="/articles/moving-to-north-idaho-cheapest-places-migration-best-small-towns" className="text-white/90 hover:text-[#C4842A]">Moving to North Idaho: Cheapest Places &amp; Migration</a></li>
-                    <li><a href="/articles/north-idaho-geographic-jackpot-coeur-dalene-post-falls-corridor" className="text-white/90 hover:text-[#C4842A]">The Geographic Jackpot &mdash; CdA–Post Falls Corridor</a></li>
+                    <li><a href="/articles/best-places-to-live-in-north-idaho-2026-guide" className="text-white/90 hover:text-[#C4842A]">Best Places to Live in North Idaho</a></li>
                     <li><a href="/articles/north-idaho-school-districts-open-enrollment-charters" className="text-white/90 hover:text-[#C4842A]">School Districts, Open Enrollment &amp; Charters</a></li>
                     <li><a href="/articles/north-idaho-to-spokane-commute-times" className="text-white/90 hover:text-[#C4842A]">North Idaho to Spokane Commute Times</a></li>
                   </ul>

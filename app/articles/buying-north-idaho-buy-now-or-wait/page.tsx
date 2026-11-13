@@ -345,7 +345,7 @@ export default function BuyNowOrWaitNorthIdahoPage() {
               </p>
               <p className="mb-6">
                 For a deeper look at the timing question alone, I also wrote{' '}
-                <Link href="/articles/is-it-a-good-time-to-buy-home-northern-idaho" className={linkClass}>Is It a Good Time to Buy a Home in Northern Idaho?</Link>
+                <Link href="/articles/north-idaho-housing-market-update" className={linkClass}>North Idaho Housing Market Update</Link>
                 . This guide goes broader: rates, affordability, new construction, resale, seller leverage, acreage, and where your money actually goes furthest.
               </p>
               <p className="mb-10">
@@ -863,9 +863,9 @@ export default function BuyNowOrWaitNorthIdahoPage() {
                 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
                   <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Related Reading</p>
                   <div className="space-y-4">
-                    <Link href="/articles/is-it-a-good-time-to-buy-home-northern-idaho" className="block group">
-                      <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Is It a Good Time to Buy in North Idaho?</p>
-                      <p className="font-dm-sans text-xs text-[#9A9590] mt-1">The mid-year market-timing verdict</p>
+                    <Link href="/articles/north-idaho-housing-market-update" className="block group">
+                      <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">North Idaho Housing Market Update</p>
+                      <p className="font-dm-sans text-xs text-[#9A9590] mt-1">The latest month, in plain numbers</p>
                     </Link>
                     <div className="border-t border-[#E8DDD0] pt-4">
                       <Link href="/articles/how-much-do-homes-cost-post-falls-idaho" className="block group">

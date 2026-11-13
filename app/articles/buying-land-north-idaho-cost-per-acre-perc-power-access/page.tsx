@@ -11,6 +11,15 @@ const sources = [
   { label: 'Kootenai County Code 8.6.705: minimum 60-foot private road easement and 40-foot common driveway easement on new parcels', url: 'https://codelibrary.amlegal.com/codes/kootenaicountyid/latest/kootenaicounty_id/0-0-0-5876' },
   { label: 'Bonner County: frequently asked questions on Building Location Permits (required for structures over 400 square feet) and Floodplain Development Permits', url: 'https://www.bonnercountyid.gov/frequently-asked-questions-1' },
   { label: 'Idaho Department of Environmental Quality: Spokane Valley-Rathdrum Prairie Aquifer background', url: 'https://www.deq.idaho.gov/water-quality/groundwater/rathdrum-prairie-aquifer/' },
+  { label: 'Idaho Department of Water Resources, Water Rights Adjudication (checked November 4, 2026): Northern Idaho rights are being inventoried in the Coeur d’Alene Spokane River Basin Adjudication (CSRBA) and the Clark Fork Pend Oreille River Basin Adjudication (CFPRBA)', url: 'https://idwr.idaho.gov/water-rights/adjudication/' },
+  { label: 'Idaho Department of Water Resources, Research Portal and Water Rights and Adjudication Search (checked November 4, 2026): search a parcel’s rights by place of use and confirm priority date, source, rate or volume, place of use, and owner of record', url: 'https://research.idwr.idaho.gov/' },
+  { label: 'Idaho Department of Water Resources, Domestic Exemption (checked November 4, 2026): Senate Bill 1222, signed February 17, 2026 and effective that day, revised Idaho Code 42-111 and 42-227 for domestic wells', url: 'https://idwr.idaho.gov/water-rights/domestic-exemption/' },
+  { label: 'Idaho Legislature, Idaho Code 42-111 as amended by 2025 chapter 129 and 2026 chapter 2 (checked November 4, 2026): domestic purposes means use for homes, camps, campgrounds, and livestock including irrigation of up to one half acre if total use does not exceed 13,000 gallons per day, or any other purpose if total use does not exceed 2.8 acre feet per year; multiple domestic rights may not be combined to serve a single use that would not itself qualify', url: 'https://legislature.idaho.gov/statutesrules/idstat/title42/t42ch1/sect42-111/' },
+  { label: 'Idaho Legislature, Idaho Code 42-222(2) to (4) (checked November 4, 2026): a water right is lost and forfeited by five years of failure to apply the water to its beneficial use, forfeited water reverts to the state, the party asserting forfeiture must prove it by clear and convincing evidence, the exceptions in 42-223 apply, and the director may grant one extension of up to five additional years if the application is made before the five year period ends', url: 'https://legislature.idaho.gov/statutesrules/idstat/title42/t42ch2/sect42-222/' },
+  { label: 'Idaho Department of Water Resources, Water Right Forms (checked November 4, 2026): the Notice of Change of Water Right Ownership is the form to notify IDWR of a change in ownership of a water right, statutory claim, or adjudication claim', url: 'https://idwr.idaho.gov/about-idwr/forms/water-rights-forms/' },
+  { label: 'FEMA Flood Map Service Center (checked November 4, 2026): the official public source for the current Flood Insurance Rate Map panel for a parcel; parcels in a Special Flood Hazard Area, zones beginning A or V, trigger the federal mandatory flood insurance purchase requirement for a federally regulated or federally backed mortgage, and a designation can be challenged through the Letter of Map Amendment process', url: 'https://msc.fema.gov' },
+  { label: 'Kootenai County Assessor, Agricultural Exemption, Idaho Code 63-604 (checked November 4, 2026): land must be actively devoted to agriculture as part of a bona fide for profit enterprise; parcels of five acres or less must show active devotion during the last three growing seasons and either 15 percent or more of the owner or lessee annual gross income or $1,000 or more in gross revenues in the immediately preceding year, with annual proof due April 15', url: 'https://www.kcgov.us/881/Agricultural-Exemption' },
+  { label: 'Bonner County Assessor, Agricultural Exemption, Idaho Code 63-604 (checked November 4, 2026): the same more than five acres and five acres or less tests, with annual income proof for small parcels due April 15', url: 'https://www.bonnercountyid.gov/Agriculturaldivision' },
 ]
 export const metadata: Metadata = {
 title: "Buying Land in North Idaho: Cost Per Acre, Perc, Power & Access",
@@ -53,6 +62,22 @@ const faqs = [
     q: 'What is different about buying land in Bonner County versus Kootenai County?',
     a: 'Three things. First, price: land lists at a lower median price per acre in Bonner County, $37,063 against $57,500 in Kootenai County (Land.com, October 2026). Second, septic still runs through the Panhandle Health District, which covers the five northern counties, but county land use rules differ. Bonner County requires a Building Location Permit for structures over 400 square feet and a Floodplain Development Permit for any man-made change in a designated flood hazard area or floodway, per the county\'s own published guidance. Third, wells, roads, and snow load conditions are parcel specific in both counties, so never carry a Kootenai figure north as if it were a Bonner fact.',
   },
+  {
+    q: 'Do water rights come with land in Idaho?',
+    a: 'Not automatically as a verified fact you can rely on from a listing. Idaho water is administered under prior appropriation, first in time is first in right, and a right exists only where water was diverted and put to beneficial use. Undeveloped land with no history of use has no established right, and a new use requires an application for permit to the Idaho Department of Water Resources. Search the parcel by place of use in IDWR’s Water Rights and Adjudication Search and confirm the right’s priority date, source, rate or volume, place of use, and owner of record. In North Idaho, what the seller holds may be a filed claim awaiting a decree in the Northern Idaho Adjudication, not a decreed right, so state it that way. After a sale, a change of ownership should be filed with IDWR on its Notice of Change of Water Right Ownership form so the record matches the new owner.',
+  },
+  {
+    q: 'Can you lose a water right in Idaho if you don’t use it?',
+    a: 'Yes, that risk is real, but it is not automatic on a buyer’s say so. Under Idaho Code 42-222(2), checked November 4, 2026, all water rights are lost and forfeited by failure for five years to apply the water to the beneficial use it was appropriated for, and forfeited water reverts to the state. The party asserting forfeiture bears the burden of proving it by clear and convincing evidence, the exceptions in Idaho Code 42-223 apply, and the director may grant one extension of up to five additional years if it is applied for before the five year period ends, under 42-222(3) and (4). Ask when the parcel’s irrigation water was last actually used, and treat a long gap as a question to resolve with IDWR or counsel before closing, not as proof the right is gone.',
+  },
+  {
+    q: 'How do I find out if land is in a flood zone in Idaho?',
+    a: 'Check the current Flood Insurance Rate Map panel for the parcel at FEMA’s Flood Map Service Center, msc.fema.gov, which is the official public source, checked November 4, 2026. Check the land and the building site, not just the address. Parcels inside a Special Flood Hazard Area, zones beginning A or V, the 1 percent annual chance floodplain, trigger the federal mandatory purchase requirement: a federally regulated or federally backed mortgage on a building in the Special Flood Hazard Area must carry flood insurance for the life of the loan. The lender makes its own determination on the Standard Flood Hazard Determination Form, and a designation can be challenged through FEMA’s Letter of Map Amendment process. Zones B, C, and X sit outside the Special Flood Hazard Area, and outside the Special Flood Hazard Area is not the same as no flood risk.',
+  },
+  {
+    q: 'Does buying land include the mineral rights?',
+    a: 'That is a records question for the specific parcel, not a rule a listing can answer. The mineral estate can be severed from the surface estate by a recorded deed or reservation, after which a surface deed conveys only what the grantor still owns, and mineral interests are transferred by their own recorded mineral deeds. No single Idaho statute answers whether you own the minerals on a given parcel. Read the title commitment’s Schedule B exceptions for mineral reservations and leases, read the deed’s reservation language itself, and ask the title company in writing whether minerals are included, excepted, or unsearched. Do not assume a standard owner’s title policy covers minerals, because policies commonly except them and the commitment language on your own parcel governs.',
+  },
 ]
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -69,7 +94,7 @@ const articleSchema = {
   author: AGENT_AUTHOR_STUB,
   publisher: BRAND_PUBLISHER_STUB,
   datePublished: '2026-10-23T00:00:00-07:00',
-  dateModified: '2026-10-23T00:00:00-07:00',
+  dateModified: '2026-11-13T00:00:00-08:00',
   mainEntityOfPage: articleUrl,
   isPartOf: { '@id': 'https://www.realestatewithshirin.com/articles' },
   url: articleUrl,
@@ -84,9 +109,12 @@ const articleSchema = {
     'well septic raw land North Idaho',
     'Bonner County building location permit',
     'raw land checklist Idaho 2026',
+    'Idaho water rights land purchase',
+    'mineral rights Idaho land title',
+    'agricultural exemption Idaho land 63-604',
   ],
   articleSection: 'Buyer Resources',
-  wordCount: 2100,
+  wordCount: 2900,
   about: [
     {
       '@type': 'AdministrativeArea',
@@ -357,6 +385,27 @@ style={{ width: `${bar.width}%`, backgroundColor: '#C4842A' }}
                 In both counties, finish the same buildability pass: confirm the zoning district and that a single-family home is an allowed use, get the setbacks for that district and apply them to the actual lot shape, check floodplain and wetland mapping, confirm any shoreline or stream setbacks, and verify there is a legal building site that fits the house, the well separation, the drainfield, and its replacement area at the same time. A five acre parcel can be buildable on paper and tight in practice once setbacks, slope, water, and septic separations are drawn on the same map. Draw them on the same map.
 </p>
 <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
+                Due Diligence Beyond the Site: Water Rights, Minerals, Flood Zone, and Tax Status
+</h2>
+<p className="mb-6">
+                The sections above decide what a parcel costs to build on. A second set of records decides what you actually own and what it will cost to keep. None of it lives in the listing, and each part lives in a different office: water in the Idaho Department of Water Resources records, minerals in the deed chain and title commitment, flood status on FEMA&apos;s current map, and tax classification at the county assessor. Run these checks in the same contingency window as the site evaluation, not after closing. The facts below were checked November 4, 2026 against IDWR, the Idaho Code, FEMA, and the two county assessors.
+</p>
+<p className="mb-6">
+                <strong className="text-[#1C1A17]">Water rights.</strong> Idaho allocates water under prior appropriation, first in time is first in right, and a right exists only where water was diverted and put to beneficial use. A parcel with no history of use has no established right attached to it, and a new use requires an application for a permit to IDWR. If the listing mentions water rights, search the parcel by place of use in IDWR&apos;s Water Rights and Adjudication Search and confirm the right&apos;s priority date, source, rate or volume, place of use, and owner of record. In North Idaho, what the seller holds may still be an un-decreed claim in the Northern Idaho adjudications, in the Coeur d&apos;Alene Spokane River Basin or the Clark Fork Pend Oreille River Basin, rather than a decreed right, so describe it that way. After closing, notify IDWR of the change using its Notice of Change of Water Right Ownership form. For a homesite well, know the current domestic figures, because widely linked secondary sources still quote the old ones. Under Idaho Code 42-111 as amended by Senate Bill 1222, signed February 17, 2026 and effective that day, domestic use includes irrigation of up to one half acre where total use does not exceed 13,000 gallons per day, or any other purpose up to 2.8 acre feet per year, and Idaho Code 42-227 excepts domestic wells from the water right permit requirement. Beyond those limits, a use needs a water right and possibly a permit.
+</p>
+<p className="mb-6">
+                <strong className="text-[#1C1A17]">Forfeiture.</strong> Ask when irrigation water on the parcel was last actually used. Under Idaho Code 42-222(2), a right is lost and forfeited after five years of failure to apply the water to its beneficial use, and forfeited water reverts to the state. Two limits keep this from being a scare tactic: the party asserting forfeiture must prove it by clear and convincing evidence, and the exceptions in Idaho Code 42-223 apply, with one extension of up to five additional years available under 42-222(3) and (4) if it is applied for before the period ends. A long gap in use is a question to resolve with IDWR or counsel before closing, not proof that a right is gone.
+</p>
+<p className="mb-6">
+                <strong className="text-[#1C1A17]">Mineral rights.</strong> The mineral estate is separate from the surface estate and can be severed by a recorded deed or reservation, after which a surface deed conveys only what the grantor still owns. No single Idaho statute answers whether you hold the minerals on a given parcel. Read the title commitment&apos;s Schedule B exceptions for mineral reservations and leases, read the deed&apos;s reservation language itself, and ask the title company in writing whether minerals are included, excepted, or unsearched, because standard owner&apos;s policies commonly except minerals. For a homesite, the practical question is whether an existing lease or reservation could ever be exercised, and that answer comes from the records, not the listing.
+</p>
+<p className="mb-6">
+                <strong className="text-[#1C1A17]">Flood zone and insurability.</strong> Check the current Flood Insurance Rate Map panel for the parcel and for the building site at FEMA&apos;s Flood Map Service Center, msc.fema.gov, the official public source. If the building site falls inside a Special Flood Hazard Area, zones beginning A or V, the federal mandatory purchase requirement applies: a federally regulated or federally backed mortgage on a building in the Special Flood Hazard Area must carry flood insurance for the life of the loan, based on the lender&apos;s determination on the Standard Flood Hazard Determination Form. A designation can be challenged through FEMA&apos;s Letter of Map Amendment process. Zones B, C, and X sit outside the Special Flood Hazard Area, and outside the Special Flood Hazard Area is not the same as no flood risk, so treat the map as an insurance question as much as a water question. The county floodplain permits in the zoning section above apply on top of the federal map, not instead of it.
+</p>
+<p className="mb-10">
+                <strong className="text-[#1C1A17]">Agricultural tax status.</strong> A parcel taxed at a low agricultural rate is taxed that way because of what happens on it now, under Idaho Code 63-602K use value taxation with the tests in 63-604. More than five contiguous acres actively devoted to agriculture as part of a bona fide for profit enterprise can qualify. Five acres or less qualifies only with three growing seasons of active devotion plus either 15 percent or more of gross income or $1,000 or more in gross revenue in the immediately preceding year, and annual proof is due April 15 in both Kootenai and Bonner counties for those small parcels, per the county assessors. A seller&apos;s lower tax bill does not transfer to you as a promise, and platted subdivisions that prohibit agricultural use cannot classify. If you are budgeting on the seller&apos;s number, ask the assessor before closing what classification your use will support.
+</p>
+<h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 The Land Purchase Checklist
 </h2>
 <div className="my-8 grid md:grid-cols-2 gap-4">
@@ -372,6 +421,7 @@ style={{ width: `${bar.width}%`, backgroundColor: '#C4842A' }}
 'Confirm which utility serves the parcel',
 'Check zoning, setbacks, and floodplain for the district',
 'Walk the access road and note who maintains it',
+'Search IDWR records for any water right on the parcel',
                     ].map((item) => (
 <li key={item} className="flex items-start gap-2">
 <span className="text-[#C4842A] font-semibold mt-0.5 flex-shrink-0">✓</span>
@@ -392,6 +442,7 @@ style={{ width: `${bar.width}%`, backgroundColor: '#C4842A' }}
 'Confirm a recorded road maintenance agreement, if private road',
 'Verify a buildable site fits house, well, drainfield, and replacement area',
 'In Bonner County, confirm Building Location and floodplain permit needs',
+'Read the title commitment for mineral reservations and confirm the assessor classification for your use',
                     ].map((item) => (
 <li key={item} className="flex items-start gap-2">
 <span className="text-[#C4842A] font-semibold mt-0.5 flex-shrink-0">✓</span>
@@ -409,7 +460,7 @@ style={{ width: `${bar.width}%`, backgroundColor: '#C4842A' }}
 </h2>
 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6 mb-6"><ul className="space-y-3">{sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer" className="text-sm text-[#96601A] hover:underline">{source.label}</a></li>)}</ul></div>
 <p className="text-sm mb-10">
-                Published October 23, 2026. Land prices are Land.com listing medians checked October 2026: Kootenai County median price per acre $57,500, median list price $879,000, median lot size 15 acres; Bonner County median price per acre $37,063, median list price $745,000, median lot size 17.8 acres. Listing medians are not sale prices and are never averaged with the improved home medians published elsewhere on this site. Well depths, well cost, septic system costs, the $950 Panhandle Health District permit fee, and Kootenai County private road facts are as published in this site&apos;s prairie wells and septic guide, which cites the Idaho Department of Water Resources, the Panhandle Health District, and Kootenai County Code 8.6.705. Power fees and timing are Kootenai Electric Cooperative&apos;s published new construction terms, checked October 2026; no per foot power extension price is stated, because the serving utility prices each parcel in a written proposal. Bonner County permit facts are from Bonner County&apos;s own published guidance, checked October 2026. This guide is general real estate information, not legal, tax, or engineering advice. Verify access, easements, and permit status for a specific parcel with the county, the health district, and the serving utility.
+                Published October 23, 2026. Land prices are Land.com listing medians checked October 2026: Kootenai County median price per acre $57,500, median list price $879,000, median lot size 15 acres; Bonner County median price per acre $37,063, median list price $745,000, median lot size 17.8 acres. Listing medians are not sale prices and are never averaged with the improved home medians published elsewhere on this site. Well depths, well cost, septic system costs, the $950 Panhandle Health District permit fee, and Kootenai County private road facts are as published in this site&apos;s prairie wells and septic guide, which cites the Idaho Department of Water Resources, the Panhandle Health District, and Kootenai County Code 8.6.705. Power fees and timing are Kootenai Electric Cooperative&apos;s published new construction terms, checked October 2026; no per foot power extension price is stated, because the serving utility prices each parcel in a written proposal. Bonner County permit facts are from Bonner County&apos;s own published guidance, checked October 2026. The due diligence section on water rights, minerals, flood zone, and tax status was added on November 13, 2026, from facts checked November 4, 2026 against IDWR, the Idaho Code, FEMA, and the Kootenai and Bonner county assessors. This guide is general real estate information, not legal, tax, or engineering advice. Verify access, easements, and permit status for a specific parcel with the county, the health district, and the serving utility.
 </p>
 <h2 className="font-cormorant text-3xl text-[#1C1A17] mt-12 mb-5 font-semibold">
                 Frequently Asked Questions
