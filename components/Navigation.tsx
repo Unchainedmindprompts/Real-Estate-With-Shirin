@@ -53,7 +53,7 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden xl:flex items-center gap-5">
           <Link
             href="/buyers"
             className="text-sm uppercase tracking-wider font-medium transition-colors"
@@ -84,6 +84,8 @@ export default function Navigation() {
           >
             Sell
           </Link>
+
+          <Link href="/life-in-north-idaho" className="text-xs uppercase tracking-wider font-medium" style={{ color: '#5C5650', whiteSpace: 'nowrap' }} aria-current={pathname === '/life-in-north-idaho' ? 'page' : undefined}>Life in North Idaho</Link>
 
           {/* Areas dropdown */}
           <div
@@ -229,7 +231,7 @@ export default function Navigation() {
         </div>
 
         {/* Mobile right side — brokerage logo + hamburger */}
-        <div className="lg:hidden flex items-center gap-3">
+        <div className="xl:hidden flex items-center gap-3">
           {/* BHHS Jacklin brokerage logo — visible on mobile per BHHS franchisee guidelines */}
           <Image
             src="/images/bhhs-jacklin-logo.png"
@@ -244,6 +246,7 @@ export default function Navigation() {
           className="p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
           style={{ color: solid ? '#1C1A17' : '#FAFAF8' }}
         >
           <svg
@@ -267,7 +270,7 @@ export default function Navigation() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div
-          className="lg:hidden px-6 pb-6"
+          className="xl:hidden px-6 pb-6"
           style={{ backgroundColor: '#FAFAF8', borderTop: '1px solid #E8DDD0' }}
         >
           <div className="flex flex-col gap-4 pt-4">
@@ -292,6 +295,7 @@ export default function Navigation() {
                 ))}
               </div>
             </div>
+            <Link href="/life-in-north-idaho" className="text-sm uppercase tracking-wider font-medium" style={{ color: '#5C5650' }} onClick={() => setMobileOpen(false)}>Life in North Idaho</Link>
             <Link href="/about" className="text-sm uppercase tracking-wider font-medium" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }} onClick={() => setMobileOpen(false)}>About</Link>
             <Link href="/articles" className="text-sm uppercase tracking-wider font-medium" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }} onClick={() => setMobileOpen(false)}>Articles</Link>
             <a href={KVCORE_BASE} target="_blank" rel="noopener noreferrer" className="text-sm uppercase tracking-wider font-medium" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }} onClick={() => setMobileOpen(false)}>Search Homes</a>
