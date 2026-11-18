@@ -19,8 +19,8 @@ export default function FieldGuide({ reviews }: { reviews: { name:string; contex
       <LakesideOpening/>
       <section className={s.buyerChapter} id="buying" aria-labelledby="buyer-title">
         <div className={s.buyerPhoto}>
-          <Image src="/images/field-guide/autumn-waterfront-walk.webp" alt="Walkers follow a lakeside path beneath a canopy of golden autumn leaves"
-            fill sizes="(max-width: 720px) 100vw, 54vw" quality={85}/>
+          <Image src="/images/field-guide/townhome-walk.webp" alt="A sidewalk curves past modern townhomes with wood balconies and black railings"
+            fill sizes="(max-width: 720px) max(100vw, clamp(345px, 63svh, 630px)), max(54vw, 975px, 137svh)" quality={85}/>
         </div>
         <div className={s.buyerCopy}>
           <p className={s.kicker}><span className={s.shortRule}/>For buyers</p>
