@@ -35,7 +35,8 @@ export default function FieldGuide({ reviews }: { reviews: { name:string; contex
     </div>
     <div className={s.revealPair} id="selling">
       <section className={s.sellerChapter} aria-labelledby="seller-title">
-        <Image src="/images/field-guide/lake-house-editorial-4k.webp" alt="" fill sizes="100vw" quality={85}/>
+        <Image src="/images/field-guide/lake-house-editorial-4k.webp" alt="" fill
+          sizes="(max-width: 720px) max(100vw, 978px, 164svh), max(100vw, 1076px, 178svh)" quality={85}/>
         <div className={s.sellerCopy}>
           <p className={s.kicker}><span className={s.shortRule}/>For sellers</p>
           <h2 id="seller-title">Before the sign<br/><i>goes up.</i></h2>
