@@ -264,7 +264,6 @@
 .buyerPhoto { position: relative; overflow: hidden; background: #665247; }
 .buyerPhoto img, .sellerChapter>img { object-fit: cover; }
 .buyerPhoto img { object-position: 48% 55%; }
-.streetCaption { position: absolute; bottom: 0; left: 0; right: 0; padding: 42px var(--gutter) 22px; color: #fff; background: linear-gradient(0deg,#191811a8,transparent); font: italic 18px/1.3 var(--serif); }
 .buyerCopy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: clamp(48px,6vw,120px) clamp(32px,4.9vw,98px); }
 .buyerCopy .kicker { color: #785b40; }
 .buyerCopy h2,.sellerCopy h2 { font-size: clamp(60px,5.9vw,122px); line-height: .92; margin: .34em 0 .32em; }
@@ -290,7 +289,6 @@
   .buyerChapter { grid-template-columns: 1fr; min-height: auto; }
   .buyerPhoto { height: clamp(230px,42svh,420px); }
   .buyerPhoto img { object-position: 50% 43%; }
-  .streetCaption { font-size: 15px; padding-bottom: 14px; }
   .buyerCopy { padding: 34px var(--gutter) 44px; }
   .buyerCopy h2,.sellerCopy h2 { font-size: clamp(56px,12.5vw,84px); }
   .sellerChapter { min-height: max(550px,92svh); align-items: flex-end; }

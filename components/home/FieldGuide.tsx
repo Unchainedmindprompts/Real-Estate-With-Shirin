@@ -19,14 +19,13 @@ export default function FieldGuide({ reviews }: { reviews: { name:string; contex
       <LakesideOpening/>
       <section className={s.buyerChapter} id="buying" aria-labelledby="buyer-title">
         <div className={s.buyerPhoto}>
-          <Image src="/images/rivaura-cda-tasting-room-4k.webp" alt="Brick storefronts along Sherman Avenue in Coeur d’Alene"
+          <Image src="/images/north-idaho-winter-homes.webp" alt="A snow-covered residential street looking out across the water to the mountains"
             fill sizes="(max-width: 720px) 100vw, 54vw" quality={85}/>
-          <span className={s.streetCaption}>Sherman Avenue, Coeur d’Alene</span>
         </div>
         <div className={s.buyerCopy}>
           <p className={s.kicker}><span className={s.shortRule}/>For buyers</p>
           <h2 id="buyer-title">Find your place<br/><i>in North Idaho.</i></h2>
-          <p>Would you trade a shorter commute for a few acres, or a bigger yard for a walk to town? Let’s start there. Then we’ll choose the neighborhoods and homes worth seeing.</p>
+          <p>Would you trade a shorter commute for a few acres? How does that hillside road feel in January? We’ll look past the listing photos and find the homes that fit your day.</p>
           <div className={s.chapterActions}>
             <Link className={s.chapterLink} href="/buyers">Buying with Shirin <span aria-hidden="true">→</span></Link>
             <a href={KVCORE_BASE}>Search homes <span aria-hidden="true">↗</span></a>
