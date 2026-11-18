@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+import HomeNav from './home/HomeNav'
 import { KVCORE_BASE } from '@/lib/idx-search'
 
 const areas = [
@@ -24,9 +25,12 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10)
+    handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  if (isHome) return <HomeNav scrolled={scrolled} />
 
   return (
     <header
