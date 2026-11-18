@@ -17,54 +17,72 @@ const scenes = [
 
 export default function LakesideOpening() {
   const [current, setCurrent] = useState(0)
-  const video = useRef<HTMLVideoElement>(null)
-  const [motionAllowed, setMotionAllowed] = useState(false)
-  const [filmState, setFilmState] = useState<'still' | 'playing' | 'paused' | 'ended' | 'failed'>('still')
+  const waterfrontImage = useRef<HTMLImageElement>(null)
+  const glide = useRef<Animation | null>(null)
+  const [playback, setPlayback] = useState<'still' | 'playing' | 'paused' | 'ended'>('still')
 
   useEffect(() => {
+    const photo = waterfrontImage.current
+    if (current !== 0 || !photo?.animate) return
     const preference = window.matchMedia('(prefers-reduced-motion: no-preference)')
-    const syncPreference = () => {
-      setMotionAllowed(preference.matches)
-      setFilmState('still')
+    let active = true
+
+    async function syncMotion() {
+      glide.current?.cancel()
+      glide.current = null
+      setPlayback('still')
+      if (!preference.matches || !photo) return
+      try {
+        await photo.decode()
+      } catch {
+        return
+      }
+      if (!active || !preference.matches || glide.current) return
+      const animation = photo.animate([
+        { transform: 'translate3d(0, 0, 0) scale(1)' },
+        { transform: 'translate3d(1.65%, 0, 0) scale(1.045)' },
+      ], { duration: 10000, easing: 'cubic-bezier(.32,.35,.64,1)', fill: 'forwards' })
+      glide.current = animation
+      animation.onfinish = () => setPlayback('ended')
+      setPlayback('playing')
     }
-    syncPreference()
-    preference.addEventListener('change', syncPreference)
-    return () => preference.removeEventListener('change', syncPreference)
-  }, [])
+
+    void syncMotion()
+    preference.addEventListener('change', syncMotion)
+    return () => {
+      active = false
+      preference.removeEventListener('change', syncMotion)
+      glide.current?.cancel()
+      glide.current = null
+    }
+  }, [current])
 
   function changeScene(offset: number) {
-    setFilmState('still')
+    setPlayback('still')
     setCurrent(i => (i + offset + scenes.length) % scenes.length)
   }
 
   function togglePlayback() {
-    const player = video.current
-    if (!player) return
-    if (player.paused || player.ended) {
-      void player.play().catch(() => setFilmState('failed'))
+    const animation = glide.current
+    if (!animation) return
+    if (animation.playState === 'running') {
+      animation.pause()
+      setPlayback('paused')
     } else {
-      player.pause()
+      animation.play()
+      setPlayback('playing')
     }
   }
 
-  const showFilm = motionAllowed && current === 0 && filmState !== 'failed'
-  const playbackLabel = filmState === 'playing' ? 'Pause riverfront film' : filmState === 'ended' ? 'Replay riverfront film' : 'Play riverfront film'
+  const playbackLabel = playback === 'playing' ? 'Pause photo motion' : playback === 'ended' ? 'Replay photo motion' : 'Resume photo motion'
 
   return <section className={s.opening} data-waterfront={current === 0} aria-labelledby="home-content">
     {scenes.map((scene, i) => <div key={scene.photo.src} className={s.scene} data-active={i === current} aria-hidden={i !== current}>
-      <Image src={scene.photo} alt={scene.alt} fill sizes={i === 0 ? 'max(100vw, 150svh)' : '100vw'} quality={85} preload={i === 0} />
-      {i === 0 && showFilm && <video
-        ref={video}
-        className={s.waterfrontFilm}
-        data-visible={filmState !== 'still'}
-        src="/video/riverfront-shoreline-glide.mp4"
-        muted autoPlay playsInline
-        aria-hidden="true"
-        onPlaying={() => setFilmState('playing')}
-        onPause={event => { if (!event.currentTarget.ended) setFilmState('paused') }}
-        onEnded={() => setFilmState('ended')}
-        onError={() => setFilmState('failed')}
-      />}
+      <Image
+        ref={i === 0 ? waterfrontImage : undefined}
+        src={scene.photo} alt={scene.alt} fill sizes="100vw"
+        quality={85} preload={i === 0} unoptimized={i === 0}
+      />
     </div>)}
     <div className={s.scrim} />
     <div className={s.heroInner}>
@@ -82,9 +100,9 @@ export default function LakesideOpening() {
           <span className={s.sceneLine} />{scenes[current].caption}
         </div>
         <div className={s.sceneControls}>
-          {showFilm && <button type="button" onClick={togglePlayback} aria-label={playbackLabel} title={playbackLabel}>
+          {current === 0 && playback !== 'still' && <button type="button" onClick={togglePlayback} aria-label={playbackLabel} title={playbackLabel}>
             <svg aria-hidden="true" viewBox="0 0 16 16" width="13" height="13" fill="currentColor">
-              <path d={filmState === 'playing' ? 'M3 2h3.5v12H3zm6.5 0H13v12H9.5z' : 'M4 2l9 6-9 6z'} />
+              <path d={playback === 'playing' ? 'M3 2h3.5v12H3zm6.5 0H13v12H9.5z' : 'M4 2l9 6-9 6z'} />
             </svg>
           </button>}
           <button type="button" aria-label="Previous waterfront photograph" onClick={() => changeScene(-1)}>←</button>
