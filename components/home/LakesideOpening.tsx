@@ -3,19 +3,22 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { KVCORE_BASE } from '@/lib/idx-search'
+import evening from '@/IMG_3712.jpeg'
+import boardwalk from '@/IMG_1627.jpeg'
+import marina from '@/IMG_2343.jpeg'
 import s from './Home.module.css'
 
 const scenes = [
-  { file: 'evening', caption: 'Last light on Lake Coeur d’Alene', alt: 'A copper sunset reflected on Lake Coeur d’Alene, framed by pine trees' },
-  { file: 'boardwalk', caption: 'A walk along the water', alt: 'A timber boardwalk reaching into blue water on Lake Coeur d’Alene' },
-  { file: 'marina', caption: 'Still water at the marina', alt: 'The Coeur d’Alene marina and lake beneath a pale evening sky' },
+  { photo: evening, caption: 'Last light on Lake Coeur d’Alene', alt: 'A copper sunset reflected on Lake Coeur d’Alene, framed by pine trees' },
+  { photo: boardwalk, caption: 'A walk along the water', alt: 'A timber boardwalk reaching into blue water on Lake Coeur d’Alene' },
+  { photo: marina, caption: 'Still water at the marina', alt: 'The Coeur d’Alene marina and lake beneath a pale evening sky' },
 ]
 
 export default function LakesideOpening() {
   const [current, setCurrent] = useState(0)
   return <section className={s.opening} aria-labelledby="home-content">
-    {scenes.map((scene, i) => <div key={scene.file} className={s.scene} data-active={i === current} aria-hidden={i !== current}>
-      <Image src={'/images/field-guide/' + scene.file + '.webp'} alt={scene.alt} fill sizes="100vw" preload={i === 0} />
+    {scenes.map((scene, i) => <div key={scene.photo.src} className={s.scene} data-active={i === current} aria-hidden={i !== current}>
+      <Image src={scene.photo} alt={scene.alt} fill sizes="100vw" quality={85} preload={i === 0} />
     </div>)}
     <div className={s.scrim} />
     <div className={s.heroInner}>
