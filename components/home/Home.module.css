@@ -44,12 +44,13 @@
 .scene img { object-fit: cover; object-position: center 54%; }
 .scene:first-child img { object-position: 64% 59%; }
 .scrim { background: linear-gradient(180deg,rgba(13,23,28,.53),transparent 25%,transparent 70%,rgba(13,24,26,.53)),linear-gradient(90deg,rgba(15,27,29,.36),transparent 73%); }
-.opening[data-waterfront=true] .scrim { background: linear-gradient(180deg,#10202791,transparent 22%,transparent 78%,#1020278c),linear-gradient(90deg,#10202791,#10202740 35%,transparent 65%); }
+.opening[data-waterfront=true] .scrim { background: linear-gradient(180deg,#10202791,transparent 21%,transparent 73%,#10202780),radial-gradient(ellipse 75% 48% at left bottom,#0e1c22df,#0e1c227a 50%,transparent); }
 .heroInner { width: 100%; max-width: 2000px; margin: auto; padding: 100px var(--gutter) 0; display: flex; flex-direction: column; justify-content: flex-end; min-height: clamp(580px,85svh,960px); }
-.heroText { margin: auto 0; padding: clamp(48px,8vh,110px) 0 38px; }
+.heroText { align-self: flex-start; margin: auto 0 0; padding-bottom: clamp(18px,2.8svh,38px); }
 .heroText .kicker { color: #f6e5c8; }
-.heroText h1 { font-size: clamp(70px,8.45vw,158px); line-height: .9; letter-spacing: -.055em; margin: 24px 0 20px; text-shadow: 0 2px 26px #17292a25; }
-.heroText h1 i { color: #fff3dc; }
+.heroText h1 { font-size: clamp(52px,min(5.8vw,9svh),102px); line-height: .98; letter-spacing: -.055em; margin: 13px 0 10px; text-shadow: 0 2px 26px #17292a25; }
+.heroText h1 i { color: #fff3dc; white-space: nowrap; }
+.heroText .heroActions { margin-top: clamp(14px,2svh,22px); }
 .introLine { font-size: clamp(15px,1.25vw,21px); letter-spacing: .016em; }
 .heroActions, .townActions { display: flex; align-items: center; flex-wrap: wrap; gap: 28px; }
 .heroActions { margin-top: 28px; }
@@ -58,7 +59,7 @@
 .lightButton:hover { background: white; }
 .lightButton span,.darkTextLink span,.lightTextLink span,.townActions span,.comparison span,.readGuide span { font-family: Arial,sans-serif; font-size: 17px; line-height: 1; }
 .lightTextLink,.darkTextLink,.townActions a,.comparison { border-bottom: 1px solid currentColor; padding: 5px 0; }
-.sceneBar { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 17px 0 22px; border-top: 1px solid #ffffff62; }
+.sceneBar { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 10px 0 13px; border-top: 1px solid #ffffff62; }
 .sceneCaption { font: italic 19px var(--serif); display: flex; gap: 12px; align-items: center; }
 .sceneLine { width: 6px; height: 6px; border-radius: 50%; background: #d9ab79; }
 .sceneControls, .railControls, .reviewControls { display: flex; gap: 12px; align-items: center; }
@@ -229,11 +230,11 @@
  .navInner { height:64px; } .brand { gap:8px; } .brand img { width:36px; } .brand span { font-size:24px; }
  .navCta { display:none; } .menuButton { font-size:12px; }
  .heroInner { padding-top:75px; min-height:clamp(545px,83svh,740px); }
- .heroText { padding:50px 0 44px; } .heroText h1 { font-size:clamp(69px,15vw,98px); margin:22px 0 16px; }
+ .heroText { padding-bottom:18px; } .heroText h1 { font-size:clamp(46px,12vw,64px); margin:10px 0 8px; }
+ .heroText h1 i { display: block; }
  .scene img { object-position:60% center; }
  .scene:first-child img { object-position: 68% center; }
- .opening .heroText { margin: auto 0 0; padding-bottom: clamp(24px,4svh,40px); }
- .opening[data-waterfront=true] .scrim { background: linear-gradient(180deg,#1020278c,transparent 20%,transparent 47%,#102027a8 75%,#102027d9); }
+ .opening[data-waterfront=true] .scrim { background: linear-gradient(180deg,#1020278c,transparent 20%,transparent 53%,#102027ad 80%,#102027d9); }
  .scrim { background:linear-gradient(180deg,#101e28a0,transparent 26%,#1020252b 61%,#1125269e),linear-gradient(90deg,#0f1d263d,transparent); }
  .heroActions { gap:18px; } .lightButton { padding:13px 16px; gap:14px; } .lightTextLink { gap:8px; }
  .sceneBar { gap:8px; padding:12px 0 15px; } .sceneCaption { font-size:15px; line-height:1.1; gap:7px; }

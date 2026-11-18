@@ -25,7 +25,7 @@ export default function LakesideOpening() {
     <div className={s.heroInner}>
       <div className={s.heroText}>
         <p className={s.kicker}><span className={s.shortRule}/>North Idaho real estate</p>
-        <h1 id="home-content" tabIndex={-1}>At home in<br/><i>North Idaho.</i></h1>
+        <h1 id="home-content" tabIndex={-1}>At home in <i>North Idaho.</i></h1>
         <p className={s.introLine}>With Shirin Abplanalp, REALTOR®</p>
         <div className={s.heroActions}>
           <a className={s.lightButton} href="#buying">Buy a home <span aria-hidden="true">↓</span></a>
