@@ -203,7 +203,7 @@
 .contact { position:relative; isolation:isolate; color:white; background:#283c37; }
 .contactPhoto,.contactPhoto::after { position:absolute; inset:0; }
 .contactPhoto { z-index:-1; }
-.contactPhoto img { object-fit:cover; object-position:center 61%; }
+.contactPhoto img { object-fit:cover; object-position:65% 55%; }
 .contactPhoto::after { content:''; background:linear-gradient(90deg,#102520ce,#142a2b52 76%); }
 .contactInner { padding:clamp(65px,7.3vw,125px) var(--gutter); }
 .contact h2 { margin-top:20px; }
@@ -263,7 +263,7 @@
 .buyerChapter { display: grid; grid-template-columns: 54% 46%; min-height: max(650px,91svh); }
 .buyerPhoto { position: relative; overflow: hidden; background: #665247; }
 .buyerPhoto img, .sellerChapter>img { object-fit: cover; }
-.buyerPhoto img { object-position: 48% 55%; }
+.buyerPhoto img { object-position: 50% 61%; }
 .buyerCopy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: clamp(48px,6vw,120px) clamp(32px,4.9vw,98px); }
 .buyerCopy .kicker { color: #785b40; }
 .buyerCopy h2,.sellerCopy h2 { font-size: clamp(60px,5.9vw,122px); line-height: .92; margin: .34em 0 .32em; }
@@ -288,7 +288,8 @@
 @media (max-width:720px) {
   .buyerChapter { grid-template-columns: 1fr; min-height: auto; }
   .buyerPhoto { height: clamp(230px,42svh,420px); }
-  .buyerPhoto img { object-position: 50% 43%; }
+  .buyerPhoto img { object-position: 50% 62%; }
+  .contactPhoto img { object-position: 77% 55%; }
   .buyerCopy { padding: 34px var(--gutter) 44px; }
   .buyerCopy h2,.sellerCopy h2 { font-size: clamp(56px,12.5vw,84px); }
   .sellerChapter { min-height: max(550px,92svh); align-items: flex-end; }

@@ -19,7 +19,7 @@ export default function FieldGuide({ reviews }: { reviews: { name:string; contex
       <LakesideOpening/>
       <section className={s.buyerChapter} id="buying" aria-labelledby="buyer-title">
         <div className={s.buyerPhoto}>
-          <Image src="/images/north-idaho-winter-homes.webp" alt="A snow-covered residential street looking out across the water to the mountains"
+          <Image src="/images/field-guide/autumn-waterfront-walk.webp" alt="Walkers follow a lakeside path beneath a canopy of golden autumn leaves"
             fill sizes="(max-width: 720px) 100vw, 54vw" quality={85}/>
         </div>
         <div className={s.buyerCopy}>
@@ -70,7 +70,7 @@ export default function FieldGuide({ reviews }: { reviews: { name:string; contex
       <div className={s.guideGrid}>{guides.map(g=><Link key={g.href} className={s.guide} href={g.href}><p className={s.kicker}>{g.tag}</p><h3>{g.title}</h3><p>{g.text}</p><span className={s.readGuide}>Read guide <span aria-hidden="true">↗</span></span></Link>)}</div>
     </section>
     <Weekend/>
-    <section className={s.contact} aria-labelledby="contact-title"><div className={s.contactPhoto}><Image src="/images/field-guide/marina.webp" fill sizes="100vw" alt=""/></div>
+    <section className={s.contact} id="get-in-touch" aria-labelledby="contact-title"><div className={s.contactPhoto}><Image src="/images/field-guide/sunset-over-the-lake.webp" fill sizes="100vw" alt=""/></div>
       <div className={s.contactInner}><p className={s.kicker}><span className={s.shortRule}/>Get in touch</p><h2 id="contact-title">Let’s talk about<br/><i>your move.</i></h2>
       <div className={s.heroActions}><Link href="/contact" className={s.lightButton}>Contact Shirin <span aria-hidden="true">↗</span></Link><a className={s.lightTextLink} href={'tel:'+PHONE}>{PHONE_DISPLAY}</a></div></div>
     </section>
