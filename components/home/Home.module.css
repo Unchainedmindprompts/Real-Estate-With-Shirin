@@ -44,7 +44,7 @@
 .scene img { object-fit: cover; object-position: center 54%; }
 .scene:first-child img { object-position: 64% 59%; }
 .scrim { background: linear-gradient(180deg,rgba(13,23,28,.53),transparent 25%,transparent 70%,rgba(13,24,26,.53)),linear-gradient(90deg,rgba(15,27,29,.36),transparent 73%); }
-.opening[data-waterfront=true] .scrim { background: linear-gradient(180deg,#102027b5,transparent 26%,transparent 78%,#1020278c),linear-gradient(90deg,#102027a6,#10202752 35%,transparent 68%); }
+.opening[data-waterfront=true] .scrim { background: linear-gradient(180deg,#10202791,transparent 22%,transparent 78%,#1020278c),linear-gradient(90deg,#10202791,#10202740 35%,transparent 65%); }
 .heroInner { width: 100%; max-width: 2000px; margin: auto; padding: 100px var(--gutter) 0; display: flex; flex-direction: column; justify-content: flex-end; min-height: clamp(580px,85svh,960px); }
 .heroText { margin: auto 0; padding: clamp(48px,8vh,110px) 0 38px; }
 .heroText .kicker { color: #f6e5c8; }
@@ -233,7 +233,7 @@
  .scene img { object-position:60% center; }
  .scene:first-child img { object-position: 68% center; }
  .opening .heroText { margin: auto 0 0; padding-bottom: clamp(24px,4svh,40px); }
- .opening[data-waterfront=true] .scrim { background: linear-gradient(180deg,#102027b8,transparent 21%,transparent 43%,#102027ad 75%,#102027d9); }
+ .opening[data-waterfront=true] .scrim { background: linear-gradient(180deg,#1020278c,transparent 20%,transparent 47%,#102027a8 75%,#102027d9); }
  .scrim { background:linear-gradient(180deg,#101e28a0,transparent 26%,#1020252b 61%,#1125269e),linear-gradient(90deg,#0f1d263d,transparent); }
  .heroActions { gap:18px; } .lightButton { padding:13px 16px; gap:14px; } .lightTextLink { gap:8px; }
  .sceneBar { gap:8px; padding:12px 0 15px; } .sceneCaption { font-size:15px; line-height:1.1; gap:7px; }
