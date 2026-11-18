@@ -81,14 +81,41 @@ export function Weekend() {
 }
 
 type Review = { name: string; context: string; quote: string }
+const reviewEmphasis = 'she kept every step clear and on track.'
+
 export function Reviews({ reviews }: { reviews: Review[] }) {
-  const [active,setActive]=useState(0)
-  return <section className={s.reviews} aria-label="Client reviews">
-    <div className={s.reviewAside}><span aria-hidden="true" className={s.quotation}>“</span><p className={s.kicker}>In their words</p></div>
-    <div className={s.reviewBody}><div aria-live="polite" aria-atomic="true">
-      {reviews.map((r,i)=><figure key={r.name} hidden={i!==active}><blockquote>“{r.quote}”</blockquote><figcaption><strong>{r.name}</strong><span>{r.context}</span></figcaption></figure>)}
-    </div><div className={s.reviewControls}>
-      <button aria-label="Previous client review" onClick={()=>setActive((active+reviews.length-1)%reviews.length)}>←</button><span>{active+1} / {reviews.length}</span><button aria-label="Next client review" onClick={()=>setActive((active+1)%reviews.length)}>→</button>
-    </div></div>
-  </section>
+  const [active, setActive] = useState(0)
+
+  return (
+    <section id="client-reviews" className={s.reviews} aria-label="Client reviews">
+      <div className={s.reviewBody}>
+        <p className={s.kicker}>
+          <span aria-hidden="true" className={s.quotation}>“</span>
+          In their words
+        </p>
+        <div id="client-review-slides" aria-live="polite" aria-atomic="true">
+          {reviews.map((review, index) => (
+            <figure key={review.name} hidden={index !== active}>
+              <blockquote>
+                {review.quote.endsWith(reviewEmphasis) ? (
+                  <>{review.quote.slice(0, -reviewEmphasis.length)}<em>{reviewEmphasis}</em></>
+                ) : review.quote}
+              </blockquote>
+              <figcaption>
+                <strong>{review.name}</strong>
+                <span>{review.context}</span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        <div className={s.reviewControls}>
+          <button type="button" aria-label="Previous client review" aria-controls="client-review-slides"
+            onClick={() => setActive(index => (index + reviews.length - 1) % reviews.length)}>←</button>
+          <span>{active + 1} / {reviews.length}</span>
+          <button type="button" aria-label="Next client review" aria-controls="client-review-slides"
+            onClick={() => setActive(index => (index + 1) % reviews.length)}>→</button>
+        </div>
+      </div>
+    </section>
+  )
 }

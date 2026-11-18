@@ -80,48 +80,50 @@ export default function TownAtlas() {
   }
 
   return <section className={s.atlas} id="communities" aria-labelledby="atlas-title">
-    <div className={s.atlasInner}>
+    <div className={s.atlasSpread}>
       <header className={s.atlasHeader}>
         <p className={s.kicker}><span className={s.shortRule}/>The community atlas</p>
         <h2 id="atlas-title">Five towns. <i>Where’s home?</i></h2>
       </header>
       <div className={s.townChoices} ref={indexRef} role="group" aria-label="Choose a town">
         {towns.map((item, index) => (
-          <button type="button" key={item.slug} aria-pressed={index === active} aria-controls="town-story"
+          <button type="button" key={item.slug} aria-pressed={index === active} aria-controls="town-story town-photograph"
             onClick={() => setActive(index)}>{item.name}</button>
         ))}
       </div>
-      <div className={s.atlasSpread}>
-        <article className={s.atlasStory} id="town-story" aria-labelledby="town-headline">
-          <figure className={s.townPhoto}>
-            <div className={s.townPhotoWindow}>
-              {towns.map((item, index) => (
-                <Image key={item.slug} src={'/images/community-atlas/' + item.slug + '.webp'}
-                  alt={index === active ? item.photo.alt : ''} aria-hidden={index !== active}
-                  data-visible={index === active} style={{objectPosition: item.photo.position}} fill
-                  sizes="(max-width: 800px) 94vw, (max-width: 1620px) 52vw, 820px"/>
-              ))}
-            </div>
-            <figcaption>
-              <span>{photo.caption}</span>
-              <details key={town.slug} className={s.photoCredit}>
-                <summary>Photo credit</summary>
-                <p><a href={photo.source}>{photo.credit}</a> · {photo.terms
-                  ? <a href={photo.terms}>{photo.license}</a> : photo.license} · Cropped</p>
-              </details>
-            </figcaption>
-          </figure>
-          <div className={s.townInfo} aria-live="polite" aria-atomic="true">
-            <h3 id="town-headline">{town.phrase}</h3>
-            <p>{town.detail}</p>
-          </div>
-          <div className={s.townActions}>
-            <Link href={'/areas/' + town.slug}>Explore {town.name} <span aria-hidden="true">→</span></Link>
-            <a href={IDX_SEARCH_BY_AREA[town.slug]}>Homes for sale <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-        <div className={s.atlasFigure}>
-          <figure>
+      <figure className={s.townPhoto} id="town-photograph">
+        <div className={s.townPhotoWindow}>
+          {towns.map((item, index) => (
+            <Image key={item.slug} src={'/images/community-atlas/' + item.slug + '.webp'}
+              alt={index === active ? item.photo.alt : ''} aria-hidden={index !== active}
+              data-visible={index === active} style={{objectPosition: item.photo.position}} fill
+              sizes="(max-width: 800px) 100vw, 54vw"/>
+          ))}
+        </div>
+        <figcaption>
+          <span>{photo.caption}</span>
+          <details key={town.slug} className={s.photoCredit}>
+            <summary>Photo credit</summary>
+            <p><a href={photo.source}>{photo.credit}</a> · {photo.terms
+              ? <a href={photo.terms}>{photo.license}</a> : photo.license} · Cropped</p>
+          </details>
+        </figcaption>
+      </figure>
+      <article className={s.atlasStory} id="town-story" aria-labelledby="town-headline">
+        <div className={s.townInfo} aria-live="polite" aria-atomic="true">
+          <h3 id="town-headline">{town.phrase}</h3>
+          <p>{town.detail}</p>
+        </div>
+        <div className={s.townActions}>
+          <Link href={'/areas/' + town.slug}>Explore {town.name} <span aria-hidden="true">→</span></Link>
+          <a href={IDX_SEARCH_BY_AREA[town.slug]}>Homes for sale <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </div>
+    <div className={s.atlasCompanion}>
+      <details className={s.atlasFigure}>
+        <summary>Explore the regional map</summary>
+        <figure>
             <div className={s.atlasPlate}>
               <svg viewBox="0 0 550 550" role="group" aria-label="Interactive map of five North Idaho towns">
                 <defs>
@@ -172,10 +174,9 @@ export default function TownAtlas() {
               <span>North Idaho · Regional map</span>
               <a href="https://www.arcgis.com/home/search.html?q=USA%20Detailed%20Water%20Bodies">Water data · Esri</a>
             </figcaption>
-          </figure>
-          <Link href={comparisonPath} className={s.comparison}>Compare all five towns <span aria-hidden="true">→</span></Link>
-        </div>
-      </div>
+        </figure>
+      </details>
+      <Link href={comparisonPath} className={s.comparison}>Compare all five towns <span aria-hidden="true">→</span></Link>
     </div>
   </section>
 }

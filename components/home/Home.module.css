@@ -86,59 +86,76 @@
 .signature { margin: 14px 0 0; font-family: 'Great Vibes', 'Snell Roundhand', cursive; font-size: 45px; line-height: 1.4; color: #8d6448; }
 .storyCopy .broker { font-size: 10px; color: #626b61; margin: 16px 0 0; }
 .atlas {
-  --atlas-paper: #f6f2e8;
+  --atlas-paper: #f8f5ed;
   --atlas-rule: #c9c3b2;
-  --atlas-copper: #985634;
+  --atlas-copper: #925332;
   background: var(--atlas-paper);
-  border-block: 1px solid #d9d4c5;
-  padding: clamp(52px,5.6vw,98px) var(--gutter) clamp(60px,6vw,105px);
 }
-.atlasInner { max-width: 1520px; margin: auto; }
-.atlasHeader .kicker { color: #70573e; }
-.atlasHeader h2 { font-size: clamp(56px,6vw,101px); margin: 14px 0 clamp(23px,2.5vw,40px); }
+.atlasSpread {
+  display: grid;
+  grid-template-columns: minmax(0,.93fr) minmax(0,1.07fr);
+  grid-template-areas: "heading photo" "choices photo" "story photo";
+  grid-template-rows: 1fr auto 1fr;
+}
+.atlasHeader, .townChoices, .atlasStory {
+  width: min(580px, calc(100% - 2 * var(--gutter)));
+  justify-self: center;
+}
+.atlasHeader { grid-area: heading; align-self: end; padding-top: clamp(35px,4vw,80px); }
+.atlasHeader .kicker { color: #70573e; font-size: 12px; }
+.atlasHeader h2 { font-size: clamp(50px,5.7vw,100px); margin: 17px 0 0; line-height: .96; }
+.atlasHeader h2 i { display: block; }
 .townChoices {
-  display: flex; gap: clamp(24px,3.6vw,62px); align-items: stretch;
-  overflow-x: auto; scrollbar-width: none; border-bottom: 1px solid var(--atlas-rule);
+  grid-area: choices; display: flex; flex-wrap: wrap; align-items: baseline;
+  gap: 0 clamp(14px,1.4vw,26px); margin-block: clamp(22px,2vw,34px);
+  border-bottom: 1px solid var(--atlas-rule);
 }
-.townChoices::-webkit-scrollbar { display: none; }
 .townChoices button {
-  position: relative; flex: none; padding: 4px 0 13px; min-height: 44px;
-  font: 500 clamp(19px,1.65vw,27px)/1.2 var(--serif);
-  color: #47584c; white-space: nowrap; scroll-margin-top: 86px;
+  position: relative; padding-block: 8px; min-height: 44px;
+  font: 500 clamp(17px,1.25vw,22px)/1.2 var(--serif);
+  color: #465449; white-space: nowrap; scroll-margin-top: 86px;
 }
 .townChoices button::after { content: ''; position: absolute; inset: auto 0 0; height: 2px; background: var(--atlas-copper); transform: scaleX(0); transform-origin: left; transition: transform .2s ease; }
 .townChoices button[aria-pressed=true],.townChoices button:hover { color: #804627; }
 .townChoices button[aria-pressed=true]::after,.townChoices button:hover::after { transform: scaleX(1); }
-.atlas .townChoices button:focus-visible { outline-offset: -2px; }
-.atlasSpread {
-  display: grid; grid-template-columns: minmax(0,1.25fr) minmax(0,1fr);
-  gap: clamp(30px,4.3vw,78px); margin-top: clamp(23px,2.4vw,40px); align-items: start;
-}
-.townPhotoWindow { position: relative; overflow: hidden; background: #d5d9cc; aspect-ratio: 2.15; }
+.atlas .townChoices button:focus-visible { outline-offset: 1px; }
+.townPhoto { grid-area: photo; position: relative; isolation: isolate; min-height: clamp(420px,34vw,670px); background: #677b7c; }
+.townPhotoWindow { position: absolute; inset: 0; overflow: hidden; }
 .townPhotoWindow img { object-fit: cover; opacity: 0; transition: opacity .36s ease; }
 .townPhotoWindow img[data-visible=true] { opacity: 1; }
-.townPhoto figcaption { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; padding-top: 8px; }
-.townPhoto figcaption>span { font: italic 15px/1.3 var(--serif); color: #425348; }
-.photoCredit { position: relative; font: 11px/1.5 var(--sans); color: #4e574e; }
+.townPhoto figcaption {
+  position: absolute; inset: auto 0 0; display: flex; flex-wrap: wrap; align-items: end;
+  justify-content: space-between; gap: 4px 16px; padding: 55px clamp(20px,2.8vw,54px) 20px;
+  background: linear-gradient(transparent,rgba(16,33,31,.85)); color: #fffaf0;
+}
+.townPhoto figcaption>span { font: italic clamp(18px,1.6vw,28px)/1.2 var(--serif); }
+.photoCredit { font: 12px/1.5 var(--sans); }
 .photoCredit summary { cursor: pointer; text-underline-offset: 3px; }
 .photoCredit summary:hover,.photoCredit a { text-decoration: underline; }
-.photoCredit p { position: absolute; top: 100%; right: 0; z-index: 2; padding: 10px 14px; width: max-content; max-width: 215px; background: var(--atlas-paper); border: 1px solid var(--atlas-rule); }
-.townInfo { padding-top: clamp(19px,2.2vw,34px); }
-.townInfo h3 { font-size: clamp(35px,3.2vw,57px); line-height: 1.03; margin-bottom: 12px; letter-spacing: -.035em; }
-.townInfo>p { max-width: 61ch; font-size: clamp(15px,1.04vw,18px); line-height: 1.65; }
-.townActions { gap: 12px 25px; align-items: baseline; margin-top: clamp(15px,1.6vw,26px); }
-.townActions a:first-child { font: 600 15px/1.4 var(--sans); letter-spacing: -.005em; color: var(--pine); gap: 14px; }
-.townActions a:last-child { border: 0; color: #48564a; font-size: 13px; font-weight: 500; gap: 7px; }
-.townActions a:hover,.comparison:hover { color: var(--atlas-copper); }
-.atlasFigure { border-left: 1px solid var(--atlas-rule); padding-left: clamp(23px,3.5vw,65px); text-align: left; }
-.atlasPlate { display: grid; place-items: center; background: radial-gradient(ellipse at center,#ede8d9 0%,#f3efe3 72%); border: 1px solid #d9d3c3; }
-.atlasPlate svg { display: block; width: 100%; height: auto; max-height: 555px; }
-.atlasLegend {
-  display: flex; align-items: baseline; justify-content: space-between; gap: 8px;
-  padding: 11px 0 15px; border-bottom: 1px solid var(--atlas-rule); color: #4c574a; font-size: 9px; letter-spacing: .1em;
+.photoCredit p {
+  position: absolute; bottom: 56px; right: clamp(16px,2.8vw,54px); z-index: 2;
+  padding: 10px 14px; max-width: min(240px,85%); background: var(--atlas-paper); color: var(--ink);
 }
-.atlasLegend a { font: 11px var(--sans); text-transform: none; letter-spacing: 0; text-decoration: underline; text-underline-offset: 3px; }
-.atlas .comparison { display: flex; width: 100%; justify-content: space-between; padding: 15px 0 4px; border: 0; font: 500 clamp(20px,1.8vw,30px)/1.2 var(--serif); letter-spacing: -.015em; }
+.atlasStory { grid-area: story; align-self: start; padding-bottom: clamp(36px,4vw,80px); }
+.townInfo h3 { font-size: clamp(28px,2.65vw,46px); line-height: 1.07; margin-bottom: 10px; letter-spacing: -.035em; }
+.townInfo>p { max-width: 54ch; font-size: clamp(16px,1.05vw,19px); line-height: 1.6; }
+.townActions { gap: 10px 24px; align-items: baseline; margin-top: clamp(14px,1.4vw,24px); }
+.townActions a:first-child { font: 600 15px/1.4 var(--sans); letter-spacing: -.005em; color: var(--pine); gap: 12px; }
+.townActions a:last-child { border: 0; color: #48564a; font-size: 14px; font-weight: 500; gap: 7px; }
+.townActions a:hover,.comparison:hover { color: var(--atlas-copper); }
+.atlasCompanion {
+  display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: baseline; gap: 16px;
+  padding: 14px max(var(--gutter), calc((100% - 1600px)/2));
+  border-block: 1px solid var(--atlas-rule);
+}
+.atlasFigure summary { width: fit-content; cursor: pointer; font: 500 20px/1.5 var(--serif); padding: 7px 0; }
+.atlasFigure summary::marker { color: var(--atlas-copper); font-size: .7em; }
+.atlasFigure figure { width: min(100%,560px); padding-block: 12px; }
+.atlasPlate { background: radial-gradient(ellipse at center,#ede8d9 0%,#f3efe3 72%); border: 1px solid #d9d3c3; }
+.atlasPlate svg { display: block; width: 100%; height: auto; }
+.atlasLegend { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding-top: 9px; color: #4c574a; }
+.atlasLegend a { font: 12px var(--sans); text-transform: none; letter-spacing: 0; text-decoration: underline; text-underline-offset: 3px; }
+.atlas .comparison { font-size: 14px; }
 .waterLabels { font: italic 13px Georgia,serif; fill: #375d62; }
 .mapRegion { font: 8px Arial,sans-serif; fill: #676653; }
 .mapTown { cursor: pointer; fill: #263c33; }
@@ -149,24 +166,28 @@
 .mapTown:hover .halo,.mapTown:focus-visible .halo { stroke: #513f2d; stroke-width: 2; }
 .mapTown:focus-visible { outline: none; }
 @media (max-width:800px) {
-  .atlasSpread { grid-template-columns: minmax(0,1fr); gap: 32px; }
-  .atlasFigure { padding: 0; border: 0; }
-  .atlasPlate svg { max-height: 450px; }
-  .atlas .townChoices { gap: 26px; }
+  .atlasSpread {
+    grid-template-columns: minmax(0,1fr); grid-template-rows: auto;
+    grid-template-areas: "heading" "choices" "photo" "story";
+  }
+  .atlasHeader,.townChoices,.atlasStory { width: calc(100% - 2 * var(--gutter)); }
+  .atlasHeader { padding-top: 36px; }
+  .atlasHeader h2 { font-size: clamp(48px,8.2vw,65px); line-height: 1; margin-top: 10px; }
+  .atlasHeader h2 i { display: inline-block; }
+  .townChoices { margin-block: 10px 15px; gap: 0 18px; }
+  .townPhoto { min-height: 0; aspect-ratio: 1.8; }
+  .townPhoto figcaption { padding: 38px var(--gutter) 14px; }
+  .atlasStory { padding-block: 24px 30px; }
 }
-@media (max-width:650px) {
-  .atlas { padding-block: 45px 50px; }
-  .atlasHeader h2 { font-size: clamp(55px,11vw,71px); line-height: .94; margin: 15px 0 20px; }
-  .atlasHeader h2 i { display: block; }
-  .townChoices { margin-right: calc(-1 * var(--gutter)); padding-right: var(--gutter); }
-  .townPhotoWindow { aspect-ratio: 1.85; }
-  .atlasPlate svg { max-height: 400px; }
+@media (max-width:550px) {
+  .atlasCompanion { grid-template-columns: minmax(0,1fr); gap: 0; }
+  .atlas .comparison { justify-self: start; }
 }
 @media (prefers-reduced-motion:reduce) { .townPhotoWindow img,.townChoices button::after { transition: none; } }
 .journal { padding: clamp(65px,7.5vw,128px) var(--gutter); max-width: 1800px; margin:0 auto; }
 .sectionTop { display:flex; justify-content: space-between; align-items:flex-end; gap:18px; margin-bottom: clamp(25px,3.4vw,57px); }
 .sectionTop h2 { margin-top: 17px; }
-.railControls button,.reviewControls button { border-color: #859080; color: var(--pine); }
+.railControls button { border-color: #859080; color: var(--pine); }
 .railControls button:disabled { opacity:.3; cursor:default; }
 .weekend { padding-top: clamp(65px,7.5vw,128px); }
 .weekendHeader { max-width: 1800px; margin: 0 auto; padding: 0 var(--gutter) clamp(26px,3vw,48px); }
@@ -195,11 +216,23 @@
  .weekend .railControls { display: flex; justify-content: flex-end; padding: 14px var(--gutter) 18px; }
  .weekend .railControls button { height: 44px; width: 44px; }
 }
-.reviews { display:grid; grid-template-columns: .45fr 1fr; gap: 6%; align-items:start; background:#e9e4d8; padding: clamp(56px,6vw,105px) max(var(--gutter),calc((100vw - 1450px)/2)); }
-.quotation { font: 110px/.79 Georgia,serif; color: #9a7853; display:block; height:56px; }
-.reviewBody blockquote { font: 400 clamp(25px,2.55vw,43px)/1.2 var(--serif); letter-spacing:-.024em; max-width: 36ch; }
-.reviewBody figcaption { display:flex; flex-wrap:wrap; gap:10px; align-items:center; font-size:12px; margin:20px 0 18px; }
-.reviewControls { gap:14px; font-size:11px; }
+.reviews {
+  background: #203b33; color: #faf6e9;
+  padding: clamp(30px,3.1vw,55px) var(--gutter);
+}
+.reviewBody { max-width: 920px; margin-inline: auto; }
+.reviewBody .kicker { color: #e2c397; gap: 11px; font-size: 12px; }
+.quotation { height: 23px; font: 52px/.94 Georgia,serif; color: #d4ad77; }
+.reviewBody blockquote {
+  margin-top: 15px; font: 400 clamp(26px,2.28vw,42px)/1.16 var(--serif);
+  letter-spacing: -.021em; text-wrap: pretty;
+}
+.reviewBody blockquote em { color: #f5d8ac; }
+.reviewBody figcaption { display: flex; align-items: baseline; flex-wrap: wrap; gap: 3px 12px; margin-top: 20px; font: 13px/1.5 var(--sans); color: #d4ddd3; }
+.reviewBody figcaption strong { color: #fff9ec; font-size: 14px; }
+.reviewControls { gap: 12px; margin-top: 12px; color: #e8e9dc; font-size: 12px; font-variant-numeric: tabular-nums; }
+.reviewControls button { color: #faf6e9; border-color: #a5b2a3; width: 44px; height: 44px; }
+.reviewControls button:hover { color: var(--pine); background: #f8f3e6; }
 .guideGrid { display:grid; grid-template-columns:repeat(3,1fr); gap: clamp(22px,3.2vw,54px); }
 .guide { display:flex; flex-direction:column; align-items:flex-start; border-top:1px solid #9aa698; padding-top:22px; }
 .guide h3 { font-size:clamp(30px,3vw,49px); line-height:1.04; letter-spacing:-.045em; margin:16px 0; }
@@ -251,8 +284,6 @@
  .weekendHeader h2 { font-size: clamp(47px,10.7vw,66px); margin-top: 12px; }
  .rail { height: clamp(360px,108vw,490px); }
  .weekendPanel,.weekendPanel[data-expanded=true] { flex-basis: 85%; }
- .reviews { grid-template-columns:1fr; gap:20px; padding:40px var(--gutter); }
- .reviewAside { display:flex; gap:12px; align-items:center; } .quotation { height:28px; font-size:68px; }
  .guideGrid { grid-template-columns:1fr; gap:25px; } .guide { padding-top:18px; }
  .guide h3 { margin:9px 0; } .guide .readGuide { padding-top:12px; }
  .journal .darkTextLink { font-size:11px; gap:8px; white-space:nowrap; }
