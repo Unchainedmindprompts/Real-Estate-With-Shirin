@@ -57,7 +57,7 @@ export default function LakesideOpening() {
         ref={video}
         className={s.waterfrontFilm}
         data-visible={filmState !== 'still'}
-        src="/video/riverfront-glide.mp4"
+        src="/video/riverfront-shoreline-glide.mp4"
         muted autoPlay playsInline
         aria-hidden="true"
         onPlaying={() => setFilmState('playing')}
