@@ -2,12 +2,14 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import waterfront from '@/public/images/field-guide/waterfront-homes.webp'
 import evening from '@/IMG_3712.jpeg'
 import boardwalk from '@/IMG_1627.jpeg'
 import marina from '@/IMG_2343.jpeg'
 import s from './Home.module.css'
 
 const scenes = [
+  { photo: waterfront, caption: 'Homes along the river', alt: 'Riverfront homes and docks reflected in still water beneath pine-covered hills' },
   { photo: evening, caption: 'Last light on Lake Coeur d’Alene', alt: 'A copper sunset reflected on Lake Coeur d’Alene, framed by pine trees' },
   { photo: boardwalk, caption: 'A walk along the water', alt: 'A timber boardwalk reaching into blue water on Lake Coeur d’Alene' },
   { photo: marina, caption: 'Still water at the marina', alt: 'The Coeur d’Alene marina and lake beneath a pale evening sky' },
@@ -15,9 +17,9 @@ const scenes = [
 
 export default function LakesideOpening() {
   const [current, setCurrent] = useState(0)
-  return <section className={s.opening} aria-labelledby="home-content">
+  return <section className={s.opening} data-waterfront={current === 0} aria-labelledby="home-content">
     {scenes.map((scene, i) => <div key={scene.photo.src} className={s.scene} data-active={i === current} aria-hidden={i !== current}>
-      <Image src={scene.photo} alt={scene.alt} fill sizes="100vw" quality={85} preload={i === 0} />
+      <Image src={scene.photo} alt={scene.alt} fill sizes={i === 0 ? 'max(100vw, 150svh)' : '100vw'} quality={85} preload={i === 0} />
     </div>)}
     <div className={s.scrim} />
     <div className={s.heroInner}>
@@ -35,9 +37,9 @@ export default function LakesideOpening() {
           <span className={s.sceneLine} />{scenes[current].caption}
         </div>
         <div className={s.sceneControls}>
-          <button type="button" aria-label="Previous lake photograph" onClick={() => setCurrent((current + scenes.length - 1) % scenes.length)}>←</button>
-          <span>{String(current + 1).padStart(2, '0')} <b>/</b> 03</span>
-          <button type="button" aria-label="Next lake photograph" onClick={() => setCurrent((current + 1) % scenes.length)}>→</button>
+          <button type="button" aria-label="Previous waterfront photograph" onClick={() => setCurrent((current + scenes.length - 1) % scenes.length)}>←</button>
+          <span>{String(current + 1).padStart(2, '0')} <b>/</b> {String(scenes.length).padStart(2, '0')}</span>
+          <button type="button" aria-label="Next waterfront photograph" onClick={() => setCurrent((current + 1) % scenes.length)}>→</button>
         </div>
       </div>
     </div>
