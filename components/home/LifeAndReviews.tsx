@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import s from './Home.module.css'
 
 const weekends = [
@@ -15,21 +15,67 @@ const weekends = [
 
 export function Weekend() {
   const rail = useRef<HTMLDivElement>(null)
-  const [bounds, setBounds] = useState({start: true, end: false})
-  function move(step: number) {
-    const el = rail.current
-    if (!el) return
-    const cards = Array.from(el.children) as HTMLElement[]
-    const current = cards.reduce((best, card, i) => Math.abs(card.offsetLeft-el.scrollLeft) < Math.abs(cards[best].offsetLeft-el.scrollLeft) ? i : best, 0)
-    const next = cards[Math.max(0,Math.min(cards.length-1,current+step))]
-    el.scrollTo({left:next.offsetLeft,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})
+  const [expanded, setExpanded] = useState(0)
+  const [atStart, setAtStart] = useState(true)
+  const [atEnd, setAtEnd] = useState(false)
+
+  useEffect(() => {
+    const element = rail.current
+    if (!element) return
+    function updateControls() {
+      if (!element) return
+      setAtStart(element.scrollLeft < 2)
+      setAtEnd(element.scrollLeft + element.clientWidth >= element.scrollWidth - 2)
+    }
+    const observer = new ResizeObserver(updateControls)
+    observer.observe(element)
+    element.addEventListener('scroll', updateControls, { passive: true })
+    updateControls()
+    return () => {
+      observer.disconnect()
+      element.removeEventListener('scroll', updateControls)
+    }
+  }, [])
+
+  function move(direction: number) {
+    const element = rail.current
+    if (!element) return
+    const panels = Array.from(element.querySelectorAll('figure'))
+    const positions = panels.map(panel => Math.min(panel.offsetLeft, element.scrollWidth - element.clientWidth))
+    const target = direction > 0
+      ? positions.find(left => left > element.scrollLeft + 2)
+      : positions.reverse().find(left => left < element.scrollLeft - 2)
+    if (target !== undefined) element.scrollTo({ left: target, behavior: 'auto' })
   }
-  return <section className={s.weekend} aria-labelledby="weekend-heading">
-    <div className={s.sectionTop}><div><p className={s.kicker}><span className={s.shortRule}/>Life around here</p><h2 id="weekend-heading">The weekend <i>edit.</i></h2></div>
-      <div className={s.railControls}><button type="button" aria-label="Previous lifestyle photograph" disabled={bounds.start} onClick={() => move(-1)}>←</button><button type="button" aria-label="Next lifestyle photograph" disabled={bounds.end} onClick={() => move(1)}>→</button></div>
+
+  return <section id="weekend-edit" className={s.weekend} aria-labelledby="weekend-heading">
+    <div className={s.weekendHeader}>
+      <p className={s.kicker}><span className={s.shortRule}/>Life around here</p>
+      <h2 id="weekend-heading">The weekend <i>edit.</i></h2>
     </div>
-    <div ref={rail} className={s.rail} onScroll={e=>{const el=e.currentTarget;setBounds({start:el.scrollLeft<=2,end:el.scrollLeft+el.clientWidth>=el.scrollWidth-3})}} aria-label="North Idaho lifestyle photographs" tabIndex={0}>
-      {weekends.map(x=><figure key={x.name}><div className={s.railImage}><Image src={'/images/'+x.image} fill sizes="(max-width: 660px) 80vw, 36vw" alt={x.alt}/></div><figcaption><h3>{x.name}</h3><span>{x.place}</span></figcaption></figure>)}
+    <div ref={rail} id="weekend-photos" className={s.rail}>
+      {weekends.map((photo, index) => (
+        <figure key={photo.name} className={s.weekendPanel} data-expanded={expanded === index}
+          onPointerEnter={event => { if (event.pointerType === 'mouse') setExpanded(index) }}>
+          <Image src={'/images/' + photo.image} fill
+            sizes="(max-width: 650px) 85vw, (max-width: 1100px) 52vw, 38vw" alt={photo.alt}/>
+          <figcaption>
+            <span className={s.foldedTitle} aria-hidden="true">{photo.name}</span>
+            <div className={s.panelCaption}>
+              <h3>{photo.name}</h3>
+              <span>{photo.place}</span>
+            </div>
+          </figcaption>
+          <button className={s.expandPanel} type="button" aria-label={'Expand ' + photo.name}
+            aria-pressed={expanded === index} onFocus={() => setExpanded(index)} onClick={() => setExpanded(index)}/>
+        </figure>
+      ))}
+    </div>
+    <div className={s.railControls}>
+      <button type="button" aria-label="Previous lifestyle photograph" aria-controls="weekend-photos"
+        disabled={atStart} onClick={() => move(-1)}>←</button>
+      <button type="button" aria-label="Next lifestyle photograph" aria-controls="weekend-photos"
+        disabled={atEnd} onClick={() => move(1)}>→</button>
     </div>
   </section>
 }
