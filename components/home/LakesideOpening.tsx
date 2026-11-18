@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { KVCORE_BASE } from '@/lib/idx-search'
 import evening from '@/IMG_3712.jpeg'
 import boardwalk from '@/IMG_1627.jpeg'
 import marina from '@/IMG_2343.jpeg'
@@ -27,8 +26,8 @@ export default function LakesideOpening() {
         <h1 id="home-content" tabIndex={-1}>At home in<br/><i>North Idaho.</i></h1>
         <p className={s.introLine}>With Shirin Abplanalp, REALTOR®</p>
         <div className={s.heroActions}>
-          <a className={s.lightButton} href="#communities">Explore the towns <span aria-hidden="true">↓</span></a>
-          <a className={s.lightTextLink} href={KVCORE_BASE}>Search homes <span aria-hidden="true">↗</span></a>
+          <a className={s.lightButton} href="#buying">Buy a home <span aria-hidden="true">↓</span></a>
+          <a className={s.lightTextLink} href="#selling">Sell a home <span aria-hidden="true">↓</span></a>
         </div>
       </div>
       <div className={s.sceneBar}>
