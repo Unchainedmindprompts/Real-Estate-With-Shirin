@@ -133,88 +133,50 @@
   .atlasWindowPhoto { position: absolute; }
 }
 .journal {
-  position: relative;
-  isolation: isolate;
   display: grid;
   align-items: center;
-  min-height: clamp(34rem, 41vw, 43rem);
-  padding: clamp(58px, 5.4vw, 96px) var(--gutter);
-  background: #eef0e7;
+  min-height: clamp(24rem, 31vw, 34rem);
+  padding: clamp(4.5rem, 7vw, 8rem) var(--gutter);
+  /* Carrara-style mineral veins follow the elevation contours around Hayden Lake. */
+  background: #f3f2ee url('/images/field-guide/hayden-contour-carrara.jpg') center / cover no-repeat;
   color: var(--ink);
   text-align: center;
 }
-.journal::after {
-  content: '';
-  position: absolute;
-  z-index: -2;
-  inset: 0;
-  background: url('/images/field-guide/hayden-lake-contours.svg') center / cover no-repeat;
-  opacity: .34;
-  mask-image: radial-gradient(ellipse 60% 100% at 50% 50%, rgb(0 0 0 / .15) 18%, rgb(0 0 0 / .44) 58%, #000 100%);
-  pointer-events: none;
-}
-.journal::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  inset: 5% 7%;
-  background: url('/images/field-guide/idaho-silhouette.svg') center / contain no-repeat;
-  opacity: .18;
-  pointer-events: none;
-}
-.journalInner { width: min(100%, 78rem); margin-inline: auto; }
-.journal .kicker { justify-content: center; color: #596341; font-size: .75rem; }
-.journalTitle h2 {
-  margin-top: 12px;
-  font-size: clamp(4.8rem, 7.6vw, 8.8rem);
-  line-height: .97;
-}
-.journalTitle h2 i { color: #375a47; }
+.journalInner { width: min(100%, 84rem); margin-inline: auto; }
 .journalLinks {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: clamp(1.25rem, 4vw, 5.5rem);
   list-style: none;
-  margin: clamp(44px, 4.8vw, 80px) 0 clamp(30px, 3.2vw, 54px);
+  margin: 0;
   padding: 0;
 }
-.journalLinks li + li { border-inline-start: 1px solid #85927a80; }
 .journalLinks a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 13px;
-  height: 100%;
-  padding: 8px 18px;
-}
-.guideTitle {
+  display: inline-block;
   max-width: 13ch;
-  font: 500 clamp(1.9rem, 2.75vw, 3.25rem)/1.04 var(--serif);
-  letter-spacing: -.035em;
+  padding-block: .35rem;
+  font: 500 clamp(1.95rem, 3.4vw, 3.875rem)/1.08 var(--serif);
+  letter-spacing: -.04em;
   text-wrap: balance;
-}
-.journalLinks a:hover .guideTitle, .journalLinks a:focus-visible .guideTitle {
-  text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: .16em;
 }
+.journalLinks a:hover, .journalLinks a:focus-visible { text-decoration-line: underline; }
 .archiveLink {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
+  margin-top: clamp(1.75rem, 3vw, 3rem);
   font: 500 .9375rem/1.35 var(--sans);
   text-decoration: underline;
   text-decoration-color: #71806c;
   text-underline-offset: .4em;
 }
 @media (max-width:700px) {
-  .journal { min-height: 0; padding-block: 50px 36px; }
-  .journal::before { inset: 20px 6%; }
-  .journal::after { background-position: 73% center; }
-  .journalTitle h2 { font-size: clamp(3.75rem, 14vw, 5.5rem); }
-  .journalLinks { grid-template-columns: 1fr; max-width: 30rem; margin: 26px auto 12px; }
-  .journalLinks li + li { border-inline-start: 0; border-top: 1px solid #85927a65; }
-  .journalLinks a { gap: 6px; padding: 18px 5px; }
-  .guideTitle { max-width: none; font-size: clamp(1.85rem, 6.4vw, 2.25rem); }
+  .journal { min-height: 0; padding-block: clamp(3.5rem, 9svh, 6rem); background-position: 67% center; }
+  .journalLinks { grid-template-columns: 1fr; gap: .8rem; }
+  .journalLinks a { max-width: 19ch; font-size: clamp(1.95rem, 7.8vw, 2.75rem); }
 }
 .railControls button { border-color: #859080; color: var(--pine); }
 .railControls button:disabled { opacity:.3; cursor:default; }

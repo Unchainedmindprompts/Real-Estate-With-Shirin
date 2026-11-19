@@ -8,9 +8,9 @@ import { KVCORE_BASE } from '@/lib/idx-search'
 import s from './Home.module.css'
 
 const guides = [
-  { href: '/relocating-to-north-idaho', category: 'Relocation', title: 'Moving to North Idaho' },
-  { href: '/articles/north-idaho-to-spokane-commute-times', category: 'Daily life', title: 'The commute to Spokane' },
-  { href: '/articles/selling-a-home-north-idaho-what-your-home-is-worth', category: 'For sellers', title: 'What is your home worth?' },
+  { href: '/relocating-to-north-idaho', title: 'Moving to North Idaho' },
+  { href: '/articles/north-idaho-to-spokane-commute-times', title: 'The commute to Spokane' },
+  { href: '/articles/selling-a-home-north-idaho-what-your-home-is-worth', title: 'What is your home worth?' },
 ]
 
 export default function FieldGuide({ reviews }: { reviews: { name:string; context:string; quote:string }[] }) {
@@ -66,20 +66,11 @@ export default function FieldGuide({ reviews }: { reviews: { name:string; contex
     </div>
     <Reviews reviews={reviews}/>
     <TownAtlas/>
-    <section className={s.journal} id="field-notes" aria-labelledby="notes-heading">
+    <section className={s.journal} id="field-notes" aria-label="North Idaho guides">
       <div className={s.journalInner}>
-        <header className={s.journalTitle}>
-          <p className={s.kicker}>Shirin’s guides</p>
-          <h2 id="notes-heading">Field <i>notes.</i></h2>
-        </header>
         <ul className={s.journalLinks}>
-          {guides.map(({ href, category, title }) => (
-            <li key={href}>
-              <Link href={href}>
-                <span className={s.kicker}>{category}</span>
-                <span className={s.guideTitle}>{title}</span>
-              </Link>
-            </li>
+          {guides.map(({ href, title }) => (
+            <li key={href}><Link href={href}>{title}</Link></li>
           ))}
         </ul>
         <Link className={s.archiveLink} href="/articles">All articles</Link>
