@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
+import PageHero from '@/components/PageHero'
 import Link from 'next/link'
 import fs from 'fs'
 import path from 'path'
@@ -52,38 +52,13 @@ export default function ArticlesPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCollection) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
-      {/* Hero */}
-      <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/north-idaho-lake-hero.webp"
-            alt="Northern Idaho landscape"
-            fill
-            priority
-            className="object-cover"
-            
-          />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(28,26,23,0.35), rgba(28,26,23,0.6))' }} />
-        </div>
-        <div className="relative z-10 text-center px-6 lg:px-8 py-20 max-w-3xl mx-auto">
-          <p className="eyebrow mb-4" style={{ color: '#C4842A' }}>INSIGHTS &amp; GUIDES</p>
-          <h1
-            className="mb-6"
-            style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 600,
-              fontSize: 'clamp(36px, 6vw, 56px)',
-              lineHeight: 1.1,
-              color: '#FAFAF8',
-            }}
-          >
-            North Idaho Real Estate Insights
-          </h1>
-          <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '18px', lineHeight: 1.7, color: '#E8DDD0' }}>
-            Market updates, neighborhood guides, and honest advice for buyers, sellers, and anyone considering a move to North Idaho.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="INSIGHTS & GUIDES"
+        title={<>North Idaho Real Estate <i>Insights</i></>}
+        layout="articles"
+      >
+        Market updates, neighborhood guides, and honest advice for buyers, sellers, and anyone considering a move to North Idaho.
+      </PageHero>
 
       {/* Articles Grid */}
       <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>

@@ -1,0 +1,51 @@
+.hero {
+  min-height: 60vh;
+  background: #293328;
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(25 39 31 / 78%), rgb(26 37 27 / 64%) 42%, rgb(26 37 27 / 56%) 62%, rgb(24 29 22 / 14%));
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  color: #f1dfbf;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: currentColor;
+  opacity: .85;
+}
+
+.title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(36px, 6vw, 56px);
+  font-weight: 600;
+  line-height: 1.1;
+  color: #fffdf8;
+  text-shadow: 0 1px 6px rgb(12 23 17 / 24%);
+}
+
+.intro {
+  font: 400 18px/1.7 'DM Sans', system-ui, sans-serif;
+  color: #f8f5ed;
+}
+
+.intro[data-layout='service'] {
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+@media (max-width: 700px) {
+  .shade {
+    background: linear-gradient(180deg, rgb(25 39 31 / 47%), rgb(24 36 27 / 67%) 48%, rgb(24 32 24 / 58%));
+  }
+}
