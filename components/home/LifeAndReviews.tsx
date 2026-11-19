@@ -51,7 +51,7 @@ export function Weekend() {
   return <section id="weekend-edit" className={s.weekend} aria-labelledby="weekend-heading">
     <div className={s.weekendHeader}>
       <p className={s.kicker}><span className={s.shortRule}/>Life around here</p>
-      <h2 id="weekend-heading">The weekend <i>edit.</i></h2>
+      <h2 id="weekend-heading">Life in the <i>INW.</i></h2>
     </div>
     <div ref={rail} id="weekend-photos" className={s.rail}>
       {weekends.map((photo, index) => (
