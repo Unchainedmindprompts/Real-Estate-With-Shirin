@@ -84,67 +84,113 @@
 .signature { margin: 14px 0 0; font-family: 'Great Vibes', 'Snell Roundhand', cursive; font-size: 45px; line-height: 1.4; color: #8d6448; }
 .storyCopy .broker { font-size: 10px; color: #626b61; margin: 16px 0 0; }
 .atlas {
-  --atlas-paper: #f8f5ed;
-  --atlas-rule: #c9c3b2;
-  --atlas-copper: #925332;
+  --atlas-paper: #fdfcf9;
+  --atlas-rule: #ccc5b4;
+  --atlas-copper: #805638;
   background: var(--atlas-paper);
+  padding: clamp(68px, 8vw, 130px) var(--gutter) clamp(40px, 5vw, 80px);
 }
+.atlasSpread, .atlasCompanion { max-width: 1072px; margin-inline: auto; }
 .atlasSpread {
   display: grid;
-  grid-template-columns: minmax(0,.93fr) minmax(0,1.07fr);
-  grid-template-areas: "heading photo" "choices photo" "story photo";
-  grid-template-rows: 1fr auto 1fr;
+  grid-template-columns: minmax(0, 190fr) minmax(0, 842fr);
+  grid-template-areas: "heading photo" "heading choices" ". story";
+  column-gap: clamp(24px, 3vw, 40px);
 }
-.atlasHeader, .townChoices, .atlasStory {
-  width: min(580px, calc(100% - 2 * var(--gutter)));
-  justify-self: center;
+.atlasHeader {
+  grid-area: heading; position: relative; align-self: stretch;
+  display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-end;
+  padding: 0 0 12px 12px;
 }
-.atlasHeader { grid-area: heading; align-self: end; padding-top: clamp(35px,4vw,80px); }
-.atlasHeader .kicker { color: #70573e; font-size: 12px; }
-.atlasHeader h2 { font-size: clamp(50px,5.7vw,100px); margin: 17px 0 0; line-height: .96; }
-.atlasHeader h2 i { display: block; }
+.atlasHeader::before {
+  content: ''; position: absolute; inset: 8% auto -22px 0;
+  width: 1px; background: var(--atlas-rule);
+}
+.atlasHeader::after {
+  content: ''; position: absolute; bottom: 0; right: 0; width: 100%; height: 1px;
+  background: linear-gradient(to right, var(--atlas-rule) 80%, var(--atlas-copper) 80%);
+}
+.atlasHeader h2 {
+  writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap;
+  font: 400 clamp(39px, 5.4vw, 72px)/.98 var(--serif); letter-spacing: -.055em;
+}
+.atlasHeader h2 span, .atlasHeader h2 i { display: block; }
+.atlasHeader h2 i { color: #315c49; font-size: .97em; }
+.atlasHeader .kicker { color: var(--atlas-copper); font-size: 10px; letter-spacing: .13em; margin-top: 14px; }
+.atlasMedia { grid-area: photo; min-width: 0; }
+.townPhotoWindow {
+  position: relative; isolation: isolate; overflow: hidden; aspect-ratio: 842 / 458;
+  border-bottom-right-radius: clamp(20px, 2vw, 32px); background: #485c53;
+}
+.rightView, .leftView, .revealRange { position: absolute; inset: 0; }
+.leftView { clip-path: inset(0 calc(100% - var(--split)) 0 0); }
+.rightView { clip-path: inset(0 0 0 var(--split)); }
+.rightView img, .leftView img { object-fit: cover; }
+.viewLabel {
+  position: absolute; top: 10px; padding: 8px 14px;
+  font: 600 11px/1.2 var(--sans); letter-spacing: .08em; text-transform: uppercase;
+}
+.rightView .viewLabel { right: 10px; background: #203e32; color: white; }
+.leftView .viewLabel { left: 10px; background: #fffdf8; color: #253e33; }
+.revealRange {
+  z-index: 2; width: 100%; height: 100%; margin: 0; opacity: 0;
+  appearance: none; cursor: ew-resize; touch-action: pan-y;
+}
+.revealRange::-webkit-slider-thumb { appearance: none; width: 1px; height: 44px; }
+.revealRange::-moz-range-thumb { width: 1px; height: 44px; border: 0; }
+.revealLine {
+  pointer-events: none; position: absolute; inset-block: 0; left: var(--split); width: 2px;
+  transform: translateX(-50%); background: #fffdf8; box-shadow: 0 0 5px #18302669;
+}
+.revealGrip {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%;
+  background: #fffdf8; box-shadow: 0 2px 14px #15261e59;
+}
+.revealGrip img { width: 31px; height: auto; filter: brightness(0); }
+.revealGrip::before, .revealGrip::after {
+  content: ''; position: absolute; width: 9px; height: 9px; top: calc(50% - 4.5px);
+  border: solid #fff; border-width: 0 2px 2px 0; filter: drop-shadow(0 1px 2px #25352b);
+}
+.revealGrip::before { right: calc(100% + 5px); transform: rotate(135deg); }
+.revealGrip::after { left: calc(100% + 5px); transform: rotate(-45deg); }
+.revealRange:focus-visible + .revealLine .revealGrip { outline: 3px solid #243b30; outline-offset: -5px; }
+.townPhotoWindow:has(.revealRange:focus-visible) { outline: 2px solid #243b30; outline-offset: 2px; }
+.townPhoto figcaption {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  padding-top: 8px; color: #4c5b50; font: italic 15px/1.4 var(--serif);
+}
+.photoCredit { font: 12px/1.5 var(--sans); text-align: right; }
+.photoCredit summary { cursor: pointer; }
+.photoCredit summary:hover, .photoCredit a { text-decoration: underline; }
+.photoCredit[open] { max-width: 62%; }
+.photoCredit p { margin-top: 5px; }
 .townChoices {
   grid-area: choices; display: flex; flex-wrap: wrap; align-items: baseline;
-  gap: 0 clamp(14px,1.4vw,26px); margin-block: clamp(22px,2vw,34px);
-  border-bottom: 1px solid var(--atlas-rule);
+  gap: 0 clamp(14px, 1.8vw, 27px); margin-top: 10px; border-bottom: 1px solid var(--atlas-rule);
 }
 .townChoices button {
   position: relative; padding-block: 8px; min-height: 44px;
-  font: 500 clamp(17px,1.25vw,22px)/1.2 var(--serif);
+  font: 500 clamp(17px, 1.25vw, 21px)/1.2 var(--serif);
   color: #465449; white-space: nowrap; scroll-margin-top: 86px;
 }
 .townChoices button::after { content: ''; position: absolute; inset: auto 0 0; height: 2px; background: var(--atlas-copper); transform: scaleX(0); transform-origin: left; transition: transform .2s ease; }
-.townChoices button[aria-pressed=true],.townChoices button:hover { color: #804627; }
+.townChoices button[aria-pressed=true],.townChoices button:hover { color: var(--atlas-copper); }
 .townChoices button[aria-pressed=true]::after,.townChoices button:hover::after { transform: scaleX(1); }
 .atlas .townChoices button:focus-visible { outline-offset: 1px; }
-.townPhoto { grid-area: photo; position: relative; isolation: isolate; min-height: clamp(420px,34vw,670px); background: #677b7c; }
-.townPhotoWindow { position: absolute; inset: 0; overflow: hidden; }
-.townPhotoWindow img { object-fit: cover; opacity: 0; transition: opacity .36s ease; }
-.townPhotoWindow img[data-visible=true] { opacity: 1; }
-.townPhoto figcaption {
-  position: absolute; inset: auto 0 0; display: flex; flex-wrap: wrap; align-items: end;
-  justify-content: space-between; gap: 4px 16px; padding: 55px clamp(20px,2.8vw,54px) 20px;
-  background: linear-gradient(transparent,rgba(16,33,31,.85)); color: #fffaf0;
+.atlasStory { grid-area: story; padding-top: 19px; }
+.townInfo h3 { font-size: clamp(28px, 2.25vw, 38px); line-height: 1.07; margin-bottom: 7px; letter-spacing: -.035em; }
+.townInfo>p { max-width: 72ch; font-size: 16px; line-height: 1.6; }
+.townActions { gap: 10px 24px; align-items: baseline; margin-top: 16px; }
+.townActions a:first-child {
+  color: white; background: var(--pine); padding: 11px 18px; border: 0; border-bottom-right-radius: 12px;
 }
-.townPhoto figcaption>span { font: italic clamp(18px,1.6vw,28px)/1.2 var(--serif); }
-.photoCredit { font: 12px/1.5 var(--sans); }
-.photoCredit summary { cursor: pointer; text-underline-offset: 3px; }
-.photoCredit summary:hover,.photoCredit a { text-decoration: underline; }
-.photoCredit p {
-  position: absolute; bottom: 56px; right: clamp(16px,2.8vw,54px); z-index: 2;
-  padding: 10px 14px; max-width: min(240px,85%); background: var(--atlas-paper); color: var(--ink);
-}
-.atlasStory { grid-area: story; align-self: start; padding-bottom: clamp(36px,4vw,80px); }
-.townInfo h3 { font-size: clamp(28px,2.65vw,46px); line-height: 1.07; margin-bottom: 10px; letter-spacing: -.035em; }
-.townInfo>p { max-width: 54ch; font-size: clamp(16px,1.05vw,19px); line-height: 1.6; }
-.townActions { gap: 10px 24px; align-items: baseline; margin-top: clamp(14px,1.4vw,24px); }
-.townActions a:first-child { font: 600 15px/1.4 var(--sans); letter-spacing: -.005em; color: var(--pine); gap: 12px; }
-.townActions a:last-child { border: 0; color: #48564a; font-size: 14px; font-weight: 500; gap: 7px; }
-.townActions a:hover,.comparison:hover { color: var(--atlas-copper); }
+.townActions a:first-child:hover { background: #305646; }
+.townActions a:last-child { color: #48564a; font-size: 14px; gap: 7px; }
+.townActions a:last-child:hover,.comparison:hover { color: var(--atlas-copper); }
 .atlasCompanion {
   display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: baseline; gap: 16px;
-  padding: 14px max(var(--gutter), calc((100% - 1600px)/2));
-  border-block: 1px solid var(--atlas-rule);
+  margin-top: clamp(34px, 4vw, 60px); padding-block: 12px; border-block: 1px solid var(--atlas-rule);
 }
 .atlasFigure summary { width: fit-content; cursor: pointer; font: 500 20px/1.5 var(--serif); padding: 7px 0; }
 .atlasFigure summary::marker { color: var(--atlas-copper); font-size: .7em; }
@@ -164,24 +210,26 @@
 .mapTown:hover .halo,.mapTown:focus-visible .halo { stroke: #513f2d; stroke-width: 2; }
 .mapTown:focus-visible { outline: none; }
 @media (max-width:800px) {
-  .atlasSpread {
-    grid-template-columns: minmax(0,1fr); grid-template-rows: auto;
-    grid-template-areas: "heading" "choices" "photo" "story";
-  }
-  .atlasHeader,.townChoices,.atlasStory { width: calc(100% - 2 * var(--gutter)); }
-  .atlasHeader { padding-top: 36px; }
-  .atlasHeader h2 { font-size: clamp(48px,8.2vw,65px); line-height: 1; margin-top: 10px; }
-  .atlasHeader h2 i { display: inline-block; }
-  .townChoices { margin-block: 10px 15px; gap: 0 18px; }
-  .townPhoto { min-height: 0; aspect-ratio: 1.8; }
-  .townPhoto figcaption { padding: 38px var(--gutter) 14px; }
-  .atlasStory { padding-block: 24px 30px; }
+  .atlas { padding-block: 48px 32px; }
+  .atlasSpread { grid-template-columns: minmax(0,1fr); grid-template-areas: "heading" "photo" "choices" "story"; }
+  .atlasHeader { align-items: flex-start; padding: 0 0 18px; }
+  .atlasHeader::before, .atlasHeader::after { content: none; }
+  .atlasHeader .kicker { order: -1; margin: 0 0 8px; }
+  .atlasHeader h2 { writing-mode: horizontal-tb; transform: none; white-space: normal; font-size: clamp(42px, 7vw, 62px); }
+  .atlasHeader h2 span, .atlasHeader h2 i { display: inline; }
+  .townPhotoWindow { aspect-ratio: 1.55; }
+  .viewLabel { padding: 6px 8px; font-size: 10px; }
+  .leftView .viewLabel { left: 6px; }
+  .rightView .viewLabel { right: 6px; }
+  .townChoices { gap: 0 16px; }
+  .revealGrip { width: 44px; height: 44px; }
+  .revealGrip img { width: 26px; }
 }
 @media (max-width:550px) {
   .atlasCompanion { grid-template-columns: minmax(0,1fr); gap: 0; }
   .atlas .comparison { justify-self: start; }
 }
-@media (prefers-reduced-motion:reduce) { .townPhotoWindow img,.townChoices button::after { transition: none; } }
+@media (prefers-reduced-motion:reduce) { .townChoices button::after { transition: none; } }
 .journal { padding: clamp(65px,7.5vw,128px) var(--gutter); max-width: 1800px; margin:0 auto; }
 .sectionTop { display:flex; justify-content: space-between; align-items:flex-end; gap:18px; margin-bottom: clamp(25px,3.4vw,57px); }
 .sectionTop h2 { margin-top: 17px; }

@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { IDX_SEARCH_BY_AREA } from '@/lib/idx-search'
@@ -60,14 +60,71 @@ const towns = [
 ]
 export const comparisonPath = '/articles/north-idaho-city-comparison-coeur-dalene-post-falls-hayden-rathdrum-sandpoint'
 
+type Town = (typeof towns)[number]
+
+function TownComparison({ left, right }: { left: Town; right: Town }) {
+  const [split, setSplit] = useState(25)
+  return <figure className={s.townPhoto} id="town-photograph">
+    <div className={s.townPhotoWindow} style={{ '--split': split + '%' } as CSSProperties}>
+      {[right, left].map((place, index) => (
+        <div key={place.slug} className={index === 0 ? s.rightView : s.leftView}>
+          <Image src={'/images/community-atlas/' + place.slug + '.webp'} alt={place.photo.alt}
+            style={{ objectPosition: place.photo.position }} fill sizes="(max-width: 800px) 92vw, (max-width: 1150px) 72vw, 842px" />
+          <span className={s.viewLabel}>{place.name}</span>
+        </div>
+      ))}
+      <input className={s.revealRange} type="range" min="0" max="100" value={split}
+        onChange={event => setSplit(event.currentTarget.valueAsNumber)}
+        aria-label={'Compare ' + left.name + ' and ' + right.name}
+        aria-valuetext={split + '% ' + left.name + ', ' + (100 - split) + '% ' + right.name} />
+      <span className={s.revealLine} aria-hidden="true">
+        <span className={s.revealGrip}>
+          <Image src="/images/field-guide/monogram.png" width={30} height={24} alt="" />
+        </span>
+      </span>
+    </div>
+    <figcaption>
+      <span>{right.photo.caption}</span>
+      <details className={s.photoCredit}>
+        <summary>Photo credits</summary>
+        <div>{[left, right].map(({ photo }) => (
+          <p key={photo.source}>{photo.caption} · <a href={photo.source}>{photo.credit}</a> · {photo.terms
+            ? <a href={photo.terms}>{photo.license}</a> : photo.license} · Cropped</p>
+        ))}</div>
+      </details>
+    </figcaption>
+  </figure>
+}
+
 export default function TownAtlas() {
-  const [active, setActive] = useState(0)
+  const [{ active, previous }, setPair] = useState({ active: 0, previous: 1 })
   const indexRef = useRef<HTMLDivElement>(null)
+  const mediaRef = useRef<HTMLDivElement>(null)
   const town = towns[active]
-  const photo = town.photo
+
+  useEffect(() => {
+    const media = mediaRef.current
+    if (!media || !('IntersectionObserver' in window)) return
+    const observer = new IntersectionObserver(entries => {
+      if (!entries.some(entry => entry.isIntersecting)) return
+      observer.disconnect()
+      if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+        media.animate([
+          { opacity: 0, transform: 'translateX(min(3vw, 48px))' },
+          { opacity: 1, transform: 'translateX(0)' },
+        ], { duration: 500, easing: 'ease-out' })
+      }
+    }, { threshold: 0.12 })
+    observer.observe(media)
+    return () => observer.disconnect()
+  }, [])
+
+  function pickTown(index: number) {
+    setPair(pair => index === pair.active ? pair : { active: index, previous: pair.active })
+  }
 
   function pickFromMap(index: number) {
-    setActive(index)
+    pickTown(index)
     const choices = indexRef.current
     if (!choices || !window.matchMedia('(max-width: 800px)').matches) return
     const choice = choices.querySelectorAll('button')[index]
@@ -82,33 +139,18 @@ export default function TownAtlas() {
   return <section className={s.atlas} id="communities" aria-labelledby="atlas-title">
     <div className={s.atlasSpread}>
       <header className={s.atlasHeader}>
-        <p className={s.kicker}><span className={s.shortRule}/>The community atlas</p>
-        <h2 id="atlas-title">Five towns. <i>Where’s home?</i></h2>
+        <h2 id="atlas-title"><span>Five towns.</span> <i>Where’s home?</i></h2>
+        <p className={s.kicker}>The community atlas</p>
       </header>
+      <div className={s.atlasMedia} ref={mediaRef}>
+        <TownComparison key={town.slug} left={towns[previous]} right={town} />
+      </div>
       <div className={s.townChoices} ref={indexRef} role="group" aria-label="Choose a town">
         {towns.map((item, index) => (
           <button type="button" key={item.slug} aria-pressed={index === active} aria-controls="town-story town-photograph"
-            onClick={() => setActive(index)}>{item.name}</button>
+            onClick={() => pickTown(index)}>{item.name}</button>
         ))}
       </div>
-      <figure className={s.townPhoto} id="town-photograph">
-        <div className={s.townPhotoWindow}>
-          {towns.map((item, index) => (
-            <Image key={item.slug} src={'/images/community-atlas/' + item.slug + '.webp'}
-              alt={index === active ? item.photo.alt : ''} aria-hidden={index !== active}
-              data-visible={index === active} style={{objectPosition: item.photo.position}} fill
-              sizes="(max-width: 800px) 100vw, 54vw"/>
-          ))}
-        </div>
-        <figcaption>
-          <span>{photo.caption}</span>
-          <details key={town.slug} className={s.photoCredit}>
-            <summary>Photo credit</summary>
-            <p><a href={photo.source}>{photo.credit}</a> · {photo.terms
-              ? <a href={photo.terms}>{photo.license}</a> : photo.license} · Cropped</p>
-          </details>
-        </figcaption>
-      </figure>
       <article className={s.atlasStory} id="town-story" aria-labelledby="town-headline">
         <div className={s.townInfo} aria-live="polite" aria-atomic="true">
           <h3 id="town-headline">{town.phrase}</h3>
