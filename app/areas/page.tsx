@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
 import { BASE_URL, BUSINESS_ID, WEBSITE_ID } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
@@ -49,127 +48,98 @@ const jsonLdBreadcrumb = {
   ],
 }
 
-const areas = [
+const COMMUNITIES = [
   {
+    slug: 'coeur-dalene-idaho',
+    name: 'Coeur d’Alene',
+    tag: 'Median ~$601K · Lakefront & Downtown',
+    img: '/images/field-guide/sunset-over-the-lake.webp',
+    alt: "Lake Coeur d'Alene at golden hour",
+    desc: 'Walkable Sherman Avenue, Tubbs Hill, Sanders Beach, and Lake Coeur d’Alene. The widest inventory in Kootenai County with a true downtown lake-town lifestyle.',
+  },
+  {
+    slug: 'post-falls-idaho',
     name: 'Post Falls',
-    desc: "North Idaho's fastest-growing community, with outstanding outdoor access and great value.",
-    href: '/areas/post-falls-idaho',
-    image: '/images/mountain-biking.jpg',
+    tag: 'Median ~$521K · Fastest I-90 Commute',
+    img: '/images/field-guide/townhome-walk.webp',
+    alt: 'Residential street in Post Falls, Idaho',
+    desc: 'Newer subdivisions, Spokane River access, ~40 inches of annual snow, and the quickest border commute to Spokane at roughly $80K below Coeur d’Alene.',
   },
   {
-    name: "Coeur d'Alene",
-    desc: 'Lakefront living, a vibrant downtown, and one of the most beautiful lakes in North America.',
-    href: '/areas/coeur-dalene-idaho',
-    image: '/images/lakefront-dock.jpg',
-  },
-  {
+    slug: 'hayden-idaho',
     name: 'Hayden',
-    desc: 'Family-friendly neighborhoods, excellent schools, and a quiet residential character.',
-    href: '/areas/hayden-idaho',
-    image: '/images/skiing.jpg',
+    tag: 'Median ~$553K · Larger Lots & Hayden Lake',
+    img: '/images/golf-4k.webp',
+    alt: 'Open green space and residential living in Hayden, Idaho',
+    desc: 'Quieter residential streets, larger lots, Hayden Lake proximity, and a strong local school district just 10–15 minutes north of Coeur d’Alene.',
   },
   {
+    slug: 'rathdrum-idaho',
     name: 'Rathdrum',
-    desc: "Small-town character, larger lots, and one of Northern Idaho's fastest-growing entry markets.",
-    href: '/areas/rathdrum-idaho',
-    image: '/images/golf.jpeg',
+    tag: 'Median ~$520K · Prairie Views & Acreage',
+    img: '/images/field-guide/lake-house-editorial-4k.webp',
+    alt: 'North Idaho home framed by pines near Rathdrum',
+    desc: 'Room to spread out across the Rathdrum Prairie, newer communities, Twin Lakes access, and acreage options with Lakeland School District #272.',
   },
   {
+    slug: 'sandpoint-idaho',
     name: 'Sandpoint',
-    desc: 'A lakeside resort town on Lake Pend Oreille — Schweitzer skiing, an active arts scene, and a slower, more remote pace.',
-    href: '/areas/sandpoint-idaho',
-    image: '/images/lake-life.jpeg',
+    tag: 'Median ~$616K · Lake Pend Oreille & Ski Town',
+    img: '/images/skiing-action-4k.webp',
+    alt: 'Alpine skiing near Sandpoint and Schweitzer Mountain',
+    desc: 'Arts-forward mountain town on Idaho’s largest lake with Schweitzer Mountain Resort minutes away and four dramatic seasons.',
   },
   {
+    slug: 'kootenai-county',
     name: 'Kootenai County',
-    desc: "The five-city population core — Coeur d'Alene, Post Falls, Hayden, Rathdrum, Dalton Gardens — under one tax structure and one regional hospital.",
-    href: '/areas/kootenai-county',
-    image: '/images/hero-slide-2.webp',
+    tag: '~0.452% Effective Tax · County Overview',
+    img: '/images/lake-life.jpeg',
+    alt: 'Summer on the water in Kootenai County, Idaho',
+    desc: 'The full county-scale view across CdA, Post Falls, Hayden, and Rathdrum — taxes, school districts, commutes, and how the submarkets fit together.',
   },
   {
+    slug: 'bonner-county',
     name: 'Bonner County',
-    desc: 'Sandpoint, Priest Lake, Schweitzer, and the Selkirks — quieter, more rural, and a different set of buying considerations than Kootenai County.',
-    href: '/areas/bonner-county',
-    image: '/images/hero-slide-3.webp',
+    tag: 'Sandpoint · Priest River · Rural Acreage',
+    img: '/images/field-guide/sunset-marina-clear-2048.webp',
+    alt: 'Evening water views in Bonner County, Idaho',
+    desc: 'Quieter, more rural North Idaho living across Sandpoint, Ponderay, Priest River, and Priest Lake — including snow zones, wells, and acreage due diligence.',
   },
 ]
 
-export default function AreasPage() {
+export default function AreasIndexPage() {
   return (
-    <>
+    <div className="ed-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCollection) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
-      {/* Hero */}
-      <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/north-idaho-lake-hero.webp"
-            alt="Lake Coeur d'Alene seaplane dock"
-            fill
-            priority
-            className="object-cover"
-            
-          />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(28,26,23,0.35), rgba(28,26,23,0.6))' }} />
-        </div>
-        <div className="relative z-10 text-center px-6 lg:px-8 py-20 max-w-4xl mx-auto">
-          <p className="eyebrow mb-4" style={{ color: '#C4842A' }}>WHERE I WORK</p>
-          <h1
-            className="mb-6"
-            style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 600,
-              fontSize: 'clamp(36px, 6vw, 56px)',
-              lineHeight: 1.1,
-              color: '#FAFAF8',
-            }}
-          >
-            North Idaho Communities
+
+      <section className="ed-forest-hero" style={{ paddingBottom: '78px' }} aria-labelledby="areas-hub-title">
+        <div className="ed-hero-backdrop" aria-hidden="true" />
+        <div className="ed-container" style={{ position: 'relative' }}>
+          <p className="ed-eyebrow ed-eyebrow-light">North Idaho Communities</p>
+          <h1 id="areas-hub-title">
+            Every town has its own <em>rhythm.</em>
           </h1>
-          <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '18px', lineHeight: 1.7, color: '#F5EFE6', maxWidth: '600px', margin: '0 auto' }}>
-            Deep local knowledge across North Idaho&apos;s most sought-after communities.
+          <p className="ed-hero-lead">
+            Fifteen minutes on Highway 95 or I-90 can change your median home price by $80,000, cut your annual snowfall in half, or trade a walkable downtown for five quiet acres. Explore Shirin’s honest local field guides across Kootenai and Bonner County.
           </p>
         </div>
       </section>
 
-      {/* Areas Grid */}
-      <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {areas.map((area) => (
-              <Link
-                key={area.name}
-                href={area.href}
-                className="block group relative overflow-hidden"
-                style={{ height: '360px', textDecoration: 'none' }}
-              >
-                <Image
-                  src={area.image}
-                  alt={area.name}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div
-                  className="absolute inset-0"
-                  style={{ background: 'linear-gradient(to top, rgba(28,26,23,0.8), rgba(28,26,23,0.15))' }}
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <h2
-                    style={{
-                      fontFamily: "'Cormorant Garamond', Georgia, serif",
-                      fontWeight: 600,
-                      fontSize: '32px',
-                      color: '#FAFAF8',
-                      marginBottom: '8px',
-                    }}
-                  >
-                    {area.name}
-                  </h2>
-                  <p style={{ color: '#F5EFE6', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', marginBottom: '12px' }}>
-                    {area.desc}
-                  </p>
-                  <span style={{ color: '#C4842A', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-                    Explore →
+      <section style={{ padding: '92px 0', background: 'var(--alabaster-warm)', borderBottom: '1px solid var(--hairline)' }}>
+        <div className="ed-container">
+          <div className="ed-hood-grid">
+            {COMMUNITIES.map((c) => (
+              <Link key={c.slug} href={`/areas/${c.slug}`} className="ed-hood-card">
+                <div className="ed-hood-photo">
+                  <img src={c.img} alt={c.alt} loading="lazy" />
+                  <span className="ed-hood-tag">{c.tag}</span>
+                </div>
+                <div className="ed-hood-body" style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+                  <h3>{c.name}</h3>
+                  <p style={{ flex: 1 }}>{c.desc}</p>
+                  <span className="ed-card-cta">
+                    Explore {c.name} <span aria-hidden="true">→</span>
                   </span>
                 </div>
               </Link>
@@ -178,39 +148,29 @@ export default function AreasPage() {
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>GET LOCAL ADVICE</p>
-          <h2
-            className="mb-6"
-            style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 500,
-              fontSize: 'clamp(32px, 5vw, 48px)',
-              lineHeight: 1.15,
-              color: '#F5EFE6',
-            }}
-          >
-            Not Sure Which Area Is Right for You?
-          </h2>
-          <p className="mb-10" style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-            Let&apos;s talk about how you want to live — I&apos;ll help you figure out where that fits best in North Idaho.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block text-white text-xs uppercase font-semibold tracking-wider rounded-sm"
-            style={{
-              fontFamily: "'DM Sans', system-ui, sans-serif",
-              backgroundColor: '#C4842A',
-              padding: '14px 32px',
-              letterSpacing: '0.08em',
-            }}
-          >
-            Start the Conversation
-          </Link>
+      <section className="ed-closing-band" aria-labelledby="areas-closing-title">
+        <img className="ed-closing-photo" src="/images/field-guide/sunset-marina-clear-2048.webp" alt="Sunset over North Idaho water" loading="lazy" />
+        <div className="ed-closing-scrim" aria-hidden="true" />
+        <div className="ed-container">
+          <div className="ed-closing-inner">
+            <p className="ed-eyebrow ed-eyebrow-light">Not Sure Which Town Fits?</p>
+            <h2 id="areas-closing-title">
+              Let’s narrow it down <em>together.</em>
+            </h2>
+            <p style={{ marginTop: '18px', fontSize: '16px', lineHeight: 1.72, color: 'rgba(247,244,238,0.84)' }}>
+              Share your budget, commute needs, and how you want to spend your weekends — Shirin will give you an honest read on which two North Idaho towns belong on your shortlist.
+            </p>
+            <div style={{ marginTop: '32px', display: 'flex', alignItems: 'center', gap: '28px', flexWrap: 'wrap' }}>
+              <Link className="ed-btn-alabaster" href="/contact">
+                Start the Conversation <span aria-hidden="true">↗</span>
+              </Link>
+              <Link className="ed-link-light" href="/buyers">
+                Try the Town Fit Finder <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
-    </>
+    </div>
   )
 }

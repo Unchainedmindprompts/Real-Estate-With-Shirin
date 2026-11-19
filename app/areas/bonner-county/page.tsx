@@ -1,9 +1,7 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import Image from 'next/image'
 import { BASE_URL, BUSINESS_ID, WEBSITE_ID, PLACE } from '@/lib/schema-ids'
-import IdxSearchCta from '@/components/IdxSearchCta'
 import { IDX_SEARCH_BY_AREA } from '@/lib/idx-search'
+import AreaGuideTemplate from '@/components/editorial/AreaGuideTemplate'
 
 const PAGE_URL = `${BASE_URL}/areas/bonner-county`
 
@@ -11,10 +9,27 @@ export const metadata: Metadata = {
   title: 'Bonner County, Idaho Real Estate & Rural Market Guide',
   description:
     "Bonner County is Sandpoint, Ponderay, Priest River, Priest Lake, and Schweitzer — quieter, more rural, and a different set of buying considerations than Kootenai County. A local REALTOR's honest guide.",
-  alternates: {
-    canonical: 'https://www.realestatewithshirin.com/areas/bonner-county',
-  },
+  alternates: { canonical: PAGE_URL },
 }
+
+const FAQS = [
+  {
+    q: 'What towns and communities are in Bonner County, Idaho?',
+    a: 'Bonner County centers on Sandpoint and Ponderay on Lake Pend Oreille, plus Dover, Kootenai, Sagle, Hope, Clark Fork, Priest River, and Priest Lake.',
+  },
+  {
+    q: 'How is Bonner County different from Kootenai County for home buyers?',
+    a: 'Bonner County is noticeably quieter, more wooded, and more rural — with lower raw land prices per acre (~$37K median vs. ~$57K in Kootenai), heavier winter snowfall, and a longer drive to Spokane International Airport.',
+  },
+  {
+    q: 'What does snowfall look like across Bonner County?',
+    a: 'Snowfall increases steadily as you head north and climb in elevation: Sandpoint averages ~85–95 inches per year, while Priest Lake and Schweitzer Mountain receive well over 120 inches.',
+  },
+  {
+    q: 'What due diligence is critical when buying rural Bonner County property?',
+    a: 'Verify legal year-round road access and snow-plowing agreements, well depth and water quality, septic permit history, power-line distance on raw land, and wildfire insurance availability before removing contingencies.',
+  },
+]
 
 const jsonLdService = {
   '@context': 'https://schema.org',
@@ -46,7 +61,7 @@ const jsonLdBreadcrumb = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
     { '@type': 'ListItem', position: 2, name: 'Areas', item: `${BASE_URL}/areas` },
-    { '@type': 'ListItem', position: 3, name: 'Bonner County, Idaho', item: PAGE_URL },
+    { '@type': 'ListItem', position: 3, name: 'Bonner County', item: PAGE_URL },
   ],
 }
 
@@ -55,61 +70,16 @@ const jsonLdFaq = {
   '@type': 'FAQPage',
   '@id': `${PAGE_URL}#faq`,
   isPartOf: { '@id': `${PAGE_URL}#webpage` },
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What towns and communities are in Bonner County, Idaho?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Sandpoint is the county seat and largest city. The rest of Bonner County includes Ponderay (adjacent to Sandpoint), Kootenai (the town, not to be confused with the county), Dover, Hope and East Hope on the eastern shore of Lake Pend Oreille, Clark Fork at the far eastern edge, Sagle to the south, and Priest River and Oldtown to the west. The Priest Lake area — Nordman, Coolin, Lamb Creek — sits in the far northwest corner of the county and functions as a distinct market of its own.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is Bonner County different from Kootenai County for home buyers?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Bonner is quieter, more rural, less densely populated, and much more centered on Lake Pend Oreille and the Selkirk Range than Kootenai County to the south. About 46,000 residents versus Kootenai's 175,000-plus. Fewer active listings, longer average days on market, and a much smaller share of new construction. Snowfall runs roughly double — Sandpoint averages 80–90 inches at lake level compared to about 40 inches on the Rathdrum Prairie. Full-service medical routes to Kootenai Health an hour south or Spokane 90 minutes west. Buyers who want the quieter, more remote character of the Idaho Panhandle land here. Buyers who want easier access, more inventory, and shorter drives usually stay in Kootenai County.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What does snowfall look like across Bonner County?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Sandpoint at lake level averages 80 to 90 inches of snow per year — roughly double the Rathdrum Prairie. Schweitzer Mountain Resort 11 miles from downtown averages around 300 inches at summit elevation. Ground cover in Sandpoint is typically continuous from mid-December through early March, often 70 to 90 consecutive days. This is a genuine snowbelt driven by lake-effect off Lake Pend Oreille and orographic lift against the Selkirks — well-documented by the National Weather Service Spokane Forecast Office. For any rural or semi-rural property in Bonner County, snow load, driveway plowing, and winter equipment are real budget lines.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need special insurance for a home in Bonner County?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Home insurance in Idaho is one of the cheapest in the country on average — around $1,673 per year statewide per MoneyGeek's 2026 analysis, roughly 52% below the national average. But Bankrate's 2026 report identifies Idaho as one of the highest-wildfire-risk states, and Bonner County contains extensive wildland-urban interface zones where premiums have risen faster than the state average. Some carriers now decline new policies in high-risk zones without defensible space documentation. The practical guidance: get an insurance quote before going under contract on any Bonner County property outside the incorporated towns, not after.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is Priest Lake part of Bonner County?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Yes. Priest Lake — a 23,000-acre lake surrounded by old-growth cedar forest and the Selkirk Range — sits in the far northwest corner of Bonner County. It is functionally its own market. Access is limited (the main road in from Priest River, Highway 57, runs about 30 miles), the lake is largely surrounded by Idaho Panhandle National Forest, and the market skews heavily toward waterfront, seasonal, and second homes. Priest Lake is very different from Sandpoint even though it shares a county — buyers considering either should treat them as separate markets and separate lifestyles.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is healthcare access like in Bonner County?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Bonner General Health in Sandpoint handles emergency and primary services but is a smaller community hospital. Complex or acute care typically routes through Kootenai Health in Coeur d'Alene (about an hour south on US-95) or to Spokane's Providence Sacred Heart and MultiCare (roughly 90 minutes). Life Flight Network operates a helicopter critical care transport service across the region, and an annual household membership (about $80 per year) covers out-of-pocket transport costs — worth considering for anyone living in rural Bonner County. For retirees with active health conditions requiring frequent specialist visits, the additional drive time compared to Kootenai County is a real factor.",
-      },
-    },
-  ],
+  mainEntity: FAQS.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 }
 
-const faqs = jsonLdFaq.mainEntity.map((q) => ({ q: q.name, a: q.acceptedAnswer.text }))
+export default function BonnerCountyAreaPage() {
+  const idxUrl = IDX_SEARCH_BY_AREA['bonner-county'] || 'https://shirinabplanalp.jacklinrealestate.com'
 
-export default function BonnerCountyPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }} />
@@ -117,275 +87,135 @@ export default function BonnerCountyPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
 
-      {/* Hero */}
-      <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/north-idaho-lake-hero.webp"
-            alt="Bonner County, Idaho — Lake Pend Oreille and Selkirk Mountains"
-            fill
-            priority
-            className="object-cover"
-          />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(28,26,23,0.35), rgba(28,26,23,0.6))' }} />
-        </div>
-        <div className="relative z-10 text-center px-6 lg:px-8 py-20 max-w-4xl mx-auto">
-          <p className="eyebrow mb-4" style={{ color: '#C4842A' }}>BONNER COUNTY, IDAHO</p>
-          <h1
-            className="mb-6"
-            style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 600,
-              fontSize: 'clamp(36px, 6vw, 56px)',
-              lineHeight: 1.1,
-              color: '#FAFAF8',
-            }}
-          >
-            Bonner County Real Estate
-          </h1>
-          <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '18px', lineHeight: 1.7, color: '#F5EFE6', maxWidth: '640px', margin: '0 auto' }}>
-            Lake Pend Oreille, Schweitzer, Priest Lake, and the Selkirks. Quieter, more rural, and a genuinely different set of buying considerations than Kootenai County to the south.
-          </p>
-        </div>
-      </section>
-
-      {/* Market Overview */}
-      <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <p className="eyebrow mb-4">THE COUNTY MARKET</p>
-          <h2
-            className="mb-6"
-            style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 500,
-              fontSize: 'clamp(28px, 4vw, 40px)',
-              lineHeight: 1.2,
-              color: '#1C1A17',
-            }}
-          >
-            What Bonner County Actually Is
-          </h2>
-          <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", marginBottom: '16px' }}>
-            Bonner County is the second county Shirin serves — north of Kootenai, running from the west shore of Lake Pend Oreille up through Sandpoint and out to Priest Lake and the Washington border. About 46,000 residents in an area larger than several New England states. That density difference is the first thing to understand: this is not Kootenai County with more trees.
-          </p>
-          <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", marginBottom: '16px' }}>
-            Sandpoint is the county seat and the market&apos;s center of gravity — the average home value sits around $617,000 and the median list price around $773,000. But Sandpoint is only part of Bonner County. Ponderay, Kootenai (the town), Dover, Sagle, Hope, and Clark Fork sit around the lake at lower price points. Priest River and Oldtown to the west run lower still. The Priest Lake area in the far northwest is functionally its own market — waterfront and seasonal properties on a lake most of the country has never heard of.
-          </p>
-          <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", marginBottom: '16px' }}>
-            For the Sandpoint town-level detail, see <a href="/areas/sandpoint-idaho" style={{ color: '#C4842A' }}>the Sandpoint area guide</a>. What this page covers is what happens when you zoom out — snow patterns, wildfire insurance, medical geography, and the character of the county outside the incorporated towns.
-          </p>
-        </div>
-      </section>
-
-      {/* The county-specific realities */}
-      <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="eyebrow mb-4">WHAT BONNER COUNTY ASKS OF YOU</p>
-            <h2
-              style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 500,
-                fontSize: 'clamp(32px, 5vw, 48px)',
-                lineHeight: 1.2,
-                color: '#1C1A17',
-              }}
-            >
-              The Four Realities That Change the Buying Math
-            </h2>
-            <p className="max-w-2xl mx-auto mt-4" style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-              These do not exist at this scale in Kootenai County. Any buyer looking north of the lake needs to understand them before offer, not after close.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: 'The Snowbelt',
-                body: 'Sandpoint averages 80–90 inches of snow at lake level — roughly double the Rathdrum Prairie. Schweitzer summit averages around 300 inches. Ground cover is typically continuous from mid-December through early March. For any rural property, snow removal equipment and driveway logistics are budget lines, not afterthoughts.',
-              },
-              {
-                title: 'Wildfire Insurance',
-                body: 'Idaho home insurance is one of the cheapest in the country statewide (~$1,673/year average), but Bankrate identifies Idaho as one of the highest wildfire-risk states, and Bonner County contains extensive wildland-urban interface zones. Some carriers decline new policies in high-risk areas without defensible space documentation. Get a quote before contract.',
-              },
-              {
-                title: 'Medical Distance',
-                body: 'Bonner General Health handles emergency and primary care but is a smaller community hospital. Complex care routes to Kootenai Health (1 hour south) or Spokane (~90 minutes). For anyone with active health conditions, the drive time is a real factor. Life Flight Network membership becomes meaningfully more valuable the further north you live.',
-              },
-              {
-                title: 'Priest Lake',
-                body: 'A 23,000-acre lake in the far northwest corner, surrounded by old-growth cedar and Idaho Panhandle National Forest. Access via Highway 57 out of Priest River. The market skews waterfront, seasonal, and second-home. Priest Lake is a distinct market from Sandpoint even though they share a county line.',
-              },
-            ].map((card) => (
-              <div
-                key={card.title}
-                style={{
-                  backgroundColor: '#2A2722',
-                  border: '1px solid #3A3530',
-                  borderRadius: '4px',
-                  padding: '32px',
-                }}
-              >
-                <h3
-                  className="mb-4"
-                  style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontWeight: 600,
-                    fontSize: '22px',
-                    color: '#C4842A',
-                  }}
-                >
-                  {card.title}
-                </h3>
-                <p style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px' }}>
-                  {card.body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Sub-markets inside the county */}
-      <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <p className="eyebrow mb-4">THE SUB-MARKETS</p>
-          <h2
-            className="mb-6"
-            style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 500,
-              fontSize: 'clamp(28px, 4vw, 40px)',
-              lineHeight: 1.2,
-              color: '#1C1A17',
-            }}
-          >
-            Where People Actually Land Inside the County
-          </h2>
-          <div className="mt-6 space-y-6">
-            {[
-              {
-                head: 'Sandpoint and Ponderay',
-                body: (
-                  <>The core market. Walkable downtown, City Beach, Cedar Street Bridge; Ponderay just north with big-box retail and newer construction. Neighborhood-level detail is in <a href="/areas/sandpoint-idaho" style={{ color: '#C4842A' }}>the Sandpoint area guide</a>.</>
-                ),
-              },
-              {
-                head: 'Sagle, Dover, Kootenai (the town)',
-                body: <>Small residential communities immediately around Lake Pend Oreille. Sagle to the south has larger parcels and more rural feel; Dover Bay is a planned waterfront community with marina access; Kootenai sits between Ponderay and Hope on the eastern edge of Sandpoint.</>,
-              },
-              {
-                head: 'Hope, East Hope, Clark Fork',
-                body: <>The eastern shore of Lake Pend Oreille running out toward Montana. Quieter, more remote, some of the county&apos;s most striking waterfront and mountain-view property. Buyers here are actively choosing distance from town.</>,
-              },
-              {
-                head: 'Priest River and Oldtown',
-                body: <>West side of the county along the Priest River corridor toward the Washington border. More affordable, more rural, generally larger parcels. A common landing spot for buyers who want Bonner County acreage without Sandpoint prices.</>,
-              },
-              {
-                head: 'Priest Lake (Nordman, Coolin, Lamb Creek)',
-                body: <>Far northwest corner. Effectively its own market — waterfront-driven, seasonal, and heavily oriented toward second homes and cabins. Winter access is real but manageable; carrier availability for wildfire zones warrants extra scrutiny.</>,
-              },
-            ].map((row) => (
-              <div key={row.head} style={{ borderLeft: '2px solid #C4842A', paddingLeft: '20px' }}>
-                <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: '20px', color: '#1C1A17', marginBottom: '6px' }}>
-                  {row.head}
-                </p>
-                <p style={{ color: '#5C5650', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}>
-                  {row.body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="eyebrow mb-4">COMMON QUESTIONS</p>
-            <h2
-              style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 500,
-                fontSize: 'clamp(32px, 5vw, 48px)',
-                lineHeight: 1.2,
-                color: '#1C1A17',
-              }}
-            >
-              Bonner County FAQ
-            </h2>
-          </div>
-
-          <div className="space-y-6">
-            {faqs.map((faq, i) => (
-              <div
-                key={i}
-                style={{
-                  backgroundColor: '#2A2722',
-                  border: '1px solid #3A3530',
-                  borderRadius: '4px',
-                  padding: '28px 32px',
-                }}
-              >
-                <h3
-                  style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontWeight: 600,
-                    fontSize: '20px',
-                    color: '#C4842A',
-                    marginBottom: '12px',
-                  }}
-                >
-                  {faq.q}
-                </h3>
-                <div>
-                  <p style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}>
-                    {faq.a}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <IdxSearchCta placeName="Bonner County" searchUrl={IDX_SEARCH_BY_AREA['bonner-county']} />
-
-      {/* Bottom CTA */}
-      <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>Shirin — Bonner County Realtor</p>
-          <h2
-            className="mb-6"
-            style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 500,
-              fontSize: 'clamp(32px, 5vw, 48px)',
-              lineHeight: 1.15,
-              color: '#F5EFE6',
-            }}
-          >
-            Considering Bonner County?
-          </h2>
-          <p className="mb-10" style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-            The snow, the insurance, the medical distance, and the Priest Lake question all deserve honest answers before you make an offer. Let&apos;s talk through them.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block text-white text-xs uppercase font-semibold tracking-wider rounded-sm"
-            style={{
-              fontFamily: "'DM Sans', system-ui, sans-serif",
-              backgroundColor: '#C4842A',
-              padding: '14px 32px',
-              letterSpacing: '0.08em',
-            }}
-          >
-            Start the Conversation
-          </Link>
-        </div>
-      </section>
+      <AreaGuideTemplate
+        config={{
+          eyebrow: 'Bonner County, Idaho · Rural & Lake Guide',
+          titleLead: 'Bonner County',
+          titleEm: 'Real Estate.',
+          heroLead:
+            'Sandpoint, Ponderay, Sagle, Priest River, and Priest Lake. Quieter forests, big alpine lakes, more land per dollar, and a distinct rural buying checklist compared to Kootenai County.',
+          heroImage: '/images/field-guide/sunset-marina-clear-2048.webp',
+          heroAlt: 'Quiet evening reflection on water in Bonner County, Idaho',
+          idxUrl,
+          idxLabel: 'Search Bonner County Homes',
+          stats: [
+            { value: '$616K', label: 'Sandpoint Median', sub: 'County anchor' },
+            { value: '$409K', label: 'Priest River Median', sub: 'Affordable gateway' },
+            { value: '$37K', label: 'Median / Acre', sub: 'Raw land (Bonner)' },
+            { value: '90–120"', label: 'Annual Snowfall', sub: 'True winter country' },
+          ],
+          marketHeadingLead: 'Bonner County',
+          marketHeadingEm: 'explained honestly.',
+          marketParagraphs: [
+            'Drive north past Athol and the landscape opens into dense timber, Lake Pend Oreille, and the Selkirk Mountains. Bonner County attracts buyers looking for real privacy, forested acreage, ski access at Schweitzer, or the untamed beauty of Priest Lake.',
+            'Prices span a wide spectrum — from Priest River’s approachable ~$409,000 median to Sandpoint’s ~$616,000 median and multi-million-dollar Lake Pend Oreille and Priest Lake waterfront estates.',
+            'Buying in Bonner County requires a sharper rural due-diligence checklist than suburban Kootenai County: legal easements, winter road plowing, well flow, septic perc, power runs, and wildfire insurance all need answers before closing.',
+          ],
+          marketLinks: [
+            { label: 'Buying Land in North Idaho Guide', href: '/articles/buying-land-north-idaho-cost-per-acre-perc-power-access' },
+            { label: 'Priest River Real Estate Guide', href: '/articles/priest-river-idaho-real-estate-guide' },
+          ],
+          advisorRole: 'Bonner County REALTOR®',
+          advisorQuote: 'Bonner County is pure North Idaho — just make sure you inspect the road, the well, and the winter sun before you fall in love with the view.',
+          advisorFacts: [
+            { label: 'Anchor Town', value: 'Sandpoint & Ponderay' },
+            { label: 'Affordable Pocket', value: 'Priest River (~$409K)' },
+            { label: 'Premier Lakes', value: 'Pend Oreille · Priest Lake' },
+            { label: 'Winter Access', value: 'AWD + Plow Plan Essential' },
+          ],
+          hoodHeadingLead: 'Bonner County',
+          hoodHeadingEm: 'communities.',
+          hoodIntro: 'From Sandpoint’s lively downtown to Sagle’s wooded acreage and Priest River’s river-valley value.',
+          neighborhoods: [
+            {
+              name: 'Sandpoint, Dover & Ponderay',
+              tag: 'Town Core · Marina',
+              img: '/images/skiing-action-4k.webp',
+              alt: 'Sandpoint and Schweitzer mountain area',
+              desc: 'The commercial, dining, and cultural heart of Bonner County with Lake Pend Oreille beaches and 20-minute access to Schweitzer Mountain.',
+            },
+            {
+              name: 'Sagle, Hope & Clark Fork',
+              tag: 'Forested Acreage · East Shore',
+              img: '/images/field-guide/lake-house-editorial-4k.webp',
+              alt: 'Wooded residential acreage in Sagle and Bonner County',
+              desc: 'South and east of Sandpoint across the Long Bridge — prized for quiet timbered parcels, dramatic lake views, and slower rural rhythms.',
+            },
+            {
+              name: 'Priest River & Priest Lake',
+              tag: 'Value Gateway · Crown Jewel',
+              img: '/images/lake-life.jpeg',
+              alt: 'Priest River and Priest Lake waters in Bonner County',
+              desc: 'Priest River delivers strong affordability (~$409K median) along the Pend Oreille River, while Priest Lake to the north is North Idaho’s legendary wilderness lake.',
+            },
+          ],
+          spotlightEyebrow: 'Rural Buying Checklist',
+          spotlightHeadingLead: 'Three checks that protect',
+          spotlightHeadingEm: 'Bonner County buyers.',
+          spotlightIntro: 'Rural mountain properties reward thorough preparation before contingencies expire.',
+          spotlightCards: [
+            {
+              num: '01',
+              title: 'Easements & Winter Roads',
+              desc: 'Confirm recorded legal access and who actually plows private roads in January — especially on forested parcels off county-maintained highways.',
+            },
+            {
+              num: '02',
+              title: 'Wells, Septic & Power',
+              desc: 'Pull Idaho well driller logs, verify Panhandle Health septic permits, and price out power-line trenching if you are considering raw acreage.',
+            },
+            {
+              num: '03',
+              title: 'Wildfire Insurance Quotes',
+              desc: 'Obtain binding homeowners insurance quotes early during inspection — timbered rural lots and distance from hydrants can affect carrier options.',
+            },
+          ],
+          budgetHeadingLead: 'Bonner County homes',
+          budgetHeadingEm: 'by price band.',
+          costGuideHref: '/articles/buying-land-north-idaho-cost-per-acre-perc-power-access',
+          costGuideLabel: 'Read Land & Acreage Cost Guide',
+          budgetBands: [
+            {
+              key: 'entry',
+              range: '$375K – $500K',
+              label: 'Priest River & Rural Entry',
+              title: 'Approachable small-town homes & starter acreage.',
+              desc: 'Strongest value in Priest River, Blanchard, and Ponderay/Kootenai pockets.',
+              pockets: 'Priest River, Oldtown, Ponderay, Careywood',
+              pace: 'Steady',
+              note: 'Priest River runs roughly $210K below Sandpoint’s median.',
+            },
+            {
+              key: 'core',
+              range: '$500K – $850K',
+              label: 'Sandpoint & Wooded Acreage',
+              title: 'In-town Sandpoint, Sagle & 5–10 acre retreats.',
+              desc: 'The heart of Bonner County — custom timbered homes, shops, and valley mountain views.',
+              pockets: 'Sandpoint, Sagle, Dover Bay, Selle Valley',
+              pace: 'Seasonal',
+              note: 'Check internet options (fiber vs. Starlink) if working remotely.',
+            },
+            {
+              key: 'waterfront',
+              range: '$850K – $2M+',
+              label: 'Lake Pend Oreille & Priest Lake',
+              title: 'Iconic waterfront & Schweitzer ski estates.',
+              desc: 'Private shoreline on Lake Pend Oreille, Pend Oreille River, or Priest Lake, plus ski-access mountain homes.',
+              pockets: 'Hope, Garfield Bay, Priest Lake, Schweitzer',
+              pace: 'Scarce legacy inventory',
+              note: 'Many premier waterfront properties transact quietly or seasonally.',
+            },
+          ],
+          faqHeadingLead: 'Bonner County questions,',
+          faqHeadingEm: 'answered honestly.',
+          faqIntro: 'Real answers on rural land, snowfall, Priest River, and how Bonner compares to Kootenai County.',
+          faqs: FAQS,
+          closingEyebrow: 'Shirin — Bonner County REALTOR®',
+          closingHeadingLead: 'Exploring',
+          closingHeadingEm: 'Bonner County?',
+          closingCopy: 'Whether you’re looking at Sandpoint, Sagle acreage, or Priest River, I’ll help you sort the right parcels and avoid rural surprises.',
+        }}
+      />
     </>
   )
 }
