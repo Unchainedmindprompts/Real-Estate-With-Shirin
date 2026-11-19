@@ -21,10 +21,10 @@
   font-family: var(--sans);
   line-height: 1.6;
 }
-.ed-page h1, .ed-page h2, .ed-page h3 { font-family: var(--serif); font-weight: 400; margin: 0; }
-.ed-page p, .ed-page dl, .ed-page dd, .ed-page dt, .ed-page ul { margin: 0; }
-.ed-page button { background: none; border: 0; padding: 0; cursor: pointer; font: inherit; color: inherit; }
-.ed-page a { color: inherit; text-decoration: none; }
+:where(.ed-page) h1, :where(.ed-page) h2, :where(.ed-page) h3 { font-family: var(--serif); font-weight: 400; margin: 0; }
+:where(.ed-page) p, :where(.ed-page) dl, :where(.ed-page) dd, :where(.ed-page) dt, :where(.ed-page) ul { margin: 0; }
+:where(.ed-page) button { background: none; border: 0; padding: 0; cursor: pointer; font: inherit; color: inherit; }
+:where(.ed-page) a { color: inherit; text-decoration: none; }
 .ed-page :focus-visible { outline: 2px solid var(--bronze); outline-offset: 3px; }
 
 .ed-container { width: min(100% - 48px, 1340px); margin: 0 auto; }
@@ -38,51 +38,51 @@
 .ed-eyebrow-light { color: var(--bronze-light); }
 
 /* Crisp 0px Buttons & Hairline Links */
-.ed-btn-pine {
+.ed-page .ed-btn-pine {
   display: inline-flex; align-items: center; gap: 10px;
   background: var(--pine); color: var(--alabaster);
-  padding: 15px 28px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 15px 28px; font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase;
   border: 1px solid var(--pine); border-radius: 0;
   transition: background 0.22s, color 0.22s, transform 0.2s;
 }
-.ed-btn-pine:hover { background: var(--forest); transform: translateY(-1px); }
-.ed-btn-pine:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+.ed-page .ed-btn-pine:hover { background: var(--forest); color: var(--alabaster); transform: translateY(-1px); }
+.ed-page .ed-btn-pine:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
 
-.ed-btn-outline-pine {
+.ed-page .ed-btn-outline-pine {
   display: inline-flex; align-items: center; gap: 10px;
   background: transparent; color: var(--pine);
-  padding: 14px 28px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 14px 28px; font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase;
   border: 1px solid var(--pine); border-radius: 0;
   transition: background 0.22s, color 0.22s;
 }
-.ed-btn-outline-pine:hover { background: var(--pine); color: var(--alabaster); }
+.ed-page .ed-btn-outline-pine:hover { background: var(--pine); color: var(--alabaster); }
 
-.ed-btn-alabaster {
+.ed-page .ed-btn-alabaster {
   display: inline-flex; align-items: center; gap: 10px;
   background: var(--alabaster); color: var(--pine);
-  padding: 16px 30px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 16px 30px; font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase;
   border: 1px solid var(--alabaster); border-radius: 0;
-  transition: background 0.2s, transform 0.2s;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
 }
-.ed-btn-alabaster:hover { background: #fff; transform: translateY(-1px); }
+.ed-page .ed-btn-alabaster:hover { background: #fff; color: var(--pine); transform: translateY(-1px); }
 
-.ed-link-underlined {
+.ed-page .ed-link-underlined {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--pine); padding-bottom: 5px;
   border-bottom: 1px solid var(--bronze);
   transition: color 0.2s, border-color 0.2s;
 }
-.ed-link-underlined:hover { color: var(--bronze); border-bottom-color: var(--pine); }
+.ed-page .ed-link-underlined:hover { color: var(--bronze); border-bottom-color: var(--pine); }
 
-.ed-link-light {
+.ed-page .ed-link-light {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--alabaster); padding-bottom: 5px;
   border-bottom: 1px solid var(--bronze-light);
   transition: color 0.2s, border-color 0.2s;
 }
-.ed-link-light:hover { color: var(--bronze-light); border-bottom-color: var(--alabaster); }
+.ed-page .ed-link-light:hover { color: var(--bronze-light); border-bottom-color: var(--alabaster); }
 
 /* Shared Section Header */
 .ed-section-header {
