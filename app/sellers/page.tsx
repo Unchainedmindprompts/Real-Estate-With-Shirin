@@ -1,7 +1,8 @@
 import { heroMetadata, lakeHouseCard } from '@/lib/hero-share'
 import Link from 'next/link'
-import PageHero from '@/components/PageHero'
 import { BASE_URL, BUSINESS_ID, WEBSITE_ID, MARKET_AREA_SERVED } from '@/lib/schema-ids'
+import SellersStrategyClient from '@/components/editorial/SellersStrategyClient'
+import FaqAccordion from '@/components/editorial/FaqAccordion'
 
 export const metadata = heroMetadata(
   '/sellers',
@@ -9,6 +10,29 @@ export const metadata = heroMetadata(
   "Selling a home in Post Falls, Coeur d'Alene, or anywhere in North Idaho? Strategic pricing, professional presentation, and an honest read on the market.",
   lakeHouseCard,
 )
+
+const SELLER_FAQS = [
+  {
+    q: 'How do I sell my home fast in Post Falls or Coeur d’Alene?',
+    a: 'Selling smoothly comes down to three things: accurate pricing, strong presentation, and maximum market exposure. Overpriced homes sit. Homes priced correctly for current closed comps, professionally photographed, and marketed to the right local and relocating buyer pool move quickly.',
+  },
+  {
+    q: 'What is my home worth in Northern Idaho?',
+    a: 'Home values vary significantly by location, condition, lot size, and current inventory. The most accurate picture comes from a comparative market analysis built from recent closed sales in your specific neighborhood — an honest range, not an inflated number designed to win your listing.',
+  },
+  {
+    q: 'How long does it take to sell a home in Coeur d’Alene or Post Falls?',
+    a: 'Days on market varies by price point and neighborhood. Well-priced homes in desirable Post Falls and Coeur d’Alene neighborhoods can go under contract in as few as 12 days, while higher price tiers or homes needing updates typically take longer. I’ll give you realistic expectations based on current data.',
+  },
+  {
+    q: 'What should I do to prepare my home for sale?',
+    a: 'The basics matter most: clean, declutter, address obvious deferred maintenance, and make sure the exterior creates a strong first impression. I’ll walk through your home before we list and give you a prioritized list of what’s worth doing — and what isn’t.',
+  },
+  {
+    q: 'How do I choose the right realtor to sell my home?',
+    a: 'Look for genuine local market knowledge, honest communication, and a clear pricing and marketing plan in your price range. I encourage every homeowner to interview a few agents and ask how they price, market, and negotiate — I’m always happy to be one of those conversations.',
+  },
+]
 
 const jsonLdService = {
   '@context': 'https://schema.org',
@@ -52,246 +76,135 @@ const jsonLdFaq = {
   '@type': 'FAQPage',
   '@id': `${BASE_URL}/sellers/#faq`,
   isPartOf: { '@id': `${BASE_URL}/sellers#webpage` },
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How do I sell my home fast in Post Falls Idaho?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Selling quickly in Post Falls comes down to three things: accurate pricing, strong presentation, and maximum market exposure. Overpriced homes sit. Homes that are priced correctly for current market conditions, professionally photographed, and marketed to the right buyer pool move fast. I'll give you an honest comparative market analysis and a clear strategy before we list.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is my home worth in Northern Idaho?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Home values in Northern Idaho vary significantly by location, condition, lot size, and current inventory levels. The best way to get an accurate picture is a comparative market analysis — I'll look at recent sales of comparable homes in your specific neighborhood and give you an honest range, not an inflated number designed to win your listing.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: "How long does it take to sell a home in Coeur d'Alene or Post Falls?",
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Days on market varies by price point and neighborhood. Well-priced homes in desirable Post Falls and Coeur d'Alene neighborhoods can move quickly — sometimes within days. Homes at higher price points or with deferred maintenance typically take longer. I'll give you realistic expectations based on current market data, not wishful thinking.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What should I do to prepare my home for sale in Northern Idaho?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "The basics matter most: clean, declutter, address obvious deferred maintenance, and make sure the exterior makes a strong first impression. I'll walk through your home before we list and give you a prioritized list of what's worth doing and what isn't. Not every improvement adds value — I'll help you focus your time and money on what actually moves the needle for buyers in this market.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do I find a realtor to sell my home in Post Falls Idaho?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Look for someone with genuine local market knowledge, honest communication, and a track record of results in your specific price range and area. I'd encourage you to interview a few agents — ask them how they price homes, how they market listings, and what their average days on market looks like. I'm happy to be one of those conversations.",
-      },
-    },
-  ],
+  mainEntity: SELLER_FAQS.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 }
-
-const faqs = [
-  {
-    q: 'How do I sell my home fast in Post Falls Idaho?',
-    a: "Selling quickly in Post Falls comes down to three things: accurate pricing, strong presentation, and maximum market exposure. Overpriced homes sit. Homes that are priced correctly for current market conditions, professionally photographed, and marketed to the right buyer pool move fast. I'll give you an honest comparative market analysis and a clear strategy before we list.",
-  },
-  {
-    q: 'What is my home worth in Northern Idaho?',
-    a: "Home values in Northern Idaho vary significantly by location, condition, lot size, and current inventory levels. The best way to get an accurate picture is a comparative market analysis — I'll look at recent sales of comparable homes in your specific neighborhood and give you an honest range, not an inflated number designed to win your listing.",
-  },
-  {
-    q: "How long does it take to sell a home in Coeur d'Alene or Post Falls?",
-    a: "Days on market varies by price point and neighborhood. Well-priced homes in desirable Post Falls and Coeur d'Alene neighborhoods can move quickly — sometimes within days. Homes at higher price points or with deferred maintenance typically take longer. I'll give you realistic expectations based on current market data, not wishful thinking.",
-  },
-  {
-    q: 'What should I do to prepare my home for sale in Northern Idaho?',
-    a: "The basics matter most: clean, declutter, address obvious deferred maintenance, and make sure the exterior makes a strong first impression. I'll walk through your home before we list and give you a prioritized list of what's worth doing and what isn't. Not every improvement adds value — I'll help you focus your time and money on what actually moves the needle for buyers in this market.",
-  },
-  {
-    q: 'How do I find a realtor to sell my home in Post Falls Idaho?',
-    a: "Look for someone with genuine local market knowledge, honest communication, and a track record of results in your specific price range and area. I'd encourage you to interview a few agents — ask them how they price homes, how they market listings, and what their average days on market looks like. I'm happy to be one of those conversations.",
-  },
-]
 
 export default function SellersPage() {
   return (
-    <>
+    <div className="ed-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebPage) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
 
-      <PageHero
-        eyebrow="SELLER REPRESENTATION"
-        title={<>Sell Your North Idaho Home <i>With Confidence</i></>}
-      >
-        Strategic pricing, honest advice, and professional execution — from listing day to closing day.
-      </PageHero>
-
-      {/* What I Provide */}
-      <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="eyebrow mb-4">WHAT I PROVIDE</p>
-            <h2
-              style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 500,
-                fontSize: 'clamp(32px, 5vw, 48px)',
-                lineHeight: 1.2,
-                color: '#1C1A17',
-              }}
-            >
-              The Seller Experience
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                num: '01',
-                title: 'Honest Market Analysis',
-                body: 'Accurate pricing based on real comparable sales — not a number designed to win your listing.',
-              },
-              {
-                num: '02',
-                title: 'Strategic Pricing',
-                body: 'The number that attracts serious buyers, creates urgency, and maximizes your net return.',
-              },
-              {
-                num: '03',
-                title: 'Professional Marketing',
-                body: 'Photography, presentation, and targeted exposure to the right buyer pool in the right channels.',
-              },
-              {
-                num: '04',
-                title: 'Negotiation & Close',
-                body: 'Advocating for your interests from the first offer to the moment keys change hands.',
-              },
-            ].map((step) => (
-              <div key={step.num} style={{ backgroundColor: '#2A2722', border: '1px solid #3A3530', borderRadius: '4px', padding: '32px' }}>
-                <p
-                  style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontWeight: 600,
-                    fontSize: '48px',
-                    color: '#C4842A',
-                    lineHeight: 1,
-                    marginBottom: '16px',
-                  }}
-                >
-                  {step.num}
-                </p>
-                <h3
-                  className="mb-3"
-                  style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontWeight: 700,
-                    fontSize: '22px',
-                    color: '#FAFAF8',
-                  }}
-                >
-                  {step.title}
-                </h3>
-                <p style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px' }}>
-                  {step.body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="eyebrow mb-4">COMMON QUESTIONS</p>
-            <h2
-              style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 500,
-                fontSize: 'clamp(32px, 5vw, 48px)',
-                lineHeight: 1.2,
-                color: '#1C1A17',
-              }}
-            >
-              Seller FAQ
-            </h2>
-          </div>
-
-          <div className="space-y-6">
-            {faqs.map((faq, i) => (
-              <div
-                key={i}
-                style={{
-                  backgroundColor: '#2A2722',
-                  border: '1px solid #3A3530',
-                  borderRadius: '4px',
-                  padding: '28px 32px',
-                }}
-              >
-                <h3
-                  style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontWeight: 600,
-                    fontSize: '20px',
-                    color: '#C4842A',
-                    marginBottom: '12px',
-                  }}
-                >
-                  {faq.q}
-                </h3>
-                <div>
-                  <p style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}>
-                    {faq.a}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Bottom CTA */}
-      <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>READY TO SELL</p>
-          <h2
-            className="mb-6"
-            style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 500,
-              fontSize: 'clamp(32px, 5vw, 48px)',
-              lineHeight: 1.15,
-              color: '#F5EFE6',
-            }}
-          >
-            Get Your Home&apos;s Value
-          </h2>
-          <p className="mb-10" style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-            Let&apos;s start with an honest conversation about your home&apos;s value and what it takes to sell well in today&apos;s market.
+      {/* Dedicated Dusk Lakehouse Hero */}
+      <section className="ed-photo-hero" aria-labelledby="sellers-title">
+        <img className="ed-photo-hero-img" src="/images/field-guide/lake-house-editorial-4k.webp" alt="Editorial twilight architecture of a North Idaho home" loading="eager" />
+        <div className="ed-photo-hero-scrim" aria-hidden="true" />
+        <div className="ed-container" style={{ position: 'relative', maxWidth: '760px', marginLeft: 'max(24px, calc((100% - 1340px) / 2))' }}>
+          <p className="ed-eyebrow ed-eyebrow-light">Seller Representation</p>
+          <h1 id="sellers-title">
+            Before the sign <em>goes up.</em>
+          </h1>
+          <p className="ed-hero-lead" style={{ maxWidth: '600px' }}>
+            Strategic pricing, honest advice, and elevated presentation — built to attract serious local and out-of-state buyers from listing day to closing day.
           </p>
-          <Link
-            href="/contact"
-            className="inline-block text-white text-xs uppercase font-semibold tracking-wider rounded-sm transition-colors"
-            style={{
-              fontFamily: "'DM Sans', system-ui, sans-serif",
-              backgroundColor: '#C4842A',
-              padding: '14px 32px',
-              letterSpacing: '0.08em',
-            }}
-          >
-            Start the Conversation
-          </Link>
+          <div className="ed-photo-hero-actions">
+            <a className="ed-btn-alabaster" href="#valuation">
+              Request a Local Valuation <span aria-hidden="true">↓</span>
+            </a>
+            <a className="ed-link-light" href="#strategy">
+              Explore the Strategy <span aria-hidden="true">↓</span>
+            </a>
+          </div>
         </div>
       </section>
-    </>
+
+      {/* 4-Step Editorial Seller Process */}
+      <section style={{ padding: '96px 0', background: 'var(--alabaster)', borderBottom: '1px solid var(--hairline)' }} aria-labelledby="seller-process-title">
+        <div className="ed-container">
+          <div className="ed-section-header">
+            <div>
+              <p className="ed-eyebrow">What I Provide</p>
+              <h2 id="seller-process-title">
+                The seller <em>experience.</em>
+              </h2>
+            </div>
+            <Link className="ed-link-underlined" href="/articles/selling-a-home-north-idaho-what-your-home-is-worth">
+              Read: What Your Home Is Worth in 2026 <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+
+          <div className="ed-process-grid">
+            <article className="ed-process-step">
+              <span style={{ display: 'block', fontFamily: 'var(--serif)', fontSize: '46px', lineHeight: 1, color: 'var(--bronze)', marginBottom: '22px' }}>01</span>
+              <h3 style={{ fontSize: '26px', lineHeight: 1.2, color: 'var(--pine)' }}>Honest Market Analysis</h3>
+              <p style={{ marginTop: '14px', fontSize: '14px', lineHeight: 1.75, color: 'var(--ink-muted)' }}>
+                Accurate pricing based on real comparable sales — not an inflated number designed to win your listing.
+              </p>
+            </article>
+            <article className="ed-process-step">
+              <span style={{ display: 'block', fontFamily: 'var(--serif)', fontSize: '46px', lineHeight: 1, color: 'var(--bronze)', marginBottom: '22px' }}>02</span>
+              <h3 style={{ fontSize: '26px', lineHeight: 1.2, color: 'var(--pine)' }}>Strategic Pricing</h3>
+              <p style={{ marginTop: '14px', fontSize: '14px', lineHeight: 1.75, color: 'var(--ink-muted)' }}>
+                The number that attracts serious buyers, creates urgency in week one, and maximizes your net return.
+              </p>
+            </article>
+            <article className="ed-process-step">
+              <span style={{ display: 'block', fontFamily: 'var(--serif)', fontSize: '46px', lineHeight: 1, color: 'var(--bronze)', marginBottom: '22px' }}>03</span>
+              <h3 style={{ fontSize: '26px', lineHeight: 1.2, color: 'var(--pine)' }}>Professional Marketing</h3>
+              <p style={{ marginTop: '14px', fontSize: '14px', lineHeight: 1.75, color: 'var(--ink-muted)' }}>
+                Editorial photography, thoughtful presentation, and targeted exposure to the right buyer pool.
+              </p>
+            </article>
+            <article className="ed-process-step">
+              <span style={{ display: 'block', fontFamily: 'var(--serif)', fontSize: '46px', lineHeight: 1, color: 'var(--bronze)', marginBottom: '22px' }}>04</span>
+              <h3 style={{ fontSize: '26px', lineHeight: 1.2, color: 'var(--pine)' }}>Negotiation &amp; Close</h3>
+              <p style={{ marginTop: '14px', fontSize: '14px', lineHeight: 1.75, color: 'var(--ink-muted)' }}>
+                Calm, focused advocacy for your interests from the first offer to the moment keys change hands.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <SellersStrategyClient />
+
+      {/* Quiet Hairline Seller FAQs */}
+      <section style={{ padding: '96px 0', background: 'var(--alabaster)' }} id="faq" aria-labelledby="seller-faq-title">
+        <div className="ed-container ed-faq-layout">
+          <div>
+            <p className="ed-eyebrow">Common Questions</p>
+            <h2 id="seller-faq-title" style={{ fontSize: 'clamp(34px, 3.4vw, 48px)', lineHeight: 1.1, marginTop: '14px', color: 'var(--pine)' }}>
+              Seller questions, <em>answered honestly.</em>
+            </h2>
+            <p style={{ margin: '18px 0 28px', fontSize: '15px', lineHeight: 1.75, color: 'var(--ink-muted)' }}>
+              Real talk on timing, preparation, and what actually sells homes well in Kootenai and Bonner County.
+            </p>
+            <Link className="ed-btn-outline-pine" href="/contact">
+              Schedule a Walkthrough <span aria-hidden="true">↗</span>
+            </Link>
+          </div>
+          <FaqAccordion items={SELLER_FAQS} />
+        </div>
+      </section>
+
+      {/* Sunset Closing Band */}
+      <section className="ed-closing-band" aria-labelledby="sellers-closing-title">
+        <img className="ed-closing-photo" src="/images/field-guide/sunset-marina-clear-2048.webp" alt="Calm sunset reflection over Lake Coeur d'Alene" loading="lazy" />
+        <div className="ed-closing-scrim" aria-hidden="true" />
+        <div className="ed-container">
+          <div className="ed-closing-inner">
+            <p className="ed-eyebrow ed-eyebrow-light">Ready to Sell</p>
+            <h2 id="sellers-closing-title">
+              Let’s start with an <em>honest conversation.</em>
+            </h2>
+            <p style={{ marginTop: '18px', fontSize: '16px', lineHeight: 1.72, color: 'rgba(247,244,238,0.84)' }}>
+              No pressure and no inflated promises — just a clear read on your home’s value and what it takes to sell well in today’s North Idaho market.
+            </p>
+            <div style={{ marginTop: '32px', display: 'flex', alignItems: 'center', gap: '32px', flexWrap: 'wrap' }}>
+              <Link className="ed-btn-alabaster" href="/contact">
+                Start the Conversation <span aria-hidden="true">↗</span>
+              </Link>
+              <span className="ed-signature" aria-hidden="true">Shirin</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   )
 }

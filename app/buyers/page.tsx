@@ -1,7 +1,8 @@
 import { heroMetadata, lakeHouseCard } from '@/lib/hero-share'
 import Link from 'next/link'
-import PageHero from '@/components/PageHero'
 import { BASE_URL, BUSINESS_ID, WEBSITE_ID, MARKET_AREA_SERVED } from '@/lib/schema-ids'
+import BuyersFitClient from '@/components/editorial/BuyersFitClient'
+import FaqAccordion from '@/components/editorial/FaqAccordion'
 
 export const metadata = heroMetadata(
   '/buyers',
@@ -9,6 +10,29 @@ export const metadata = heroMetadata(
   "Buying a home in Post Falls, Coeur d'Alene, or anywhere in North Idaho? A local REALTOR's honest read on neighborhoods, prices, and what actually matters.",
   lakeHouseCard,
 )
+
+const BUYER_FAQS = [
+  {
+    q: "What does a buyer's agent do in Northern Idaho?",
+    a: "A buyer's agent represents your interests throughout the home purchase process — from identifying properties that match your needs and lifestyle, to negotiating offers, managing inspections, and guiding you through closing. In Northern Idaho's competitive market, having an experienced local agent means deep neighborhood knowledge, honest guidance on pricing, and an advocate working exclusively for you.",
+  },
+  {
+    q: "How much does it cost to use a buyer's agent in Idaho?",
+    a: "In most transactions, the buyer's agent compensation is negotiated as part of the sale. Idaho follows transparent real estate commission practices. During our first conversation, I'll walk you through exactly how compensation works so there are zero surprises.",
+  },
+  {
+    q: "What is the housing market like in Post Falls and Coeur d'Alene?",
+    a: "Northern Idaho's real estate market is active and driven by both local growth and buyers relocating from higher-cost western markets. Inventory and negotiating leverage vary significantly by price point and town — Coeur d'Alene currently offers ~2.6 months of supply compared to ~1.4 in Post Falls. Schedule a quick conversation and I'll walk you through your exact target range.",
+  },
+  {
+    q: 'What neighborhoods in Post Falls are best for families?',
+    a: "Post Falls has several strong family-friendly pockets depending on your priorities. Areas near the Centennial Trail offer easy outdoor access, while neighborhoods near Prairie View and Summit Ridge are popular for proximity to schools and parks. I'll narrow down the exact pockets based on your commute, school preferences, and budget.",
+  },
+  {
+    q: 'How do I start the process of buying a home in Northern Idaho?',
+    a: "The first step is a simple conversation. Before pulling a single listing, I want to understand how you want to live — your lifestyle, priorities, timeline, and budget. From there, we'll map out what's realistic right now and which towns fit best.",
+  },
+]
 
 const jsonLdService = {
   '@context': 'https://schema.org',
@@ -52,246 +76,135 @@ const jsonLdFaq = {
   '@type': 'FAQPage',
   '@id': `${BASE_URL}/buyers/#faq`,
   isPartOf: { '@id': `${BASE_URL}/buyers#webpage` },
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: "What does a buyer's agent do in Northern Idaho?",
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "A buyer's agent represents your interests throughout the home purchase process — from identifying properties that match your needs and lifestyle, to negotiating offers, managing inspections, and guiding you through closing. In Northern Idaho's competitive market, having an experienced local agent means you get access to deep neighborhood knowledge, honest guidance on pricing, and an advocate who works exclusively for you.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: "How much does it cost to use a buyer's agent in Idaho?",
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "In most transactions, the buyer's agent commission is negotiated as part of the sale. Idaho follows standard real estate commission practices. During our first conversation, I'll explain exactly how compensation works so there are no surprises.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: "What is the housing market like in Post Falls and Coeur d'Alene?",
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Northern Idaho's real estate market is active and competitive, particularly in Post Falls and Coeur d'Alene. The region has seen sustained demand from buyers relocating from higher-cost western markets. Inventory varies by price point and neighborhood. The best way to get current market context is to schedule a conversation — I can walk you through what's happening right now in the specific areas and price ranges you're targeting.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What neighborhoods in Post Falls are best for families?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Post Falls has several excellent family-friendly neighborhoods depending on your priorities. Areas near the Centennial Trail offer easy outdoor access. Neighborhoods near Prairie View and Summit Ridge tend to be popular with families for their proximity to schools and parks. I can give you a detailed breakdown based on your specific lifestyle needs — school preferences, commute, outdoor access, and budget.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do I start the process of buying a home in Northern Idaho?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "The first step is a conversation. Before looking at a single listing, I want to understand how you want to live — your lifestyle, your priorities, your timeline, and your budget. From there, I'll help you build a clear picture of what's realistic in today's market and which areas and property types align with your goals. Reach out and we'll set up a no-pressure call.",
-      },
-    },
-  ],
+  mainEntity: BUYER_FAQS.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 }
-
-const faqs = [
-  {
-    q: "What does a buyer's agent do in Northern Idaho?",
-    a: "A buyer's agent represents your interests throughout the home purchase process — from identifying properties that match your needs and lifestyle, to negotiating offers, managing inspections, and guiding you through closing. In Northern Idaho's competitive market, having an experienced local agent means you get access to deep neighborhood knowledge, honest guidance on pricing, and an advocate who works exclusively for you.",
-  },
-  {
-    q: "How much does it cost to use a buyer's agent in Idaho?",
-    a: "In most transactions, the buyer's agent commission is negotiated as part of the sale. Idaho follows standard real estate commission practices. During our first conversation, I'll explain exactly how compensation works so there are no surprises.",
-  },
-  {
-    q: "What is the housing market like in Post Falls and Coeur d'Alene?",
-    a: "Northern Idaho's real estate market is active and competitive, particularly in Post Falls and Coeur d'Alene. The region has seen sustained demand from buyers relocating from higher-cost western markets. Inventory varies by price point and neighborhood. The best way to get current market context is to schedule a conversation — I can walk you through what's happening right now in the specific areas and price ranges you're targeting.",
-  },
-  {
-    q: 'What neighborhoods in Post Falls are best for families?',
-    a: 'Post Falls has several excellent family-friendly neighborhoods depending on your priorities. Areas near the Centennial Trail offer easy outdoor access. Neighborhoods near Prairie View and Summit Ridge tend to be popular with families for their proximity to schools and parks. I can give you a detailed breakdown based on your specific lifestyle needs — school preferences, commute, outdoor access, and budget.',
-  },
-  {
-    q: 'How do I start the process of buying a home in Northern Idaho?',
-    a: "The first step is a conversation. Before looking at a single listing, I want to understand how you want to live — your lifestyle, your priorities, your timeline, and your budget. From there, I'll help you build a clear picture of what's realistic in today's market and which areas and property types align with your goals. Reach out and we'll set up a no-pressure call.",
-  },
-]
 
 export default function BuyersPage() {
   return (
-    <>
+    <div className="ed-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebPage) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
 
-      <PageHero
-        eyebrow="BUYER REPRESENTATION"
-        title={<>Expert Buyer Representation in <i>North Idaho</i></>}
-      >
-        From your first question to closing day — Shirin guides buyers through the North Idaho market with local expertise and honest advice.
-      </PageHero>
-
-      {/* Process Section */}
-      <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="eyebrow mb-4">THE PROCESS</p>
-            <h2
-              style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 500,
-                fontSize: 'clamp(32px, 5vw, 48px)',
-                lineHeight: 1.2,
-                color: '#1C1A17',
-              }}
-            >
-              How It Works
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                num: '01',
-                title: 'Buyers Consultation',
-                body: 'Understand your lifestyle, priorities, timeline, and budget before a single listing is pulled.',
-              },
-              {
-                num: '02',
-                title: 'Market Education',
-                body: 'An honest picture of what&apos;s available in your target areas and price range — no sugarcoating.',
-              },
-              {
-                num: '03',
-                title: 'Home Search',
-                body: 'Curated properties that match how you want to live, not just specs on a sheet.',
-              },
-              {
-                num: '04',
-                title: 'Offer to Close',
-                body: 'Negotiation, inspections, and paperwork handled with care from offer to keys.',
-              },
-            ].map((step) => (
-              <div key={step.num} style={{ backgroundColor: '#2A2722', border: '1px solid #3A3530', borderRadius: '4px', padding: '32px' }}>
-                <p
-                  style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontWeight: 600,
-                    fontSize: '48px',
-                    color: '#C4842A',
-                    lineHeight: 1,
-                    marginBottom: '16px',
-                  }}
-                >
-                  {step.num}
-                </p>
-                <h3
-                  className="mb-3"
-                  style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontWeight: 700,
-                    fontSize: '22px',
-                    color: '#FAFAF8',
-                  }}
-                >
-                  {step.title}
-                </h3>
-                <p style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px' }}
-                   dangerouslySetInnerHTML={{ __html: step.body }}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="section-padding" style={{ backgroundColor: '#F5EFE6' }}>
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="eyebrow mb-4">COMMON QUESTIONS</p>
-            <h2
-              style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 500,
-                fontSize: 'clamp(32px, 5vw, 48px)',
-                lineHeight: 1.2,
-                color: '#1C1A17',
-              }}
-            >
-              Buyer FAQ
-            </h2>
-          </div>
-
-          <div className="space-y-6">
-            {faqs.map((faq, i) => (
-              <div
-                key={i}
-                style={{
-                  backgroundColor: '#2A2722',
-                  border: '1px solid #3A3530',
-                  borderRadius: '4px',
-                  padding: '28px 32px',
-                }}
-              >
-                <h3
-                  style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontWeight: 600,
-                    fontSize: '20px',
-                    color: '#C4842A',
-                    marginBottom: '12px',
-                  }}
-                >
-                  {faq.q}
-                </h3>
-                <div>
-                  <p style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '15px', lineHeight: 1.7 }}>
-                    {faq.a}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Bottom CTA */}
-      <section className="section-padding" style={{ backgroundColor: '#1C1A17' }}>
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <p className="eyebrow mb-6" style={{ color: '#C4842A' }}>READY TO BUY</p>
-          <h2
-            className="mb-6"
-            style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 500,
-              fontSize: 'clamp(32px, 5vw, 48px)',
-              lineHeight: 1.15,
-              color: '#F5EFE6',
-            }}
-          >
-            Let&apos;s Talk About Buying
-          </h2>
-          <p className="mb-10" style={{ color: '#9A9590', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-            Whether you have questions about the market or you&apos;re ready to start searching — reach out. No pressure, no pitch.
+      {/* Distinct Residential North Idaho Hero */}
+      <section className="ed-photo-hero" aria-labelledby="buyers-title">
+        <img className="ed-photo-hero-img" src="/images/field-guide/townhome-walk.webp" alt="Sunlit tree-lined residential neighborhood in North Idaho" loading="eager" />
+        <div className="ed-photo-hero-scrim" aria-hidden="true" />
+        <div className="ed-container" style={{ position: 'relative', maxWidth: '760px', marginLeft: 'max(24px, calc((100% - 1340px) / 2))' }}>
+          <p className="ed-eyebrow ed-eyebrow-light">Buyer Representation</p>
+          <h1 id="buyers-title">
+            Find your place <em>in North Idaho.</em>
+          </h1>
+          <p className="ed-hero-lead" style={{ maxWidth: '600px' }}>
+            From your first question to closing day — Shirin guides local and relocating buyers through the North Idaho market with deep neighborhood expertise and honest advice.
           </p>
-          <Link
-            href="/contact"
-            className="inline-block text-white text-xs uppercase font-semibold tracking-wider rounded-sm transition-colors"
-            style={{
-              fontFamily: "'DM Sans', system-ui, sans-serif",
-              backgroundColor: '#C4842A',
-              padding: '14px 32px',
-              letterSpacing: '0.08em',
-            }}
-          >
-            Start the Conversation
-          </Link>
+          <div className="ed-photo-hero-actions">
+            <Link className="ed-btn-alabaster" href="/contact">
+              Start the Conversation <span aria-hidden="true">↗</span>
+            </Link>
+            <a className="ed-link-light" href="#fit-finder">
+              Find Your Town Fit <span aria-hidden="true">↓</span>
+            </a>
+          </div>
         </div>
       </section>
-    </>
+
+      {/* 4-Step Editorial Process on Alabaster */}
+      <section style={{ padding: '96px 0', background: 'var(--alabaster)', borderBottom: '1px solid var(--hairline)' }} aria-labelledby="process-title">
+        <div className="ed-container">
+          <div className="ed-section-header">
+            <div>
+              <p className="ed-eyebrow">The Process</p>
+              <h2 id="process-title">
+                What working together <em>looks like.</em>
+              </h2>
+            </div>
+            <a className="ed-link-underlined" href="https://shirinabplanalp.jacklinrealestate.com" target="_blank" rel="noopener noreferrer">
+              Search Live MLS Homes <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div className="ed-process-grid">
+            <article className="ed-process-step">
+              <span style={{ display: 'block', fontFamily: 'var(--serif)', fontSize: '46px', lineHeight: 1, color: 'var(--bronze)', marginBottom: '22px' }}>01</span>
+              <h3 style={{ fontSize: '26px', lineHeight: 1.2, color: 'var(--pine)' }}>Buyers Consultation</h3>
+              <p style={{ marginTop: '14px', fontSize: '14px', lineHeight: 1.75, color: 'var(--ink-muted)' }}>
+                Understand your lifestyle, priorities, timeline, and budget before a single listing is pulled.
+              </p>
+            </article>
+            <article className="ed-process-step">
+              <span style={{ display: 'block', fontFamily: 'var(--serif)', fontSize: '46px', lineHeight: 1, color: 'var(--bronze)', marginBottom: '22px' }}>02</span>
+              <h3 style={{ fontSize: '26px', lineHeight: 1.2, color: 'var(--pine)' }}>Market Education</h3>
+              <p style={{ marginTop: '14px', fontSize: '14px', lineHeight: 1.75, color: 'var(--ink-muted)' }}>
+                An honest picture of what’s available in your target areas and price range — no sugarcoating.
+              </p>
+            </article>
+            <article className="ed-process-step">
+              <span style={{ display: 'block', fontFamily: 'var(--serif)', fontSize: '46px', lineHeight: 1, color: 'var(--bronze)', marginBottom: '22px' }}>03</span>
+              <h3 style={{ fontSize: '26px', lineHeight: 1.2, color: 'var(--pine)' }}>Curated Home Search</h3>
+              <p style={{ marginTop: '14px', fontSize: '14px', lineHeight: 1.75, color: 'var(--ink-muted)' }}>
+                Curated properties that match how you actually want to live, not just specs on a sheet.
+              </p>
+            </article>
+            <article className="ed-process-step">
+              <span style={{ display: 'block', fontFamily: 'var(--serif)', fontSize: '46px', lineHeight: 1, color: 'var(--bronze)', marginBottom: '22px' }}>04</span>
+              <h3 style={{ fontSize: '26px', lineHeight: 1.2, color: 'var(--pine)' }}>Offer to Close</h3>
+              <p style={{ marginTop: '14px', fontSize: '14px', lineHeight: 1.75, color: 'var(--ink-muted)' }}>
+                Negotiation, inspections, wells/septic checks, and paperwork handled with care from offer to keys.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <BuyersFitClient />
+
+      {/* Quiet Hairline Buyer FAQs */}
+      <section style={{ padding: '96px 0', background: 'var(--alabaster)' }} id="faq" aria-labelledby="buyers-faq-title">
+        <div className="ed-container ed-faq-layout">
+          <div>
+            <p className="ed-eyebrow">Common Questions</p>
+            <h2 id="buyers-faq-title" style={{ fontSize: 'clamp(34px, 3.4vw, 48px)', lineHeight: 1.1, marginTop: '14px', color: 'var(--pine)' }}>
+              Buyer questions, <em>answered clearly.</em>
+            </h2>
+            <p style={{ margin: '18px 0 28px', fontSize: '15px', lineHeight: 1.75, color: 'var(--ink-muted)' }}>
+              Straightforward answers on representation, compensation, and how the North Idaho market really works.
+            </p>
+            <Link className="ed-btn-outline-pine" href="/articles">
+              Browse All Buyer Guides <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+          <FaqAccordion items={BUYER_FAQS} />
+        </div>
+      </section>
+
+      {/* Sunset Closing Band */}
+      <section className="ed-closing-band" aria-labelledby="buyers-closing-title">
+        <img className="ed-closing-photo" src="/images/field-guide/sunset-marina-clear-2048.webp" alt="Calm sunset reflection over Lake Coeur d'Alene" loading="lazy" />
+        <div className="ed-closing-scrim" aria-hidden="true" />
+        <div className="ed-container">
+          <div className="ed-closing-inner">
+            <p className="ed-eyebrow ed-eyebrow-light">Ready to Buy</p>
+            <h2 id="buyers-closing-title">
+              Let’s talk about <em>buying.</em>
+            </h2>
+            <p style={{ marginTop: '18px', fontSize: '16px', lineHeight: 1.72, color: 'rgba(247,244,238,0.84)' }}>
+              Whether you have early questions about the market or you’re ready to start touring — reach out. No pressure, no pitch, just honest local guidance.
+            </p>
+            <div style={{ marginTop: '32px', display: 'flex', alignItems: 'center', gap: '32px', flexWrap: 'wrap' }}>
+              <Link className="ed-btn-alabaster" href="/contact">
+                Start the Conversation <span aria-hidden="true">↗</span>
+              </Link>
+              <span className="ed-signature" aria-hidden="true">Shirin</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   )
 }

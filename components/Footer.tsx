@@ -13,20 +13,15 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:max-w-xs">
             <div className="mb-5">
-              <Link href="/" aria-label="Real Estate With Shirin — Home">
-                <div
-                  className="inline-block rounded-sm"
-                  style={{ backgroundColor: '#FAFAF8', padding: '10px 14px' }}
-                >
-                  <Image
-                    src="/images/shirin-logo.png"
-                    alt="Real Estate With Shirin"
-                    width={110}
-                    height={110}
-                    className="object-contain"
-                    style={{ width: 'auto', height: '110px' }}
-                  />
-                </div>
+              <Link href="/" aria-label="Real Estate With Shirin — Home" className="inline-flex items-center gap-3.5 group">
+                <svg className="w-12 h-12 shrink-0" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+                  <rect x="1" y="1" width="54" height="54" stroke="rgba(247,244,238,0.28)" strokeWidth="1" />
+                  <path d="M11 23L28 11l17 12" stroke="#C5AA7A" strokeWidth="1.2" />
+                  <text x="28" y="39" textAnchor="middle" fontFamily="Cormorant Garamond, Georgia, serif" fontSize="20" fontWeight="500" fill="#F7F4EE" letterSpacing="1.5">RS</text>
+                </svg>
+                <span style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '23px', color: '#FAF7F1', lineHeight: 1.15 }}>
+                  Real Estate with Shirin
+                </span>
               </Link>
             </div>
             <p className="text-sm leading-relaxed" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>

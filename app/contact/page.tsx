@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
-import ContactForm from '@/components/ContactForm'
 import { BASE_URL, WEBSITE_ID, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import EditorialContactForm from '@/components/editorial/EditorialContactForm'
 
 export const metadata: Metadata = {
   title: 'Contact Shirin Abplanalp | Northern Idaho Realtor · Berkshire Hathaway HomeServices Jacklin Real Estate',
@@ -36,151 +35,88 @@ const jsonLdBreadcrumb = {
 
 export default function ContactPage() {
   return (
-    <>
+    <div className="ed-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
 
-      {/* Hero */}
-      <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/north-idaho-lake-hero.webp"
-            alt="Northern Idaho landscape"
-            fill
-            priority
-            className="object-cover"
-            
-          />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(28,26,23,0.35), rgba(28,26,23,0.6))' }} />
-        </div>
-        <div className="relative z-10 text-center px-6 lg:px-8 py-20 max-w-3xl mx-auto">
-          <p className="eyebrow mb-4" style={{ color: '#C4842A' }}>GET IN TOUCH</p>
-          <h1
-            className="mb-6"
-            style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 600,
-              fontSize: 'clamp(36px, 6vw, 56px)',
-              lineHeight: 1.1,
-              color: '#FAFAF8',
-            }}
-          >
-            Let&apos;s Start the Conversation
+      {/* Deep Forest-Green Editorial Hero */}
+      <section className="ed-forest-hero" style={{ paddingBottom: '74px' }} aria-labelledby="contact-title">
+        <div className="ed-hero-backdrop" aria-hidden="true" />
+        <div className="ed-container" style={{ position: 'relative' }}>
+          <p className="ed-eyebrow ed-eyebrow-light">Get in Touch</p>
+          <h1 id="contact-title">
+            Let’s talk about <em>your move.</em>
           </h1>
-          <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '18px', lineHeight: 1.7, color: '#E8DDD0' }}>
-            Whether you&apos;re buying, selling, or just starting to explore North Idaho — reach out. No pressure, no pitch. Just an honest conversation.
+          <p className="ed-hero-lead">
+            Whether you’re buying, selling, or just starting to explore North Idaho — reach out. No pressure, no pitch, just an honest local conversation.
           </p>
         </div>
       </section>
 
-      {/* Contact Content */}
-      <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Form */}
-            <div>
-              <h2
-                className="mb-8"
-                style={{
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontWeight: 500,
-                  fontSize: '32px',
-                  color: '#1C1A17',
-                }}
-              >
-                Send an Inquiry
-              </h2>
-              <ContactForm />
-            </div>
+      {/* 2-Column Editorial Contact Layout */}
+      <section style={{ padding: '88px 0 100px', background: 'var(--alabaster)' }} aria-label="Contact form and details">
+        <div className="ed-container ed-contact-grid">
+          <EditorialContactForm />
 
-            {/* Contact Details */}
-            <div>
-              <h2
-                className="mb-8"
-                style={{
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontWeight: 500,
-                  fontSize: '32px',
-                  color: '#1C1A17',
-                }}
-              >
-                Contact Details
-              </h2>
-
-              <div className="space-y-8">
+          <aside style={{ display: 'flex', flexDirection: 'column', gap: '26px' }} aria-label="Direct contact details">
+            <div className="ed-advisor-card">
+              <div className="ed-advisor-top">
+                <img src="/images/shirin-portrait-2026.png" alt="Shirin Abplanalp" loading="eager" />
                 <div>
-                  <p className="eyebrow mb-2" style={{ fontSize: '11px' }}>PHONE</p>
-                  <a
-                    href="tel:+12086607468"
-                    style={{
-                      fontFamily: "'Cormorant Garamond', Georgia, serif",
-                      fontSize: '24px',
-                      fontWeight: 500,
-                      color: '#1C1A17',
-                      textDecoration: 'none',
-                    }}
-                  >
-                    (208) 660-7468
-                  </a>
-                </div>
-
-                <div style={{ height: '1px', backgroundColor: '#E8DDD0' }} />
-
-                <div>
-                  <p className="eyebrow mb-2" style={{ fontSize: '11px' }}>EMAIL</p>
-                  <a
-                    href="mailto:dreamlifeinidaho@gmail.com"
-                    style={{
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
-                      fontSize: '16px',
-                      color: '#C4842A',
-                      textDecoration: 'none',
-                    }}
-                  >
-                    dreamlifeinidaho@gmail.com
-                  </a>
-                </div>
-
-                <div style={{ height: '1px', backgroundColor: '#E8DDD0' }} />
-
-                <div>
-                  <p className="eyebrow mb-2" style={{ fontSize: '11px' }}>OFFICE ADDRESS</p>
-                  <address
-                    style={{
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
-                      fontSize: '16px',
-                      color: '#5C5650',
-                      fontStyle: 'normal',
-                      lineHeight: 1.7,
-                    }}
-                  >
-                    1927 W. Riverstone Drive<br />
-                    Coeur d&apos;Alene, ID 83814
-                  </address>
-                </div>
-
-                <div style={{ height: '1px', backgroundColor: '#E8DDD0' }} />
-
-                <div>
-                  <p className="eyebrow mb-2" style={{ fontSize: '11px' }}>BROKERAGE</p>
-                  <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '16px', color: '#5C5650' }}>
-                    Berkshire Hathaway HomeServices Jacklin Real Estate
-                  </p>
-                </div>
-
-                <div style={{ height: '1px', backgroundColor: '#E8DDD0' }} />
-
-                <div>
-                  <p className="eyebrow mb-2" style={{ fontSize: '11px' }}>LICENSE</p>
-                  <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '16px', color: '#5C5650' }}>
-                    Idaho RE License #1371861
-                  </p>
+                  <p style={{ fontSize: '9px', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--bronze-light)' }}>Direct Line</p>
+                  <p style={{ fontFamily: 'var(--serif)', fontSize: '25px', color: '#FAF7F1', lineHeight: 1.15, marginTop: '2px' }}>Shirin Abplanalp</p>
+                  <p style={{ fontSize: '12px', color: 'rgba(247,244,238,0.7)', marginTop: '2px' }}>BHHS Jacklin Real Estate</p>
                 </div>
               </div>
+
+              <dl style={{ marginTop: '22px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <div style={{ paddingBottom: '14px', borderBottom: '1px solid rgba(247,244,238,0.14)' }}>
+                  <dt style={{ fontSize: '10px', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--bronze-light)', marginBottom: '4px' }}>Phone</dt>
+                  <dd style={{ fontSize: '15px', color: '#FAF7F1' }}>
+                    <a href="tel:+12086607468">(208) 660-7468</a>
+                  </dd>
+                </div>
+                <div style={{ paddingBottom: '14px', borderBottom: '1px solid rgba(247,244,238,0.14)' }}>
+                  <dt style={{ fontSize: '10px', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--bronze-light)', marginBottom: '4px' }}>Email</dt>
+                  <dd style={{ fontSize: '15px', color: '#FAF7F1' }}>
+                    <a href="mailto:dreamlifeinidaho@gmail.com">dreamlifeinidaho@gmail.com</a>
+                  </dd>
+                </div>
+                <div style={{ paddingBottom: '14px', borderBottom: '1px solid rgba(247,244,238,0.14)' }}>
+                  <dt style={{ fontSize: '10px', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--bronze-light)', marginBottom: '4px' }}>Office Address</dt>
+                  <dd style={{ fontSize: '15px', color: '#FAF7F1', lineHeight: 1.6 }}>
+                    1927 W. Riverstone Drive
+                    <br />
+                    Coeur d’Alene, ID 83814
+                  </dd>
+                </div>
+                <div>
+                  <dt style={{ fontSize: '10px', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--bronze-light)', marginBottom: '4px' }}>License</dt>
+                  <dd style={{ fontSize: '15px', color: '#FAF7F1' }}>Idaho RE License #1371861</dd>
+                </div>
+              </dl>
             </div>
-          </div>
+
+            <div style={{ border: '1px solid var(--hairline)', background: 'var(--alabaster-card)', padding: '28px 30px' }}>
+              <h3 style={{ fontSize: '24px', color: 'var(--pine)', marginBottom: '14px' }}>What happens next</h3>
+              <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '14px', lineHeight: 1.65, color: 'var(--ink-muted)' }}>
+                <li style={{ position: 'relative', paddingLeft: '18px' }}>
+                  <span style={{ position: 'absolute', left: 0, color: 'var(--bronze)' }}>—</span>
+                  You hear back directly from Shirin — never an assistant or call center.
+                </li>
+                <li style={{ position: 'relative', paddingLeft: '18px' }}>
+                  <span style={{ position: 'absolute', left: 0, color: 'var(--bronze)' }}>—</span>
+                  Zero automated drip spam or unsolicited phone sequences.
+                </li>
+                <li style={{ position: 'relative', paddingLeft: '18px' }}>
+                  <span style={{ position: 'absolute', left: 0, color: 'var(--bronze)' }}>—</span>
+                  Honest local context on towns, pricing, and timing tailored to your goals.
+                </li>
+              </ul>
+            </div>
+          </aside>
         </div>
       </section>
-    </>
+    </div>
   )
 }
