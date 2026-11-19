@@ -95,7 +95,7 @@
 .atlasWindowPhoto img { object-fit: cover; object-position: center; }
 .atlasSheet {
   position: relative;
-  padding: clamp(52px, 5.8vw, 100px) var(--gutter);
+  padding: clamp(8rem, 22svh, 15rem) var(--gutter);
   background: rgb(253 250 241 / 68%);
 }
 .cityList {
@@ -125,7 +125,7 @@
   .atlasWindowPhoto img { object-position: 26% center; }
 }
 @media (max-width:700px) {
-  .atlasSheet { padding-block: 32px; }
+  .atlasSheet { padding-block: clamp(3.5rem, 9svh, 6rem); }
   .cityList { flex-direction: column; gap: .375rem; }
   .cityList a { font-size: clamp(2.25rem, 8vw, 3rem); }
 }
