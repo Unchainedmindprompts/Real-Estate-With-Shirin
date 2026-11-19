@@ -91,7 +91,13 @@
 }
 /* Leave a clear view of the fixed photo before the translucent sheet arrives. */
 .atlasWindow { height: min(100svh, max(36rem, 52.54vw)); }
-.atlasWindowPhoto { position: fixed; inset: 0; pointer-events: none; }
+.atlasWindowPhoto {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  /* Tiny first paint of the same photo while the selected full-size file decodes. */
+  background: #343e46 url('data:image/jpeg;base64,/9j/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAZADADASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAABQIDBAYB/8QAKxAAAgECBQIDCQAAAAAAAAAAAQIDABEEBRIhUTGBExSRIiQyNEFCYXHB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/8QAGhEAAgMBAQAAAAAAAAAAAAAAAAECIUERUf/aAAwDAQACEQMRAD8AXllw8RbwkAPNYJ38VtVhXO4jG5jA+lnD86N6lBmWLcDSy34JFUUlpDouV2t6V6sBYgsT2ozzWZFPYhQ/kEGojF5uv2X9KbwaH4cvV9zdhwdq1x4MILKVTvXL+dzY393vWaXOcwgOmWHSeu4NYak9Kg7ESticWWeyjfcGpxJE27Xa56q1VT/w1VD9KJLoxYzh5IogVXXsb7NWk5jGFJJYCh8L0NWt8B/dST9FteCsecwqwOqS3FqqxecxTQyRhS7EW1EAGjo+veoL83J3rXLMn//Z') center / cover no-repeat;
+}
 .atlasWindowPhoto img { object-fit: cover; object-position: center; }
 .atlasSheet {
   position: relative;
@@ -122,6 +128,7 @@
 .cityList a:hover, .cityList a:focus-visible { text-decoration-line: underline; }
 @media (max-width:800px) {
   .atlasWindow { height: min(75svh, 38rem); }
+  .atlasWindowPhoto { background-position: 26% center; }
   .atlasWindowPhoto img { object-position: 26% center; }
 }
 @media (max-width:700px) {
