@@ -56,9 +56,19 @@ export default function TownAtlas() {
   return <section className={s.atlas} id="communities" aria-labelledby="atlas-title">
     <div className={s.atlasWindow}>
       <div className={s.atlasWindowPhoto}>
-        <Image src="/images/field-guide/sunset-marina-window.webp"
-          alt="Sunset over the lake and mountains, with golden lights tracing the marina docks"
-          fill sizes="100vw" unoptimized />
+        <picture>
+          <source
+            srcSet={[
+              '/images/field-guide/sunset-marina-clear-2048.webp 2048w',
+              '/images/field-guide/sunset-marina-clear-4096.webp 4096w',
+              '/images/field-guide/sunset-marina-clear-8192.webp 8192w',
+            ].join(', ')}
+            sizes="(min-aspect-ratio: 512/269) 100vw, 190.34vh"
+          />
+          <Image src="/images/field-guide/sunset-marina-clear-2048.webp"
+            alt="Sunset over the lake and mountains, with golden lights tracing the marina docks"
+            fill unoptimized />
+        </picture>
       </div>
     </div>
     <div className={s.atlasSheet}>
