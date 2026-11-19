@@ -17,7 +17,7 @@ const cities = [
 ]
 
 export default function TownAtlas() {
-  return <section className={s.atlas} id="communities" aria-label="North Idaho communities">
+  return <section className={s.atlas} aria-label="North Idaho communities">
     <div className={s.atlasWindow}>
       <div className={s.atlasWindowPhoto}>
         <picture>
@@ -38,7 +38,7 @@ export default function TownAtlas() {
         </picture>
       </div>
     </div>
-    <nav className={s.atlasSheet} aria-label="City guides">
+    <nav id="communities" className={s.atlasSheet} aria-label="City guides">
       <ul className={s.cityList}>
         {cities.map(({ name, slug }) => (
           <li key={slug}>

@@ -10,7 +10,7 @@
 .home h2 i, .home h1 i { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; letter-spacing: -.064em; font-size: .91em; }
 .home button, .nav button { cursor: pointer; }
 .home a:focus-visible, .home button:focus-visible, .nav a:focus-visible, .nav button:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
-.home section[id] { scroll-margin-top: 82px; }
+.home section[id], .atlasSheet { scroll-margin-top: 82px; }
 .kicker, .portraitCaption, .sceneControls span { font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
 .kicker { display: flex; align-items: center; gap: 13px; line-height: 1.4; }
 .shortRule { height: 1px; width: 32px; background: currentColor; opacity: .85; }
