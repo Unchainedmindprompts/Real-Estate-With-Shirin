@@ -143,6 +143,16 @@
   color: var(--ink);
   text-align: center;
 }
+.journal::after {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background: url('/images/field-guide/hayden-lake-contours.svg') center / cover no-repeat;
+  opacity: .34;
+  mask-image: radial-gradient(ellipse 60% 100% at 50% 50%, rgb(0 0 0 / .15) 18%, rgb(0 0 0 / .44) 58%, #000 100%);
+  pointer-events: none;
+}
 .journal::before {
   content: '';
   position: absolute;
@@ -199,6 +209,7 @@
 @media (max-width:700px) {
   .journal { min-height: 0; padding-block: 50px 36px; }
   .journal::before { inset: 20px 6%; }
+  .journal::after { background-position: 73% center; }
   .journalTitle h2 { font-size: clamp(3.75rem, 14vw, 5.5rem); }
   .journalLinks { grid-template-columns: 1fr; max-width: 30rem; margin: 26px auto 12px; }
   .journalLinks li + li { border-inline-start: 0; border-top: 1px solid #85927a65; }
