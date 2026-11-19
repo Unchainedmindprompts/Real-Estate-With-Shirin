@@ -111,7 +111,7 @@
   background: linear-gradient(to right, var(--atlas-rule) 80%, var(--atlas-copper) 80%);
 }
 .atlasHeader h2 {
-  writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap;
+  writing-mode: vertical-rl; text-orientation: sideways; transform: rotate(180deg); white-space: nowrap;
   font: 400 clamp(39px, 5.4vw, 72px)/.98 var(--serif); letter-spacing: -.055em;
 }
 .atlasHeader h2 span, .atlasHeader h2 i { display: block; }
@@ -126,12 +126,12 @@
 .leftView { clip-path: inset(0 calc(100% - var(--split)) 0 0); }
 .rightView { clip-path: inset(0 0 0 var(--split)); }
 .rightView img, .leftView img { object-fit: cover; }
-.viewLabel {
+.leftLabel, .rightLabel {
   position: absolute; top: 10px; padding: 8px 14px;
   font: 600 11px/1.2 var(--sans); letter-spacing: .08em; text-transform: uppercase;
 }
-.rightView .viewLabel { right: 10px; background: #203e32; color: white; }
-.leftView .viewLabel { left: 10px; background: #fffdf8; color: #253e33; }
+.rightLabel { right: 10px; background: #203e32; color: white; }
+.leftLabel { left: 10px; background: #fffdf8; color: #253e33; }
 .revealRange {
   z-index: 2; width: 100%; height: 100%; margin: 0; opacity: 0;
   appearance: none; cursor: ew-resize; touch-action: pan-y;
@@ -218,9 +218,9 @@
   .atlasHeader h2 { writing-mode: horizontal-tb; transform: none; white-space: normal; font-size: clamp(42px, 7vw, 62px); }
   .atlasHeader h2 span, .atlasHeader h2 i { display: inline; }
   .townPhotoWindow { aspect-ratio: 1.55; }
-  .viewLabel { padding: 6px 8px; font-size: 10px; }
-  .leftView .viewLabel { left: 6px; }
-  .rightView .viewLabel { right: 6px; }
+  .leftLabel, .rightLabel { padding: 6px 8px; font-size: 10px; }
+  .leftLabel { left: 6px; }
+  .rightLabel { right: 6px; }
   .townChoices { gap: 0 16px; }
   .revealGrip { width: 44px; height: 44px; }
   .revealGrip img { width: 26px; }

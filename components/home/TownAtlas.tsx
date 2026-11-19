@@ -70,9 +70,10 @@ function TownComparison({ left, right }: { left: Town; right: Town }) {
         <div key={place.slug} className={index === 0 ? s.rightView : s.leftView}>
           <Image src={'/images/community-atlas/' + place.slug + '.webp'} alt={place.photo.alt}
             style={{ objectPosition: place.photo.position }} fill sizes="(max-width: 800px) 92vw, (max-width: 1150px) 72vw, 842px" />
-          <span className={s.viewLabel}>{place.name}</span>
         </div>
       ))}
+      {split > 0 && <span className={s.leftLabel}>{left.name}</span>}
+      {split < 100 && <span className={s.rightLabel}>{right.name}</span>}
       <input className={s.revealRange} type="range" min="0" max="100" value={split}
         onChange={event => setSplit(event.currentTarget.valueAsNumber)}
         aria-label={'Compare ' + left.name + ' and ' + right.name}
