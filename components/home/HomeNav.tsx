@@ -8,7 +8,7 @@ import s from './Home.module.css'
 
 const links = [
   ['Buy', '/buyers'], ['Sell', '/sellers'], ['Communities', '#communities'],
-  ['Meet Shirin', '#meet-shirin'], ['Field notes', '#field-notes'],
+  ['Meet Shirin', '#meet-shirin'],
 ]
 
 export default function HomeNav({ scrolled }: { scrolled: boolean }) {

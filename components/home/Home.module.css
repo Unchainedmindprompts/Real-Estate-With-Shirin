@@ -132,52 +132,6 @@
 @media (prefers-reduced-motion:reduce) {
   .atlasWindowPhoto { position: absolute; }
 }
-.journal {
-  display: grid;
-  align-items: center;
-  min-height: clamp(24rem, 31vw, 34rem);
-  padding: clamp(4.5rem, 7vw, 8rem) var(--gutter);
-  /* Carrara-style mineral veins follow the elevation contours around Hayden Lake. */
-  background: #f3f2ee url('/images/field-guide/hayden-contour-carrara.jpg') center / cover no-repeat;
-  color: var(--ink);
-  text-align: center;
-}
-.journalInner { width: min(100%, 84rem); margin-inline: auto; }
-.journalLinks {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: center;
-  gap: clamp(1.25rem, 4vw, 5.5rem);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.journalLinks a {
-  display: inline-block;
-  max-width: 13ch;
-  padding-block: .35rem;
-  font: 500 clamp(1.95rem, 3.4vw, 3.875rem)/1.08 var(--serif);
-  letter-spacing: -.04em;
-  text-wrap: balance;
-  text-decoration-thickness: 1px;
-  text-underline-offset: .16em;
-}
-.journalLinks a:hover, .journalLinks a:focus-visible { text-decoration-line: underline; }
-.archiveLink {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  margin-top: clamp(1.75rem, 3vw, 3rem);
-  font: 500 .9375rem/1.35 var(--sans);
-  text-decoration: underline;
-  text-decoration-color: #71806c;
-  text-underline-offset: .4em;
-}
-@media (max-width:700px) {
-  .journal { min-height: 0; padding-block: clamp(3.5rem, 9svh, 6rem); background-position: 67% center; }
-  .journalLinks { grid-template-columns: 1fr; gap: .8rem; }
-  .journalLinks a { max-width: 19ch; font-size: clamp(1.95rem, 7.8vw, 2.75rem); }
-}
 .railControls button { border-color: #859080; color: var(--pine); }
 .railControls button:disabled { opacity:.3; cursor:default; }
 .weekend { padding-top: clamp(65px,7.5vw,128px); }

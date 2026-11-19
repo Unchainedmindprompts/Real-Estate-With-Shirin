@@ -7,12 +7,6 @@ import { BROKERAGE_NAME, PHONE, PHONE_DISPLAY } from '@/lib/schema-ids'
 import { KVCORE_BASE } from '@/lib/idx-search'
 import s from './Home.module.css'
 
-const guides = [
-  { href: '/relocating-to-north-idaho', title: 'Moving to North Idaho' },
-  { href: '/articles/north-idaho-to-spokane-commute-times', title: 'The commute to Spokane' },
-  { href: '/articles/selling-a-home-north-idaho-what-your-home-is-worth', title: 'What is your home worth?' },
-]
-
 export default function FieldGuide({ reviews }: { reviews: { name:string; context:string; quote:string }[] }) {
   return <div className={s.home}>
     <div className={s.revealPair}>
@@ -66,16 +60,6 @@ export default function FieldGuide({ reviews }: { reviews: { name:string; contex
     </div>
     <Reviews reviews={reviews}/>
     <TownAtlas/>
-    <section className={s.journal} id="field-notes" aria-label="North Idaho guides">
-      <div className={s.journalInner}>
-        <ul className={s.journalLinks}>
-          {guides.map(({ href, title }) => (
-            <li key={href}><Link href={href}>{title}</Link></li>
-          ))}
-        </ul>
-        <Link className={s.archiveLink} href="/articles">All articles</Link>
-      </div>
-    </section>
     <Weekend/>
     <section className={s.contact} id="get-in-touch" aria-labelledby="contact-title"><div className={s.contactPhoto}><Image src="/images/field-guide/sunset-over-the-lake.webp" fill sizes="100vw" alt=""/></div>
       <div className={s.contactInner}><p className={s.kicker}><span className={s.shortRule}/>Get in touch</p><h2 id="contact-title">Let’s talk about<br/><i>your move.</i></h2>
