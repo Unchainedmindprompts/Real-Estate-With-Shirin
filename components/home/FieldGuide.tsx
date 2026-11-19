@@ -8,9 +8,8 @@ import { KVCORE_BASE } from '@/lib/idx-search'
 import s from './Home.module.css'
 
 const guides = [
-  { href: '/relocating-to-north-idaho', tag:'Relocation', title: 'Moving to North Idaho', text: 'A place to start with the towns, seasons, schools and the move itself.' },
-  { href: '/articles/north-idaho-to-spokane-commute-times', tag:'Daily life', title: 'The commute to Spokane', text: 'What the drive looks like from each town when work is across the state line.' },
-  { href: '/articles/selling-a-home-north-idaho-what-your-home-is-worth', tag:'For sellers', title: 'What is your home worth?', text: 'How local sales, preparation and timing fit into an asking price.' },
+  { href: '/articles/north-idaho-to-spokane-commute-times', title: 'The commute to Spokane' },
+  { href: '/articles/selling-a-home-north-idaho-what-your-home-is-worth', title: 'What is your home worth?' },
 ]
 
 export default function FieldGuide({ reviews }: { reviews: { name:string; context:string; quote:string }[] }) {
@@ -67,8 +66,33 @@ export default function FieldGuide({ reviews }: { reviews: { name:string; contex
     <Reviews reviews={reviews}/>
     <TownAtlas/>
     <section className={s.journal} id="field-notes" aria-labelledby="notes-heading">
-      <div className={s.sectionTop}><div><p className={s.kicker}><span className={s.shortRule}/>Shirin’s guides</p><h2 id="notes-heading">Field <i>notes.</i></h2></div><Link className={s.darkTextLink} href="/articles">All articles <span aria-hidden="true">→</span></Link></div>
-      <div className={s.guideGrid}>{guides.map(g=><Link key={g.href} className={s.guide} href={g.href}><p className={s.kicker}>{g.tag}</p><h3>{g.title}</h3><p>{g.text}</p><span className={s.readGuide}>Read guide <span aria-hidden="true">↗</span></span></Link>)}</div>
+      <div className={s.journalInner}>
+        <div className={s.journalSpread}>
+          <header className={s.journalTitle}>
+            <p className={s.kicker}><span className={s.shortRule}/>Shirin’s guides</p>
+            <h2 id="notes-heading">Field <i>notes.</i></h2>
+            <Link className={s.archiveLink} href="/articles">All articles</Link>
+          </header>
+          <article className={s.leadStory}>
+            <Link href="/relocating-to-north-idaho" aria-labelledby="relocation-title">
+              <div className={s.leadPhoto}>
+                <Image src="/images/north-idaho-neighborhood.png"
+                  alt="A residential street descends past timber homes toward sunlit foothills"
+                  fill sizes="(max-width: 720px) 90vw, (max-width: 1660px) 52vw, 850px" quality={85}/>
+              </div>
+              <p className={s.kicker}>Relocation</p>
+              <h3 id="relocation-title">Moving to North Idaho</h3>
+            </Link>
+          </article>
+        </div>
+        <ul className={s.journalLinks}>
+          {guides.map(({ href, title }) => (
+            <li key={href}>
+              <Link href={href}>{title}<span aria-hidden="true">↗</span></Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
     <Weekend/>
     <section className={s.contact} id="get-in-touch" aria-labelledby="contact-title"><div className={s.contactPhoto}><Image src="/images/field-guide/sunset-over-the-lake.webp" fill sizes="100vw" alt=""/></div>
