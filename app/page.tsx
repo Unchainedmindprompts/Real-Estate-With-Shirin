@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import { heroMetadata, riverfrontCard } from '@/lib/hero-share'
 import FieldGuide from '@/components/home/FieldGuide'
 import {
   BASE_URL,
@@ -12,9 +12,6 @@ import {
   INSTAGRAM_URL,
   AGENT_IMAGE,
   BROKERAGE_PHONE,
-  PORTRAIT_2026,
-  PORTRAIT_2026_WIDTH,
-  PORTRAIT_2026_HEIGHT,
   AGENT_NAME,
   BRAND_NAME,
   BROKERAGE_NAME,
@@ -33,38 +30,7 @@ import {
 const HOMEPAGE_TITLE = 'Shirin Abplanalp | North Idaho REALTOR® | BHHS Jacklin'
 const HOMEPAGE_DESCRIPTION =
   "Shirin Abplanalp is a licensed North Idaho REALTOR® with BHHS Jacklin Real Estate, helping buyers, sellers, and relocating families across North Idaho."
-const HOMEPAGE_IMAGE_ALT = 'Shirin Abplanalp, Licensed REALTOR® at BHHS Jacklin Real Estate'
-
-export const metadata: Metadata = {
-  title: HOMEPAGE_TITLE,
-  description: HOMEPAGE_DESCRIPTION,
-  alternates: {
-    canonical: 'https://www.realestatewithshirin.com',
-  },
-  openGraph: {
-    title: HOMEPAGE_TITLE,
-    description: HOMEPAGE_DESCRIPTION,
-    url: 'https://www.realestatewithshirin.com',
-    siteName: 'Real Estate With Shirin',
-    type: 'website',
-    locale: 'en_US',
-    images: [
-      {
-        url: PORTRAIT_2026,
-        width: PORTRAIT_2026_WIDTH,
-        height: PORTRAIT_2026_HEIGHT,
-        alt: HOMEPAGE_IMAGE_ALT,
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: HOMEPAGE_TITLE,
-    description: HOMEPAGE_DESCRIPTION,
-    images: [PORTRAIT_2026],
-  },
-}
-
+export const metadata = heroMetadata('', HOMEPAGE_TITLE, HOMEPAGE_DESCRIPTION, riverfrontCard)
 
 const googleReviews = [
   {
@@ -134,9 +100,9 @@ export default function HomePage() {
             inLanguage: 'en-US',
             primaryImageOfPage: {
               '@type': 'ImageObject',
-              url: PORTRAIT_2026,
-              width: PORTRAIT_2026_WIDTH,
-              height: PORTRAIT_2026_HEIGHT,
+              url: BASE_URL + riverfrontCard.path,
+              width: 1200,
+              height: 630,
             },
           },
           {

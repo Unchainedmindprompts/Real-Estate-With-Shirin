@@ -1,16 +1,14 @@
-import type { Metadata } from 'next'
+import { heroMetadata, lakeHouseCard } from '@/lib/hero-share'
 import Link from 'next/link'
 import PageHero from '@/components/PageHero'
 import { BASE_URL, BUSINESS_ID, WEBSITE_ID, MARKET_AREA_SERVED } from '@/lib/schema-ids'
 
-export const metadata: Metadata = {
-  title: 'Selling Your North Idaho Home | Shirin Abplanalp, REALTOR®',
-  description:
-    "Selling a home in Post Falls, Coeur d'Alene, or anywhere in North Idaho? Strategic pricing, professional presentation, and an honest read on the market.",
-  alternates: {
-    canonical: `${BASE_URL}/sellers`,
-  },
-}
+export const metadata = heroMetadata(
+  '/sellers',
+  'Selling Your North Idaho Home | Shirin Abplanalp, REALTOR®',
+  "Selling a home in Post Falls, Coeur d'Alene, or anywhere in North Idaho? Strategic pricing, professional presentation, and an honest read on the market.",
+  lakeHouseCard,
+)
 
 const jsonLdService = {
   '@context': 'https://schema.org',

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import { heroMetadata, lakeHouseCard } from '@/lib/hero-share'
 import PageHero from '@/components/PageHero'
 import Link from 'next/link'
 import fs from 'fs'
@@ -10,14 +10,12 @@ const ARTICLE_SLUGS = fs
   .filter((d) => d.isDirectory() && fs.existsSync(path.join(process.cwd(), 'app', 'articles', d.name, 'page.tsx')))
   .map((d) => d.name)
 
-export const metadata: Metadata = {
-  title: 'Northern Idaho Real Estate Articles | Shirin Abplanalp',
-  description:
-    'Real estate insights, market updates, and Northern Idaho lifestyle guides from Shirin Abplanalp, licensed realtor at Berkshire Hathaway HomeServices Jacklin Real Estate.',
-  alternates: {
-    canonical: `${BASE_URL}/articles`,
-  },
-}
+export const metadata = heroMetadata(
+  '/articles',
+  'Northern Idaho Real Estate Articles | Shirin Abplanalp',
+  'Real estate insights, market updates, and Northern Idaho lifestyle guides from Shirin Abplanalp, licensed realtor at Berkshire Hathaway HomeServices Jacklin Real Estate.',
+  lakeHouseCard,
+)
 
 const jsonLdCollection = {
   '@context': 'https://schema.org',

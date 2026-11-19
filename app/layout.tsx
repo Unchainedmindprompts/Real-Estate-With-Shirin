@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import { riverfrontCard, shareImage } from '@/lib/hero-share'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
+  openGraph: { images: [shareImage(riverfrontCard)] },
   metadataBase: new URL('https://www.realestatewithshirin.com'),
   title: {
     default: 'Shirin Abplanalp | North Idaho REALTOR® | BHHS Jacklin',
