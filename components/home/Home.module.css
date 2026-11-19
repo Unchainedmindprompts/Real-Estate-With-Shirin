@@ -11,7 +11,7 @@
 .home button, .nav button { cursor: pointer; }
 .home a:focus-visible, .home button:focus-visible, .nav a:focus-visible, .nav button:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 .home section[id] { scroll-margin-top: 82px; }
-.kicker, .portraitCaption, .sceneControls span, .atlasFigure figcaption, .readGuide { font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+.kicker, .portraitCaption, .sceneControls span, .readGuide { font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
 .kicker { display: flex; align-items: center; gap: 13px; line-height: 1.4; }
 .shortRule { height: 1px; width: 32px; background: currentColor; opacity: .85; }
 .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 55; color: white; transition: background .25s,color .25s; }
@@ -52,13 +52,13 @@
 .heroText h1 i { color: #fff3dc; white-space: nowrap; }
 .heroText .heroActions { margin-top: clamp(14px,2svh,22px); }
 .introLine { font-size: clamp(15px,1.25vw,21px); letter-spacing: .016em; }
-.heroActions, .townActions { display: flex; align-items: center; flex-wrap: wrap; gap: 28px; }
+.heroActions { display: flex; align-items: center; flex-wrap: wrap; gap: 28px; }
 .heroActions { margin-top: 28px; }
-.lightButton, .lightTextLink, .darkTextLink, .townActions a, .comparison { display: inline-flex; align-items: center; gap: 18px; font-size: 12px; font-weight: 600; letter-spacing: .035em; }
+.lightButton, .lightTextLink, .darkTextLink { display: inline-flex; align-items: center; gap: 18px; font-size: 12px; font-weight: 600; letter-spacing: .035em; }
 .lightButton { padding: 14px 22px; color: #20352f; background: #f6f3e9; }
 .lightButton:hover { background: white; }
-.lightButton span,.darkTextLink span,.lightTextLink span,.townActions span,.comparison span,.readGuide span { font-family: Arial,sans-serif; font-size: 17px; line-height: 1; }
-.lightTextLink,.darkTextLink,.townActions a,.comparison { border-bottom: 1px solid currentColor; padding: 5px 0; }
+.lightButton span,.darkTextLink span,.lightTextLink span,.readGuide span { font-family: Arial,sans-serif; font-size: 17px; line-height: 1; }
+.lightTextLink,.darkTextLink { border-bottom: 1px solid currentColor; padding: 5px 0; }
 .sceneBar { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 10px 0 13px; border-top: 1px solid #ffffff62; }
 .sceneCaption { font: italic 19px var(--serif); display: flex; gap: 12px; align-items: center; }
 .sceneLine { width: 6px; height: 6px; border-radius: 50%; background: #d9ab79; }
@@ -79,13 +79,11 @@
 .portraitCaption { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); padding: 12px 0; font-size: 9px; letter-spacing: .12em; }
 .storyCopy .kicker,.journal .kicker,.weekend .kicker { color: #6b573f; }
 .storyCopy h2 { margin: 23px 0; }
-.storyCopy>p:not(.kicker):not(.broker),.townInfo>p,.guide>p:not(.kicker) { max-width: 46ch; font-size: 15px; line-height: 1.8; color: #48554d; }
+.storyCopy>p:not(.kicker):not(.broker),.guide>p:not(.kicker) { max-width: 46ch; font-size: 15px; line-height: 1.8; color: #48554d; }
 .storyCopy>p+p { margin-top: 14px; }
 .signature { margin: 14px 0 0; font-family: 'Great Vibes', 'Snell Roundhand', cursive; font-size: 45px; line-height: 1.4; color: #8d6448; }
 .storyCopy .broker { font-size: 10px; color: #626b61; margin: 16px 0 0; }
 .atlas {
-  --atlas-rule: rgb(48 61 48 / 38%);
-  --atlas-copper: #57391f;
   position: relative;
   isolation: isolate;
   clip-path: inset(0);
@@ -97,80 +95,42 @@
 .atlasWindowPhoto img { object-fit: cover; object-position: center; }
 .atlasSheet {
   position: relative;
-  padding: clamp(45px, 5vw, 82px) var(--gutter) clamp(36px, 4vw, 64px);
+  padding: clamp(52px, 5.8vw, 100px) var(--gutter);
   background: rgb(253 250 241 / 68%);
 }
-.atlasSpread, .atlasCompanion { max-width: 1160px; margin-inline: auto; }
-.atlasSpread {
-  display: grid;
-  grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
-  grid-template-areas: "heading choices" "heading story";
-  column-gap: clamp(32px, 5vw, 92px);
+.cityList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 94rem;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
 }
-.atlasHeader { grid-area: heading; }
-.atlasHeader .kicker { color: var(--atlas-copper); }
-.atlasHeader h2 { margin-top: 12px; font-size: clamp(45px, 4.6vw, 76px); line-height: .98; }
-.atlasHeader h2 i { display: block; color: #315c49; }
-.townChoices {
-  grid-area: choices; display: flex; flex-wrap: wrap; align-items: baseline;
-  gap: 0 clamp(14px, 1.8vw, 27px); margin-top: 10px; border-bottom: 1px solid var(--atlas-rule);
+.cityList a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  color: var(--ink);
+  font: 500 clamp(1.75rem, 3.5vw, 3.875rem)/1.12 var(--serif);
+  letter-spacing: -.04em;
+  white-space: nowrap;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .17em;
 }
-.townChoices button {
-  position: relative; padding-block: 8px; min-height: 44px;
-  font: 500 clamp(17px, 1.25vw, 21px)/1.2 var(--serif);
-  color: #253b31; white-space: nowrap; scroll-margin-top: 86px;
-}
-.townChoices button::after { content: ''; position: absolute; inset: auto 0 0; height: 2px; background: var(--atlas-copper); transform: scaleX(0); transform-origin: left; transition: transform .2s ease; }
-.townChoices button[aria-pressed=true],.townChoices button:hover { color: var(--atlas-copper); }
-.townChoices button[aria-pressed=true]::after,.townChoices button:hover::after { transform: scaleX(1); }
-.atlas .townChoices button:focus-visible { outline-offset: 1px; }
-.atlasStory { grid-area: story; padding-top: 19px; }
-.townInfo h3 { font-size: clamp(28px, 2.25vw, 38px); line-height: 1.07; margin-bottom: 7px; letter-spacing: -.035em; }
-.townInfo>p { color: #24372e; max-width: 72ch; font-size: 16px; line-height: 1.6; }
-.townActions { gap: 10px 24px; align-items: baseline; margin-top: 16px; }
-.townActions a:first-child {
-  color: white; background: var(--pine); padding: 11px 18px; border: 0; border-bottom-right-radius: 12px;
-}
-.townActions a:first-child:hover { background: #305646; }
-.townActions a:last-child { color: #263a30; font-size: 14px; gap: 7px; }
-.townActions a:last-child:hover,.comparison:hover { color: var(--atlas-copper); }
-.atlasCompanion {
-  display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: baseline; gap: 16px;
-  margin-top: clamp(34px, 4vw, 60px); padding-block: 12px; border-block: 1px solid var(--atlas-rule);
-}
-.atlasFigure summary { width: fit-content; cursor: pointer; font: 500 20px/1.5 var(--serif); padding: 7px 0; }
-.atlasFigure summary::marker { color: var(--atlas-copper); font-size: .7em; }
-.atlasFigure figure { width: min(100%,560px); padding-block: 12px; }
-.atlasPlate { background: radial-gradient(ellipse at center,#ede8d9 0%,#f3efe3 72%); border: 1px solid #d9d3c3; }
-.atlasPlate svg { display: block; width: 100%; height: auto; }
-.atlasLegend { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding-top: 9px; color: #263a30; }
-.atlasLegend a { font: 12px var(--sans); text-transform: none; letter-spacing: 0; text-decoration: underline; text-underline-offset: 3px; }
-.atlas .comparison { font-size: 14px; }
-.waterLabels { font: italic 13px Georgia,serif; fill: #375d62; }
-.mapRegion { font: 8px Arial,sans-serif; fill: #676653; }
-.mapTown { cursor: pointer; fill: #263c33; }
-.mapTown text { font: 16.5px Georgia,serif; paint-order: stroke; stroke: #f1eddf; stroke-width: 4px; stroke-linejoin: round; }
-.mapTown[data-active=true] { fill: var(--atlas-copper); }
-.mapTown .halo { fill: transparent; stroke: transparent; }
-.mapTown[data-active=true] .halo { fill: #bd825329; stroke: var(--atlas-copper); stroke-width: 1; }
-.mapTown:hover .halo,.mapTown:focus-visible .halo { stroke: #513f2d; stroke-width: 2; }
-.mapTown:focus-visible { outline: none; }
+.cityList a:hover, .cityList a:focus-visible { text-decoration-line: underline; }
 @media (max-width:800px) {
   .atlasWindow { height: min(75svh, 38rem); }
   .atlasWindowPhoto img { object-position: 26% center; }
-  .atlasSheet { padding-block: 36px 32px; }
-  .atlasSpread { grid-template-columns: minmax(0, 1fr); grid-template-areas: "heading" "choices" "story"; }
-  .atlasHeader h2 { font-size: clamp(42px, 7vw, 62px); }
-  .atlasHeader h2 i { display: inline; }
-  .townChoices { gap: 0 16px; }
 }
-@media (max-width:550px) {
-  .atlasCompanion { grid-template-columns: minmax(0,1fr); gap: 0; }
-  .atlas .comparison { justify-self: start; }
+@media (max-width:700px) {
+  .atlasSheet { padding-block: 32px; }
+  .cityList { flex-direction: column; gap: .375rem; }
+  .cityList a { font-size: clamp(2.25rem, 8vw, 3rem); }
 }
 @media (prefers-reduced-motion:reduce) {
   .atlasWindowPhoto { position: absolute; }
-  .townChoices button::after { transition: none; }
 }
 .journal { padding: clamp(65px,7.5vw,128px) var(--gutter); max-width: 1800px; margin:0 auto; }
 .sectionTop { display:flex; justify-content: space-between; align-items:flex-end; gap:18px; margin-bottom: clamp(25px,3.4vw,57px); }
