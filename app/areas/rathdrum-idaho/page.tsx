@@ -94,8 +94,8 @@ export default function RathdrumAreaPage() {
           titleEm: 'Real Estate.',
           heroLead:
             'Median home: ~$520,000. Open Rathdrum Prairie views, newer construction communities, Twin Lakes proximity, and genuine elbow room in Kootenai County.',
-          heroImage: '/images/field-guide/lake-house-editorial-4k.webp',
-          heroAlt: 'North Idaho home surrounded by pines near Rathdrum',
+          heroImage: '/images/community-atlas/rathdrum-idaho.webp',
+          heroAlt: 'Rathdrum, Idaho',
           idxUrl,
           idxLabel: 'Search Rathdrum Homes',
           stats: [

@@ -153,11 +153,8 @@ export default function AreaGuideTemplate({ config }: { config: AreaGuideConfig 
           <div className="ed-hood-grid">
             {config.neighborhoods.map((h) => (
               <article key={h.name} className="ed-hood-card">
-                <div className="ed-hood-photo">
-                  <img src={h.img} alt={h.alt} loading="lazy" />
-                  <span className="ed-hood-tag">{h.tag}</span>
-                </div>
                 <div className="ed-hood-body">
+                  <p className="ed-card-kicker" style={{ marginBottom: '10px' }}>{h.tag}</p>
                   <h3>{h.name}</h3>
                   <p>{h.desc}</p>
                 </div>

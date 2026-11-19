@@ -94,8 +94,8 @@ export default function KootenaiCountyAreaPage() {
           titleEm: 'Real Estate.',
           heroLead:
             'Home to Coeur d’Alene, Post Falls, Hayden, Rathdrum, and Dalton Gardens. Understand county-wide pricing, property taxes, school districts, and how each city fits together.',
-          heroImage: '/images/lake-life.jpeg',
-          heroAlt: 'Summer boating and lakes in Kootenai County, Idaho',
+          heroImage: '/images/north-idaho-lake-hero.webp',
+          heroAlt: 'Kootenai County, North Idaho',
           idxUrl,
           idxLabel: 'Search Kootenai County Homes',
           stats: [

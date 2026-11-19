@@ -150,7 +150,7 @@ export default function CoeurDaleneAreaPage() {
 
       {/* Full-Bleed Lake Coeur d'Alene Hero */}
       <section className="ed-photo-hero is-tall" aria-labelledby="cda-title">
-        <img className="ed-photo-hero-img" src="/images/field-guide/sunset-over-the-lake.webp" alt="Golden hour over Lake Coeur d'Alene and surrounding pines" loading="eager" />
+        <img className="ed-photo-hero-img" src="/images/community-atlas/coeur-dalene-idaho.webp" alt="Coeur d'Alene, Idaho" loading="eager" />
         <div className="ed-photo-hero-scrim" aria-hidden="true" />
         <div className="ed-container ed-photo-hero-inner">
           <div style={{ maxWidth: '760px' }}>
@@ -272,11 +272,8 @@ export default function CoeurDaleneAreaPage() {
           <div className="ed-hood-grid">
             {NEIGHBORHOODS.map((h) => (
               <article key={h.n} className="ed-hood-card">
-                <div className="ed-hood-photo">
-                  <img src={h.img} alt={h.alt} loading="lazy" />
-                  <span className="ed-hood-tag">{h.tag}</span>
-                </div>
                 <div className="ed-hood-body">
+                  <p className="ed-card-kicker" style={{ marginBottom: '10px' }}>{h.tag}</p>
                   <h3>{h.n}</h3>
                   <p>{h.d}</p>
                 </div>

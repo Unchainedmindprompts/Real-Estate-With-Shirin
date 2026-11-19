@@ -98,8 +98,8 @@ export default function HaydenAreaPage() {
           titleEm: 'Real Estate.',
           heroLead:
             'Median home: ~$553,000. Larger lots, quieter residential streets, Hayden Lake access, and golf-course neighborhoods — just 10–15 minutes north of downtown Coeur d’Alene.',
-          heroImage: '/images/golf-4k.webp',
-          heroAlt: 'Tree-lined fairway and residential scenery in Hayden, Idaho',
+          heroImage: '/images/community-atlas/hayden-idaho.webp',
+          heroAlt: 'Hayden, Idaho',
           idxUrl,
           idxLabel: 'Search Hayden Homes',
           stats: [

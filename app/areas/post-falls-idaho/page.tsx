@@ -98,8 +98,8 @@ export default function PostFallsAreaPage() {
           titleEm: 'Real Estate.',
           heroLead:
             'Median home: ~$521,000. Newer construction, Spokane River access, ~40 inches of snow, and the fastest I-90 commute to Spokane — at roughly $80K below Coeur d’Alene.',
-          heroImage: '/images/field-guide/townhome-walk.webp',
-          heroAlt: 'Tree-lined residential neighborhood in Post Falls, Idaho',
+          heroImage: '/images/community-atlas/post-falls-idaho.webp',
+          heroAlt: 'Post Falls, Idaho',
           idxUrl,
           idxLabel: 'Search Post Falls Homes',
           stats: [

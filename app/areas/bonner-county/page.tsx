@@ -94,8 +94,8 @@ export default function BonnerCountyAreaPage() {
           titleEm: 'Real Estate.',
           heroLead:
             'Sandpoint, Ponderay, Sagle, Priest River, and Priest Lake. Quieter forests, big alpine lakes, more land per dollar, and a distinct rural buying checklist compared to Kootenai County.',
-          heroImage: '/images/field-guide/sunset-marina-clear-2048.webp',
-          heroAlt: 'Quiet evening reflection on water in Bonner County, Idaho',
+          heroImage: '/images/northern-idaho-hero.webp',
+          heroAlt: 'Bonner County, North Idaho',
           idxUrl,
           idxLabel: 'Search Bonner County Homes',
           stats: [

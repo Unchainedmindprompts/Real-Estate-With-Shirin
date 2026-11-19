@@ -94,8 +94,8 @@ export default function SandpointAreaPage() {
           titleEm: 'Real Estate.',
           heroLead:
             'Median home: ~$616,000. Lake Pend Oreille, Schweitzer Mountain skiing, an independent arts-forward downtown, and true four-season mountain living in Bonner County.',
-          heroImage: '/images/skiing-action-4k.webp',
-          heroAlt: 'Winter alpine skiing above Sandpoint and Schweitzer Mountain',
+          heroImage: '/images/community-atlas/sandpoint-idaho.webp',
+          heroAlt: 'Sandpoint, Idaho',
           idxUrl,
           idxLabel: 'Search Sandpoint Homes',
           stats: [
