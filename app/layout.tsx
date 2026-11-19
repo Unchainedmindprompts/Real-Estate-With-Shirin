@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import { riverfrontCard, shareImage } from '@/lib/hero-share'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
+  openGraph: { images: [shareImage(riverfrontCard)] },
   metadataBase: new URL('https://www.realestatewithshirin.com'),
   title: {
     default: 'Shirin Abplanalp | North Idaho REALTOR® | BHHS Jacklin',
@@ -29,7 +31,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col">
         <Navigation />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" tabIndex={-1} className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

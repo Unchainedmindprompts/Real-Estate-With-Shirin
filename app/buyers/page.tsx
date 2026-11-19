@@ -1,16 +1,14 @@
-import type { Metadata } from 'next'
+import { heroMetadata, lakeHouseCard } from '@/lib/hero-share'
 import Link from 'next/link'
-import Image from 'next/image'
+import PageHero from '@/components/PageHero'
 import { BASE_URL, BUSINESS_ID, WEBSITE_ID, MARKET_AREA_SERVED } from '@/lib/schema-ids'
 
-export const metadata: Metadata = {
-  title: 'Buying a Home in North Idaho | Shirin Abplanalp, REALTOR®',
-  description:
-    "Buying a home in Post Falls, Coeur d'Alene, or anywhere in North Idaho? A local REALTOR's honest read on neighborhoods, prices, and what actually matters.",
-  alternates: {
-    canonical: `${BASE_URL}/buyers`,
-  },
-}
+export const metadata = heroMetadata(
+  '/buyers',
+  'Buying a Home in North Idaho | Shirin Abplanalp, REALTOR®',
+  "Buying a home in Post Falls, Coeur d'Alene, or anywhere in North Idaho? A local REALTOR's honest read on neighborhoods, prices, and what actually matters.",
+  lakeHouseCard,
+)
 
 const jsonLdService = {
   '@context': 'https://schema.org',
@@ -129,38 +127,12 @@ export default function BuyersPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
 
-      {/* Hero */}
-      <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/north-idaho-lake-hero.webp"
-            alt="Lake Coeur d'Alene seaplane dock"
-            fill
-            priority
-            className="object-cover"
-            
-          />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(28,26,23,0.35), rgba(28,26,23,0.6))' }} />
-        </div>
-        <div className="relative z-10 text-center px-6 lg:px-8 py-20 max-w-4xl mx-auto">
-          <p className="eyebrow mb-4" style={{ color: '#C4842A' }}>BUYER REPRESENTATION</p>
-          <h1
-            className="mb-6"
-            style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 600,
-              fontSize: 'clamp(36px, 6vw, 56px)',
-              lineHeight: 1.1,
-              color: '#FAFAF8',
-            }}
-          >
-            Expert Buyer Representation in North Idaho
-          </h1>
-          <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '18px', lineHeight: 1.7, color: '#F5EFE6', maxWidth: '600px', margin: '0 auto' }}>
-            From your first question to closing day — Shirin guides buyers through the North Idaho market with local expertise and honest advice.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="BUYER REPRESENTATION"
+        title={<>Expert Buyer Representation in <i>North Idaho</i></>}
+      >
+        From your first question to closing day — Shirin guides buyers through the North Idaho market with local expertise and honest advice.
+      </PageHero>
 
       {/* Process Section */}
       <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>

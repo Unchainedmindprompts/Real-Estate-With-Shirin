@@ -1,16 +1,14 @@
-import type { Metadata } from 'next'
+import { heroMetadata, lakeHouseCard } from '@/lib/hero-share'
 import Link from 'next/link'
-import Image from 'next/image'
+import PageHero from '@/components/PageHero'
 import { BASE_URL, BUSINESS_ID, WEBSITE_ID, MARKET_AREA_SERVED } from '@/lib/schema-ids'
 
-export const metadata: Metadata = {
-  title: 'Selling Your North Idaho Home | Shirin Abplanalp, REALTOR®',
-  description:
-    "Selling a home in Post Falls, Coeur d'Alene, or anywhere in North Idaho? Strategic pricing, professional presentation, and an honest read on the market.",
-  alternates: {
-    canonical: `${BASE_URL}/sellers`,
-  },
-}
+export const metadata = heroMetadata(
+  '/sellers',
+  'Selling Your North Idaho Home | Shirin Abplanalp, REALTOR®',
+  "Selling a home in Post Falls, Coeur d'Alene, or anywhere in North Idaho? Strategic pricing, professional presentation, and an honest read on the market.",
+  lakeHouseCard,
+)
 
 const jsonLdService = {
   '@context': 'https://schema.org',
@@ -129,38 +127,12 @@ export default function SellersPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
 
-      {/* Hero */}
-      <section className="relative flex items-center justify-center" style={{ minHeight: '60vh' }}>
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/north-idaho-lake-hero.webp"
-            alt="Lake Coeur d'Alene seaplane dock"
-            fill
-            priority
-            className="object-cover"
-            
-          />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(28,26,23,0.35), rgba(28,26,23,0.6))' }} />
-        </div>
-        <div className="relative z-10 text-center px-6 lg:px-8 py-20 max-w-4xl mx-auto">
-          <p className="eyebrow mb-4" style={{ color: '#C4842A' }}>SELLER REPRESENTATION</p>
-          <h1
-            className="mb-6"
-            style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 600,
-              fontSize: 'clamp(36px, 6vw, 56px)',
-              lineHeight: 1.1,
-              color: '#FAFAF8',
-            }}
-          >
-            Sell Your North Idaho Home With Confidence
-          </h1>
-          <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '18px', lineHeight: 1.7, color: '#F5EFE6', maxWidth: '600px', margin: '0 auto' }}>
-            Strategic pricing, honest advice, and professional execution — from listing day to closing day.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="SELLER REPRESENTATION"
+        title={<>Sell Your North Idaho Home <i>With Confidence</i></>}
+      >
+        Strategic pricing, honest advice, and professional execution — from listing day to closing day.
+      </PageHero>
 
       {/* What I Provide */}
       <section className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>

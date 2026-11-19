@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    qualities: [75, 85],
+  },
   async redirects() {
     return [
       // Articles retired November 13, 2026 (content audit cleanup: 8 removed, 3 folded into parents)
