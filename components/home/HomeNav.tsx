@@ -7,17 +7,17 @@ import { KVCORE_BASE } from '@/lib/idx-search'
 import s from './Home.module.css'
 
 const links = [
-  ['Buy', '/buyers'], ['Sell', '/sellers'], ['Communities', '#communities'],
-  ['Meet Shirin', '#meet-shirin'], ['Articles', '/articles'],
+  ['Buy', '/buyers'], ['Sell', '/sellers'], ['Communities', '/#communities'],
+  ['Meet Shirin', '/#meet-shirin'], ['Articles', '/articles'],
 ]
 
-export default function HomeNav({ scrolled }: { scrolled: boolean }) {
+export default function HomeNav({ solid }: { solid: boolean }) {
   const [open, setOpen] = useState(false)
   const toggle = useRef<HTMLButtonElement>(null)
-  return <header className={s.nav} data-solid={scrolled || open} onKeyDown={event => {
+  return <header className={s.nav} data-solid={solid || open} onKeyDown={event => {
     if (event.key === 'Escape' && open) { setOpen(false); toggle.current?.focus() }
   }}>
-    <a className={s.skip} href="#home-content">Skip to content</a>
+    <a className={s.skip} href="#main-content">Skip to content</a>
     <nav className={s.navInner} aria-label="Main navigation">
       <Link href="/" aria-label="Real Estate With Shirin homepage" className={s.brand} onClick={() => setOpen(false)}>
         <Image src="/images/field-guide/monogram.png" width={55} height={43} alt="" />
