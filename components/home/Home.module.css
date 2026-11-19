@@ -215,10 +215,19 @@
  .weekend .railControls button { height: 44px; width: 44px; }
 }
 .reviews {
-  background: #203b33; color: #faf6e9;
-  padding: clamp(30px,3.1vw,55px) var(--gutter);
+  display: grid;
+  align-items: center;
+  min-height: max(24rem, 28.125vw);
+  padding: clamp(40px, 3.1vw, 64px) var(--gutter);
+  color: #faf6e9;
+  background-color: #103d30;
+  background-image:
+    linear-gradient(112deg, transparent 16%, rgb(191 223 200 / 3%) 33%, rgb(213 233 200 / 10%) 40%, transparent 52%),
+    radial-gradient(ellipse at 24% -20%, #397259 0%, transparent 59%),
+    linear-gradient(116deg, #0b362a 0%, #174e3a 40%, #103e30 70%, #082b23 100%);
+  box-shadow: inset 0 1px rgb(232 240 210 / 24%), inset 0 -1px rgb(1 20 14 / 50%);
 }
-.reviewBody { max-width: 920px; margin-inline: auto; }
+.reviewBody { width: 100%; max-width: 920px; margin-inline: auto; }
 .reviewBody .kicker { color: #e2c397; gap: 11px; font-size: 12px; }
 .quotation { height: 23px; font: 52px/.94 Georgia,serif; color: #d4ad77; }
 .reviewBody blockquote {
