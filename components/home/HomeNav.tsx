@@ -30,7 +30,8 @@ export default function HomeNav({ solid }: { solid: boolean }) {
       </button>
     </nav>
     <div id="home-menu" hidden={!open} className={s.drawer}>
-      {[...links, ['Search homes', KVCORE_BASE], ['Contact Shirin','/contact']].map(([label, href]) => <Link key={href} href={href} onClick={() => setOpen(false)}>{label}<span aria-hidden="true">↗</span></Link>)}
+      {[...links, ['Search homes', KVCORE_BASE]].map(([label, href]) => <Link key={href} href={href} onClick={() => setOpen(false)}>{label}<span aria-hidden="true">↗</span></Link>)}
+      <Link href="/contact" className={s.drawerContact} onClick={() => setOpen(false)}>Contact Shirin</Link>
     </div>
   </header>
 }
