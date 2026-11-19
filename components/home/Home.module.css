@@ -189,6 +189,8 @@
   .leadPhoto { aspect-ratio: 1.55; }
   .leadStory .kicker { margin-top: 16px; }
 }
+.railControls button { border-color: #859080; color: var(--pine); }
+.railControls button:disabled { opacity:.3; cursor:default; }
 .weekend { padding-top: clamp(65px,7.5vw,128px); }
 .weekendHeader { max-width: 1800px; margin: 0 auto; padding: 0 var(--gutter) clamp(26px,3vw,48px); }
 .weekendHeader h2 { margin-top: 17px; }
