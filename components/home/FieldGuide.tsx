@@ -8,8 +8,9 @@ import { KVCORE_BASE } from '@/lib/idx-search'
 import s from './Home.module.css'
 
 const guides = [
-  { href: '/articles/north-idaho-to-spokane-commute-times', title: 'The commute to Spokane' },
-  { href: '/articles/selling-a-home-north-idaho-what-your-home-is-worth', title: 'What is your home worth?' },
+  { href: '/relocating-to-north-idaho', category: 'Relocation', title: 'Moving to North Idaho' },
+  { href: '/articles/north-idaho-to-spokane-commute-times', category: 'Daily life', title: 'The commute to Spokane' },
+  { href: '/articles/selling-a-home-north-idaho-what-your-home-is-worth', category: 'For sellers', title: 'What is your home worth?' },
 ]
 
 export default function FieldGuide({ reviews }: { reviews: { name:string; context:string; quote:string }[] }) {
@@ -67,31 +68,21 @@ export default function FieldGuide({ reviews }: { reviews: { name:string; contex
     <TownAtlas/>
     <section className={s.journal} id="field-notes" aria-labelledby="notes-heading">
       <div className={s.journalInner}>
-        <div className={s.journalSpread}>
-          <header className={s.journalTitle}>
-            <p className={s.kicker}><span className={s.shortRule}/>Shirin’s guides</p>
-            <h2 id="notes-heading">Field <i>notes.</i></h2>
-            <Link className={s.archiveLink} href="/articles">All articles</Link>
-          </header>
-          <article className={s.leadStory}>
-            <Link href="/relocating-to-north-idaho" aria-labelledby="relocation-title">
-              <div className={s.leadPhoto}>
-                <Image src="/images/north-idaho-neighborhood.png"
-                  alt="A residential street descends past timber homes toward sunlit foothills"
-                  fill sizes="(max-width: 720px) 90vw, (max-width: 1660px) 52vw, 850px" quality={85}/>
-              </div>
-              <p className={s.kicker}>Relocation</p>
-              <h3 id="relocation-title">Moving to North Idaho</h3>
-            </Link>
-          </article>
-        </div>
+        <header className={s.journalTitle}>
+          <p className={s.kicker}>Shirin’s guides</p>
+          <h2 id="notes-heading">Field <i>notes.</i></h2>
+        </header>
         <ul className={s.journalLinks}>
-          {guides.map(({ href, title }) => (
+          {guides.map(({ href, category, title }) => (
             <li key={href}>
-              <Link href={href}>{title}<span aria-hidden="true">↗</span></Link>
+              <Link href={href}>
+                <span className={s.kicker}>{category}</span>
+                <span className={s.guideTitle}>{title}</span>
+              </Link>
             </li>
           ))}
         </ul>
+        <Link className={s.archiveLink} href="/articles">All articles</Link>
       </div>
     </section>
     <Weekend/>
