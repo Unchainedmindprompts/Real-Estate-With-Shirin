@@ -60,6 +60,37 @@ export default function FieldGuide({ reviews }: { reviews: { name:string; contex
     </div>
     <Reviews reviews={reviews}/>
     <TownAtlas/>
+    <section className={s.dispatch} id="start-here" aria-label="Search homes, buying, and selling">
+      <div className={s.dispatchInner}>
+        <p className={s.kicker}><span className={s.shortRule}/>Where to start</p>
+        <div className={s.dispatchGrid}>
+          <article className={s.dispatchCol}>
+            <p className={s.dispatchTag}><span>01</span>Search the MLS</p>
+            <h3>See what’s<br/><i>on the market.</i></h3>
+            <p>Browse live listings across Coeur d’Alene, Post Falls, Hayden, Rathdrum, and Sandpoint — updated directly from the MLS.</p>
+            <a className={s.dispatchLink} href={KVCORE_BASE} target="_blank" rel="noopener noreferrer">
+              Search North Idaho homes <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+          <article className={s.dispatchCol}>
+            <p className={s.dispatchTag}><span>02</span>Buying &amp; relocation</p>
+            <h3>Narrow it to<br/><i>the right town.</i></h3>
+            <p>Winter roads, wells vs. city water, school boundaries, and honest video walkthroughs when you’re shopping from out of state.</p>
+            <Link className={s.dispatchLink} href="/buyers">
+              Buying with Shirin <span aria-hidden="true">→</span>
+            </Link>
+          </article>
+          <article className={s.dispatchCol}>
+            <p className={s.dispatchTag}><span>03</span>Selling your home</p>
+            <h3>Know where<br/><i>your home stands.</i></h3>
+            <p>Current neighborhood comps, which prep projects actually pay back, and a pricing plan built around your timing.</p>
+            <Link className={s.dispatchLink} href="/sellers">
+              Selling with Shirin <span aria-hidden="true">→</span>
+            </Link>
+          </article>
+        </div>
+      </div>
+    </section>
     <Weekend/>
     <section className={s.contact} id="get-in-touch" aria-labelledby="contact-title"><div className={s.contactPhoto}><Image src="/images/field-guide/sunset-over-the-lake.webp" fill sizes="100vw" alt=""/></div>
       <div className={s.contactInner}><p className={s.kicker}><span className={s.shortRule}/>Get in touch</p><h2 id="contact-title">Let’s talk about<br/><i>your move.</i></h2>
