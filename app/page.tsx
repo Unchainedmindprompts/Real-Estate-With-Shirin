@@ -1,4 +1,5 @@
 import { heroMetadata, riverfrontCard } from '@/lib/hero-share'
+import { KVCORE_BASE } from '@/lib/idx-search'
 import FieldGuide from '@/components/home/FieldGuide'
 import {
   BASE_URL,
@@ -167,6 +168,7 @@ export default function HomePage() {
             affiliation: { '@id': BUSINESS_ID },
             sameAs: [
               'https://www.jacklinrealestate.com/agents/2081255/Shirin+Abplanalp',
+              `${KVCORE_BASE}/`,
               'https://www.zillow.com/profile/dreamlifeinidaho',
               'https://www.realtor.com/realestateagents/6852257644eab0a63cfd80af',
               'https://www.homes.com/real-estate-agents/shirin-abplanalp/j7j2jr7/',
