@@ -41,8 +41,8 @@ export default function LakesideOpening() {
       if (!active || !preference.matches || glide.current) return
       const animation = photo.animate([
         { transform: 'translate3d(0, 0, 0) scale(1)' },
-        { transform: 'translate3d(3.4%, 0, 0) scale(1.1)' },
-      ], { duration: 10000, easing: 'cubic-bezier(.25,.52,.38,1)', fill: 'forwards' })
+        { transform: 'translate3d(4%, 0, 0) scale(1.11)' },
+      ], { duration: 10000, easing: 'cubic-bezier(.12,.14,.85,.98)', fill: 'forwards' })
       glide.current = animation
       animation.onfinish = () => setPlayback('ended')
       setPlayback('playing')
