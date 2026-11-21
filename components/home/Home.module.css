@@ -140,12 +140,17 @@
   .atlasWindowPhoto { position: absolute; }
 }
 .dispatch {
+  position: relative;
+  isolation: isolate;
   color: #faf6e9;
-  background-color: #163329;
+  background-color: #103d30;
   background-image:
-    radial-gradient(ellipse at 78% 0%, rgb(57 114 89 / 28%) 0%, transparent 58%),
-    linear-gradient(125deg, #122d24 0%, #1c3d32 52%, #132c24 100%);
-  box-shadow: inset 0 1px rgb(232 240 210 / 22%), inset 0 -1px rgb(10 26 20 / 45%);
+    linear-gradient(114deg, transparent 14%, rgb(206 238 216 / 4%) 29%, rgb(225 247 230 / 13%) 35.5%, rgb(206 238 216 / 3%) 41%, transparent 52%),
+    linear-gradient(114deg, transparent 58%, rgb(213 239 220 / 6%) 66%, transparent 74%),
+    radial-gradient(ellipse 65% 75% at 18% -15%, rgb(66 134 104 / 62%) 0%, transparent 62%),
+    radial-gradient(ellipse 55% 65% at 86% 115%, rgb(48 112 85 / 42%) 0%, transparent 60%),
+    linear-gradient(118deg, #0a3428 0%, #174e3a 38%, #103e30 68%, #072820 100%);
+  box-shadow: inset 0 1px 0 rgb(232 246 234 / 30%), inset 0 -1px 0 rgb(2 18 13 / 58%);
 }
 .dispatchInner {
   max-width: 1800px;
@@ -154,32 +159,55 @@
 }
 .dispatchInner > .kicker {
   color: #e2c397;
-  padding-bottom: clamp(22px, 2.4vw, 34px);
-  border-bottom: 1px solid rgb(246 241 229 / 18%);
+  margin-bottom: clamp(24px, 2.6vw, 36px);
 }
 .dispatchGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 1.8vw, 26px);
 }
 .dispatchCol {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: clamp(28px, 3vw, 44px) clamp(24px, 3vw, 48px) 4px;
+  padding: clamp(28px, 2.9vw, 42px) clamp(24px, 2.6vw, 38px);
+  background: linear-gradient(145deg, rgb(226 246 233 / 10%) 0%, rgb(195 230 210 / 4%) 48%, rgb(6 28 21 / 26%) 100%);
+  backdrop-filter: blur(12px) saturate(130%);
+  -webkit-backdrop-filter: blur(12px) saturate(130%);
+  border: 1px solid rgb(216 240 222 / 18%);
+  border-top-color: rgb(236 250 239 / 34%);
+  border-left-color: rgb(228 246 232 / 26%);
+  box-shadow: inset 0 1px 0 rgb(245 253 247 / 18%), 0 18px 38px -20px rgb(2 14 10 / 62%);
+  transition: border-color .28s ease, background .28s ease, transform .28s ease;
 }
-.dispatchCol:first-child { padding-left: 0; }
-.dispatchCol:last-child { padding-right: 0; }
-.dispatchCol + .dispatchCol {
-  border-left: 1px solid rgb(246 241 229 / 16%);
+.dispatchCol::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(118deg, rgb(236 252 240 / 11%) 0%, rgb(236 252 240 / 3%) 28%, transparent 54%);
+  opacity: .75;
+  transition: opacity .28s ease;
+}
+.dispatchCol:hover {
+  border-color: rgb(232 248 235 / 36%);
+  border-top-color: rgb(244 253 246 / 50%);
+  transform: translateY(-2px);
+}
+.dispatchCol:hover::before {
+  opacity: 1;
 }
 .dispatchTag {
+  position: relative;
   display: flex;
   align-items: baseline;
   gap: 11px;
   font: 600 10px/1.4 var(--sans);
   letter-spacing: .17em;
   text-transform: uppercase;
-  color: #dfc096;
+  color: #e2c397;
 }
 .dispatchTag span {
   font: italic 400 17px/1 Georgia, 'Times New Roman', serif;
@@ -187,8 +215,9 @@
   color: #f5d8ac;
 }
 .dispatchCol h3 {
+  position: relative;
   margin: 16px 0 14px;
-  font-size: clamp(32px, 2.85vw, 48px);
+  font-size: clamp(32px, 2.75vw, 46px);
   line-height: 1.02;
   letter-spacing: -.042em;
   color: #fffcf4;
@@ -201,18 +230,20 @@
   color: #f5d8ac;
 }
 .dispatchCol > p:not(.dispatchTag) {
+  position: relative;
   max-width: 35ch;
   margin-bottom: clamp(24px, 2.6vw, 34px);
   font: 400 14.5px/1.72 var(--sans);
-  color: rgb(244 241 232 / 80%);
+  color: rgb(242 246 240 / 84%);
 }
 .dispatchLink {
+  position: relative;
   margin-top: auto;
   display: inline-flex;
   align-items: center;
   gap: 12px;
   padding: 6px 0;
-  border-bottom: 1px solid rgb(226 195 151 / 55%);
+  border-bottom: 1px solid rgb(226 195 151 / 58%);
   font: 600 12px/1.35 var(--sans);
   letter-spacing: .045em;
   color: #fff9ec;
@@ -231,18 +262,13 @@
   transform: translateX(3px);
 }
 @media (max-width: 960px) {
-  .dispatchGrid { grid-template-columns: 1fr; }
-  .dispatchCol,
-  .dispatchCol:first-child,
-  .dispatchCol:last-child {
-    padding: 28px 0;
-  }
-  .dispatchCol:last-child { padding-bottom: 4px; }
-  .dispatchCol + .dispatchCol {
-    border-left: 0;
-    border-top: 1px solid rgb(246 241 229 / 16%);
-  }
+  .dispatchGrid { grid-template-columns: 1fr; gap: 16px; }
+  .dispatchCol { padding: 26px 22px; }
   .dispatchCol > p:not(.dispatchTag) { max-width: 52ch; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dispatchCol, .dispatchCol::before, .dispatchLink span { transition: none; }
+  .dispatchCol:hover { transform: none; }
 }
 .railControls button { border-color: #859080; color: var(--pine); }
 .railControls button:disabled { opacity:.3; cursor:default; }
