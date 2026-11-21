@@ -17,7 +17,7 @@ const cities = [
 ]
 
 export default function TownAtlas() {
-  return <section className={s.atlas} aria-label="North Idaho communities">
+  return <section className={s.atlas} aria-labelledby="communities-heading">
     <div className={s.atlasWindow}>
       <div className={s.atlasWindowPhoto}>
         <picture>
@@ -36,6 +36,23 @@ export default function TownAtlas() {
             alt="Sunset over the lake and mountains, with golden lights tracing the marina docks"
             fill unoptimized loading="eager" fetchPriority="low" />
         </picture>
+      </div>
+      <div className={s.atlasScrim} aria-hidden="true" />
+      <div className={s.atlasOverlay}>
+        <div className={s.atlasIntro}>
+          <p className={s.kicker}><span className={s.shortRule}/>North Idaho communities</p>
+          <h2 id="communities-heading">Five towns,<br/><i>five different paces.</i></h2>
+          <p className={s.atlasLead}>
+            From walkable lakefront blocks in Coeur d’Alene to open acreage on the Prairie and mountain mornings in Sandpoint.
+          </p>
+          <Link className={s.atlasGuideLink} href="/areas">
+            Compare all communities <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+        <p className={s.atlasCaption}>
+          <span className={s.sceneLine} aria-hidden="true" />
+          Lake Coeur d’Alene at dusk
+        </p>
       </div>
     </div>
     <nav id="communities" className={s.atlasSheet} aria-label="City guides">

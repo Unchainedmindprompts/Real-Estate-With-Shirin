@@ -90,7 +90,12 @@
   background: #343e46;
 }
 /* Leave a clear view of the fixed photo before the translucent sheet arrives. */
-.atlasWindow { height: min(100svh, max(36rem, 52.54vw)); }
+.atlasWindow {
+  position: relative;
+  min-height: min(84svh, max(36rem, 49vw));
+  display: flex;
+  flex-direction: column;
+}
 .atlasWindowPhoto {
   position: fixed;
   inset: 0;
@@ -99,6 +104,86 @@
   background: #343e46 url('data:image/jpeg;base64,/9j/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAZADADASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAABQIDBAYB/8QAKxAAAgECBQIDCQAAAAAAAAAAAQIDABEEBRIhUTGBExSRIiQyNEFCYXHB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/8QAGhEAAgMBAQAAAAAAAAAAAAAAAAECIUERUf/aAAwDAQACEQMRAD8AXllw8RbwkAPNYJ38VtVhXO4jG5jA+lnD86N6lBmWLcDSy34JFUUlpDouV2t6V6sBYgsT2ozzWZFPYhQ/kEGojF5uv2X9KbwaH4cvV9zdhwdq1x4MILKVTvXL+dzY393vWaXOcwgOmWHSeu4NYak9Kg7ESticWWeyjfcGpxJE27Xa56q1VT/w1VD9KJLoxYzh5IogVXXsb7NWk5jGFJJYCh8L0NWt8B/dST9FteCsecwqwOqS3FqqxecxTQyRhS7EW1EAGjo+veoL83J3rXLMn//Z') center / cover no-repeat;
 }
 .atlasWindowPhoto img { object-fit: cover; object-position: center; }
+.atlasScrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 64% 66% at 78% 26%, rgb(14 23 31 / 62%) 0%, rgb(14 23 31 / 32%) 52%, transparent 82%),
+    radial-gradient(ellipse 42% 28% at 88% 92%, rgb(12 20 26 / 54%) 0%, transparent 76%),
+    linear-gradient(180deg, rgb(14 23 31 / 28%) 0%, transparent 24%);
+}
+.atlasOverlay {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: clamp(54px, 7svh, 92px) var(--gutter) clamp(24px, 3.4svh, 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #faf7f0;
+}
+.atlasIntro {
+  margin-left: auto;
+  max-width: 520px;
+}
+.atlasIntro .kicker {
+  color: #f3d9b1;
+}
+.atlasIntro h2 {
+  margin: 14px 0 14px;
+  font-size: clamp(44px, 4.7vw, 76px);
+  line-height: .97;
+  letter-spacing: -.048em;
+  color: #fffcf5;
+  text-shadow: 0 2px 26px rgb(10 18 24 / 45%);
+}
+.atlasIntro h2 i {
+  color: #f6e2be;
+}
+.atlasLead {
+  max-width: 40ch;
+  font: 400 clamp(14.5px, 1.08vw, 17px)/1.68 var(--sans);
+  color: rgb(248 245 237 / 90%);
+  text-shadow: 0 1px 18px rgb(10 18 24 / 48%);
+}
+.atlasGuideLink {
+  margin-top: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  padding: 5px 0;
+  border-bottom: 1px solid rgb(243 217 177 / 62%);
+  font: 600 12px/1.35 var(--sans);
+  letter-spacing: .045em;
+  color: #fff9ec;
+  text-shadow: 0 1px 14px rgb(10 18 24 / 45%);
+  transition: border-color .2s, color .2s;
+}
+.atlasGuideLink span {
+  font: 400 16px/1 Arial, sans-serif;
+  color: #f3d9b1;
+  transition: transform .2s ease;
+}
+.atlasGuideLink:hover {
+  border-color: #fff9ec;
+  color: #ffffff;
+}
+.atlasGuideLink:hover span {
+  transform: translateX(3px);
+}
+.atlasCaption {
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font: italic 18px/1.2 var(--serif);
+  color: rgb(250 247 240 / 90%);
+  text-shadow: 0 1px 16px rgb(8 15 20 / 60%);
+}
 .atlasSheet {
   position: relative;
   padding: clamp(8rem, 22svh, 15rem) var(--gutter);
@@ -127,9 +212,16 @@
 }
 .cityList a:hover, .cityList a:focus-visible { text-decoration-line: underline; }
 @media (max-width:800px) {
-  .atlasWindow { height: min(75svh, 38rem); }
+  .atlasWindow { min-height: min(76svh, 38rem); }
   .atlasWindowPhoto { background-position: 26% center; }
   .atlasWindowPhoto img { object-position: 26% center; }
+  .atlasScrim {
+    background:
+      linear-gradient(180deg, rgb(13 22 29 / 68%) 0%, rgb(13 22 29 / 38%) 48%, transparent 78%),
+      radial-gradient(ellipse 65% 28% at 80% 94%, rgb(10 18 24 / 52%) 0%, transparent 78%);
+  }
+  .atlasIntro { margin-left: 0; max-width: 38ch; }
+  .atlasCaption { font-size: 15px; }
 }
 @media (max-width:700px) {
   .atlasSheet { padding-block: clamp(3.5rem, 9svh, 6rem); }
