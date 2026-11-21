@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
@@ -226,11 +227,11 @@ export default function BuyingFromOutOfStatePage() {
             You can buy a North Idaho home before you ever move here &mdash; the tours, the offer, even the closing can happen from your living room. The catch is everything the listing photos won&rsquo;t show you. Here&rsquo;s the honest, step-by-step version.
           </p>
           <div className="flex items-center gap-4">
-            <img
+            <Image
               src="/images/shirin-headshot-studio.webp"
               alt="Shirin Abplanalp, Licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate"
               className="w-10 h-10 rounded-full object-cover"
-            />
+            width={40} height={40} sizes="40px" />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
               <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · SRES® · Berkshire Hathaway HomeServices Jacklin Real Estate · July 18, 2026</p>
@@ -240,11 +241,11 @@ export default function BuyingFromOutOfStatePage() {
       </section>
 
       {/* Hero Image — shares the same asset as og:image and Article.image via HERO_IMAGE */}
-      <img
+      <Image
         src="/images/couple-craftsman-home.png"
         alt="A couple outside a craftsman-style North Idaho home"
         className="w-full h-auto block"
-      />
+      width={1672} height={941} sizes="100vw" preload />
 
       {/* Article Body */}
       <section className="bg-[#FAFAF8] py-16">

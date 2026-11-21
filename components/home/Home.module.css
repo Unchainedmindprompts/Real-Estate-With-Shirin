@@ -42,7 +42,7 @@
 .scene { overflow: hidden; opacity: 0; transition: opacity .75s ease-in-out; }
 .scene[data-active=true] { opacity: 1; }
 .scene img { object-fit: cover; object-position: center 54%; }
-.scene:first-child img { object-position: 64% 59%; }
+.scene:first-child img { object-position: 64% 59%; will-change: transform; }
 .scrim { background: linear-gradient(180deg,rgba(13,23,28,.53),transparent 25%,transparent 70%,rgba(13,24,26,.53)),linear-gradient(90deg,rgba(15,27,29,.36),transparent 73%); }
 .opening[data-waterfront=true] .scrim { background: linear-gradient(180deg,#10202791,transparent 21%,transparent 73%,#10202780),radial-gradient(ellipse 75% 48% at left bottom,#0e1c22df,#0e1c227a 50%,transparent); }
 .heroInner { width: 100%; max-width: 2000px; margin: auto; padding: 100px var(--gutter) 0; display: flex; flex-direction: column; justify-content: flex-end; min-height: clamp(580px,85svh,960px); }

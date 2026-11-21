@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import Link from 'next/link'
@@ -289,11 +290,11 @@ export default function BuyNowOrWaitNorthIdahoPage() {
             A practical August 2026 guide to buying a home in North Idaho: mortgage rates, affordability, seller negotiation, new construction, builder incentives, acreage, and where your budget goes furthest.
           </p>
           <div className="flex items-center gap-4">
-            <img
+            <Image
               src="/images/shirin-headshot-studio.webp"
               alt="Shirin Abplanalp, licensed realtor at Berkshire Hathaway HomeServices Jacklin Real Estate"
               className="w-10 h-10 rounded-full object-cover"
-            />
+            width={40} height={40} sizes="40px" />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
               <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · Idaho License #1371861</p>
@@ -303,11 +304,11 @@ export default function BuyNowOrWaitNorthIdahoPage() {
         </div>
       </section>
       <div className="border-t border-[#E8DDD0]" />
-      <img
+      <Image
         src={`/images/${SLUG}.png`}
         alt="A couple reviewing paperwork with their REALTOR at a kitchen island in a North Idaho home overlooking the lake"
         className="w-full h-auto block"
-      />
+      width={1672} height={941} sizes="100vw" preload />
       <section className="bg-[#1C1A17] py-8">
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -802,11 +803,11 @@ export default function BuyNowOrWaitNorthIdahoPage() {
               <div className="bg-[#1C1A17] rounded-sm p-8 mt-4">
                 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">From Shirin</p>
                 <div className="flex items-start gap-5 mb-6">
-                  <img
+                  <Image
                     src="/images/shirin-headshot-studio.webp"
                     alt="Shirin Abplanalp"
                     className="w-14 h-14 rounded-full object-cover flex-shrink-0"
-                  />
+                  width={56} height={56} sizes="56px" />
                   <div>
                     <p className="font-cormorant text-2xl text-[#F5EFE6] font-semibold mb-1">Shirin Abplanalp</p>
                     <p className="font-dm-sans text-sm text-[#9A9590]">REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate</p>
@@ -853,7 +854,7 @@ export default function BuyNowOrWaitNorthIdahoPage() {
                 </div>
                 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
                   <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Local Advisor</p>
-                  <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" />
+                  <Image src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" width={64} height={64} sizes="64px" />
                   <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
                   <p className="font-dm-sans text-xs text-[#9A9590] mb-4">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · #1371861</p>
                   <a href="/contact" className="block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white font-dm-sans font-semibold text-sm py-3 px-4 transition-colors">

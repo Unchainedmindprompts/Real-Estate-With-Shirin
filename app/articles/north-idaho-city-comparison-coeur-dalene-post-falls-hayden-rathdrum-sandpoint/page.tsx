@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
@@ -237,11 +238,11 @@ export default function CityComparisonArticlePage() {
             Five North Idaho cities, one honest comparison — home prices, schools, commutes, snow, taxes, and the things people only tell you after closing.
           </p>
           <div className="flex items-center gap-4">
-            <img
+            <Image
               src="/images/shirin-headshot-studio.webp"
               alt="Shirin Abplanalp, Licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate"
               className="w-10 h-10 rounded-full object-cover"
-            />
+            width={40} height={40} sizes="40px" />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
               <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · Published May 23, 2026 · Commute update October 1, 2026</p>
@@ -266,11 +267,11 @@ export default function CityComparisonArticlePage() {
       </section>
 
       {/* Hero Image */}
-      <img
+      <Image
         src="/images/north-idaho-city-comparison.png"
         alt="Aerial comparison of five North Idaho cities — Coeur d'Alene, Post Falls, Hayden, Rathdrum, and Sandpoint"
         className="w-full h-auto block"
-      />
+      width={1672} height={941} sizes="100vw" preload />
 
       {/* Article Body */}
       <section className="bg-[#FAFAF8] py-16">
@@ -625,7 +626,7 @@ export default function CityComparisonArticlePage() {
                 {/* About Shirin */}
                 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
                   <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Local Agent</p>
-                  <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp, Licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate" className="w-16 h-16 rounded-full object-cover mb-3" />
+                  <Image src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp, Licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate" className="w-16 h-16 rounded-full object-cover mb-3" width={64} height={64} sizes="64px" />
                   <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
                   <p className="font-dm-sans text-xs text-[#9A9590] mb-3">Licensed REALTOR® · SRES® · Berkshire Hathaway HomeServices Jacklin Real Estate · #1371861</p>
                   <p className="font-dm-sans text-xs text-[#5C5650] leading-relaxed">

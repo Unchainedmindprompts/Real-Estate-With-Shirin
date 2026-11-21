@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
@@ -318,11 +319,11 @@ export default function SnowestCitiesArticlePage() {
             North Idaho gets lumped together as one winter. It isn&apos;t. Post Falls averages 40 inches a year. Priest Lake averages 120. This is the town-by-town ranking — with real estate implications at every level. (For more on the lowest-snow town in the ranking, see <a href="/areas/post-falls-idaho" className="text-[#C4842A] hover:underline">the Post Falls living guide</a>.)
           </p>
           <div className="flex items-center gap-4">
-            <img
+            <Image
               src="/images/shirin-headshot-studio.webp"
               alt="Shirin Abplanalp, Licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate"
               className="w-10 h-10 rounded-full object-cover"
-            />
+            width={40} height={40} sizes="40px" />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
               <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · May 27, 2026</p>
@@ -361,12 +362,12 @@ export default function SnowestCitiesArticlePage() {
 
       {/* Hero Image */}
       <div className="w-full overflow-hidden" style={{ maxHeight: '520px' }}>
-        <img
+        <Image
           src="/images/north-idaho-snowfall-ranking.webp"
           alt="North Idaho winter landscape showing snowfall variation across towns from the Rathdrum Prairie to the Priest Lake area"
           className="w-full object-cover object-center"
           style={{ maxHeight: '520px' }}
-        />
+        width={1672} height={941} sizes="100vw" preload />
       </div>
 
       {/* Article Body */}
@@ -702,7 +703,7 @@ export default function SnowestCitiesArticlePage() {
                 {/* About Shirin */}
                 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
                   <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Local Agent</p>
-                  <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp, Licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate" className="w-16 h-16 rounded-full object-cover mb-3" />
+                  <Image src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp, Licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate" className="w-16 h-16 rounded-full object-cover mb-3" width={64} height={64} sizes="64px" />
                   <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
                   <p className="font-dm-sans text-xs text-[#9A9590] mb-3">Licensed REALTOR® · SRES® · Berkshire Hathaway HomeServices Jacklin Real Estate · #1371861</p>
                   <p className="font-dm-sans text-xs text-[#5C5650] leading-relaxed mb-4">

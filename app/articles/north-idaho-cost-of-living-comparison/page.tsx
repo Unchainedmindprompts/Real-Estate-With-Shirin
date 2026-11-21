@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AGENT_AUTHOR_STUB, AGENT_NAME, BASE_URL, BRAND_PUBLISHER_STUB, EMAIL, PHONE, PHONE_DISPLAY, placeStub } from '@/lib/schema-ids'
@@ -134,7 +135,7 @@ export default function CostOfLivingArticlePage() {
             The most useful cost-of-living comparison starts with the home you would actually buy. Mortgage terms, parcel taxes, insurance, and your daily driving can change the answer more than a citywide average.
           </p>
           <div className="flex items-center gap-4">
-            <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp, licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate" className="w-10 h-10 rounded-full object-cover" />
+            <Image src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp, licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate" className="w-10 h-10 rounded-full object-cover" width={40} height={40} sizes="40px" />
             <div><p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p><p className="font-dm-sans text-xs text-[#5C5650]">Licensed REALTOR® · SRES® · Berkshire Hathaway HomeServices Jacklin Real Estate</p></div>
           </div>
         </div>
@@ -145,7 +146,7 @@ export default function CostOfLivingArticlePage() {
           {['The actual home', 'Written cost estimates', 'Your weekly routine', 'Cash after closing'].map((item) => <p key={item} className="text-center font-cormorant text-2xl text-[#C4842A] font-semibold">{item}</p>)}
         </div>
       </section>
-      <div className="w-full overflow-hidden"><img src="/images/north-idaho-lake-hero.webp" alt="A home overlooking a lake and wooded mountains at sunset" className="w-full max-h-[520px] object-cover" /></div>
+      <div className="w-full overflow-hidden"><Image src="/images/north-idaho-lake-hero.webp" alt="A home overlooking a lake and wooded mountains at sunset" className="w-full max-h-[520px] object-cover" width={1672} height={941} sizes="100vw" preload /></div>
 
       <section className="bg-[#FAFAF8] py-16">
         <div className="max-w-5xl mx-auto px-6 lg:grid lg:grid-cols-3 lg:gap-12">
@@ -229,7 +230,7 @@ export default function CostOfLivingArticlePage() {
               </div>
               <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
                 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#96601A] mb-4">Your local agent</p>
-                <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" />
+                <Image src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" width={64} height={64} sizes="64px" />
                 <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
                 <p className="font-dm-sans text-xs text-[#5C5650] mb-3">Licensed REALTOR® · SRES® · Berkshire Hathaway HomeServices Jacklin Real Estate · #1371861</p>
                 <p className="font-dm-sans text-sm text-[#5C5650] leading-relaxed mb-4">Have a North Idaho home in mind? I can help you gather the property information and identify questions for your lender, insurer, and county assessor.</p>

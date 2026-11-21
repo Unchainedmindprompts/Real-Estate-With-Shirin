@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { BASE_URL, WEBSITE_ID, AGENT_AUTHOR_STUB } from '@/lib/schema-ids'
 
@@ -65,7 +66,7 @@ export default function AboutPage() {
 
           <aside className="ed-portrait-card" aria-label="Portrait of Shirin Abplanalp">
             <div className="ed-portrait-frame">
-              <img src="/images/shirin-portrait-2026.png" alt="Shirin Abplanalp, North Idaho real estate advisor" loading="eager" />
+              <Image src="/images/shirin-portrait-2026.png" alt="Shirin Abplanalp, North Idaho real estate advisor" fill sizes="(max-width: 960px) 320px, 380px" preload />
             </div>
             <div className="ed-portrait-caption">
               <div>
@@ -129,8 +130,12 @@ export default function AboutPage() {
 
           <aside style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
-              <img src="/images/lake-life.jpeg" alt="Summer on Lake Coeur d'Alene" loading="lazy" style={{ width: '100%', aspectRatio: '4 / 5', objectFit: 'cover', border: '1px solid var(--hairline)' }} />
-              <img src="/images/skiing-action-4k.webp" alt="Winter alpine skiing in North Idaho" loading="lazy" style={{ width: '100%', aspectRatio: '4 / 5', objectFit: 'cover', border: '1px solid var(--hairline)' }} />
+              <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 5', overflow: 'hidden', border: '1px solid var(--hairline)' }}>
+                <Image src="/images/lake-life.jpeg" alt="Summer on Lake Coeur d'Alene" fill sizes="(max-width: 960px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
+              </div>
+              <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 5', overflow: 'hidden', border: '1px solid var(--hairline)' }}>
+                <Image src="/images/skiing-action-4k.webp" alt="Winter alpine skiing in North Idaho" fill sizes="(max-width: 960px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
+              </div>
             </div>
 
             <div style={{ background: 'var(--alabaster-card)', border: '1px solid var(--hairline)', padding: '28px 28px 24px' }}>
@@ -215,7 +220,7 @@ export default function AboutPage() {
 
       {/* Sunset Closing Band */}
       <section className="ed-closing-band" aria-labelledby="about-closing-title">
-        <img className="ed-closing-photo" src="/images/field-guide/sunset-marina-clear-2048.webp" alt="Calm sunset reflection over Lake Coeur d'Alene" loading="lazy" />
+        <Image className="ed-closing-photo" src="/images/field-guide/sunset-marina-clear-2048.webp" alt="Calm sunset reflection over Lake Coeur d'Alene" fill sizes="100vw" />
         <div className="ed-closing-scrim" aria-hidden="true" />
         <div className="ed-container">
           <div className="ed-closing-inner">

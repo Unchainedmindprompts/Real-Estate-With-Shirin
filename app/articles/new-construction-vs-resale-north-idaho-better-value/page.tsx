@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
@@ -169,11 +170,11 @@ return (
 <p className="font-dm-sans text-lg text-[#5C5650] max-w-3xl mb-8 leading-relaxed">
             Neither side wins in general, and any guide that picks a winner without naming a specific pair of homes is selling, not comparing. Value is decided home by home, at the finished price, over the first years of ownership. On November 9, 2026, Lennar’s own site listed Crown Reserve in Post Falls at $416,950 to $492,950, and Monogram’s own site listed its lowest Thayer Farms North plan in Rathdrum, the Sheridan, starting at $459,900. Against those starting points, Homes.com put the median sale price over the last 12 months at $539,900 in Post Falls, up 6%, and $551,000 in Rathdrum, up 9%, checked the same day. A starting price is not a finished price, and a median is not a specific home. The work below is the comparison that actually counts: finished price against finished price, the age of the systems, the cash needed after closing, and the warranty and incentives in writing.</p>
 <div className="flex items-center gap-4">
-<img
+<Image
 src="/images/shirin-headshot-studio.webp"
 alt="Shirin Abplanalp, licensed realtor at Berkshire Hathaway HomeServices Jacklin Real Estate"
 className="w-10 h-10 rounded-full object-cover"
-/>
+width={40} height={40} sizes="40px" />
 <div>
 <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
 <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · November 9, 2026</p>
@@ -337,11 +338,11 @@ className="w-10 h-10 rounded-full object-cover"
 <div className="bg-[#1C1A17] rounded-sm p-8 mt-4">
 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">From Shirin</p>
 <div className="flex items-start gap-5 mb-6">
-<img
+<Image
 src="/images/shirin-headshot-studio.webp"
 alt="Shirin Abplanalp"
 className="w-14 h-14 rounded-full object-cover flex-shrink-0"
-/>
+width={56} height={56} sizes="56px" />
 <div>
 <p className="font-cormorant text-2xl text-[#F5EFE6] font-semibold mb-1">Shirin Abplanalp</p>
 <p className="font-dm-sans text-sm text-[#9A9590]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · Idaho License #1371861</p>
@@ -389,7 +390,7 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
 </div>
 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Local Advisor</p>
-<img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" />
+<Image src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" width={64} height={64} sizes="64px" />
 <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
 <p className="font-dm-sans text-xs text-[#9A9590] mb-4">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · #1371861</p>
 <a href="/contact" className="block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white font-dm-sans font-semibold text-sm py-3 px-4 transition-colors">

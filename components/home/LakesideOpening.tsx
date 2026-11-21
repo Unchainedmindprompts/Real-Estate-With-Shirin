@@ -17,6 +17,7 @@ const scenes = [
 
 export default function LakesideOpening() {
   const [current, setCurrent] = useState(0)
+  const [loadedScenes, setLoadedScenes] = useState<Set<number>>(() => new Set([0]))
   const waterfrontImage = useRef<HTMLImageElement>(null)
   const glide = useRef<Animation | null>(null)
   const [playback, setPlayback] = useState<'still' | 'playing' | 'paused' | 'ended'>('still')
@@ -40,8 +41,8 @@ export default function LakesideOpening() {
       if (!active || !preference.matches || glide.current) return
       const animation = photo.animate([
         { transform: 'translate3d(0, 0, 0) scale(1)' },
-        { transform: 'translate3d(1.65%, 0, 0) scale(1.045)' },
-      ], { duration: 10000, easing: 'cubic-bezier(.32,.47,.64,1)', fill: 'forwards' })
+        { transform: 'translate3d(2.8%, 0, 0) scale(1.08)' },
+      ], { duration: 6000, easing: 'cubic-bezier(.25,.52,.38,1)', fill: 'forwards' })
       glide.current = animation
       animation.onfinish = () => setPlayback('ended')
       setPlayback('playing')
@@ -57,9 +58,16 @@ export default function LakesideOpening() {
     }
   }, [current])
 
+  function preloadScene(offset: number) {
+    const nextIndex = (current + offset + scenes.length) % scenes.length
+    setLoadedScenes(prev => (prev.has(nextIndex) ? prev : new Set([...prev, nextIndex])))
+  }
+
   function changeScene(offset: number) {
+    const nextIndex = (current + offset + scenes.length) % scenes.length
+    setLoadedScenes(prev => (prev.has(nextIndex) ? prev : new Set([...prev, nextIndex])))
     setPlayback('still')
-    setCurrent(i => (i + offset + scenes.length) % scenes.length)
+    setCurrent(nextIndex)
   }
 
   function togglePlayback() {
@@ -78,11 +86,13 @@ export default function LakesideOpening() {
 
   return <section className={s.opening} data-waterfront={current === 0} aria-labelledby="home-content">
     {scenes.map((scene, i) => <div key={scene.photo.src} className={s.scene} data-active={i === current} aria-hidden={i !== current}>
-      <Image
+      {loadedScenes.has(i) && <Image
         ref={i === 0 ? waterfrontImage : undefined}
         src={scene.photo} alt={scene.alt} fill sizes="100vw"
-        quality={85} preload={i === 0} unoptimized={i === 0}
-      />
+        quality={i === 0 ? 75 : 85}
+        placeholder="blur"
+        preload={i === 0}
+      />}
     </div>)}
     <div className={s.scrim} />
     <div className={s.heroInner}>
@@ -105,9 +115,9 @@ export default function LakesideOpening() {
               <path d={playback === 'playing' ? 'M3 2h3.5v12H3zm6.5 0H13v12H9.5z' : 'M4 2l9 6-9 6z'} />
             </svg>
           </button>}
-          <button type="button" aria-label="Previous waterfront photograph" onClick={() => changeScene(-1)}>←</button>
+          <button type="button" aria-label="Previous waterfront photograph" onMouseEnter={() => preloadScene(-1)} onFocus={() => preloadScene(-1)} onClick={() => changeScene(-1)}>←</button>
           <span>{String(current + 1).padStart(2, '0')} <b>/</b> {String(scenes.length).padStart(2, '0')}</span>
-          <button type="button" aria-label="Next waterfront photograph" onClick={() => changeScene(1)}>→</button>
+          <button type="button" aria-label="Next waterfront photograph" onMouseEnter={() => preloadScene(1)} onFocus={() => preloadScene(1)} onClick={() => changeScene(1)}>→</button>
         </div>
       </div>
     </div>

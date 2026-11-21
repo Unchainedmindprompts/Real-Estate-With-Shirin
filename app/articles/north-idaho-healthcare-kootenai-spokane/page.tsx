@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
@@ -322,11 +323,11 @@ export default function NorthIdahoHealthcarePage() {
             For the overwhelming majority of medical needs, you do not need to drive to Spokane. Here is what North Idaho&apos;s healthcare ecosystem actually looks like.
           </p>
           <div className="flex items-center gap-4">
-            <img
+            <Image
               src="/images/shirin-headshot-studio.webp"
               alt="Shirin Abplanalp, Licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate"
               className="w-10 h-10 rounded-full object-cover"
-            />
+            width={40} height={40} sizes="40px" />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
               <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · SRES® · Berkshire Hathaway HomeServices Jacklin Real Estate · May 23, 2026</p>
@@ -365,12 +366,12 @@ export default function NorthIdahoHealthcarePage() {
 
       {/* Hero Image */}
       <div className="w-full overflow-hidden" style={{ maxHeight: '520px' }}>
-        <img
+        <Image
           src="/images/north-idaho-kootenai-health-helicopter.webp"
           alt="Kootenai Health regional medical center with Life Flight helicopter, Coeur d'Alene Idaho"
           className="w-full object-cover object-center"
           style={{ maxHeight: '520px' }}
-        />
+        width={1672} height={851} sizes="100vw" preload />
       </div>
 
       {/* Article Body */}
@@ -635,7 +636,7 @@ export default function NorthIdahoHealthcarePage() {
                 {/* About Shirin */}
                 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
                   <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Local Agent</p>
-                  <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp, Licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate" className="w-16 h-16 rounded-full object-cover mb-3" />
+                  <Image src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp, Licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate" className="w-16 h-16 rounded-full object-cover mb-3" width={64} height={64} sizes="64px" />
                   <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
                   <p className="font-dm-sans text-xs text-[#9A9590] mb-3">Licensed REALTOR® · SRES® · Berkshire Hathaway HomeServices Jacklin Real Estate · #1371861</p>
                   <p className="font-dm-sans text-xs text-[#5C5650] leading-relaxed mb-4">

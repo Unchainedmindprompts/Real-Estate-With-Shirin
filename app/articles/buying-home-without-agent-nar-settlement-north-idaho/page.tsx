@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
 
@@ -288,11 +289,11 @@ export default function NARSettlementPage() {
 
       {/* Hero Image */}
       <div className="w-full">
-        <img
+        <Image
           src="/images/unrepresented-buyers-nar-settlement.webp"
           alt="NAR settlement buyer representation guide — what changed for North Idaho buyers in 2024"
           className="w-full h-auto block"
-        />
+        width={1672} height={941} sizes="100vw" preload />
       </div>
 
       {/* Article Body */}
@@ -304,7 +305,7 @@ export default function NARSettlementPage() {
 
             {/* Byline */}
             <div className="flex items-center gap-4 mb-10 pb-8" style={{ borderBottom: '1px solid #E8DDD0' }}>
-              <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" style={{ width: '52px', height: '52px', borderRadius: '50%', objectFit: 'cover' }} />
+              <Image src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" style={{ width: '52px', height: '52px', borderRadius: '50%', objectFit: 'cover' }} width={52} height={52} sizes="52px" />
               <div>
                 <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '14px', fontWeight: 600, color: '#1C1A17', margin: 0 }}>Shirin Abplanalp</p>
                 <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', color: '#9A9590', margin: 0 }}>Licensed REALTOR® · SRES® · Berkshire Hathaway HomeServices Jacklin Real Estate, North Idaho</p>

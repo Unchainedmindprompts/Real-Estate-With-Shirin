@@ -1,4 +1,5 @@
 import { heroMetadata, lakeHouseCard } from '@/lib/hero-share'
+import Image from 'next/image'
 import Link from 'next/link'
 import fs from 'fs'
 import path from 'path'
@@ -86,7 +87,7 @@ export default function ArticlesPage() {
 
           <aside className="ed-portrait-card" aria-label="About the author">
             <div className="ed-portrait-frame">
-              <img src="/images/shirin-portrait-2026.png" alt="Shirin Abplanalp, North Idaho real estate advisor" loading="eager" />
+              <Image src="/images/shirin-portrait-2026.png" alt="Shirin Abplanalp, North Idaho real estate advisor" fill sizes="(max-width: 960px) 320px, 380px" preload />
             </div>
             <div className="ed-portrait-caption">
               <div>
@@ -102,7 +103,7 @@ export default function ArticlesPage() {
       {/* Flagship Start Here 50/50 Split */}
       <section className="ed-featured-split" aria-labelledby="featured-title">
         <div className="ed-featured-media">
-          <img src="/images/field-guide/lake-house-editorial-4k.webp" alt="A sunlit architectural home framed by pines in North Idaho" loading="eager" />
+          <Image src="/images/field-guide/lake-house-editorial-4k.webp" alt="A sunlit architectural home framed by pines in North Idaho" fill sizes="(max-width: 960px) 100vw, 50vw" />
           <span className="ed-media-caption">Coeur d’Alene &amp; Kootenai County</span>
         </div>
         <div className="ed-featured-copy">
@@ -135,7 +136,7 @@ export default function ArticlesPage() {
 
       {/* Full-Bleed Sunset Closing Band */}
       <section className="ed-closing-band" aria-labelledby="articles-closing-title">
-        <img className="ed-closing-photo" src="/images/field-guide/sunset-marina-clear-2048.webp" alt="Calm sunset reflection over a North Idaho lake marina" loading="lazy" />
+        <Image className="ed-closing-photo" src="/images/field-guide/sunset-marina-clear-2048.webp" alt="Calm sunset reflection over a North Idaho lake marina" fill sizes="100vw" />
         <div className="ed-closing-scrim" aria-hidden="true" />
         <div className="ed-container">
           <div className="ed-closing-inner">

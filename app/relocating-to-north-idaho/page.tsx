@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -310,11 +311,11 @@ export default function RelocatingToNorthIdahoPage() {
             Costs, taxes, towns, schools, weather, commutes, and the buying process &mdash; everything out-of-state buyers need in one place, from a licensed Idaho REALTOR&reg; who made the move herself.
           </p>
           <div className="flex items-center gap-4">
-            <img
+            <Image
               src="/images/shirin-headshot-studio.webp"
               alt="Shirin Abplanalp, Licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate"
               className="w-10 h-10 rounded-full object-cover"
-            />
+            width={40} height={40} sizes="40px" />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
               <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR&reg; · SRES&reg; · Berkshire Hathaway HomeServices Jacklin Real Estate · Published May 31, 2026 · Updated October 1, 2026</p>
@@ -339,11 +340,11 @@ export default function RelocatingToNorthIdahoPage() {
       </section>
 
       {/* Hero Image */}
-      <img
+      <Image
         src="/images/north-idaho-city-comparison.png"
         alt="North Idaho lakes, mountains, and towns &mdash; a complete relocation guide for out-of-state buyers"
         className="w-full h-auto block"
-      />
+      width={1672} height={941} sizes="100vw" preload />
 
       {/* Article Body */}
       <section className="bg-[#FAFAF8] py-16">

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
@@ -154,11 +155,11 @@ return (
 <p className="font-dm-sans text-lg text-[#5C5650] max-w-3xl mb-8 leading-relaxed">
             Neither answer wins for every seller, and this guide will not pretend otherwise. The holiday market is smaller, not dead. December is usually the month with the fewest homes for sale all year nationally, with inventory typically dropping about 9.4% from November to December, yet average existing home sales typically rise about 3.9% from November to December on buyers driven by year end tax timing, January job relocations, and second term school starts (National Association of REALTORS, historical December pattern, checked November 7, 2026). Spring historically buys a better launch window, not a jackpot: the best national week in Realtor.com research showed 16.7% more views per listing and about 9 days faster pace. Locally, nothing on file says North Idaho is collapsing into winter: Kootenai County closed sales were up 4.0% year to date through September 2026, at a median of $569,900, up 4.3% (Coeur d’Alene Regional REALTORS, September 2026 Market Snapshot, data as of October 5, 2026). Work through the decision for your own home below.</p>
 <div className="flex items-center gap-4">
-<img
+<Image
 src="/images/shirin-headshot-studio.webp"
 alt="Shirin Abplanalp, licensed realtor at Berkshire Hathaway HomeServices Jacklin Real Estate"
 className="w-10 h-10 rounded-full object-cover"
-/>
+width={40} height={40} sizes="40px" />
 <div>
 <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
 <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · November 7, 2026</p>
@@ -294,11 +295,11 @@ className="w-10 h-10 rounded-full object-cover"
 <div className="bg-[#1C1A17] rounded-sm p-8 mt-4">
 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">From Shirin</p>
 <div className="flex items-start gap-5 mb-6">
-<img
+<Image
 src="/images/shirin-headshot-studio.webp"
 alt="Shirin Abplanalp"
 className="w-14 h-14 rounded-full object-cover flex-shrink-0"
-/>
+width={56} height={56} sizes="56px" />
 <div>
 <p className="font-cormorant text-2xl text-[#F5EFE6] font-semibold mb-1">Shirin Abplanalp</p>
 <p className="font-dm-sans text-sm text-[#9A9590]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · Idaho License #1371861</p>
@@ -346,7 +347,7 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
 </div>
 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Local Advisor</p>
-<img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" />
+<Image src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" width={64} height={64} sizes="64px" />
 <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
 <p className="font-dm-sans text-xs text-[#9A9590] mb-4">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · #1371861</p>
 <a href="/contact" className="block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white font-dm-sans font-semibold text-sm py-3 px-4 transition-colors">

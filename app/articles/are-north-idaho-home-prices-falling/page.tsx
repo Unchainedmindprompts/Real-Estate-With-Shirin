@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
@@ -156,11 +157,11 @@ return (
 <p className="font-dm-sans text-lg text-[#5C5650] max-w-3xl mb-8 leading-relaxed">
             It depends entirely on which price you mean, and this guide will not pick one side. National asking prices are falling: the median list price was $415,000 in October 2026, down 2.2% year over year (Realtor.com, published November 4, 2026). National sold prices are still rising slowly: the median existing home price was $417,500 in September 2026, up 1.3% year over year (National Association of REALTORS, released October 13, 2026). After inflation, national prices are falling in real terms, because a 2.1% nominal gain trails 3.4% inflation (S&P Dow Jones Indices, August 2026, released October 27, 2026). And locally, the latest sold price source on file shows Kootenai County up, not down: a median of $569,900 year to date through September 2026, up 4.3% (Coeur d’Alene Regional REALTORS, September 2026 Market Snapshot, data as of October 5, 2026). Four measures, four different answers. The work below is keeping them separate.</p>
 <div className="flex items-center gap-4">
-<img
+<Image
 src="/images/shirin-headshot-studio.webp"
 alt="Shirin Abplanalp, licensed realtor at Berkshire Hathaway HomeServices Jacklin Real Estate"
 className="w-10 h-10 rounded-full object-cover"
-/>
+width={40} height={40} sizes="40px" />
 <div>
 <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
 <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · November 8, 2026</p>
@@ -311,11 +312,11 @@ className="w-10 h-10 rounded-full object-cover"
 <div className="bg-[#1C1A17] rounded-sm p-8 mt-4">
 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">From Shirin</p>
 <div className="flex items-start gap-5 mb-6">
-<img
+<Image
 src="/images/shirin-headshot-studio.webp"
 alt="Shirin Abplanalp"
 className="w-14 h-14 rounded-full object-cover flex-shrink-0"
-/>
+width={56} height={56} sizes="56px" />
 <div>
 <p className="font-cormorant text-2xl text-[#F5EFE6] font-semibold mb-1">Shirin Abplanalp</p>
 <p className="font-dm-sans text-sm text-[#9A9590]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · Idaho License #1371861</p>
@@ -363,7 +364,7 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
 </div>
 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Local Advisor</p>
-<img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" />
+<Image src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" width={64} height={64} sizes="64px" />
 <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
 <p className="font-dm-sans text-xs text-[#9A9590] mb-4">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · #1371861</p>
 <a href="/contact" className="block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white font-dm-sans font-semibold text-sm py-3 px-4 transition-colors">

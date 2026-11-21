@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { BASE_URL, BUSINESS_ID, WEBSITE_ID, PLACE } from '@/lib/schema-ids'
 import { IDX_SEARCH_BY_AREA } from '@/lib/idx-search'
@@ -150,7 +151,7 @@ export default function CoeurDaleneAreaPage() {
 
       {/* Full-Bleed Lake Coeur d'Alene Hero */}
       <section className="ed-photo-hero is-tall" aria-labelledby="cda-title">
-        <img className="ed-photo-hero-img" src="/images/community-atlas/coeur-dalene-idaho.webp" alt="Coeur d'Alene, Idaho" loading="eager" />
+        <Image className="ed-photo-hero-img" src="/images/community-atlas/coeur-dalene-idaho.webp" alt="Coeur d'Alene, Idaho" fill sizes="100vw" preload />
         <div className="ed-photo-hero-scrim" aria-hidden="true" />
         <div className="ed-container ed-photo-hero-inner">
           <div style={{ maxWidth: '760px' }}>
@@ -225,7 +226,7 @@ export default function CoeurDaleneAreaPage() {
 
           <aside className="ed-advisor-card" aria-label="Local facts and advisor note">
             <div className="ed-advisor-top">
-              <img src="/images/shirin-portrait-2026.png" alt="Shirin Abplanalp" loading="lazy" />
+              <Image src="/images/shirin-portrait-2026.png" alt="Shirin Abplanalp" width={68} height={68} sizes="68px" />
               <div>
                 <p style={{ fontSize: '9px', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--bronze-light)' }}>Local Perspective</p>
                 <p style={{ fontFamily: 'var(--serif)', fontSize: '24px', color: '#FAF7F1', lineHeight: 1.15, marginTop: '2px' }}>Shirin Abplanalp</p>
@@ -339,7 +340,7 @@ export default function CoeurDaleneAreaPage() {
 
       {/* Sunset Closing Band */}
       <section className="ed-closing-band" aria-labelledby="cda-closing-title">
-        <img className="ed-closing-photo" src="/images/field-guide/sunset-marina-clear-2048.webp" alt="Calm sunset reflection over Lake Coeur d'Alene marina" loading="lazy" />
+        <Image className="ed-closing-photo" src="/images/field-guide/sunset-marina-clear-2048.webp" alt="Calm sunset reflection over Lake Coeur d'Alene marina" fill sizes="100vw" />
         <div className="ed-closing-scrim" aria-hidden="true" />
         <div className="ed-container">
           <div className="ed-closing-inner">

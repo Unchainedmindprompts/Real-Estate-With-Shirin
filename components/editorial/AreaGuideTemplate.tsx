@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import FaqAccordion, { type FaqItem } from '@/components/editorial/FaqAccordion'
 import BudgetExplorerClient, { type BudgetBand } from '@/components/editorial/BudgetExplorerClient'
@@ -49,7 +50,7 @@ export default function AreaGuideTemplate({ config }: { config: AreaGuideConfig 
     <div className="ed-page">
       {/* Full-Bleed Photo Hero + 4-Stat Glass Bar */}
       <section className="ed-photo-hero is-tall" aria-labelledby="area-hero-title">
-        <img className="ed-photo-hero-img" src={config.heroImage} alt={config.heroAlt} loading="eager" />
+        <Image className="ed-photo-hero-img" src={config.heroImage} alt={config.heroAlt} fill sizes="100vw" preload />
         <div className="ed-photo-hero-scrim" aria-hidden="true" />
         <div className="ed-container ed-photo-hero-inner">
           <div style={{ maxWidth: '760px' }}>
@@ -104,7 +105,7 @@ export default function AreaGuideTemplate({ config }: { config: AreaGuideConfig 
 
           <aside className="ed-advisor-card" aria-label="Local facts and advisor note">
             <div className="ed-advisor-top">
-              <img src="/images/shirin-portrait-2026.png" alt="Shirin Abplanalp" loading="lazy" />
+              <Image src="/images/shirin-portrait-2026.png" alt="Shirin Abplanalp" width={68} height={68} sizes="68px" />
               <div>
                 <p style={{ fontSize: '9px', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--bronze-light)' }}>Local Perspective</p>
                 <p style={{ fontFamily: 'var(--serif)', fontSize: '24px', color: '#FAF7F1', lineHeight: 1.15, marginTop: '2px' }}>Shirin Abplanalp</p>
@@ -221,7 +222,7 @@ export default function AreaGuideTemplate({ config }: { config: AreaGuideConfig 
 
       {/* Full-Bleed Sunset Closing Band */}
       <section className="ed-closing-band" aria-labelledby="area-closing-title">
-        <img className="ed-closing-photo" src="/images/field-guide/sunset-marina-clear-2048.webp" alt="Calm sunset reflection over North Idaho water" loading="lazy" />
+        <Image className="ed-closing-photo" src="/images/field-guide/sunset-marina-clear-2048.webp" alt="Calm sunset reflection over North Idaho water" fill sizes="100vw" />
         <div className="ed-closing-scrim" aria-hidden="true" />
         <div className="ed-container">
           <div className="ed-closing-inner">

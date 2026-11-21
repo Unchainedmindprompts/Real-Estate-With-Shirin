@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
@@ -149,11 +150,11 @@ export default function VideoAuthorityLayerPage() {
             AI-powered search no longer just returns links — it recommends people. Here is why video has become the trust signal that determines which agents get surfaced, and what that means for buyers and agents in Northern Idaho.
           </p>
           <div className="flex items-center gap-4">
-            <img
+            <Image
               src="/images/shirin-abplanalp.jpg"
               alt="Shirin Abplanalp, licensed realtor at Berkshire Hathaway HomeServices Jacklin Real Estate"
               className="w-10 h-10 rounded-full object-cover"
-            />
+            width={40} height={40} sizes="40px" />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
               <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · March 23, 2026</p>
@@ -348,11 +349,11 @@ export default function VideoAuthorityLayerPage() {
                   borderRadius: '4px',
                 }}
               >
-                <img
+                <Image
                   src="/images/shirin-abplanalp.jpg"
                   alt="Shirin Abplanalp"
                   className="w-16 h-16 rounded-full object-cover mb-4"
-                />
+                width={64} height={64} sizes="64px" />
                 <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
                 <p className="font-dm-sans text-xs text-[#9A9590] mb-3">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate<br />Idaho License #1371861</p>
                 <p className="font-dm-sans text-sm text-[#5C5650] leading-relaxed mb-4">

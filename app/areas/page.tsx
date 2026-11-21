@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { BASE_URL, BUSINESS_ID, WEBSITE_ID } from '@/lib/schema-ids'
 
@@ -116,7 +117,7 @@ export default function AreasIndexPage() {
             {FIVE_CITIES.map((c) => (
               <Link key={c.slug} href={`/areas/${c.slug}`} className="ed-hood-card">
                 <div className="ed-hood-photo">
-                  <img src={c.img} alt={c.alt} loading="lazy" />
+                  <Image src={c.img} alt={c.alt} fill sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw" />
                   <span className="ed-hood-tag">{c.tag}</span>
                 </div>
                 <div className="ed-hood-body" style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
@@ -156,7 +157,7 @@ export default function AreasIndexPage() {
       </section>
 
       <section className="ed-closing-band" aria-labelledby="areas-closing-title">
-        <img className="ed-closing-photo" src="/images/field-guide/sunset-marina-clear-2048.webp" alt="Sunset over North Idaho water" loading="lazy" />
+        <Image className="ed-closing-photo" src="/images/field-guide/sunset-marina-clear-2048.webp" alt="Sunset over North Idaho water" fill sizes="100vw" />
         <div className="ed-closing-scrim" aria-hidden="true" />
         <div className="ed-container">
           <div className="ed-closing-inner">

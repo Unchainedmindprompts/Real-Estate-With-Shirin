@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
@@ -239,11 +240,11 @@ export default function BestPlacesNorthIdahoCaliforniaPage() {
             For Californians relocating to North Idaho in 2026, the four best places to land are Coeur d&apos;Alene, Post Falls, Hayden, and Sandpoint. Each offers a lower cost of living than California, four-season outdoor recreation, and a community-oriented pace of life, but they differ in price, size, and character. This guide walks through what to expect from each town, what Californians actually save when they move here, and what to know before you start your search.
           </p>
           <div className="flex items-center gap-4">
-            <img
+            <Image
               src="/images/shirin-headshot-studio.webp"
               alt="Shirin Abplanalp, licensed realtor at Berkshire Hathaway HomeServices Jacklin Real Estate"
               className="w-10 h-10 rounded-full object-cover"
-            />
+            width={40} height={40} sizes="40px" />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
               <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · April 22, 2026</p>
@@ -470,7 +471,7 @@ export default function BestPlacesNorthIdahoCaliforniaPage() {
                 {/* Agent Card */}
                 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
                   <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Your Relocation Advisor</p>
-                  <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" />
+                  <Image src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" width={64} height={64} sizes="64px" />
                   <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
                   <p className="font-dm-sans text-xs text-[#9A9590] mb-3">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · #1371861</p>
                   <p className="font-dm-sans text-xs text-[#5C5650] leading-relaxed mb-4">Shirin relocated from Bend, Oregon to Northern Idaho and now helps buyers, sellers, and relocating families navigate the Kootenai County market.</p>

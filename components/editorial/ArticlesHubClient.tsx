@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import type { ArticleEntry } from '@/lib/articles-index'
 
@@ -63,7 +64,7 @@ export default function ArticlesHubClient({ articles }: { articles: ArticleEntry
           <div className="ed-triptych-grid">
             <Link className="ed-triptych-card" href="/articles/moving-from-washington-to-north-idaho">
               <div className="ed-triptych-photo">
-                <img src="/images/field-guide/sunset-over-the-lake.webp" alt="Golden sunset over Lake Coeur d'Alene" loading="lazy" />
+                <Image src="/images/field-guide/sunset-over-the-lake.webp" alt="Golden sunset over Lake Coeur d'Alene" fill sizes="(max-width: 900px) 100vw, 33vw" />
               </div>
               <div className="ed-triptych-body">
                 <p className="ed-card-kicker">Relocation · State Comparison</p>
@@ -75,7 +76,7 @@ export default function ArticlesHubClient({ articles }: { articles: ArticleEntry
 
             <Link className="ed-triptych-card" href="/articles/moving-from-arizona-to-north-idaho">
               <div className="ed-triptych-photo">
-                <img src="/images/field-guide/townhome-walk.webp" alt="Tree-lined residential street in North Idaho" loading="lazy" />
+                <Image src="/images/field-guide/townhome-walk.webp" alt="Tree-lined residential street in North Idaho" fill sizes="(max-width: 900px) 100vw, 33vw" />
               </div>
               <div className="ed-triptych-body">
                 <p className="ed-card-kicker">Relocation · Four Seasons</p>
@@ -87,7 +88,7 @@ export default function ArticlesHubClient({ articles }: { articles: ArticleEntry
 
             <Link className="ed-triptych-card" href="/articles/when-to-move-coeur-dalene-month-by-month-buyer-guide">
               <div className="ed-triptych-photo">
-                <img src="/images/skiing-action-4k.webp" alt="Winter alpine lifestyle in North Idaho" loading="lazy" />
+                <Image src="/images/skiing-action-4k.webp" alt="Winter alpine lifestyle in North Idaho" fill sizes="(max-width: 900px) 100vw, 33vw" />
               </div>
               <div className="ed-triptych-body">
                 <p className="ed-card-kicker">Buyer Guide · 18 min read</p>

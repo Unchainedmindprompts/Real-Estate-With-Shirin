@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
@@ -296,11 +297,11 @@ export default function WhenToMoveCdAPage() {
             The month you arrive shapes your entire first year here. An honest local read on what each season feels like, what it does to the market, and how to time your move so the place reveals itself in the right order.
           </p>
           <div className="flex items-center gap-4">
-            <img
+            <Image
               src="/images/shirin-headshot-studio.webp"
               alt="Shirin Abplanalp, Licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate"
               className="w-10 h-10 rounded-full object-cover"
-            />
+            width={40} height={40} sizes="40px" />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
               <p className="font-dm-sans text-xs text-[#9A9590]">Licensed REALTOR&reg; · SRES&reg; · Berkshire Hathaway HomeServices Jacklin Real Estate · June 10, 2026</p>
@@ -325,11 +326,11 @@ export default function WhenToMoveCdAPage() {
       </section>
 
       {/* Hero Image (placeholder — upload to /public/images/when-to-move-coeur-dalene-month-by-month.png) */}
-      <img
+      <Image
         src="/images/when-to-move-coeur-dalene-month-by-month.png"
         alt="Coeur d&rsquo;Alene through the seasons — a month-by-month buyer guide"
         className="w-full h-auto block"
-      />
+      width={1536} height={1024} sizes="100vw" preload />
 
       {/* Article Body */}
       <section className="bg-[#FAFAF8] py-16">

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AGENT_AUTHOR_STUB, AGENT_NAME, BASE_URL, BRAND_PUBLISHER_STUB, EMAIL, PHONE, PHONE_DISPLAY, placeStub } from '@/lib/schema-ids'
@@ -124,12 +125,12 @@ export default function SpokaneVsCdaPage() {
           <h1 className="font-cormorant text-5xl md:text-6xl text-[#1C1A17] leading-tight mb-6 font-semibold">{title}</h1>
           <p className="font-dm-sans text-lg text-[#5C5650] max-w-3xl mb-8 leading-relaxed">Start with where you need to be during the week, then compare the homes you could actually buy. The state line matters, but so do the driveway, monthly payment, and trip home from work.</p>
           <div className="flex items-center gap-4">
-            <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp, licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate" className="w-10 h-10 rounded-full object-cover" />
+            <Image src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp, licensed REALTOR® at Berkshire Hathaway HomeServices Jacklin Real Estate" className="w-10 h-10 rounded-full object-cover" width={40} height={40} sizes="40px" />
             <div><p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p><p className="font-dm-sans text-xs text-[#5C5650]">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate</p></div>
           </div>
         </div>
       </section>
-      <div className="w-full overflow-hidden"><img src="/images/north-idaho-lake-hero.webp" alt="A home overlooking a lake and wooded mountains at sunset" className="w-full max-h-[520px] object-cover" /></div>
+      <div className="w-full overflow-hidden"><Image src="/images/north-idaho-lake-hero.webp" alt="A home overlooking a lake and wooded mountains at sunset" className="w-full max-h-[520px] object-cover" width={1672} height={941} sizes="100vw" preload /></div>
       <section className="bg-[#1C1A17] py-8" aria-label="Relocation comparison priorities">
         <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
           {['Actual homes', 'Full ownership cost', 'Workday routes', 'Everyday access'].map((item) => <p key={item} className="text-center font-cormorant text-2xl text-[#C4842A] font-semibold">{item}</p>)}
@@ -211,7 +212,7 @@ export default function SpokaneVsCdaPage() {
               </div>
               <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
                 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#96601A] mb-4">Your North Idaho guide</p>
-                <img src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" />
+                <Image src="/images/shirin-headshot-studio.webp" alt="Shirin Abplanalp" className="w-16 h-16 rounded-full object-cover mb-3" width={64} height={64} sizes="64px" />
                 <p className="font-cormorant text-xl text-[#1C1A17] font-semibold mb-1">Shirin Abplanalp</p>
                 <p className="font-dm-sans text-xs text-[#5C5650] mb-3">Licensed REALTOR® · Berkshire Hathaway HomeServices Jacklin Real Estate · #1371861</p>
                 <p className="font-dm-sans text-sm text-[#5C5650] leading-relaxed mb-4">Considering Coeur d&apos;Alene or Post Falls? Bring your must-haves and regular destinations. We can use them to narrow the Idaho home search.</p>

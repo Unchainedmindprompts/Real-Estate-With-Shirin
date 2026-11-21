@@ -1,4 +1,5 @@
 import { heroMetadata, lakeHouseCard } from '@/lib/hero-share'
+import Image from 'next/image'
 import Link from 'next/link'
 import { BASE_URL, BUSINESS_ID, WEBSITE_ID, MARKET_AREA_SERVED } from '@/lib/schema-ids'
 import BuyersFitClient from '@/components/editorial/BuyersFitClient'
@@ -93,7 +94,7 @@ export default function BuyersPage() {
 
       {/* Distinct Residential North Idaho Hero */}
       <section className="ed-photo-hero" aria-labelledby="buyers-title">
-        <img className="ed-photo-hero-img" src="/images/field-guide/townhome-walk.webp" alt="Sunlit tree-lined residential neighborhood in North Idaho" loading="eager" />
+        <Image className="ed-photo-hero-img" src="/images/field-guide/townhome-walk.webp" alt="Sunlit tree-lined residential neighborhood in North Idaho" fill sizes="100vw" preload />
         <div className="ed-photo-hero-scrim" aria-hidden="true" />
         <div className="ed-container" style={{ position: 'relative', maxWidth: '760px', marginLeft: 'max(24px, calc((100% - 1340px) / 2))' }}>
           <p className="ed-eyebrow ed-eyebrow-light">Buyer Representation</p>
@@ -185,7 +186,7 @@ export default function BuyersPage() {
 
       {/* Sunset Closing Band */}
       <section className="ed-closing-band" aria-labelledby="buyers-closing-title">
-        <img className="ed-closing-photo" src="/images/field-guide/sunset-marina-clear-2048.webp" alt="Calm sunset reflection over Lake Coeur d'Alene" loading="lazy" />
+        <Image className="ed-closing-photo" src="/images/field-guide/sunset-marina-clear-2048.webp" alt="Calm sunset reflection over Lake Coeur d'Alene" fill sizes="100vw" />
         <div className="ed-closing-scrim" aria-hidden="true" />
         <div className="ed-container">
           <div className="ed-closing-inner">

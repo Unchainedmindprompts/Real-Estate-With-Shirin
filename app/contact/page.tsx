@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { BASE_URL, WEBSITE_ID, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
 import EditorialContactForm from '@/components/editorial/EditorialContactForm'
 
@@ -61,7 +62,7 @@ export default function ContactPage() {
           <aside style={{ display: 'flex', flexDirection: 'column', gap: '26px' }} aria-label="Direct contact details">
             <div className="ed-advisor-card">
               <div className="ed-advisor-top">
-                <img src="/images/shirin-portrait-2026.png" alt="Shirin Abplanalp" loading="eager" />
+                <Image src="/images/shirin-portrait-2026.png" alt="Shirin Abplanalp" width={68} height={68} sizes="68px" preload />
                 <div>
                   <p style={{ fontSize: '9px', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--bronze-light)' }}>Direct Line</p>
                   <p style={{ fontFamily: 'var(--serif)', fontSize: '25px', color: '#FAF7F1', lineHeight: 1.15, marginTop: '2px' }}>Shirin Abplanalp</p>
