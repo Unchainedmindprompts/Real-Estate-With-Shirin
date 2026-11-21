@@ -4,9 +4,9 @@ import s from './Home.module.css'
 
 const landscapeSizes = '(min-aspect-ratio: 512/269) 100vw, 190.34vh'
 const landscapeSrcSet = [1280, 1920, 2560, 3840, 5120, 8192]
-  .map(width => `/images/field-guide/marina-${width}.avif ${width}w`).join(', ')
+  .map(width => `/images/field-guide/marina-${width}.avif?v=2 ${width}w`).join(', ')
 const portraitSrcSet = [768, 1280, 1920]
-  .map(width => `/images/field-guide/marina-portrait-${width}.avif ${width}w`).join(', ')
+  .map(width => `/images/field-guide/marina-portrait-${width}.avif?v=2 ${width}w`).join(', ')
 
 const cities = [
   { name: 'Coeur d’Alene', slug: 'coeur-dalene-idaho' },
