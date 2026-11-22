@@ -44,13 +44,29 @@ export const PHONE_DISPLAY = '(208) 660-7468'
 export const EMAIL = 'dreamlifeinidaho@gmail.com'
 export const INSTAGRAM_HANDLE = '@thisisnorthidaho'
 export const INSTAGRAM_URL = 'https://www.instagram.com/thisisnorthidaho/'
+export const KVCORE_URL = 'https://shirinabplanalp.jacklinrealestate.com/'
 export const AGENT_IMAGE = `${BASE_URL}/images/shirin-abplanalp.jpg`
+export const BRAND_LOGO = {
+  '@type': 'ImageObject',
+  '@id': `${BASE_URL}/#brand-logo`,
+  url: `${BASE_URL}/images/field-guide/monogram.png`,
+  width: 180,
+  height: 139,
+} as const
+export const JACKLIN_LOGO = {
+  '@type': 'ImageObject',
+  '@id': `${BASE_URL}/#jacklin-logo`,
+  url: `${BASE_URL}/images/bhhs-jacklin-logo.png`,
+  width: 2937,
+  height: 558,
+} as const
 
 // Brokerage (BHHS Jacklin) canonical scalar values, when referenced via the
 // worksFor edge from #agent. The listed office is the Jacklin CDA office
 // used on the public site and GBP — not independently verified as a
 // separately registered brand address.
 export const BROKERAGE_PHONE = '+1-208-758-7474'
+export const BROKERAGE_PHONE_DISPLAY = '(208) 758-7474'
 export const BROKERAGE_ADDRESS = {
   '@type': 'PostalAddress',
   streetAddress: '1927 W. Riverstone Drive',
@@ -67,28 +83,17 @@ export const PORTRAIT_2026 = `${BASE_URL}/images/shirin-portrait-2026.png`
 export const PORTRAIT_2026_WIDTH = 1448
 export const PORTRAIT_2026_HEIGHT = 1086
 
-// Exception B — name-bearing stubs so a single page is self-describing
-// without redeclaring the canonical Person / brand / brokerage. The audit
-// treats these as stubs, not competing definitions, when they carry only
-// @type + @id + name (and optionally url).
-export const AGENT_AUTHOR_STUB = {
-  '@type': 'Person',
-  '@id': AGENT_ID,
-  name: AGENT_NAME,
-} as const
+// Bare @id pointers for subpages and nested edges. Canonical #website,
+// #business, #agent, and #jacklin-real-estate nodes are emitted once per
+// consolidated route @graph via jsonLdGraph().
+export const AGENT_REF = { '@id': AGENT_ID } as const
+export const BUSINESS_REF = { '@id': BUSINESS_ID } as const
+export const JACKLIN_REF = { '@id': JACKLIN_ID } as const
+export const WEBSITE_REF = { '@id': WEBSITE_ID } as const
 
-export const BRAND_PUBLISHER_STUB = {
-  '@type': 'RealEstateAgent',
-  '@id': BUSINESS_ID,
-  name: BRAND_NAME,
-} as const
-
-export const BROKERAGE_STUB = {
-  '@type': 'Organization',
-  '@id': JACKLIN_ID,
-  name: BROKERAGE_NAME,
-  url: BROKERAGE_URL,
-} as const
+export const AGENT_AUTHOR_STUB = AGENT_REF
+export const BRAND_PUBLISHER_STUB = BUSINESS_REF
+export const BROKERAGE_STUB = JACKLIN_REF
 
 // Wikipedia sameAs for the cities Shirin serves. Referenced from each area
 // page's Place node so AI answer engines can resolve the entity.
@@ -198,13 +203,10 @@ export const PLACE = {
 
 export type PlaceKey = keyof typeof PLACE
 
-/** Exception B Place stub — @type + @id + name only. */
+/** Bare @id Place pointer. Full Place definitions are auto-included once per @graph when referenced. */
 export function placeStub(key: PlaceKey) {
-  const place = PLACE[key]
   return {
-    '@type': place['@type'],
-    '@id': place['@id'],
-    name: place.name,
+    '@id': PLACE[key]['@id'],
   }
 }
 
@@ -221,6 +223,276 @@ export const MARKETED_PLACE_KEYS = [
 ] as const satisfies readonly PlaceKey[]
 
 export const MARKET_AREA_SERVED = MARKETED_PLACE_KEYS.map((key) => placeStub(key))
+
+export const WEBSITE_NODE = {
+  '@type': 'WebSite',
+  '@id': WEBSITE_ID,
+  url: BASE_URL,
+  name: BRAND_NAME,
+  description: `${BRAND_NAME} — ${AGENT_NAME}, licensed REALTOR® at ${BROKERAGE_NAME}, serving Post Falls, Coeur d'Alene, Hayden, Rathdrum, Sandpoint, and North Idaho.`,
+  publisher: BUSINESS_REF,
+  inLanguage: 'en-US',
+} as const
+
+export const BUSINESS_BASE_NODE = {
+  '@type': 'RealEstateAgent',
+  '@id': BUSINESS_ID,
+  name: BRAND_NAME,
+  description: `${BRAND_NAME} is the customer-facing practice of licensed REALTOR® ${AGENT_NAME}, helping buyers, sellers, and relocating families in Post Falls, Coeur d'Alene, Hayden, Rathdrum, Sandpoint, and the surrounding North Idaho market.`,
+  url: BASE_URL,
+  telephone: PHONE,
+  email: EMAIL,
+  image: AGENT_IMAGE,
+  logo: BRAND_LOGO,
+  address: BROKERAGE_ADDRESS,
+  geo: { '@type': 'GeoCoordinates', latitude: 47.7028, longitude: -116.8093 },
+  founder: AGENT_REF,
+  memberOf: JACKLIN_REF,
+  areaServed: MARKET_AREA_SERVED,
+  knowsAbout: [
+    'Post Falls real estate',
+    "Coeur d'Alene real estate",
+    'Northern Idaho relocation',
+    'Kootenai County homes',
+    'Buyer representation',
+    'Seller representation',
+    'Relocation',
+    'Idaho real estate market',
+    'Active family relocation to Northern Idaho',
+  ],
+  slogan: 'Your Northern Idaho Real Estate Advisor',
+  sameAs: [
+    'https://maps.google.com/?cid=2147151028860799721',
+    'https://www.yelp.com/biz/real-estate-with-shirin-coeur-d-alene',
+    'https://www.bbb.org/us/id/post-falls/profile/real-estate-agent/real-estate-with-shirin-1296-1000195359',
+    'https://www.facebook.com/ShirinRealty',
+    INSTAGRAM_URL,
+  ],
+} as const
+
+export const AGENT_NODE = {
+  '@type': 'Person',
+  '@id': AGENT_ID,
+  name: AGENT_NAME,
+  jobTitle: 'Licensed REALTOR®',
+  description: `${AGENT_NAME} is a licensed REALTOR® and SRES® at ${BROKERAGE_NAME}. 11 years in real estate, 100+ transactions closed, 5× Top Producer. She relocated from Bend, Oregon to Post Falls and helps buyers, sellers, and relocating families across North Idaho.`,
+  telephone: PHONE,
+  email: EMAIL,
+  url: `${BASE_URL}/about`,
+  image: AGENT_IMAGE,
+  worksFor: JACKLIN_REF,
+  memberOf: [
+    { '@type': 'Organization', name: 'National Association of REALTORS®', url: 'https://www.nar.realtor', sameAs: 'https://en.wikipedia.org/wiki/National_Association_of_Realtors' },
+    { '@type': 'Organization', name: "Coeur d'Alene Association of REALTORS®", url: 'https://cdarealtors.com' },
+  ],
+  hasCredential: [
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Real Estate License', identifier: LICENSE_NUMBER, recognizedBy: { '@type': 'GovernmentOrganization', name: 'Idaho Real Estate Commission', url: 'https://irec.idaho.gov' } },
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Professional Designation', name: 'Seniors Real Estate Specialist®', abbreviation: 'SRES®', recognizedBy: { '@type': 'Organization', name: 'SRES® Council', url: 'https://sres.realtor', parentOrganization: { '@type': 'Organization', name: 'National Association of REALTORS®', url: 'https://www.nar.realtor', sameAs: 'https://en.wikipedia.org/wiki/National_Association_of_Realtors' } } },
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Award', name: '5× Top Producer', recognizedBy: { '@type': 'Organization', name: 'Bend Premier Real Estate' } },
+  ],
+  knowsAbout: [
+    'Post Falls Idaho real estate',
+    "Coeur d'Alene Idaho real estate",
+    'Northern Idaho relocation',
+    'Kootenai County homes for sale',
+    'Buyer representation',
+    'Seller representation',
+    'Relocation',
+    'North Idaho lifestyle',
+    'Out-of-state relocation real estate',
+    'Seniors Real Estate Specialist services',
+    'First-time home buyers Idaho',
+    'Kootenai County neighborhoods',
+  ],
+  affiliation: BUSINESS_REF,
+  sameAs: [
+    'https://www.jacklinrealestate.com/agents/2081255/Shirin+Abplanalp',
+    KVCORE_URL,
+    'https://www.zillow.com/profile/dreamlifeinidaho',
+    'https://www.realtor.com/realestateagents/6852257644eab0a63cfd80af',
+    'https://www.homes.com/real-estate-agents/shirin-abplanalp/j7j2jr7/',
+    'https://www.realty.com/a/Shirin-Abplanalp-1777925821520',
+    'https://www.linkedin.com/in/shirinrealty/',
+    'https://members.cdarealtors.com/directory/Details/shirin-abplanalp-4150054',
+  ],
+} as const
+
+export const JACKLIN_NODE = {
+  '@type': 'Organization',
+  '@id': JACKLIN_ID,
+  name: BROKERAGE_NAME,
+  url: BROKERAGE_URL,
+  telephone: BROKERAGE_PHONE,
+  address: BROKERAGE_ADDRESS,
+  logo: JACKLIN_LOGO,
+  sameAs: [
+    BROKERAGE_URL,
+    'https://www.bhhsjacklin.com/',
+    'https://www.facebook.com/bhhsjacklin/',
+    'https://business.cdachamber.com/list/member/berkshire-hathaway-homeservices-jacklin-real-estate-9147',
+    'https://member.postfallschamber.org/list/member/berkshire-hathaway-homeservices-jacklin-real-estate-3040',
+  ],
+  brand: { '@id': BHHS_BRAND_ID },
+} as const
+
+export const BHHS_BRAND_NODE = {
+  '@type': 'Brand',
+  '@id': BHHS_BRAND_ID,
+  name: 'Berkshire Hathaway HomeServices',
+  sameAs: [
+    'https://www.linkedin.com/company/berkshire-hathaway-homeservices',
+    'https://en.wikipedia.org/wiki/HomeServices_of_America',
+    'https://www.wikidata.org/wiki/Q5887960',
+  ],
+} as const
+
+const PLACE_BY_ID: Record<string, (typeof PLACE)[PlaceKey]> = Object.fromEntries(
+  Object.values(PLACE).map((p) => [p['@id'], p]),
+)
+
+const PLACE_ID_BY_NAME: Record<string, string> = {
+  Idaho: PLACE_ID.idaho,
+  'North Idaho': PLACE_ID.northIdaho,
+  'Northern Idaho': PLACE_ID.northIdaho,
+  'Idaho Panhandle': PLACE_ID.northIdaho,
+  'Kootenai County': PLACE_ID.kootenai,
+  'Bonner County': PLACE_ID.bonner,
+  'Post Falls': PLACE_ID.postFalls,
+  "Coeur d'Alene": PLACE_ID.coeurDalene,
+  'Coeur d’Alene': PLACE_ID.coeurDalene,
+  "Coeur d'Alene, Idaho": PLACE_ID.coeurDalene,
+  'Coeur d’Alene, Idaho': PLACE_ID.coeurDalene,
+  Hayden: PLACE_ID.hayden,
+  Rathdrum: PLACE_ID.rathdrum,
+  Sandpoint: PLACE_ID.sandpoint,
+}
+
+const PLACE_TYPES = new Set(['Place', 'City', 'AdministrativeArea', 'State'])
+const CANONICAL_ENTITY_IDS = new Set<string>([
+  WEBSITE_ID,
+  BUSINESS_ID,
+  AGENT_ID,
+  JACKLIN_ID,
+  BHHS_BRAND_ID,
+  ...Object.values(PLACE_ID),
+])
+
+function normalizeNestedValue(value: unknown): unknown {
+  if (Array.isArray(value)) {
+    const items = value.map(normalizeNestedValue)
+    // Deduplicate identical bare @id pointers inside arrays
+    const seenIds = new Set<string>()
+    return items.filter((item) => {
+      if (item && typeof item === 'object' && !Array.isArray(item)) {
+        const keys = Object.keys(item as Record<string, unknown>)
+        const id = (item as Record<string, unknown>)['@id']
+        if (keys.length === 1 && typeof id === 'string') {
+          if (seenIds.has(id)) return false
+          seenIds.add(id)
+        }
+      }
+      return true
+    })
+  }
+  if (value && typeof value === 'object') {
+    const rec = value as Record<string, unknown>
+    if (typeof rec['@id'] === 'string' && CANONICAL_ENTITY_IDS.has(rec['@id'])) {
+      return { '@id': rec['@id'] }
+    }
+    const rawType = rec['@type']
+    const types = Array.isArray(rawType) ? rawType : typeof rawType === 'string' ? [rawType] : []
+    if (!rec['@id'] && types.some((t) => PLACE_TYPES.has(t)) && typeof rec.name === 'string') {
+      const mappedId = PLACE_ID_BY_NAME[rec.name.trim()]
+      if (mappedId && !rec.geo) {
+        return { '@id': mappedId }
+      }
+    }
+    const out: Record<string, unknown> = {}
+    for (const [k, v] of Object.entries(rec)) {
+      if (k === '@context') continue
+      out[k] = normalizeNestedValue(v)
+    }
+    return out
+  }
+  return value
+}
+
+function stripContext(node: Record<string, unknown>): Record<string, unknown> {
+  const out: Record<string, unknown> = {}
+  for (const [k, v] of Object.entries(node)) {
+    if (k === '@context') continue
+    out[k] = k === '@id' || k === '@type' ? v : normalizeNestedValue(v)
+  }
+  return out
+}
+
+function collectIds(value: unknown, acc: Set<string>) {
+  if (Array.isArray(value)) {
+    for (const item of value) collectIds(item, acc)
+    return
+  }
+  if (value && typeof value === 'object') {
+    const rec = value as Record<string, unknown>
+    if (typeof rec['@id'] === 'string') acc.add(rec['@id'])
+    for (const v of Object.values(rec)) collectIds(v, acc)
+  }
+}
+
+/**
+ * Builds a single consolidated Schema.org @graph for a route:
+ * - Defines #website, #business, #agent, #jacklin-real-estate, #bhhs-brand,
+ *   and all referenced canonical Place nodes once per @graph (zero duplicates).
+ * - Preserves route-specific overrides (e.g. homepage #business with visible reviews).
+ */
+export function jsonLdGraph(pageNodes: Record<string, unknown>[]) {
+  const cleaned = pageNodes.map(stripContext)
+  const definedIds = new Set<string>()
+  for (const n of cleaned) {
+    if (typeof n['@id'] === 'string' && '@type' in n) definedIds.add(n['@id'])
+  }
+
+  const coreDefaults: Record<string, unknown>[] = [
+    WEBSITE_NODE,
+    BUSINESS_BASE_NODE,
+    AGENT_NODE,
+    JACKLIN_NODE,
+    BHHS_BRAND_NODE,
+  ]
+
+  const graph: Record<string, unknown>[] = []
+  for (const core of coreDefaults) {
+    const id = core['@id'] as string
+    if (!definedIds.has(id)) {
+      graph.push(core)
+      definedIds.add(id)
+    }
+  }
+  for (const node of cleaned) {
+    graph.push(node)
+  }
+
+  // Resolve any referenced canonical PLACE @ids (including parent counties/state) once
+  const referenced = new Set<string>()
+  collectIds(graph, referenced)
+  let addedPlace = true
+  while (addedPlace) {
+    addedPlace = false
+    for (const id of Array.from(referenced)) {
+      if (!definedIds.has(id) && id in PLACE_BY_ID) {
+        const placeNode = PLACE_BY_ID[id] as unknown as Record<string, unknown>
+        graph.push(placeNode)
+        definedIds.add(id)
+        collectIds(placeNode, referenced)
+        addedPlace = true
+      }
+    }
+  }
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': graph,
+  }
+}
 
 export const INFLATED_GEO_NAMES = [
   'Athol',

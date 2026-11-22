@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/are-north-idaho-buyers-pulling-back-housing-market'
 const sources = [
   { label: 'Realtor.com Economic Research, October 2026 Housing Report, published November 4, 2026 (checked November 5, 2026): nationally, homes under contract down 10.5% year over year, the steepest annual decline since October 2023, contract signings down 17%, active listings up 7.4% year over year to 1,183,500, new listings down 7.5% year over year to 357,000, median listing price $415,000 down 2.2% year over year, 20.5% of listings with a price reduction, delistings 4.4% of active listings compared with 4.6% a year earlier; all figures are national, not North Idaho figures', url: 'https://www.realtor.com/research/october-2026-data/' },
@@ -24,8 +24,9 @@ title: 'Are North Idaho Homebuyers Pulling Back? What the Latest Housing Data Me
 description: 'The national October pullback, checked against the local record: national pending sales down 10.5%, local closed sales up 4.0% year to date through September, local listings down slightly, and a 7.24% mortgage rate. No local October pending figure has been published yet, and this guide does not invent one.',
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-11-05',
+publishedTime: '2026-11-05T00:00:00-08:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -141,9 +142,7 @@ const contrastRows = [
 export default function BuyersPullingBackPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">

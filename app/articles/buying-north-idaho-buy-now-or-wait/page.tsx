@@ -2,7 +2,7 @@ import Image from 'next/image'
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, BASE_URL, placeStub } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, BASE_URL, placeStub, jsonLdGraph } from '@/lib/schema-ids'
 
 const SLUG = 'buying-north-idaho-buy-now-or-wait'
 const PAGE_URL = `${BASE_URL}/articles/${SLUG}`
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       'A practical August 2026 guide to buying a home in North Idaho: mortgage rates, affordability, seller negotiation, new construction, builder incentives, acreage, and where your budget goes furthest.',
     url: PAGE_URL,
     type: 'article',
-    publishedTime: '2026-08-19',
+    publishedTime: '2026-08-19T00:00:00-07:00',
     authors: ['Shirin Abplanalp'],
     images: [{ url: HERO_IMAGE, width: HERO_WIDTH, height: HERO_HEIGHT }],
   },
@@ -263,9 +263,7 @@ const dueDiligenceLinks = [
 export default function BuyNowOrWaitNorthIdahoPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
       {/* Hero */}
       <section className="bg-[#F5EFE6] pt-36 pb-16">
         <div className="max-w-5xl mx-auto px-6">

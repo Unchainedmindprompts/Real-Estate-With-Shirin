@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: "The Honest Answer About Moving to North Idaho | Shirin Abplanalp",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       'Where to find affordable homes, why North Idaho isn’t on cheapest-in-Idaho lists, the 2025 Census migration data, and the best small towns ranked by lifestyle — from an active local REALTOR.',
     url: 'https://www.realestatewithshirin.com/articles/moving-to-north-idaho-cheapest-places-migration-best-small-towns',
     type: 'article',
-    publishedTime: '2026-05-27',
+    publishedTime: '2026-05-27T00:00:00-07:00',
     modifiedTime: '2026-10-01',
     authors: ['Shirin Abplanalp'],
     images: ['https://www.realestatewithshirin.com/images/moving-to-north-idaho-honest-guide.png'],
@@ -217,9 +217,7 @@ const linkClass = 'text-[#C4842A] hover:underline'
 export default function MovingToNorthIdahoArticlePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 
       {/* Hero */}
       <section className="bg-[#F5EFE6] pt-36 pb-16">

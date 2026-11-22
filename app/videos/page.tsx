@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import VideoPlayer from '@/components/VideoPlayer'
 import { videos } from '@/lib/videos'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { riverfrontCard, shareImage } from '@/lib/hero-share'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 
 const BASE_URL = 'https://www.realestatewithshirin.com'
 const PAGE_URL = `${BASE_URL}/videos`
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
     description: "North Idaho real estate videos from Shirin Abplanalp.",
     url: PAGE_URL,
     type: 'website',
+    images: [shareImage(riverfrontCard)],
   },
 }
 
@@ -74,15 +76,10 @@ const videoSchemas = videos.map((v) => ({
 export default function VideosPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      {videoSchemas.map((s) => (
-        <script
-          key={s['@id']}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }}
-        />
-      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([collectionSchema, breadcrumbSchema, ...videoSchemas])) }}
+      />
 
       {/* Hero */}
       <section className="relative flex items-center justify-center" style={{ minHeight: '50vh' }}>

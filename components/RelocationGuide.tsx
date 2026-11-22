@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
-import { AGENT_NAME, BASE_URL, BROKERAGE_NAME, EMAIL, PHONE, PHONE_DISPLAY, WEBSITE_ID, AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, placeStub } from '@/lib/schema-ids'
+import { AGENT_NAME, BASE_URL, BROKERAGE_NAME, EMAIL, PHONE, PHONE_DISPLAY, WEBSITE_ID, AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, placeStub, jsonLdGraph } from '@/lib/schema-ids'
 
 type Source = { name: string; url: string }
 type FAQ = { q: string; a: string }
@@ -20,39 +20,36 @@ type GuideProps = {
 
 export default function RelocationGuide({ slug, title, description, datePublished, dateModified, image, imageAlt, faqs, sources, children }: GuideProps) {
   const url = `${BASE_URL}/articles/${slug}`
-  const graph = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'WebPage', '@id': `${url}#webpage`, url, name: title,
-        description, inLanguage: 'en-US', isPartOf: { '@id': WEBSITE_ID },
-        about: placeStub('northIdaho'), mainEntity: { '@id': `${url}#article` },
-        breadcrumb: { '@id': `${url}#breadcrumb` },
-      },
-      {
-        '@type': 'Article', '@id': `${url}#article`, url, headline: title,
-        description, author: AGENT_AUTHOR_STUB, publisher: BRAND_PUBLISHER_STUB,
-        datePublished, dateModified, inLanguage: 'en-US',
-        mainEntityOfPage: { '@id': `${url}#webpage` },
-        isPartOf: { '@id': `${BASE_URL}/articles` },
-        about: [placeStub('northIdaho'), placeStub('postFalls'), placeStub('coeurDalene')],
-        image: `${BASE_URL}${image}`,
-        citation: sources.map(({ name, url: sourceUrl }) => ({ '@type': 'WebPage', name, url: sourceUrl })),
-      },
-      {
-        '@type': 'BreadcrumbList', '@id': `${url}#breadcrumb`,
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-          { '@type': 'ListItem', position: 2, name: 'Articles', item: `${BASE_URL}/articles` },
-          { '@type': 'ListItem', position: 3, name: title, item: url },
-        ],
-      },
-      {
-        '@type': 'FAQPage', '@id': `${url}#faq`, isPartOf: { '@id': `${url}#webpage` },
-        mainEntity: faqs.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
-      },
-    ],
-  }
+  const graph = jsonLdGraph([
+    {
+      '@type': 'WebPage', '@id': `${url}#webpage`, url, name: title,
+      description, inLanguage: 'en-US', isPartOf: { '@id': WEBSITE_ID },
+      about: placeStub('northIdaho'), mainEntity: { '@id': `${url}#article` },
+      breadcrumb: { '@id': `${url}#breadcrumb` },
+    },
+    {
+      '@type': 'Article', '@id': `${url}#article`, url, headline: title,
+      description, author: AGENT_AUTHOR_STUB, publisher: BRAND_PUBLISHER_STUB,
+      datePublished, dateModified, inLanguage: 'en-US',
+      mainEntityOfPage: { '@id': `${url}#webpage` },
+      isPartOf: { '@id': `${BASE_URL}/articles` },
+      about: [placeStub('northIdaho'), placeStub('postFalls'), placeStub('coeurDalene')],
+      image: `${BASE_URL}${image}`,
+      citation: sources.map(({ name, url: sourceUrl }) => ({ '@type': 'WebPage', name, url: sourceUrl })),
+    },
+    {
+      '@type': 'BreadcrumbList', '@id': `${url}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
+        { '@type': 'ListItem', position: 2, name: 'Articles', item: `${BASE_URL}/articles` },
+        { '@type': 'ListItem', position: 3, name: title, item: url },
+      ],
+    },
+    {
+      '@type': 'FAQPage', '@id': `${url}#faq`, isPartOf: { '@id': `${url}#webpage` },
+      mainEntity: faqs.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+    },
+  ])
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph).replace(/</g, '\\u003c') }} />

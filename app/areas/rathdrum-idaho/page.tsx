@@ -1,16 +1,16 @@
-import type { Metadata } from 'next'
-import { BASE_URL, BUSINESS_ID, WEBSITE_ID, PLACE } from '@/lib/schema-ids'
+import { heroMetadata, riverfrontCard } from '@/lib/hero-share'
+import { BASE_URL, AGENT_ID, BUSINESS_ID, WEBSITE_ID, placeStub, jsonLdGraph } from '@/lib/schema-ids'
 import { IDX_SEARCH_BY_AREA } from '@/lib/idx-search'
 import AreaGuideTemplate from '@/components/editorial/AreaGuideTemplate'
 
 const PAGE_URL = `${BASE_URL}/areas/rathdrum-idaho`
 
-export const metadata: Metadata = {
-  title: 'Rathdrum Idaho Real Estate | Homes for Sale | Shirin Abplanalp',
-  description:
-    'Looking for homes in Rathdrum Idaho? Shirin Abplanalp is a licensed Rathdrum real estate agent with Berkshire Hathaway HomeServices Jacklin Real Estate. Expert buyer and seller representation.',
-  alternates: { canonical: PAGE_URL },
-}
+export const metadata = heroMetadata(
+  '/areas/rathdrum-idaho',
+  'Rathdrum Idaho Real Estate | Homes for Sale | Shirin Abplanalp',
+  'Looking for homes in Rathdrum Idaho? Shirin Abplanalp is a licensed Rathdrum real estate agent with Berkshire Hathaway HomeServices Jacklin Real Estate. Expert buyer and seller representation.',
+  riverfrontCard,
+)
 
 const FAQS = [
   {
@@ -37,8 +37,8 @@ const jsonLdService = {
   '@id': `${PAGE_URL}#service`,
   name: 'Real Estate Services — Rathdrum, Idaho',
   serviceType: 'Real estate representation',
-  provider: { '@id': BUSINESS_ID },
-  areaServed: PLACE.rathdrum,
+  provider: [{ '@id': BUSINESS_ID }, { '@id': AGENT_ID }],
+  areaServed: placeStub('rathdrum'),
 }
 
 const jsonLdWebPage = {
@@ -82,10 +82,10 @@ export default function RathdrumAreaPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebPage) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([jsonLdWebPage, jsonLdService, jsonLdBreadcrumb, jsonLdFaq])) }}
+      />
 
       <AreaGuideTemplate
         config={{

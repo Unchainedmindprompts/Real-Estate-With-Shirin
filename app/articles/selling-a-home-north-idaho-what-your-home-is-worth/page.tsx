@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/selling-a-home-north-idaho-what-your-home-is-worth'
 const sources = [
   { label: 'Homes.com: Coeur d\'Alene, ID city guide and housing trends (median sale price $575,000 over the last 12 months, down 2%; median list price $649,000; median single-family sale price $649,000; $407 average price per square foot; 1,010 sales; 4.6 months of supply; 46 days on market on average; median change from first list price 3%; checked October 28, 2026)', url: 'https://www.homes.com/local-guide/coeur-dalene-id/' },
@@ -23,8 +23,9 @@ title: "Selling a Home in North Idaho: What Your Home Is Worth in 2026",
 description: "Selling in Coeur d'Alene, Post Falls, Hayden, Rathdrum, or Sandpoint? The closed median sale prices, the asking median list prices, why the gap between them is not a discount rate, and how a comparative market analysis prices your specific home.",
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-10-28',
+publishedTime: '2026-10-28T00:00:00-07:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -173,9 +174,7 @@ const gapData = [
 export default function SellingHomeNorthIdahoPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">

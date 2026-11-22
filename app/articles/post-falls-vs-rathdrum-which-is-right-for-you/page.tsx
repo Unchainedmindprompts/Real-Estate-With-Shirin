@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/post-falls-vs-rathdrum-which-is-right-for-you'
 const sources = [
   { label: 'Zillow: Post Falls housing market and ZHVI typical home values', url: 'https://www.zillow.com/home-values/40420/post-falls-id/' },
@@ -25,8 +25,9 @@ title: "Post Falls vs. Rathdrum, Idaho: Which Is Right for You? (2026)",
 description: "Same sale price, different product. Post Falls and Rathdrum compared on entry price, days to pending, typical value, lots, new construction, growth, schools, services, and the Spokane commute.",
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-10-21',
+publishedTime: '2026-10-21T00:00:00-07:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -172,9 +173,7 @@ const comparisonRows = [
 export default function PostFallsVsRathdrumPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 {/* Hero */}
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">

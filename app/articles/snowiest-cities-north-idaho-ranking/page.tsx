@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: "Snowiest Cities in North Idaho: All 10 Towns Ranked",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       'Post Falls gets 40 inches. Priest Lake gets 120. A town-by-town snowfall ranking with real estate implications for buyers.',
     url: 'https://www.realestatewithshirin.com/articles/snowiest-cities-north-idaho-ranking',
     type: 'article',
-    publishedTime: '2026-05-27',
+    publishedTime: '2026-05-27T00:00:00-07:00',
     authors: ['Shirin Abplanalp'],
     images: ['https://www.realestatewithshirin.com/images/north-idaho-snowfall-ranking.webp'],
   },
@@ -171,7 +171,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What is the real difference for a home buyer between the Rathdrum Prairie and the Bonner County snow belt?',
+      name: 'What is the real practical difference for a home buyer between the Rathdrum Prairie and the Bonner County snow belt?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: "On a standard subdivision lot: the Rathdrum Prairie (Post Falls, Rathdrum, Hayden, CdA) needs a snowblower. Bonner County (Sandpoint, Priest River) likely needs a tractor with a blade or blower if you're on rural acreage. The other key difference is ground cover duration: the prairie averages 30–60 days of continuous snow cover per winter in broken stretches. Sandpoint averages 70–90 continuous days. That means more per-event snow management, more equipment wear, and more consideration for roof loads and private road access on rural properties.",
@@ -291,9 +291,7 @@ function getBarColor(zone: number): string {
 export default function SnowestCitiesArticlePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 
       {/* Hero */}
       <section className="bg-[#F5EFE6] pt-36 pb-16">

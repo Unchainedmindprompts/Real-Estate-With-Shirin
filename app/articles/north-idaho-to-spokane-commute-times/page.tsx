@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: "North Idaho to Spokane Commute Times (Town by Town)",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "Town-by-town route considerations, the official I-90 construction schedule, and a practical home-to-work test-drive checklist for buyers.",
     url: 'https://www.realestatewithshirin.com/articles/north-idaho-to-spokane-commute-times',
     type: 'article',
-    publishedTime: '2026-05-21',
+    publishedTime: '2026-05-21T00:00:00-07:00',
     modifiedTime: '2026-10-01',
     authors: ['Shirin Abplanalp'],
     images: ['https://www.realestatewithshirin.com/images/north-idaho-city-comparison.png'],
@@ -221,9 +221,7 @@ const breadcrumbSchema = {
 export default function CommuteTimesPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 
       {/* Hero */}
       <section className="relative flex items-center justify-center" style={{ minHeight: '60vh', backgroundColor: '#F5EFE6' }}>

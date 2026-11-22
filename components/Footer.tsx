@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { INSTAGRAM_HANDLE, INSTAGRAM_URL } from '@/lib/schema-ids'
+import { INSTAGRAM_HANDLE, INSTAGRAM_URL, BROKERAGE_PHONE, BROKERAGE_PHONE_DISPLAY } from '@/lib/schema-ids'
 
 export default function Footer() {
   return (
@@ -161,6 +161,16 @@ export default function Footer() {
                 <li className="text-sm" style={{ color: '#C4BDB4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                   1927 W. Riverstone Drive<br />
                   Coeur d&apos;Alene, ID 83814
+                </li>
+                <li className="text-xs pt-0.5" style={{ color: '#9E978E', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                  Brokerage Office:{' '}
+                  <a
+                    href={`tel:${BROKERAGE_PHONE.replace(/-/g, '')}`}
+                    className="transition-colors hover:underline"
+                    style={{ color: '#C4BDB4' }}
+                  >
+                    {BROKERAGE_PHONE_DISPLAY}
+                  </a>
                 </li>
               </ul>
             </div>

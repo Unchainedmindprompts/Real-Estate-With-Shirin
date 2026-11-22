@@ -1,16 +1,14 @@
-import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { BASE_URL, BUSINESS_ID, WEBSITE_ID } from '@/lib/schema-ids'
+import { heroMetadata, riverfrontCard } from '@/lib/hero-share'
+import { BASE_URL, BUSINESS_ID, WEBSITE_ID, jsonLdGraph } from '@/lib/schema-ids'
 
-export const metadata: Metadata = {
-  title: "Northern Idaho Real Estate Areas | Post Falls, Coeur d'Alene, Hayden",
-  description:
-    "Shirin Abplanalp serves buyers and sellers across Post Falls, Coeur d'Alene, Hayden, and Kootenai County Idaho.",
-  alternates: {
-    canonical: `${BASE_URL}/areas`,
-  },
-}
+export const metadata = heroMetadata(
+  '/areas',
+  "Northern Idaho Real Estate Areas | Post Falls, Coeur d'Alene, Hayden",
+  "Shirin Abplanalp serves buyers and sellers across Post Falls, Coeur d'Alene, Hayden, and Kootenai County Idaho.",
+  riverfrontCard,
+)
 
 const AREA_SLUGS = [
   'post-falls-idaho',
@@ -95,8 +93,10 @@ const FIVE_CITIES = [
 export default function AreasIndexPage() {
   return (
     <div className="ed-page">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCollection) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([jsonLdCollection, jsonLdBreadcrumb])) }}
+      />
 
       <section className="ed-forest-hero" style={{ paddingBottom: '78px' }} aria-labelledby="areas-hub-title">
         <div className="ed-hero-backdrop" aria-hidden="true" />

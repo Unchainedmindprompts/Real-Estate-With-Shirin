@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import fs from 'fs'
 import path from 'path'
-import { BASE_URL, BUSINESS_ID, WEBSITE_ID, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { BASE_URL, BUSINESS_ID, WEBSITE_ID, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 import { ARTICLES_INDEX } from '@/lib/articles-index'
 import ArticlesHubClient from '@/components/editorial/ArticlesHubClient'
 
@@ -50,8 +50,7 @@ const jsonLdBreadcrumb = {
 export default function ArticlesPage() {
   return (
     <div className="ed-page">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCollection) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([jsonLdCollection, jsonLdBreadcrumb])) }} />
 
       {/* Editorial Forest-Green Hero with Shirin Portrait */}
       <section className="ed-forest-hero" aria-labelledby="articles-page-title">

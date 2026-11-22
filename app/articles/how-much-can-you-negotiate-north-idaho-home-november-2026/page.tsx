@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/how-much-can-you-negotiate-north-idaho-home-november-2026'
 const sources = [
   { label: 'Fannie Mae Selling Guide B3-4.1-02, Interested Party Contributions, dated May 7, 2025 (checked November 6, 2026): on a conventional loan, maximum financing concessions for a principal residence or second home are 3% when loan to value is above 90%, 6% at 75.01% to 90%, and 9% at 75% or less, and 2% for an investment property at all ratios, calculated on the lower of the sales price or appraised value; contributions cannot fund the down payment, reserves, or minimum borrower contribution, cannot exceed the borrower actual closing costs, and a seller funded rate buydown counts toward the same maximum', url: 'https://selling-guide.fanniemae.com/sel/b3-4.1-02/interested-party-contributions-ipcs' },
@@ -24,8 +24,9 @@ title: 'How Much Can You Negotiate on a North Idaho Home in November 2026?',
 description: 'No promised discount. The negotiable ground in November 2026, with the hard loan limits: seller credits and buydowns share one capped pot on a conventional loan, national price cuts reached 20.5% of listings in October, and a 7.18% rate benchmark frames the buydown choice.',
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-11-06',
+publishedTime: '2026-11-06T00:00:00-08:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -137,9 +138,7 @@ const capRows = [
 export default function NegotiateNovemberPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">

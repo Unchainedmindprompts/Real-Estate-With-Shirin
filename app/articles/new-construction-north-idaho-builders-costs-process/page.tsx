@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/new-construction-north-idaho-builders-costs-process'
 const sources = [
   { label: 'National Association of Home Builders: Cost of Constructing a Home, 2024 Construction Cost Survey (average construction cost $428,215, about $162 per finished square foot on a 2,647 square foot home; construction is 64.4% of the average final sales price of $665,298; stage shares: interior finishes 24.1%, major systems rough-ins 19.2%, framing 16.6%, exterior finishes 13.4%, foundations 10.5%, site work 7.6%, final steps 6.5%; checked October 27, 2026)', url: 'https://www.nahb.org/-/media/AB4EFC742624475A97A0A62189986FF8.ashx?utm_medium=blog&utm_source=houseplans&utm_campaign=how-much-does-it-cost-to-build-a-small-house' },
@@ -29,8 +29,9 @@ title: "New Construction in North Idaho: Builders, Costs, and Process (2026)",
 description: "What does it cost to build new in Post Falls, Rathdrum, and Coeur d'Alene right now? The builders working here, the published starting prices, where the construction money goes, and the process from lot to keys, from a local REALTOR.",
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-10-27',
+publishedTime: '2026-10-27T00:00:00-07:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -167,9 +168,7 @@ const costStages = [
 export default function NewConstructionNorthIdahoPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">

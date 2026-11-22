@@ -1,7 +1,7 @@
 import { heroMetadata, lakeHouseCard } from '@/lib/hero-share'
 import Image from 'next/image'
 import Link from 'next/link'
-import { BASE_URL, BUSINESS_ID, WEBSITE_ID, MARKET_AREA_SERVED } from '@/lib/schema-ids'
+import { BASE_URL, AGENT_ID, BUSINESS_ID, WEBSITE_ID, MARKET_AREA_SERVED, jsonLdGraph } from '@/lib/schema-ids'
 import BuyersFitClient from '@/components/editorial/BuyersFitClient'
 import FaqAccordion from '@/components/editorial/FaqAccordion'
 
@@ -42,7 +42,7 @@ const jsonLdService = {
   name: 'Buyer Representation — Northern Idaho Real Estate',
   description:
     "Buyer representation for home purchases in Post Falls, Coeur d'Alene, Hayden, Rathdrum, Sandpoint, and the surrounding North Idaho market.",
-  provider: { '@id': BUSINESS_ID },
+  provider: [{ '@id': BUSINESS_ID }, { '@id': AGENT_ID }],
   areaServed: MARKET_AREA_SERVED,
   serviceType: 'Real Estate Buyer Representation',
 }
@@ -75,7 +75,7 @@ const jsonLdBreadcrumb = {
 const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  '@id': `${BASE_URL}/buyers/#faq`,
+  '@id': `${BASE_URL}/buyers#faq`,
   isPartOf: { '@id': `${BASE_URL}/buyers#webpage` },
   mainEntity: BUYER_FAQS.map((f) => ({
     '@type': 'Question',
@@ -87,10 +87,10 @@ const jsonLdFaq = {
 export default function BuyersPage() {
   return (
     <div className="ed-page">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebPage) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([jsonLdWebPage, jsonLdService, jsonLdBreadcrumb, jsonLdFaq])) }}
+      />
 
       {/* Distinct Residential North Idaho Hero */}
       <section className="ed-photo-hero" aria-labelledby="buyers-title">

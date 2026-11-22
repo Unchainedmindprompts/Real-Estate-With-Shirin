@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/buying-lakefront-property-north-idaho-lake-coeur-dalene-hayden-lake-pend-oreille'
 const sources = [
   { label: 'Idaho Department of Lands: navigable waterways, the Lake Protection Act, and dock and encroachment permits', url: 'https://www.idl.idaho.gov/lakes-rivers/' },
@@ -35,8 +35,9 @@ title: "Buying Lakefront Property in North Idaho (2026 Guide)",
 description: "Lake Coeur d'Alene, Hayden Lake, and Lake Pend Oreille compared on frontage pricing, dock and encroachment permits, water and septic, and seasonal lake levels, using only figures already published on this site plus primary Idaho sources.",
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-10-22',
+publishedTime: '2026-10-22T00:00:00-07:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -241,9 +242,7 @@ const comparisonRows = [
 export default function BuyingLakefrontNorthIdahoPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 {/* Hero */}
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">

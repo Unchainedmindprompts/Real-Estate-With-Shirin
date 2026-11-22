@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: 'North Idaho Micro-Climates: Rathdrum Prairie vs. Sandpoint Snowfall | Shirin Abplanalp',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "40 inches or 90 inches — it depends entirely on which side of the lake you land on. A working Realtor's honest breakdown of North Idaho winters.",
     url: 'https://www.realestatewithshirin.com/articles/north-idaho-microclimates-rathdrum-prairie-sandpoint-snow',
     type: 'article',
-    publishedTime: '2026-05-17',
+    publishedTime: '2026-05-17T00:00:00-07:00',
     authors: ['Shirin Abplanalp'],
     images: ['https://www.realestatewithshirin.com/images/north-idaho-winter-homes.webp'],
   },
@@ -252,9 +252,7 @@ const faqs = [
 export default function MicroClimatesArticlePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 
       {/* Hero */}
       <section className="bg-[#F5EFE6] pt-36 pb-16">

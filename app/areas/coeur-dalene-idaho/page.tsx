@@ -1,21 +1,19 @@
-import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { BASE_URL, BUSINESS_ID, WEBSITE_ID, PLACE } from '@/lib/schema-ids'
+import { heroMetadata, riverfrontCard } from '@/lib/hero-share'
+import { BASE_URL, AGENT_ID, BUSINESS_ID, WEBSITE_ID, placeStub, jsonLdGraph } from '@/lib/schema-ids'
 import { IDX_SEARCH_BY_AREA } from '@/lib/idx-search'
 import CdaInteractiveClient from '@/components/editorial/CdaInteractiveClient'
 import FaqAccordion from '@/components/editorial/FaqAccordion'
 
 const PAGE_URL = `${BASE_URL}/areas/coeur-dalene-idaho`
 
-export const metadata: Metadata = {
-  title: "Coeur d'Alene Real Estate: Prices, Neighborhoods & Lakefront",
-  description:
-    "The median Coeur d'Alene home runs $601,000. What each budget buys, every neighborhood from Fort Grounds to Blackwell Hill, and how lakefront really prices.",
-  alternates: {
-    canonical: PAGE_URL,
-  },
-}
+export const metadata = heroMetadata(
+  '/areas/coeur-dalene-idaho',
+  "Coeur d'Alene Real Estate: Prices, Neighborhoods & Lakefront",
+  "The median Coeur d'Alene home runs $601,000. What each budget buys, every neighborhood from Fort Grounds to Blackwell Hill, and how lakefront really prices.",
+  riverfrontCard,
+)
 
 const jsonLdService = {
   '@context': 'https://schema.org',
@@ -23,8 +21,8 @@ const jsonLdService = {
   '@id': `${PAGE_URL}#service`,
   name: "Real Estate Services — Coeur d'Alene, Idaho",
   serviceType: 'Real estate representation',
-  provider: { '@id': BUSINESS_ID },
-  areaServed: PLACE.coeurDalene,
+  provider: [{ '@id': BUSINESS_ID }, { '@id': AGENT_ID }],
+  areaServed: placeStub('coeurDalene'),
 }
 
 const jsonLdWebPage = {
@@ -144,10 +142,10 @@ export default function CoeurDaleneAreaPage() {
 
   return (
     <div className="ed-page">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebPage) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([jsonLdWebPage, jsonLdService, jsonLdBreadcrumb, jsonLdFaq])) }}
+      />
 
       {/* Full-Bleed Lake Coeur d'Alene Hero */}
       <section className="ed-photo-hero is-tall" aria-labelledby="cda-title">

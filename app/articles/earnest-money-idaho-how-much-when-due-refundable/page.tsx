@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/earnest-money-idaho-how-much-when-due-refundable'
 const sources = [
   { label: 'Idaho Code 54-2051, Idaho Legislature: every offer to purchase must state (b) the actual form and amount of the consideration received as earnest money, and (e) a provision for division of earnest money retained as forfeited payment if the transaction does not close (checked October 29, 2026)', url: 'https://legislature.idaho.gov/statutesrules/idstat/title54/t54ch20/sect54-2051/' },
@@ -24,8 +24,9 @@ title: "Earnest Money in Idaho: How Much, When It Is Due, and When You Get It Ba
 description: "The amount is negotiated, not set by statute: 1 to 3 percent in practice, three business days to deliver if the RE-21 blank is left empty, who holds the deposit in Idaho, and the contract rules that decide refunds.",
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-10-29',
+publishedTime: '2026-10-29T00:00:00-07:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -140,9 +141,7 @@ const earnestRows = [
 export default function EarnestMoneyIdahoPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/sell-before-holidays-or-wait-until-spring-north-idaho'
 const sources = [
   { label: 'National Association of REALTORS, Economists Outlook, December Market Dynamics: Sales, Inventory, and Buyer Trends (checked November 7, 2026): historical national seasonal averages show December is usually the month with the fewest homes for sale, inventory typically drops about 9.4% from November to December, average existing home sales typically rise about 3.9% from November to December and then fall about 27.2% in January, December prices average about 0.5% higher than November which NAR attributes to fewer listings, first time buyers average about 31.8% of sales and all cash buyers about 21.7%, and NAR attributes December motivated buyers to year end tax incentives, January job relocations, and families wanting a child in a new school for the second term', url: 'https://www.nar.realtor/news/economists-outlook/decembers-market-dynamics-sales-inventory-and-buyer-trends' },
@@ -24,8 +24,9 @@ title: 'Sell Before the Holidays or Wait Until Spring? A North Idaho Seller’s 
 description: 'The holiday market is smaller, not dead, and its buyers are deadline driven. What waiting for spring historically buys nationally, what it costs, and how to decide for your own North Idaho home.',
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-11-07',
+publishedTime: '2026-11-07T00:00:00-08:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -130,9 +131,7 @@ const cityRows = [
 export default function SellHolidaysOrSpringPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">

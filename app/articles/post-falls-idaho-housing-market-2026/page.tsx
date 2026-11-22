@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 export const metadata: Metadata = {
 title: 'Post Falls, ID Housing Market 2026: Trends & Forecast',
 description: "Buyer's or seller's market in Post Falls for 2026? Inventory, days on market, and where prices are heading — from a REALTOR who works it daily.",
@@ -13,8 +13,9 @@ title: 'Post Falls, ID Housing Market 2026: Trends & Forecast',
 description: "Buyer's or seller's market in Post Falls for 2026? Inventory, days on market, and where prices are heading — from a REALTOR who works it daily.",
 url: 'https://www.realestatewithshirin.com/articles/post-falls-idaho-housing-market-2026',
 type: 'article',
-publishedTime: '2026-03-18',
+publishedTime: '2026-03-18T00:00:00-07:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/north-idaho-neighborhood.png'],
   },
 }
 const articleSchema = {
@@ -155,9 +156,7 @@ const breadcrumbSchema = {
 export default function PostFallsHousingMarket2026Page() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 {/* Hero */}
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">

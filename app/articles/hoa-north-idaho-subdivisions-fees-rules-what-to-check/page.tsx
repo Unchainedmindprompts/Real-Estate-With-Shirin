@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/hoa-north-idaho-subdivisions-fees-rules-what-to-check'
 const sources = [
   { label: 'Idaho Legislature, Idaho Code Title 55, Chapter 32, the Homeowner’s Association Act, sections 55-3201 to 55-3213 (chapter index checked November 3, 2026): the Act was created in 2022 and amended since; older secondary sources citing sections 55-115 and 55-116 describe rules that now live in Chapter 32, principally sections 55-3205 and 55-3206', url: 'https://legislature.idaho.gov/statutesrules/idstat/Title55/T55CH32/' },
@@ -28,8 +28,9 @@ title: 'HOAs in North Idaho Subdivisions: Fees, Rules, and What to Check Before 
 description: 'In Idaho the subdivision documents, not a state schedule, set the fees and the rules. The checks the Homeowner’s Association Act gives you before closing: the free binding statement of account, the January 1 fee disclosure, and the CC&R clauses to read first.',
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-11-03',
+publishedTime: '2026-11-03T00:00:00-08:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -145,9 +146,7 @@ const checkRows = [
 export default function HoaNorthIdahoSubdivisionsPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">

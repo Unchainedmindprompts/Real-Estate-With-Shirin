@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/priest-river-idaho-real-estate-guide'
 const sources = [
   { label: 'Homes.com: Priest River, ID city guide and housing trends (median sale price $409,000 over the last 12 months, up 4%; median list price $449,000; median single-family sale price $419,950; $335 average price per square foot; 67 sales; 3.6 months of supply; checked October 2026)', url: 'https://www.homes.com/local-guide/priest-river-id/' },
@@ -23,8 +23,9 @@ title: "Priest River, Idaho Real Estate in 2026 (What Buyers Pay)",
 description: "What does a home actually cost in Priest River right now? A local REALTOR breaks down 2026 prices by budget, the Priest River versus Priest Lake distinction, and how the town compares to Sandpoint and the other North Idaho cities.",
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-10-24',
+publishedTime: '2026-10-24T00:00:00-07:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -186,9 +187,7 @@ const marketComparisons = [
 export default function PriestRiverRealEstateGuidePage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">

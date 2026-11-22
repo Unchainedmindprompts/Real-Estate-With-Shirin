@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 export const metadata: Metadata = {
 title: "Best Realtor in North Idaho: How to Choose One (2026)",
 description:
@@ -14,8 +14,9 @@ title: "Best Realtor in North Idaho: How to Choose One (2026 Guide)",
 description: "There is no single best realtor for everyone in North Idaho. Here is how to evaluate any agent on checkable criteria, and how one local agent measures up against them.",
 url: 'https://www.realestatewithshirin.com/articles/best-realtor-north-idaho-how-to-choose',
 type: 'article',
-publishedTime: '2026-10-18',
+publishedTime: '2026-10-18T00:00:00-07:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const articleSchema = {
@@ -176,9 +177,7 @@ const criteria = [
 export default function BestRealtorNorthIdahoPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 {/* Hero */}
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">

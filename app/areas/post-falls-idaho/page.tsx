@@ -1,16 +1,16 @@
-import type { Metadata } from 'next'
-import { BASE_URL, BUSINESS_ID, WEBSITE_ID, PLACE } from '@/lib/schema-ids'
+import { heroMetadata, riverfrontCard } from '@/lib/hero-share'
+import { BASE_URL, AGENT_ID, BUSINESS_ID, WEBSITE_ID, placeStub, jsonLdGraph } from '@/lib/schema-ids'
 import { IDX_SEARCH_BY_AREA } from '@/lib/idx-search'
 import AreaGuideTemplate from '@/components/editorial/AreaGuideTemplate'
 
 const PAGE_URL = `${BASE_URL}/areas/post-falls-idaho`
 
-export const metadata: Metadata = {
-  title: 'Post Falls, Idaho Real Estate & Living Guide',
-  description:
-    'Compare Post Falls homes, Spokane commute tradeoffs, new construction, and ownership costs. A practical relocation and buying guide from Shirin Abplanalp.',
-  alternates: { canonical: PAGE_URL },
-}
+export const metadata = heroMetadata(
+  '/areas/post-falls-idaho',
+  'Post Falls, Idaho Real Estate & Living Guide',
+  'Compare Post Falls homes, Spokane commute tradeoffs, new construction, and ownership costs. A practical relocation and buying guide from Shirin Abplanalp.',
+  riverfrontCard,
+)
 
 const FAQS = [
   {
@@ -41,8 +41,8 @@ const jsonLdService = {
   '@id': `${PAGE_URL}#service`,
   name: 'Real Estate Services — Post Falls, Idaho',
   serviceType: 'Real estate representation',
-  provider: { '@id': BUSINESS_ID },
-  areaServed: PLACE.postFalls,
+  provider: [{ '@id': BUSINESS_ID }, { '@id': AGENT_ID }],
+  areaServed: placeStub('postFalls'),
 }
 
 const jsonLdWebPage = {
@@ -86,10 +86,10 @@ export default function PostFallsAreaPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebPage) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([jsonLdWebPage, jsonLdService, jsonLdBreadcrumb, jsonLdFaq])) }}
+      />
 
       <AreaGuideTemplate
         config={{

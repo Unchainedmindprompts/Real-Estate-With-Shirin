@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: "Buying a Home Without a Buyer's Agent in 2026: What North Idaho Buyers Need to Know | Shirin Abplanalp",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "What the NAR settlement changed, the open house exemption, what solo buyers risk losing, and how to structure a BRA that actually works for you.",
     url: 'https://www.realestatewithshirin.com/articles/buying-home-without-agent-nar-settlement-north-idaho',
     type: 'article',
-    publishedTime: '2026-05-22',
+    publishedTime: '2026-05-22T00:00:00-07:00',
     authors: ['Shirin Abplanalp'],
     images: ['https://www.realestatewithshirin.com/images/unrepresented-buyers-nar-settlement.webp'],
   },
@@ -261,9 +261,7 @@ const faqs = [
 export default function NARSettlementPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 
       {/* Hero */}
       <section className="relative flex items-center justify-center" style={{ minHeight: '60vh', backgroundColor: '#F5EFE6' }}>

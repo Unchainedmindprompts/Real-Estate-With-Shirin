@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/idaho-homestead-exemption-two-exemptions-explained'
 const sources = [
   { label: 'Idaho Legislature, Idaho Code 55-1003 (checked October 31, 2026): a homestead may consist of lands regardless of area, but the homestead exemption amount shall not exceed $175,000', url: 'https://legislature.idaho.gov/statutesrules/idstat/Title55/T55CH10/SECT55-1003' },
@@ -30,8 +30,9 @@ title: "Idaho's Homestead Exemption, Explained: Two Different Exemptions",
 description: "Two exemptions, one name: $175,000 of equity protected from most creditors under Title 55, and 50 percent of assessed value up to $125,000 exempt from property tax under 63-602G. Who qualifies, how to claim each, and which deadline is real.",
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-10-31',
+publishedTime: '2026-10-31T00:00:00-07:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -143,9 +144,7 @@ const taxBars = [
 export default function IdahoHomesteadExemptionPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">

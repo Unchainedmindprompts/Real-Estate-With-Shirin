@@ -1,16 +1,16 @@
-import type { Metadata } from 'next'
-import { BASE_URL, BUSINESS_ID, WEBSITE_ID, PLACE } from '@/lib/schema-ids'
+import { heroMetadata, riverfrontCard } from '@/lib/hero-share'
+import { BASE_URL, AGENT_ID, BUSINESS_ID, WEBSITE_ID, placeStub, jsonLdGraph } from '@/lib/schema-ids'
 import { IDX_SEARCH_BY_AREA } from '@/lib/idx-search'
 import AreaGuideTemplate from '@/components/editorial/AreaGuideTemplate'
 
 const PAGE_URL = `${BASE_URL}/areas/bonner-county`
 
-export const metadata: Metadata = {
-  title: 'Bonner County, Idaho Real Estate & Rural Market Guide',
-  description:
-    "Bonner County is Sandpoint, Ponderay, Priest River, Priest Lake, and Schweitzer — quieter, more rural, and a different set of buying considerations than Kootenai County. A local REALTOR's honest guide.",
-  alternates: { canonical: PAGE_URL },
-}
+export const metadata = heroMetadata(
+  '/areas/bonner-county',
+  'Bonner County, Idaho Real Estate & Rural Market Guide',
+  "Bonner County is Sandpoint, Ponderay, Priest River, Priest Lake, and Schweitzer — quieter, more rural, and a different set of buying considerations than Kootenai County. A local REALTOR's honest guide.",
+  riverfrontCard,
+)
 
 const FAQS = [
   {
@@ -37,8 +37,8 @@ const jsonLdService = {
   '@id': `${PAGE_URL}#service`,
   name: 'Real Estate Services — Bonner County, Idaho',
   serviceType: 'Real estate representation',
-  provider: { '@id': BUSINESS_ID },
-  areaServed: PLACE.bonner,
+  provider: [{ '@id': BUSINESS_ID }, { '@id': AGENT_ID }],
+  areaServed: placeStub('bonner'),
 }
 
 const jsonLdWebPage = {
@@ -82,10 +82,10 @@ export default function BonnerCountyAreaPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebPage) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([jsonLdWebPage, jsonLdService, jsonLdBreadcrumb, jsonLdFaq])) }}
+      />
 
       <AreaGuideTemplate
         config={{

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: 'Best Places to Live in North Idaho for People Leaving California (2026 Relocation Guide) | Shirin Abplanalp',
@@ -14,8 +14,9 @@ export const metadata: Metadata = {
     description: "A 2026 relocation guide for Californians moving to North Idaho. Compare Coeur d'Alene, Post Falls, Hayden, and Sandpoint for cost, lifestyle, taxes, and community.",
     url: 'https://www.realestatewithshirin.com/articles/best-places-to-live-north-idaho-leaving-california',
     type: 'article',
-    publishedTime: '2026-04-22',
+    publishedTime: '2026-04-22T00:00:00-07:00',
     authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/north-idaho-family-home.png'],
   },
 }
 
@@ -210,9 +211,7 @@ const breadcrumbSchema = {
 export default function BestPlacesNorthIdahoCaliforniaPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 
       {/* Hero */}
       <section className="bg-[#F5EFE6] pt-36 pb-16">

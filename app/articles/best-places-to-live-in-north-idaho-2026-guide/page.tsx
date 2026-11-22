@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 export const metadata: Metadata = {
 title: "Best Places to Live in North Idaho (2026 Guide)",
 description:
@@ -14,8 +14,9 @@ title: "Best Places to Live in North Idaho (2026 Guide)",
 description: "There is no single best place in North Idaho, only the best fit for your budget and the life you want. A data-led ranking of the five main cities, plus the small towns, with every figure traced to the published city comparison.",
 url: 'https://www.realestatewithshirin.com/articles/best-places-to-live-in-north-idaho-2026-guide',
 type: 'article',
-publishedTime: '2026-10-19',
+publishedTime: '2026-10-19T00:00:00-07:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const articleSchema = {
@@ -171,9 +172,7 @@ const ranking = [
 export default function BestPlacesNorthIdahoPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 {/* Hero */}
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">

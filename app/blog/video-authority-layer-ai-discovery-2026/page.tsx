@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: 'The Video Authority Layer: How AI Discovery Is Changing Real Estate in 2026 | Shirin Abplanalp',
@@ -18,8 +18,10 @@ export const metadata: Metadata = {
     description: 'AI-powered search is reshaping how buyers find real estate agents. Why video has become the trust signal for AI discovery.',
     url: 'https://www.realestatewithshirin.com/blog/video-authority-layer-ai-discovery-2026',
     type: 'article',
-    publishedTime: '2026-03-23',
+    publishedTime: '2026-03-23T00:00:00-07:00',
+    modifiedTime: '2026-08-17T00:00:00-07:00',
     authors: ['Shirin Abplanalp'],
+    images: [{ url: 'https://www.realestatewithshirin.com/images/north-idaho-lake-hero.webp', width: 1672, height: 941 }],
   },
 }
 
@@ -32,13 +34,13 @@ const articleSchema = {
   image: {
     '@type': 'ImageObject',
     url: 'https://www.realestatewithshirin.com/images/north-idaho-lake-hero.webp',
-    width: 1200,
-    height: 800,
+    width: 1672,
+    height: 941,
   },
   author: AGENT_AUTHOR_STUB,
   publisher: BRAND_PUBLISHER_STUB,
-  datePublished: '2026-03-23',
-  dateModified: '2026-08-17',
+  datePublished: '2026-03-23T00:00:00-07:00',
+  dateModified: '2026-08-17T00:00:00-07:00',
   mainEntityOfPage: 'https://www.realestatewithshirin.com/blog/video-authority-layer-ai-discovery-2026',
   url: 'https://www.realestatewithshirin.com/blog/video-authority-layer-ai-discovery-2026',
   keywords: [
@@ -63,7 +65,7 @@ const articleSchema = {
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  '@id': 'https://www.realestatewithshirin.com/blog/video-authority-layer-ai-discovery-2026/#faq',
+  '@id': 'https://www.realestatewithshirin.com/blog/video-authority-layer-ai-discovery-2026#faq',
   isPartOf: { '@id': 'https://www.realestatewithshirin.com/blog/video-authority-layer-ai-discovery-2026#article' },
   mainEntity: [
     {
@@ -104,6 +106,7 @@ const faqSchema = {
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.realestatewithshirin.com/blog/video-authority-layer-ai-discovery-2026#breadcrumb',
   itemListElement: [
     {
       '@type': 'ListItem',
@@ -123,9 +126,10 @@ const breadcrumbSchema = {
 export default function VideoAuthorityLayerPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }}
+      />
 
       {/* Hero */}
       <section className="bg-[#F5EFE6] pt-36 pb-16">

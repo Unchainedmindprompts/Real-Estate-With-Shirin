@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/appeal-property-tax-assessment-idaho-kootenai-bonner'
 const sources = [
   { label: 'Idaho Legislature, Idaho Code 63-501A (checked November 1, 2026): a taxpayer may appeal an assessment in writing on a form provided by the county board of equalization or assessor, identifying the taxpayer, the property, and the reason; an appeal on the property roll must be filed on or before the end of the county normal business hours on the fourth Monday of June, on the subsequent roll by the fourth Monday of November, and on the missed roll before the board adjourns at its January meeting', url: 'https://legislature.idaho.gov/statutesrules/idstat/Title63/T63CH5/SECT63-501A/' },
@@ -28,8 +28,9 @@ title: 'How to Appeal Your Property Tax Assessment in Idaho',
 description: 'Appeal the January 1 market value, not the tax bill. File the county Board of Equalization form by the fourth Monday in June, June 28, 2027 next. Talking to the assessor first helps, but it does not file an appeal.',
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-11-01',
+publishedTime: '2026-11-01T00:00:00-07:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -146,9 +147,7 @@ const timelineRows = [
 export default function AppealPropertyTaxAssessmentPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">

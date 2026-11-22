@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/first-time-home-buyer-north-idaho-idaho-housing-down-payment'
 const sources = [
   { label: 'Idaho Housing and Finance Association: down payment and closing cost assistance (up to 8% of the sales price as a second mortgage, $500 minimum own funds, $170,000 income limit, Finally Home! education)', url: 'https://www.idahohousing.com/homebuyers/down-payment-closing-cost-assistance/' },
@@ -23,8 +23,9 @@ title: "First-Time Home Buyer in North Idaho: Idaho Housing Programs and Down Pa
 description: "Up to 8 percent of the price in Idaho Housing down payment assistance, the $500 minimum contribution, the $170,000 income limit, Finally Home! education, and the step-by-step path to a Coeur d'Alene closing.",
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-10-21',
+publishedTime: '2026-10-21T00:00:00-07:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -136,9 +137,7 @@ const downPaymentRows = [
 export default function FirstTimeBuyerNorthIdahoPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 {/* Hero */}
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">

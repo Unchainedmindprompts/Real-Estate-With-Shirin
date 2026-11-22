@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 export const metadata: Metadata = {
 title: "Post Falls Home Prices 2026: What Buyers Actually Pay",
 description:
@@ -14,8 +14,9 @@ title: "Post Falls, Idaho Home Prices in 2026 (What Buyers Pay)",
 description: "What does a home actually cost in Post Falls right now? A local REALTOR breaks down 2026 prices by home type, neighborhood, and budget — see the full picture.",
 url: 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-post-falls-idaho',
 type: 'article',
-publishedTime: '2026-03-18',
+publishedTime: '2026-03-18T00:00:00-07:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const articleSchema = {
@@ -168,9 +169,7 @@ const marketComparisons = [
 export default function HomesPricesPostFallsPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 {/* Hero */}
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">

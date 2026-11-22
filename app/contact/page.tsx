@@ -1,16 +1,14 @@
-import type { Metadata } from 'next'
 import Image from 'next/image'
-import { BASE_URL, WEBSITE_ID, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { heroMetadata, riverfrontCard } from '@/lib/hero-share'
+import { BASE_URL, WEBSITE_ID, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 import EditorialContactForm from '@/components/editorial/EditorialContactForm'
 
-export const metadata: Metadata = {
-  title: 'Contact Shirin Abplanalp | Northern Idaho Realtor · Berkshire Hathaway HomeServices Jacklin Real Estate',
-  description:
-    "Get in touch with Shirin Abplanalp, licensed Northern Idaho realtor at Berkshire Hathaway HomeServices Jacklin Real Estate. Serving Post Falls, Coeur d'Alene, Hayden, and Kootenai County.",
-  alternates: {
-    canonical: `${BASE_URL}/contact`,
-  },
-}
+export const metadata = heroMetadata(
+  '/contact',
+  'Contact Shirin Abplanalp | Northern Idaho Realtor · Berkshire Hathaway HomeServices Jacklin Real Estate',
+  "Get in touch with Shirin Abplanalp, licensed Northern Idaho realtor at Berkshire Hathaway HomeServices Jacklin Real Estate. Serving Post Falls, Coeur d'Alene, Hayden, and Kootenai County.",
+  riverfrontCard,
+)
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -37,8 +35,10 @@ const jsonLdBreadcrumb = {
 export default function ContactPage() {
   return (
     <div className="ed-page">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([jsonLd, jsonLdBreadcrumb])) }}
+      />
 
       {/* Deep Forest-Green Editorial Hero */}
       <section className="ed-forest-hero" style={{ paddingBottom: '74px' }} aria-labelledby="contact-title">

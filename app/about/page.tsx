@@ -1,16 +1,14 @@
-import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { BASE_URL, WEBSITE_ID, AGENT_AUTHOR_STUB } from '@/lib/schema-ids'
+import { heroMetadata, riverfrontCard } from '@/lib/hero-share'
+import { BASE_URL, WEBSITE_ID, AGENT_AUTHOR_STUB, jsonLdGraph } from '@/lib/schema-ids'
 
-export const metadata: Metadata = {
-  title: 'About Shirin Abplanalp | North Idaho REALTOR®',
-  description:
-    'About Shirin Abplanalp, licensed North Idaho REALTOR® at BHHS Jacklin Real Estate. 11 years in real estate, 100+ transactions closed, 5× Top Producer.',
-  alternates: {
-    canonical: `${BASE_URL}/about`,
-  },
-}
+export const metadata = heroMetadata(
+  '/about',
+  'About Shirin Abplanalp | North Idaho REALTOR®',
+  'About Shirin Abplanalp, licensed North Idaho REALTOR® at BHHS Jacklin Real Estate. 11 years in real estate, 100+ transactions closed, 5× Top Producer.',
+  riverfrontCard,
+)
 
 const jsonLdProfile = {
   '@context': 'https://schema.org',
@@ -37,8 +35,10 @@ const jsonLdBreadcrumb = {
 export default function AboutPage() {
   return (
     <div className="ed-page">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdProfile) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([jsonLdProfile, jsonLdBreadcrumb])) }}
+      />
 
       {/* Deep Forest-Green Hero with Shirin's Emerald-Blouse Editorial Portrait */}
       <section className="ed-forest-hero" aria-labelledby="about-title">

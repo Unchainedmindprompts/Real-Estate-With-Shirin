@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: 'North Idaho Healthcare Guide: Kootenai Health, Northwest Specialty & Spokane Commutes | Shirin Abplanalp',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "For the overwhelming majority of medical needs, you do not need to drive to Spokane. Here's what North Idaho's healthcare ecosystem actually looks like.",
     url: 'https://www.realestatewithshirin.com/articles/north-idaho-healthcare-kootenai-spokane',
     type: 'article',
-    publishedTime: '2026-05-23',
+    publishedTime: '2026-05-23T00:00:00-07:00',
     authors: ['Shirin Abplanalp'],
     images: ['https://www.realestatewithshirin.com/images/north-idaho-kootenai-health-helicopter.webp'],
   },
@@ -295,9 +295,7 @@ const faqs = [
 export default function NorthIdahoHealthcarePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 
       {/* Hero */}
       <section className="bg-[#F5EFE6] pt-36 pb-16">

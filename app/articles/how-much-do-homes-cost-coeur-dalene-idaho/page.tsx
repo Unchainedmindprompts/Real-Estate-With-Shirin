@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 export const metadata: Metadata = {
 title: "Coeur d'Alene Home Prices 2026: What Buyers Actually Pay",
 description:
@@ -14,8 +14,9 @@ title: "Coeur d'Alene, Idaho Home Prices in 2026 (What Buyers Pay)",
 description: "What does a home actually cost in Coeur d'Alene right now? A local REALTOR breaks down 2026 prices by neighborhood and budget, from the under-$500K pockets to the lakefront.",
 url: 'https://www.realestatewithshirin.com/articles/how-much-do-homes-cost-coeur-dalene-idaho',
 type: 'article',
-publishedTime: '2026-10-15',
+publishedTime: '2026-10-15T00:00:00-07:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const articleSchema = {
@@ -168,9 +169,7 @@ const marketComparisons = [
 export default function HomesPricesCoeurDalenePage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 {/* Hero */}
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">

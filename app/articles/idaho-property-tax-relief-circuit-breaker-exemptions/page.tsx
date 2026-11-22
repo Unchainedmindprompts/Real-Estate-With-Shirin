@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/idaho-property-tax-relief-circuit-breaker-exemptions'
 const sources = [
   { label: 'Idaho State Tax Commission, Property Tax Reduction page (updated September 23, 2026, rechecked November 12, 2026): the program could reduce property taxes by $250 to $1,500 on a home and up to one acre of land; 2027 eligibility requires total 2026 income after deducting medical expenses of $40,030 or less, a qualifying status as of January 1, 2027, and ownership and primary residence before April 15, 2027 with a current homeowner\'s exemption; applications run January 1 to April 15, 2027 and an approved benefit appears on the December 2027 bill; the program does not reduce solid waste, irrigation, or other fees; program phone (208) 334-7736', url: 'https://tax.idaho.gov/taxes/property/homeowners/reduction/' },
@@ -27,8 +27,9 @@ title: 'Idaho Property Tax Relief: The Circuit Breaker, Exemptions, and Programs
 description: 'The 2027 figures, checked November 12, 2026: Circuit Breaker $250 to $1,500, income limit $40,030 on 2026 income, veterans benefit up to $1,500 with no income limit, and deferral at a $63,400 limit that postpones tax instead of reducing it.',
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-11-12',
+publishedTime: '2026-11-12T00:00:00-08:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -146,9 +147,7 @@ const bracketBars = [
 export default function IdahoPropertyTaxReliefPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">

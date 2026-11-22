@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/short-term-rental-rules-north-idaho-cities'
 const sources = [
   { label: 'Idaho Legislature: House Bill 583 (2026), amending Idaho Code 67-6539 and 63-1804 (67-6539(5): no county or city shall require a license, fee, permit, certification, or registration to operate a short-term rental; 67-6539(3): the five safety items a city may still require; Section 3: effective July 1, 2026; checked October 26, 2026)', url: 'https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/legislation/H0583.pdf' },
@@ -24,8 +24,9 @@ title: "Short-Term Rental Rules in North Idaho Cities (2026)",
 description: "Do you need a permit for an Airbnb in Coeur d'Alene, Post Falls, Hayden, or Sandpoint? Since July 1, 2026, the answer at city hall is no. The state law, the safety list that remains, and the taxes that did not go away, from a local REALTOR.",
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-10-26',
+publishedTime: '2026-10-26T00:00:00-07:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -160,9 +161,7 @@ const safetyItems = [
 export default function ShortTermRentalRulesNorthIdahoPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">

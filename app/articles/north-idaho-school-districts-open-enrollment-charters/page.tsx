@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: 'North Idaho School Districts: Open Enrollment, Charters & District Boundaries | Shirin Abplanalp',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Which school district your address falls into matters far less than it used to — but knowing the lay of the land before you make an offer still saves real headaches later.",
     url: 'https://www.realestatewithshirin.com/articles/north-idaho-school-districts-open-enrollment-charters',
     type: 'article',
-    publishedTime: '2026-05-21',
+    publishedTime: '2026-05-21T00:00:00-07:00',
     authors: ['Shirin Abplanalp'],
     images: ['https://www.realestatewithshirin.com/images/north-idaho-school-districts-guide.webp'],
   },
@@ -339,9 +339,7 @@ const faqs = [
 export default function NorthIdahoSchoolDistrictsPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 
       {/* Hero */}
       <section className="bg-[#F5EFE6] pt-36 pb-16">

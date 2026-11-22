@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/buying-manufactured-home-on-land-north-idaho'
 const sources = [
   { label: 'Idaho Legislature, Idaho Code 63-304 (checked November 2, 2026): a manufactured home may constitute real property if the running gear is removed, it becomes permanently affixed to a foundation on land the owner owns or is purchasing (leased land only when the financing follows Freddie Mac, Fannie Mae, USDA, or similar guidelines), and the owner records a Statement of Intent to Declare the manufactured home as real property with the county recorder; assessors must then treat the home as any other site-built residence and lending institutions may treat it as real property; the Tax Commission form must have the certificate of origin or the original title attached', url: 'https://legislature.idaho.gov/statutesrules/idstat/title63/t63ch3/sect63-304/' },
@@ -30,8 +30,9 @@ title: 'Buying a Manufactured Home on Land in North Idaho',
 description: 'Own the land and record the Idaho 63-304 Statement of Intent, and the home can be treated as real property. Skip that paper, and the loan is usually chattel: higher cost, fewer protections, per the CFPB. The checks to run before you write an offer.',
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-11-02',
+publishedTime: '2026-11-02T00:00:00-08:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -151,9 +152,7 @@ const checkRows = [
 export default function BuyingManufacturedHomeOnLandPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">

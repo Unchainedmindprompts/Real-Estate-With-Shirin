@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 
 const SLUG = 'buying-north-idaho-home-from-out-of-state'
 const BASE_URL = 'https://www.realestatewithshirin.com'
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       "The step-by-step process for out-of-state buyers — financing, remote tours, wells, septic, private roads, offers, and closing from another state.",
     url: PAGE_URL,
     type: 'article',
-    publishedTime: '2026-07-18',
+    publishedTime: '2026-07-18T00:00:00-07:00',
     authors: ['Shirin Abplanalp'],
     images: [HERO_IMAGE],
   },
@@ -198,10 +198,7 @@ const linkClass = 'text-[#C4842A] hover:underline'
 export default function BuyingFromOutOfStatePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, howToSchema, faqSchema, breadcrumbSchema])) }} />
 
       {/* Hero */}
       <section className="bg-[#F5EFE6] pt-36 pb-16">

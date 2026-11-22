@@ -3,10 +3,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   BASE_URL,
+  AGENT_ID,
+  BUSINESS_ID,
   WEBSITE_ID,
   AGENT_AUTHOR_STUB,
   BRAND_PUBLISHER_STUB,
+  MARKET_AREA_SERVED,
   placeStub,
+  jsonLdGraph,
 } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
@@ -22,14 +26,25 @@ export const metadata: Metadata = {
       "A complete relocation guide for out-of-state buyers moving to North Idaho — covering costs, taxes, neighborhoods, schools, weather, commutes, and the buying process. Written by licensed REALTOR® Shirin Abplanalp.",
     url: 'https://www.realestatewithshirin.com/relocating-to-north-idaho',
     type: 'article',
-    publishedTime: '2026-05-31',
-    modifiedTime: '2026-10-01',
+    publishedTime: '2026-05-31T00:00:00-07:00',
+    modifiedTime: '2026-10-01T00:00:00-07:00',
     authors: ['Shirin Abplanalp'],
     images: ['https://www.realestatewithshirin.com/images/north-idaho-city-comparison.png'],
   },
 }
 
 const PAGE_URL = `${BASE_URL}/relocating-to-north-idaho`
+
+const relocationServiceSchema = {
+  '@type': 'Service',
+  '@id': `${PAGE_URL}#service`,
+  name: 'North Idaho Relocation Guidance & Buyer Representation',
+  description:
+    'Relocation guidance and buyer representation for out-of-state families moving to Post Falls, Coeur d’Alene, Hayden, Rathdrum, Sandpoint, and North Idaho.',
+  serviceType: 'Real Estate Relocation Guidance',
+  provider: [{ '@id': BUSINESS_ID }, { '@id': AGENT_ID }],
+  areaServed: MARKET_AREA_SERVED,
+}
 
 const webPageSchema = {
   '@context': 'https://schema.org',
@@ -94,17 +109,9 @@ const articleSchema = {
     { '@type': 'Thing', name: 'Idaho Cost of Living' },
     { '@type': 'Thing', name: 'Idaho Property Taxes' },
     { '@type': 'Thing', name: 'Out-of-State Home Buying' },
-    { '@type': 'Place', name: 'North Idaho' },
+    placeStub('northIdaho'),
   ],
-  spatialCoverage: {
-    '@type': 'Place',
-    name: 'North Idaho',
-    geo: { '@type': 'GeoShape', box: '47.4090 -117.0357 48.9990 -116.0500' },
-    containedInPlace: [
-      { '@type': 'AdministrativeArea', name: 'Kootenai County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-      { '@type': 'AdministrativeArea', name: 'Bonner County', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    ],
-  },
+  spatialCoverage: placeStub('northIdaho'),
   citation: [
     {
       '@type': 'WebPage',
@@ -192,12 +199,12 @@ const articleSchema = {
     },
   ],
   mentions: [
-    { '@type': 'Place', name: "Coeur d'Alene", sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho' },
-    { '@type': 'Place', name: 'Post Falls', sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho' },
-    { '@type': 'Place', name: 'Hayden', sameAs: 'https://en.wikipedia.org/wiki/Hayden,_Idaho' },
-    { '@type': 'Place', name: 'Rathdrum', sameAs: 'https://en.wikipedia.org/wiki/Rathdrum,_Idaho' },
-    { '@type': 'Place', name: 'Sandpoint', sameAs: 'https://en.wikipedia.org/wiki/Sandpoint,_Idaho' },
-    { '@type': 'AdministrativeArea', name: 'Kootenai County', sameAs: 'https://en.wikipedia.org/wiki/Kootenai_County,_Idaho' },
+    placeStub('coeurDalene'),
+    placeStub('postFalls'),
+    placeStub('hayden'),
+    placeStub('rathdrum'),
+    placeStub('sandpoint'),
+    placeStub('kootenai'),
     { '@type': 'Organization', name: 'Kootenai Health', url: 'https://www.kh.org' },
     { '@type': 'Organization', name: 'Idaho State Tax Commission', url: 'https://tax.idaho.gov' },
   ],
@@ -284,10 +291,14 @@ const linkClass = 'text-[#C4842A] hover:underline'
 export default function RelocatingToNorthIdahoPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            jsonLdGraph([webPageSchema, relocationServiceSchema, articleSchema, breadcrumbSchema, faqSchema]),
+          ),
+        }}
+      />
 
       {/* Hero */}
       <section className="bg-[#F5EFE6] pt-36 pb-16">

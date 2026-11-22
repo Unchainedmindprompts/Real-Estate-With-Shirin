@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: 'Buying Property on the Prairie: Wells, Septic, and Road Rights-of-Way | Shirin Abplanalp',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       'The infrastructure costs most relocation buyers never see coming — wells, septic permits, and who actually plows the road in February.',
     url: 'https://www.realestatewithshirin.com/articles/buying-property-prairie-wells-septic-roads',
     type: 'article',
-    publishedTime: '2026-05-19',
+    publishedTime: '2026-05-19T00:00:00-07:00',
     authors: ['Shirin Abplanalp'],
     images: ['https://www.realestatewithshirin.com/images/north-idaho-prairie-acreage.webp'],
   },
@@ -32,8 +32,8 @@ const articleSchema = {
   image: {
     '@type': 'ImageObject',
     url: 'https://www.realestatewithshirin.com/images/north-idaho-prairie-acreage.webp',
-    width: 1672,
-    height: 941,
+    width: 1874,
+    height: 839,
   },
   author: AGENT_AUTHOR_STUB,
   publisher: BRAND_PUBLISHER_STUB,
@@ -269,9 +269,7 @@ const faqs = [
 export default function PrairiePropertyArticlePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 
       {/* Hero */}
       <section className="bg-[#F5EFE6] pt-36 pb-16">

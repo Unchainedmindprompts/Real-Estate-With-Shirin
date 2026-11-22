@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/north-idaho-housing-market-update'
 const sources = [
   { label: 'Homes.com: Coeur d\'Alene, ID city guide and housing trends (median sale price $575,000 over the last 12 months, down 2%; median list price $649,000; median single-family sale price $649,000; $407 average price per square foot; 1,010 sales; 4.6 months of supply; 46 days on market on average; checked October 25, 2026)', url: 'https://www.homes.com/local-guide/coeur-dalene-id/' },
@@ -23,8 +23,9 @@ title: "North Idaho Housing Market Update (October 2026)",
 description: "What are North Idaho home prices doing right now, city by city? One source, one window, all five cities: median sale prices, average days on market, and months of supply, from a local REALTOR.",
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-10-25',
+publishedTime: '2026-10-25T00:00:00-07:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -174,9 +175,7 @@ const daysData = [
 export default function NorthIdahoHousingMarketUpdatePage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">

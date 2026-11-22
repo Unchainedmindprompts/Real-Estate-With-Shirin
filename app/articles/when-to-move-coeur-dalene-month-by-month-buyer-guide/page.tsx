@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 
 const SLUG = 'when-to-move-coeur-dalene-month-by-month-buyer-guide'
 const BASE_URL = 'https://www.realestatewithshirin.com'
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
       "What each season actually feels like in Coeur d'Alene, what it does to the market, and how to time your move. Real data + a local REALTOR's honest read.",
     url: PAGE_URL,
     type: 'article',
-    publishedTime: '2026-06-10',
+    publishedTime: '2026-06-10T00:00:00-07:00',
     authors: ['Shirin Abplanalp'],
     images: [`${BASE_URL}/images/when-to-move-coeur-dalene-month-by-month.png`],
   },
@@ -269,9 +269,7 @@ const linkClass = 'text-[#C4842A] hover:underline'
 export default function WhenToMoveCdAPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 
       {/* Hero */}
       <section className="bg-[#F5EFE6] pt-36 pb-16">

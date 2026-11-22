@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/are-north-idaho-home-prices-falling'
 const sources = [
   { label: 'Realtor.com Economic Research, October 2026 Housing Report, published November 4, 2026 (checked November 8, 2026): nationally, median list price $415,000, down 2.2% year over year, active listings up 7.4%, new listings down 7.5%, homes under contract down 10.5%, and 20.5% of listings had a price reduction in October, the highest October share since 2022; all figures are national asking prices and listing activity, not North Idaho figures and not sold prices', url: 'https://www.realtor.com/research/october-2026-data/' },
@@ -25,8 +25,9 @@ title: 'Are North Idaho Home Prices Falling? Why National Headlines Don’t Tell
 description: 'List prices down nationally, sold prices up nationally, prices down after inflation, and Kootenai County sold prices up 4.3% year to date. Why those four statements can all be true at once, and why unlike measures must never be compared as if they were the same.',
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-11-08',
+publishedTime: '2026-11-08T00:00:00-08:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -132,9 +133,7 @@ const measureRows = [
 export default function PricesFallingPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">

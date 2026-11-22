@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/homeowners-insurance-idaho-cost-wildfire-flood-coverage'
 const sources = [
   { label: 'Idaho Department of Insurance, Disasters page (checked October 30, 2026): homeowner and renter policies usually do not provide coverage for damages caused by flooding; not all policies provide earthquake coverage and carriers that offer it typically require a separate, higher deductible; wildfire preparation guidance for rural homeowners; Consumer Affairs (208) 334-4319 and Consumer Hotline 1-800-721-3272', url: 'https://doi.idaho.gov/consumers/home-renters-insurance/disasters/' },
@@ -32,8 +32,9 @@ title: "Homeowners Insurance in Idaho: What It Costs and What It Covers",
 description: "A labeled range, not a single average: what Idaho homeowners actually paid, what current quotes average by sample, what a standard policy covers, and why flood needs its own policy.",
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-10-30',
+publishedTime: '2026-10-30T00:00:00-07:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -160,9 +161,7 @@ const medianBars = [
 export default function HomeownersInsuranceIdahoPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">

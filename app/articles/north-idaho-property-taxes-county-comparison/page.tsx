@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 
 export const metadata: Metadata = {
   title: "North Idaho Property Taxes: All 5 Counties Compared",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       'Bonner County: 0.398%. Kootenai: 0.452%. Shoshone: 0.673%. Official 2025 rates from the Idaho State Tax Commission, plus every exemption program buyers should know.',
     url: 'https://www.realestatewithshirin.com/articles/north-idaho-property-taxes-county-comparison',
     type: 'article',
-    publishedTime: '2026-05-20',
+    publishedTime: '2026-05-20T00:00:00-07:00',
     authors: ['Shirin Abplanalp'],
     images: ['https://www.realestatewithshirin.com/images/north-idaho-property-taxes.webp'],
   },
@@ -286,9 +286,7 @@ const faqs = [
 export default function PropertyTaxesArticlePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 
       {/* Hero */}
       <section className="bg-[#F5EFE6] pt-36 pb-16">

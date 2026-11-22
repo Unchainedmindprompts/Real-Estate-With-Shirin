@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, AGENT_NAME, BASE_URL, BRAND_PUBLISHER_STUB, EMAIL, PHONE, PHONE_DISPLAY, placeStub } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, AGENT_NAME, BASE_URL, BRAND_PUBLISHER_STUB, EMAIL, PHONE, PHONE_DISPLAY, placeStub, jsonLdGraph } from '@/lib/schema-ids'
 
 const articleUrl = `${BASE_URL}/articles/north-idaho-cost-of-living-comparison`
 const title = 'North Idaho Cost of Living: Compare the Full Cost of a Home'
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description,
     url: articleUrl,
     type: 'article',
-    publishedTime: '2026-05-20',
+    publishedTime: '2026-05-20T00:00:00-07:00',
     modifiedTime: '2026-10-01',
     authors: [AGENT_NAME],
     images: [`${BASE_URL}/images/north-idaho-lake-hero.webp`],
@@ -115,9 +115,7 @@ const budgetItems = [
 export default function CostOfLivingArticlePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 
       <section className="bg-[#F5EFE6] pt-36 pb-16">
         <div className="max-w-5xl mx-auto px-6">

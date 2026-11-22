@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/buying-land-north-idaho-cost-per-acre-perc-power-access'
 const sources = [
   { label: 'Land.com: land market insights for Kootenai County, Idaho (median price per acre, median list price, and median lot size for current listings, checked October 2026)', url: 'https://www.land.com/Kootenai-County-ID/all-land/sort-price-low/' },
@@ -34,8 +34,9 @@ title: "Buying Land in North Idaho (2026 Guide)",
 description: "Kootenai County and Bonner County land compared on cost per acre, plus the site evaluation, well, power extension, legal access, and buildability checks that decide what a parcel is really worth.",
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-10-23',
+publishedTime: '2026-10-23T00:00:00-07:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -222,9 +223,7 @@ const comparisonRows = [
 export default function BuyingLandNorthIdahoPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">

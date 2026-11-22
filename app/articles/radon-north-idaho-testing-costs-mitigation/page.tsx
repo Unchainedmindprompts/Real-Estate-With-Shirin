@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/radon-north-idaho-testing-costs-mitigation'
 const sources = [
   { label: 'Idaho Department of Health and Welfare, What is Radon? page (rechecked November 11, 2026): what radon is and how it enters a home, second leading cause of lung cancer and about 21,000 deaths a year, a reading of 4 pCi/L compared to smoking 8 cigarettes daily, test types and placement, free test for Idaho residents if in stock and one every two years, discounted kits and the library lending program, the action table, all cost ranges, buying and renting guidance, certified professionals through NRPP and NRSB, radon control methods not required by law in Idaho unless a city or county has adopted them, and program contacts 1-800-445-8647 and radon@dhw.idaho.gov', url: 'https://healthandwelfare.idaho.gov/health-wellness/environmental-health/what-radon' },
@@ -23,8 +23,9 @@ title: "Radon in North Idaho: What Buyers Should Test, What It Costs, and How Mi
 description: "Zone 1 ground, a 4.0 pCi/L action level, free or low cost testing through Idaho DHW, and a proven pipe and fan fix. What North Idaho buyers should test, what it costs, and how mitigation works.",
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-11-11',
+publishedTime: '2026-11-11T00:00:00-08:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -139,9 +140,7 @@ const costBars = [
 export default function RadonNorthIdahoPage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">

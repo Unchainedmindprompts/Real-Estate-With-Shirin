@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB } from '@/lib/schema-ids'
+import { AGENT_AUTHOR_STUB, BRAND_PUBLISHER_STUB, jsonLdGraph } from '@/lib/schema-ids'
 const articleUrl = 'https://www.realestatewithshirin.com/articles/new-construction-vs-resale-north-idaho-better-value'
 const sources = [
   { label: 'Lennar, Crown Reserve community page, Post Falls (checked November 9, 2026 on Lennar’s own site): actively selling, community price range $416,950 to $492,950, Willow plan 3 bed, 2 bath, 1,526 square feet starting at $439,950; the page invites buyers to ask about special promotions when financing through Lennar Mortgage and publishes no incentive amount or expiration date for Crown Reserve in the page checked', url: 'https://www.lennar.com/new-homes/idaho/inland-northwest/post-falls/crown-reserve' },
@@ -27,8 +27,9 @@ title: 'New Construction vs. Resale in North Idaho: Where Are Buyers Finding Bet
 description: 'Starting prices sit below the medians until the finished price is assembled. A side by side look at finished price, system age, energy code, warranties, incentives, and cash after closing, with every figure dated.',
 url: articleUrl,
 type: 'article',
-publishedTime: '2026-11-09',
+publishedTime: '2026-11-09T00:00:00-08:00',
 authors: ['Shirin Abplanalp'],
+    images: ['https://www.realestatewithshirin.com/images/shirin-headshot-professional.png'],
   },
 }
 const faqs = [
@@ -145,9 +146,7 @@ const lifespanRows = [
 export default function NewVsResalePage() {
 return (
 <>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([articleSchema, faqSchema, breadcrumbSchema])) }} />
 <section className="bg-[#F5EFE6] pt-36 pb-16">
 <div className="max-w-5xl mx-auto px-6">
 <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">

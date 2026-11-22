@@ -1,16 +1,16 @@
-import type { Metadata } from 'next'
-import { BASE_URL, BUSINESS_ID, WEBSITE_ID, PLACE } from '@/lib/schema-ids'
+import { heroMetadata, riverfrontCard } from '@/lib/hero-share'
+import { BASE_URL, AGENT_ID, BUSINESS_ID, WEBSITE_ID, placeStub, jsonLdGraph } from '@/lib/schema-ids'
 import { IDX_SEARCH_BY_AREA } from '@/lib/idx-search'
 import AreaGuideTemplate from '@/components/editorial/AreaGuideTemplate'
 
 const PAGE_URL = `${BASE_URL}/areas/kootenai-county`
 
-export const metadata: Metadata = {
-  title: 'Kootenai County, Idaho Real Estate & Market Guide',
-  description:
-    "Kootenai County holds Post Falls, Coeur d'Alene, Hayden, Rathdrum, and Dalton Gardens — the fastest-growing corner of North Idaho. A local REALTOR's county-scale market and tax guide.",
-  alternates: { canonical: PAGE_URL },
-}
+export const metadata = heroMetadata(
+  '/areas/kootenai-county',
+  'Kootenai County, Idaho Real Estate & Market Guide',
+  "Kootenai County holds Post Falls, Coeur d'Alene, Hayden, Rathdrum, and Dalton Gardens — the fastest-growing corner of North Idaho. A local REALTOR's county-scale market and tax guide.",
+  riverfrontCard,
+)
 
 const FAQS = [
   {
@@ -37,8 +37,8 @@ const jsonLdService = {
   '@id': `${PAGE_URL}#service`,
   name: 'Real Estate Services — Kootenai County, Idaho',
   serviceType: 'Real estate representation',
-  provider: { '@id': BUSINESS_ID },
-  areaServed: PLACE.kootenai,
+  provider: [{ '@id': BUSINESS_ID }, { '@id': AGENT_ID }],
+  areaServed: placeStub('kootenai'),
 }
 
 const jsonLdWebPage = {
@@ -82,10 +82,10 @@ export default function KootenaiCountyAreaPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebPage) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph([jsonLdWebPage, jsonLdService, jsonLdBreadcrumb, jsonLdFaq])) }}
+      />
 
       <AreaGuideTemplate
         config={{

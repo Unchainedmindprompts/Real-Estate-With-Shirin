@@ -2,21 +2,19 @@
 // Whole-graph @id audit + completeness checks. Runs after `npm run build` and
 // scans the built HTML for JSON-LD blocks — this is what search engines see.
 //
-// Integrity checks (catches CORRUPTION):
-//   - Duplicate @id DEFINITIONS across pages
-//   - Dangling @id REFERENCES (referenced but never defined)
-//
-// Completeness checks (catches MISSING NODES that pass integrity but are wrong):
-//   - Every emitted page has at least one page-container node
-//     (WebPage / ProfilePage / ContactPage / CollectionPage / ItemPage /
-//      Article / BlogPosting / NewsArticle)
-//   - Every FAQPage has isPartOf (so it doesn't float loose off the site root)
-//   - Every Article/BlogPosting/NewsArticle has mainEntityOfPage set
-//
-// Exit codes:
-//   0 = clean, 1 = any integrity OR completeness failure
+// Enforces:
+//   - Single consolidated <script type="application/ld+json"> @graph per page
+//   - Zero duplicate @id definitions within any page's @graph
+//   - Zero duplicate route-scoped @id definitions across pages (shared core
+//     entities #website, #business, #agent, #jacklin-real-estate, #bhhs-brand,
+//     #brand-logo, #jacklin-logo, and canonical Place @ids must match canonically)
+//   - Pure bare {"@id": "..."} pointers on all nested site-scoped references
+//   - Zero slash-before-fragment @ids on subpaths (.../slug/#faq)
+//   - Zero dangling @id references
+//   - Every page has a page-container node, every FAQPage has isPartOf, and
+//     every Article/BlogPosting/NewsArticle has mainEntityOfPage
 
-import { readdirSync, readFileSync, statSync, existsSync } from 'node:fs'
+import { readdirSync, readFileSync, existsSync } from 'node:fs'
 import { join } from 'node:path'
 
 const PAGE_CONTAINER_TYPES = new Set([
@@ -25,6 +23,25 @@ const PAGE_CONTAINER_TYPES = new Set([
 ])
 const ARTICLE_TYPES = new Set(['Article', 'BlogPosting', 'NewsArticle'])
 const FAQ_TYPES = new Set(['FAQPage'])
+
+const SHARED_CORE_IDS = new Set([
+  'https://www.realestatewithshirin.com/#website',
+  'https://www.realestatewithshirin.com/#business',
+  'https://www.realestatewithshirin.com/#agent',
+  'https://www.realestatewithshirin.com/#jacklin-real-estate',
+  'https://www.realestatewithshirin.com/#bhhs-brand',
+  'https://www.realestatewithshirin.com/#brand-logo',
+  'https://www.realestatewithshirin.com/#jacklin-logo',
+  'https://www.realestatewithshirin.com/#place-idaho',
+  'https://www.realestatewithshirin.com/#place-north-idaho',
+  'https://www.realestatewithshirin.com/areas/post-falls-idaho#place',
+  'https://www.realestatewithshirin.com/areas/coeur-dalene-idaho#place',
+  'https://www.realestatewithshirin.com/areas/hayden-idaho#place',
+  'https://www.realestatewithshirin.com/areas/rathdrum-idaho#place',
+  'https://www.realestatewithshirin.com/areas/sandpoint-idaho#place',
+  'https://www.realestatewithshirin.com/areas/kootenai-county#place',
+  'https://www.realestatewithshirin.com/areas/bonner-county#place',
+])
 
 function typeMatchesAny(nodeType, checkSet) {
   const types = Array.isArray(nodeType) ? nodeType : [nodeType]
@@ -36,38 +53,26 @@ const SOURCE_HOST_PREFIXES = [
   'https://www.realestatewithshirin.com/',
 ]
 
-// Exception B name stubs ({ @type, @id, name } and optional url) are REFERENCES,
-// not competing definitions. They exist so a single page is self-describing
-// without redeclaring the canonical Person / brand / Place.
-const STUB_KEYS = new Set(['@context', '@id', '@type', 'name', 'url'])
-
-function isNameStub(obj) {
-  if (!('@type' in obj) || !('@id' in obj) || !('name' in obj)) return false
-  return Object.keys(obj).every((k) => STUB_KEYS.has(k))
+function isSiteScoped(id) {
+  return SOURCE_HOST_PREFIXES.some(h => id.startsWith(h))
 }
 
-// A node counts as a DEFINITION when it has @type AND at least one property beyond
-// @context/@id/@type, excluding Exception B name stubs. A bare { @id: ... } is a
-// REFERENCE.
 function classifyNode(obj) {
+  if (!obj || typeof obj !== 'object' || !('@id' in obj)) return null
   const keys = Object.keys(obj)
-  const hasType = '@type' in obj
-  const hasId = '@id' in obj
-  if (!hasId) return null
-  if (isNameStub(obj)) return 'REFERENCE'
   const substantiveKeys = keys.filter(k => k !== '@context' && k !== '@id' && k !== '@type')
-  if (hasType && substantiveKeys.length > 0) return 'DEFINITION'
+  if ('@type' in obj && substantiveKeys.length > 0) return 'DEFINITION'
   return 'REFERENCE'
 }
 
-function walkNodes(node, cb) {
-  if (Array.isArray(node)) {
-    node.forEach(n => walkNodes(n, cb))
+function walkNested(value, cb) {
+  if (Array.isArray(value)) {
+    value.forEach(item => walkNested(item, cb))
     return
   }
-  if (node && typeof node === 'object') {
-    cb(node)
-    for (const v of Object.values(node)) walkNodes(v, cb)
+  if (value && typeof value === 'object') {
+    cb(value)
+    for (const v of Object.values(value)) walkNested(v, cb)
   }
 }
 
@@ -89,14 +94,10 @@ function extractJsonLdBlocks(html) {
   return blocks
 }
 
-function isSiteScoped(id) {
-  return SOURCE_HOST_PREFIXES.some(h => id.startsWith(h))
-}
-
-const definitions = new Map() // @id -> [{ file, type, node }]
-const references = new Map()  // @id -> [{ file, node }]
-const externalDefs = new Set() // brokerage #organization, City sameAs, etc. — allowed cross-domain defs
-const perFileTopNodes = new Map() // file -> [{ topLevelType, node }] — top-level JSON-LD nodes for completeness checks
+const definitions = new Map() // @id -> [{ file, type, serialized }]
+const references = new Map()  // @id -> [{ file }]
+const perFileTopNodes = new Map()
+const structuralErrors = []
 
 const files = findHtmlFiles(BUILT_ROOT)
 if (files.length === 0) {
@@ -105,58 +106,118 @@ if (files.length === 0) {
 }
 
 for (const file of files) {
+  const isSystemPage =
+    file.endsWith('_not-found.html') ||
+    file.endsWith('_global-error.html') ||
+    file.endsWith('robots.txt')
+
   const html = readFileSync(file, 'utf-8')
   const blocks = extractJsonLdBlocks(html)
+
+  if (!isSystemPage && blocks.length !== 1) {
+    structuralErrors.push(`MULTI_SCRIPT: ${file} emitted ${blocks.length} JSON-LD <script> tags (expected 1 consolidated @graph)`)
+  }
+
   const topNodes = []
+  const perPageDefs = new Set()
+
   for (const raw of blocks) {
     let parsed
     try {
       parsed = JSON.parse(raw)
     } catch (e) {
-      console.warn(`Skipped unparseable JSON-LD block in ${file}: ${e.message}`)
+      structuralErrors.push(`PARSE_ERROR: ${file}: ${e.message}`)
       continue
     }
-    // A JSON-LD block's ROOT is what search engines treat as the top-level entity.
-    // Track those separately from nested nodes for completeness checks.
-    const roots = Array.isArray(parsed) ? parsed : [parsed]
-    for (const root of roots) {
-      if (root && typeof root === 'object' && '@type' in root) topNodes.push(root)
-      // A single @graph document still has page-container / FAQ nodes as graph members.
-      if (root && typeof root === 'object' && Array.isArray(root['@graph'])) {
-        for (const node of root['@graph']) {
-          if (node && typeof node === 'object' && '@type' in node) topNodes.push(node)
+
+    if (!isSystemPage && (!parsed || !Array.isArray(parsed['@graph']))) {
+      structuralErrors.push(`MISSING_GRAPH_ROOT: ${file} root JSON-LD is not a {"@context","@graph"} object`)
+    }
+
+    const graphNodes = Array.isArray(parsed?.['@graph']) ? parsed['@graph'] : (Array.isArray(parsed) ? parsed : [parsed])
+    for (const root of graphNodes) {
+      if (!root || typeof root !== 'object') continue
+      if ('@type' in root) topNodes.push(root)
+
+      const rootId = root['@id']
+      if (typeof rootId === 'string') {
+        if (/https:\/\/www\.realestatewithshirin\.com\/[^#]+\/#/.test(rootId)) {
+          structuralErrors.push(`SLASH_BEFORE_HASH_ID: ${file} uses trailing slash before # in ${rootId}`)
+        }
+        const kind = classifyNode(root)
+        if (kind === 'DEFINITION') {
+          if (perPageDefs.has(rootId)) {
+            structuralErrors.push(`PER_PAGE_DUPLICATE_ID: ${file} defines ${rootId} more than once in its @graph`)
+          }
+          perPageDefs.add(rootId)
+          // Strip homepage-only review/aggregateRating when comparing #business consistency across routes
+          const normalized = rootId === 'https://www.realestatewithshirin.com/#business'
+            ? JSON.stringify({ ...root, review: undefined, aggregateRating: undefined })
+            : JSON.stringify(root)
+          if (!definitions.has(rootId)) definitions.set(rootId, [])
+          definitions.get(rootId).push({ file, type: root['@type'], serialized: normalized })
         }
       }
-    }
-    walkNodes(parsed, (node) => {
-      const kind = classifyNode(node)
-      if (!kind) return
-      const id = node['@id']
-      if (typeof id !== 'string') return
-      if (kind === 'DEFINITION') {
-        if (!definitions.has(id)) definitions.set(id, [])
-        definitions.get(id).push({ file, type: node['@type'] })
-      } else {
-        if (!references.has(id)) references.set(id, [])
-        references.get(id).push({ file })
+
+      // Inspect nested values inside each graph root node
+      for (const [propKey, propVal] of Object.entries(root)) {
+        if (propKey === '@context' || propKey === '@id' || propKey === '@type') continue
+        walkNested(propVal, (nested) => {
+          const nid = nested['@id']
+          if (typeof nid !== 'string') return
+          if (/https:\/\/www\.realestatewithshirin\.com\/[^#]+\/#/.test(nid)) {
+            structuralErrors.push(`SLASH_BEFORE_HASH_ID: ${file} uses trailing slash before # in ${nid}`)
+          }
+          // Nested ImageObject logos (#brand-logo, #jacklin-logo) are canonical definitions on their owner;
+          // all references to top-level entities (#agent, #business, #website, #jacklin-real-estate, #place, #webpage, etc.)
+          // must be bare {"@id": "..."} pointers.
+          if (isSiteScoped(nid) && nid !== 'https://www.realestatewithshirin.com/#brand-logo' && nid !== 'https://www.realestatewithshirin.com/#jacklin-logo') {
+            const keys = Object.keys(nested)
+            if (keys.length > 1) {
+              structuralErrors.push(`INLINE_REDECLARATION: ${file} nested reference to ${nid} carries extra keys [${keys.join(', ')}] instead of bare {"@id"}`)
+            }
+          }
+          const kind = classifyNode(nested)
+          if (kind === 'DEFINITION') {
+            if (!definitions.has(nid)) definitions.set(nid, [])
+            definitions.get(nid).push({ file, type: nested['@type'], serialized: JSON.stringify(nested) })
+          } else {
+            if (!references.has(nid)) references.set(nid, [])
+            references.get(nid).push({ file })
+          }
+        })
       }
-    })
+    }
   }
   perFileTopNodes.set(file, topNodes)
 }
 
-// Report
-let issues = 0
+let issues = structuralErrors.length
 
-console.log('\n=== DEFINITION COUNT (site-scoped @ids) ===')
+if (structuralErrors.length > 0) {
+  console.log('\n=== STRUCTURAL GRAPH ERRORS ===')
+  for (const err of structuralErrors) console.log(`  🔴 ${err}`)
+}
+
+console.log('\n=== DEFINITION COUNT (route-scoped & shared @ids) ===')
 const siteScoped = [...definitions.keys()].filter(isSiteScoped).sort()
 for (const id of siteScoped) {
   const defs = definitions.get(id)
-  const marker = defs.length > 1 ? '  🔴 DUPLICATE' : ''
-  console.log(`  ${defs.length}x  ${id}${marker}`)
-  if (defs.length > 1) {
-    issues++
-    defs.forEach(d => console.log(`         ${d.file}  (@type: ${JSON.stringify(d.type)})`))
+  if (SHARED_CORE_IDS.has(id)) {
+    const uniqueShapes = new Set(defs.map(d => d.serialized))
+    if (uniqueShapes.size > 1) {
+      issues++
+      console.log(`  🔴 DRIFTED SHARED ENTITY (${uniqueShapes.size} variants): ${id}`)
+    } else {
+      console.log(`  ✅ shared (${defs.length} graphs, 0 drift)  ${id}`)
+    }
+  } else {
+    const marker = defs.length > 1 ? '  🔴 DUPLICATE' : ''
+    console.log(`  ${defs.length}x  ${id}${marker}`)
+    if (defs.length > 1) {
+      issues++
+      defs.forEach(d => console.log(`         ${d.file}  (@type: ${JSON.stringify(d.type)})`))
+    }
   }
 }
 
@@ -169,7 +230,6 @@ if (dangling.length === 0) {
   console.log('  ✅ none')
 } else {
   for (const { id, refs } of dangling) {
-    // Off-site sameAs / official-website targets are expected to be undefined here.
     if (!isSiteScoped(id)) {
       console.log(`  🟡 external (expected): ${id}  (${refs.length} refs)`)
       continue
@@ -180,22 +240,16 @@ if (dangling.length === 0) {
   }
 }
 
-// ============================================================================
-// Completeness checks — catch MISSING nodes, not just corrupt ones.
-// ============================================================================
-
 console.log('\n=== COMPLETENESS CHECKS ===')
 const completenessFailures = []
 
 for (const [file, topNodes] of perFileTopNodes) {
-  // Skip non-page HTML (Next.js system pages, favicon, robots, sitemap)
   if (
     file.endsWith('_not-found.html') ||
     file.endsWith('_global-error.html') ||
     file.endsWith('robots.txt')
   ) continue
 
-  // Check 1 — every page has at least one page-container node
   const hasContainer = topNodes.some(n => typeMatchesAny(n['@type'], PAGE_CONTAINER_TYPES))
   if (!hasContainer) {
     completenessFailures.push({
@@ -205,7 +259,6 @@ for (const [file, topNodes] of perFileTopNodes) {
     })
   }
 
-  // Check 2 — every FAQPage has isPartOf (must not float)
   for (const node of topNodes) {
     if (typeMatchesAny(node['@type'], FAQ_TYPES)) {
       if (!node.isPartOf) {
@@ -216,10 +269,6 @@ for (const [file, topNodes] of perFileTopNodes) {
         })
       }
     }
-  }
-
-  // Check 3 — every Article/BlogPosting/NewsArticle has mainEntityOfPage
-  for (const node of topNodes) {
     if (typeMatchesAny(node['@type'], ARTICLE_TYPES)) {
       if (!node.mainEntityOfPage) {
         completenessFailures.push({
@@ -243,7 +292,7 @@ if (completenessFailures.length === 0) {
 }
 
 console.log('\n=== SUMMARY ===')
-console.log(`  Site-scoped definitions: ${siteScoped.length}`)
+console.log(`  Site-scoped @ids:        ${siteScoped.length}`)
 console.log(`  References tracked:      ${references.size}`)
 console.log(`  Completeness failures:   ${completenessFailures.length}`)
 console.log(`  Issues:                  ${issues}`)
