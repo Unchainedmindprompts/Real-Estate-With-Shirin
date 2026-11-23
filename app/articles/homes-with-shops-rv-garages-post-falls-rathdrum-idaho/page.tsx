@@ -165,8 +165,8 @@ const articleSchema = {
   image: {
     '@type': 'ImageObject',
     url: ogImageUrl,
-    width: 1920,
-    height: 1080,
+    width: 962,
+    height: 534,
     caption: 'Shirin Abplanalp relaxing beside her high-roof Mercedes-Benz Sprinter 3500 Sportsmobile with rooftop A/C, Thule cargo box, and hitch bike rack.',
   },
   author: AGENT_AUTHOR_STUB,
@@ -231,84 +231,62 @@ export default function ShopsAndRvGaragesPostFallsRathdrumPage() {
         }}
       />
 
-      {/* True 100vw Full-Bleed Edge-to-Edge Photo Hero */}
+      {/* True 100vw Edge-to-Edge Unobstructed Hero + Above-the-Fold Title Band */}
       <section
-        className="relative w-full overflow-hidden bg-[#14231B] pt-[84px]"
+        className="w-full bg-[#14231B] pt-[84px]"
         aria-labelledby="shops-rv-hero-title"
       >
-        <div className="relative w-full aspect-[16/9] min-h-[460px] max-h-[82vh]">
+        <div className="relative w-full aspect-[962/534] max-h-[700px] overflow-hidden bg-[#14231B]">
           <Image
             src="/images/shirin-mercedes-sportsmobile-3500.webp"
             alt="Shirin Abplanalp relaxing in a camp chair beside her high-roof Mercedes-Benz Sprinter 3500 Sportsmobile with rooftop A/C, Thule cargo box, and rear hitch mountain bike rack at Laguna Seca"
             fill
-            quality={92}
+            unoptimized
             sizes="100vw"
-            className="object-cover object-[center_62%]"
+            className="object-cover object-[center_44%]"
             priority
           />
-          {/* Subtle upper-left-only editorial scrim over the dark oak canopy — leaves Shirin, the dog, and the Sprinter 100% clear */}
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                'linear-gradient(118deg, rgba(16, 28, 21, 0.88) 0%, rgba(16, 28, 21, 0.62) 30%, rgba(16, 28, 21, 0.14) 48%, rgba(16, 28, 21, 0) 62%)',
-            }}
-          />
-
-          <div className="absolute inset-0 flex items-start">
-            <div className="w-full max-w-[1340px] mx-auto px-6 md:px-10 pt-6 md:pt-9">
-              <div className="max-w-[680px]">
-                <nav
-                  className="text-[11px] uppercase tracking-[0.16em] mb-2.5 font-dm-sans flex flex-wrap items-center gap-2"
-                  style={{ color: 'rgba(250, 247, 241, 0.84)' }}
-                  aria-label="Breadcrumb"
-                >
-                  <Link href="/" className="hover:text-[#E2B872] transition-colors">Home</Link>
-                  <span aria-hidden="true">·</span>
-                  <Link href="/articles" className="hover:text-[#E2B872] transition-colors">Articles</Link>
-                  <span aria-hidden="true">·</span>
-                  <Link href="/areas/post-falls-idaho/new-construction" className="hover:text-[#E2B872] transition-colors">
-                    Post Falls New Construction
-                  </Link>
-                  <span aria-hidden="true">·</span>
-                  <span style={{ color: '#FAF7F1' }}>Shops &amp; RV Garages</span>
-                </nav>
-
-                <p
-                  className="text-[11px] font-semibold uppercase tracking-[0.2em] font-dm-sans mb-2"
-                  style={{ color: '#E2B872' }}
-                >
-                  Post Falls &amp; Rathdrum · Firsthand Rig Guide
-                </p>
-
-                <h1
-                  id="shops-rv-hero-title"
-                  className="font-cormorant text-3xl sm:text-4xl lg:text-[46px] leading-[1.06] font-medium"
-                  style={{ color: '#FAF7F1', textShadow: '0 2px 18px rgba(10, 18, 14, 0.55)' }}
-                >
-                  Homes with Shops &amp;{' '}
-                  <em style={{ fontStyle: 'italic', color: '#E2B872', paddingRight: '0.1em' }}>
-                    RV Garages
-                  </em>{' '}
-                  <br className="hidden sm:inline" />
-                  in Post Falls &amp; Rathdrum.
-                </h1>
-              </div>
-            </div>
-          </div>
         </div>
 
-        {/* Full-Width Editorial Caption Bar directly beneath the 100vw Hero */}
-        <div className="bg-[#181614] border-t border-white/10">
-          <div className="max-w-5xl mx-auto px-6 py-3.5 flex flex-col md:flex-row md:items-center md:justify-between gap-2 text-xs text-[#D6CFC6] font-dm-sans">
-            <p className="leading-relaxed">
-              <strong className="text-[#FAF7F1]">Why we measure garage doors with a tape measure:</strong>{' '}
-              Shirin chilling at Laguna Seca Raceway with our Mercedes-Benz Sprinter 3500 Sportsmobile (rooftop A/C, Thule cargo box &amp; hitch bikes).
+        {/* Full-Width Dark-Pine Title & Caption Band Visible Above the Fold */}
+        <div className="bg-[#14231B] border-t border-white/10">
+          <div className="max-w-5xl mx-auto px-6 py-7 md:py-9">
+            <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <nav
+                className="text-[11px] uppercase tracking-[0.16em] font-dm-sans flex flex-wrap items-center gap-2"
+                style={{ color: 'rgba(250, 247, 241, 0.76)' }}
+                aria-label="Breadcrumb"
+              >
+                <Link href="/" className="hover:text-[#E2B872] transition-colors">Home</Link>
+                <span aria-hidden="true">·</span>
+                <Link href="/articles" className="hover:text-[#E2B872] transition-colors">Articles</Link>
+                <span aria-hidden="true">·</span>
+                <Link href="/areas/post-falls-idaho/new-construction" className="hover:text-[#E2B872] transition-colors">
+                  Post Falls New Construction
+                </Link>
+                <span aria-hidden="true">·</span>
+                <span style={{ color: '#FAF7F1' }}>Shops &amp; RV Garages</span>
+              </nav>
+              <span className="text-[11px] uppercase tracking-[0.16em] font-dm-sans" style={{ color: '#E2B872' }}>
+                Verified Nov 23, 2026 · 12 min read
+              </span>
+            </div>
+
+            <h1
+              id="shops-rv-hero-title"
+              className="font-cormorant text-3xl sm:text-4xl lg:text-[46px] leading-[1.08] font-medium mb-3"
+              style={{ color: '#FAF7F1' }}
+            >
+              Homes with Shops &amp;{' '}
+              <em style={{ fontStyle: 'italic', color: '#E2B872', paddingRight: '0.08em' }}>
+                RV Garages
+              </em>{' '}
+              in Post Falls &amp; Rathdrum: Door Heights, Builders &amp; Why Zillow Misses Half of Them
+            </h1>
+
+            <p className="text-xs md:text-sm font-dm-sans leading-relaxed" style={{ color: 'rgba(250, 247, 241, 0.8)' }}>
+              <strong style={{ color: '#FAF7F1' }}>Pictured above:</strong> Shirin chilling at Laguna Seca Raceway with our Mercedes-Benz Sprinter 3500 Sportsmobile (rooftop A/C, Thule cargo box &amp; rear hitch bikes) — why we measure North Idaho garage doors with a tape measure.
             </p>
-            <span className="text-[#C4842A] whitespace-nowrap font-medium">
-              Verified Nov 23, 2026 · 12 min read
-            </span>
           </div>
         </div>
       </section>
