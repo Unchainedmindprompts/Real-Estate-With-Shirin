@@ -165,8 +165,8 @@ const articleSchema = {
   image: {
     '@type': 'ImageObject',
     url: ogImageUrl,
-    width: 2048,
-    height: 1365,
+    width: 1920,
+    height: 1080,
     caption: 'Shirin Abplanalp relaxing beside her high-roof Mercedes-Benz Sprinter 3500 Sportsmobile with rooftop A/C, Thule cargo box, and hitch bike rack.',
   },
   author: AGENT_AUTHOR_STUB,
@@ -231,36 +231,92 @@ export default function ShopsAndRvGaragesPostFallsRathdrumPage() {
         }}
       />
 
-      {/* Editorial Header */}
-      <section className="bg-[#F5EFE6] pt-36 pb-16">
-        <div className="max-w-5xl mx-auto px-6">
-          <nav className="text-sm text-[#9A9590] mb-6 font-dm-sans" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-[#C4842A] transition-colors">Home</Link>
-            <span className="mx-2">·</span>
-            <Link href="/articles" className="hover:text-[#C4842A] transition-colors">Articles</Link>
-            <span className="mx-2">·</span>
-            <Link href="/areas/post-falls-idaho/new-construction" className="hover:text-[#C4842A] transition-colors">
-              Post Falls New Construction
-            </Link>
-            <span className="mx-2">·</span>
-            <span className="text-[#5C5650]">Shops &amp; RV Garages</span>
-          </nav>
+      {/* True 100vw Full-Bleed Edge-to-Edge Photo Hero */}
+      <section
+        className="relative w-full overflow-hidden bg-[#14231B] pt-[84px]"
+        aria-labelledby="shops-rv-hero-title"
+      >
+        <div className="relative w-full aspect-[16/9] min-h-[460px] max-h-[82vh]">
+          <Image
+            src="/images/shirin-mercedes-sportsmobile-3500.webp"
+            alt="Shirin Abplanalp relaxing in a camp chair beside her high-roof Mercedes-Benz Sprinter 3500 Sportsmobile with rooftop A/C, Thule cargo box, and rear hitch mountain bike rack at Laguna Seca"
+            fill
+            quality={92}
+            sizes="100vw"
+            className="object-cover object-[center_62%]"
+            priority
+          />
+          {/* Subtle upper-left-only editorial scrim over the dark oak canopy — leaves Shirin, the dog, and the Sprinter 100% clear */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                'linear-gradient(118deg, rgba(16, 28, 21, 0.88) 0%, rgba(16, 28, 21, 0.62) 30%, rgba(16, 28, 21, 0.14) 48%, rgba(16, 28, 21, 0) 62%)',
+            }}
+          />
 
-          <div className="flex flex-wrap items-center gap-3 mb-6">
-            <span className="text-xs font-semibold uppercase tracking-widest text-[#C4842A] font-dm-sans">
-              North Idaho Buyer Guide · Firsthand Rig Checklist
-            </span>
-            <span className="text-[#9A9590] text-xs font-dm-sans">·</span>
-            <span className="text-xs text-[#9A9590] font-dm-sans">12 min read</span>
-            <span className="text-[#9A9590] text-xs font-dm-sans">·</span>
-            <span className="text-xs text-[#9A9590] font-dm-sans">Verified November 23, 2026</span>
+          <div className="absolute inset-0 flex items-start">
+            <div className="w-full max-w-[1340px] mx-auto px-6 md:px-10 pt-6 md:pt-9">
+              <div className="max-w-[680px]">
+                <nav
+                  className="text-[11px] uppercase tracking-[0.16em] mb-2.5 font-dm-sans flex flex-wrap items-center gap-2"
+                  style={{ color: 'rgba(250, 247, 241, 0.84)' }}
+                  aria-label="Breadcrumb"
+                >
+                  <Link href="/" className="hover:text-[#E2B872] transition-colors">Home</Link>
+                  <span aria-hidden="true">·</span>
+                  <Link href="/articles" className="hover:text-[#E2B872] transition-colors">Articles</Link>
+                  <span aria-hidden="true">·</span>
+                  <Link href="/areas/post-falls-idaho/new-construction" className="hover:text-[#E2B872] transition-colors">
+                    Post Falls New Construction
+                  </Link>
+                  <span aria-hidden="true">·</span>
+                  <span style={{ color: '#FAF7F1' }}>Shops &amp; RV Garages</span>
+                </nav>
+
+                <p
+                  className="text-[11px] font-semibold uppercase tracking-[0.2em] font-dm-sans mb-2"
+                  style={{ color: '#E2B872' }}
+                >
+                  Post Falls &amp; Rathdrum · Firsthand Rig Guide
+                </p>
+
+                <h1
+                  id="shops-rv-hero-title"
+                  className="font-cormorant text-3xl sm:text-4xl lg:text-[46px] leading-[1.06] font-medium"
+                  style={{ color: '#FAF7F1', textShadow: '0 2px 18px rgba(10, 18, 14, 0.55)' }}
+                >
+                  Homes with Shops &amp;{' '}
+                  <em style={{ fontStyle: 'italic', color: '#E2B872', paddingRight: '0.1em' }}>
+                    RV Garages
+                  </em>{' '}
+                  <br className="hidden sm:inline" />
+                  in Post Falls &amp; Rathdrum.
+                </h1>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <h1 className="font-cormorant text-5xl md:text-6xl text-[#1C1A17] leading-tight mb-6 font-semibold">
-            Homes with Shops &amp; RV Garages in Post Falls and Rathdrum: Door Heights, Builders &amp; Why Zillow Misses Half of Them
-          </h1>
+        {/* Full-Width Editorial Caption Bar directly beneath the 100vw Hero */}
+        <div className="bg-[#181614] border-t border-white/10">
+          <div className="max-w-5xl mx-auto px-6 py-3.5 flex flex-col md:flex-row md:items-center md:justify-between gap-2 text-xs text-[#D6CFC6] font-dm-sans">
+            <p className="leading-relaxed">
+              <strong className="text-[#FAF7F1]">Why we measure garage doors with a tape measure:</strong>{' '}
+              Shirin chilling at Laguna Seca Raceway with our Mercedes-Benz Sprinter 3500 Sportsmobile (rooftop A/C, Thule cargo box &amp; hitch bikes).
+            </p>
+            <span className="text-[#C4842A] whitespace-nowrap font-medium">
+              Verified Nov 23, 2026 · 12 min read
+            </span>
+          </div>
+        </div>
+      </section>
 
-          <p className="font-dm-sans text-lg text-[#5C5650] max-w-3xl mb-8 leading-relaxed">
+      {/* Editorial Lead & Author Band */}
+      <section className="bg-[#F5EFE6] py-10 border-b border-[#E8DDD0]">
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="font-dm-sans text-lg text-[#3E3934] max-w-4xl mb-6 leading-relaxed">
             If you have tried filtering Zillow or a public MLS website for an <strong>RV garage</strong> or <strong>detached shop</strong> in Post Falls or Rathdrum — and stared at a screen saying <em>“No Matching Results”</em> — you didn’t imagine it. Public real estate portals break on Coeur d’Alene MLS shop fields every single day. Here is why those listings disappear online, what door height and bay depth your rig actually requires, and where shop-approved homes are being built and sold across the Prairie right now.
           </p>
 
@@ -275,15 +331,13 @@ export default function ShopsAndRvGaragesPostFallsRathdrumPage() {
             />
             <div>
               <p className="font-dm-sans font-semibold text-sm text-[#1C1A17]">Shirin Abplanalp</p>
-              <p className="font-dm-sans text-xs text-[#9A9590]">
+              <p className="font-dm-sans text-xs text-[#736D66]">
                 Licensed REALTOR® · BHHS Jacklin Real Estate · Post Falls Resident &amp; Sprinter 3500 Owner · November 23, 2026
               </p>
             </div>
           </div>
         </div>
       </section>
-
-      <div className="border-t border-[#E8DDD0]" />
 
       {/* 4-Metric Bar */}
       <section className="bg-[#1C1A17] py-8">
@@ -316,23 +370,6 @@ export default function ShopsAndRvGaragesPostFallsRathdrumPage() {
       {/* Main Article + Sticky Sidebar */}
       <section className="bg-[#FAFAF8] py-16">
         <div className="max-w-5xl mx-auto px-6">
-          {/* Full-Width Firsthand Lived Experience Hero Showcase */}
-          <figure className="mb-14 border border-[#E8DDD0] bg-[#F5EFE6] rounded-sm overflow-hidden shadow-sm">
-            <Image
-              src="/images/shirin-mercedes-sportsmobile-3500.webp"
-              alt="Shirin Abplanalp relaxing in a camp chair beside her high-roof Mercedes-Benz Sprinter 3500 Sportsmobile with rooftop A/C, Thule cargo box, and rear hitch mountain bike rack at Laguna Seca"
-              width={2048}
-              height={1365}
-              quality={92}
-              sizes="(max-width: 1080px) 100vw, 1024px"
-              className="w-full h-auto object-cover"
-              priority
-            />
-            <figcaption className="px-6 py-4 text-sm text-[#5C5650] leading-relaxed border-t border-[#E8DDD0] font-dm-sans">
-              <strong className="text-[#1C1A17]">Why we measure garage doors with a tape measure:</strong> Shirin chilling at Laguna Seca Raceway with our Mercedes-Benz Sprinter 3500 Sportsmobile — complete with rooftop A/C, a Thule cargo box, and bikes on the rear hitch. Once you own a high-roof rig, you learn fast that a listing calling an 8-foot door “oversized” or an HOA banning 48-hour driveway loading is a dealbreaker.
-            </figcaption>
-          </figure>
-
           <div className="lg:grid lg:grid-cols-3 lg:gap-12">
             <article className="lg:col-span-2 font-dm-sans text-[#5C5650] text-[17px] leading-[1.75]">
               <p className="mb-6">
