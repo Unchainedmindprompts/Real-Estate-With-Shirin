@@ -266,6 +266,9 @@ export default function PostFallsNewConstructionPage() {
             </p>
 
             <div style={{ marginTop: '32px', display: 'flex', flexWrap: 'wrap', gap: '28px' }}>
+              <Link className="ed-link-underlined" href="/articles/55-plus-single-level-new-construction-post-falls-idaho">
+                55+ &amp; Single-Level New Builds (Trutina Guide) <span aria-hidden="true">→</span>
+              </Link>
               <Link className="ed-link-underlined" href="/areas/post-falls-idaho">
                 Post Falls City &amp; Living Guide <span aria-hidden="true">→</span>
               </Link>

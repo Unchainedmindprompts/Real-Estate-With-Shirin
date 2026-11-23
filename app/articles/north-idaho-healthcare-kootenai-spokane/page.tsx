@@ -649,10 +649,22 @@ export default function NorthIdahoHealthcarePage() {
                 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
                   <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Related Articles</p>
                   <div className="space-y-4">
-                    <a href="/about" className="block group">
-                      <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">About Shirin Abplanalp</p>
-                      <p className="font-dm-sans text-xs text-[#9A9590] mt-1">SRES® Certified · 100+ Transactions · 11 Years in Real Estate</p>
+                    <a href="/articles/55-plus-single-level-new-construction-post-falls-idaho" className="block group">
+                      <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">55+ &amp; Single-Level New Construction in Post Falls</p>
+                      <p className="font-dm-sans text-xs text-[#9A9590] mt-1">Trutina 55+ ($415K–$527K) vs. all-ages ranchers near NW Specialty</p>
                     </a>
+                    <div className="border-t border-[#E8DDD0] pt-4">
+                      <a href="/areas/post-falls-idaho/new-construction" className="block group">
+                        <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Post Falls New Construction Hub</p>
+                        <p className="font-dm-sans text-xs text-[#9A9590] mt-1">All 10 active Post Falls subdivisions, builders &amp; 2026 prices</p>
+                      </a>
+                    </div>
+                    <div className="border-t border-[#E8DDD0] pt-4">
+                      <a href="/about" className="block group">
+                        <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">About Shirin Abplanalp</p>
+                        <p className="font-dm-sans text-xs text-[#9A9590] mt-1">SRES® Certified · 100+ Transactions · 11 Years in Real Estate</p>
+                      </a>
+                    </div>
                     <div className="border-t border-[#E8DDD0] pt-4">
                       <a href="/articles/north-idaho-school-districts-open-enrollment-charters" className="block group">
                         <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">North Idaho Schools Guide: Districts, Charters & Open Enrollment</p>

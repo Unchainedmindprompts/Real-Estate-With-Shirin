@@ -131,9 +131,16 @@ export default function PostFallsNewConstructionClient({ idxUrl }: { idxUrl: str
                   </div>
 
                   <div className="ed-nc-actions">
-                    <Link href="/contact" className="ed-card-cta">
-                      Request Floor Plans &amp; Lot Sheet <span aria-hidden="true">→</span>
-                    </Link>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '18px', alignItems: 'center' }}>
+                      <Link href="/contact" className="ed-card-cta">
+                        Request Floor Plans &amp; Lot Sheet <span aria-hidden="true">→</span>
+                      </Link>
+                      {c.guideHref && c.guideLabel && (
+                        <Link href={c.guideHref} className="ed-card-cta" style={{ color: 'var(--bronze)' }}>
+                          {c.guideLabel} <span aria-hidden="true">→</span>
+                        </Link>
+                      )}
+                    </div>
                     {c.builderLinks.length > 0 && (
                       <div className="ed-nc-ext-links">
                         {c.builderLinks.map((b) => (

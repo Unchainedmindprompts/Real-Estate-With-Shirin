@@ -21,6 +21,9 @@ export interface PostFallsCommunity {
   /** Optional verified on-site Nikon Z8 photo path under /public/images/... */
   image?: string
   imageAlt?: string
+  /** Optional deep-dive internal guide link */
+  guideHref?: string
+  guideLabel?: string
   categories: Exclude<CommunityCategory, 'all'>[]
   builderLinks: { label: string; url: string }[]
 }
@@ -62,6 +65,8 @@ export const POST_FALLS_COMMUNITIES: PostFallsCommunity[] = [
       'Post Falls’ signature age-qualified 55+ neighborhood inside the North Place master plan south of Prairie Avenue. Built around single-level Blue Sky and Cottage Collection layouts, walkable trails, and resort-style community amenities for downsizers who want low winter maintenance without giving up homeownership.',
     incentiveNote:
       'Checked Nov 23, 2026: Greenstone lists a Cottage Home Promo ($5,000 on presale or $10,000 on completed quick move-in cottages toward closing costs or buydown) plus CMG Home Loans closing-cost or design-studio options.',
+    guideHref: '/articles/55-plus-single-level-new-construction-post-falls-idaho',
+    guideLabel: 'Read All 8 Trutina Plans & 55+ Guide',
     categories: ['55-single-level'],
     builderLinks: [
       { label: 'Greenstone Trutina 55+', url: 'https://greenstonehomes.com/community/trutina-at-north-place' },

@@ -11,6 +11,16 @@ export interface ArticleEntry {
 
 export const ARTICLES_INDEX: ArticleEntry[] = [
   {
+    "href": "/articles/55-plus-single-level-new-construction-post-falls-idaho",
+    "title": "55+ & Single-Level New Construction in Post Falls, Idaho: Trutina vs. All-Ages Ranchers",
+    "excerpt": "Every published Trutina 55+ floor plan ($415,000\u2013$527,000) compared against six all-ages single-level new-build pockets in Post Falls ($375,556+), plus zero-step, snow-removal, and medical access checks.",
+    "category": "Senior Living",
+    "rawCategory": "55+ & Downsizing \u00b7 SRES\u00ae",
+    "readTime": "12 min read",
+    "date": "November 23, 2026",
+    "badge": "New \u2014 November 2026"
+  },
+  {
     "href": "/articles/moving-from-washington-to-north-idaho",
     "title": "Moving from Washington to North Idaho: A Home Buyer\u2019s Planning Guide",
     "excerpt": "A practical, local-first planning guide for out-of-state buyers weighing neighborhoods, lifestyle, taxes, and timing before making the move to North Idaho.",
