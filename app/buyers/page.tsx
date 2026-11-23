@@ -125,9 +125,14 @@ export default function BuyersPage() {
                 What working together <em>looks like.</em>
               </h2>
             </div>
-            <a className="ed-link-underlined" href="https://shirinabplanalp.jacklinrealestate.com" target="_blank" rel="noopener noreferrer">
-              Search Live MLS Homes <span aria-hidden="true">↗</span>
-            </a>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '24px', alignItems: 'center' }}>
+              <Link className="ed-link-underlined" href="/areas/post-falls-idaho/new-construction">
+                Post Falls New Construction Guide <span aria-hidden="true">→</span>
+              </Link>
+              <a className="ed-link-underlined" href="https://shirinabplanalp.jacklinrealestate.com" target="_blank" rel="noopener noreferrer">
+                Search Live MLS Homes <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
 
           <div className="ed-process-grid">

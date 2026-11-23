@@ -37,3 +37,19 @@ export const IDX_SEARCH_BY_AREA: Record<string, string> = {
   "kootenai-county": searchUrl("Kootenai", "county:g40_c2mp0qu7"),
   "bonner-county": searchUrl("Bonner", "county:g40_c2t4f8v8"),
 };
+
+// Verified live on shirinabplanalp.jacklinrealestate.com on 2026-11-23:
+// `yearbuilt=2025` with Active (`0`) + Coming Soon (`57`) returns 37 live
+// new/recent-construction listings in Post Falls ($375.6K twin homes to $2.589M
+// custom riverfront to-be-built). Do NOT add `options[]=newconstruction` —
+// Coeur d'Alene MLS does not populate that kvCORE checkbox flag (returns 0).
+export const IDX_NEW_CONSTRUCTION_POST_FALLS =
+  `${KVCORE_BASE}/index.php?` +
+  "advanced=1&min=0&max=100000000&beds=0&baths=0" +
+  "&types%5B%5D=1&types%5B%5D=2&types%5B%5D=3&types%5B%5D=5&types%5B%5D=4" +
+  "&types%5B%5D=8&types%5B%5D=12&types%5B%5D=15&types%5B%5D=20" +
+  "&statuses%5B%5D=0&statuses%5B%5D=57" +
+  "&minfootage=0&maxfootage=30000&minacres=0&maxacres=0" +
+  "&yearbuilt=2025&maxyearbuilt=0&walkscore=0&keywords=" +
+  "&sortby=listings.price+ASC&rtype=grid" +
+  `&display=${encodeURIComponent("Post Falls")}&pak=${encodeURIComponent("city:g30_c2kz6zng")}`;

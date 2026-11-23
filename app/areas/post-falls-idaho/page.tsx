@@ -54,6 +54,7 @@ const jsonLdWebPage = {
   isPartOf: { '@id': WEBSITE_ID },
   about: { '@id': BUSINESS_ID },
   mainEntity: { '@id': `${PAGE_URL}#service` },
+  hasPart: { '@id': `${PAGE_URL}/new-construction#webpage` },
   breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` },
   inLanguage: 'en-US',
 }
@@ -116,6 +117,7 @@ export default function PostFallsAreaPage() {
             'Sitting just 10 minutes west of Coeur d’Alene and 25 minutes east of Spokane, Post Falls lets you enjoy Lake Coeur d’Alene and the Spokane River every weekend without paying the downtown CdA premium.',
           ],
           marketLinks: [
+            { label: 'Post Falls New Construction & Builders Guide', href: '/areas/post-falls-idaho/new-construction' },
             { label: 'Post Falls vs. Rathdrum Guide', href: '/articles/post-falls-vs-rathdrum-which-is-right-for-you' },
             { label: '2026 Post Falls Cost Guide', href: '/articles/how-much-do-homes-cost-post-falls-idaho' },
           ],

@@ -58,6 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/sellers`, lastModified: gitLastModified('app/sellers/page.tsx'), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/areas`, lastModified: gitLastModified('app/areas/page.tsx'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/areas/post-falls-idaho`, lastModified: gitLastModified('app/areas/post-falls-idaho/page.tsx'), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/areas/post-falls-idaho/new-construction`, lastModified: gitLastModified('app/areas/post-falls-idaho/new-construction/page.tsx'), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/areas/coeur-dalene-idaho`, lastModified: gitLastModified('app/areas/coeur-dalene-idaho/page.tsx'), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/areas/hayden-idaho`, lastModified: gitLastModified('app/areas/hayden-idaho/page.tsx'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/areas/rathdrum-idaho`, lastModified: gitLastModified('app/areas/rathdrum-idaho/page.tsx'), changeFrequency: 'monthly', priority: 0.8 },

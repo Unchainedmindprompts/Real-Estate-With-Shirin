@@ -418,3 +418,139 @@
   .ed-forest-hero { padding: 118px 0 60px; }
   .ed-photo-hero { min-height: 0; padding: 120px 0 60px; }
 }
+
+/* Post Falls New Construction Hub Extensions */
+.ed-nc-breadcrumb {
+  display: inline-flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(247, 244, 238, 0.74);
+}
+.ed-nc-breadcrumb a { transition: color 0.2s; }
+.ed-nc-breadcrumb a:hover { color: var(--bronze-light); }
+
+.ed-nc-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px;
+}
+.ed-nc-card { background: var(--alabaster-card); }
+.ed-nc-arch-strip {
+  background: linear-gradient(135deg, var(--forest-deep) 0%, var(--forest) 100%);
+  color: var(--alabaster);
+  padding: 20px 26px 18px;
+  border-bottom: 2px solid var(--bronze);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ed-nc-arch-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.ed-nc-arch-left {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.ed-nc-folio {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--bronze-light);
+}
+.ed-nc-corridor {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--bronze-light);
+}
+.ed-nc-status-pill {
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1px solid rgba(197, 170, 122, 0.45);
+  color: #FAF7F1;
+  background: rgba(15, 31, 23, 0.45);
+}
+.ed-nc-status-pill.is-soon {
+  border-color: rgba(247, 244, 238, 0.32);
+  color: rgba(247, 244, 238, 0.8);
+}
+.ed-nc-anchor {
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  color: rgba(247, 244, 238, 0.82);
+  padding-top: 8px;
+  border-top: 1px solid rgba(247, 244, 238, 0.14);
+}
+.ed-nc-anchor-inline {
+  margin-top: 6px !important;
+  font-size: 12.5px !important;
+  color: var(--ink-muted);
+}
+.ed-nc-body { display: flex; flex-direction: column; flex: 1; gap: 16px; }
+.ed-nc-header h3 { margin-top: 6px; font-size: clamp(25px, 2.2vw, 31px); }
+.ed-nc-specs {
+  display: grid; grid-template-columns: 1fr; gap: 8px;
+  padding: 14px 16px; background: var(--alabaster-warm); border-left: 2px solid var(--bronze);
+}
+.ed-nc-specs div { display: flex; justify-content: space-between; gap: 14px; font-size: 13px; align-items: baseline; }
+.ed-nc-specs dt { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-muted); flex-shrink: 0; }
+.ed-nc-specs dd { font-weight: 500; color: var(--pine); text-align: right; }
+.ed-nc-summary { font-size: 14px; line-height: 1.74; color: var(--ink-muted); margin-top: 0 !important; }
+.ed-nc-incentive {
+  font-size: 12.5px; line-height: 1.62; color: var(--pine);
+  padding: 12px 14px; background: rgba(24, 53, 38, 0.055); border: 1px solid rgba(142, 115, 75, 0.22);
+}
+.ed-nc-incentive strong { font-weight: 600; color: var(--forest); }
+.ed-nc-actions {
+  margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(142, 115, 75, 0.18);
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.ed-nc-actions .ed-card-cta { margin-top: 0; }
+.ed-nc-ext-links { display: flex; flex-wrap: wrap; gap: 12px; }
+.ed-nc-ext-link {
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bronze);
+  transition: color 0.2s;
+}
+.ed-nc-ext-link:hover { color: var(--pine); text-decoration: underline; }
+
+.ed-nc-pillars { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
+
+.ed-nc-table-wrap {
+  overflow-x: auto; border: 1px solid var(--hairline); background: var(--alabaster-card);
+}
+.ed-nc-table {
+  width: 100%; border-collapse: collapse; min-width: 780px; font-size: 14px;
+}
+.ed-nc-table thead tr { background: var(--pine); color: var(--alabaster); text-align: left; }
+.ed-nc-table th {
+  padding: 16px 18px; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--bronze-light);
+}
+.ed-nc-table td {
+  padding: 15px 18px; border-top: 1px solid rgba(142, 115, 75, 0.2); color: var(--ink-muted); vertical-align: top;
+}
+.ed-nc-table td strong { color: var(--pine); font-weight: 500; }
+.ed-nc-table tbody tr:hover { background: var(--alabaster-warm); }
+
+.ed-nc-sources {
+  margin-top: 28px; border: 1px solid var(--hairline); background: var(--alabaster-card); padding: 20px 24px;
+}
+.ed-nc-sources summary {
+  cursor: pointer; font-size: 12px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--pine); list-style: revert;
+}
+.ed-nc-sources-body { margin-top: 16px; font-size: 13.5px; line-height: 1.72; color: var(--ink-muted); }
+.ed-nc-sources-body ul { margin-top: 14px; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; }
+.ed-nc-sources-body a { color: var(--bronze); text-decoration: underline; text-underline-offset: 2px; }
+.ed-nc-sources-body a:hover { color: var(--pine); }
+
+@media (max-width: 980px) {
+  .ed-nc-grid, .ed-nc-pillars { grid-template-columns: 1fr; }
+  .ed-nc-specs div { flex-direction: column; gap: 2px; }
+  .ed-nc-specs dd { text-align: left; }
+}

@@ -404,6 +404,12 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
 <p className="font-dm-sans text-xs text-[#9A9590] mt-1">Builders, costs, and the build process this guide extends</p>
 </a>
 <div className="border-t border-[#E8DDD0] pt-4">
+<a href="/areas/post-falls-idaho/new-construction" className="block group">
+<p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Post Falls New Construction Communities</p>
+<p className="font-dm-sans text-xs text-[#9A9590] mt-1">Every active Post Falls subdivision, builder &amp; 2026 price band</p>
+</a>
+</div>
+<div className="border-t border-[#E8DDD0] pt-4">
 <a href="/areas/post-falls-idaho" className="block group">
 <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Post Falls Real Estate</p>
 <p className="font-dm-sans text-xs text-[#9A9590] mt-1">The area guide for the Crown Reserve market</p>
