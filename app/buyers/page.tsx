@@ -129,6 +129,9 @@ export default function BuyersPage() {
               <Link className="ed-link-underlined" href="/areas/post-falls-idaho/new-construction">
                 Post Falls New Construction Guide <span aria-hidden="true">→</span>
               </Link>
+              <Link className="ed-link-underlined" href="/articles/homes-with-shops-rv-garages-post-falls-rathdrum-idaho">
+                Shops &amp; RV Garages Guide <span aria-hidden="true">→</span>
+              </Link>
               <a className="ed-link-underlined" href="https://shirinabplanalp.jacklinrealestate.com" target="_blank" rel="noopener noreferrer">
                 Search Live MLS Homes <span aria-hidden="true">↗</span>
               </a>

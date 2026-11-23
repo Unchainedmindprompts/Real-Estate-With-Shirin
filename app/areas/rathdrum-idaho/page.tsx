@@ -112,6 +112,7 @@ export default function RathdrumAreaPage() {
             'Whether you’re looking inside a modern neighborhood or evaluating 5 acres on the prairie, knowing well depths, aquifer septic standards, and winter road access up front makes all the difference.',
           ],
           marketLinks: [
+            { label: 'Homes with Shops & RV Garages Guide', href: '/articles/homes-with-shops-rv-garages-post-falls-rathdrum-idaho' },
             { label: '2026 Rathdrum Cost Guide', href: '/articles/how-much-do-homes-cost-rathdrum-idaho' },
             { label: 'Prairie Wells, Septic & Roads Guide', href: '/articles/buying-property-prairie-wells-septic-roads' },
           ],

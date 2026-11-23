@@ -11,6 +11,16 @@ export interface ArticleEntry {
 
 export const ARTICLES_INDEX: ArticleEntry[] = [
   {
+    "href": "/articles/homes-with-shops-rv-garages-post-falls-rathdrum-idaho",
+    "title": "Homes with Shops & RV Garages in Post Falls and Rathdrum, Idaho: Door Heights, Builders & Why Zillow Misses Half of Them",
+    "excerpt": "Why public MLS and Zillow filters miss active RV-bay and shop listings, what a high-roof Sprinter 3500 or fifth-wheel actually requires (12\u201314 ft doors, bay depth, CC&Rs), and verified Post Falls and Rathdrum shop pockets.",
+    "category": "Buyer Guides",
+    "rawCategory": "North Idaho Buyer Guides",
+    "readTime": "12 min read",
+    "date": "November 23, 2026",
+    "badge": "New \u2014 November 2026"
+  },
+  {
     "href": "/articles/55-plus-single-level-new-construction-post-falls-idaho",
     "title": "55+ & Single-Level New Construction in Post Falls, Idaho: Trutina vs. All-Ages Ranchers",
     "excerpt": "Every published Trutina 55+ floor plan ($415,000\u2013$527,000) compared against six all-ages single-level new-build pockets in Post Falls ($375,556+), plus zero-step, snow-removal, and medical access checks.",

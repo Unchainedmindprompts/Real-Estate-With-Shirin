@@ -53,3 +53,26 @@ export const IDX_NEW_CONSTRUCTION_POST_FALLS =
   "&yearbuilt=2025&maxyearbuilt=0&walkscore=0&keywords=" +
   "&sortby=listings.price+ASC&rtype=grid" +
   `&display=${encodeURIComponent("Post Falls")}&pak=${encodeURIComponent("city:g30_c2kz6zng")}`;
+
+// Verified 2026-11-23: kvCORE's public `3+ Garage` / `RV Access` / `Shop`
+// checkboxes and free-text `keywords` do not reliably filter Coeur d'Alene MLS
+// shop/RV-bay remarks (returning either 0 results or all unfiltered homes).
+// Numeric `minacres=0.25` + `types[]=1` (Single Family Active + Coming Soon)
+// reliably filters to quarter-acre-plus homesites capable of RV pads/shops.
+export const IDX_SHOP_LOT_CANDIDATES_POST_FALLS =
+  `${KVCORE_BASE}/index.php?` +
+  "advanced=1&min=0&max=100000000&beds=0&baths=0" +
+  "&types%5B%5D=1&statuses%5B%5D=0&statuses%5B%5D=57" +
+  "&minfootage=0&maxfootage=30000&minacres=0.25&maxacres=0" +
+  "&yearbuilt=0&maxyearbuilt=0&walkscore=0&keywords=" +
+  "&sortby=listings.price+ASC&rtype=grid" +
+  `&display=${encodeURIComponent("Post Falls")}&pak=${encodeURIComponent("city:g30_c2kz6zng")}`;
+
+export const IDX_SHOP_LOT_CANDIDATES_RATHDRUM =
+  `${KVCORE_BASE}/index.php?` +
+  "advanced=1&min=0&max=100000000&beds=0&baths=0" +
+  "&types%5B%5D=1&statuses%5B%5D=0&statuses%5B%5D=57" +
+  "&minfootage=0&maxfootage=30000&minacres=0.25&maxacres=0" +
+  "&yearbuilt=0&maxyearbuilt=0&walkscore=0&keywords=" +
+  "&sortby=listings.price+ASC&rtype=grid" +
+  `&display=${encodeURIComponent("Rathdrum")}&pak=${encodeURIComponent("city:g30_c2kzujd7")}`;

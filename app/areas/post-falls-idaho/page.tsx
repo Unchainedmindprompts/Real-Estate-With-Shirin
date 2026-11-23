@@ -118,6 +118,7 @@ export default function PostFallsAreaPage() {
           ],
           marketLinks: [
             { label: 'Post Falls New Construction & Builders Guide', href: '/areas/post-falls-idaho/new-construction' },
+            { label: 'Homes with Shops & RV Garages Guide', href: '/articles/homes-with-shops-rv-garages-post-falls-rathdrum-idaho' },
             { label: 'Post Falls vs. Rathdrum Guide', href: '/articles/post-falls-vs-rathdrum-which-is-right-for-you' },
             { label: '2026 Post Falls Cost Guide', href: '/articles/how-much-do-homes-cost-post-falls-idaho' },
           ],

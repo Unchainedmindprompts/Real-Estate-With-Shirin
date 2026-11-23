@@ -269,14 +269,14 @@ export default function PostFallsNewConstructionPage() {
               <Link className="ed-link-underlined" href="/articles/55-plus-single-level-new-construction-post-falls-idaho">
                 55+ &amp; Single-Level New Builds (Trutina Guide) <span aria-hidden="true">→</span>
               </Link>
+              <Link className="ed-link-underlined" href="/articles/homes-with-shops-rv-garages-post-falls-rathdrum-idaho">
+                Shops &amp; RV Garages in Post Falls &amp; Rathdrum <span aria-hidden="true">→</span>
+              </Link>
               <Link className="ed-link-underlined" href="/areas/post-falls-idaho">
                 Post Falls City &amp; Living Guide <span aria-hidden="true">→</span>
               </Link>
               <Link className="ed-link-underlined" href="/articles/new-construction-vs-resale-north-idaho-better-value">
                 New Construction vs. Resale Math <span aria-hidden="true">→</span>
-              </Link>
-              <Link className="ed-link-underlined" href="/articles/post-falls-vs-rathdrum-which-is-right-for-you">
-                Post Falls vs. Rathdrum <span aria-hidden="true">→</span>
               </Link>
             </div>
           </div>

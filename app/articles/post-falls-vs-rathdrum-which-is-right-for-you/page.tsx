@@ -477,6 +477,12 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
 </a>
 </div>
 <div className="border-t border-[#E8DDD0] pt-4">
+<a href="/articles/homes-with-shops-rv-garages-post-falls-rathdrum-idaho" className="block group">
+<p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Homes with Shops &amp; RV Garages</p>
+<p className="font-dm-sans text-xs text-[#9A9590] mt-1">12–14 ft door clearances, shop-lot builders &amp; Post Falls vs. Rathdrum zoning</p>
+</a>
+</div>
+<div className="border-t border-[#E8DDD0] pt-4">
 <a href="/areas/post-falls-idaho" className="block group">
 <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Post Falls Idaho Real Estate</p>
 <p className="font-dm-sans text-xs text-[#9A9590] mt-1">Neighborhoods and market overview</p>

@@ -210,6 +210,8 @@ export const POST_FALLS_COMMUNITIES: PostFallsCommunity[] = [
       'Production subdivisions rarely allow tall RV bays or detached shops. Buyers needing indoor boat/camper storage target smaller infill pockets like Millsap Landing (N Neptune St, 2-car + large RV garage on 0.20 ac at $659,000), while Spokane River luxury buyers look to custom to-be-built waterfront parcels such as Estates at Waterstone ($2.589M).',
     incentiveNote:
       'Checked Nov 23, 2026 on Shirin’s kvCORE MLS feed: custom and boutique spec terms are negotiated directly on Idaho RE-21 or builder custom addenda — verify CC&Rs, RV door height, and dock permits upfront.',
+    guideHref: '/articles/homes-with-shops-rv-garages-post-falls-rathdrum-idaho',
+    guideLabel: 'Read Full Shop & RV-Garage Guide',
     categories: ['rv-custom'],
     builderLinks: [],
   },
