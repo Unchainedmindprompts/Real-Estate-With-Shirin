@@ -74,7 +74,7 @@ const faqs = [
   },
   {
     q: 'Can you buy brand-new construction with a shop or RV garage in Post Falls or Rathdrum?',
-    a: 'Yes, in specific pockets — though most high-density HOA subdivisions disallow them. Verified November 2026 options include Millsap Landing in central Post Falls (where a 2026 3-bed home with an attached 2-car plus large RV garage on 0.20 acres listed at $659,000), Monogram Homes’ Thayer Farms North in Rathdrum (shop lots starting at $539,999+ offering 24 ft × 32 ft × 12 ft shops with a 90-amp subpanel), Atlas Building Group in Rathdrum and Kootenai County (Atlas @ Trossicks from $558,000 and specialized 16 ft × 46 ft attached RV bays with 14-ft doors), and select upper-tier estate lots.',
+    a: 'Yes, in specific pockets — though most high-density HOA subdivisions disallow them. Verified November 2026 options include Monogram Homes at Crown Reserve in Post Falls (starting at $559,999+ across 19 park-enclave homesites, where single-level plans like the Stratford offer an optional 32-foot RV garage and the Lexington offers oversized 3-car/RV configurations), Millsap Landing in central Post Falls (where a 2026 3-bed home with an attached 2-car plus large RV garage on 0.20 acres listed at $659,000), Monogram Homes’ Thayer Farms North in Rathdrum (shop lots starting at $539,999+ offering 24 ft × 32 ft × 12 ft shops with a 90-amp subpanel), and Atlas Building Group in Rathdrum (Atlas @ Trossicks from $558,000 and specialized 16 ft × 46 ft attached RV bays with 14-ft doors).',
   },
   {
     q: 'Is Post Falls or Rathdrum better if I want a detached 30×40 or 40×60 shop?',
@@ -118,6 +118,13 @@ const clearanceRows = [
 ]
 
 const shopPockets = [
+  {
+    name: 'Crown Reserve Park Enclave by Monogram Homes (Post Falls)',
+    priceBand: 'Starting at $559,999+ (Lexington specs ~$629,999)',
+    setup: '19 park-enclave homesites · Optional 32-ft RV garage & 3-car bays',
+    notes:
+      'Single-level plans such as the Stratford (1,512 sq ft) and Lexington (1,761 sq ft) offer deep RV-height or multi-car garage configurations in north-central Post Falls, with front/back landscaping and white vinyl fencing included.',
+  },
   {
     name: 'Millsap Landing & Central Post Falls Infill (Post Falls)',
     priceBand: 'Verified $659,000 active 2026 spec (Nov 23, 2026)',

@@ -564,10 +564,22 @@ className="inline-block text-center bg-[#C4842A] hover:bg-[#8B4F2A] text-white f
 <div className="bg-[#F5EFE6] border border-[#E8DDD0] rounded-sm p-6">
 <p className="font-dm-sans text-xs font-semibold uppercase tracking-widest text-[#C4842A] mb-4">Related Resources</p>
 <div className="space-y-4">
+<a href="/areas/post-falls-idaho/new-construction" className="block group">
+<p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">New Construction Homes in Post Falls, Idaho</p>
+<p className="font-dm-sans text-xs text-[#9A9590] mt-1">All 10 communities, 7 builders, 55+ &amp; RV-garage options</p>
+</a>
+<div className="border-t border-[#E8DDD0] pt-4">
+<a href="/articles/homes-with-shops-rv-garages-post-falls-rathdrum-idaho" className="block group">
+<p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Homes with Shops &amp; RV Garages in Post Falls &amp; Rathdrum</p>
+<p className="font-dm-sans text-xs text-[#9A9590] mt-1">12–14 ft door heights, shop-lot builders &amp; MLS audit</p>
+</a>
+</div>
+<div className="border-t border-[#E8DDD0] pt-4">
 <a href="/areas/post-falls-idaho" className="block group">
 <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Post Falls Idaho Real Estate</p>
 <p className="font-dm-sans text-xs text-[#9A9590] mt-1">Neighborhoods, market overview</p>
 </a>
+</div>
 <div className="border-t border-[#E8DDD0] pt-4">
 <a href="/buyers" className="block group">
 <p className="font-dm-sans text-sm font-semibold text-[#1C1A17] group-hover:text-[#C4842A] transition-colors leading-snug">Buying a Home in Northern Idaho</p>

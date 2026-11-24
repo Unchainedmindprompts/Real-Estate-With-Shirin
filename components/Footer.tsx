@@ -72,7 +72,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 {[
                   { label: 'Buyers', href: '/buyers' },
-                  { label: 'Post Falls New Builds', href: '/areas/post-falls-idaho/new-construction' },
+                  { label: 'Post Falls New Construction Homes', href: '/areas/post-falls-idaho/new-construction' },
                   { label: 'Sellers', href: '/sellers' },
                   { label: 'Relocation', href: '/relocating-to-north-idaho' },
                 ].map((link) => (

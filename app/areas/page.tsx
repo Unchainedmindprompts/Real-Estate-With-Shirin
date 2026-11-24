@@ -131,10 +131,18 @@ export default function AreasIndexPage() {
             ))}
           </div>
 
-          {/* Separate County-Wide Overviews Strip */}
+          {/* Post Falls New Construction Hub Spotlight + County-Wide Overviews Strip */}
           <div style={{ marginTop: '56px', paddingTop: '40px', borderTop: '1px solid var(--hairline)' }}>
-            <p className="ed-eyebrow" style={{ marginBottom: '20px' }}>County-Wide Market Overviews</p>
-            <div className="ed-compare-stage">
+            <p className="ed-eyebrow" style={{ marginBottom: '20px' }}>New Construction &amp; County-Wide Guides</p>
+            <div className="ed-hood-grid">
+              <Link href="/areas/post-falls-idaho/new-construction" className="ed-hood-card">
+                <div className="ed-hood-body">
+                  <p className="ed-card-kicker" style={{ marginBottom: '8px' }}>10 Communities · 7 Builders · From $375.6K</p>
+                  <h3>New Construction Homes in Post Falls, Idaho</h3>
+                  <p>Compare Crown Reserve, Trutina 55+, Foxtail, The Parkllyn, North Place, Montrose, Millworx, RV-garage builds, and model-home registration rules.</p>
+                  <span className="ed-card-cta">Explore Post Falls New Construction <span aria-hidden="true">→</span></span>
+                </div>
+              </Link>
               <Link href="/areas/kootenai-county" className="ed-hood-card">
                 <div className="ed-hood-body">
                   <p className="ed-card-kicker" style={{ marginBottom: '8px' }}>~0.452% Effective Tax · CdA, Post Falls, Hayden &amp; Rathdrum</p>

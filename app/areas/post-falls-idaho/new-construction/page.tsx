@@ -20,11 +20,11 @@ export const metadata = heroMetadata(
 const FAQS = [
   {
     q: 'How much do new construction homes cost in Post Falls, Idaho right now?',
-    a: 'Checked directly on builder websites and the Coeur d’Alene MLS on November 23, 2026, brand-new attached twin homes at Viking’s Wildflower Meadows start at $375,556 to $376,220, Millworx live-work townhomes start at $405,000 ($420,000+ currently listed), Greenstone’s North Place cottages start at $404,000, Trutina 55+ single-level homes run $415,000 to $527,000, and single-family master-planned homes start at $414,990 at Hayden’s Crown Reserve and $420,950 at Lennar’s Crown Reserve. Mid-to-upper single-family specs in Foxtail, Montrose, and The Parkllyn span roughly $450,000 to $1,002,880, while custom Spokane River waterfront builds exceed $2.5M. Remember that base plan prices exclude lot premiums, design upgrades, and any unincluded yard or window items.',
+    a: 'Checked directly on builder websites and the Coeur d’Alene MLS on November 23–24, 2026, brand-new attached twin homes at Viking’s Wildflower Meadows start at $375,556 to $376,220, Millworx live-work townhomes start at $405,000 ($420,000+ currently listed), Greenstone’s North Place cottages start at $404,000, Trutina 55+ single-level homes run $415,000 to $527,000, and single-family master-planned homes at Crown Reserve start at $414,990 (Hayden Homes), $420,950 (Lennar), and $559,999+ (Monogram Homes’ park-enclave plans with 3-car and RV-bay options). Mid-to-upper single-family specs in Foxtail, Montrose, and The Parkllyn span roughly $450,000 to $1,002,880, while custom Spokane River waterfront builds exceed $2.5M.',
   },
   {
     q: 'Which builders are actively building in Post Falls in 2026?',
-    a: 'Six primary production and neighborhood builders verified active or upcoming in Post Falls on November 23, 2026 are Hayden Homes (Crown Reserve active; North Place and Rosewater Place coming soon), Architerra Homes (Foxtail and The Parkllyn active; The Post townhomes coming soon), Greenstone Homes (North Place, Trutina 55+, and Montrose), Lennar (Crown Reserve), Viking Construction (Montrose, North Place East, and Wildflower Meadows), and Millworx (central Post Falls townhomes), alongside local semi-custom and waterfront builders in pockets such as Millsap Landing and Estates at Waterstone.',
+    a: 'Seven primary production and neighborhood builders verified active or upcoming in Post Falls in November 2026 are Hayden Homes (Crown Reserve active; North Place and Rosewater Place coming soon), Architerra Homes (Foxtail and The Parkllyn active; The Post townhomes coming soon), Greenstone Homes (North Place, Trutina 55+, and Montrose), Lennar (Crown Reserve), Monogram Homes (Crown Reserve 19-lot park enclave with RV-garage plans), Viking Construction (Montrose, North Place East, and Wildflower Meadows), and Millworx (central Post Falls townhomes), alongside local semi-custom and waterfront builders in Millsap Landing and Estates at Waterstone.',
   },
   {
     q: 'Why should I contact my own buyer’s agent before visiting a Post Falls model home?',
@@ -36,7 +36,7 @@ const FAQS = [
   },
   {
     q: 'Where can I buy a new construction home with an RV garage or shop in Post Falls?',
-    a: 'Standard master-planned HOA subdivisions in Post Falls usually restrict tall RV doors, detached shops, and street trailer parking. Buyers who need indoor RV or boat storage look to select estate lots in The Parkllyn, dedicated RV-garage infill pockets like Millsap Landing (where a 2026 3-bed home with an attached 2-car plus large RV garage on 0.20 acres listed at $659,000 on November 23, 2026), or nearby Rathdrum shop-lot communities such as Thayer Farms North. Always verify garage door clear height and CC&R parking rules in writing before signing.',
+    a: 'Most high-density HOA subdivisions in Post Falls restrict tall RV doors and detached shops, so target verified RV-bay pockets: Monogram Homes at Crown Reserve (starting at $559,999 across 19 park-enclave homesites, where single-level plans like the Stratford offer a 32-foot RV garage option and the Lexington offers oversized 3-car/RV configurations), Millsap Landing in central Post Falls (where a 2026 3-bed home with an attached 2-car plus large RV garage on 0.20 acres listed at $659,000 on November 23, 2026), select estate lots in The Parkllyn, or nearby Rathdrum shop-lot communities such as Thayer Farms North ($539,999+). Always verify clear door height (12 ft vs. 14 ft) and CC&R rules in writing before signing.',
   },
   {
     q: 'What is usually NOT included in a Post Falls builder’s advertised base price?',
@@ -68,6 +68,11 @@ const PRIMARY_SOURCES = [
     name: 'Lennar — Crown Reserve, Post Falls (checked Nov 23, 2026)',
     detail: 'Published community range $420,950–$492,950 across 5 cottage-style single-family plans (3–4 beds, 2.5 baths, 1,526–2,196 sq ft).',
     url: 'https://www.lennar.com/new-homes/idaho/inland-northwest/post-falls/crown-reserve',
+  },
+  {
+    name: 'Monogram Homes — Crown Reserve, Post Falls (checked Nov 24, 2026)',
+    detail: '19 homesites around a central private park starting at $559,999, featuring single-level plans such as the Stratford (1,512 sq ft, optional 32-ft RV garage) and Lexington (1,761 sq ft, ~$629,999) with front/back landscaping and white vinyl fencing.',
+    url: 'https://www.monogrambuilt.com/',
   },
   {
     name: 'Viking Construction — Montrose, North Place East & Wildflower Meadows (checked Nov 23, 2026)',
@@ -103,17 +108,35 @@ const jsonLdService = {
   areaServed: placeStub('postFalls'),
 }
 
+const jsonLdCommunityNodes = POST_FALLS_COMMUNITIES.map((c) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Place',
+  '@id': `${PAGE_URL}#community-${c.id}`,
+  name: `${c.name} — Post Falls, Idaho New Construction`,
+  description: `${c.builders}. ${c.status}. Published 2026 pricing: ${c.priceBand}. Specs: ${c.specs}. ${c.homeTypes}.`,
+  url: `${PAGE_URL}#${c.id}`,
+  containedInPlace: placeStub('postFalls'),
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Post Falls',
+    addressRegion: 'ID',
+    postalCode: '83854',
+    addressCountry: 'US',
+  },
+}))
+
 const jsonLdItemList = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   '@id': `${PAGE_URL}#communities-list`,
-  name: 'Active and Upcoming New Construction Communities in Post Falls, Idaho (2026)',
+  name: 'New Construction Homes & Communities in Post Falls, Idaho (2026)',
   description:
-    'Verified Post Falls, Idaho new construction subdivisions, master-planned neighborhoods, 55+ communities, and townhome districts checked November 23, 2026.',
+    'All 10 verified Post Falls, Idaho new construction subdivisions, master-planned neighborhoods, 55+ communities, RV-garage pockets, and townhome districts checked November 2026.',
   numberOfItems: POST_FALLS_COMMUNITIES.length,
   itemListElement: POST_FALLS_COMMUNITIES.map((c, idx) => ({
     '@type': 'ListItem',
     position: idx + 1,
+    item: { '@id': `${PAGE_URL}#community-${c.id}` },
     name: `${c.name} (${c.builders})`,
     description: `${c.status}. Published pricing: ${c.priceBand}. Specs: ${c.specs}.`,
     url: `${PAGE_URL}#${c.id}`,
@@ -167,7 +190,14 @@ export default function PostFallsNewConstructionPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
-            jsonLdGraph([jsonLdWebPage, jsonLdService, jsonLdItemList, jsonLdBreadcrumb, jsonLdFaq]),
+            jsonLdGraph([
+              jsonLdWebPage,
+              jsonLdService,
+              jsonLdItemList,
+              ...jsonLdCommunityNodes,
+              jsonLdBreadcrumb,
+              jsonLdFaq,
+            ]),
           ),
         }}
       />
@@ -196,13 +226,13 @@ export default function PostFallsNewConstructionPage() {
             </nav>
 
             <p className="ed-eyebrow ed-eyebrow-light" style={{ marginTop: '18px' }}>
-              Post Falls, Idaho · 2026 New Build Field Guide
+              Post Falls, Idaho · 2026 Communities, Builders &amp; Prices
             </p>
             <h1 id="pf-nc-hero-title">
-              New Construction <em>in Post Falls.</em>
+              New Construction Homes <em>in Post Falls, Idaho.</em>
             </h1>
             <p className="ed-hero-lead" style={{ maxWidth: '680px', color: 'rgba(247,244,238,0.9)' }}>
-              Post Falls is Kootenai County’s primary building corridor — stretching from $375,556 zero-lot-line twin homes and $415,000 Trutina 55+ cottages to master-planned family subdivisions, attached RV-bay builds, and custom Spokane River estates. Every community below is verified as of November 23, 2026.
+              Post Falls is Kootenai County’s primary building corridor — stretching from $375,556 zero-lot-line twin homes and $415,000 Trutina 55+ cottages to master-planned family subdivisions, Monogram &amp; Millsap RV-garage builds, and custom Spokane River estates. Every community and builder below is verified as of November 2026.
             </p>
             <div className="ed-photo-hero-actions">
               <a
@@ -327,6 +357,84 @@ export default function PostFallsNewConstructionPage() {
               <span className="ed-portrait-sig" aria-hidden="true">Shirin</span>
             </div>
           </aside>
+        </div>
+      </section>
+
+      {/* Server-Rendered 2026 Post Falls Communities & Builders Comparison Matrix */}
+      <section
+        aria-labelledby="pf-nc-matrix-title"
+        style={{ padding: '76px 0 68px', background: '#FAF7F1', borderBottom: '1px solid var(--hairline)' }}
+      >
+        <div className="ed-container">
+          <div style={{ maxWidth: '820px', marginBottom: '34px' }}>
+            <p className="ed-eyebrow">2026 Quick-Comparison Matrix</p>
+            <h2
+              id="pf-nc-matrix-title"
+              style={{ fontSize: 'clamp(30px, 3.3vw, 44px)', lineHeight: 1.1, marginTop: '12px', color: 'var(--pine)' }}
+            >
+              All 10 Post Falls new construction communities <em>side by side.</em>
+            </h2>
+            <p style={{ marginTop: '14px', fontSize: '15px', lineHeight: 1.75, color: 'var(--ink-muted)' }}>
+              Verified builder rosters, starting prices, square-footage bands, and 55+ / RV-garage availability across every active and upcoming Post Falls subdivision (checked November 23–24, 2026).
+            </p>
+          </div>
+
+          <div style={{ overflowX: 'auto', border: '1px solid var(--hairline)', background: '#FFFFFF' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '14px' }}>
+              <thead>
+                <tr style={{ background: 'var(--forest-deep)', color: '#FAF7F1' }}>
+                  <th style={{ padding: '14px 18px', fontWeight: 600, fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase' }}>
+                    Community &amp; Corridor
+                  </th>
+                  <th style={{ padding: '14px 18px', fontWeight: 600, fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase' }}>
+                    Active Builder(s)
+                  </th>
+                  <th style={{ padding: '14px 18px', fontWeight: 600, fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase' }}>
+                    2026 Price Band
+                  </th>
+                  <th style={{ padding: '14px 18px', fontWeight: 600, fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase' }}>
+                    Sq Ft &amp; Home Types
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {POST_FALLS_COMMUNITIES.map((c, idx) => (
+                  <tr
+                    key={c.id}
+                    style={{
+                      borderTop: '1px solid var(--hairline)',
+                      background: idx % 2 === 0 ? '#FFFFFF' : '#FAF7F1',
+                    }}
+                  >
+                    <td style={{ padding: '15px 18px', verticalAlign: 'top' }}>
+                      <a
+                        href={`#${c.id}`}
+                        style={{ fontWeight: 600, color: 'var(--pine)', textDecoration: 'none', display: 'block' }}
+                      >
+                        {c.name}
+                      </a>
+                      <span style={{ fontSize: '12px', color: 'var(--ink-muted)', display: 'block', marginTop: '3px' }}>
+                        {c.locationAnchor}
+                      </span>
+                    </td>
+                    <td style={{ padding: '15px 18px', verticalAlign: 'top', color: 'var(--ink)' }}>
+                      {c.builders}
+                      <span style={{ fontSize: '11px', color: 'var(--bronze)', display: 'block', marginTop: '3px', fontWeight: 500 }}>
+                        {c.statusBadge}
+                      </span>
+                    </td>
+                    <td style={{ padding: '15px 18px', verticalAlign: 'top', fontWeight: 500, color: 'var(--pine)' }}>
+                      {c.priceBand}
+                    </td>
+                    <td style={{ padding: '15px 18px', verticalAlign: 'top', color: 'var(--ink-muted)' }}>
+                      <span style={{ display: 'block', color: 'var(--ink)' }}>{c.specs}</span>
+                      <span style={{ fontSize: '12px', display: 'block', marginTop: '3px' }}>{c.homeTypes}</span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
