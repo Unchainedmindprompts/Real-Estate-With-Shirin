@@ -16,6 +16,11 @@ export const lakeHouseCard = {
   alt: 'A contemporary lakeside home overlooking the water and pine-covered hills at sunset',
 }
 
+export const postFallsPrairieCard = {
+  path: '/images/share/post-falls-prairie.jpg',
+  alt: 'Post Falls, Idaho new construction boulevard with autumn maples, Prairie windmill entrance, model-home flags, and forested mountains',
+}
+
 export function shareImage(card: typeof riverfrontCard) {
   return { url: shareOrigin + card.path, width: 1200, height: 630, type: 'image/jpeg', alt: card.alt }
 }

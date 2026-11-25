@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { heroMetadata, lakeHouseCard } from '@/lib/hero-share'
+import { heroMetadata, postFallsPrairieCard } from '@/lib/hero-share'
 import { BASE_URL, AGENT_ID, BUSINESS_ID, placeStub, jsonLdGraph } from '@/lib/schema-ids'
 import { IDX_NEW_CONSTRUCTION_POST_FALLS } from '@/lib/idx-search'
 import FaqAccordion from '@/components/editorial/FaqAccordion'
@@ -14,7 +14,7 @@ export const metadata = heroMetadata(
   PAGE_PATH,
   'New Construction Homes in Post Falls, Idaho (2026 Communities & Builders)',
   'Compare active Post Falls new construction communities, builders, dated 2026 prices, 55+ cottages at Trutina, townhomes, RV-garage builds, and model-home buyer representation rules with Shirin Abplanalp, REALTOR®.',
-  lakeHouseCard,
+  postFallsPrairieCard,
 )
 
 const FAQS = [
@@ -155,6 +155,13 @@ const jsonLdWebPage = {
   about: [{ '@id': BUSINESS_ID }, placeStub('postFalls')],
   mainEntity: { '@id': `${PAGE_URL}#service` },
   hasPart: { '@id': `${PAGE_URL}#communities-list` },
+  primaryImageOfPage: {
+    '@type': 'ImageObject',
+    url: `${BASE_URL}${postFallsPrairieCard.path}`,
+    width: 1200,
+    height: 630,
+    caption: postFallsPrairieCard.alt,
+  },
   breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` },
   inLanguage: 'en-US',
 }
@@ -207,8 +214,10 @@ export default function PostFallsNewConstructionPage() {
         <Image
           className="ed-photo-hero-img"
           src="/images/community-atlas/post-falls-idaho.webp"
-          alt="Post Falls, Idaho prairie neighborhoods, Spokane River corridor, and surrounding mountains"
+          alt="Post Falls, Idaho new construction corridor with Prairie windmill entrance, autumn maples, model-home flags, and forested mountains"
           fill
+          unoptimized
+          style={{ objectPosition: 'center 62%' }}
           sizes="100vw"
           preload
         />

@@ -1,4 +1,4 @@
-import { heroMetadata, riverfrontCard } from '@/lib/hero-share'
+import { heroMetadata, postFallsPrairieCard } from '@/lib/hero-share'
 import { BASE_URL, AGENT_ID, BUSINESS_ID, WEBSITE_ID, placeStub, jsonLdGraph } from '@/lib/schema-ids'
 import { IDX_SEARCH_BY_AREA } from '@/lib/idx-search'
 import AreaGuideTemplate from '@/components/editorial/AreaGuideTemplate'
@@ -9,7 +9,7 @@ export const metadata = heroMetadata(
   '/areas/post-falls-idaho',
   'Post Falls, Idaho Real Estate & Living Guide',
   'Compare Post Falls homes, Spokane commute tradeoffs, new construction, and ownership costs. A practical relocation and buying guide from Shirin Abplanalp.',
-  riverfrontCard,
+  postFallsPrairieCard,
 )
 
 const FAQS = [
@@ -55,6 +55,13 @@ const jsonLdWebPage = {
   about: { '@id': BUSINESS_ID },
   mainEntity: { '@id': `${PAGE_URL}#service` },
   hasPart: { '@id': `${PAGE_URL}/new-construction#webpage` },
+  primaryImageOfPage: {
+    '@type': 'ImageObject',
+    url: `${BASE_URL}${postFallsPrairieCard.path}`,
+    width: 1200,
+    height: 630,
+    caption: postFallsPrairieCard.alt,
+  },
   breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` },
   inLanguage: 'en-US',
 }
@@ -100,7 +107,8 @@ export default function PostFallsAreaPage() {
           heroLead:
             'Median home: ~$521,000. Newer construction, Spokane River access, ~40 inches of snow, and the fastest I-90 commute to Spokane — at roughly $80K below Coeur d’Alene.',
           heroImage: '/images/community-atlas/post-falls-idaho.webp',
-          heroAlt: 'Post Falls, Idaho',
+          heroAlt: 'Post Falls, Idaho residential boulevard with autumn maples, Prairie windmill entrance, and forested mountains',
+          heroObjectPosition: 'center 62%',
           idxUrl,
           idxLabel: 'Search Post Falls Homes',
           stats: [

@@ -10,6 +10,7 @@ export interface AreaGuideConfig {
   heroLead: string
   heroImage: string
   heroAlt: string
+  heroObjectPosition?: string
   idxUrl: string
   idxLabel: string
   stats: { value: string; label: string; sub: string }[]
@@ -50,7 +51,16 @@ export default function AreaGuideTemplate({ config }: { config: AreaGuideConfig 
     <div className="ed-page">
       {/* Full-Bleed Photo Hero + 4-Stat Glass Bar */}
       <section className="ed-photo-hero is-tall" aria-labelledby="area-hero-title">
-        <Image className="ed-photo-hero-img" src={config.heroImage} alt={config.heroAlt} fill sizes="100vw" preload />
+        <Image
+          className="ed-photo-hero-img"
+          src={config.heroImage}
+          alt={config.heroAlt}
+          fill
+          quality={92}
+          style={config.heroObjectPosition ? { objectPosition: config.heroObjectPosition } : undefined}
+          sizes="100vw"
+          preload
+        />
         <div className="ed-photo-hero-scrim" aria-hidden="true" />
         <div className="ed-container ed-photo-hero-inner">
           <div style={{ maxWidth: '760px' }}>
